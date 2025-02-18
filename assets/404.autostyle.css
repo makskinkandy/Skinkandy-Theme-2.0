@@ -1,0 +1,2 @@
+@layer mr{:root{--font-myriadpro: $font-myriadpro;--font-body: 'MyriadPro', sans-serif;--font-italic: 'MyriadPro-Italic', sans-serif;--font-header: 'MyriadPro-Bold', sans-serif}:root{--grid-x-small: 320px;--grid-small: 480px;--grid-six-hundreds: 600px;--grid-medium: 768px;--grid-large: 1024px;--grid-smaller-widescreen: 1300px;--grid-small-widescreen: 1400px;--grid-widescreen: 1440px}}@layer mr{}
+

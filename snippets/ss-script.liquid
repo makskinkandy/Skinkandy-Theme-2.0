@@ -1,0 +1,48 @@
+{%- if customer -%}
+  {% capture ss_shopper_config %}
+    shopper = { id: "{{ customer.id }}" };
+  {% endcapture %}
+{%- endif -%}
+
+{%- if collection.handle and collection.handle != settings.ss_collection_handle and template contains 'collection' -%}
+  {% capture ss_collection_config %}
+    collection = { id: "{{ collection.id }}", name: "{{ collection.title | replace: '"', '&quot;' }}", handle: "{{ collection.handle }}" };
+  {% endcapture %}
+{%- endif -%}
+
+{%- if current_tags -%}
+  {% capture ss_tags_config %}
+    tags = "{{ current_tags | join: '|' | replace: '"', '&quot;' }}";
+  {% endcapture %}
+{%- endif -%}
+
+{%- if template -%}
+  {% capture ss_template_config %}
+    template = "{{ template }}";
+  {% endcapture -%}
+{%- endif -%}
+
+{% assign ss_defer_config = '' %}
+{%- if collection.handle and template contains 'collection' -%}
+  {%- if settings.ss_search_only and collection.handle != settings.ss_collection_handle -%}
+    {% assign ss_defer_config = ' defer' %}
+  {%- endif -%}
+{%- else -%}
+  {% assign ss_defer_config = ' defer' %}
+{%- endif -%}
+
+{% capture ss_money_config %}
+	format = "{{ shop.money_format }}";
+{% endcapture %}
+
+{% comment %}Searchspring Script{% endcomment %}
+<script src="https://snapui.searchspring.io/{{ settings.ss_site_id }}/bundle.js" id="searchspring-context"{{ ss_defer_config }}>
+  {{ ss_shopper_config }}{{ ss_collection_config }}{{ ss_tags_config }}{{ ss_template_config }}{{ ss_money_config }}
+  {%- if settings.sale_image_1 != blank or settings.sale_image_2 != blank and settings.sale_tag != blank -%}
+    sale_data = {
+      image_1 : "{{ settings.sale_image_1 | img_url: '100x' }}",
+      image_2 : "{{ settings.sale_image_2 | img_url: '100x' }}",
+      tag : "{{ settings.sale_tag }}"
+    }
+ {%- endif -%}
+</script>

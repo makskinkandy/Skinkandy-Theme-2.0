@@ -1,0 +1,200 @@
+<div class="image-markers-section page-content {{ section.settings.class | escape }}" style="background-color: {{ section.settings.bg_color }};">
+    <div class="page-width">
+
+        {%- if section.settings.heading != blank or section.settings.text != blank -%}
+            <header class="section-header text-center">
+                {%- if section.settings.heading != blank -%}
+                    <h2 class="heading">{{ section.settings.heading | escape }}</h2>
+                {%- endif -%}
+
+                {%- if section.settings.text != blank -%}
+                    <div class="rte">{{ section.settings.text | newline_to_br }}</div>
+                {%- endif -%}
+            </header>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+            <div class="tabs-wrapper">
+                <nav class="piercing-menu" role="Secondary" aria-label="Piercing types navigation">
+                    {%- for block in section.blocks -%}
+                        <button type="button" class="tablinks js-open-tab{% if forloop.first %} js-default-tab{% endif %}" data-target="tab-{{ block.type }}">
+                            {{- block.settings.label | default: block.type | capitalize -}}
+                        </button>
+                    {%- endfor -%}
+                </nav>
+
+                {%- for block in section.blocks -%}
+                    <div id="tab-{{ block.type }}" class="tabcontent hide" {{ block.attributes }}>
+                        <div class="image-marker {{ block.type }}-marker">
+                            <div class="diagram">
+                                {%- if block.settings.image != blank -%}
+                                    <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image.alt | escape }}">
+                                {%- else -%}
+                                    {{ 'image' | placeholder_svg_tag }}
+                                {%- endif -%}
+
+                                {%- for block in arr -%}
+                                    <span class="marker js-change-image" style="--pos-x: {{ block.settings.pos_x }}%; --pos-y: {{ block.settings.pos_y }}%" data-id="{{ block.id }}" aria-hidden="true"></span>
+                                {%- endfor -%}
+                            </div>
+                            <ul class="images no-bullets">
+                                {%- for block in arr -%}
+                                    <li class="image hide" style="background-image: url({{ block.settings.image | img_url: 'large' }});" data-id="{{ block.id }}">
+                                        {%- if block.settings.link != blank -%}
+                                            <a href="{{ block.settings.link | escape }}" title=""></a>
+                                        {%- endif -%}
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+
+<script src="{{ 'gallery-markers.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+    "name": "Piercing markers",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section heading"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Section text"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "ears",
+            "name": "Piercing type: Ears #1",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        },
+        {
+            "type": "face",
+            "name": "Piercing type: Face #1",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        },
+        {
+            "type": "mouth",
+            "name": "Piercing type: Mouth",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        },
+        {
+            "type": "body",
+            "name": "Piercing type: Body",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        },
+        {
+            "type": "genitals",
+            "name": "Piercing type: Ears #2",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        },
+        {
+            "type": "other",
+            "name": "Piercing type: Face #2",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Static diagram image",
+                    "info": "Used as diagram where markers will be placed"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                }
+            ]
+        }
+    ],
+    "presets": [{
+        "name": "Piercing markers"
+    }],
+    "templates": ["page"]
+}
+{% endschema %}

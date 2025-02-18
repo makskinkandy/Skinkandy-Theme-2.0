@@ -1,0 +1,86 @@
+<div
+  class="location-navigation-section locations-{{ section.id }}{% if section.settings.color_background == settings.color_body_bg %} testimonials-section--with-divider{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="locations"
+  data-aos>
+  {%- if section.settings.title != blank -%}
+    <div class="page-width">
+      <div class="section-header text-{{ section.settings.align_text }}">
+        <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {% if section.settings.link_list != blank %}
+    <div class="page-width">
+      <div class="location-wrapper">
+        {% for link in section.settings.link_list.links %}
+          <div class="location">
+            <h2 class="location-title {% if forloop.first %}open{% endif %}">
+              {{ link.title }}
+              <img src="{{ 'plus-light.svg' | asset_url }}" alt="" class="location-title-icon plus">
+              <img src="{{ 'minus-light.svg' | asset_url }}" alt="" class="location-title-icon minus">
+            </h2>
+            <div class="locations">
+              <div class="location-grid">
+                {% for child_link in link.links %}
+                  <div class="store-location">
+                    <a href="{{ child_link.url }}">
+                      <span>{{ child_link.title }}</span>
+                      <div class="location-arrow"><img src="{{ 'long-arrow-right-regular.svg' | asset_url }}"></div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Location Navigations",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Locations"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "link_list",
+        "id": "link_list",
+        "label": "Locations link list"
+      }
+    ],
+    "presets": [
+      {
+        "name": "PAGE Location Navigations"
+      }
+    ]
+  }
+{% endschema %}

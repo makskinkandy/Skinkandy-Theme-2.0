@@ -1,0 +1,34 @@
+<div class="footer-newsletter-wrapper">
+  {%- if block.settings.title != blank -%}
+    <p class="footer__title">{{ block.settings.title }}</h3>
+  {%- endif -%}
+  {%- if block.settings.text != blank -%}
+    <div class="rte">
+      {{ block.settings.text | newline_to_br }}
+    </div>
+  {%- endif -%}
+
+  {%- form 'customer', id: 'newsletter-footer' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="note note--success">{{ 'general.newsletter_form.newsletter_confirmation' | t }}</div>
+    {%- endif -%}
+    {%- if form.context == 'footer' -%}
+      {%- if form.errors -%}
+        {{ form.errors | default_errors }}
+      {%- endif -%}
+    {%- endif -%}
+
+    <label for="Email-{{ block.id }}" class="hidden-label">{{ 'general.newsletter_form.newsletter_email' | t }}</label>
+    <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+    <input type="hidden" name="contact[context]" value="footer">
+    <div class="footer__newsletter">
+      <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}" name="contact[email]" id="Email-{{ block.id }}" class="footer__newsletter-input" autocorrect="off" autocapitalize="off">
+      <button type="submit" class="footer__newsletter-btn" name="commit" aria-label="{{ 'general.newsletter_form.submit' | t }}">
+        <span class="footer__newsletter-btn-label">
+          {{ 'general.newsletter_form.submit' | t }}
+        </span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plane" viewBox="0 0 21 18" width="21" height="18"><path d="M0 18v-7l15-2L0 7V0l21 9Z"/></svg>
+      </button>
+    </div>
+  {%- endform -%}
+</div>

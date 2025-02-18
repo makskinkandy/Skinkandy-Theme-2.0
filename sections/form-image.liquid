@@ -1,0 +1,572 @@
+<div class="form-image-section bg-image{% if section.settings.full_bg %} full-bg{% endif %} {{ section.settings.class | escape }}" data-section-id="{{ section.id }}" style="background-color: {{ section.settings.bg_color }}; --image-position-x: {{ section.settings.image_position_x }}%; --image-position-y: {{ section.settings.image_position_y }}%;">
+    <style>
+        .form-image-section[data-section-id="{{ section.id }}"] {
+            background-image: url("{{ section.settings.image_mobile | default: section.settings.image | img_url: '600x' }}")
+        }
+        @media (min-width: 40rem) {
+            .form-image-section[data-section-id="{{ section.id }}"] {
+                background-image: url("{{ section.settings.image | img_url: 'master' }}")
+            }
+        }
+    </style>
+
+    <div class="page-width wrapper" style="--form-position: {{ section.settings.form_position }};">
+      <div class="form-wrapper">
+        <div class="section-form {% if section.settings.right_image %}with-image{% endif %}" style="--form-width-size: {{ section.settings.form_width_size }}px;">
+            {%- if section.settings.enable_embed_form and section.settings.embed_form != blank -%}
+                <div class="embed-form">{{ section.settings.embed_form }}</div>
+            {%- endif -%}
+  
+            {%- if section.blocks.size > 0 and section.settings.enable_embed_form == false -%}
+                {%- form 'contact', id: section.id, class: 'custom-form' -%}
+                    {{ form_errors | default_errors }}
+  
+                    {%- for block in section.blocks -%}
+                        <div class="form-field type-{{ block.type }} {{ block.settings.class | escape }}" style="--width: {{ block.settings.width_size }};">
+                            {%- case block.type -%}
+                                {%- when 'heading' -%}
+                                    <p class="heading" style="--multiplier: {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</p>
+  
+                                {%- when 'richtext' -%}
+                                    <div class="rte">{{ block.settings.text | newline_to_br }}</div>
+  
+                                {%- when 'submit' -%}
+                                    <button class="btn btn--full">{{ block.settings.text | escape }}</button>
+  
+                                {%- when 'select' -%}
+                                    {%- assign options = block.settings.options | newline_to_br | split: '<br />' -%}
+                                    {%- assign attributes = block.settings.attributes | newline_to_br | split: '<br />' -%}
+                                    <label for="{{ block.id }}"{% if block.settings.label_hidden %} class="visually-hidden"{% endif %}>{{ block.settings.label | default: block.type | escape }}{% if block.settings.required %} <span class="required">*</span>{% endif %}</label>
+                                    <select id="{{ block.id }}" name="contact[{{ block.settings.label | default: block.type | handleize }}]"{% if block.settings.required %} required{% endif %} 
+                                        {% for attr in attributes %}
+                                            {%- assign key = attr | split: '|' | first -%}
+                                            {%- assign value = attr | split: '|' | last -%}
+                                            {{ key }}="{{ value }}"
+                                        {% endfor %}
+                                    >
+                                        <option value="null">Please select</option>
+                                        {% for option in options %}
+                                            {%- assign value = option | split: '|' | first -%}
+                                            {%- assign label = option | split: '|' | last -%}
+                                            <option value="{{ value }}">{{ label }}</option>
+                                        {% endfor %}
+                                    </select>
+  
+                                {%- when 'checkbox' -%}
+                                    {%- assign attributes = block.settings.attributes | newline_to_br | split: '<br />' -%}
+                                    <label {% if block.settings.label_hidden %} class="visually-hidden"{% endif %}>
+                                        <input type="{{ block.type }}" name="contact[{{ block.settings.label | default: block.type | handleize }}]"{% if block.settings.required %} required{% endif %} 
+                                            {% for attr in attributes %}
+                                                {%- assign key = attr | split: '|' | first -%}
+                                                {%- assign value = attr | split: '|' | last -%}
+                                                {{ key }}="{{ value }}"
+                                            {% endfor %}
+                                        >
+                                        {{ block.settings.label | default: block.type | escape }}{% if block.settings.required %} <span class="required">*</span>{% endif %}
+                                    </label>
+  
+                                {%- else -%}
+                                    {%- assign attributes = block.settings.attributes | newline_to_br | split: '<br />' -%}
+                                    <label for="{{ block.id }}"{% if block.settings.label_hidden %} class="visually-hidden"{% endif %}>{{ block.settings.label | default: block.type | escape }}{% if block.settings.required %} <span class="required">*</span>{% endif %}</label>
+                                    <input type="{{ block.type }}" id="{{ block.id }}" name="contact[{{ block.settings.label | default: block.type | handleize }}]"{% if block.settings.required %} required{% endif %} 
+                                        {% for attr in attributes %}
+                                            {%- assign key = attr | split: '|' | first -%}
+                                            {%- assign value = attr | split: '|' | last -%}
+                                            {{ key }}="{{ value }}"
+                                        {% endfor %}
+                                    >
+  
+                            {%- endcase -%}
+                        </div>
+                    {%- endfor -%}
+                {%- endform -%}
+            {%- endif -%}
+        </div>
+        {% if section.settings.right_image %}
+          <div class="section-image">
+            <img src="{{ section.settings.right_image | image_url}}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Contact form with image",
+    "settings": [
+        {
+            "type": "header",
+            "content": "General settings"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section background color"
+        },
+        {
+            "type": "header",
+            "content": "Media settings"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Optional mobile image",
+            "info": "Recommended size: 600px PNG"
+        },
+        {
+            "type": "checkbox",
+            "id": "full_bg",
+            "label": "Set image as full-width background?"
+        },
+        {
+            "type": "range",
+            "id": "image_position_x",
+            "label": "Set image position x-axis",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "unit": "%"
+        },
+        {
+            "type": "range",
+            "id": "image_position_y",
+            "label": "Set image position y-axis",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "unit": "%"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image"
+        },
+        {
+            "type": "header",
+            "content": "Form settings",
+            "info": "Add form fields by adding blocks"
+        },
+        {
+            "type": "range",
+            "id": "form_width_size",
+            "label": "Set form width size",
+            "default": 500,
+            "min": 200,
+            "max": 800,
+            "step": 10,
+            "unit": "px"
+        },
+        {
+            "type": "select",
+            "id": "form_position",
+            "label": "Form position",
+            "default": "start",
+            "options": [
+                {
+                    "value": "start",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "end",
+                    "label": "Right"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "id": "action_url",
+            "label": "Action URL"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_embed_form",
+            "label": "Enable embed form",
+            "info": "Blocks will be disregarded and embed form below will be used instead"
+        },
+        {
+            "type": "html",
+            "id": "embed_form",
+            "label": "Embed form"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "heading",
+            "name": "Heading",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "range",
+                    "id": "heading_size",
+                    "label": "Heading text multiplier",
+                    "default": 1,
+                    "min": 0,
+                    "max": 2,
+                    "step": 0.1
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Text color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "richtext",
+            "name": "Richtext",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Text color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "name": "Text input field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "name": "Select field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "options",
+                    "label": "Select dropdown options",
+                    "info": "Add a dropdown option using value|label. One option per line (Eg. example|This is an example)"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "name": "Checkbox field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "email",
+            "name": "Email input field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "tel",
+            "name": "Phone input field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "date",
+            "name": "Date input field",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "required",
+                    "label": "Required field"
+                },
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label text"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "label_hidden",
+                    "label": "Visually hide the label?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "attributes",
+                    "label": "Optional data attributes",
+                    "info": "Add attribute such as names, patterns, etc using key|value. One attribute per line (Eg. name|example)"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        },
+        {
+            "type": "submit",
+            "name": "Submit",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "width_size",
+                    "label": "Field width size",
+                    "default": 100,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Submit text",
+                    "default": "Submit"
+                },
+                {
+                    "type": "text",
+                    "id": "class",
+                    "label": "Optional class name"
+                }
+            ]
+        }
+    ],
+    "presets": [{
+        "name": "Contact form with image"
+    }]
+}
+{% endschema %}

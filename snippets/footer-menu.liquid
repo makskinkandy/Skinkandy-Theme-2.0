@@ -1,0 +1,19 @@
+{%- if block.settings.menu.links.size > 0 -%}
+  <ul class="footer-main__menu inline-list footer-menu" role="menu">
+    {%- for link in block.settings.menu.links -%}
+        <li class="footer-menu-item" role="none">
+            <p class="footer-menu-title h3 js-accordion" role="none">
+                {{ link.title }}
+                {%- render 'icons', icon: 'arrow-down' -%}
+            </p>
+            {% if link.links.size > 1 %}
+                <ul class="footer-submenu no-bullets inline-list">
+                    {% for childlink in link.links %}
+                        <li><a href="{{ childlink.url }}" role="menuitem">{{ childlink.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

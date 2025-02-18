@@ -1,0 +1,19 @@
+<div class="collection-header-wrapper banner-section page-content">
+  <div class="page-width">
+    <header class="section-header">
+      <h1 class="section-content__heading h1" style="color: {{ block.settings.title_color }}">{{ collection.title | escape }}</h1>
+
+      {%- if collection.description != blank -%}
+        <div class="section-content__text rte">
+          {{ collection.description }}
+        </div>
+      {%- endif -%}
+    </header>
+    {% if block.settings.custom_filter_1 != blank or block.settings.custom_filter_2 != blank %}
+      <div class="custom-filter__wrapper">
+        <a class="ss__list__link btn btn--primary" href="{{ block.settings.custom_filter_1 }}">{{ block.settings.custom_filter_1_text }}</a>
+        <a class="ss__list__link btn btn--primary" href="{{ block.settings.custom_filter_2 }}">{{ block.settings.custom_filter_2_text }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>

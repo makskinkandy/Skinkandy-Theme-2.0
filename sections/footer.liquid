@@ -1,0 +1,153 @@
+<footer class="site-footer" data-section-id="{{ section.id }}" data-section-type="footer-section">
+  <div class="footer-top page-width">
+    <div class="grid text-center footer-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="grid__item footer__item footer__item--{{ block.id }}" data-type="{{ block.type }}" {{ block.shopify_attributes }}>
+          {%- liquid
+            case block.type
+              when 'logo_social'
+                render 'footer-logo', block: block
+              when 'custom'
+                render 'footer-custom-text', block: block
+              when 'newsletter'
+                render 'footer-newsletter', block: block
+              when 'menu'
+                render 'footer-menu', block: block
+              when 'social_links'
+                render 'social-links', class: block.settings.class
+            endcase
+          -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center">
+    
+    {%
+      ###############################
+      # Country Updater
+      # Move Digital Added 13/03/2024
+      ###############################
+    %}
+    <script>
+      function call_change_country_(country){
+        $('.locale-selectors__selector option[value="'+country+'"]').prop('selected', true);
+        $(".locale-selectors__content form").append('<input type="submit" value="Submit" style="display:none" role="button">')
+        $(".locale-selectors__content form").submit();
+      }
+      let alt_display_settings = {};
+    </script>
+    {% #End Country Updater %}
+    <div class="page-width footer-copyright">
+      <p>Copyright {{ 'now' | date: '%Y' }} &copy; {{ shop.name }}. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <style type='text/css'>
+       .embeddedServiceHelpButton .helpButton .uiButton {
+             background-color: #EA0190;
+             font-family: "Arial", sans-serif;
+       }
+       .embeddedServiceHelpButton .helpButton .uiButton:focus {
+             outline: 1px solid #EA0190;
+       }
+</style>
+{% if settings.popup_enable %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdPjysqAAAAAOesGMLIqt41z0ESfcWm64yv058y"></script>
+{%  endif %}
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show payment icons",
+        "default": false
+      },
+      {
+        "type": "url",
+        "id": "privacy_link",
+        "label": "Privacy policy link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_social",
+        "name": "Logo",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo image"
+          }
+        ]
+      },
+      {
+        "type": "menu",
+        "name": "Menu",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_footer_title",
+            "label": "Show heading"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Choose a menu",
+            "default": "footer"
+          }
+        ]
+      },
+      {
+        "type": "newsletter",
+        "name": "Newsletter and social",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_footer_title",
+            "label": "Show heading",
+            "default": true
+          },
+          {
+            "type": "paragraph",
+            "content": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers)."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Sign up and save"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "info": "Optional",
+            "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+          }
+        ]
+      },
+      {
+        "type": "social_links",
+        "name": "Social links",
+        "limit": 1, 
+        "settings": [
+          {
+            "type": "text",
+            "id": "class",
+            "label": "Optional class"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

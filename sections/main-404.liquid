@@ -1,0 +1,74 @@
+<div class="page-width page-content">
+  <div class="container">
+    <div class="page-404__wrapper grid">
+      <div class="page-404__left">
+        <h1 class="section-header__title">{{ section.settings.heading }}</h1>
+        <div class="rte text-spacing">
+          <p class="description">{{ section.settings.subheading }}</p>
+        </div>
+        <div class="btn__wrapper">
+          <a href="javascript:void(0)" id="backButton" class="btn btn--grey"><img src="https://cdn.shopify.com/s/files/1/0555/7508/5194/files/Left-arrow.png" alt="arrow icon"></a>
+          {% if section.settings.link1 %}
+            <a href="{{ section.settings.link1 }}" class="btn btn--pink">{{ section.settings.button1_text }}</a>
+          {% endif %}
+          {% if section.settings.link2 %}
+            <a href="{{ section.settings.link2 }}" class="btn btn--black">{{ section.settings.button2_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="page-404__right">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.heading }}" class="page-404__right-image">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('backButton').addEventListener('click', function() {
+    history.back();
+  });
+</script>
+{% schema %}
+  {
+    "name": "404 page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "404 Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "404 Sub-Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Add the image for the Right Column"
+      },
+      {
+        "type": "text",
+        "id": "button1_text",
+        "label": "404 Button 1 Text"
+      },
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "Button 1 Link"
+      },
+      {
+        "type": "text",
+        "id": "button2_text",
+        "label": "404 Button 2 Text"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "Button 2 Link"
+      }
+    ]
+  }
+{% endschema %}

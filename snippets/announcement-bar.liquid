@@ -1,0 +1,116 @@
+{%- assign show_announcement = false -%}
+{%- assign announcement_block_count = 0 -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'announcement' -%}
+    {%- assign show_announcement = true -%}
+    {%- assign announcement_block_count = announcement_block_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{% if show_announcement %}
+  <div class="announcement-bar">
+    <div class="page-width wrapper">
+
+      <ul class="floating left" style="background: #202020">
+        {% if section.settings.left_link != blank %}
+          <li>
+          <a href="{{ section.settings.left_link | escape }}" class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+              <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+              <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+            </svg>
+            {{ section.settings.left_label }}
+          </a>
+        </li>
+        {%- endif -%}
+      </ul>
+
+      <div class="slideshow-wrapper">
+        <button type="button" class="visually-hidden slideshow__pause" data-id="{{ section.id }}" aria-live="polite">
+          <span class="slideshow__pause-stop">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-pause" viewBox="0 0 10 13"><g fill="#000" fill-rule="evenodd"><path d="M0 0h3v13H0zM7 0h3v13H7z"/></g></svg>
+            <span class="icon__fallback-text">{{ 'sections.slideshow.pause_slideshow' | t }}</span>
+          </span>
+          <span class="slideshow__pause-play">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="18.24 17.35 24.52 28.3"><path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"/></svg>
+            <span class="icon__fallback-text">{{ 'sections.slideshow.play_slideshow' | t }}</span>
+          </span>
+        </button>
+
+        <div
+          id="AnnouncementSlider"
+          class="announcement-slider"
+          data-compact="true"
+          data-block-count="{{ announcement_block_count }}">
+          {%- assign slide_index = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'announcement' -%}
+              <div
+                id="AnnouncementSlide-{{ block.id }}"
+                class="announcement-slider__slide"
+                data-index="{{ slide_index }}"
+                {{ block.shopify_attributes }}>
+                {%- if block.settings.link != blank -%}
+                  <a class="announcement-link" href="{{ block.settings.link }}">
+                {%- endif -%}
+                  {%- if block.settings.link_text != blank -%}
+                    <span class="announcement-link-text">{{ block.settings.link_text }}</span>
+                  {%- endif -%}
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- endif -%}
+              </div>
+              {%- assign slide_index = slide_index | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <ul class="floating right" style="background: #202020">
+        {% if localization.country == 'Australia' %}
+          {% if section.settings.call_us_link_au != blank %}
+            <li class="call-us-announcement-bar" >
+            <a class="link-icon" style="font-size: 16px">
+              Call us on &nbsp; <span class="tablet-hide">
+                {{ section.settings.call_us_label_au }}
+              </span>
+            </a>
+          </li>
+          {%- endif -%}
+        {% else %}
+          {% if section.settings.call_us_link_nz != blank %}
+            <li class="call-us-announcement-bar" >
+            <a class="link-icon" style="font-size: 16px">
+              Call us on &nbsp; <span class="tablet-hide">
+                {{ section.settings.call_us_label_nz }}
+              </span>
+            </a>
+          </li>
+          {%- endif -%}
+        {% endif %}
+
+        {% if section.settings.about_link != blank %}
+          {% if section.settings.about_nav != blank %}
+            <li class="dropdown">
+              <button class="link-icon">
+                <span>{{ section.settings.about_label }}</span>
+                <svg fill="#ffffff" height="16px" width="16px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                  viewBox="0 0 330 330" xml:space="preserve">
+               <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+               </svg>
+              </button>
+              <div class="dropdown-box">
+                {%- for link in linklists[section.settings.about_nav].links -%}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {%- endfor -%}
+              </div>
+            </li>
+          {% endif %}
+        {%- endif -%}
+      </ul>
+    </div>
+  </div>
+
+{% endif %}

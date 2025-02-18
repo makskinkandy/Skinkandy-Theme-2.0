@@ -1,0 +1,280 @@
+<div class="price-estimator">
+  <div class="page-width">
+    <div class="price-estimator__wrapper">
+      <div class="medium-up--one-half left">
+        {% if section.settings.title != blank %}
+          {% assign text = section.settings.title | escape %}
+
+          {% assign words = text | split: ' ' %}
+          {% assign processed_words = '' %}
+          
+          {% for word in words %}
+            {% assign word_1 = word | slice: 0, 1 %}
+            {% assign word_2 = word | slice: -1 %}
+            {% if word_1 == "{" %}
+              {% if word_2 == "}" %}
+                {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+                {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+              {% else %}
+                {% assign processed_words = processed_words | append: word | append: ' ' %}
+              {% endif %}
+            {% else %}
+              {% assign processed_words = processed_words | append: word | append: ' ' %}
+            {% endif %}
+          {% endfor %}
+          <h2>{{ processed_words }}</h2>
+        {% endif %}
+        
+        
+        {% if section.settings.decription != blank %}
+          <div class="price-estimator__description">
+            {{ section.settings.decription }}
+          </div>
+        {% endif %}
+        <ul class="price-estimator__services">
+          {% for block in section.blocks %}
+            <li>{{ block.settings.title }} <span class="price">${{ block.settings.value }}</span></li>
+          {% endfor %}
+        </ul>
+        <div class="price-estimator__footnote">
+          {{ section.settings.footnote }}
+        </div>
+        
+      </div>
+      <div class="medium-up--one-half right">
+        <div class="price-estimator__calculator">
+          <h2>PRICE ESTIMATOR</h2>
+          <div class="price-estimator__item">
+             I want to have piercing in 
+            <select class="js-piercing">
+              {% assign price_estimator_piercing = metaobjects.price_estimator_values.values | sort: 'sorting.value' | reverse %}
+              {% for field in price_estimator_piercing %}
+                {% if field.option_placement == 1 %}
+                  {% assign price_value = field.price_low.value | default: field.price_high.value %}
+                  <option data-value="{{ price_value }}" data-handle="{{ metaobject.value.system.handle }}" value="{{ field.title.value | handleize }}">
+                    {{ field.title.value }}
+                  </option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+          <div class="price-estimator__item">
+             I want to have
+            
+              {% assign price_estimator_sub = shop.metaobjects.price_estimator_values.values | sort: 'sorting.value' | reverse %}
+              {% for field in price_estimator_sub %}
+                  {% if field.option_placement == 1 %}
+                    <select class="{{ field.title.value | handleize }} sub-values js-sub-values">
+                      {% assign sub_values =  field.sub_items.value %}
+                      {% for sub_fields in sub_values %}
+                        {% assign price_value = sub_fields.price_low.value | default: sub_fields.price_high.value %}
+                        <option value="{{ price_value }}">{{ sub_fields.title.value }}</option>
+                      {% endfor %}
+                    </select>
+                  {% endif %}
+              {% endfor %} piercing
+           
+          </div>
+          <div class="price-estimator__item">
+             I want to get
+            
+              {% assign price_estimator_count = shop.metaobjects.price_estimator_values.values %}
+              <select class="js-piercing-count">
+                {% for field in price_estimator_count %}
+                    {% if field.option_placement == 2 %}
+                        {% assign price_value = field.price_low.value | default: field.price_high.value %}
+                        <option class="piercing-{{ price_value }}" value="{{ price_value }}">{{ field.title.value }}</option>
+                      
+                    {% endif %}
+                {% endfor %}
+             </select>
+          </div>
+          <div class="price-estimator__item">
+             with
+            <select class="js-jewellery">
+              {% assign price_estimatator_jewellery = shop.metaobjects.price_estimator_values %}
+              {% assign price_estimator = price_estimatator_jewellery.values | sort: 'price_low.value' | reverse %}
+              {% for field in price_estimator %}
+                  {% if field.option_placement == 3 %}
+                    
+                      <option value="{{ field.title.value | handleize }}" data-low="{{ field.price_low.value }}" data-high="{{ field.price_high.value }}">{{ field.title.value }}</option>
+                    
+                  {% endif %}
+              {% endfor %}
+           </select>
+          </div>
+          <div class="price-estimator___total">
+            Estimate Piercing Cost
+            <div class="js-total-amount total-amount">$60 - $95</div>
+            <em>{{ section.settings.calcu_footnote }}</em>
+          </div>
+          
+          {% if section.settings.button_text != blank %}
+            <a href="{{ section.settings.button_url }}" class="btn btn--primary">{{ section.settings.button_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const piercing = document.querySelector(".js-piercing");
+    const subCategories = document.querySelectorAll(".js-sub-values");
+    const piercingCount = document.querySelector(".js-piercing-count");
+    const jewellery = document.querySelector(".js-jewellery");
+    const totalText = document.querySelector(".js-total-amount");
+    
+    let jewelleryValue = "";
+    
+    let subCatValue = 0;
+    let piercingCountValue = piercingCount.value || 0;
+    let lowValue = 0;
+    let highValue = 0;
+    
+    function updateSubCat() {
+      const piercingValue = piercing.value;
+      
+      const displayStyle = (piercing.value === "advanced" || piercing.value === "body") ? "none" : "block";
+      document.querySelectorAll(".piercing-3, .piercing-4").forEach(el => el.style.display = displayStyle);
+
+      if (piercingCount.value > 2 && ["advanced", "body"].includes(piercing.value)) {
+        piercingCount.value = piercingCountValue = 2;
+        computeTotal();
+      }
+      
+      subCategories.forEach(sub => {
+        const isMatch = sub.classList.contains(piercingValue);
+        sub.style.display = isMatch ? "inline-block" : "none";
+    
+        if (isMatch) {
+          subCatValue = sub.value;
+          computeTotal();
+          sub.addEventListener("change", handleSubValueChange);
+        } else {
+          sub.removeEventListener("change", handleSubValueChange);
+        }
+      });
+    
+    }
+    
+    function handleSubValueChange(event) {
+      subCatValue = event.target.value;
+      computeTotal();
+    }
+
+    function updatePiercingCount(event) {
+      piercingCountValue = event.target.value;
+      computeTotal();
+    }
+    
+    
+    
+    piercing.addEventListener("change", updateSubCat);
+
+    piercingCount.addEventListener("change", updatePiercingCount);
+
+    function getSelectedData() {
+      const selectedOption = jewellery.options[jewellery.selectedIndex];
+      lowValue = parseInt(selectedOption.getAttribute("data-low")) || 0;
+      highValue = parseInt(selectedOption.getAttribute("data-high")) || 0;
+      jewelleryValue = jewellery.value;
+      computeTotal();
+    }
+  
+    jewellery.addEventListener("change", getSelectedData);
+    
+    
+
+    function computeTotal() {
+      if (!subCatValue) {
+          totalText.innerText = "upon consultation";
+          return;
+      }
+
+      let lowTotal = (lowValue + Number(subCatValue)) * Number(piercingCountValue);
+      let highTotal = (highValue + Number(subCatValue)) * Number(piercingCountValue);
+  
+      if (Number(piercingCountValue) > 1) {
+        lowTotal = ((lowValue + Number(subCatValue)) * (Number(piercingCountValue))) - Number(10);
+      }
+  
+      if (Number(piercingCountValue) > 1) {
+        highTotal = ((highValue + Number(subCatValue)) * (Number(piercingCountValue))) - Number(10);
+      }
+
+      if (jewelleryValue == "14k-solid-gold") {
+        totalText.innerText = `$${lowTotal}+`;
+        return;
+      }
+
+        totalText.innerText = (lowValue === 0 && highValue === 0) ? `$${highTotal}` : `$${lowTotal} - $${highTotal}`;
+    }
+    
+    updateSubCat();
+    getSelectedData();
+    computeTotal();
+  
+  });
+</script>
+
+{% schema %}
+{
+    "name": "Price Estimator",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "decription",
+        "label": "Description"
+      },
+      {
+        "type": "richtext",
+        "id": "footnote",
+        "label": "Services Footnote"
+      },
+      {
+        "type": "richtext",
+        "id": "calcu_footnote",
+        "label": "Calutor Footnote"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL",
+      }
+    ],
+    "blocks": [
+      {
+        "type": "services_item",
+        "name": "Services Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "value",
+            "label": "Value"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Price Estimator"
+    }]
+}
+{% endschema %}

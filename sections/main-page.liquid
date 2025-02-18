@@ -1,0 +1,44 @@
+<div class="page-width page-width--narrow page-content">
+  {%- if section.settings.breadcrumbs -%}
+    {%- render 'breadcrumbs' -%}
+  {%- endif -%}
+
+  {%- if section.settings.heading -%}
+    <header class="section-header">
+      <h1 class="section-header__title">{{ page.title }}</h1>
+    </header>
+  {%- endif -%}
+
+  {%- if section.settings.content -%}
+    <div class="rte rte--nomargin">
+      {{ page.content }}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "breadcrumbs",
+      "label": "Show breadcrumbs",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "heading",
+      "label": "Show page heading",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "content",
+      "label": "Show page contents",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

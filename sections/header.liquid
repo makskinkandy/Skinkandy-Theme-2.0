@@ -1,0 +1,690 @@
+{% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
+  <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
+    <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
+      <a href="javascript.void(0)" class="popup-close" role="button"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/close-btn.png?v=1725430171" alt="close icon"></a>
+      {% if settings.popup_layout == "bfcm" and page.metafields.custom.giveaway != true %}
+        <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+      {% endif %}
+      <div class="form-popup__left">
+        {% if page.metafields.custom.giveaway %}
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+        {% else %}
+          {% if settings.giveaway %}
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+          {% endif %}
+        {% endif %}
+        {% if page.metafields.custom.popup_image != blank %}
+          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image">
+        {% else %}
+          {% if page.metafields.custom.giveaway %}
+            <div class="video-container">
+              <video loop muted loop autoplay playsinline>
+                <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          {% else %}
+            {% if settings.popup_left_image %}
+              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image">
+            {% else %}
+              <div class="video-container">
+                <video loop muted loop autoplay playsinline>
+                  <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        
+      </div>
+      <div class="form-popup__right">
+        <div class="form-loader hidden"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/7/assets/pink-loader.gif"></div>
+        {% if page.metafields.custom.popup_title %}
+            <h3 id="popup-title">{{ page.metafields.custom.popup_title }}</h3>
+        {% else %}
+          {% if settings.popup_title %}
+            <h3 id="popup-title">{{ settings.popup_title }}</h3>
+          {% endif %}
+        {% endif %}
+        {% if page.metafields.custom.popup_subtitle %}
+            <div id="subtitle" class="subtitle">{{ page.metafields.custom.popup_subtitle }}</div>
+        {% else %}
+          {% if settings.popup_subtitle %}
+            <div id="subtitle" class="subtitle">{{ settings.popup_subtitle | metafield_tag }}</div>
+          {% endif %}
+        {% endif %}
+        <div id="response"></div>
+        <div id="embedded-form">     
+          {% if page.metafields.custom.popup_form_override %}
+            {{ page.metafields.custom.popup_form_override }}
+          {% else %}
+            {% if settings.popup_embed_form %}
+              {{ settings.popup_embed_form }}
+            {%- endif %}
+          {% endif %}
+          {% if template != "page.pf-c525936e" %}
+            {% if settings.popup_form_note %}
+              <p class="form-note">{{ settings.popup_form_note }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+        <a href="{{ settings.sucess_popup_button }}" target="_blank" class="btn bottom__btn hidden">{{ settings.success_popup_button_text }}</a>
+
+        {% if page.metafields.custom.giveaway %}
+          <a href="{{ page.metafields.custom.terms_and_condition_link }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
+        {% else %}
+          {% if settings.giveaway %}
+            <a href="{{ settings.sucess_popup_tc }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
+          {% endif %}
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+  {% render 'form-popup-script' %}
+{%  endif %}
+
+
+
+{%- liquid
+  assign main_menu = linklists[section.settings.main_menu_link_list]
+  assign toolbar_menu = linklists[section.settings.toolbar_menu]
+  assign mobile_menu = linklists[section.settings.mobile_menu_link_list]
+
+  assign logo_alignment = 'left'
+  if section.settings.main_menu_alignment == 'center-left' or section.settings.main_menu_alignment == 'center-split' or section.settings.main_menu_alignment == 'center' or section.settings.main_menu_alignment == 'center-drawer'
+    assign logo_alignment = 'center'
+  endif
+
+  assign dropdown_alignment = 'left'
+  if section.settings.main_menu_alignment == 'left-center' or section.settings.main_menu_alignment == 'center-split' or section.settings.main_menu_alignment == 'center'
+    assign dropdown_alignment = 'center'
+  endif
+
+  assign template_name = template | replace: '.', ' ' | truncatewords: 2, '' | handle
+
+  assign sticky_header = false
+  if section.settings.header_style == 'sticky'
+    assign sticky_header = true
+  endif
+  assign overlay_header = false
+  if template_name == 'index' and section.settings.sticky_index
+    assign overlay_header = true
+  endif
+  if template_name == 'collection' and collection.image and section.settings.sticky_collection
+    assign overlay_header = true
+  endif
+-%}
+
+{%- render 'drawer-menu',
+  section: section,
+  main_menu: mobile_menu,
+  toolbar_menu: toolbar_menu,
+  logo_alignment: logo_alignment,
+  book_now_link: section.settings.book_now_link,
+  book_now_label: section.settings.book_now_label,
+  find_link: section.settings.find_link,
+  find_label: section.settings.find_label,
+  about_nav: section.settings.about_nav
+  about_link: section.settings.about_link
+  about_label: section.settings.about_label
+-%}
+{%- render 'cart-drawer', section: section -%}
+<div data-section-id="{{ section.id }}" data-section-type="header">
+  {%- if overlay_header or section.settings.announcement_above_header -%}
+    {%- render 'announcement-bar', section: section -%}
+  {%- endif -%}
+
+  {%- unless overlay_header -%}
+    {%- if section.settings.show_locale_selector or section.settings.show_currency_selector or section.settings.toolbar_social or section.settings.toolbar_menu != blank -%}
+      {%- render 'toolbar',
+        section: section,
+        toolbar_menu: toolbar_menu,
+        overlay_header: overlay_header
+      -%}
+    {%- endif -%}
+  {%- endunless -%}
+
+  <div class="header-sticky-wrapper">
+    <div id="HeaderWrapper" class="header-wrapper{% if overlay_header %} header-wrapper--sticky is-light{% endif %}">
+
+      {%- if overlay_header -%}
+        {%- if section.settings.show_locale_selector or section.settings.show_currency_selector or section.settings.toolbar_social or section.settings.toolbar_menu != blank -%}
+          {%- render 'toolbar',
+            section: section,
+            toolbar_menu: toolbar_menu,
+            overlay_header: overlay_header
+          -%}
+        {%- endif -%}
+      {%- endif -%}
+      <header
+        id="SiteHeader"
+        class="site-header{% if settings.type_navigation_style == 'heading' %} site-header--heading-style{% endif %}"
+        data-sticky="{{ sticky_header }}"
+        data-overlay="{{ overlay_header }}">
+        <div class="page-width">
+          <div
+            class="header-layout header-layout--{{ section.settings.main_menu_alignment }}"
+            data-logo-align="{{ logo_alignment }}">
+
+            {%- if logo_alignment == 'left' -%}
+              <div class="site-nav mobile-only{% if section.settings.main_menu_alignment == 'center-drawer' %} hide{% endif %}">
+                  <button
+                    type="button"
+                    class="site-nav__link site-nav__link--icon js-drawer-open-nav"
+                    aria-controls="NavDrawer">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <rect width="39" height="39" fill="url(#pattern0_238_2)"/>
+                      <defs>
+                      <pattern id="pattern0_238_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_238_2" transform="scale(0.00195312)"/>
+                      </pattern>
+                      <image id="image0_238_2" width="512" height="512" xlink:href="data:image/png;base64,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"/>
+                      </defs>
+                    </svg>
+
+                    <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+                  </button>
+                </div>
+              <div class="header-item header-item--logo">
+                {%- render 'header-logo-block', section: section -%}
+              </div>
+            {%- endif -%}
+
+            {%- if logo_alignment == 'left' and section.settings.main_menu_alignment != 'left-drawer' -%}
+              <div class="header-item header-item--navigation{% if section.settings.main_menu_alignment == 'left-center' %} text-center{% endif %}">
+                {% render 'mega-menu', main_menu: main_menu %}
+              </div>
+            {%- endif -%}
+
+            {%- if logo_alignment == 'center' -%}
+              <div class="header-item header-item--left header-item--navigation desktop-only">
+
+                <ul class="header-icons">
+                  {% comment %} search {% endcomment %}
+                  {%- if settings.search_enable -%}
+                    <li>
+                      <button class="js-search-header site-nav__link site-nav__link--icon link-icon btn-search" href="{{ section.settings.find_link | escape }}" role="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" role="presentation" aria-label="Search">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <span>
+                          search
+                        </span>
+                      </button>
+                    </li>
+                  {%- endif -%}
+                  {% comment %} accounts {% endcomment %}
+                  {%- if shop.customer_accounts_enabled -%}
+                    <li>
+                      <a class="site-nav__link site-nav__link--icon link-icon" href="{{ routes.account_url }}/login" role="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" aria-label="Account" class="bi bi-person" viewBox="0 0 16 16" role="presentation">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg>
+                        <span>log in</span>
+                        <span class="icon__fallback-text">
+                          {%- if customer -%}
+                            {{ 'layout.customer.account' | t }}
+                          {%- else -%}
+                            {{ 'layout.customer.log_in' | t }}
+                          {%- endif -%}
+                        </span>
+                      </a>
+                    </li>
+                  {%- endif -%}
+                  {% comment %} find a store {% endcomment %}
+                  {% if section.settings.find_link != blank %}
+                    <li>
+                      <a class="site-nav__link site-nav__link--icon link-icon" href="{{ section.settings.find_link | escape }}" role="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" aria-label="Find A Store" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16" role="presentation">
+                          <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                        </svg>
+                        <span>
+                          {{ section.settings.find_label }}
+                        </span>
+                      </a>
+                    </li>
+                  {%- endif -%}
+                </ul>
+              </div>
+
+              {%- if section.settings.main_menu_alignment == 'center-split' -%}
+                {%- render 'header-split-nav', main_menu: main_menu, section: section, dropdown_alignment: dropdown_alignment -%}
+              {%- endif -%}
+
+              {%- if section.settings.main_menu_alignment != 'center-split' -%}
+                <div class="header-item header-item--logo">
+
+                <div class="site-nav mobile-only{% if section.settings.main_menu_alignment == 'center-drawer' %} hide{% endif %}">
+                  <button
+                    type="button"
+                    class="site-nav__link site-nav__link--icon js-drawer-open-nav"
+                    aria-controls="NavDrawer">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 64 64"><path d="M7 15h51M7 32h43M7 49h51"/></svg>
+                    <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+                  </button>
+                </div>
+                  {%- render 'header-logo-block', section: section -%}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+
+            <div class="header-item header-item--icons">
+              <ul class="header-icons">
+                {% comment %} button {% endcomment %}
+                {% if section.settings.book_now_link != blank %}
+                  <li class="desktop-only">
+                    <a href="{{ section.settings.book_now_link | escape }}" class="book-now-btn btn btn--small link-icon">
+                      <span class="tablet-book-label">{{ section.settings.book_now_label }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {% comment %} country {% endcomment %}
+                {% if section.settings.country != blank %}
+                  <li class="dropdown desktop-only">
+                    <button class="site-nav__link site-nav__link--icon global-icon" style="padding-left:5px !important;padding-right:10px !important;">
+                      {% if localization.country == 'Australia' %}
+                        AU <svg xmlns="http://www.w3.org/2000/svg" aria-label="AU" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16" role="presentation">\
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>\
+                        </svg>
+                      {% else %}
+                        NZ <svg xmlns="http://www.w3.org/2000/svg" aria-label="NZ" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16" role="presentation">\
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>\
+                        </svg>
+                      {% endif %}
+                    </button>
+                    <div class="dropdown-box" style="width: 57.93px;">
+                     
+                          <a onclick="call_change_country_('AU');" style="cursor:pointer">AU</a>
+                          <a onclick="call_change_country_('NZ');" style="cursor:pointer">NZ</a>
+                    </div>
+                  </li>
+                {% endif %}
+                
+                {% comment %} search {% endcomment %}
+                {%- if settings.search_enable -%}
+                  <li>
+                    <button class="js-search-header site-nav__link site-nav__link--icon btn-search" href="{{ section.settings.find_link | escape }}" aria-label="Search">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" aria-label="Mobile Search" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" role="presentation">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+                  </li>
+                {%- endif -%}
+
+                {% comment %} accounts {% endcomment %}
+                {%- if shop.customer_accounts_enabled -%}
+                  <li class="mobile-only" style="display:none;">
+                    <a class="site-nav__link site-nav__link--icon icon-account " href="{{ routes.account_url }}">
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-label="My Account" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" role="presentation">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {% comment %} wishlist {% endcomment %}
+                {%- if section.settings.wishlist_link != blank -%}
+                  <li>
+                    <a href="/apps/wishlist" class="site-nav__link site-nav__link--icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-label="Wishlist" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" role="presentation">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg>
+                      <span class="icon__fallback-text">{{ 'layout.wishlist.label' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                  <li>
+                  <a href="{{ routes.cart_url }}" class="site-nav__link site-nav__link--icon js-drawer-open-cart" aria-controls="CartDrawer" data-icon="{{ settings.cart_icon }}" aria-label="Cart Link">
+                    <span class="cart-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-label="Cart" width="16" height="16" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16" alt="Cart Link" role="presentation">
+                        <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z"/>
+                      </svg>
+                      <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {%- if section.settings.main_menu_alignment == 'center' -%}
+            <div class="text-center">
+              {%- render 'header-desktop-nav', main_menu: main_menu, dropdown_alignment: dropdown_alignment -%}
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="site-header__search-container">
+          <div class="site-header__search">
+            <div class="page-width">
+
+              {% if settings.ss_enable %}
+
+                {% comment %} Searchspring search form {% endcomment %}
+                <form action="/collections/{{ settings.ss_collection_handle }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form search-form-rewrite">
+                  <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+                    <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+                  </button>
+                  <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="searchspring-ac site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+                </form>
+
+              {% else %}
+
+              <form action="{{ routes.search_url }}" method="get" role="search"
+                id="HeaderSearchForm"
+                class="site-header__search-form">
+                <input type="hidden" name="type" value="{{ settings.search_type }}">
+                <input type="hidden" name="options[prefix]" value="last">
+                <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+                  <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+                </button>
+                <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+              </form>
+
+              {% endif %}
+
+              <button type="button" id="SearchClose" class="js-search-header-close text-link site-header__search-btn">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+                <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
+              </button>
+            </div>
+          </div>
+          {%- if settings.predictive_search_enabled and settings.ss_enable == false -%}
+            <div id="PredictiveWrapper" class="predictive-results hide" data-image-size="{{ settings.predictive_image_size }}">
+              <div class="page-width">
+                <div id="PredictiveResults" class="predictive-result__layout"></div>
+                <div class="text-center predictive-results__footer">
+                  <button type="button" class="btn btn--small" data-predictive-search-button>
+                    <small>
+                      {{ 'general.search.view_more' | t }}
+                    </small>
+                  </button>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+         </div>
+
+        </header>
+    </div>
+    {%- render 'header-desktop-nav', main_menu: main_menu, dropdown_alignment: dropdown_alignment -%}
+  </div>
+
+  {%- unless overlay_header or section.settings.announcement_above_header -%}
+    {%- render 'announcement-bar', section: section -%}
+  {%- endunless -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "main_menu_link_list",
+        "label": "Navigation",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "mobile_menu_link_list",
+        "label": "Mobile Navigation",
+        "default": "main-menu"
+      },
+      {
+        "type": "select",
+        "id": "main_menu_alignment",
+        "label": "Header layout",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Logo left, menu left"
+          },
+          {
+            "value": "left-center",
+            "label": "Logo left, menu center"
+          },
+          {
+            "value": "left-drawer",
+            "label": "Logo left, menu drawer"
+          },
+          {
+            "value": "center-left",
+            "label": "Logo center, menu left"
+          },
+          {
+            "value": "center-split",
+            "label": "Logo center, menu split"
+          },
+          {
+            "value": "center",
+            "label": "Logo center, menu below"
+          },
+          {
+            "value": "center-drawer",
+            "label": "Logo center, menu drawer"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "header_style",
+        "label": "Header style",
+        "default": "normal",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "sticky",
+            "label": "Sticky"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "sticky_index",
+        "label": "Overlay header over home page",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "sticky_collection",
+        "label": "Overlay header over collection",
+        "info": "(if collection image is enabled)",
+        "default": false
+      },
+      {
+        "type": "url",
+        "id": "kandy_klub_link",
+        "label": "Kandy Klub link"
+      },
+      {
+        "type": "url",
+        "id": "store_locator",
+        "label": "Store locator link"
+      },
+      {
+        "type": "url",
+        "id": "wishlist_link",
+        "label": "Wishlist page link"
+      },
+      {
+        "type": "header",
+        "content": "Announcement bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_compact",
+        "label": "Use compact style"
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_above_header",
+        "label": "Always show above header"
+      },
+
+      {
+        "type": "header",
+        "content": "Announcement left"
+      },
+      {
+        "type": "url",
+        "id": "left_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "left_label",
+        "label": "Label"
+      },
+
+      {
+        "type": "header",
+        "content": "Announcement right"
+      },
+
+      {
+        "type": "url",
+        "id": "call_us_link_au",
+        "label": "Call Us Link AU"
+      },
+      {
+        "type": "text",
+        "id": "call_us_label_au",
+        "label": "Call Us Label AU"
+      },
+      {
+        "type": "url",
+        "id": "call_us_link_nz",
+        "label": "Call Us Link NZ"
+      },
+      {
+        "type": "text",
+        "id": "call_us_label_nz",
+        "label": "Call Us Label NZ"
+      },
+      {
+        "type": "url",
+        "id": "about_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "about_label",
+        "label": "Link Label"
+      },
+      {
+        "type": "link_list",
+        "id": "about_nav",
+        "label": "About Nav"
+      },
+
+      {
+        "type": "header",
+        "content": "Header Left"
+      },
+      {
+        "type": "url",
+        "id": "find_link",
+        "label": "Find a store Link"
+      },
+      {
+        "type": "text",
+        "id": "find_label",
+        "label": "Find a store label"
+      },
+
+      {
+        "type": "header",
+        "content": "Header right"
+      },
+      {
+        "type": "link_list",
+        "id": "country",
+        "label": "Country"
+      },
+      {
+        "type": "url",
+        "id": "book_now_link",
+        "label": "Call Us Link"
+      },
+      {
+        "type": "text",
+        "id": "book_now_label",
+        "label": "Call Us Label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          },
+          {
+            "type": "image_picker",
+            "id": "logo_mobile",
+            "label": "Mobile logo",
+            "info": "Used when on Mobile"
+          },
+          {
+            "type": "range",
+            "id": "desktop_logo_width",
+            "label": "Desktop logo width",
+            "default": 200,
+            "min": 30,
+            "max": 400,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "mobile_logo_width",
+            "label": "Mobile logo width",
+            "default": 140,
+            "min": 30,
+            "max": 200,
+            "step": 10,
+            "unit": "px",
+            "info": "Set as a max-width, may appear smaller"
+          }
+        ]
+      },
+      {
+        "type": "announcement",
+        "name": "Announcement",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Text",
+            "default": "30-day postage paid returns"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "settings": {}
+    }
+  }
+{% endschema %}

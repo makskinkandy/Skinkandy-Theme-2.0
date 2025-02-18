@@ -1,0 +1,16 @@
+<script class="js-piercing-type-data" type="application/json">
+    {
+        {{ section.id | json }}: [
+            {%- if section.blocks.size > 0 -%}
+                {%- for block in section.blocks -%}
+                    {
+                        "image": {{ block.settings.image | json }},
+                        "link": {{ block.settings.link | json }},
+                        "pos_x": {{ block.settings.pos_x | json }},
+                        "pos_y": {{ block.settings.pos_y | json }}
+                    }{%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
+            {%- endif -%}
+        ]
+    }
+</script>

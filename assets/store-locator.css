@@ -1,0 +1,155 @@
+ #container {
+  display: flex;
+}
+.content {
+  padding-left: 80px;
+  padding-right: 30px;
+  width: 40%;
+}
+#store-list {
+  height: calc(100svh - 470px);
+  overflow-y: auto;
+  .btn {
+    font-size: 16px;
+  }
+}
+#map {
+  width: 100%;
+  height: calc(100svh - 140px);
+}
+.closed {
+  color: red;
+  font-weight: 600;
+}
+.open {
+  color: green;
+  font-weight: 600;
+}
+h1 {
+  padding: 30px 0;
+}
+.store-form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.store-form input {
+  width: 100%;
+  padding: 11px 5px;
+  height: auto;
+  border: solid 1px #b3b0b7;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.store-form input:focus {
+  border: solid 1px #eb008c;
+}
+
+button {
+  display:block;
+}
+.list-item {
+  padding: 15px 0;
+  border-bottom: solid 1px #e1e1e1;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.list-item:hover {
+  transition: 0.5s all ease;
+  background-color: #f1f1f1;
+}
+
+h6 {
+  margin-bottom: 5px;
+  font-family: "Futura Medium 01", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.distance {
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.direction,
+.status {
+  margin-top: 15px;
+  display: block;
+  text-decoration: underline;
+  max-width: fit-content;
+}
+.status {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#store-list {
+  --sb-track-color: #757575;
+  --sb-thumb-color: #eb008c;
+  --sb-size: 5px;
+}
+
+#store-list::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+#store-list::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+#store-list::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  #store-list {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+a.website-link {
+  padding: 5px 10px;
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #eb008c;
+  border-radius: 12px;
+  color: #FFF;
+}
+
+.text-help {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 50%;
+  }
+  #store-list {
+    height: 508px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  #container {
+    display: block
+  }
+  .content {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+  #store-list {
+    margin-bottom: 15px;
+  }
+}

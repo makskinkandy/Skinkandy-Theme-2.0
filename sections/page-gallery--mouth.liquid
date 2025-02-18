@@ -1,0 +1,50 @@
+{%- render 'page-gallery--script', section: section -%}
+
+{% schema %}
+{
+    "name": "Piercing type: Mouth",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "Blocks added will be used and displayed in the Image Markers section"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "mouth",
+            "name": "Type: Mouth",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image",
+                    "info": "Recommended size: 600px x 600px JPG"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Optional link"
+                },
+                {
+                    "type": "range",
+                    "id": "pos_x",
+                    "label": "Marker horizontal position",
+                    "default": 50,
+                    "min": 0,
+                    "max": 100,
+                    "unit": "%"
+                },
+                {
+                    "type": "range",
+                    "id": "pos_y",
+                    "label": "Marker vertical position",
+                    "default": 50,
+                    "min": 0,
+                    "max": 100,
+                    "unit": "%"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "header_banner_k6mPna": {
+      "type": "header-banner",
+      "blocks": {
+        "image_WnB3td": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/NZ-Homepage_Banner-Mobile.jpg",
+            "image": "shopify://shop_images/NZ-Homepage_Banner-Desktop.jpg",
+            "banner_url": "shopify://pages/skinkandy-piercing-menu",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_WnB3td"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "pf-d5e65e8a": {
+      "type": "pf-d5e65e8a",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header_banner_k6mPna",
+    "pf-d5e65e8a"
+  ]
+}

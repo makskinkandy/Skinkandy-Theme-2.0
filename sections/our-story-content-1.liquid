@@ -1,0 +1,96 @@
+<div class="our-story-section content-1 page-content {{ section.settings.class | escape }}">
+    <div class="page-width">
+        <div class="wrapper">
+            {%- if section.settings.text != blank -%}
+                <div class="our-story__text">
+                    <div class="rte">{{ section.settings.text | newline_to_br }}</div>
+                </div>
+            {%- endif -%}
+
+            {%- if section.settings.image_1 != blank or section.settings.video_url_1 != blank -%}
+                <div class="our-story__media media-1">
+                    {%- if section.settings.video_url_1 != blank -%}
+                        <div class="video-wrapper" data-section-id="{{ section.id }}" data-section-type="video-section">
+                            {%- render 'video-div', section_id: section.id, url: section.settings.video_url_1 -%}
+                        </div>
+                    {%- elsif section.settings.image_1 != blank -%}
+                        <img src="{{ section.settings.image_1 | img_url: '900x' }}" alt="{{ section.settings.image_1.alt }}" loading="lazy">
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+
+            {%- if section.settings.image_2 != blank or section.settings.video_url_2 != blank -%}
+                <div class="our-story__media media-2">
+                    {%- if section.settings.video_url_2 != blank -%}
+                        <div class="video-wrapper" data-section-id="{{ section.id }}" data-section-type="video-section">
+                            {%- render 'video-div', section_id: section.id, url: section.settings.video_url_2 -%}
+                        </div>
+                    {%- elsif section.settings.image_2 != blank -%}
+                        <img src="{{ section.settings.image_2 | img_url: '900x' }}" alt="{{ section.settings.image_2.alt }}" loading="lazy">
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Our story: Content 1",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1",
+            "info": "Recommended size: 900px JPG"
+        },
+        {
+            "type": "url",
+            "id": "video_url_1",
+            "label": "Optional video 1 link",
+            "info": "Displays video instead of image 1 above. Supports YouTube, .MP4 and Vimeo. Not all features supported by Vimeo."
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2",
+            "info": "Recommended size: 900px JPG"
+        },
+        {
+            "type": "url",
+            "id": "video_url_2",
+            "label": "Optional video 2 link",
+            "info": "Displays video instead of image 2 above. Supports YouTube, .MP4 and Vimeo. Not all features supported by Vimeo."
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Optional link"
+        },
+        {
+            "type": "text",
+            "id": "linktext",
+            "label": "Link text",
+            "default": "Read more"
+        },
+        {
+            "type": "text",
+            "id": "linkclass",
+            "label": "Link class"
+        }
+    ],
+    "presets": [{
+        "name": "Our story: Content 1"
+    }]
+}
+{% endschema %}

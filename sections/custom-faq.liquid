@@ -1,0 +1,233 @@
+<div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %}">
+
+  <div class="custom-faq custom-faq--{{ section.id }}">
+    {% if section.settings.image != blank %}
+    <div class="custom-faq__image">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+    </div>
+    {% endif %}
+    <div class="custom-faq__content">
+      {%- if section.settings.title != blank -%}
+        <header class="section-header">
+          <h2 class="section-header__title">
+            {{ section.settings.title | escape }}
+          </h2>
+        </header>
+      {%- endif -%}
+    
+      {%- if section.blocks.size > 0 -%}
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'question' %}
+                    {
+                      "@type": "Question",
+                      "name": {{ block.settings.question | json }},
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": {{ block.settings.answer | json }}
+                      }
+                    }{% unless forloop.last %},{% endunless %}
+                {% endcase %}
+              {% endfor %}
+            ]
+          }
+        </script>
+    
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }}>
+            {% case block.type %}
+              {% when 'rich-text'%}
+                <div class="custom-faq__rich-text">
+                  <div class="text-{{ block.settings.align_text }}">
+                    {%- if block.settings.title != blank -%}
+                      <p class="custom-faq__block-text-title h3">
+                        {{ block.settings.title | escape }}
+                      </p>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="rte">
+                        {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
+                          {{ block.settings.text }}
+                        {%- if block.settings.enlarge_text %}</div>{% endif -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+    
+              {% when 'question'%}
+                <div class="custom-faq__question">
+                  <button class="js-accordion">{{ block.settings.question }}
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="minus" class="svg-inline--fa fa-minus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>
+                  </button>
+                  <div class="panel">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+            {% endcase %}
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    
+      {%- if section.blocks.size == 0 -%}
+        <div class="placeholder-noblocks">
+          {{ 'home_page.onboarding.no_content' | t }}
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+
+</div>
+
+{% style %}
+.custom-faq--{{ section.id }} {
+  {% if section.settings.position == "left" %}
+    flex-direction: row;
+  {% else %}
+    flex-direction: row-reverse;
+  {% endif %}
+}
+
+{% if section.settings.image != blank %}
+.custom-faq--{{ section.id }} .custom-faq__image {
+  flex: 1 0 50%;
+}
+.custom-faq--{{ section.id }} .custom-faq__content {
+  flex: 1 0 50%;
+}
+{% endif %}
+
+@media only screen and (max-width: 768px) {
+  .custom-faq--{{ section.id }} {
+    flex-direction: column;
+  }
+  {% if section.settings.hide_image %}
+  .custom-faq--{{ section.id }} .custom-faq__image {
+    display: none;
+  }
+  {% endif %}
+}
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Custom FAQ",
+    "class": "custom-faq-bg",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "FAQ Section Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "narrow",
+        "label": "Narrow Width",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "position",
+        "label": "Image Position",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Image Left"
+          },
+          {
+            "value": "right",
+            "label": "Image Right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_image",
+        "label": "Hide Image on Mobile",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich-text",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Rich text"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Text alignment (Desktop)",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Centered"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Frequently asked question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "Custom FAQ",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,148 @@
+{%- liquid
+    unless limit
+      assign limit = main_menu.links.size
+    endunless
+    unless offset
+      assign offset = 0
+    endunless
+  -%}
+<nav id="mega-menu">
+  <ul
+    class="site-nav site-navigation"
+    {% unless disable_aria %}
+      role="navigation" aria-label="Primary"
+    {% endunless %}>
+    {%- for link in main_menu.links limit: limit offset: offset -%}
+      {%- liquid
+        assign has_dropdown = false
+        assign is_megamenu = false
+        assign has_sub_dropdown = false
+        assign has_grandchild = false
+        if link.links != blank
+          assign has_dropdown = true
+          assign is_megamenu = true
+        endif
+      -%}
+
+      
+      {% assign childlink_title_dc = link.title | downcase %}
+  
+      <li
+        class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %}"
+        {% if has_dropdown %}aria-haspopup="true"{% endif %}>
+  
+        <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %} {% if link.url contains 'shop-the-sale' %}sale-text{% endif %}" {% if has_dropdown %}aria-haspopup="true"{% endif %} role="button" aria-expanded="false">
+          {{ link.title }}
+        </a>
+        {%- if is_megamenu -%}
+          {%- assign previous_column_type = '' -%}
+          {%- assign animation_column = 1 -%}
+  
+          <div class="site-nav__dropdown megamenu text-left">
+            <div class="page-width">
+              <div class="grid{% if dropdown_alignment == 'center' %} grid--center{% endif %}">
+                <div class="grid__item {% if childlink_title_dc == 'shop by body part' %}text-center{% else %}medium-up--one-quarter{% endif %} appear-animation appear-delay-{{ animation_column }}">
+                  {%- assign animation_column = animation_column | plus: 1 -%}
+  
+                  {%- for childlink in link.links -%}
+                    {%- liquid
+                      assign create_new_column = false
+  
+                      if childlink.levels > 0 and forloop.index != 1
+                        assign create_new_column = true
+                      endif
+  
+                      if childlink.levels == 0 and previous_column_type == 'full'
+                        assign create_new_column = true
+                      endif
+                    -%}
+
+                    {% assign link_handle = childlink.url | handle %}
+  
+                    {%- if create_new_column -%}
+                      </div><div class="grid__item medium-up--one-quarter appear-animation appear-delay-{{ animation_column }}">
+                      {%- assign animation_column = animation_column | plus: 1 -%}
+                    {%- endif -%}
+  
+                    {%- assign subcollection_drop = false -%}
+                    {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
+                      {%- liquid
+                        assign lang_code_string = request.locale.iso_code | prepend: '/' | downcase
+                        assign subcollection_handle = childlink.url | remove: '/collections/' | remove: lang_code_string
+                        assign subcollection_drop = collections[subcollection_handle]
+                      -%}
+                    {%- endif -%}
+  
+                    {% if childlink_title_dc == 'shop by body part' %}
+                        {% assign childlink_url = childlink.url | replace: '/collections/', '' | replace: '/en-nz', '' %}
+                        {% assign childlink_thumb_img_url = 'Free-To-Be-Logo.png' | file_img_url: '150x150', crop: 'center' %}
+                        {% if collections[childlink_url].image != blank %}
+                            {% assign childlink_thumb_img_url = collections[childlink_url].image | img_url: '150x150', crop: 'center' %}
+                        {% endif %}
+                        <div class="has-thumbnail">
+                            <a href="{{ childlink.url }}" class="">
+                                <img src="{{ childlink_thumb_img_url }}" alt="{{ collections[childlink_url].image.alt }}"/> 
+                                <span> {{ childlink.title }} </span>
+                            </a>
+                        </div>
+                    {% else %}
+                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link level-1-menu {% if has_grandchild %}has-child{% endif %} {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">{{ childlink.title }}</a>
+                    {% endif %}
+                    
+                    {%- liquid
+                      if childlink.levels > 0
+                        assign previous_column_type = 'full'
+                      else
+                        assign previous_column_type = 'single'
+                      endif
+                    -%}
+  
+                    {%- for grandchildlink in childlink.links -%}
+                      {% assign link_handle = grandchildlink.url | handle %}
+                      <div class="grandchild">
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">
+                            <span>
+                            {{grandchildlink.title}}
+                            </span>
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- elsif has_dropdown -%}
+          <ul class="site-nav__dropdown text-left">
+            {%- for childlink in link.links -%}
+              {%- liquid
+                if childlink.links != blank
+                  assign has_sub_dropdown = true
+                endif
+              -%}
+              {% assign link_handle = childlink.url | handle %}
+              <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+                <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                  {{ childlink.title | escape }}
+                  {%- if has_sub_dropdown -%}
+                    <svg aria-hidden="true" aria-label="{{ childlink.title | escape }}" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/></svg>
+                  {%- endif -%}
+                </a>
+                {%- if has_sub_dropdown -%}
+                  <ul class="site-nav__deep-dropdown">
+                    {%- for grandchildlink in childlink.links -%}
+                      <li>
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">{{ grandchildlink.title | escape }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+  

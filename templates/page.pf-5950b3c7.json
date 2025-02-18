@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "header_banner_DXcJkb": {
+      "type": "header-banner",
+      "blocks": {
+        "image_bPJypk": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/7R506295-_1_mobile_1.jpg",
+            "image": "shopify://shop_images/7R506295-_1_2.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_bPJypk"
+      ],
+      "settings": {
+        "title": "FAQ's",
+        "banner_size": "short-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "pf-5950b3c7": {
+      "type": "pf-5950b3c7",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header_banner_DXcJkb",
+    "pf-5950b3c7"
+  ]
+}

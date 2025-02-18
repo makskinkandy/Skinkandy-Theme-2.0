@@ -1,0 +1,32 @@
+{% if settings.ss_enable %}
+  <div
+    data-section-type="ss-recommendations-product"
+    data-section-id="{{ section.id }}"
+  >
+    <script type="searchspring/personalized-recommendations" profile="{{ section.settings.profileId }}">
+      seed = "{{ product.variants[0].sku }}";
+    </script>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "SS Recs - Product",
+  "class": "searchspring-recommendations",
+  "presets": [
+    {
+      "category": "{{ section.settings.category }}",
+      "name": "SS Recs - Product"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "profileId",
+      "label": "Searchspring Recommendations Profile ID",
+      "default": "similar",
+      "info": "To be used with product-related (similar and cross-sell) recommendation profile types. The profileId can be found in the Searchspring Management Console."
+    }
+  ]
+}
+{% endschema %}

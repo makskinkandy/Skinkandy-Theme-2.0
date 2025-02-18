@@ -1,0 +1,307 @@
+<style>
+.template-article {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Futura Medium 01", sans-serif;
+  }
+  h1 {
+    margin-bottom: 25px;
+  }
+  p {
+    line-height: 25px;
+  }
+  .rte li {
+    margin-bottom: 0;
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+  img.collection-hero__image.image-fit {
+    max-height: 550px;
+    max-width: 1200px;
+    margin: 80px auto 25px auto;
+    opacity: 1;
+    display: block;
+  }
+}
+.article__hero-title {
+  background-color: #EEC9D0;
+  padding: 50px 0 30px 0;
+}
+
+.article__quick-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.article__hero-title--meta .article__date {
+  font-size: 18px;
+}
+
+.article__quick-nav--back a, .article__quick-nav--next a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.article__back-arrow {
+  transform: rotateY(180deg);
+  width: 20px;
+  margin-right: 10px;
+}
+
+.article__next-arrow {
+  width: 20px;
+  margin-left: 10px;
+}
+.collection-hero__image {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .article__hero-title--meta {
+    text-align: center;
+  }
+  .article__hero-title--meta .article__title h2 {
+    font-size: 20px;
+  }
+}
+</style>
+
+{%- liquid
+  assign number_of_comments = article.comments_count
+  if comment.status == 'pending'
+    assign number_of_comments = article.comments_count | plus: 1
+  endif
+-%}
+<div class="page-width">
+  {%- if section.settings.image_hero and article.image -%}
+    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="collection-hero__image image-fit"
+          src="{{ article.image | img_url: '1400x' }}"
+          alt="{{ article.image.alt | escape }}">
+  {%- endif -%}
+</div>
+<div class="page-width page-width--narrow page-content page-content--article">
+  <article class="article">
+    {% assign text = article.title %}
+
+    {% assign words = text | split: ' ' %}
+    {% assign processed_words = '' %}
+    
+    {% for word in words %}
+      {% assign word_1 = word | slice: 0, 1 %}
+      {% assign word_2 = word | slice: -1 %}
+      {% if word_1 == "{" %}
+        {% if word_2 == "}" %}
+          {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+          {% assign processed_words = processed_words | append: '<span>' | append: new_word | append: '</span> ' %}
+        {% else %}
+          {% assign processed_words = processed_words | append: word | append: ' ' %}
+        {% endif %}
+      {% else %}
+        {% assign processed_words = processed_words | append: word | append: ' ' %}
+      {% endif %}
+    {% endfor %}
+    <h1 class="section-header__title">{{ processed_words | strip }}</h1>
+
+    {%- if section.settings.social_sharing_blog -%}
+    <div class="article__social-sharing">
+      Share On: 
+      {%- render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image -%}
+    </div>
+    {%- endif -%}
+
+    <div class="article__body rte">
+      {{ article.content }}
+    </div>
+
+    {%- if blog.comments_enabled? -%}
+
+      {%- if number_of_comments > 0 -%}
+        <hr class="hr--large">
+        <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+        <hr class="hr--small hr--clear">
+      {%- endif -%}
+
+      {%- paginate article.comments by 5 -%}
+        <div id="comments">
+          {%- if comment and comment.errors == blank -%}
+            <hr class="hr--small hr--clear">
+            <p class="note note--success">
+              {%- if blog.moderated? -%}
+                {{ 'blogs.comments.success_moderated' | t }}
+              {%- else -%}
+                {{ 'blogs.comments.success' | t }}
+              {%- endif -%}
+            </p>
+          {%- endif -%}
+
+          {%- if number_of_comments > 0 -%}
+            <ul class="no-bullets">
+              {%- if comment.status == 'pending' -%}
+                <li id="Comment-{{ comment.id }}" class="article__comment">
+                  {%- render 'comment', comment: comment -%}
+                </li>
+              {%- endif -%}
+
+              {%- for comment in article.comments -%}
+                <li id="Comment-{{ comment.id }}" class="article__comment">
+                  {%- render 'comment', comment: comment -%}
+                </li>
+
+                {%- unless forloop.last -%}
+                  <li><hr class="hr--clear"></li>
+                {%- endunless -%}
+              {%- endfor -%}
+            </ul>
+
+            {%- if paginate.pages > 1 -%}
+              {%- render 'pagination', paginate: paginate, hash: '#comments' -%}
+            {%- endif -%}
+
+          {%- endif -%}
+
+          <hr class="hr--large">
+
+          <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+            <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+          </header>
+
+          <div class="form-vertical">
+            {%- form 'new_comment', article -%}
+
+              {{ form.errors | default_errors }}
+
+              <div class="grid grid--small">
+                <div class="grid__item medium-up--one-half">
+                  <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                  <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                  <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                </div>
+              </div>
+
+              <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+              <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>
+
+              {%- if blog.moderated? -%}
+                <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+              {%- endif -%}
+
+              <button type="submit" class="btn btn--secondary">
+                {{ 'blogs.comments.post' | t }}
+              </button>
+
+              {% comment %}
+                Remove the following three lines of code to remove the note
+                about being protected by Google's reCAPTCHA service.
+                By removing it, the small reCAPTCHA widget will appear in the
+                bottom right corner of the page.
+              {% endcomment %}
+              {{ 'shopify.online_store.spam_detection.disclaimer_html' | t }}
+
+            {%- endform -%}
+          </div>
+
+        </div>
+      {%- endpaginate -%}
+    {%- endif -%}
+
+  </article>
+
+  {%- comment -%}
+  <div class="text-center">
+    <a href="{{ blog.url }}" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+  {%- endcomment -%}
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": {{ article.content | strip_html | json }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+
+{% schema %}
+  {
+    "name": "Article pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "image_hero",
+        "label": "Use featured image as full-width hero",
+        "info": "(if article image is set)",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_tags",
+        "label": "Show tags",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": "Show date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_comments",
+        "label": "Show comment count",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": "Show author"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_blog",
+        "label": "Show social sharing buttons",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

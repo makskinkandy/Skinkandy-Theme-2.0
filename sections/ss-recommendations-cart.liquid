@@ -1,0 +1,35 @@
+{% if settings.ss_enable %}
+  <div
+    data-section-type="ss-recommendations-cart"
+    data-section-id="{{ section.id }}"
+  >
+    <script type="searchspring/personalized-recommendations" profile="{{ section.settings.profileId }}">
+      cart = [];
+      {% for item in cart.items %}
+        cart.push("{{ item.product.variants[0].sku }}");
+      {% endfor %}
+    </script>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "SS Recs - Cart",
+  "class": "searchspring-recommendations",
+  "presets": [
+    {
+      "category": "{{ section.settings.category }}",
+      "name": "SS Recs - Cart"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "profileId",
+      "label": "Searchspring Recommendations Profile ID",
+      "default": "view-cart",
+      "info": "To be used with cart cross-sell recommendation profile type. The profileId can be found in the Searchspring Management Console."
+    }
+  ]
+}
+{% endschema %}

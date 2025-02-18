@@ -1,0 +1,222 @@
+<div class="collection-showcase showcase-{{ section.id }} mode--{{ section.settings.mode }} {% if section.settings.bottom_border %}no-padding-bottom{% endif  %} image-hover--{{ section.settings.enable_hover }}" {% if section.settings.background %}style="background: {{ section.settings.background }}"{% endif %}>
+  <div class="collection-showcase__wrapper page-width">
+    {% assign text = section.settings.title %}
+    {% assign words = text | split: ' ' %}
+    
+    {% capture processed_words %}
+      {% for word in words %}
+        {% assign word_1 = word | slice: 0, 1 %}
+        {% assign word_2 = word | slice: -1 %}
+        
+        {% if word_1 == "{" and word_2 == "}" %}
+          {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+          <span class="highlight-text">{{ new_word }}</span>
+        {% else %}
+          {{ word }}
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    <h2>
+      {{ processed_words }}
+    </h2>
+    <div class="collection-showcase__slider">
+      {% for block in section.blocks %}
+        <div class="collection-showcase__item">
+          <a href="{{ block.settings.url }}">
+            {% if block.settings.disable_button == false %}
+              <h3 class="collection-showcase__title">{{ block.settings.title }}</h3>
+            {% endif %}
+            <div class="image-wrapper">
+              <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Collections" class="collection-showcase__img">
+            </div>
+            {% if block.settings.disable_overlay != true %}
+              <div class="overlay"></div>
+            {% endif %}
+            {% if section.settings.mode == 'light' and block.settings.disable_button == false  %}
+              <button class="btn btn--black">SHOP NOW</button>
+            {% endif %}
+            {% if section.settings.mode == 'light' and block.settings.disable_button == true %}
+              <h3 class="collection-showcase__title no-btn">{{ block.settings.title }}</h3>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor%}
+    </div>
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_url }}" class="btn btn--line">{{ section.settings.button_text }}</a>
+    {%  endif %}
+    {% if section.settings.bottom_border %}
+      <hr>
+    {%  endif %}
+  </div>
+</div>
+
+{% if section.blocks.size > 1 and section.blocks.size > 5 %}
+  <script>
+    $('.showcase-{{ section.id }} .collection-showcase__slider').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      variableWidth: true,
+      dots: true,
+      responsive: [
+      {
+        breakpoint: 1561,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 4,
+        }
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          variableWidth: true,
+          centerMode: false,
+          arrows: false
+        }
+      }
+    ]
+    });
+  </script>
+{% else %}
+  <script>
+    $('.showcase-{{ section.id }} .collection-showcase__slider').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      variableWidth: true,
+      dots: false,
+      responsive: [
+      {
+        breakpoint: 1561,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+          infinite: false
+        }
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          variableWidth: true,
+          centerMode: false,
+          arrows: false
+        }
+      }
+    ]
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Collection Showcase Block",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+      },
+      {
+        "type": "select",
+        "id": "mode",
+        "label": "Color Mode",
+        "default": "light",
+        "options": [
+          {
+            "value": "dark",
+            "label": "Dark"
+          },
+          {
+            "value": "light",
+            "label": "Light"
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+      {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Buttton URL"
+      },
+      {
+        "type": "checkbox",
+        "id": "bottom_border",
+        "label": "Enable Bottom border"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hover",
+        "label": "Enable Image Hover"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Collection Item",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "disable_overlay",
+            "label": "Disable Overlay"
+          },
+          {
+            "type": "checkbox",
+            "id": "disable_button",
+            "label": "Disable Button"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Collection Showcase Block"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,122 @@
+<div class="our-story-section content-2 page-content{% if section.settings.video_url_1 != blank or section.settings.video_url_2 != blank%} has-video{% endif %} {{ section.settings.class | escape }}">
+    <div class="page-width">
+        <div class="wrapper">
+            {%- if section.settings.image_1 != blank or section.settings.video_url_1 != blank -%}
+                <div class="our-story__media media-1">
+                    {%- if section.settings.video_url_1 != blank -%}
+                        <div class="video-wrapper" data-section-id="{{ section.id }}" data-section-type="video-section">
+                            {%- render 'video-div', section_id: section.id, url: section.settings.video_url_1 -%}
+                        </div>
+                    {%- elsif section.settings.image_1 != blank -%}
+                        <img src="{{ section.settings.image_1 | img_url: '900x' }}" alt="{{ section.settings.image_1.alt }}" loading="lazy">
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+
+            {%- if section.settings.heading != blank -%}
+                <div class="our-story__heading">
+                    <h2>{{ section.settings.heading | escape }}</h2>
+                </div>
+            {%- endif -%}
+
+            <div class="our-story__text">
+                {%- if section.settings.text != blank -%}
+                    <div class="rte">{{ section.settings.text | newline_to_br }}</div>
+                {%- endif -%}
+                {%- if section.settings.link != blank -%}
+                    <a href="{{ section.settings.link | escape }}" class="btn {{ section.settings.linkclass | escape }}">{{ section.settings.linktext | escape }}</a>
+                {%- endif -%}
+            </div>
+
+            {%- if section.settings.icon != blank -%}
+                <div class="our-story__media image-icon">
+                    <img src="{{ section.settings.icon | img_url: '300x' }}" alt="{{ section.settings.icon.alt }}" loading="lazy">
+                </div>
+            {%- endif -%}
+
+            {%- if section.settings.image_2 != blank or section.settings.video_url_2 != blank -%}
+                <div class="our-story__media media-2">
+                    {%- if section.settings.video_url_2 != blank -%}
+                        <div class="video-wrapper" data-section-id="{{ section.id }}" data-section-type="video-section">
+                            {%- render 'video-div', section_id: section.id, url: section.settings.video_url_2 -%}
+                        </div>
+                    {%- elsif section.settings.image_2 != blank -%}
+                        <img src="{{ section.settings.image_2 | img_url: '900x' }}" alt="{{ section.settings.image_2.alt }}" loading="lazy">
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Our story: Content 2",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1",
+            "info": "Recommended size: 900px JPG"
+        },
+        {
+            "type": "url",
+            "id": "video_url_1",
+            "label": "Optional video 1 link",
+            "info": "Displays video instead of image 1 above. Supports YouTube, .MP4 and Vimeo. Not all features supported by Vimeo."
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2",
+            "info": "Recommended size: 900px JPG"
+        },
+        {
+            "type": "url",
+            "id": "video_url_2",
+            "label": "Optional video 2 link",
+            "info": "Displays video instead of image 2 above. Supports YouTube, .MP4 and Vimeo. Not all features supported by Vimeo."
+        },
+        {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Optional icon",
+            "info": "Recommended size: 300px PNG"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Optional link"
+        },
+        {
+            "type": "text",
+            "id": "linktext",
+            "label": "Link text",
+            "default": "Read more"
+        },
+        {
+            "type": "text",
+            "id": "linkclass",
+            "label": "Link class"
+        }
+    ],
+    "presets": [{
+        "name": "Our story: Content 2"
+    }]
+}
+{% endschema %}

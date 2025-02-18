@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "header_banner_7eC3pT": {
+      "type": "header-banner",
+      "blocks": {
+        "image_Wy8mnQ": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Location_NT_Mobile_Banner_7_1.jpg",
+            "image": "shopify://shop_images/Location_NT_Banner_8_1.jpg",
+            "banner_url": "https://support.skinkandy.com/s/booking-form",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Wy8mnQ"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 992px) {.hero-banner__item.small-banner {background-size: contain; background-repeat: no-repeat; background-color: #fff; }}"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false
+      }
+    },
+    "pf-6a12c81c": {
+      "type": "pf-6a12c81c",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header_banner_7eC3pT",
+    "pf-6a12c81c"
+  ]
+}

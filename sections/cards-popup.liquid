@@ -1,0 +1,455 @@
+{%- style -%}
+
+@media only screen and (max-width: 769px) {
+{% if section.settings.margin_top_mobile > 0 %}
+  #section-{{ section.id }} .index-section {
+    margin-top: {{ section.settings.margin_top_mobile | append: 'em' }};
+  }
+{% endif %}
+
+{% if section.settings.margin_bottom_mobile > 0 %}
+  #section-{{ section.id }} .index-section {
+    margin-bottom: {{ section.settings.margin_bottom_mobile | append: 'em' }};
+  }
+{% endif %}
+}
+
+@media only screen and (min-width: 769px) {
+  {% if section.settings.margin_top > 0 %}
+    #section-{{ section.id }} .index-section {
+      margin-top: {{ section.settings.margin_top | append: 'em' }};
+    }
+  {% endif %}
+
+  {% if section.settings.margin_bottom > 0 %}
+    #section-{{ section.id }} .index-section {
+        margin-bottom: {{ section.settings.margin_bottom | append: 'em' }};
+      }
+  {% endif %}
+}
+{%- endstyle -%}
+
+{%- style -%}
+  body.popup-open {
+    overflow: hidden;
+  }
+
+  #section-{{ section.id }} {
+    margin: -1em 0;
+  }
+
+  #section-{{ section.id }} .card-popup {
+    background-color: #ffffff;
+    /* box-shadow: 0 0 30px #0000001f; */
+    margin: 1em 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  #section-{{ section.id }} .card-popup .image {
+    /* display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+
+    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    
+    height: 150px; */
+  }
+
+  #section-{{ section.id }} .card-popup .image,
+  #section-{{ section.id }} .popup-modal_image,
+  #section-{{ section.id }} .popup-modal_title {
+    margin-bottom: 1em;
+    text-align: center
+  }
+
+  #section-{{ section.id }} .card-popup .image img,
+  #section-{{ section.id }} .popup-modal_image img {
+    display: inline-block;
+  }
+
+  #section-{{ section.id }} .card-popup .btn + .rte {
+    margin-top: 1em;
+  }
+
+  #section-{{ section.id }} .card-popup .rte {
+    margin-bottom: 0;
+  }
+
+  #section-{{ section.id }} .popup-block {
+    display: none;
+  }
+
+  #section-{{ section.id }} #popup-overlay {
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 49;
+  }
+
+  #section-{{ section.id }} #popup-modal {
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+
+    display: none;
+    left: 50%;
+    height: 100%;
+    max-width: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1em;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    z-index: 50;
+  }
+
+  #section-{{ section.id }} #popup-content {
+    background-color: #ffffff;
+    min-height: 100px;
+    padding: 1em;
+    width: 100%;
+  }
+
+  #section-{{ section.id }} .popup-action {
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    display: flex;
+    margin-top: 1em;
+  }
+
+  #section-{{ section.id }} .popup-action > button {
+    margin-right: .5em;
+  }
+
+  #section-{{ section.id }} #popup-overlay.active {
+    display: block;
+  }
+  
+  #section-{{ section.id }} #popup-modal.active {
+    display: flex;
+
+  }
+
+  #section-{{ section.id }} .grid,
+  #section-{{ section.id }} .grid__item,
+  #section-{{ section.id }} .grid__item .card-popup {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    display: flex;
+  }
+  
+  #section-{{ section.id }} .grid__item .card-popup {
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    -o-align-content: space-between;
+    align-content: space-between;
+  }
+
+  #section-{{ section.id }} .grid__item .card-popup .image,
+  #section-{{ section.id }} .grid__item .card-popup .rte {
+    width: 100%;
+  }
+{%- endstyle -%}
+
+{%- assign fixed_aspect_ratio = false -%}
+{% unless image_size == 'natural' %}
+  {%- assign fixed_aspect_ratio = true -%}
+{% endunless %}
+
+<div id="section-{{ section.id }}">
+    {%- if section.settings.space_around -%}
+      <div class="index-section">
+    {%- endif -%}
+
+    {%- unless section.settings.full_width -%}
+    <div class="page-width">
+    {%- endunless -%}
+
+    <div class="grid">
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+      <div class="grid__item medium-up--one-third small--one-whole aos-init aos-animate" data-aos="row-of-3">
+        <div class="card-popup">
+
+          <div class="image">
+
+            {%- if fixed_aspect_ratio -%}
+              <div class="image-wrap">
+                <div
+                  class="grid__image-ratio grid__image-ratio--wide">
+                  {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                  <img class="lazyload"
+                    data-popup="{{ block.settings.image | img_url: 'x350' }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[360, 540, 720, 900, 1080]"
+                      data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ block.settings.image.alt | escape }}">
+                </div>
+                <noscript>
+                  <img class="lazyloaded" src="{{ block.settings.image | img_url: '400x' }}" alt="{{ article.title | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt | escape }}">
+                <noscript>
+                  <img class="lazyloaded" src="{{ block.settings.image | img_url: '400x' }}" alt="{{ article.title | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+          </div>
+
+          {% if block.settings.button_label != blank and block.settings.button_url != blank %}
+            <a href="{{ block.settings.button_url }}" class="btn btn--small btn--full">{{ block.settings.button_label }}</a>
+          {% endif %}
+
+          {% if block.settings.popup_label != blank %}
+            <div class="rte">
+              <a href="#" class="popup-label"><span class="s1">{{ block.settings.popup_label }}</span></a>
+            </div>
+          {% endif %}
+
+          <div id="block-{{ block.id }}" class="popup-block">
+            <div class="popup-details">
+              {{ block.settings.content }}
+            </div>
+
+            <div class="popup-action">
+              <button type="button" class="btn btn--small btn--tertiary js-btn_close">Close</button>
+              {% if block.settings.action_label != blank and block.settings.action_url != blank %}
+                <a href="{{ block.settings.action_url }}"  class="btn btn--small">{{ block.settings.action_label }}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+    {%- endif -%}
+  </div>
+  {%- unless section.settings.full_width -%}
+  </div>
+  {%- endunless -%}
+  
+  {%- if section.settings.space_around -%}
+  </div>
+  {%- endif -%}
+
+  <div id="popup-overlay"></div>
+  <div id="popup-modal">
+    <div id="popup-content">
+      <div class="popup-modal_image">
+        <img src="" class="" alt="">
+      </div>
+
+      <div class="popup-modal_title section-header feature-collections">
+        <h2 class="section-header__title"></h2>
+      </div>
+
+      <div class="popup-modal_content"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  jQuery('.popup-label').click( function (e) {
+    e.preventDefault();
+
+    var popup_title = jQuery('.popup-modal_title h2'),
+    popup_image = jQuery('.popup-modal_image img'),
+    popup_content = jQuery('.popup-modal_content');
+
+    var thisCard = jQuery(this).parents('.card-popup');
+
+    {% comment %} clear popup details {% endcomment %}
+    popup_title.html('');
+    popup_image.attr('src','');
+    popup_content.html('');
+
+    {% comment %} open popup {% endcomment %}
+    jQuery('body').addClass('popup-open');
+    jQuery('#popup-overlay').addClass('active');
+    jQuery('#popup-modal').addClass('active');
+
+    {% comment %} update popup details {% endcomment %}
+    popup_title.html( thisCard.find('.popup-label span').html() );
+    popup_image.attr('src', thisCard.find('img').data('popup') );
+    popup_content.html( thisCard.find('.popup-block').html() );
+
+  });
+
+  jQuery(document).on('click', '.js-btn_close, #popup-overlay', function (e) {
+    e.preventDefault();
+
+    {% comment %} close popup {% endcomment %}
+    jQuery('body').removeClass('popup-open');
+    jQuery('#popup-overlay').removeClass('active');
+    jQuery('#popup-modal').removeClass('active');
+  });
+
+</script>
+{% schema %}
+  {
+    "name": "Cards PopUp",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full page width",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "space_around",
+        "label": "Add spacing above and below",
+        "default": true
+      },
+      
+      {
+        "type": "header",
+        "content": "Margin Specific",
+        "info": "Enable space around. If 0 wil use the default margins"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": 0,
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "em"
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": 0,
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "em"
+      },
+      {
+        "type": "range",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": 0,
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "em"
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": 0,
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "em"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "card",
+        "name": "Card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+          },
+          {
+            "type": "text",
+            "id": "popup_label",
+            "label": "Pop up button label and Pop up Title",
+            "default": "Terms and Conditions"
+          },
+          {
+            "type": "header",
+            "content": "Pop Up content"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "action_label",
+            "label": "Button Label"
+          },
+          {
+            "type": "url",
+            "id": "action_url",
+            "label": "Button URL"
+          }
+        ]
+      }      
+    ],
+    "presets": [
+      {
+        "name": "Cards PopUp",
+        "blocks": [
+          {
+            "type": "card",
+            "settings": {
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

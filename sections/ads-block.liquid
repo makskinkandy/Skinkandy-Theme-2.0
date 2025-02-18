@@ -1,0 +1,84 @@
+<div class="ads-block ads-block-{{ section.id }}">
+  <div class="ads-block__slider">
+    {% for block in section.blocks %}
+      <div class="ads-block__item" style="{% if block.settings.bg_image %}background-image: url({{ block.settings.bg_image | image_url }});{% endif %}{% if block.settings.bg_color %}background-color: {{ block.settings.bg_color }};{% endif %}">
+        <a href="{{ block.settings.url }}">
+          <div class="ads-block__wrapper page-width">
+            <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Ads" class="ads-block__img">
+            <img src="{{ block.settings.image_mobile | image_url }}" alt="Image for {{ block.settings.title }} Ads on Mobile" class="ads-block__img mobile">
+          </div>
+        </a>
+      </div>
+    {% endfor%}
+  </div>
+</div>
+
+{% if section.blocks.size > 1 %}
+  <script>
+    $('.ads-block-{{ section.id }} .ads-block__slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      autoplaySpeed: 8000,
+      arrows: false,
+      autoplay: true
+    });
+  </script>
+{% endif %}
+{% schema %}
+  {
+    "name": "Ads Block",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Ads Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#000000"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Ads Block"
+    }]
+  }
+{% endschema %}

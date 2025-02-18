@@ -1,0 +1,88 @@
+{%- liquid
+    unless section.settings.days 
+        assign timer_class = timer_class | append: ' hide_days'
+    endunless
+
+    unless section.settings.hrs 
+        assign timer_class = timer_class | append: ' hide_hrs'
+    endunless
+
+    unless section.settings.mins 
+        assign timer_class = timer_class | append: ' hide_mins'
+    endunless
+
+    unless section.settings.secs 
+        assign timer_class = timer_class | append: ' hide_secs'
+    endunless
+-%}
+
+<div class="countdown-timer-section image-{{ section.settings.image_position }}{% if section.settings.image != blank %} has-image{% endif %}{% if section.settings.sticky %} js-sticky{% endif %} {{ section.settings.class | escape }}">
+    <div class="wrapper" style="background-color: {{ section.settings.bg_color }}">
+        {%- if section.settings.sticky -%}
+            <button type="button" class="js-close-sticky">
+                <span class="visually-hidden">Hide this section</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+            </button>
+        {%- endif -%}
+
+        {%- if section.settings.image != blank -%}
+            <div class="section-image">
+                <img src="{{ section.settings.image | img_url: '600x'}}" alt="{{ section.settings.image.alt | escape }}">
+            </div>
+        {%- endif -%}
+
+        <div class="page-width" style="--heading-color: {{ section.settings.heading_color }}; --timer-color: {{ section.settings.countdown_color }}">
+            <h2>
+                <span class="text">
+                    {{ section.settings.heading | escape }}
+                </span>
+            </h2>
+            <div class="timer{{ timer_class }} js-countdown-timer-elem" data-datetime="{{ section.settings.date | strip }}" role="timer" aria-live="polite" aria-atomic="true" data-action="{{ section.settings.action }}">
+                <span class="timer-item timer-days">
+                    <span class="days">00</span>
+                    <small>{{ 'layout.countdown.days' | t }}</small>
+                </span>
+                <span class="timer-item timer-hours">
+                    <span class="hours">00</span>
+                    <small>{{ 'layout.countdown.hours' | t }}</small>
+                </span>
+                <span class="timer-item timer-mins">
+                    <span class="mins">00</span>
+                    <small>{{ 'layout.countdown.minutes' | t }}</small>
+                </span>
+                <span class="timer-item timer-secs">
+                    <span class="secs">00</span>
+                    <small>{{ 'layout.countdown.seconds' | t }}</small>
+                </span>
+            </div>
+            <a href="{{ section.settings.book_link }}" class="btn">Book Now</a>
+        </div>
+    </div>
+</div>
+<style>
+  .countdown-timer-section {
+    .timer {
+      margin-inline: 35px;
+    }
+    .timer-item {
+      flex-direction: column;
+      font-size: 30px;
+    }
+    .page-width {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      @media screen and (max-width: 1008px) {
+        flex-direction: column;
+      }
+    }
+    .btn {
+      font-family: "Futura Medium 01", sans-serif;
+    }
+    h2 {
+      font-size: 26px;
+      font-family: "Futura Medium 01", sans-serif;
+    }
+  }
+</style>

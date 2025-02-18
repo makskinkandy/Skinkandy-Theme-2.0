@@ -1,0 +1,202 @@
+
+{% if section.settings.section_id.size > 0 %}
+  <!-- PageFlyGlobalSection -->
+  {% render 'pagefly-main-js' %}
+  {% render 'pagefly-main-css' %}
+  {% include section.settings.section_id %}
+{% else %}
+  
+    {% if request.design_mode %}
+      <style>.pf-ph{font-size:14px!important;background:#fafafa;padding:20px;text-align:center;border:1px solid #f0f0f0;border-radius:4px;margin:15px}.pf-ph span{display:block;background:#e6f7ff;padding:8px 15px;border:1px solid #91d5ff}</style>
+      <div class="pf-ph">
+        <h3>PageFly Section</h3>
+        <span>No section selected. Please select your section from the list</span>
+      </div>
+    {% endif %}
+  
+{% endif %}
+
+{% schema %}
+{
+  "name": "PageFly Section",
+  "settings": [
+    {
+      "id": "section_id",
+      "type": "select",
+      "label": "Sections",
+      "options": [
+        {
+          "label": "Select section",
+          "value": ""
+        },
+        {
+          "label": "Piercing Menu Accordion NZ",
+          "value": "pf-c522b4d3"
+        },
+        {
+          "label": "Piercing Menu Accordion AU",
+          "value": "pf-81993b4c"
+        },
+        {
+          "label": "Piercing Menu Header NZ",
+          "value": "pf-484c1325"
+        },
+        {
+          "label": "Piercing Menu Header AU",
+          "value": "pf-44d23272"
+        },
+        {
+          "label": "FAQ nav",
+          "value": "pf-ca8aa6a4"
+        },
+        {
+          "label": "FAQ Banner",
+          "value": "pf-5ff7ae63"
+        },
+        {
+          "label": "TESTIMONIALS",
+          "value": "pf-61a5475f"
+        },
+        {
+          "label": "Kids FAQ",
+          "value": "pf-456c42c4"
+        },
+        {
+          "label": "Piercing Menu  - NZ",
+          "value": "pf-197a2eb3"
+        },
+        {
+          "label": "Kandy Club Landing - Banner ",
+          "value": "pf-0630fd7a"
+        },
+        {
+          "label": "Map Section - NZ",
+          "value": "pf-5d48451b"
+        },
+        {
+          "label": "Kandy Club - Rewards",
+          "value": "pf-f118b8a8"
+        },
+        {
+          "label": "Piercing Menu Titanium Prices AU",
+          "value": "pf-fee629fe"
+        },
+        {
+          "label": "Piercing Menu Titanium Prices NZ",
+          "value": "pf-b6b1f19f"
+        },
+        {
+          "label": "CAREERS NAVIGATION",
+          "value": "pf-0381dc78"
+        },
+        {
+          "label": "KULTURE COMMITMENTS",
+          "value": "pf-50221149"
+        },
+        {
+          "label": "Piercing Menu Hero Banner NZ",
+          "value": "pf-1f2196e3"
+        },
+        {
+          "label": "SkinKandy is coming to NZ",
+          "value": "pf-df6d4961"
+        },
+        {
+          "label": "Piercing Menu Hero Banner AU",
+          "value": "pf-bfa5f380"
+        },
+        {
+          "label": "RETAIL LEADERSHIP 3 TILES",
+          "value": "pf-d40f84f4"
+        },
+        {
+          "label": "CAREERS - MIC / PIERCING TRAINING",
+          "value": "pf-e030beb1"
+        },
+        {
+          "label": "INTERVIEW TIPS",
+          "value": "pf-b991af4e"
+        },
+        {
+          "label": "NEW STORE MAP",
+          "value": "pf-9219dcae"
+        },
+        {
+          "label": "BUTTON MASTER",
+          "value": "pf-85a47a59"
+        },
+        {
+          "label": "BLOCKS",
+          "value": "pf-b377b783"
+        },
+        {
+          "label": "Piercing Menu ",
+          "value": "pf-6f732329"
+        },
+        {
+          "label": "FAQ'S",
+          "value": "pf-00aa653b"
+        },
+        {
+          "label": "Rotating Video",
+          "value": "pf-a46f4d38"
+        },
+        {
+          "label": "PILLS",
+          "value": "pf-69f54500"
+        },
+        {
+          "label": "Section",
+          "value": "pf-5be67b16"
+        },
+        {
+          "label": "Section",
+          "value": "pf-af13eef0"
+        },
+        {
+          "label": "Piercing Menu Accordion",
+          "value": "pf-4da91697"
+        },
+        {
+          "label": "Popular Collections",
+          "value": "pf-a12ddc10"
+        },
+        {
+          "label": "SPLIT SECTION - TEXT RIGHT",
+          "value": "pf-1a0272e5"
+        },
+        {
+          "label": "SPLIT DESIGN - LEFT TEXT",
+          "value": "pf-32ba6fd2"
+        },
+        {
+          "label": "Mobile Header",
+          "value": "pf-bc89c564"
+        },
+        {
+          "label": "Buy 3 Get 4th Free",
+          "value": "pf-69eedd57"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Find and edit your section on the [section listing](https://skinkandy-au.myshopify.com/admin/apps/pagefly/sections)"
+    },
+    {
+      "type": "paragraph",
+      "content": "To add block to a section, please use the App Block element on PageFly section editor."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PageFly Section"
+    }
+  ]
+}
+{% endschema %}

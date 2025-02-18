@@ -1,0 +1,127 @@
+<div
+  class="homepage location-navigation-section locations-{{ section.id }}{% if section.settings.color_background == settings.color_body_bg %} testimonials-section--with-divider{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="locations"
+  data-aos
+  style="background-color: {{ section.settings.background_color }}">
+  {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+    <div class="page-width">
+      <div class="section-header text-{{ section.settings.align_text }} small--text-center">
+        <h2>{{ section.settings.subtitle | escape }}</h2>
+        <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width homepage-location-wrapper">
+    {% if section.settings.link_list != blank %}
+        <div class="location-wrapper">
+          {% for link in section.settings.link_list.links %}
+            <div class="location">
+              <h2 class="location-title">
+                {{ link.title }}
+                <img src="{{ 'plus-light.svg' | asset_url }}" alt="" class="location-title-icon plus">
+                <img src="{{ 'minus-light.svg' | asset_url }}" alt="" class="location-title-icon minus">
+              </h2>
+              <div class="locations">
+                <div class="location-grid">
+                  {% for child_link in link.links %}
+                    <div class="store-location">
+                      <a href="{{ link.url }}">
+                        <span>{{ child_link.title }}</span>
+                        <div class="location-arrow"><img src="{{ 'long-arrow-right-regular.svg' | asset_url }}"></div>
+                      </a>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          {% if section.settings.button_link != blank %}
+            <div class="location-actions small--text-center">
+              <a href="{{ section.settings.button_link }}" class="btn btn--secondary btn--x-large">
+                {{ section.settings.button_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+    {% endif %}
+    {% if section.settings.image != blank %}
+      <div class="location-image">
+        <img class="lazyload" data-src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Location Navigations",
+    "class": "index-section--flush",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Section background colour",
+        "default": "#E0E0E0"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Locations"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Sub Header",
+        "default": "Find your store"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "link_list",
+        "id": "link_list",
+        "label": "Locations link list"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Section image"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "HOMEPAGE Location Navigations"
+      }
+    ]
+  }
+{% endschema %}

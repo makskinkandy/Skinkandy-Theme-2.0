@@ -1,0 +1,250 @@
+{%- if settings.cart_type == 'drawer' -%}
+  <div id="CartDrawer" class="drawer drawer--right">
+    <div class="mobile-only">
+      <canvas id="confettiMobileCart"></canvas>
+    </div>
+    {%- liquid
+      assign show_quickadd_popup = settings.enable_quick_add_popup
+      if show_quickadd_popup
+        assign quick_add_product = settings.quick_add_popup_product
+        assign quick_add_variant = settings.quick_add_popup_product.first_available_variant
+        assign quick_add_variant_id = settings.quick_add_popup_product_variant | plus: 0
+        unless quick_add_product.has_only_default_variant
+          for variant in quick_add_product.variants
+            if variant.id == quick_add_variant_id
+              assign quick_add_variant = variant
+            endif
+          endfor
+        endunless
+        unless quick_add_variant.available
+          assign show_quickadd_popup = false
+        endunless
+      endif
+    -%}
+    <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents" data-quickadd-popup="{{ show_quickadd_popup }}"{% if show_quickadd_popup %} data-quickadd-product="{{ quick_add_variant.id }}"{% endif %}>
+      <div class="drawer__fixed-header cart-drawer__fixed-header">
+        <div class="drawer__header cart-drawer__header appear-animation appear-delay-1">
+          <div class="drawer__close cart-drawer__close">
+            <button type="button" class="drawer__close-button js-drawer-close" aria-label="Close cart">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+            </button>
+          </div>
+          <div class="drawer__title cart-drawer__title">
+            <img src="{{ settings.logo | image_url: width: 40 }}" alt="" width="40" height="40"> your shopping basket
+          </div>
+          <div class="drawer__count">
+            <div class="counter">
+              <span class="cart-link__bubble-num"></span>
+            </div>
+          </div>
+        </div>
+        <div class="same-day-dispatch">
+          {% comment %} <img src="{{ 'stopwatch.svg' | asset_url }}" alt="Stopwatch" class="stopwatch-icon"> {% endcomment %}
+          <div><strong>Same Day</strong> Dispatch \ <strong>Order Before 11am</strong></div>
+        </div>
+      </div>
+
+      <div class="drawer__inner cart-drawer__inner">
+
+        <div class="drawer__scrollable cart-drawer__scrollable">
+          <div data-products class="appear-animation appear-delay-2"></div>
+
+          {% if settings.cart_notes_enable %}
+            <div class="appear-animation appear-delay-3">
+              <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="drawer__footer cart-drawer__footer appear-animation appear-delay-4">
+
+          <div class="cart-free-shipping-threshold appear-animation appear-delay-1">
+            <div class="desktop-only">
+              <canvas id="confetti"></canvas>
+            </div>
+            {% render 'fst-widget' %}
+          </div>
+
+          {% if settings.enable_quick_adds and settings.quick_add_collection != blank %}
+            <quick-adds class="cart__item-row cart__quick-adds">
+              <div class="cart__item-header">
+                {{ collections[settings.quick_add_collection].title | escape }}
+              </div>
+              <div class="cart-quick-adds__container" data-slick='{ "adaptiveHeight": true, "arrows": false, "dots": true }'>
+                {% for product in collections[settings.quick_add_collection].products %}
+                  {% if product.available %}
+                    <div class="quick-add-item-wrapper">
+                      <div class="quick-add-item">
+                        <a href="{{ product.url }}" class="quick-add-image">
+                          {{ product | image_url: width: 260 | image_tag }}
+                        </a>
+                        <div class="quick-add-meta">
+                          <a href="{{ product.url }}" class="quick-add-title">
+                            {{ product.title }}
+                          </a>
+                          <div class="quick-add-price">
+                            {{ product.price | money }}
+                          </div>
+                          {%- unless product.has_only_default_variant -%}
+                            <div class="quick-add-variants">
+                              {%- if product.options_with_values.size > 1 -%}
+                                <select class="quick-add-variant-selector">
+                                  {% for variant in product.variants %}
+                                    {% if variant.available %}
+                                      <option value="{{ variant.id }}" data-price="{{ variant.price | money }}"{% if product.selected_or_first_available_variant == variant %} selected{% endif %}>{{ variant.title }}</option>
+                                    {% else %}
+                                      <option value="{{ variant.id }}" disabled>{{ variant.title }} - Sold Out</option>
+                                    {% endif %}
+                                  {% endfor %}
+                                </select>
+                              {%- else -%}
+                                <div class="quick-add-variant-selector group-selector">
+                                  {%- for variant in product.variants -%}
+                                    <span class="pill{% if product.selected_or_first_available_variant == variant %} active{% endif %}" data-variant="{{ variant.id }}" data-price="{{ variant.price | money }}">
+                                      {{ variant.title | escape }}
+                                    </span>
+                                  {%- endfor -%}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          {%- endunless -%}
+                          <div class="quick-add-desc rte">
+                            <p>{{ product.description | strip_html | truncatewords: 18 }}</p>
+                          </div>
+                          <div class="quick-add-actions">
+                            <button type="button" class="btn btn--secondary btn--small quick-add-btn" data-variant="{{ product.selected_or_first_available_variant.id }}">
+                              <svg class="icon icon-plus-circle no-event" viewBox="0 0 28.284 28.284"><path d="M7.955 20.33a8.75 8.75 0 1 1 12.374 0 8.75 8.75 0 0 1-12.374 0Zm-.884.883a10 10 0 1 0 0-14.142 10 10 0 0 0 0 14.142Z"></path><path d="M18.561 9.723a.781.781 0 0 1 0 1.104l-3.314 3.315 3.314 3.315a.781.781 0 0 1-1.105 1.105l-3.315-3.315-3.315 3.315a.781.781 0 0 1-1.104-1.104l3.315-3.316-3.314-3.315a.781.781 0 0 1 1.104-1.104l3.315 3.315 3.315-3.315a.781.781 0 0 1 1.104 0Z"></path></svg>
+                              <span class="no-event">Quick Add</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </quick-adds>
+            <script type="module" src="{{ 'arkhi-quick-adds.js' | asset_url }}"></script>
+          {% endif %}
+
+          <div data-discounts>
+            {% if cart.cart_level_discount_applications != blank %}
+              <div class="cart__discounts cart__item-sub cart__item-row">
+                <div>{{ 'cart.general.discounts' | t }}</div>
+                <div class="text-right">
+                  {% for cart_discount in cart.cart_level_discount_applications %}
+                    <div class="cart__discount">
+                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {%- comment -%}
+          <div class="cart__item-sub cart__item-row">
+            <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
+            <div data-subtotal>{{ cart.total_price | money }}</div>
+          </div>
+          {%- endcomment -%}
+
+          {%- comment -%}
+          <div class="cart__item-row cart__atl">
+            <input type="hidden" name="attributes[Authority To Leave]" value="No">
+            <label>
+              <input type="checkbox" name="attributes[Authority To Leave]" value="Yes"{% if cart.attributes["Authority To Leave"] == "Yes" %} checked{% endif %}>
+              {{ 'cart.general.atl' | t }}
+            </label>
+          </div>
+
+          <div class="cart__item-row text-center">
+            <small>
+              {{ 'cart.general.shipping_at_checkout' | t }}<br />
+            </small>
+          </div>
+
+          {% if settings.cart_terms_conditions_enable %}
+            <div class="cart__item-row cart__terms">
+              <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
+              <label for="CartTermsDrawer">
+                {% if settings.cart_terms_conditions_link != blank %}
+                  {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_link }}
+                {% else %}
+                  {{ 'cart.general.terms' | t }}
+                {% endif %}
+              </label>
+            </div>
+          {% endif %}
+          {%- endcomment -%}
+
+          {%- comment -%}
+          <div class="cart__checkout-wrapper">
+            <div class="same-day-dispatch">
+              :clock:
+              <span>Same Day</span> Dispatch \ <span>Order Before 11am</span>
+            </div>
+            <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+              <span>{{ 'cart.general.checkout' | t }} -</span> <div style="display: inline;" data-subtotal>{{ cart.total_price | money }}</div>
+            </button>
+
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
+          </div>
+          {%- endcomment -%}
+          <div class="sub-total csapps-cart-original-total hide" style="display: block; margin: 0; font-size: 20px;" data-subtotal>{% if localization.market.handle == "new-zealand" %}NZD {% endif %}{{ cart.total_price | money }}</div>
+          <div class="cart__checkout-wrapper">
+            <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+              <span>{{ 'cart.general.checkout' | t }}</span>
+              <span data-subtotal>{% if localization.market.handle == "new-zealand" %}NZD {% endif %}{{ cart.total_price | money }}</span>
+            </button>
+
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
+          </div>
+
+          {% if settings.shipping_tax_enabled %}
+            <div class="cart__shipping-and-taxes">
+              <p>
+                SHIPPING & TAXES ARE CALCULATED IN CHECKOUT
+              </p>
+            </div>
+          {% endif %}
+
+          {% if settings.continue_shopping_enabled %}
+            <div class="cart__continue-shopping">
+              <a href="#" class="link--underline">
+                Continue Shopping
+              </a>
+            </div>
+          {% endif %}
+
+
+        </div>
+
+      </div>
+
+      <div class="drawer__cart-empty appear-animation appear-delay-2">
+        <div class="drawer__scrollable empty">
+          <div class="text-center">
+            {% if settings.empty_image != blank %}
+            <img src="{{ settings.empty_image | image_url: width: 100 }}" alt="" width="100" height="100" >
+            {% endif %}
+            {% if settings.empty_cart_heading != blank %}
+            <h3>{{ settings.empty_cart_heading }}</h3>
+            {% endif %}
+            {% if settings.empty_cart != blank %}
+              {{ settings.empty_cart }}
+            {% endif %}
+            {% if settings.empty_cart_link != blank and settings.empty_cart_link_label != blank %}
+              <a href="{{ settings.empty_cart_link }}" class="btn btn--small">{{ settings.empty_cart_link_label }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+{%- endif -%}

@@ -1,0 +1,47 @@
+{%- # All Pages -%}
+
+{% # MR Theme %}
+{{ 'global.autostyle.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% # MR Theme JS %}
+<script src="{{- 'global.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
+
+
+{%- case template -%}
+    {%- when 'index' -%}
+        {%- # Homepage -%}
+        {{- 'homepage.autostyle.css' | asset_url | stylesheet_tag -}}
+
+        {% # theme-check-disable ParserBlockingScript %}
+        <script src="{{- 'homepage.autojs.js' | asset_url -}}" type="text/javascript"></script>
+        {% # theme-check-enable ParserBlockingScript %}
+
+    {%- when 'product' -%}
+        {% # theme-check-disable ParserBlockingScript %}
+        <script src="{{- 'product.autojs.js' | asset_url -}}" type="text/javascript"></script>
+        {% # theme-check-enable ParserBlockingScript %}
+
+    {%- when 'collection' or 'collection.searchspring' -%}
+        {%- # PLP -%}
+        {{- 'collection.autostyle.css' | asset_url | stylesheet_tag -}}
+
+    {%- when 'search' -%}
+        {%- # Search PSP -%}
+
+    {%- when '404' -%}
+        {%- # 404 Error Page -%}
+
+    {%- when 'cart' -%}
+        {%- # Cart -%}
+        {{- 'cart.autostyle.css' | asset_url | stylesheet_tag -}}
+    {%- when 'page.pf-c525936e' -%}
+        <script src="{{- 'page.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
+    {%- when 'page.kandy-club' -%}
+        {%- # Page: All -%}
+        {{- 'page.autostyle.css' | asset_url | stylesheet_tag -}}
+        <script src="{{- 'page.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
+
+    {%- when 'customers/account' -%}
+        {%- # Accounts -%}
+
+{%- endcase -%}

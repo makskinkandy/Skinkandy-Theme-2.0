@@ -1,0 +1,558 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+
+  unless thumbnail_position
+    assign thumbnail_position = 'beside'
+  endunless
+
+  assign product_zoom_size = '1800x1800'
+  assign product_image_size = '620x'
+
+  case image_container_width
+    when 'small'
+      assign product_image_width = 'medium-up--two-fifths'
+      assign product_description_width = 'medium-up--three-fifths'
+      assign product_image_size = '480x'
+    when 'medium'
+      assign product_image_width = 'medium-up--one-half'
+      assign product_description_width = 'medium-up--one-half'
+      assign product_image_size = '620x'
+    when 'large'
+      assign product_image_width = 'medium-up--four-sixths'
+      assign product_description_width = 'medium-up--two-sixths'
+      assign product_image_size = '800x'
+  endcase
+
+  assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+-%}
+
+<div id="ProductSection-{{ section_id }}-{{ product.id }}"
+  class="product-section"
+  data-section-id="{{ section_id }}"
+  data-product-id="{{ product.id }}"
+  data-section-type="product"
+  data-product-handle="{{ product.handle }}"
+  data-product-title="{{ product.title | escape }}"
+  data-product-url="{{ product.url | within: collection }}"
+  data-aspect-ratio="{{ 100 | divided_by: product.featured_media.aspect_ratio }}"
+  data-img-url="{{ product_img_structure }}"
+  {% unless isModal %}
+    data-history="true"
+  {% endunless %}
+  data-modal="{{ isModal }}">
+
+  {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
+
+  <div class="page-content page-content--product" style="background-color: {{ section.settings.bg_color }}">
+    <div class="page-width">
+      {%- if isModal != true -%}
+        <div class="flex-grid">
+          {%- render 'breadcrumbs' -%}
+        </div>
+      {%- endif -%}
+
+      <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
+        {%- if image_position == 'left' -%}
+          <div class="grid__item {{ product_image_width }} product-single__sticky">
+            {%- render 'product-images',
+              section_id: section_id,
+              product: product,
+              isModal: isModal,
+              image_position: image_position,
+              product_zoom_enable: product_zoom_enable,
+              product_zoom_size: product_zoom_size,
+              product_image_size: product_image_size,
+              thumbnail_arrows: thumbnail_arrows,
+              thumbnail_position: thumbnail_position,
+              video_looping: video_looping,
+              video_style: video_style
+            -%}
+          </div>
+        {%- endif -%}
+
+        <div class="grid__item {{ product_description_width }}">
+
+          <div class="product-single__meta">
+            <div class="product-block product-block--header">
+              {%- if settings.vendor_enable -%}
+                <div class="product-single__vendor">
+                  {%- assign vendor_handle = product.vendor | handleize -%}
+                  {%- if collections[vendor_handle] != empty -%}
+                    <a href="{{ routes.collections_url }}/{{ collections[vendor_handle].handle }}">
+                      {{ collections[vendor_handle].title }}
+                    </a>
+                  {%- else -%}
+                    {{ product.vendor | link_to_vendor }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+              {%- if isModal -%}
+                <p class="h2 product-single__title">
+                  {{ product.title }}
+                </p>
+              {%- else -%}
+
+              {% if template contains 'product' %}
+                <h1 class="h2 product-single__title">
+                  {%- unless product.empty? -%}
+                    {{ product.title }}
+                  {%- else -%}
+                    {{ 'home_page.onboarding.product_title' | t }}
+                  {%- endunless -%}
+                </h1>
+              {% else %}
+                <h2 class="h2 product-single__title">
+                  {%- unless product.empty? -%}
+                    {{ product.title }}
+                  {%- else -%}
+                    {{ 'home_page.onboarding.product_title' | t }}
+                  {%- endunless -%}
+                </h2>
+              {% endif %}
+
+              {%- endif -%}
+
+              {%- if sku_enable -%}
+                <p data-sku class="product-single__sku">
+                  {%- if current_variant.sku -%}
+                    {{ current_variant.sku }}
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+            </div>
+
+            <div data-product-blocks>
+              {%- capture form_id -%}AddToCartForm-{{ section_id }}-{{ product.id }}{%- endcapture -%}
+              {%- for block in blocks -%}
+                {%- case block.type -%}
+                  {%- when '@app' -%}
+                    {% render block %}
+                  {%- when 'size-guide' -%}
+                    {%- if block.settings.image != blank -%}
+                      <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                        {% assign tab_id = block.id | append: product.id %}
+                        {% capture tab_content %}
+                          <div class="pswp-gallery" id="photoswipe-size-guide">
+                            <a href="{{ block.settings.image | img_url: 'master' }}" class="photoswipe-size-guide" data-pswp-width="{{ block.settings.image.width | remove: 'px' }}" data-pswp-height="{{ block.settings.image.height | remove: 'px' }}" target="_blank">
+                              <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt | escape }}" style="width: 225px; height: 225px; object-fit: contain;">
+                              <span class="variant__label">Click image to enlarge</span>
+                              <span class="text">{{ block.settings.text | newline_to_br }}</span>
+                            </a>
+                          </div>
+                        {% endcapture %}
+                        {%- render 'tab', id: tab_id, title: block.settings.label, content: tab_content -%}
+                      </div>
+                    {%- endif -%}
+                  {%- when 'reviews' -%}
+                    <div class="product-block product-block-{{ block.type }} product-block--small">
+                      <a href="#shopify-product-reviews-{{ product.id }}">
+                        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                      </a>
+                    </div>
+                  {%- when 'separator' -%}
+                    <div class="product-block product-block-{{ block.type }}"><hr></div>
+                  {%- when 'text' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      {{ block.settings.text }}
+                    </div>
+                  {%- when 'image' -%}
+                    <div class="product-block product-block--image" {{ block.shopify_attributes }}>
+                      {%- if block.settings.link != blank -%}
+                        <a href="{{ block.settings.link | escape }}">
+                      {%- endif -%}
+
+                      {%- if block.settings.image != blank -%}
+                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | default: product.title | escape }}" loading="lazy">
+                      {%- endif -%}
+
+                      {%- if block.settings.link != blank -%}
+                        </a>
+                      {%- endif -%}
+                    </div>
+
+                  {%- when 'tab' -%}
+                    {% capture tab_content %}
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
+                    {% endcapture %}
+                    {% assign output_tab = false %}
+                    {% if block.settings.title != blank and block.settings.content != blank %}
+                      {% assign output_tab = true %}
+                    {% endif %}
+
+                    {% if output_tab %}
+                      <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                        {% assign tab_id = block.id | append: product.id %}
+                        
+                        {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content, open: block.settings.is_open, icon: block.settings.icon -%}
+                      </div>
+                    {% endif %}
+                  {%- when 'piercing-placement' -%}
+                      {% assign exist = false %}
+                      {% assign piercing_tag = "earrings,earring,tongue,tongue bar,nipple,nipple bar,nose,septum,lip,eyebrow,belly,belly bar,belly button,belly ring,daith,cartilage,lobe,lobes,earlobes" | split: "," %}
+                      {% for tag in product.tags %}
+                        {% if piercing_tag contains tag %}
+                          {% assign exist = true %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if exist %}
+                        <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                          <div class="collapsibles-wrapper">
+                              <button type="button"
+                                class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height" aria-controls="Product-content-{{ block.id }}">
+                                {% if block.settings.icon %}
+                                  {{ block.settings.icon }}
+                                {% endif %}
+                                <h2>Piercing Placement</h2>
+                                {%- render 'collapsible-icons' -%}
+                              </button>
+                              <div id="Product-content-{{ block.id }}"
+                                class="collapsible-content collapsible-content--all">
+                                <div class="collapsible-content__inner rte">
+                                  <ul>
+                                    {% assign tag_map = '
+                                      tongue: Tongue,
+                                      tongue bar: Tongue,
+                                      nipple: Nipple,
+                                      nipple bar: Nipple,
+                                      nose: Nose,
+                                      septum: Septum,
+                                      lip: Lips,
+                                      eyebrow: Eyebrow,
+                                      belly: Navel,
+                                      belly bar: Navel,
+                                      belly button: Navel,
+                                      belly ring: Navel,
+                                      daith: Daith,
+                                      cartilage: Cartilage,
+                                      lobe: Lobes,
+                                      lobes: Lobes,
+                                      earlobes: Lobes,
+                                      tragus: Tragus,
+                                      conch: Conch,
+                                      helix: Helix,
+                                      rook: Rook
+                                    ' | strip_newlines | split: ',' %}
+                                    
+                                    {% assign matched_items = "" %}
+                                    
+                                    {% for pair in tag_map %}
+                                      {% assign parts = pair | split: ':' %}
+                                      {% assign tag = parts[0] | strip %}
+                                      {% assign label = parts[1] | strip %}
+                                    
+                                      {% if product.tags contains tag %}
+                                        {% unless matched_items contains label %}
+                                          {% assign matched_items = matched_items | append: label | append: ',' %}
+                                        {% endunless %}
+                                      {% endif %}
+                                    {% endfor %}
+                                    
+                                    {% assign matched_items = matched_items | split: ',' %}
+                                    
+                                    {% for item in matched_items %}
+                                      {% if item != "" %}
+                                        <li>{{ item }}</li>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                      {% endif %}
+                  {%- when 'product_details' -%}
+                    <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                      {% assign tab_id = block.id | append: product.id %}
+                      {%- render 'tab', id: tab_id, title: block.settings.title, content: product.metafields.steadlane.details -%}
+                    </div>
+                  {%- when 'contact' -%}
+                    <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                      {%- render 'tab-contact', block: block -%}
+                    </div>
+                  {%- when 'description' -%}
+                    <div class="product-block product-block-{{ block.type }}{% if block.settings.is_tab %} product-block--tab{% endif %}" {{ block.shopify_attributes }}>
+                      {%- assign id = block.id | append: product.id -%}
+                      {%- render 'product-description', id: id, product: product, is_tab: block.settings.is_tab -%}
+                    </div>
+                  {%- when 'price' -%}
+                    <div class="product-block product-block--price" {{ block.shopify_attributes }}>
+                      {%- assign hide_sale_price = true -%}
+                      {%- if product.compare_at_price_max > product.price -%}
+                        {%- if current_variant.compare_at_price > current_variant.price -%}
+                          {%- assign hide_sale_price = false -%}
+                        {%- endif -%}
+                        <span data-compare-price-a11y class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                        <span data-product-price
+                          class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+                          {%- unless product.empty? -%}
+                            {% if localization.market.handle == "new-zealand" %}NZD {% endif %}{{ current_variant.price | money }}
+                          {%- else -%}
+                            {{ 1999 | money }}
+                          {%- endunless -%}
+                          <span class="on-sale-divider">|</span> <span data-product-price-wrap class="{% if hide_sale_price %} hide{% endif %}">
+                          <span data-compare-price class="product__price product__price--compare">
+                            {%- if current_variant.compare_at_price > current_variant.price -%}
+                              {% if localization.market.handle == "new-zealand" %}NZD {% endif %}{{ current_variant.compare_at_price | money }}
+                            {%- endif -%}
+                          </span>
+                        </span>
+                        </span>
+                        <span
+                          data-a11y-price
+                          class="visually-hidden"
+                          aria-hidden="{{ hide_sale_price }}">
+                            {{ 'products.general.regular_price' | t }}
+                        </span>
+                        
+                      {%- else -%}
+                        <span data-a11y-price class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                        <span data-product-price
+                          class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+                          {%- unless product.empty? -%}
+                            {% if localization.market.handle == "new-zealand" %}NZD {% endif %}{{ current_variant.price | money }}
+                          {%- else -%}
+                            {{ 1999 | money }}
+                          {%- endunless -%}
+                        </span>
+                      {%- endif -%}
+
+                      {%- if settings.product_save_amount -%}
+                        {%- if settings.product_save_type == 'dollar' -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money }}{%- endcapture -%}
+                        {%- else -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+                        {%- endif -%}
+                        <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+                          {%- unless hide_sale_price -%}
+                            {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                          {%- endunless -%}
+                        </span>
+                      {%- endif -%}
+
+                      <div
+                        data-unit-price-wrapper
+                        class="product__unit-price product__unit-price--spacing {% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+                        {%- capture unit_price_base_unit -%}
+                          <span data-unit-base>
+                            {%- if current_variant.unit_price_measurement -%}
+                              {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                                {{ current_variant.unit_price_measurement.reference_value }}
+                              {%- endif -%}
+                              {{ current_variant.unit_price_measurement.reference_unit }}
+                            {%- endif -%}
+                          </span>
+                        {%- endcapture -%}
+
+                        <span data-unit-price>{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
+                      </div>
+
+                      {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                        <div class="product__policies rte small--text-center">
+                          {%- if shop.taxes_included -%}
+                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18.6963 7.8671L15.4911 4.2258C15.2274 3.92361 14.8277 3.74986 14.4201 3.74986C13.4449 3.74986 12.6297 3.74986 12.0622 3.74986H11.7664V2.32205C11.7664 1.58926 11.143 1 10.3677 1H8.36945C7.33037 1 6.23535 1 5.29218 1H3.28597C2.51066 1 1.88721 1.58926 1.88721 2.32205H1.91119V10.9494C1.36767 11.2969 1 11.8861 1 12.5585C1 13.6312 1.91918 14.5 3.05417 14.5C3.97336 14.5 4.74867 13.9183 5.00444 13.1251H9.74423H10.3437C11.119 13.1251 11.7425 12.5358 11.7425 11.803V4.88304H12.0382C12.6057 4.88304 13.421 4.88304 14.3961 4.88304C14.452 4.88304 14.508 4.90571 14.548 4.95104L17.7531 8.59233C17.7531 8.59233 17.8011 8.66788 17.8011 8.71321V11.803C17.8011 11.9088 17.7131 11.9919 17.6012 11.9919H16.722C16.4663 11.1987 15.6909 10.617 14.7718 10.617C13.6368 10.617 12.7176 11.4857 12.7176 12.5585C12.7176 13.6312 13.6368 14.5 14.7718 14.5C15.6909 14.5 16.4663 13.9183 16.722 13.1251H17.6012C18.3766 13.1251 19 12.5358 19 11.803V8.71321C19 8.40347 18.8881 8.10129 18.6723 7.8671H18.6963ZM3.06217 13.3668C2.59059 13.3668 2.20693 13.0042 2.20693 12.5585C2.20693 12.1128 2.59059 11.7501 3.06217 11.7501C3.53375 11.7501 3.91741 12.1128 3.91741 12.5585C3.91741 13.0042 3.53375 13.3668 3.06217 13.3668ZM10.5595 2.34471V11.803C10.5595 11.9088 10.4716 11.9919 10.3597 11.9919H5.09236H5.02043C4.76465 11.1987 3.98934 10.617 3.07016 10.617V2.3296H3.09414C3.09414 2.22384 3.18206 2.14074 3.29396 2.14074H3.89343C4.28508 2.14074 4.76465 2.14074 5.29218 2.14074C6.23535 2.14074 7.33037 2.14074 8.36945 2.14074C8.89698 2.14074 9.37655 2.14074 9.76821 2.14074H10.3677C10.4796 2.14074 10.5675 2.22384 10.5675 2.3296V2.34471H10.5595ZM14.7957 13.3668C14.3242 13.3668 13.9405 13.0042 13.9405 12.5585C13.9405 12.1128 14.3242 11.7501 14.7957 11.7501C15.2673 11.7501 15.651 12.1128 15.651 12.5585C15.651 13.0042 15.2673 13.3668 14.7957 13.3668Z" fill="#333333" stroke="#333333" stroke-width="0.225"></path>
+                        </svg> 
+                            {% if request.locale.root_url contains 'en-nz' %}
+                              {{ settings.shipping_nz }}
+                            {% else %}
+                              {{ settings.shipping_au }}
+                            {% endif %}
+                          {%- endif -%}
+                          {%- if shop.shipping_policy.body != blank -%}
+                            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  {%- when 'quantity_selector' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      <div class="product__quantity">
+                        {% assign qty_id = section_id | append: product.id %}
+                        <label for="Quantity-{{ qty_id }}">{{ 'products.product.quantity' | t }}</label>
+                        {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
+                      </div>
+                    </div>
+                  {%- when 'variant_picker' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      {%- unless product.has_only_default_variant -%}
+                        {%- for option in product.options_with_values -%}
+                          {%- liquid
+                            if block.settings.color_swatches
+                              assign is_color = false
+                              assign color_option_index = 0
+                              assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+                              assign color_option_index = forloop.index0
+                              assign downcased_option = option.name | downcase
+                              if downcased_option contains swatch_trigger
+                                assign is_color = true
+                              elsif swatch_trigger == 'color' and downcased_option contains 'colour'
+                                assign is_color = true
+                              endif
+                            endif
+                          -%}
+
+                          {%- if block.settings.picker_type == 'button' -%}
+                            {%- render 'variant-button',
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels,
+                              is_color: is_color,
+                              color_option_index: color_option_index
+                            -%}
+                          {%- else -%}
+                            {%- render 'variant-dropdown',
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              option: option,
+                              forloop: forloop,
+                              variant_labels: block.settings.variant_labels
+                            -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endunless -%}
+                    </div>
+                  {%- when 'buy_buttons' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      {%- unless product.empty? -%}
+                        {%- liquid
+                          assign product_handle = product.handle
+                          assign in_store_gc = false
+                          if product_handle == 'sk-gift-card'
+                            assign in_store_gc = true
+                          endif
+                        -%}
+                        <div class="product-block">
+                          {%- if in_store_gc -%}
+                            {%- render 'product-in-store-gc',
+                              block: block,
+                              product: product,
+                              form_id: form_id,
+                              section_id: section_id,
+                              current_variant: current_variant
+                            -%}
+                          {%- else -%}
+                            {%- render 'product-form',
+                              block: block,
+                              form_id: form_id,
+                              section_id: section_id,
+                              product: product,
+                              show_dynamic_checkout: block.settings.show_dynamic_checkout,
+                              current_variant: current_variant
+                            -%}
+                          {%- endif -%}
+                        </div>
+                      {%- endunless -%}
+
+                      {%- if block.settings.surface_pickup_enable -%}
+                        <div data-store-availability-holder
+                          data-product-name="{{ product.title | escape }}"
+                          data-base-url="{{ shop.url }}{{ routes.root_url }}"
+                          ></div>
+                      {%- endif -%}
+                    </div>
+                  {%- when 'sales_point' -%}
+                    {%- unless block.settings.text == blank -%}
+                      <div class="product-block product-block--sales-point" {{ block.shopify_attributes }}>
+                        <ul class="sales-points">
+                          <li class="sales-point">
+                            <span class="icon-and-text">
+                              {%- render 'icons', icon: block.settings.icon -%}
+                              <span>{{ block.settings.text | newline_to_br }}</span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    {%- endunless -%}
+                  {%- when 'inventory_status' -%}
+                    <div class="product-block product-block--sales-point" {{ block.shopify_attributes }}>
+                      {%- render 'product-inventory', product: product, current_variant: current_variant, block: block -%}
+                    </div>
+                  {%- when 'share' -%}
+                    <div class="product-block" {{ block.shopify_attributes }}>
+                      {%- render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product -%}
+                    </div>
+                  {%- when 'trust_badge' -%}
+                    <div class="product-block" {{ block.shopify_attributes }}>
+                      <div class="aos-animate" style="max-width: {{ block.settings.trust_image.width }}px; margin: 0 auto;">
+                        <div class="image-wrap " style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.trust_image.aspect_ratio }}%;">
+                          {%- assign img_url = block.settings.trust_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          <img class="lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[360, 540, 700, 1024]"
+                              data-aspectratio="{{ block.settings.trust_image.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="{{ block.settings.trust_image.alt }}">
+                          <noscript>
+                            <img class="lazyloaded" src="{{ block.settings.trust_image | img_url: '540x' }}" alt="{{ block.settings.trust_image.alt }}">
+                          </noscript>
+                        </div>
+                      </div>
+                    </div>
+                  {%- when 'custom' -%}
+                    <div class="product-block" {{ block.shopify_attributes }}>
+                      {{ block.settings.code }}
+                    </div>
+                    {%- when 'back_in_stock' -%}
+                    <button id="BIS_trigger_clone" class="btn btn--full"{% if product.available %} style="display: none;" {% endif %}>
+                      {{ block.settings.button_text }} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plane" viewBox="0 0 21 18" width="21" height="18"><path d="M0 18v-7l15-2L0 7V0l21 9Z"/></svg>
+                    </button>
+                  {%- when 'shipping' -%}
+                    <div class="cart-free-shipping-threshold">
+                      <canvas id="confetti2"></canvas>
+                      <div id="FSTContainerProduct" class="fst-container" data-settings='{"target": "{{ settings.fst_target | default: 0 }}", "message_default": "{{ settings.fst_message_default }}", "message_ongoing": "{{ settings.fst_message_ongoing }}", "message_success": "{{ settings.fst_message_success }}", "cart_currency": "{{ cart.currency.iso_code }}", "shop_currency": "{{ shop.currency }}", "step_one": "{{ settings.fst_step_one }}", "step_one_label": "{{ settings.fst_step_one_label }}", "target_label": "{{ settings.fst_target_label }}"}'></div>
+                    </div>
+                  
+                  {%- when 'shipping-details' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      <h2 class="h3">
+                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18.6963 7.8671L15.4911 4.2258C15.2274 3.92361 14.8277 3.74986 14.4201 3.74986C13.4449 3.74986 12.6297 3.74986 12.0622 3.74986H11.7664V2.32205C11.7664 1.58926 11.143 1 10.3677 1H8.36945C7.33037 1 6.23535 1 5.29218 1H3.28597C2.51066 1 1.88721 1.58926 1.88721 2.32205H1.91119V10.9494C1.36767 11.2969 1 11.8861 1 12.5585C1 13.6312 1.91918 14.5 3.05417 14.5C3.97336 14.5 4.74867 13.9183 5.00444 13.1251H9.74423H10.3437C11.119 13.1251 11.7425 12.5358 11.7425 11.803V4.88304H12.0382C12.6057 4.88304 13.421 4.88304 14.3961 4.88304C14.452 4.88304 14.508 4.90571 14.548 4.95104L17.7531 8.59233C17.7531 8.59233 17.8011 8.66788 17.8011 8.71321V11.803C17.8011 11.9088 17.7131 11.9919 17.6012 11.9919H16.722C16.4663 11.1987 15.6909 10.617 14.7718 10.617C13.6368 10.617 12.7176 11.4857 12.7176 12.5585C12.7176 13.6312 13.6368 14.5 14.7718 14.5C15.6909 14.5 16.4663 13.9183 16.722 13.1251H17.6012C18.3766 13.1251 19 12.5358 19 11.803V8.71321C19 8.40347 18.8881 8.10129 18.6723 7.8671H18.6963ZM3.06217 13.3668C2.59059 13.3668 2.20693 13.0042 2.20693 12.5585C2.20693 12.1128 2.59059 11.7501 3.06217 11.7501C3.53375 11.7501 3.91741 12.1128 3.91741 12.5585C3.91741 13.0042 3.53375 13.3668 3.06217 13.3668ZM10.5595 2.34471V11.803C10.5595 11.9088 10.4716 11.9919 10.3597 11.9919H5.09236H5.02043C4.76465 11.1987 3.98934 10.617 3.07016 10.617V2.3296H3.09414C3.09414 2.22384 3.18206 2.14074 3.29396 2.14074H3.89343C4.28508 2.14074 4.76465 2.14074 5.29218 2.14074C6.23535 2.14074 7.33037 2.14074 8.36945 2.14074C8.89698 2.14074 9.37655 2.14074 9.76821 2.14074H10.3677C10.4796 2.14074 10.5675 2.22384 10.5675 2.3296V2.34471H10.5595ZM14.7957 13.3668C14.3242 13.3668 13.9405 13.0042 13.9405 12.5585C13.9405 12.1128 14.3242 11.7501 14.7957 11.7501C15.2673 11.7501 15.651 12.1128 15.651 12.5585C15.651 13.0042 15.2673 13.3668 14.7957 13.3668Z" fill="#333333" stroke="#333333" stroke-width="0.225"></path>
+                        </svg> SHIPPING & HANDLING</h2>
+                      {{ shipping_details }}
+                    </div>
+
+                  {%- when 'refund-policy' -%}
+                    <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
+                      <h2 class="h3"><svg viewBox="0 0 20 20" class="Icon_Icon__uZZKy" style="width: 20px; height: 20px;"><path d="M9.5 6.5a.75.75 0 0 1 1.5 0v.25h.75a.75.75 0 0 1 0 1.5h-2.25a.5.5 0 0 0 0 1h1a2 2 0 1 1 0 4v.25a.75.75 0 0 1-1.5 0v-.25h-.75a.75.75 0 0 1 0-1.5h2.25a.5.5 0 0 0 0-1h-1a2 2 0 1 1 0-4v-.25Z"></path><path fill-rule="evenodd" d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z"></path></svg>
+                        REFUND POLICY</h2>
+                      {{ refund_policy }}
+                    </div>
+                {%- endcase -%}
+              {%- else -%}
+                <div data-blocks-holder
+                     data-url="{{ product.url | within: collection }}"
+                     data-template="{{ product.template_suffix }}">
+                  <div class="placeholder-content" style="min-height: 86px;"></div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+
+        {%- unless image_position == 'left' -%}
+          <div class="grid__item {{ product_image_width }} product-single__sticky">
+            {%- render 'product-images',
+              section_id: section_id,
+              product: product,
+              isModal: isModal,
+              image_position: image_position,
+              product_zoom_enable: product_zoom_enable,
+              product_zoom_size: product_zoom_size,
+              product_image_size: product_image_size,
+              thumbnail_arrows: thumbnail_arrows,
+              thumbnail_position: thumbnail_position,
+              video_looping: video_looping,
+              video_style: video_style
+            -%}
+          </div>
+        {%- endunless -%}
+      </div>
+    </div>
+  </div>
+</div>

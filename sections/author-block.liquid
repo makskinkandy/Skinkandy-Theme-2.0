@@ -1,0 +1,78 @@
+<div class="section__author section__author-{{ section.id }}">
+  <div class="page-width">
+    <div class="author__wrapper">
+      <div class="author__content">
+        <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.name }}">
+        <h4>{{ section.settings.name }}</h4>
+        <p>Author</p>
+      </div>
+      <div class="author__biography">
+        {{ section.settings.biography }}
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>
+  .section__author {
+    margin-bottom: 60px;
+    border-top: solid 1px #f1f1f1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: solid 1px #f1f1f1;
+  }
+  .author__wrapper {
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width:640px) {
+      flex-direction: column;
+    }
+  }
+  .author__content {
+    text-align: center;
+    margin-right: 60px;
+    @media screen and (max-width:640px) {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+    img {
+      max-width: 150px;
+    }
+  }
+  .author__biography {
+    color: #000;
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:640px) {
+      text-align: center;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "Author Block",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Name",
+        "id": "name"
+      },
+      {
+        "type": "textarea",
+        "label": "Biography",
+        "id": "biography"
+      },
+      {
+        "type": "image_picker",
+        "label": "Avatar / Profile Image",
+        "id": "image"
+      }
+    ],
+    "presets": [{
+      "name": "Author Block"
+    }]
+  }
+{% endschema %}

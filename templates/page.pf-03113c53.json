@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "header_banner_hfRqMN": {
+      "type": "header-banner",
+      "blocks": {
+        "image_mK3XzV": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_6_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_4_1.jpg",
+            "banner_url": "shopify://pages/brand-ambassador-application",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_mK3XzV"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "pf-03113c53": {
+      "type": "pf-03113c53",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header_banner_hfRqMN",
+    "pf-03113c53"
+  ]
+}

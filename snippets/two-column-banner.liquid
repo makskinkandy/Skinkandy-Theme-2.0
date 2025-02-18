@@ -1,0 +1,31 @@
+<div class="two-column-banner section-bg-{{ section.id }}">
+    <div class="page-width">
+      <div class="two-column-banner__wrapper">
+        {% if section.settings.bg_image_mobile %}
+            <img src="{{ section.settings.bg_image_mobile | image_url }}" alt="{{ section.settings.subheading }}" class="mobile">
+        {% endif %}
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.subheading }}">
+        {% endif %}
+        {% if section.settings.subheading %}
+          <h3><span class="promo-title">OPENING PROMO</span><br>{{ section.settings.subheading }}</h3>
+        {% endif %}
+        {% if section.settings.button_link %}
+          <a href="{{ section.settings.button_link }}" class="btn">Book Now</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+    
+<style>
+  .section-bg-{{ section.id }} {
+      background-image: url({{ section.settings.bg_image | image_url }});
+      background-size: cover;
+      min-height: 660px;
+      background-position: center center;
+      @media screen and (max-width:992px) {
+        background-image: none;
+        margin-bottom: 25px;
+      }
+  }
+</style>

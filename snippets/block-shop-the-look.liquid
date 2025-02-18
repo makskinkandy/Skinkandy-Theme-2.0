@@ -1,0 +1,49 @@
+<div class="block-shop-the-look">
+    <div class="block-shop-the-look__image">
+        <div class="stl-image-container">
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+            {% if block.settings.product_1 != blank and block.settings.btn_coords_1 != blank %}
+                <div class="stl-prod-btn stl-prod-btn-1" data-product-btn="1" style="left: {{ block.settings.btn_coords_1 | split: ',' | first }}%; top: {{ block.settings.btn_coords_1 | split: ',' | last }}%;">
+
+                </div>
+            {% endif %}
+            {% if block.settings.product_2 != blank and block.settings.btn_coords_2 != blank %}
+                <div class="stl-prod-btn stl-prod-btn-2" data-product-btn="2" style="left: {{ block.settings.btn_coords_2 | split: ',' | first }}%; top: {{ block.settings.btn_coords_2 | split: ',' | last }}%;">
+
+                </div>
+            {% endif %}
+            {% if block.settings.product_3 != blank and block.settings.btn_coords_3 != blank %}
+                <div class="stl-prod-btn stl-prod-btn-3" data-product-btn="3" style="left: {{ block.settings.btn_coords_3 | split: ',' | first }}%; top: {{ block.settings.btn_coords_3 | split: ',' | last }}%;">
+
+                </div>
+            {% endif %}
+            {% if block.settings.product_4 != blank and block.settings.btn_coords_4 != blank %}
+                <div class="stl-prod-btn stl-prod-btn-4" data-product-btn="4" style="left: {{ block.settings.btn_coords_4 | split: ',' | first }}%; top: {{ block.settings.btn_coords_4 | split: ',' | last }}%;">
+
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="block-shop-the-look__product">
+        {% if block.settings.product_1 != blank %}
+            <div class="stl-featured-product" data-product="1">
+                {%- render 'product-grid-item', product: block.settings.product_1, grid_item_width: 'one-whole' -%}
+            </div>
+        {% endif %}
+        {% if block.settings.product_2 != blank %}
+            <div class="stl-featured-product" data-product="2">
+                {%- render 'product-grid-item', product: block.settings.product_2, grid_item_width: 'one-whole' -%}
+            </div>
+        {% endif %}
+        {% if block.settings.product_3 != blank %}
+            <div class="stl-featured-product" data-product="3">
+                {%- render 'product-grid-item', product: block.settings.product_3, grid_item_width: 'one-whole' -%}
+            </div>
+        {% endif %}
+        {% if block.settings.product_4 != blank %}
+            <div class="stl-featured-product" data-product="4">
+                {%- render 'product-grid-item', product: block.settings.product_4, grid_item_width: 'one-whole' -%}
+            </div>
+        {% endif %}
+    </div>
+</div>

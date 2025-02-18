@@ -1,0 +1,18 @@
+<!-- PAGEFLY CART HELPER - DO NOT DELETE -->
+<script defer>
+  try {
+    setTimeout(function () {
+      window.__pagefly_helper_store__ &&
+        window.__pagefly_helper_store__.subscribe(function (res) {
+        document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
+          detail: {
+            product: res,
+            addToCartBtn: ''
+          }
+        }));
+      });
+    }, 2500);
+  } catch (e) {
+    console.warn(e);
+  }
+</script>

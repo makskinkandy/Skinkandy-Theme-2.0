@@ -1,0 +1,33 @@
+{% if section.settings.enable %}
+  <div class="top-banner__notification" {% if section.settings.bg_color %}style="background-color: {{ section.settings.bg_color }}"{% endif %}>
+    {{ section.settings.notification_text }}
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Top Notification Banner",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Enable Top notification banner",
+        "default": true
+      },
+
+      {
+          "type": "textarea",
+          "id": "notification_text",
+          "label": "Notification Text"
+      },
+      {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#E42228"
+      }
+    ],
+    "presets": [{
+        "name": "Top Notification Banner"
+    }]
+  }
+{% endschema %}

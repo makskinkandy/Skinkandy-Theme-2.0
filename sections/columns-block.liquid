@@ -1,0 +1,282 @@
+<div class="columns-block {{ section.settings.class | escape }} dark-mode--{{ section.settings.dark_mode }} bottom-space--{{ section.settings.bottom_space }} hide-border__{{ section.settings.hide_line }}">
+  <div class="page-width ">
+    {%- if section.settings.title != blank -%}
+
+      {% assign text = section.settings.title | escape %}
+
+        {% assign words = text | split: ' ' %}
+        {% assign processed_words = '' %}
+        
+        {% for word in words %}
+          {% assign word_1 = word | slice: 0, 1 %}
+          {% assign word_2 = word | slice: -1 %}
+          {% if word_1 == "{" %}
+            {% if word_2 == "}" %}
+              {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+              {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+            {% else %}
+              {% assign processed_words = processed_words | append: word | append: ' ' %}
+            {% endif %}
+          {% else %}
+            {% assign processed_words = processed_words | append: word | append: ' ' %}
+          {% endif %}
+        {% endfor %}
+      
+      <div class="section-header text-{{ section.settings.align_text }}">
+        <h2>{{ processed_words }}</h2>
+        {% if section.settings.description %}
+          {{ section.settings.description }}
+        {% endif %}
+      </div>
+    {%- endif -%}
+  
+    {%- liquid
+      assign column_width = ''
+        case section.settings.count
+          when 2
+            assign column_width = 'medium-up--one-half'
+          when 3
+            assign column_width = 'medium-up--one-third'
+          when 4
+            assign column_width = 'medium-up--one-quarter'
+          when 5
+            assign column_width = 'medium-up--one-fifth'
+        endcase
+    -%}
+  
+    <div class="grid-scroll">
+      {%- for block in section.blocks -%}
+        {% assign text = block.settings.title %}
+
+        {% assign words = text | split: ' ' %}
+        {% assign processed_words = '' %}
+        
+        {% for word in words %}
+          {% assign word_1 = word | slice: 0, 1 %}
+          {% assign word_2 = word | slice: -1 %}
+          {% if word_1 == "{" %}
+            {% if word_2 == "}" %}
+              {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+              {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+            {% else %}
+              {% assign processed_words = processed_words | append: word | append: ' ' %}
+            {% endif %}
+          {% else %}
+            {% assign processed_words = processed_words | append: word | append: ' ' %}
+          {% endif %}
+        {% endfor %}
+        <div class="grid__item {% if block.settings.center-content %}center-content{% endif %} {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }} data-aos="row-of-{{ section.settings.count }}">
+          {%- if block.settings.video -%}
+            <video
+            class="video-div"
+            data-type="mp4"
+            src="{{ block.settings.video }}"
+            loop muted playsinline autoplay></video>
+          {%  else %}
+            {%- if block.settings.enable_image -%}
+            <div>
+              {%- if block.settings.image != blank -%}
+                <div class="image-wrap text-spacing hide-image--{{ block.settings.hide-image }}">
+                  {%- assign img_url = block.settings.image | image_url -%}
+                  <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %}"
+                        src="{{ img_url }}"
+                        alt="{{ block.settings.image.alt }}">
+                    {% if block.settings.fullwidth-image %}
+                      <div class="circle-overlay lazyload"></div>
+                      <div class="circle-overlay right lazyload"></div>
+                    {% endif %}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {% endif %}
+          
+          {%- if block.settings.title != blank -%}
+            <h3 class="{{ block.settings.title_size }}">{{ processed_words | strip }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <div class="rte-setting text--{{ block.settings.text_size }}">{{ block.settings.text | newline_to_br }}</div>
+          {%- endif -%}
+          {%- if block.settings.button_label != blank -%}
+            <a href="{{ block.settings.button_link }}" class="btn">
+              {{ block.settings.button_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="clear"></div>
+    {% if section.settings.hide_line != true %}
+      <hr>
+    {% endif %}
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Columns Block",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "dark_mode",
+        "label": "Enable Dark mode"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Optional section class"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "range",
+        "id": "count",
+        "label": "Number of columns in a row - Desktop",
+        "default": 3,
+        "min": 1,
+        "max": 5
+      },
+      {
+        "type": "checkbox",
+        "id": "bottom_space",
+        "label": "Add bottom space"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_line",
+        "label": "Hide bottom border"
+      },
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_image",
+            "label": "Show image",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_round",
+            "label": "Round image",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "fullwidth-image",
+            "label": "With Circle Backdrop"
+          },
+          {
+            "type": "checkbox",
+            "id": "fullheight-image",
+            "label": "Full Width Image"
+          },
+          {
+            "type": "checkbox",
+            "id": "hide-image",
+            "label": "Hide on mobile"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "video",
+            "label": "Upload Video (MP4 format recommended)",
+            "info": "Adding an image will override the image upload to this block. The video will have 1:1 ratio. Only mp4 video are acceptable at the moment"
+          },
+          {
+            "type": "checkbox",
+            "id": "center-content",
+            "label": "Center content"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Example title"
+          },
+          {
+            "type": "select",
+            "id": "title_size",
+            "label": "Title Size",
+            "default": "small",
+            "options": [
+              {
+                "value": "small",
+                "label": "Default"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>"
+          },
+          {
+            "type": "select",
+            "id": "text_size",
+            "label": "Text Size",
+            "default": "small",
+            "options": [
+              {
+                "value": "small",
+                "label": "Default"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label",
+            "default": "Optional button"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Columns Block",
+        "blocks": [
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

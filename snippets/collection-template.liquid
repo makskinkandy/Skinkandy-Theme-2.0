@@ -1,0 +1,92 @@
+{%- liquid
+  assign per_row = 4
+  assign paginate_by = per_row | times: 7
+
+  for block in section.blocks
+    case block.type
+    when 'product_grid'
+      assign per_row = block.settings.per_row
+      assign paginate_by = per_row | times: block.settings.rows_per_page
+    endcase
+  endfor
+
+  assign current_filter_size = 0
+
+  for filter in collection.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+-%}
+
+{%- paginate collection.products by paginate_by -%}
+
+{%- for block in section.blocks -%}
+  <div {{ block.shopify_attributes }}>
+    {%- case block.type -%}
+    {%- when 'collection_description' -%}
+      {%- if collection.description != blank and current_filter_size == 0 -%}
+        <div class="rte collection__description">
+          {{ collection.description }}
+        </div>
+      {%- endif -%}
+    {%- when 'subcollections' -%}
+      {%- if current_filter_size == 0 -%}
+        {%- render 'subcollections', per_row: block.settings.subcollections_per_row -%}
+      {%- endif -%}
+    {%- when 'product_grid' -%}
+      {%- if section.settings.enable_collection_count -%}
+        <p class="medium-up--hide collection-filter--count text-center" data-scroll-to>{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</p>
+      {%- endif -%}
+
+      <div id="AjaxinateContainer" class="grid grid--uniform{% if block.settings.mobile_flush_grid %} small--grid--flush{% endif %}"{% unless block.settings.enable_collection_count %} data-scroll-to{% endunless %}>
+        {%- liquid
+          assign grid_item_width = 'small--one-half medium-up--one-third'
+
+          case per_row
+            when 2
+              assign grid_item_width = 'medium-up--one-half'
+            when 3
+              assign grid_item_width = 'small--one-half medium-up--one-third'
+            when 4
+              assign grid_item_width = 'small--one-half medium-up--one-quarter'
+            when 5
+              assign grid_item_width = 'small--one-half medium-up--one-fifth'
+          endcase
+        -%}
+
+        {%- for product in collection.products -%}
+          {%- render 'product-grid-item',
+            product: product,
+            grid_item_width: grid_item_width,
+            per_row: per_row -%}
+        {%- else -%}
+          <div class="grid__item text-center">
+            <p style="margin: 2.5rem 0 3rem">{{ 'collections.general.no_matches' | t }}</p>
+          </div>
+        {%- endfor -%}
+
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- if settings.infinite_scrolling -%}
+          <div id="AjaxinatePagination" class="pagination">
+            {% if paginate.next %}
+              <a href="{{ paginate.next.url }}">Loading More</a>
+            {% endif %}
+          </div>
+
+        {%- else -%}
+          {%- render 'pagination', paginate: paginate -%}
+
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if settings.quick_shop_enable -%}
+        {%- for product in collection.products -%}
+          {%- render 'quick-shop-modal', product: product -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endcase -%}
+  </div>
+{%- endfor -%}
+
+{%- endpaginate -%}

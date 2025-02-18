@@ -1,0 +1,144 @@
+{%- form 'product', product, id: form_id, class: 'product-single__form-gc', name: 'in-store-gift-cart-form' -%}
+  <div class="add-to-cart-grp">
+    {%- liquid
+      assign default_text = 'products.product.add_to_cart' | t
+      assign button_text = 'products.product.add_to_cart' | t
+      if template == 'product.preorder'
+        assign default_text = 'products.product.preorder' | t
+        assign button_text = 'products.product.preorder' | t
+      endif
+      unless current_variant.available
+        assign button_text = 'products.product.sold_out' | t
+      endunless
+    -%}
+    <input type="hidden" id="url" name="properties[_purchaseURL]" value="{{ request.path }}" />
+    <button name="add" class="btn add-to-cart" data-add-to-cart>
+      <span data-add-to-cart-text data-default-text="{{ default_text }}" class="no-events">
+        {{ button_text }}
+      </span>
+    </button>
+
+    {%- if block.settings.wishlist -%}
+      <!-- include 'wishlist-button-product' with '{{ product.id }}' -->
+    {%- endif -%}
+  </div>
+
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {%- if variant.available -%}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected"{% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {%- else -%}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {%- endif -%}
+    {%- endfor -%}
+  </select>
+
+  <textarea data-variant-json class="hide" aria-hidden="true" aria-label="Product JSON">
+    {{ product.variants | json }}
+  </textarea>
+  {%- if product.options.size > 1 -%}
+    <textarea data-current-variant-json class="hide" aria-hidden="true" aria-label="Variant JSON">
+      {{ current_variant | json }}
+    </textarea>
+  {%- endif -%}
+{%- endform -%}
+
+<script type="module">
+  {% if request.locale.root_url contains 'en-nz' %}
+    const countryCode = "NZ"
+  {% else %}
+    const countryCode = "AU"
+  {% endif %}
+  const randomString = length => {
+    return Array.from(Array(length), () => Math.floor(Math.random() * 36).toString(36)).join('');
+  }
+
+  const getCurrentDate = () => {
+    const date = new Intl.DateTimeFormat('en-AU').format(new Date());
+    const formatted = date.slice(0, -4).replaceAll('/', '');
+    return formatted.trim();
+  }
+
+  const getVariantFromOptions = (option) => {
+    const variants = document.querySelector('[data-variant-json]') ? JSON.parse(document.querySelector('[data-variant-json]').innerHTML) : null;
+
+    if (!variants) return null;
+    return variants.find(variant => variant.options.includes(option));
+  }
+
+  const validateForm = async e => {
+    e.preventDefault();
+
+    const form = e.target;
+    const variantEl= document.querySelector('.variant-wrapper');
+    if (!variantEl) return;
+    let selected;
+    if(variantEl.dataset.type === 'dropdown') {
+      const dropdown = variantEl.querySelector('[data-variant-input]')
+      selected = dropdown.options[dropdown.selectedIndex].value
+    } else {
+      const buttons = variantEl.querySelectorAll("[data-variant-input]");
+      const checked = [...buttons].find(button => button.checked);
+      selected = checked.value;
+    }
+    if(!selected) return;
+    const variant = getVariantFromOptions(selected);
+
+    if (!variant) return;
+
+    const uniqueGiftCode = `INS-${selected.replace('$', '')}-${randomString(4).toUpperCase()}-${getCurrentDate()}`;
+    const uniqueGiftCodeValue = selected;
+    const button = form.elements['add'];
+    button.classList.add('btn--loading');
+
+    const purchaseURL = window.location.pathname;
+
+    try {
+      const res = await fetch(theme.routes.cartAdd, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: [{
+            id: variant.id,
+            quantity: 1,
+            properties: {
+              "_uniqueGiftCode": uniqueGiftCode,
+              "_uniqueGiftCodeValue": uniqueGiftCodeValue,
+              "_countryCode": countryCode,
+              "_purchaseURL": purchaseURL
+            }
+          }]
+        })
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
+          detail: {
+            data: data
+          }
+        }));
+      }
+    }
+    catch (err) {
+      console.log(err);
+    }
+    finally {
+      button.classList.remove('btn--loading');
+    }
+  }
+
+  const form = document.forms['in-store-gift-cart-form'];
+  form?.addEventListener('submit', validateForm, false);
+
+</script>

@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "pagefly_section_r8TkCV": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-23be842a"
+      }
+    },
+    "pagefly_section_pGwCUC": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-97346a66"
+      }
+    },
+    "pagefly_section_DaRLKV": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-db472e26"
+      }
+    },
+    "pagefly_section_tCqzUk": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-9e2259a2"
+      }
+    },
+    "pagefly_section_UQLrCt": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-96da02d1"
+      }
+    },
+    "pagefly_section_kTXCJn": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-7fb8b9dc"
+      }
+    },
+    "pagefly_section_RwiyTV": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-bd8b6758"
+      }
+    },
+    "pagefly_section_LwUJkh": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-ebaba282"
+      }
+    },
+    "pf-98748c34": {
+      "type": "pf-98748c34",
+      "settings": {}
+    },
+    "pagefly_section_3qJjN7": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-adf2c459"
+      }
+    },
+    "pagefly_section_dpaJgW": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-8841ff3b"
+      }
+    }
+  },
+  "order": [
+    "pagefly_section_r8TkCV",
+    "pagefly_section_pGwCUC",
+    "pagefly_section_DaRLKV",
+    "pagefly_section_tCqzUk",
+    "pagefly_section_UQLrCt",
+    "pagefly_section_kTXCJn",
+    "pagefly_section_RwiyTV",
+    "pagefly_section_LwUJkh",
+    "pf-98748c34",
+    "pagefly_section_3qJjN7",
+    "pagefly_section_dpaJgW"
+  ]
+}

@@ -1,0 +1,190 @@
+{%- liquid
+  assign quick_add_product = settings.quick_add_popup_product
+  assign quick_add_variant = settings.quick_add_popup_product.first_available_variant
+  assign quick_add_variant_id = settings.quick_add_popup_product_variant | plus: 0
+  unless quick_add_product.has_only_default_variant
+    for variant in quick_add_product.variants
+      if variant.id == quick_add_variant_id
+        assign quick_add_variant = variant;
+      endif
+    endfor
+  endunless
+-%}
+
+{%- if quick_add_product.available -%}
+  <div
+    id="QuickAddPopup"
+    class="modal modal--square modal--quickadd"
+    data-section-id="quick-add-popup"
+    data-section-type="quickadd-popup">
+    <div class="modal__inner">
+      <div class="modal__centered">
+          <button type="button" class="modal__close js-goto-checkout text-link">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+              <span class="icon__fallback-text">Close and go to checkout</span>
+          </button>
+        <div class="modal__centered-content">
+          <div class="quickadd-popup">
+              <div class="quickadd-popup--title">
+                {{ settings.quick_add_popup_title | default: 'Add a title' }}
+              </div>
+              <div class="quickadd-popup--content">
+                <div class="quickadd-popup--left">
+                  {%- assign image = settings.quick_add_popup_product_image | default: settings.quick_add_popup_product.featured_image -%}
+                  <img src="{{ image | image_url: width: 500 }}" alt="{{ image.alt }}">
+                </div>
+                <div class="quickadd-popup--right">
+                  {%- if settings.quick_add_popup_text != blank -%}
+                    <div class="quickadd-popup--text">
+                      {{ settings.quick_add_popup_text }}
+                    </div>
+                  {%- endif -%}
+                    <div class="quickadd-popup--product-details">
+                      <div class="quickadd-popup--variant">
+                        <span class="quickadd-popup--variant-name">{{ quick_add_variant.title }}</span> - 
+                        <span class="quickadd-popup--price">{{ quick_add_variant.price | money }}</span>
+                      </div>
+                      <button type="button" class="js-quickadd-popup-product" data-variant-id="{{ quick_add_variant.id }}">Add to cart</button>
+                      <a class="quickadd-nothanks" href="/checkout">No Thanks</a>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- style -%}
+    .modal--quickadd .modal__centered {
+      {% if settings.quick_add_popup_bg_image != blank %}
+        background-image: url({{ settings.quick_add_popup_bg_image | image_url: width: 800 }});
+        background-repeat: no-repeat;
+        background-size: cover;
+      {% endif %}
+    }
+
+    .modal--square.modal--quickadd .modal__centered-content {
+      padding-bottom: 0;
+    }
+
+    .quickadd-popup--title {
+      text-align: center;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+
+    .quickadd-popup--title h2 {
+      font-family: "BV Celine Regular";
+      font-size: 55px;
+    }
+
+    .quickadd-popup--left img {
+      margin-top: -40px;
+    }
+
+    .quickadd-popup--right {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      align-self: center;
+    }
+
+    .quickadd-popup--text {
+      margin-bottom: 30px;
+    }
+
+    .quickadd-popup--text p {
+      line-height: 1.5;
+    }
+
+    .quickadd-popup--text h2 {
+      font-family: "BV Celine Regular";
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .quickadd-popup--content {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .quickadd-popup--content > div {
+      width: 50%;
+    }
+
+    .quickadd-popup--variant {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      justify-content: center;
+      column-gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .quickadd-popup--price {
+      color: rgb(236, 0, 140);
+    }
+
+    .quickadd-popup--product-details button {
+      background-color: transparent;
+      border: 1px solid #000;
+      color: #000 !important;
+      border-radius: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 10px 25px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .quickadd-popup--product-details button:hover {
+      background-color: #000;
+      color: #fff !important;
+    } 
+
+    .quickadd-nothanks {
+      display: block;
+    }
+    @media only screen and (max-width: 768px) {
+      .quickadd-popup--left img {
+        max-width: unset;
+        width: 130%;
+        margin-left: -15%;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .modal--quickadd .modal__centered-content {
+        max-width: 800px;
+      }
+
+      .quickadd-popup--content {
+        padding: 0 80px;
+      }
+
+      .quickadd-popup--text {
+        margin-bottom: 40px;
+      }
+
+      .quickadd-popup--text h2 {
+        font-size: 35px;
+        line-height: 1.4;
+      }
+
+      .quickadd-popup--right {
+        padding-left: 40px;
+        padding-top: 0;
+      }
+
+      .quickadd-popup--title {
+        font-size: 33px;
+      }
+
+      .quickadd-popup--title h2 {
+        font-size: 90px;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}

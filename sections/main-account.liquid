@@ -1,0 +1,193 @@
+{%- paginate customer.orders by 20 -%}
+
+<div class="account-page">
+    <header class="page-header">
+        <div class="top">
+            <div class="page-width">
+                <h1 class="page-header__title">{{ 'customer.account.title' | t }}</h1>
+            </div>
+        </div>
+        <div class="bottom page-width">
+            <a href="{{ routes.account_logout_url }}" class="page-header__link link--underline">{{ 'layout.customer.log_out'| t }}</a>
+        </div>
+    </header>
+
+    <div class="page-width page-content wrapper">
+        <div class="page-contents">
+            <section class="order-details">
+                <h2 class="heading">{{ 'customer.orders.title' | t }}</h2>
+                {%- if customer.orders.size != 0 -%}
+                    <table class="table--responsive table--small-text">
+                    <thead>
+                        <tr>
+                        <th>{{ 'customer.orders.order_number' | t }}</th>
+                        <th>{{ 'customer.orders.date' | t }}</th>
+                        <th>{{ 'customer.orders.payment_status' | t }}</th>
+                        <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+                        <th>{{ 'customer.orders.total' | t }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for order in customer.orders -%}
+                        <tr class="table__section">
+                            <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
+                            <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                            <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                        </tr>
+                        {%- endfor -%}
+                    </tbody>
+                    </table>
+                    <hr class="hr--clear">
+                {%- else -%}
+                    <p>{{ 'customer.orders.none' | t }}</p>
+                {%- endif -%}
+
+                {%- if paginate.pages > 1 -%}
+                    {%- render 'pagination', paginate: paginate -%}
+                {%- endif -%}
+            </section>
+        </div>
+    
+        <aside class="sidebar">
+            <h2 class="heading">{{ 'customer.account.details' | t }}</h2>
+            <address>
+                <p class="author">{{ customer.name }}</p>
+                <div class="customer-loyalty">
+                    <p class="loyalty">{{ customer.metafields.customer.loyalty_balance | default: '0' }} loyalty points available</p>
+                    <p class="loyalty-sub">{{ customer.metafields.customer.loyalty_used | default: '0' }} used loyalty points</p>
+                    <p class="loyalty-sub">{{ customer.metafields.customer.loyalty_balance | plus: customer.metafields.customer.loyalty_used }} lifetime loyalty points</p>
+                    <p class="loyalty-sub">Loyalty points expire on: <strong>{{ customer.metafields.customer.loyalty_expiration }}</strong></p>
+                </div>
+                <a href="mailto:{{ customer.email }}" class="email">
+                    {{ customer.email }}
+                </a>
+                {%- if customer.phone != blank -%}
+                    <a href="tel:{{ customer.phone }}" class="phone">
+                        {{ customer.phone }}
+                    </a>
+                {%- endif -%}
+                {%- if customer.default_address != blank -%}
+                    <p class="location">
+                        {{ customer.default_address.address1 }}<br>
+                        {%- if customer.default_address.address2 != "" -%}{{ customer.default_address.address2 }},<br>{%- endif -%}
+                        {%- if customer.default_address.city != "" -%}{{ customer.default_address.city }},<br>{%- endif -%}
+                        {%- if customer.default_address.province_code != "" -%}{{ customer.default_address.province_code | upcase }}{%- endif -%}
+                        {%- if customer.default_address.zip != "" -%}, {{ customer.default_address.zip | upcase }}<br>{%- endif -%}
+                        {%- if customer.default_address.country != "" -%}{{ customer.default_address.country }}{%- endif -%}
+                    </p>
+                {%- endif -%}
+            </address>
+            <a href="{{ routes.account_addresses_url }}" class="link--underline">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a>
+            <div class="account-wishlist">
+                <a href="/apps/wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    <span>{{ 'layout.wishlist.label' | t }}</span>
+                </a>
+            </div>
+        </aside>
+    </div>
+</div>
+
+{%- endpaginate -%}
+
+<style>
+    .account-page .page-header .top {
+        padding-top: 7.5em;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        background-color: #EEC9D0;
+    }
+
+    .account-page .wrapper {
+        display: grid;
+        grid-gap: 5em;
+    }
+
+    .account-page .heading {
+        margin-bottom: 0.5em;
+    }
+
+    .account-page address {
+        font-style: normal;
+    }
+
+    .account-page address,
+    .account-page address .author,
+    .account-page address .email,
+    .account-page address .phone,
+    .account-page address .author {
+        margin-bottom: 1em;
+    }
+
+    .account-page address .author {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .account-page address .email,
+    .account-page address .loyalty-points,
+    .account-page address .location {
+        display: block;
+        position: relative;
+        margin-bottom: 0.5em;
+        padding-left: 2em;
+    }
+
+    .customer-loyalty .loyalty:before,
+    .account-page address .email:before,
+    .account-page address .loyalty-points:before,
+    .account-page address .location:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .customer-loyalty .loyalty {
+        position: relative;
+        padding-left: 28px;
+    }
+
+    .customer-loyalty .loyalty:before {
+        background-image: var(--icon-points);
+    }
+
+    .account-page address .email:before {
+        background-image: var(--icon-mail);
+    }
+
+    .account-page address .loyalty-points:before {
+        background-image: var(--icon-points);
+    }
+
+    .account-page address .location:before {
+        background-image: var(--icon-map-marker);
+    }
+
+    .account-page .link--underline {
+        font-size: var(--typeBaseSize)
+    }
+
+    @media (min-width: 60rem) {
+        .account-page .wrapper {
+            grid-template-columns: minmax(0, 2fr) minmax(0,1fr);
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Account page",
+    "settings": []
+}
+{% endschema %}

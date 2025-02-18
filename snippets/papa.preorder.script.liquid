@@ -1,0 +1,102 @@
+<script type="text/javascript">
+
+  window.Papa = window.Papa || {};
+  Papa.PreOrder = Papa.PreOrder || {};
+  
+  Papa.PreOrder.config = Papa.PreOrder.config || {};
+  Papa.PreOrder.config.shopOrigin  = "{{-shop.permanent_domain-}}";
+  Papa.PreOrder.config.moneyFormat = "{{-shop.money_format | replace: '"', "'"-}}";   
+
+  Papa.PreOrder.product = {{-product | json-}};
+  Papa.PreOrder.cartItems = {{-cart.items | json-}};
+</script>
+
+{%- assign random_number = "now" | date: "%N" | modulo: 9 | minus: 0 | plus: 0 -%}
+<script src="{{ 'papa.preorder.data.js' | asset_url | append:random_number}}" type="text/javascript"></script>
+
+<script>
+  {%- if product -%}
+  
+    Papa.PreOrder.product.settings = (parseInt({{ product.id }}) in Papa.PreOrder.preorderSettings) ? Papa.PreOrder.preorderSettings[{{ product.id }}] : {};
+    
+    {%- for variant in product.variants -%}
+      Papa.PreOrder.product.variants[{{forloop.index0}}] = {{variant | json}};
+      Papa.PreOrder.product.variants[{{forloop.index0}}].inventoryQuantity = parseInt({{variant.inventory_quantity}});
+        
+      if((parseInt({{ product.id }}) in Papa.PreOrder.preorderSettings)){
+        if(Papa.PreOrder.product.settings.settingType == 'variant'){
+          if(Papa.PreOrder.product.settings.variants && Papa.PreOrder.product.settings.variants[{{-variant.id-}}]){
+            Papa.PreOrder.product.variants[{{forloop.index0}}].settings = Papa.PreOrder.product.settings.variants[{{-variant.id-}}];
+          }else{
+            Papa.PreOrder.product.variants[{{forloop.index0}}].settings = Papa.PreOrder.product.settings.default;
+            Papa.PreOrder.product.variants[{{forloop.index0}}].settings.enable = false;
+          }
+        }else{
+          Papa.PreOrder.product.variants[{{forloop.index0}}].settings = Papa.PreOrder.product.settings.default;
+        }
+
+        Papa.PreOrder.product.variants[{{forloop.index0}}].translation = Papa.PreOrder.translation.message;
+        if(Papa.PreOrder.product.variants[{{forloop.index0}}].settings.message.enable === true){
+          Papa.PreOrder.product.variants[{{forloop.index0}}].translation = Object.assign({}, Papa.PreOrder.product.variants[{{forloop.index0}}].translation, Papa.PreOrder.product.variants[{{forloop.index0}}].settings.message);
+        }
+      }
+    {%- endfor -%}
+      
+    Papa.PreOrder.product.collections = {{ product.collections | map: 'id' | json }};
+    Papa.PreOrder.product.firstAvailableVariant = {{ product.first_available_variant | json }};
+    Papa.PreOrder.product.selectedVariant = {{ product.selected_variant | json }};
+  {%- endif -%}
+  {% if cart.items %}
+    var dbMixPopupHtml = '';
+    if(Papa && Papa.PreOrder && Papa.PreOrder.settings && Papa.PreOrder.settings.mixCartWarning && Papa.PreOrder.settings.mixCartWarning === true){
+      dbMixPopupHtml += '<div class="papa-mx-cart-popup">';
+      dbMixPopupHtml += ' <div class="papa-mxc-popup-box">';
+      dbMixPopupHtml += '  <a class="papa-mxc-pop-close">';
+      dbMixPopupHtml += '   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="20" height="20">';
+      dbMixPopupHtml += '    <path d="M40.17 43.42L0.17 3.42L3 0.6L43 40.6L40.17 43.42ZM3 43.42L0.17 40.6L40.17 0.6L43 3.42L3 43.42Z"/>';
+      dbMixPopupHtml += '   </svg>';
+      dbMixPopupHtml += '  </a>';
+      dbMixPopupHtml += `  <h2>${Papa.PreOrder.translation.mixCartWarningTitle}</h2>`;
+      dbMixPopupHtml += `  <p>${Papa.PreOrder.translation.mixCartWarningContent}</p>`;
+      dbMixPopupHtml += '  <label>';
+      dbMixPopupHtml += `   <input type="checkbox" class="papa-mix-war-stop"> ${Papa.PreOrder.translation.mixCartWarningCheckboxLabel}`;
+      dbMixPopupHtml += '  </label>';
+      dbMixPopupHtml += ' </div>';
+      dbMixPopupHtml += '</div>';
+      document.querySelector('body').insertAdjacentHTML('beforeend', dbMixPopupHtml);
+    }
+  {%- endif -%}
+</script>
+
+<style>
+  .papa-preorder-hidden {display: none !important;}
+  .papa-preorder-top-message, .papa-preorder-bottom-message {
+    padding: 3px 6px;
+    display: block;
+    clear: both;
+    flex: 0 0 100%;
+    margin: 5px 0 10px;
+    border-radius: 2px;
+    text-align: left;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+  .papa-mxc-opened {overflow: hidden;}
+  .papa-mxc-opened .papa-mx-cart-popup {opacity: 1;visibility: visible;}
+
+  .papa-mx-cart-popup, .papa-mx-cart-popup * {box-sizing: border-box;}
+  .papa-mx-cart-popup {position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: flex;background: rgba(0,0,0,.3);padding: 10px;overflow: hidden;overflow-y: auto;opacity: 0;visibility: hidden;transition: all .2s ease;z-index: 999999999;}
+  .papa-mx-cart-popup .papa-mxc-popup-box {max-width: 480px;width: 100%;display: block;font: normal 400 15px/1.4 'Inter', sans-serif;letter-spacing: normal;color: #000;background: #FFF;padding: 25px;border-radius: 6px;margin: auto;position: relative;text-align: center;box-shadow: 1px 3px 7px rgb(0, 0, 0, .3);}
+  .papa-mx-cart-popup .papa-mxc-pop-close {position: absolute;top: 0;right: 0;width: 40px;height: 40px;cursor: pointer;}
+  .papa-mx-cart-popup .papa-mxc-pop-close svg {width: 14px;height: 14px;display: block;fill: currentColor;margin: 12px;}
+  .papa-mx-cart-popup h2 {font: normal 700 22px/1.2 'Inter', sans-serif;letter-spacing: normal;color: #000;padding: 0;margin: 0 0 15px;text-transform: none;text-align: center;}
+  .papa-mx-cart-popup p {font: normal 400 15px/1.4 'Inter', sans-serif;letter-spacing: normal;color: #000;padding: 0;margin: 0 0 15px;text-transform: none;text-align: center;}
+  .papa-mx-cart-popup label {font: normal 400 15px/1.4 'Inter', sans-serif;letter-spacing: normal;color: #000;display: inline-block;padding: 0;margin: 0;text-transform: none;text-align: center;cursor: pointer;}
+  .papa-mx-cart-popup label input[type="checkbox"] {width: 14px;height: 14px;display: inline-block;vertical-align: middle;margin: -1px 3px 0 0;cursor: pointer;}
+
+  @media only screen and (max-width: 799px) {
+    .papa-mx-cart-popup .papa-mxc-popup-box {font-size: 14px;padding: 25px 20px;}
+    .papa-mx-cart-popup h2 {font-size: 20px;}
+    .papa-mx-cart-popup p, .papa-mx-cart-popup label {font-size: 14px;}
+  }
+</style>

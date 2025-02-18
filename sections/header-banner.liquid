@@ -1,0 +1,238 @@
+<div class="section__hero-banner hero-banner hero-{{ section.id }} hero-banner-{{ section.index }}">
+  {% if section.blocks.size > 0 %}
+    <div class="hero-banner__wrapper slider-wrapper">
+      {% for block in section.blocks %}
+        {% assign text = block.settings.heading %}
+
+        {% assign words = text | split: ' ' %}
+        {% assign processed_words = '' %}
+        
+        {% for word in words %}
+          {% assign word_1 = word | slice: 0, 1 %}
+          {% assign word_2 = word | slice: -1 %}
+          {% if word_1 == "{" %}
+            {% if word_2 == "}" %}
+              {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+              {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+            {% else %}
+              {% assign processed_words = processed_words | append: word | append: ' ' %}
+            {% endif %}
+          {% else %}
+            {% assign processed_words = processed_words | append: word | append: ' ' %}
+          {% endif %}
+        {% endfor %}
+
+        <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
+          <div class="hero-banner__content-wrapper">
+            <div class="page-width hero-banner__content alignment--{{ block.settings.align_text }}">
+              <div class="content-wrapper">
+                {% if section.blocks.size > 1 %}
+                  {% if processed_words != blank %}
+                    <h2>{{ processed_words | strip }}</h2>
+                  {% endif %}
+                {% else %}
+                  {% if processed_words != blank %}
+                    <h1>{{ processed_words | strip }}</h1>
+                  {% endif %}
+                {% endif %}
+                
+                <div class="hero-banner__description">
+                  <p>{{ block.settings.short_description }}</p>
+                  {% if block.settings.button_url %}
+                    <a href="{{ block.settings.button_url }}" class="btn">
+                      {% if block.settings.button_text %}
+                        {{ block.settings.button_text }}
+                      {% else %}
+                        Shop Now
+                      {% endif %}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% if block.settings.banner_url %}
+            <a href="{{ block.settings.banner_url }}" class="banner-url" target="_blank" aria-label="Banner {{ forloop.index }} Link"></a>
+          {% endif %}
+          {% unless block.settings.disable_overlay %}
+            <div class="bottom-overlay overlay absolute {{ section.settings.banner_size }} small-overlay--{{ section.settings.small_overlay }}"></div>
+          {% endunless %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+<style>
+  {% for block in section.blocks %}
+    .block-{{ block.id }} {
+      background-image: url({{ block.settings.image | image_url }});
+      {% if block.settings.image_mobile %}
+        @media screen and (max-width: 992px) {
+          background-image: url({{ block.settings.image_mobile | image_url }});
+        } 
+      {% endif %}
+    }
+  {% endfor %}
+</style>
+{% if section.blocks.size > 1 %}
+  <script>
+
+    
+    {% if section.settings.shuffle %}
+      let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+    
+      slider{{ section.index }}.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: false
+      });
+      // Function to move to a random slide
+      function goToRandomSlide() {
+        var totalSlides = slider.slick('getSlick').slideCount;
+        var randomSlide = Math.floor(Math.random() * totalSlides);
+        slider.slick('slickGoTo', randomSlide);
+      }
+    
+      // Set up an interval for the custom autoplay with random slide transitions
+      setInterval(function() {
+        goToRandomSlide();
+      }, 4000);
+    {% else %}
+        let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+    
+        slider{{ section.index }}.slick({
+          infinite: false,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          autoplaySpeed: 5000,
+          autoplay: true
+        });
+    {% endif %}
+    
+    
+  </script>
+{% endif %}
+{% schema %}
+  {
+    "name": "Hero Banner Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      },
+      {
+        "type": "select",
+        "id": "banner_size",
+        "label": "Banner Size",
+        "default": "default",
+        "options": [
+          {
+            "value": "short-banner",
+            "label": "Short Banner"
+          },
+          {
+            "value": "small-banner",
+            "label": "Small Banner"
+          },
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "ads-banner",
+            "label": "Ads Banner"
+          },
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "small_overlay",
+        "label": "Enable Short Overlay"
+      },
+      {
+        "type": "checkbox",
+        "id": "shuffle",
+        "label": "Shuffle"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "disable_overlay",
+            "label": "Disable Overlay",
+            "info": "This will disable the dark overlay on banner."
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Background Mobile"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Image"
+          },
+          {
+            "type": "url",
+            "id": "banner_url",
+            "label": "Banner Link"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "short_description",
+            "label": "Short Description",
+            "info": "Add {} on the word that you want to hightlight with pink."
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Text alignment",
+            "default": "center",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Centered"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Hero Banner Slider"
+    }]
+  }
+{% endschema %}

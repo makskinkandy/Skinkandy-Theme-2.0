@@ -1,0 +1,17 @@
+<div class="store-locator">
+  <div id="container">
+    <div class='content'>
+      <h1 class="section-header__title text-center py-3">{{ page.title }}</h1>
+      <p class="text-help">Use the field below to search within your area.</p>
+      <div class='store-form'>
+        <input id="autocomplete" placeholder="Enter a location" type="text" />
+      </div>
+      <div id="store-list"></div>
+    </div>
+    
+    <div id="map"></div>
+  </div>
+</div>
+<link rel="stylesheet" href="{{ 'store-locator.css' | asset_url }}">
+<script src="{{ 'store-locator.js' | asset_url }}" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD67z0I_Lwb6YM9Gt7xOEcxth0JYRi0SrI&loading=async&libraries=places,marker,geometry&callback=initMap" defer></script>

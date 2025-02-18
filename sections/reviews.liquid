@@ -1,0 +1,110 @@
+<div class="reviews-section page-content {{ section.settings.class | escape }}" style="background-color: {{ section.settings.bg_color }}">
+    <div class="page-width">
+        <header class="section-header">
+            <p class="section-content__preheading h3">{{ section.settings.preheading | escape }}</p>
+            <h2 class="section-content__heading h1">{{ section.settings.heading | newline_to_br }}</h2>
+            <p class="section-content__text upper-text">
+                <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 30 26.9" width="30" height="26.9"><path d="m15 21.491-9.3 5.408 2.4-9.963L0 10.247l10.8-.854L15 0l4.2 9.394 10.8.854-8.1 6.689 2.4 9.963Z" fill="#e0007a"/></svg>
+                {{ section.settings.text_upper | escape }}
+            </p>
+            <p class="section-content__text">{{ section.settings.text_lower | escape }}</p>
+        </header>
+
+        {%- if section.blocks.size > 0 -%}
+            <div class="reviews" data-count="{{ section.blocks.size }}">
+                {%- for block in section.blocks limit: 3 -%}
+                    <div class="review">
+                        <picture>
+                            <source srcset="{{ block.settings.image | img_url: 'master' }}" media="(min-width: 601px)">
+                            <source srcset="{{ block.settings.image_mobile | default: block.settings.image | img_url: 'master' }}" media="(max-width: 600px)">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                        </picture>
+                    </div>
+                {%- endfor -%}
+
+                {%- if section.blocks.size > 3 -%}
+                    <button type="button" class="view-more js-view-more">See more</button>
+                {%- endif -%}
+
+                {%- for block in section.blocks offset: 3 -%}
+                    <div class="review hide">
+                        <picture>
+                            <source srcset="{{ block.settings.image | img_url: 'master' }}" media="(min-width: 601px)">
+                            <source srcset="{{ block.settings.image_mobile | default: block.settings.image | img_url: 'master' }}" media="(max-width: 600px)">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                        </picture>
+                    </div>
+                {%- endfor -%}
+            </div>
+        {%- else -%}
+            <p class="no-content text-center">{{ 'home_page.onboarding.no_content' | t }}</p>
+        {%- endif -%}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Reviews section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section background color"
+        },
+        {
+            "type": "range",
+            "id": "count",
+            "label": "Number of reviews to display",
+            "default": 3,
+            "min": 1,
+            "max": 5
+        },
+        {
+            "type": "text",
+            "id": "preheading",
+            "label": "Preheading"
+        },
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading"    
+        },
+        {
+            "type": "textarea",
+            "id": "text_upper",
+            "label": "Upper text"    
+        },
+        {
+            "type": "textarea",
+            "id": "text_lower",
+            "label": "Lower text"    
+        }
+    ],
+    "blocks": [
+    {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_mobile",
+                "label": "Optional mobile image"
+            }
+        ]
+    }
+    ],
+    "presets": [{
+        "name": "Reviews section"
+    }]
+}
+{% endschema %}

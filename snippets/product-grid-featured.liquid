@@ -1,0 +1,121 @@
+{%- liquid
+    assign section_id = section.id
+
+    unless video_looping
+        assign video_looping = true
+    endunless
+
+    assign has_video = false
+    assign video_type = ''
+
+    for media in product.media limit: 1
+        case media.media_type
+            when 'external_video'
+                assign has_video = true
+                assign video_type = media.host
+                if media.host contains 'youtube'
+                    assign video_id = media.external_id
+                endif
+
+            when 'video'
+                assign has_video = true
+                assign video_type = 'mp4'
+        endcase
+    endfor
+
+    assign fixed_aspect_ratio = false
+    unless settings.product_grid_image_size == 'natural'
+        assign fixed_aspect_ratio = true
+    endunless
+
+    assign enable_quick_add = false
+    if settings.enable_product_grid_quick_add and settings.enable_swatches
+      assign enable_quick_add = true
+    endif
+-%}
+
+{%- if has_video -%}
+    <div class="product__video-wrapper" style="padding-bottom: 150%;">
+        {%- if video_type == 'youtube' -%}
+            <div class="product__video" data-section-id="{{ section_id }}" data-section-type="video-section">
+                <div id="YouTubeVideo-{{ section_id }}" class="video-div" data-type="youtube" data-video-id="{{ video_id }}"></div>
+            </div>
+        {%- elsif video_type == 'mp4' -%}
+            <video playsinline loop muted autoplay
+                   controlsList="nodownload"
+                   poster="{{ product.media.preview_image.src }}"
+                   data-image-count="{{ product.media.size }}"
+                   data-video-type="{{ video_type }}"
+                   id="ProductVideo-{{ section_id }}-{{ forloop.index0 }}"
+                   class="product__video">
+                {%- for media in product.media -%}
+                    {%- for source in media.sources -%}
+                        {%- if source.format == 'mp4' -%}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- endfor -%}
+            </video>
+        {%- endif -%}
+    </div>
+
+{%- else -%}
+    {%- liquid
+      assign preview_image = product.featured_media
+      assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+    -%}
+    {%- if fixed_aspect_ratio -%}
+      <a href="{{ product.url }}" class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+        <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+          data-src="{{ img_url }}"
+          data-widths="[360, 540, 720, 900, 1080]"
+          data-aspectratio="{{ preview_image.aspect_ratio }}"
+          data-sizes="auto"
+          data-position="{{ product.featured_media.position }}"
+          alt="{{ preview_image.alt | escape }}"
+          style="aspect-ratio: {{ preview_image.aspect_ratio }}; height: 100%; object-fit: contain;" />
+
+        {%- if enable_quick_add and product.media.size > 1 -%}
+          {% for media in product.media %}
+            {%- unless media == preview_image -%}
+              {%- if media.media_type == 'image' -%}
+                <img alt="{{ media.alt | escape }}" src="{{ media.preview_image | image_url: width: 450 }}" data-position="{{ media.position }}">
+              {%- endif -%}
+            {%- endunless -%}
+          {% endfor %}
+        {%- endif -%}
+
+        {%- if settings.product_hover_image and product.media.size > 1 -%}
+          {%- for media in product.media offset: 1 limit: 1 -%}
+            {%- assign second_image = media.preview_image -%}
+          {%- endfor -%}
+          <div class="grid-product__secondary-image small--hide">
+            {%- assign img_url = second_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="lazyload"
+              data-src="{{ img_url }}"
+              data-widths="[360, 540, 720, 1000]"
+              data-aspectratio="{{ second_image.aspect_ratio }}"
+              data-sizes="auto"
+              alt="{{ second_image.alt }}"
+              style="aspect-ratio: {{ second_image.aspect_ratio }}; height: 100%; object-fit: contain;">
+          </div>
+        {%- endif -%}
+      </a>
+
+    {%- else -%}
+      <div class="image-wrap">
+        <img class="grid-product__image lazyload"
+          data-src="{{ img_url }}"
+          data-widths="[360, 540, 720, 900, 1080]"
+          data-aspectratio="{{ preview_image.aspect_ratio }}"
+          data-sizes="auto"
+          alt="{{ preview_image.alt | escape }}"
+          style="aspect-ratio: {{ preview_image.aspect_ratio }}; height: 100%; object-fit: contain;">
+        <noscript>
+          <img class="grid-product__image lazyloaded" src="{{ preview_image | img_url: '400x' }}" alt="{{ preview_image.alt | escape }}">
+        </noscript>
+      </div>
+    {%- endif -%}
+
+{%- endif -%}
+

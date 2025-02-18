@@ -1,0 +1,94 @@
+<div class="grid-image">
+  <div class="page-width">
+    <div class="grid-image__wrapper">
+      <div class="grid-image__social">
+        {%- if settings.social_facebook_link != blank -%}
+            <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+                {%- render 'icons' | icon: 'facebook' -%}
+                <span class="icon__fallback-text">Facebook</span>
+            </a>
+        {%- endif -%}
+        {%- if settings.social_instagram_link != blank -%}
+            <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+                {%- render 'icons' | icon: 'instagram' -%}
+                <span class="icon__fallback-text">Instagram</span>
+            </a>
+        {%- endif -%}
+        {%- if settings.social_tiktok_link != blank -%}
+            <a target="_blank" rel="noopener" href="{{ settings.social_tiktok_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'TikTok' }}">
+                {%- render 'icons' | icon: 'tiktok' -%}
+                <span class="icon__fallback-text">TikTok</span>
+            </a>
+        {%- endif -%}
+      </div>
+      {% if section.settings.image %}
+        <img src="{{ section.settings.image | image_url }}" alt="Image of {{ section.settings.title }}" class="grid-image__logo">
+      {% endif %}
+      <div class="grid-image__items">
+        {% for blocks in section.blocks %}
+          {% if blocks.settings.url %}
+            <a href="{{ blocks.settings.url }}" target="_blank" class="link-img" aria-label="Instagram Link {{ forloop.index }}">
+              <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}">
+            </a>
+          {% else %}
+            <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}" class="grid-image__img">
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+  "name": "Grid Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Top Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_margin",
+      "label": "Bottom Margin"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Title link"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Grid Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Image Link"
+        }
+      ]
+    },
+    
+  ],
+  "presets": [{
+    "name": "Grid Image"
+  }]
+}
+{% endschema %}

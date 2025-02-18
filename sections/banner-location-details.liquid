@@ -1,0 +1,61 @@
+{% style %}
+.section-content__heading {
+    margin-top: 8px;
+}
+{% endstyle %}
+
+<div class="banner-landing-section page-content {{ section.settings.class | escape }}" style="background: {{ section.settings.bg_color }};">
+    <div class="page-width">
+        <div class="section-content" style="--content-width: {{ section.settings.content_width }}%;">
+            
+          {%- if template == 'page.location-details' -%}
+            <a href="/pages/store-locations" class="return-to-location-listings medium-up--hide">
+              {%- render 'icons', icon: 'long-right-arrow' -%} Back
+            </a>
+          {%- endif -%}
+            <h1 class="section-content__preheading h3">
+                {%- if page.metafields.location.subheader.value != blank -%}
+                    SkinKandy<br>
+                {%- endif -%}
+                {%- if page.metafields.location.header.value != blank -%}
+                    <span class="section-content__heading h1">{{ page.metafields.location.header.value }}</span>
+                {%- endif -%}
+            </h1>
+        </div>
+    </div>
+</div>  
+
+{% schema %}
+{
+    "name": "Banner - Location Detail",
+    "settings": [
+        {
+            "type": "header",
+            "content": "General settings"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Optional section class"
+        },
+        {
+            "type": "color_background",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "linear-gradient(#ffffff, #000000)"
+        },
+        {
+            "type": "range",
+            "id": "content_width",
+            "label": "Content width",
+            "default": 100,
+            "min": 10,
+            "max": 100,
+            "unit": "%"
+        }
+    ],
+    "presets": [{
+        "name": "Banner - Location Detail"
+    }]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+<div class="collapsibles-wrapper">
+  <button type="button"
+    class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height {% if open %} is-open{% endif %}" aria-controls="Product-content-{{ id }}"
+    {% if open %}aria-expanded="true"{% endif %}>
+    {% if icon %}
+      {{ icon }}
+    {% endif %}
+    {% if template == 'product' %}
+      <h2>{{ title }}</h2>
+    {% else %}
+      {{ title }}
+    {% endif %}
+    {%- render 'collapsible-icons' -%}
+  </button>
+  <div id="Product-content-{{ id }}"
+    class="collapsible-content collapsible-content--all{% if open %} is-open{% endif %}"
+    {% if open %}style="height: auto;"{% endif %}>
+    <div class="collapsible-content__inner rte">
+      {{ content }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="sticky-footer-banner">
+    {%- if settings.sticky_footer_banner_url != blank -%}
+    <a href="{{ settings.sticky_footer_banner_url }}">
+    {%- endif -%}
+    <div class="page-width">
+        <div class="sticky-footer-banner--contents">
+            <div class="sticky-footer-banner--image sticky-footer-banner--image-left small--hide">
+                {%- if settings.sticky_footer_banner_img != blank -%}
+                    <img src="{{ settings.sticky_footer_banner_img | image_url: width: settings.sticky_footer_banner_img_width" }} alt="{{ settings.sticky_footer_banner_img.alt }}">
+                {%- endif -%}
+            </div>
+            <div class="sticky-footer-banner--text">
+                {%- if settings.sticky_footer_banner_text != blank -%}
+                    <span class="h2">{{ settings.sticky_footer_banner_text | escape_html }}</span>
+                {%- endif -%}
+            </div>
+            <div class="sticky-footer-banner--image sticky-footer-banner--image-right">
+                {%- if settings.sticky_footer_banner_img_2 != blank -%}
+                    <img src="{{ settings.sticky_footer_banner_img_2 | image_url: width: settings.sticky_footer_banner_img_2_width" }} alt="{{ settings.sticky_footer_banner_img_2.alt }}">
+                {%- endif -%}
+            </div>
+            {%- if settings.sticky_footer_banner_btn_text != blank -%}
+                <div class="sticky-footer-banner--btn">
+                    <span class="btn btn--secondary">{{ settings.sticky_footer_banner_btn_text }}</span>
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+    {%- if settings.sticky_footer_banner_url != blank -%}
+    </a>
+    {%- endif -%}
+</div>
+
+{%- style -%}
+.sticky-footer-banner {
+    background-color: {{ settings.sticky_footer_banner_bg_color | default: '#fff' }};
+    color: {{ settings.sticky_footer_banner_text_color | default: settings.color_body_text }};
+}
+.sticky-footer-banner .btn {
+    color: {{ settings.sticky_footer_banner_text_color | default: settings.color_body_text }};
+    border: 1px solid {{ settings.sticky_footer_banner_text_color | default: settings.color_body_text }};
+}
+
+.sticky-footer-banner--image-left {
+  width: {{ settings.sticky_footer_banner_img_width }}px;
+}
+
+.sticky-footer-banner--image-right {
+  width: {{ settings.sticky_footer_banner_img_2_width }}px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sticky-footer-banner--image-left {
+        width: {{ settings.sticky_footer_banner_img_width | times: 0.5 }}px;
+    }
+
+    .sticky-footer-banner--image-right {
+        width: {{ settings.sticky_footer_banner_img_2_width | times: 0.5 }}px;
+    }
+}
+{%- endstyle -%}

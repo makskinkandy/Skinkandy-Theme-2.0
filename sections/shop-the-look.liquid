@@ -1,0 +1,250 @@
+{% if template.name == 'article' %}
+  {%- for block in section.blocks -%}
+    {% if block.type == 'article_block' and block.settings.article.handle == article.handle %}
+
+      <div class="shop-the-look">
+        <div class="page-width page-width--narrow">
+          {%- if section.settings.title != blank -%}
+            <header class="section-header">
+              <h2 class="section-header__title">
+                {{ section.settings.title | escape }}
+              </h2>
+            </header>
+          {%- endif -%}
+
+          <div {{ block.shopify_attributes }}>
+            {% render 'block-shop-the-look', block: block %}
+          </div>
+        </div>
+      </div>
+      {% break %}
+
+    {% endif %}
+  {%- endfor -%}
+{% else %}
+  {%- for block in section.blocks -%}
+    {% if block.type == 'generic_block' %}
+
+      <div class="shop-the-look">
+        <div class="page-width page-width--narrow">
+          {%- if section.settings.title != blank -%}
+            <header class="section-header">
+              <h2 class="section-header__title">
+                {{ section.settings.title | escape }}
+              </h2>
+            </header>
+          {%- endif -%}
+
+          <div {{ block.shopify_attributes }}>
+            {% render 'block-shop-the-look', block: block %}
+          </div>
+        </div>
+      </div>
+      {% break %}
+      
+    {% endif %}
+  {%- endfor -%}
+{% endif %}
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+      let btns = document.querySelectorAll('.stl-prod-btn');
+      let prods = document.querySelectorAll('.stl-featured-product');
+
+      // activate first on page load
+      btns[0]?.classList.add('active');
+      prods[0]?.classList.add('active');
+
+      // watch for click
+      btns.forEach((btn, index) => {
+          btn.addEventListener('click', (e) => {
+              if (btn.classList.contains('active')) {
+                  return;
+              }
+
+              // remove all active states (btns and products)
+              btns.forEach((btn) => {
+                  btn.classList.remove('active');
+              })
+              prods.forEach((prod) => {
+                  prod.classList.remove('active');
+              })
+
+              // active btn
+              e.target.classList.add('active')
+              // active product
+              prods[index].classList.add('active');
+          })
+      })
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "Shop The Look",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Shop The Look"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "generic_block",
+        "name": "For Generic Page",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Product 1"
+          },
+          {
+            "type": "product",
+            "id": "product_1",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_1",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 2"
+          },
+          {
+            "type": "product",
+            "id": "product_2",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_2",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 3"
+          },
+          {
+            "type": "product",
+            "id": "product_3",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_3",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 4"
+          },
+          {
+            "type": "product",
+            "id": "product_4",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_4",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          }
+        ]
+      },
+      {
+        "type": "article_block",
+        "name": "For Article Page",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Target Article",
+            "info": "This block content will only appear on this article page."
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Product 1"
+          },
+          {
+            "type": "product",
+            "id": "product_1",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_1",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 2"
+          },
+          {
+            "type": "product",
+            "id": "product_2",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_2",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 3"
+          },
+          {
+            "type": "product",
+            "id": "product_3",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_3",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          },
+          {
+            "type": "header",
+            "content": "Product 4"
+          },
+          {
+            "type": "product",
+            "id": "product_4",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "btn_coords_4",
+            "label": "Button Coordinates",
+            "info": "'X,Y' where 'X' is the % offset from the left border of the image and 'Y' is the % offset from the top of the image."
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "Shop The Look",
+      "blocks": []
+    }]
+  }
+{% endschema %}

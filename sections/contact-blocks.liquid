@@ -1,0 +1,579 @@
+{%- if section.settings.space_around -%}
+  <div class="contact-blocks" style="background-color: {{ section.settings.bg_color }};">
+{%- endif -%}
+{%- unless section.settings.full_width -%}
+  <div class="page-width">
+{%- endunless -%}
+  <div class="custom-content">
+  {%- for block in section.blocks -%}
+    {%- liquid
+      case block.settings.width
+        when '25%'
+          assign block_width = 'small--one-whole one-quarter'
+        when '33%'
+          assign block_width = 'small--one-whole one-third'
+        when '50%'
+          assign block_width = 'small--one-whole one-half'
+        when '66%'
+          assign block_width = 'small--one-whole two-thirds'
+        when '75%'
+          assign block_width = 'small--one-whole three-quarters'
+        when '100%'
+          assign block_width = 'one-whole'
+      endcase
+    -%}
+    {% style %}
+      .custom__item.custom-y-offset--{{ block.id }} {
+        margin-top: -{{ block.settings.offset }}px;
+      }
+      @media only screen and (max-width: 768px) {
+        .custom__item.custom-y-offset--{{ block.id }} {
+          margin-top: 0px;
+        }
+      }
+    {% endstyle %}
+    <div class="custom__item{% if block.settings.offset > 0 %} custom-y-offset--{{ block.id }}{% endif %} {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+      <div class="custom__item-inner custom__item-inner--{{ block.type }}{% if block.settings.image == blank and block.type == 'image' %} custom__item-inner--placeholder-image{% endif %}">
+        {%- case block.type -%}
+
+          {%- when 'liquid' -%}
+            <div class="custom-html">
+              {%- if page.metafields.location.map.value != blank -%}
+                <div class="rte" style="text-align: center;">
+                  {% if block.settings.custom_class != blank %}
+                    <div class="{{ block.settings.custom_class }}">
+                  {% endif %}
+                    {{ page.metafields.location.map.value }}
+                  {% if block.settings.custom_class != blank %}
+                    </div>
+                  {% endif %}
+                </div>
+              {%- else -%}
+                <div class="rte">
+                  {{ 'home_page.onboarding.no_content' | t }}
+                </div>
+              {%- endif -%}
+
+              {% if block.settings.link_text_1 != blank or block.settings.link_text_2 != blank %}
+                <div class="custom-content__links">
+                  {% if block.settings.link_text_1 != blank %}
+                    <a class="{{ block.settings.custom_class_1}}" href="{{ block.settings.link_1 }}">{{ block.settings.link_text_1 }}</a>
+                  {% endif %}
+                  {% if page.metafields.location.directions.value != blank %}
+                    <a class="{{ block.settings.custom_class_2}}" href="{{ page.metafields.location.directions.value }}" target="_blank" rel="noopener">{{ block.settings.link_text_2 }}</a>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+
+          {%- when 'linklist' -%}
+          {%- if page.metafields.location.state_menu.value  != blank -%}
+            {% assign state =  page.metafields.location.state_menu.value %}
+            <div class="link-list">
+              <h2 class="h2 link-list__title">More {{ state }} stores</h2>
+              <div class="link-list__links">
+                <ul>
+                  {% for link in linklists[block.settings.link_list].links %}
+                  {%- if link.title == state -%}
+                  
+                    {%- for sublink in link.links -%}
+                      <a href="{{ sublink.url }}">
+                        <li>
+                          {{ sublink.title }}
+                        </li>
+                      </a>
+                    {%- endfor -%}
+                  {%- endif -%}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {%- endif --%}
+            
+
+            {%- when 'image' -%}
+            <div class="aos-animate">
+              {%- if page.content != blank -%}
+                {{ page.content }}
+              {%- endif -%}
+               <div class="offer">
+                  <div class="offer_icon">We offer <img class="afterpay-logo" src="{{ 'afterpay-logo-black.png' | asset_url }}" alt="Afterpay"></div>
+                  <div class="social-media">
+                    Follow us on socials
+                    {%- if settings.social_instagram_link != blank -%}
+                        <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+                            {%- render 'icons' | icon: 'instagram' -%}
+                            <span class="icon__fallback-text">Instagram</span>
+                        </a>
+                    {%- endif -%}
+                    {%- if settings.social_facebook_link != blank -%}
+                        <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+                            {%- render 'icons' | icon: 'facebook' -%}
+                            <span class="icon__fallback-text">Facebook</span>
+                        </a>
+                    {%- endif -%}
+                    {%- if settings.social_tiktok_link != blank -%}
+                      <a target="_blank" rel="noopener" href="{{ settings.social_tiktok_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'TikTok' }}">
+                          {%- render 'icons' | icon: 'tiktok' -%}
+                          <span class="icon__fallback-text">TikTok</span>
+                      </a>
+                  {%- endif -%}
+                  </div>
+                </div>
+            </div>
+
+            {% when 'contact' %}
+            <div class="contact-info">
+              {% if page.metafields.location.phone.value != blank %}
+                <div class="contact-info__phone">
+                  <span>{{ page.metafields.location.phone.value }}</span>
+                </div>
+              {% endif %}
+              {% if page.metafields.location.address.value != blank %}
+                <div class="contact-info__address">
+                  <span>{{ page.metafields.location.address.value }}</span>
+                </div>
+              {% endif %}
+              {% if page.metafields.location.email.value != blank %}
+                <div class="contact-info__email">
+                  <span>{{ page.metafields.location.email.value }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.metafields.custom.trading_hours != blank %}
+                <div class="contact-info__trading">
+                  <div class="contact-info__title"><b>Trading Hours</b></div>
+                  <span>{{ page.metafields.custom.trading_hours | metafield_tag }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.metafields.custom.extended_hours != blank and section.settings.hide_extended_hours == false %}
+                <div class="contact-info__trading">
+                  <div class="contact-info__title"><b>Extended Hours</b></div>
+                  <span>{{ page.metafields.custom.extended_hours | metafield_tag }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.metafields.custom.piercings_available != blank %}
+                <div class="contact-info__piercings">
+                  <div class="contact-info__title">Piercings available</div>
+                  <span>{{ page.metafields.custom.piercings_available }}</span>
+                </div>
+              {% endif %}
+            </div>
+          
+        {%- endcase -%}
+      </div>
+    </div>
+  {%- endfor -%}
+  {%- if section.blocks.size == 0 -%}
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item">
+          <div class="rte">
+            {{ 'home_page.onboarding.no_content' | t }}
+          </div>
+        </div>
+      </div>
+   </div>
+  {%- endif -%}
+  </div>
+{%- unless section.settings.full_width -%}
+  </div>
+{%- endunless -%}
+{%- if section.settings.space_around -%}
+  </div>
+{%- endif -%}
+
+<style>
+  .contact-blocks .contact-info .contact-info__phone:before {
+    position: absolute;
+    content: url("{{ 'phone.svg' | asset_url }}");
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+  .contact-blocks .contact-info .contact-info__address:before {
+    position: absolute;
+    content: url("{{ 'pin.svg' | asset_url }}");
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+  .contact-blocks .contact-info .contact-info__email:before {
+    position: absolute;
+    content: url("{{ 'mail.svg' | asset_url }}");
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .contact-blocks .contact-info .contact-info__trading:before {
+    background-image: url("{{ 'time2.svg' | file_url }}");
+    background-size: 45px;
+    background-repeat: none;
+    background-position: center;
+    position: absolute;
+    content: " ";
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+
+  .contact-blocks .contact-info .contact-info__piercings:before {
+    background-image: url("{{ 'stairs.svg' | file_url }}");
+    background-size: 45px;
+    background-repeat: none;
+    background-position: center;
+    position: absolute;
+    content: " ";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-blocks .link-list__links ul li:after {
+    position: absolute;
+    content: url("{{ 'ico-arrow.svg' | asset_url }}");
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+  }
+
+  .u-link--pin {
+    position: relative;
+    padding-left: 16px;
+  }
+  .u-link--pin:before {
+    position: absolute;
+    content: url("{{ 'pin-simple.svg' | asset_url }}");
+    top: 50%;
+    left: 0;
+    width: 12px;
+    transform: translateY(-50%);
+  }
+  .offer {
+    margin-top: 35px;
+    .offer_icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      img {
+        max-width: 100px;
+      }
+    }
+    .social-media {
+      display: flex;
+      align-items: center;
+      svg {
+          width: 37px;
+          margin-bottom: 0;
+        }
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Contact Blocks",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full page width",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_extended_hours",
+        "label": "Hide Extended Hours",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "space_around",
+        "label": "Add spacing above and below",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#FAFAFA"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "liquid",
+        "name": "Map",
+        "settings": [
+          {
+            "type": "range",
+            "id": "offset",
+            "label": "Y Offset",
+            "default": 0,
+            "min": 0,
+            "max": 300,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Map Wrapper Custom Class"
+          },
+          {
+            "type": "header",
+            "content": "Link 1"
+          },
+          {
+            "type": "text",
+            "id": "link_text_1",
+            "label": "Link Text"
+          },
+          {
+            "type": "url",
+            "id": "link_1",
+            "label": "Link URL"
+          },
+          {
+            "type": "text",
+            "id": "custom_class_1",
+            "label": "Custom Class"
+          },
+          {
+            "type": "header",
+            "content": "Get Directions Link"
+          },
+          {
+            "type": "text",
+            "id": "link_text_2",
+            "label": "Link Text",
+            "default": "Get Directions",
+            "info": "URL to be added in custom fields (metafields guru)"
+          },
+          {
+            "type": "text",
+            "id": "custom_class_2",
+            "label": "Custom Class"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "center",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "contact",
+        "name": "Contact",
+        "settings": [
+          {
+            "type": "header",
+            "content": "layout"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "center",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "linklist",
+        "name": "Link List",
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "link_list",
+            "label": "Locations menu"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "center",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image and Text",
+        "settings": [
+          {
+            "type": "range",
+            "id": "offset",
+            "label": "Y Offset",
+            "default": 0,
+            "min": 0,
+            "max": 300,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "center",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact Blocks",
+        "blocks": [
+          {
+            "type": "contact",
+            "settings": {
+              "width": "50%"
+            }
+          },
+          {
+            "type": "liquid",
+            "settings": {
+              "width": "50%"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

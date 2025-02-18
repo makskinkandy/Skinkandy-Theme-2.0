@@ -1,0 +1,244 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="background-image"
+  class="background-media-text background-media-text--{{ section.id }} background-media-text--{{ section.settings.height }} loaded"
+  data-aos="background-media-text__animation"
+  {% if section.settings.parallax %}data-parallax="true"{% endif %}>
+
+  <div class="background-media-text__container{% if section.settings.parallax %} background-media-text__parallax{% endif%}" 
+    style="--bg-img: url({{ section.settings.image | img_url: 'master' }}); --bg-img-mobile: url({{ section.settings.image_mobile | img_url: 'master' }}); background-image:{% if section.settings.image_mobile != blank %} url({{ section.settings.image_mobile | img_url: 'master' }}){% else if section.settings.image != blank %} url({{ section.settings.image | img_url: 'master' }}){% else %} none{% endif %}; background-position: {{ section.settings.focal_point }}"></div>
+
+  {%- if section.settings.subtitle != blank or section.settings.title != blank or section.settings.text != blank -%}
+    <div class="background-media-text__inner" style="--text-position: {{ section.settings.text_position }};">
+      <div class="background-media-text__aligner">
+        <div class="animation-cropper">
+          <div class="animation-contents">
+            <div class="background-media-text__text{% if section.settings.framed %} background-media-text__text--framed{% endif %} text-{{ section.settings.text_alignment }}" style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
+              {%- if section.settings.subtitle -%}
+                <p class="h5">{{ section.settings.subtitle }}</p>
+              {%- endif -%}
+              {%- if section.settings.title != blank -%}
+                <p class="h1">{{ section.settings.title | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.text != blank -%}
+                <div class="rte background-media-text__subtext">{{ section.settings.text | newline_to_br }}</div>
+              {%- endif -%}
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+                <a href="{{ section.settings.button_link | escape }}" class="btn {{ section.settings.button_class | escape }}">
+                  {{ section.settings.button_label | escape }}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+<div class="background-media-text__spacer background-media-text--{{ section.settings.height }}"></div>
+
+{% schema %}
+  {
+    "name": "Large image with text box",
+    "settings": [
+      {
+        "type": "range",
+        "id": "height",
+        "label": "Section height",
+        "default": 550,
+        "min": 450,
+        "max": 750,
+        "step": 100,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Optional mobile image"
+      },
+      {
+        "type": "select",
+        "id": "focal_point",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Middle"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "parallax",
+        "label": "Enable parallax",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Text content settings"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Text position",
+        "default": "center",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "Top left"
+          },
+          {
+            "value": "flex-start center",
+            "label": "Top center"
+          },
+          {
+            "value": "flex-start flex-end",
+            "label": "Top right"
+          },
+          {
+            "value": "center flex-start",
+            "label": "Center left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "center flex-end",
+            "label": "Center right"
+          },
+          {
+            "value": "flex-end flex-start",
+            "label": "Bottom left"
+          },
+          {
+            "value": "flex-end center",
+            "label": "Bottom center"
+          },
+          {
+            "value": "flex-end",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "framed",
+        "label": "Add frame",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+        "default": "Impressive"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "button_class",
+        "label": "Optional button class"
+      }
+    ],
+    "presets": [{
+        "name": "Large image with text box"
+    }]
+  }
+{% endschema %}

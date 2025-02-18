@@ -1,0 +1,24 @@
+<a href="{{ block.settings.collection.url }}" class="collection--item">
+  <div class="collection--item__image media-fit-cover" style="--position: {{ block.settings.focal_point }};">
+    {%- if block.settings.image != blank -%}
+      <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.image.alt | escape }}">
+    {%- else -%}
+      {%- if block.settings.collection != blank -%}
+        {{ 'collection-1' | placeholder_svg_tag }}
+      {%- else -%}
+        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ block.settings.image.alt | escape }}">
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+  <p class="collection--item__title">
+    {%- if block.settings.title != blank -%}
+      {{ block.settings.title | escape }}
+    {%- else -%}
+      {%- if block.settings.collection != blank -%}
+        {{ 'home_page.onboarding.collection_title' | t }}
+      {%- else -%}
+        {{ collection.title | escape }}
+      {%- endif -%}
+    {%- endif -%}
+  </p>
+</a>

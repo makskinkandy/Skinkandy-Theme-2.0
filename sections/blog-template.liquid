@@ -1,0 +1,219 @@
+{% assign article_count = blog.articles.size %}
+{% assign remainder = article_count | modulo: 3 %}
+
+{%- paginate blog.articles by 12 -%}
+<div data-section-id="{{ section.id }}" data-section-type="blog">
+  <div class="page-width page-content">
+
+    {% unless section.settings.hide_breadcrumbs %}
+      {%- render 'breadcrumbs' -%}
+    {% endunless %}
+
+    {% unless section.settings.hide_default_header %}
+      <header class="{% if section.settings.blog_show_tag_filter and blog.tags.size > 0 %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
+        <h1 class="section-header__title">
+          {%- if section.settings.blog_show_rss -%}
+            <a href="{{ shop.url }}{{ blog.url }}.atom" class="rss-link">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-rss" viewBox="0 0 20 20"><path fill="#444" d="M5.903 16.586a2.489 2.489 0 1 1-4.977 0 2.489 2.489 0 0 1 4.977 0zM12.956 19.075H9.43c0-4.688-3.817-8.505-8.505-8.505V7.044c6.638 0 12.031 5.393 12.031 12.031z"/><path fill="#444" d="M15.445 19.075c0-8.028-6.493-14.52-14.52-14.52V.925c10.019 0 18.15 8.131 18.15 18.15h-3.63z"/></svg>
+              <span class="icon__fallback-text">RSS</span>
+            </a>
+          {%- endif -%}
+        </h1>
+
+        {%- if section.settings.blog_show_tag_filter and blog.tags.size > 0 -%}
+          <select id="BlogTagFilter">
+            <option value="/blogs/{{ blog.handle }}">All</option>
+            {%- for tag in blog.all_tags -%}
+              {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+              <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
+            {%- endfor -%}
+          </select>
+        {%- endif -%}
+      </header>
+    {% endunless %}
+
+    <div class="grid grid--uniform">
+      {% assign sorted_articles = blog.articles | sort: 'created_at' | reverse %}
+      {% for article in sorted_articles %}
+        {%- render 'article-grid-item', article: article, grid_item_width: 'medium-up--one-third', per_row: '3', image_size: section.settings.blog_image_size -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- endpaginate -%}
+
+<style>
+  .section-header__title {
+    font-size: 40px;
+    margin-bottom: 67px;
+  }
+  #BlogTagFilter {
+    font-size: 24px;
+    font-family: Montserrat;
+    padding: 14px 24px;
+    margin-bottom: 120px;
+  }
+  .highlight-text {
+    color: var(--colorBtnPrimaryLight);
+  }
+  .article__title {
+    font-size: 24px;
+    font-family: 'Montserrat';
+    text-transform: none;
+    margin-bottom: 26px;
+  }
+  [data-section-type=blog] {
+    .page-content {
+      max-width: 1480px;
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    .grid--uniform {
+      margin-left: 0;
+      display: grid;
+      flex-wrap: wrap;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: 575px) {
+        display: block;
+      }
+      > .grid__item {
+        margin-bottom: 45px;
+      }
+      .grid {
+        margin-left: 0;
+        .grid__item {
+          padding-left: 0;
+        }
+      }
+      .article__grid-meta {
+        padding-inline: 21px;
+      }
+      .article__excerpt {
+        color: #1E1E1E;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 36px;
+      }
+      .article__grid-image {
+        margin-bottom: 36px;
+      }
+    }
+    .grid__item.medium-up--one-third {
+      width: 399px;
+      float: none;
+      padding-left: 0;
+      background: #FFF;
+      box-shadow: 8px 8px 12.5px 0px rgba(0, 0, 0, 0.10);
+      @media screen and (max-width:1277px) {
+        width: calc(100% - 30px);
+      }
+      @media screen and (max-width:575px) {
+        width: 100%;
+      }
+    }
+    .article__cta {
+      margin-top: 23px;
+      display: flex;
+      a.link--btn {
+        margin-left: auto;
+      }
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Blog pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "hide_default_header",
+        "label": "Hide Default Header"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_breadcrumbs",
+        "label": "Hide Breadcrumbs"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_tag_filter",
+        "label": "Show tag filter"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_rss",
+        "label": "Show RSS link"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_tags",
+        "label": "Show tags"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": "Show date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_comments",
+        "label": "Show comment count",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": "Show author"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_excerpt",
+        "label": "Show excerpt"
+      },
+      {
+        "type": "select",
+        "id": "blog_image_size",
+        "label": "Image size",
+        "default": "wide",
+        "options": [
+          {
+            "value": "natural",
+            "label": "Natural"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "landscape",
+            "label": "Landscape (4:3)"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait (2:3)"
+          },
+          {
+            "value": "wide",
+            "label": "Wide (16:9)"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Futura Medium 01';
+  src: url("https://cdn.shopify.com/s/files/1/0555/7508/5194/files/Futura-Medium-01.woff2?v=1681871055") format("woff2");
+  font-display: swap;
+}
+
+.h1 {
+  font-family: 'Futura Medium 01';
+  color: #FFF;
+  font-size: 60px;
+}
