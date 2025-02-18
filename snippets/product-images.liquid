@@ -14,10 +14,6 @@
           <div class="grid-product__tag grid-product__tag--image">
               <img src="{{ settings.sale_image_2 | img_url: '150x' }}" alt="">
           </div>
-        {%- else -%}
-          <div class="grid-product__tag grid-product__tag--image">
-              <img src="{{ settings.sale_image_1 | img_url: '150x' }}" alt="">
-          </div>
         {%- endif -%}
       {%- endunless -%}
       <div class="product__main-photos" data-aos data-product-single-media-group>
