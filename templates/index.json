@@ -1,1 +1,501 @@
-{"sections":{"header_banner_MUPtRQ":{"type":"header-banner","blocks":{"image_gwR6Mm":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/EOSS_-_Mobile_Option_2.jpg","image":"shopify:\/\/shop_images\/EOSS_-_Desktop_Option_3.jpg","banner_url":"shopify:\/\/collections\/shop-the-sale","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}},"image_A78HWU":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/NPL_Feb_17th_-_Mobile_1.jpg","image":"shopify:\/\/shop_images\/NPL_Feb_17th_-_Desktop_d010befa-bd33-4fa9-9362-38357942318f.jpg","banner_url":"shopify:\/\/collections\/new-in","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}},"image_8MBaRn":{"type":"image","disabled":true,"settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Mobile_3_1_1.jpg","image":"shopify:\/\/shop_images\/Homepage_Banner_3_2_1.jpg","banner_url":"shopify:\/\/pages\/skinkandy-piercing-menu","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}},"image_DREBap":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Homepage_Banner_1.jpg","image":"shopify:\/\/shop_images\/Homepage_Banner.jpg","banner_url":"shopify:\/\/pages\/skinkandy-piercing-menu","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}}},"block_order":["image_gwR6Mm","image_A78HWU","image_8MBaRn","image_DREBap"],"settings":{"title":"","banner_size":"short-banner","small_overlay":true,"shuffle":false}},"flipped_boxes_kG6gXk":{"type":"flipped-boxes","blocks":{"boxes_zpCPhf":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_31.jpg","Title":"LOBES","description":"<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!<\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"boxes_tbcpHk":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_30.jpg","Title":"HELIX","description":"<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!<\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"boxes_mn8wG3":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_32_1.jpg","Title":"SEPTUM","description":"<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. <\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"boxes_HhxQgk":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_34.jpg","Title":"NOSTRIL","description":"<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.<\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"boxes_8CTFjj":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_33_1.jpg","Title":"FORWARD HELIX","description":"<p>Forward Helix piercings are positioned through the front of the<strong> <\/strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.<\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"boxes_wVQegA":{"type":"boxes","settings":{"no_flip":true,"image":"shopify:\/\/shop_images\/Rectangle_10.jpg","Title":"SEE OUR FULL RANGE OF PIERCING SERVICES","description":"<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.<\/p>","page_url":"shopify:\/\/pages\/skinkandy-piercing-menu"}}},"block_order":["boxes_zpCPhf","boxes_tbcpHk","boxes_mn8wG3","boxes_HhxQgk","boxes_8CTFjj","boxes_wVQegA"],"settings":{"title":"TRENDING PIERCINGS"}},"collection_showcase_TiBJeR":{"type":"collection-showcase","blocks":{"image_bPqmL3":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"EAR","url":"shopify:\/\/collections\/cartilage-labret","image":"shopify:\/\/shop_images\/image_19.jpg"}},"image_3jRFGa":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NOSE","url":"shopify:\/\/collections\/nose-jewellery","image":"shopify:\/\/shop_images\/Rectangle_12_1.jpg"}},"image_b6EctF":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NAVEL","url":"shopify:\/\/collections\/belly","image":"shopify:\/\/shop_images\/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"}},"image_Nge4Bm":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"LIP","url":"shopify:\/\/collections\/lip","image":"shopify:\/\/shop_images\/image_21.jpg"}},"image_jm9bq3":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NIPPLE","url":"shopify:\/\/collections\/nipple","image":"shopify:\/\/shop_images\/image_22.jpg"}}},"block_order":["image_bPqmL3","image_3jRFGa","image_b6EctF","image_Nge4Bm","image_jm9bq3"],"settings":{"title":"SHOP BY PIERCING","mode":"light","background":"#ffffff","button_text":"","button_url":"","bottom_border":false,"enable_hover":true}},"collection_showcase_dPaT8V":{"type":"collection-showcase","blocks":{"image_aRyBR3":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Titanium Nose Ring Hinged Segment","url":"shopify:\/\/products\/titanium-hinged-segment-ring","image":"shopify:\/\/shop_images\/image_2.jpg"}},"image_rTRWc6":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Titanium Labret StudInternally Threaded with Gem","url":"shopify:\/\/products\/titanium-round-gem-internally-threaded-labret","image":"shopify:\/\/shop_images\/Rectangle_12.jpg"}},"image_wAawnz":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Titanium Square CZStud Earrings","url":"shopify:\/\/products\/titanium-square-cz-stud-earrings","image":"shopify:\/\/shop_images\/image_3_6f22b58f-f6e0-430a-9092-51c68c9cc520.jpg"}},"image_4xFNFR":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Titanium Nose StudTwist with Deep Set CZ","url":"shopify:\/\/products\/titanium-press-fit-gem-nose-twist","image":"shopify:\/\/shop_images\/image_6.jpg"}},"image_cz93Te":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Steel Belly Ring with Gem","url":"shopify:\/\/products\/steel-belly-ring-with-gem","image":"shopify:\/\/shop_images\/image_5.jpg"}},"image_eJUQfY":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Steel Barbell withAcrylic Coloured Ball Ends","url":"shopify:\/\/products\/steel-barbell-with-acrylic-coloured-ball-ends","image":"shopify:\/\/shop_images\/image_7.jpg"}},"image_EmW3YP":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Cubic Zirconia LinedNipple Clicker","url":"shopify:\/\/products\/cubic-zirconia-lined-nipple-clicker","image":"shopify:\/\/shop_images\/image_8.jpg"}},"image_6TWpi6":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"22kt Gold Plated Sleepers - Pair","url":"shopify:\/\/products\/22kt-gold-plated-sleepers-pair","image":"shopify:\/\/shop_images\/image_9.jpg"}},"image_zjBFmr":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Titanium Nose StudTwist with Deep Set CZ","url":"shopify:\/\/products\/titanium-press-fit-gem-nose-twist","image":"shopify:\/\/shop_images\/image_15.jpg"}},"image_xBy86T":{"type":"image","settings":{"disable_overlay":true,"disable_button":false,"title":"Cubic Zirconia LeavesHinged Segment Ring","url":"shopify:\/\/products\/cubic-zirconia-leaves-hinged-segment-ring","image":"shopify:\/\/shop_images\/image_11.jpg"}},"image_U6m6wQ":{"type":"image","disabled":true,"settings":{"disable_overlay":true,"disable_button":false,"title":"Daisy Flower SteelCartilage Barbell","url":"shopify:\/\/products\/daisy-flower-steel-cartilage-barbell","image":"shopify:\/\/shop_images\/image_12.jpg"}},"image_ALHg3R":{"type":"image","disabled":true,"settings":{"disable_overlay":true,"disable_button":false,"title":"Starburst CZ PavedFlat Back Labret","url":"shopify:\/\/products\/starburst-cz-paved-flat-back-labret","image":"shopify:\/\/shop_images\/image_13.jpg"}},"image_KtzTxk":{"type":"image","disabled":true,"settings":{"disable_overlay":true,"disable_button":false,"title":"CZ Paved SteelHoop Earrings","url":"","image":"shopify:\/\/shop_images\/image_14.jpg"}}},"block_order":["image_aRyBR3","image_rTRWc6","image_wAawnz","image_4xFNFR","image_cz93Te","image_eJUQfY","image_EmW3YP","image_6TWpi6","image_zjBFmr","image_xBy86T","image_U6m6wQ","image_ALHg3R","image_KtzTxk"],"settings":{"title":"TRENDING JEWELLERY PRODUCTS","mode":"light","background":"#ffffff","button_text":"Shop all","button_url":"shopify:\/\/collections\/shop-all","bottom_border":true,"enable_hover":false}},"two_column_icon_image_c79Kr9":{"type":"two-column-icon-image","blocks":{"title_block_XFEQTg":{"type":"title_block","settings":{"title":"THE ULTIMATE PIERCING EXPERIENCE BY OUR <br> {EXPERTLY} {TRAINED} {PIERCERS}","description":"<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> <\/strong>look forward to making your piercing dreams a reality. <\/p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> <\/strong>experience.<\/p>","button_text":"Book Now","button_url":"shopify:\/\/pages\/skinkandy-piercing-menu","text_align":"left"}}},"block_order":["title_block_XFEQTg"],"settings":{"image":"shopify:\/\/shop_images\/image_18_1.jpg","left_align":true,"icon_column":false,"bottom_margin":true,"hide_mobile":false,"hide_description":false,"round_image":false,"circle_drops":false,"bottom_border":true,"reduced_image_size":false}},"grid_image_xGVpcK":{"type":"grid-image","blocks":{"image_NVjLjR":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_1_5.jpg","url":""}},"image_V8Fx64":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg","url":""}},"image_tpipmG":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_3_6.jpg","url":""}},"image_Ah6kdW":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_4_2.jpg","url":""}},"image_yB9iCH":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_5_2.jpg","url":""}},"image_mVGzCR":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image_2_10.jpg","url":""}}},"block_order":["image_NVjLjR","image_V8Fx64","image_tpipmG","image_Ah6kdW","image_yB9iCH","image_mVGzCR"],"settings":{"image":"shopify:\/\/shop_images\/Vector.jpg","bottom_margin":false,"title":"@SKINKANDY","url":"https:\/\/www.instagram.com\/skinkandy\/","description":""}},"pagefly-home":{"type":"pagefly-home","disabled":true,"settings":{}}},"order":["header_banner_MUPtRQ","flipped_boxes_kG6gXk","collection_showcase_TiBJeR","collection_showcase_dPaT8V","two_column_icon_image_c79Kr9","grid_image_xGVpcK","pagefly-home"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_banner_MUPtRQ": {
+      "type": "header-banner",
+      "blocks": {
+        "image_gwR6Mm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/EOSS_-_Mobile_Option_2.jpg",
+            "image": "shopify://shop_images/EOSS_-_Desktop_Option_3.jpg",
+            "banner_url": "shopify://collections/shop-the-sale",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_A78HWU": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/NPL_Feb_17th_-_Mobile_1.jpg",
+            "image": "shopify://shop_images/NPL_Feb_17th_-_Desktop_d010befa-bd33-4fa9-9362-38357942318f.jpg",
+            "banner_url": "shopify://collections/new-in",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_8MBaRn": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Mobile_3_1_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_3_2_1.jpg",
+            "banner_url": "shopify://pages/skinkandy-piercing-menu",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_DREBap": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner.jpg",
+            "banner_url": "shopify://pages/skinkandy-piercing-menu",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_gwR6Mm",
+        "image_A78HWU",
+        "image_8MBaRn",
+        "image_DREBap"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "flipped_boxes_kG6gXk": {
+      "type": "flipped-boxes",
+      "blocks": {
+        "boxes_zpCPhf": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_31.jpg",
+            "Title": "LOBES",
+            "description": "<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!</p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "boxes_tbcpHk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_30.jpg",
+            "Title": "HELIX",
+            "description": "<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!</p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "boxes_mn8wG3": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_32_1.jpg",
+            "Title": "SEPTUM",
+            "description": "<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. </p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "boxes_HhxQgk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_34.jpg",
+            "Title": "NOSTRIL",
+            "description": "<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.</p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "boxes_8CTFjj": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_33_1.jpg",
+            "Title": "FORWARD HELIX",
+            "description": "<p>Forward Helix piercings are positioned through the front of the<strong> </strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.</p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "boxes_wVQegA": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": true,
+            "image": "shopify://shop_images/Rectangle_10.jpg",
+            "Title": "SEE OUR FULL RANGE OF PIERCING SERVICES",
+            "description": "<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.</p>",
+            "page_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        }
+      },
+      "block_order": [
+        "boxes_zpCPhf",
+        "boxes_tbcpHk",
+        "boxes_mn8wG3",
+        "boxes_HhxQgk",
+        "boxes_8CTFjj",
+        "boxes_wVQegA"
+      ],
+      "settings": {
+        "title": "TRENDING PIERCINGS"
+      }
+    },
+    "collection_showcase_TiBJeR": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_bPqmL3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "EAR",
+            "url": "shopify://collections/cartilage-labret",
+            "image": "shopify://shop_images/image_19.jpg"
+          }
+        },
+        "image_3jRFGa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NOSE",
+            "url": "shopify://collections/nose-jewellery",
+            "image": "shopify://shop_images/Rectangle_12_1.jpg"
+          }
+        },
+        "image_b6EctF": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NAVEL",
+            "url": "shopify://collections/belly",
+            "image": "shopify://shop_images/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"
+          }
+        },
+        "image_Nge4Bm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "LIP",
+            "url": "shopify://collections/lip",
+            "image": "shopify://shop_images/image_21.jpg"
+          }
+        },
+        "image_jm9bq3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NIPPLE",
+            "url": "shopify://collections/nipple",
+            "image": "shopify://shop_images/image_22.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_bPqmL3",
+        "image_3jRFGa",
+        "image_b6EctF",
+        "image_Nge4Bm",
+        "image_jm9bq3"
+      ],
+      "settings": {
+        "title": "SHOP BY PIERCING",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": true
+      }
+    },
+    "collection_showcase_dPaT8V": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_aRyBR3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Nose Ring Hinged Segment",
+            "url": "shopify://products/titanium-hinged-segment-ring",
+            "image": "shopify://shop_images/image_2.jpg"
+          }
+        },
+        "image_rTRWc6": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Labret StudInternally Threaded with Gem",
+            "url": "shopify://products/titanium-round-gem-internally-threaded-labret",
+            "image": "shopify://shop_images/Rectangle_12.jpg"
+          }
+        },
+        "image_wAawnz": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Square CZStud Earrings",
+            "url": "shopify://products/titanium-square-cz-stud-earrings",
+            "image": "shopify://shop_images/image_3_6f22b58f-f6e0-430a-9092-51c68c9cc520.jpg"
+          }
+        },
+        "image_4xFNFR": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Nose StudTwist with Deep Set CZ",
+            "url": "shopify://products/titanium-press-fit-gem-nose-twist",
+            "image": "shopify://shop_images/image_6.jpg"
+          }
+        },
+        "image_cz93Te": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Steel Belly Ring with Gem",
+            "url": "shopify://products/steel-belly-ring-with-gem",
+            "image": "shopify://shop_images/image_5.jpg"
+          }
+        },
+        "image_eJUQfY": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Steel Barbell withAcrylic Coloured Ball Ends",
+            "url": "shopify://products/steel-barbell-with-acrylic-coloured-ball-ends",
+            "image": "shopify://shop_images/image_7.jpg"
+          }
+        },
+        "image_EmW3YP": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Cubic Zirconia LinedNipple Clicker",
+            "url": "shopify://products/cubic-zirconia-lined-nipple-clicker",
+            "image": "shopify://shop_images/image_8.jpg"
+          }
+        },
+        "image_6TWpi6": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "22kt Gold Plated Sleepers - Pair",
+            "url": "shopify://products/22kt-gold-plated-sleepers-pair",
+            "image": "shopify://shop_images/image_9.jpg"
+          }
+        },
+        "image_zjBFmr": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Nose StudTwist with Deep Set CZ",
+            "url": "shopify://products/titanium-press-fit-gem-nose-twist",
+            "image": "shopify://shop_images/image_15.jpg"
+          }
+        },
+        "image_xBy86T": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Cubic Zirconia LeavesHinged Segment Ring",
+            "url": "shopify://products/cubic-zirconia-leaves-hinged-segment-ring",
+            "image": "shopify://shop_images/image_11.jpg"
+          }
+        },
+        "image_U6m6wQ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Daisy Flower SteelCartilage Barbell",
+            "url": "shopify://products/daisy-flower-steel-cartilage-barbell",
+            "image": "shopify://shop_images/image_12.jpg"
+          }
+        },
+        "image_ALHg3R": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Starburst CZ PavedFlat Back Labret",
+            "url": "shopify://products/starburst-cz-paved-flat-back-labret",
+            "image": "shopify://shop_images/image_13.jpg"
+          }
+        },
+        "image_KtzTxk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "CZ Paved SteelHoop Earrings",
+            "url": "",
+            "image": "shopify://shop_images/image_14.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_aRyBR3",
+        "image_rTRWc6",
+        "image_wAawnz",
+        "image_4xFNFR",
+        "image_cz93Te",
+        "image_eJUQfY",
+        "image_EmW3YP",
+        "image_6TWpi6",
+        "image_zjBFmr",
+        "image_xBy86T",
+        "image_U6m6wQ",
+        "image_ALHg3R",
+        "image_KtzTxk"
+      ],
+      "settings": {
+        "title": "TRENDING JEWELLERY PRODUCTS",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "Shop all",
+        "button_url": "shopify://collections/shop-all",
+        "bottom_border": true,
+        "enable_hover": false
+      }
+    },
+    "two_column_icon_image_c79Kr9": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_XFEQTg": {
+          "type": "title_block",
+          "settings": {
+            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR <br> {EXPERTLY} {TRAINED} {PIERCERS}",
+            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
+            "button_text": "Book Now",
+            "button_url": "shopify://pages/skinkandy-piercing-menu",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_XFEQTg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_18_1.jpg",
+        "left_align": true,
+        "icon_column": false,
+        "bottom_margin": true,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": true,
+        "reduced_image_size": false
+      }
+    },
+    "grid_image_xGVpcK": {
+      "type": "grid-image",
+      "blocks": {
+        "image_NVjLjR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1_5.jpg",
+            "url": ""
+          }
+        },
+        "image_V8Fx64": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg",
+            "url": ""
+          }
+        },
+        "image_tpipmG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_3_6.jpg",
+            "url": ""
+          }
+        },
+        "image_Ah6kdW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_4_2.jpg",
+            "url": ""
+          }
+        },
+        "image_yB9iCH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_5_2.jpg",
+            "url": ""
+          }
+        },
+        "image_mVGzCR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_2_10.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NVjLjR",
+        "image_V8Fx64",
+        "image_tpipmG",
+        "image_Ah6kdW",
+        "image_yB9iCH",
+        "image_mVGzCR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Vector.jpg",
+        "bottom_margin": false,
+        "title": "@SKINKANDY",
+        "url": "https://www.instagram.com/skinkandy/",
+        "description": ""
+      }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header_banner_MUPtRQ",
+    "flipped_boxes_kG6gXk",
+    "collection_showcase_TiBJeR",
+    "collection_showcase_dPaT8V",
+    "two_column_icon_image_c79Kr9",
+    "grid_image_xGVpcK",
+    "pagefly-home"
+  ]
+}
