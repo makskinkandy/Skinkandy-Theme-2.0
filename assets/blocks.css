@@ -1415,10 +1415,10 @@
     margin-bottom: 20px;
   }
   h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 35px;
     @media screen and (max-width: 640px) {
-      font-size: 12px;
+      font-size: 18px;
       margin-bottom: 20px;
     }
   }
