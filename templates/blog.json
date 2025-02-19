@@ -1,1 +1,59 @@
-{"sections":{"header_banner_YbRgUc":{"type":"header-banner","blocks":{"image_LTQhQM":{"type":"image","settings":{"disable_overlay":false,"image":"shopify:\/\/shop_images\/7R507709.jpg","banner_url":"","heading":"Piercing 101","short_description":"","button_text":"","button_url":"","align_text":"left"}}},"block_order":["image_LTQhQM"],"settings":{"title":"","banner_size":"small-banner","small_overlay":true,"shuffle":false}},"main":{"type":"blog-template","settings":{"hide_default_header":true,"hide_breadcrumbs":false,"blog_show_tag_filter":false,"blog_show_rss":false,"blog_show_tags":false,"blog_show_date":false,"blog_show_comments":false,"blog_show_author":false,"blog_show_excerpt":true,"blog_image_size":"square"}}},"order":["header_banner_YbRgUc","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_banner_YbRgUc": {
+      "type": "header-banner",
+      "blocks": {
+        "image_LTQhQM": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image": "shopify://shop_images/7R507709.jpg",
+            "banner_url": "",
+            "heading": "Piercing 101",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_LTQhQM"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "hide_default_header": true,
+        "hide_breadcrumbs": false,
+        "blog_show_tag_filter": false,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": true,
+        "blog_image_size": "square"
+      }
+    }
+  },
+  "order": [
+    "header_banner_YbRgUc",
+    "main"
+  ]
+}
