@@ -83,6 +83,29 @@
         "shuffle": false
       }
     },
+    "rich_text_9MzUhB": {
+      "type": "rich-text",
+      "blocks": {
+        "button_UPcCPy": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "BOOK A PIERCING NOW"
+          }
+        }
+      },
+      "block_order": [
+        "button_UPcCPy"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 980px) {.text-center {display: none; }}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "flipped_boxes_kG6gXk": {
       "type": "flipped-boxes",
       "blocks": {
@@ -492,6 +515,7 @@
   },
   "order": [
     "header_banner_MUPtRQ",
+    "rich_text_9MzUhB",
     "flipped_boxes_kG6gXk",
     "collection_showcase_TiBJeR",
     "collection_showcase_dPaT8V",
