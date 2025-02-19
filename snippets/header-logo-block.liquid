@@ -43,7 +43,7 @@
     {%- endstyle -%}
 
     {%- if template == 'index' -%}
-      <h1 class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
+      <div class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
         <span class="visually-hidden">{{ shop.name }}</span>
     {%- else -%}
       <div class="h1 site-header__logo" itemscope itemtype="http://schema.org/Organization">
@@ -92,7 +92,7 @@
       <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
     {%- endif -%}
     {%- if template == 'index' -%}
-      </h1>
+      </div>
     {%- else -%}
       </div>
     {%- endif -%}

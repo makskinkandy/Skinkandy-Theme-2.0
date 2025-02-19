@@ -359,5 +359,44 @@
     </script>
     <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
     <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
+
+    {% if template == 'index' %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SkinKandy",
+          "image": "https://skinkandy.com/cdn/shop/files/Group_22_1_1_180x.png?v=1736468854",
+          "url": "https://skinkandy.com/",
+          "telephone": "+611300129991",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "11 Beach Rd",
+            "addressLocality": "Maroochydore",
+            "addressRegion": "QLD",
+            "postalCode": "4558",
+            "addressCountry": "AU"
+          },
+          "description": "Australia’s largest body piercing & jewellery specialist, SkinKandy uses top-of-the-line equipment and the highest hygiene standards to ensure a safe, fun, and family-friendly experience in every store across Australia. With over 75 locations in major shopping centres throughout Queensland, New South Wales, Victoria, Western Australia, ACT and South Australia, professional piercings and quality jewellery are never far away.",
+          "sameAs": [
+            "https://www.facebook.com/skinkandy/",
+            "https://www.instagram.com/skinkandy/",
+            "https://www.tiktok.com/@skinkandy",
+            "https://www.youtube.com/@SkinKandyMaroochydore" 
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+611300129991",
+            "contactType": "customer service",
+            "email": "customerservice@skinkandy.com"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "SkinKandy Store Locations",
+            "url": "https://skinkandy.com/pages/store-locations"
+          }
+        }
+      </script>
+    {% endif %}
   </body>
 </html>

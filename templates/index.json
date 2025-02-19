@@ -398,7 +398,8 @@
         "title_block_XFEQTg": {
           "type": "title_block",
           "settings": {
-            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR <br> {EXPERTLY} {TRAINED} {PIERCERS}",
+            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR  {EXPERTLY} {TRAINED} {PIERCERS}",
+            "title_tag": "h1",
             "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
             "button_text": "Book Now",
             "button_url": "shopify://pages/skinkandy-piercing-menu",
@@ -483,6 +484,10 @@
         "url": "https://www.instagram.com/skinkandy/",
         "description": ""
       }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {}
     }
   },
   "order": [
@@ -491,6 +496,7 @@
     "collection_showcase_TiBJeR",
     "collection_showcase_dPaT8V",
     "two_column_icon_image_c79Kr9",
-    "grid_image_xGVpcK"
+    "grid_image_xGVpcK",
+    "pagefly-home"
   ]
 }

@@ -24,7 +24,7 @@
               
               <div class="title-block {% if section.settings.hide_description %} hide-description{% endif %} text--{{ block.settings.text_align }}">
                 {% if block.settings.title != blank %}
-                  <h2>{{ processed_words | strip }}</h2>
+                  <{{ block.settings.title_tag }} class="h2">{{ processed_words | strip }}</{{ block.settings.title_tag }}>
                 {% endif %}
                 {% if block.settings.description != blank %}
                   <p>{{ block.settings.description }}</p>
@@ -131,6 +131,26 @@
           "id": "title",
           "label": "Title"
         },
+        {
+        "type": "select",
+        "id": "title_tag",
+        "label": "Heading Tag",
+        "default": "h2",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          }
+        ]
+      },
         {
           "type": "richtext",
           "id": "description",

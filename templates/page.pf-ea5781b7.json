@@ -1,1 +1,72 @@
-{"sections":{"header_banner_kywPdt":{"type":"header-banner","blocks":{"image_NjG4z8":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Homepage_Banner_5_1.jpg","image":"shopify:\/\/shop_images\/image_2_9_1.jpg","banner_url":"","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}}},"block_order":["image_NjG4z8"],"settings":{"title":"","banner_size":"short-banner","small_overlay":false,"shuffle":false}},"pf-ea5781b7":{"type":"pf-ea5781b7","settings":{}},"ads_block_xLqyjb":{"type":"ads-block","blocks":{"image_GUERJf":{"type":"image","settings":{"title":"","url":"shopify:\/\/pages\/kandy-club","image":"shopify:\/\/shop_images\/Group_24.png","image_mobile":"shopify:\/\/shop_images\/Leaderboard_KandyClub_Mobile_1.png","bg_image":"shopify:\/\/shop_images\/Leaderboard_KandyClub_3_1.jpg","bg_color":"#000000"}}},"block_order":["image_GUERJf"],"settings":{"title":""}}},"order":["header_banner_kywPdt","pf-ea5781b7","ads_block_xLqyjb"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_banner_kywPdt": {
+      "type": "header-banner",
+      "blocks": {
+        "image_NjG4z8": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_5_1.jpg",
+            "image": "shopify://shop_images/image_2_9_1.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_NjG4z8"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "pf-ea5781b7": {
+      "type": "pf-ea5781b7",
+      "settings": {}
+    },
+    "ads_block_xLqyjb": {
+      "type": "ads-block",
+      "blocks": {
+        "image_GUERJf": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": "shopify://pages/kandy-club",
+            "image": "shopify://shop_images/Group_24.png",
+            "image_mobile": "shopify://shop_images/Leaderboard_KandyClub_Mobile_1.png",
+            "bg_image": "shopify://shop_images/Leaderboard_KandyClub_3_1.jpg",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_GUERJf"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "header_banner_kywPdt",
+    "pf-ea5781b7",
+    "ads_block_xLqyjb"
+  ]
+}

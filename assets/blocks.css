@@ -488,7 +488,7 @@
       margin-bottom: 24px;
     } 
   }
-  h2 {
+  .h2 {
     margin-bottom: 30px;
     font-size: 34px;
     margin-top: 10px;
@@ -501,6 +501,7 @@
     }
     @media screen and (max-width: 580px) {
       font-size: 20px;
+      line-height: 22px;
     }
     b {
       color: #eb008c;
@@ -746,12 +747,12 @@
     color: var(--colorBtnPrimaryLight);
   }
   h2 {
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     color: #FFF;
     margin-bottom: 35px;
     @media screen and (max-width: 640px) {
-      font-size: 12px;
+      font-size: 18px;
       text-align: left;
       max-width: 100%;
       line-height: 40px;
@@ -1415,10 +1416,10 @@
     margin-bottom: 20px;
   }
   h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 35px;
     @media screen and (max-width: 640px) {
-      font-size: 12px;
+      font-size: 18px;
       margin-bottom: 20px;
     }
   }
