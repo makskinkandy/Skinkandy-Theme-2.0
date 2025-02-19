@@ -496,11 +496,12 @@
       font-size: 30px;
       text-align: center;
       max-width: 100%;
-      line-height: 22px;
+      line-height: 40px;
       margin-bottom: 15px;
     }
     @media screen and (max-width: 580px) {
       font-size: 20px;
+      line-height: 22px;
     }
     b {
       color: #eb008c;
