@@ -662,8 +662,16 @@
   .icon_text_content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
+    &.content-align--center {
+      align-items: center;
+      justify-content: center;
+    }
+    &.content-align--end {
+      align-items: end;
+      justify-content: end;
+    }
   }
 }
 .icon-text-block:last-of-type {
