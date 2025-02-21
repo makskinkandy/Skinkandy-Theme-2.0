@@ -27,14 +27,32 @@
         "countdown_color": "#ffffff"
       }
     },
-    "two_column_banner_jXciQX": {
-      "type": "two-column-banner",
+    "header_banner_dgnx7A": {
+      "type": "header-banner",
+      "blocks": {
+        "image_nLyNM6": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "shopify://pages/skinkandy-piercing-menu",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_nLyNM6"
+      ],
       "settings": {
-        "bg_image": "shopify://shop_images/Karingal_Banner.jpg",
-        "bg_image_mobile": "shopify://shop_images/Rectangle_2.jpg",
-        "subheading": "{{ page.metafields.custom.opening_promo_text.value }}",
-        "image": "shopify://shop_images/Layer_4.png",
-        "button_link": "https://skinkandy.com/pages/skinkandy-piercing-menu"
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
       }
     },
     "main": {
@@ -114,7 +132,7 @@
   },
   "order": [
     "countdown_timer_RhPwFA",
-    "two_column_banner_jXciQX",
+    "header_banner_dgnx7A",
     "main",
     "1646101137a7a32d00",
     "164238175037fda628"
