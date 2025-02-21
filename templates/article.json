@@ -50,7 +50,6 @@
     },
     "1662086193d23e863f": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "title": "NOW TRENDING",
@@ -61,18 +60,11 @@
         "shop_all": "",
         "bottom_border": false
       }
-    },
-    "ss_recommendations_wiVwFJ": {
-      "type": "ss-recommendations",
-      "settings": {
-        "profileId": "blog-post-trending"
-      }
     }
   },
   "order": [
     "main",
     "rich_text_MwBgrj",
-    "1662086193d23e863f",
-    "ss_recommendations_wiVwFJ"
+    "1662086193d23e863f"
   ]
 }
