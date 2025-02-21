@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "countdown_timer_RhPwFA": {
+      "type": "countdown-timer",
+      "settings": {
+        "date": "{{ page.metafields.custom.opening_day.value }}",
+        "action": "hide",
+        "heading": "DON'T MISS OUR OPENING!",
+        "days": true,
+        "hrs": true,
+        "mins": true,
+        "secs": true,
+        "book_link": "https://skinkandy.com/pages/skinkandy-piercing-menu",
+        "sticky": false,
+        "class": "",
+        "bg_color": "#000000",
+        "heading_color": "#ffffff",
+        "countdown_color": "#ffffff"
+      }
+    },
+    "header_banner_dgnx7A": {
+      "type": "header-banner",
+      "blocks": {
+        "image_nLyNM6": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "shopify://pages/skinkandy-piercing-menu",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_nLyNM6"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": false
+      }
+    },
+    "1646101137a7a32d00": {
+      "type": "banner-location-details",
+      "custom_css": [
+        "h1 {color: #000;}"
+      ],
+      "settings": {
+        "class": "small--text-center",
+        "bg_color": "linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+        "content_width": 100
+      }
+    },
+    "164238175037fda628": {
+      "type": "contact-blocks",
+      "blocks": {
+        "164238175064b0a286-0": {
+          "type": "contact",
+          "settings": {
+            "width": "50%",
+            "alignment": "top-middle"
+          }
+        },
+        "164238175064b0a286-1": {
+          "type": "liquid",
+          "settings": {
+            "offset": 150,
+            "custom_class": "u-map-border-white",
+            "link_text_1": "Book Now",
+            "link_1": "https://support.skinkandy.com/s/booking-form",
+            "custom_class_1": "btn btn--primary",
+            "link_text_2": "Get Directions",
+            "custom_class_2": "link--underline u-link--pin",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "be04fd42-b7ed-49dc-b07e-13361b2c59a4": {
+          "type": "image",
+          "settings": {
+            "offset": 0,
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "bdd64658-868a-4a14-833d-21408b55d8e6": {
+          "type": "linklist",
+          "settings": {
+            "link_list": "locations",
+            "width": "50%",
+            "alignment": "top-middle"
+          }
+        }
+      },
+      "block_order": [
+        "164238175064b0a286-0",
+        "164238175064b0a286-1",
+        "be04fd42-b7ed-49dc-b07e-13361b2c59a4",
+        "bdd64658-868a-4a14-833d-21408b55d8e6"
+      ],
+      "settings": {
+        "full_width": false,
+        "hide_extended_hours": true,
+        "space_around": true,
+        "bg_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "countdown_timer_RhPwFA",
+    "header_banner_dgnx7A",
+    "main",
+    "1646101137a7a32d00",
+    "164238175037fda628"
+  ]
+}
