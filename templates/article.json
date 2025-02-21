@@ -53,7 +53,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "title": "NOW TRENDING",
-        "featured_collection": "cartilage-labret",
+        "featured_collection": "{{ article.metafields.custom.linked_collection.value }}",
         "product_count": 4,
         "product_limit": 12,
         "heading_size": "h2",
