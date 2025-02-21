@@ -1,1 +1,154 @@
-{"sections":{"main":{"type":"article-template","custom_css":["h1,h2,h3,h4 {font-family: \"Futura Medium 01\", sans-serif;}","p {line-height: 25px;}",".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}"],"settings":{"image_hero":true,"blog_show_tags":false,"blog_show_date":false,"blog_show_comments":false,"blog_show_author":false,"social_sharing_blog":true}},"rich_text_MwBgrj":{"type":"rich-text","blocks":{"button_BDyXzz":{"type":"button","settings":{"link":"shopify:\/\/pages\/skinkandy-piercing-menu","link_text":"book now"}}},"block_order":["button_BDyXzz"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"16421380493ca610d5":{"type":"shop-the-look","blocks":{"caa30cd7-bbdb-4271-bf89-f89a3b04d7c5":{"type":"article_block","settings":{"article":"news\/how-to-start-your-curated-ears-journey","product_1":"22kt-gold-plated-sleepers-pair","btn_coords_1":"33,59","product_2":"paved-lightning-bolt-cartilage-labret","btn_coords_2":"25,45","product_3":"","btn_coords_3":"","product_4":"","btn_coords_4":""}},"25054b9d-ed8b-4b20-bd21-8f658a9a9cb6":{"type":"generic_block","disabled":true,"settings":{"product_1":"","btn_coords_1":"","product_2":"","btn_coords_2":"","product_3":"","btn_coords_3":"","product_4":"","btn_coords_4":""}},"901cc02b-77f1-4257-b59c-69d087cac7f3":{"type":"article_block","disabled":true,"settings":{"article":"","product_1":"","btn_coords_1":"","product_2":"","btn_coords_2":"","product_3":"","btn_coords_3":"","product_4":"","btn_coords_4":""}}},"block_order":["caa30cd7-bbdb-4271-bf89-f89a3b04d7c5","25054b9d-ed8b-4b20-bd21-8f658a9a9cb6","901cc02b-77f1-4257-b59c-69d087cac7f3"],"settings":{"title":"Shop The Look"}},"1662086193d23e863f":{"type":"featured-collection","settings":{"bg_color":"#ffffff","title":"NOW TRENDING","featured_collection":"cartilage-labret","product_count":4,"product_limit":12,"heading_size":"h2","shop_all":"","bottom_border":false}},"1642395480eb5229d3":{"type":"promo-grid","blocks":{"260db8a5-60c4-4b4e-b029-069b2a98e262":{"type":"banner","settings":{"class":"","heading":"PIERCING, IT'S WHAT WE DO","text":"<p>Australia’s largest specialist in body piercing and jewellery<\/p>","link":"https:\/\/support.skinkandy.com\/s\/booking-form","label":"Book Now","link_class":"btn btn--secondary","framed":false}}},"block_order":["260db8a5-60c4-4b4e-b029-069b2a98e262"],"disabled":true,"settings":{"class":"page--flush","bg_color":"#eec9d0","full_width":false,"gutter_size":0,"space_above":false,"space_below":false}}},"order":["main","rich_text_MwBgrj","16421380493ca610d5","1662086193d23e863f","1642395480eb5229d3"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "custom_css": [
+        "h1,h2,h3,h4 {font-family: \"Futura Medium 01\", sans-serif;}",
+        "p {line-height: 25px;}",
+        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}"
+      ],
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true
+      }
+    },
+    "rich_text_MwBgrj": {
+      "type": "rich-text",
+      "blocks": {
+        "button_BDyXzz": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link_text": "book now"
+          }
+        }
+      },
+      "block_order": [
+        "button_BDyXzz"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "16421380493ca610d5": {
+      "type": "shop-the-look",
+      "blocks": {
+        "caa30cd7-bbdb-4271-bf89-f89a3b04d7c5": {
+          "type": "article_block",
+          "settings": {
+            "article": "news/how-to-start-your-curated-ears-journey",
+            "product_1": "22kt-gold-plated-sleepers-pair",
+            "btn_coords_1": "33,59",
+            "product_2": "paved-lightning-bolt-cartilage-labret",
+            "btn_coords_2": "25,45",
+            "product_3": "",
+            "btn_coords_3": "",
+            "product_4": "",
+            "btn_coords_4": ""
+          }
+        },
+        "25054b9d-ed8b-4b20-bd21-8f658a9a9cb6": {
+          "type": "generic_block",
+          "disabled": true,
+          "settings": {
+            "product_1": "",
+            "btn_coords_1": "",
+            "product_2": "",
+            "btn_coords_2": "",
+            "product_3": "",
+            "btn_coords_3": "",
+            "product_4": "",
+            "btn_coords_4": ""
+          }
+        },
+        "901cc02b-77f1-4257-b59c-69d087cac7f3": {
+          "type": "article_block",
+          "disabled": true,
+          "settings": {
+            "article": "",
+            "product_1": "",
+            "btn_coords_1": "",
+            "product_2": "",
+            "btn_coords_2": "",
+            "product_3": "",
+            "btn_coords_3": "",
+            "product_4": "",
+            "btn_coords_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "caa30cd7-bbdb-4271-bf89-f89a3b04d7c5",
+        "25054b9d-ed8b-4b20-bd21-8f658a9a9cb6",
+        "901cc02b-77f1-4257-b59c-69d087cac7f3"
+      ],
+      "settings": {
+        "title": "Shop The Look"
+      }
+    },
+    "1662086193d23e863f": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "NOW TRENDING",
+        "featured_collection": "{{ article.metafields.custom.linked_collection.value }}",
+        "product_count": 4,
+        "product_limit": 12,
+        "heading_size": "h2",
+        "shop_all": "",
+        "bottom_border": false
+      }
+    },
+    "1642395480eb5229d3": {
+      "type": "promo-grid",
+      "blocks": {
+        "260db8a5-60c4-4b4e-b029-069b2a98e262": {
+          "type": "banner",
+          "settings": {
+            "class": "",
+            "heading": "PIERCING, IT'S WHAT WE DO",
+            "text": "<p>Australia’s largest specialist in body piercing and jewellery</p>",
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "label": "Book Now",
+            "link_class": "btn btn--secondary",
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "260db8a5-60c4-4b4e-b029-069b2a98e262"
+      ],
+      "disabled": true,
+      "settings": {
+        "class": "page--flush",
+        "bg_color": "#eec9d0",
+        "full_width": false,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_MwBgrj",
+    "16421380493ca610d5",
+    "1662086193d23e863f",
+    "1642395480eb5229d3"
+  ]
+}
