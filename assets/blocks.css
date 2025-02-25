@@ -1754,6 +1754,17 @@
   .price-estimator__footnote em {
     font-size: 14px;
   }
+  .desktop {
+    @media screen and (max-width:1024px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    @media screen and (min-width: 1023px) {
+      display: none;
+    }
+  }
 }
 
 .feature-collection {
