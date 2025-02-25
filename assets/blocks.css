@@ -1724,6 +1724,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .btn {
+      margin-top: 25px;
+    }
   }
   .price-estimator__item {
     margin-bottom: 15px;
