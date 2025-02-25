@@ -118,7 +118,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/image_2_96cc2c7d-e986-47d3-8056-fcf2f8472189.jpg",
+            "image": "shopify://shop_images/image_2_46bec56a-d3f2-44b3-9300-7bb16a5c0200.jpg",
             "video": "",
             "center-content": false,
             "title": "",
@@ -297,8 +297,8 @@
         "decription": "<p>Wondering how much your piercing will cost? Use our <strong>pricing estimator</strong> to check the cost of your preferred piercing, including different jewellery options.</p>",
         "footnote": "<p>Want two piercings in one go? Add double operator service for just $15!<br/><em>*Applies to all </em><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\"><em>standard piercings</em></a><em>, surgical steel jewellery included</em></p>",
         "calcu_footnote": "<p>The total piercing cost is an estimate and may vary based on your selection and store availability</p>",
-        "button_text": "",
-        "button_url": ""
+        "button_text": "Book Now",
+        "button_url": "https://support.skinkandy.com/s/booking-form"
       }
     },
     "header_banner_nArfYj": {
