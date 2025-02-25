@@ -43,39 +43,20 @@
       </div>
       <div class="medium-up--one-half right">
         <div class="price-estimator__calculator">
-          <div class="desktop">
-            <h2>PRICE ESTIMATOR</h2>
-            <div class="price-estimator__item">
-               I want to have piercing in 
-              <select class="js-piercing">
-                {% assign price_estimator_piercing = metaobjects.price_estimator_values.values | sort: 'sorting.value' | reverse %}
-                {% for field in price_estimator_piercing %}
-                  {% if field.option_placement == 1 %}
-                    {% assign price_value = field.price_low.value | default: field.price_high.value %}
-                    <option data-value="{{ price_value }}" data-handle="{{ metaobject.value.system.handle }}" value="{{ field.title.value | handleize }}">
-                      {{ field.title.value }}
-                    </option>
-                  {% endif %}
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-          <div class="desktop">
-            <h2>PRICE ESTIMATOR</h2>
-            <div class="price-estimator__item">
-               I want to have piercing in 
-              <select class="js-piercing">
-                {% assign price_estimator_piercing = metaobjects.price_estimator_values.values | sort: 'sorting.value' | reverse %}
-                {% for field in price_estimator_piercing %}
-                  {% if field.option_placement == 1 %}
-                    {% assign price_value = field.price_low.value | default: field.price_high.value %}
-                    <option data-value="{{ price_value }}" data-handle="{{ metaobject.value.system.handle }}" value="{{ field.title.value | handleize }}">
-                      {{ field.title.value }}
-                    </option>
-                  {% endif %}
-                {% endfor %}
-              </select>
-            </div>
+          <h2>PRICE ESTIMATOR</h2>
+          <div class="price-estimator__item">
+             I want to have piercing in 
+            <select class="js-piercing">
+              {% assign price_estimator_piercing = metaobjects.price_estimator_values.values | sort: 'sorting.value' | reverse %}
+              {% for field in price_estimator_piercing %}
+                {% if field.option_placement == 1 %}
+                  {% assign price_value = field.price_low.value | default: field.price_high.value %}
+                  <option data-value="{{ price_value }}" data-handle="{{ metaobject.value.system.handle }}" value="{{ field.title.value | handleize }}">
+                    {{ field.title.value }}
+                  </option>
+                {% endif %}
+              {% endfor %}
+            </select>
           </div>
           <div class="price-estimator__item">
              I want to have
