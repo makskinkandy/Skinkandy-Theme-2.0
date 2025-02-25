@@ -1755,13 +1755,13 @@
     font-size: 14px;
   }
   .desktop {
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:1048px) {
       display: none;
     }
   }
 
   .mobile {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1048px) {
       display: none;
     }
   }
