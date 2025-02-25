@@ -1761,7 +1761,7 @@
   }
 
   .mobile {
-    @media screen and (min-width: 1048px) {
+    @media screen and (min-width: 1049px) {
       display: none;
     }
   }
