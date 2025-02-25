@@ -1,7 +1,7 @@
 <div class="price-estimator">
   <div class="page-width">
     <div class="price-estimator__wrapper">
-      <div class="medium-up--one-half left">
+        <div class="mobile">
         {% if section.settings.title != blank %}
           {% assign text = section.settings.title | escape %}
 
@@ -31,6 +31,39 @@
             {{ section.settings.decription }}
           </div>
         {% endif %}
+      </div>
+      <div class="medium-up--one-half left">
+        <div class="desktop">
+          {% if section.settings.title != blank %}
+            {% assign text = section.settings.title | escape %}
+  
+            {% assign words = text | split: ' ' %}
+            {% assign processed_words = '' %}
+            
+            {% for word in words %}
+              {% assign word_1 = word | slice: 0, 1 %}
+              {% assign word_2 = word | slice: -1 %}
+              {% if word_1 == "{" %}
+                {% if word_2 == "}" %}
+                  {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+                  {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+                {% else %}
+                  {% assign processed_words = processed_words | append: word | append: ' ' %}
+                {% endif %}
+              {% else %}
+                {% assign processed_words = processed_words | append: word | append: ' ' %}
+              {% endif %}
+            {% endfor %}
+            <h2>{{ processed_words }}</h2>
+          {% endif %}
+          
+          
+          {% if section.settings.decription != blank %}
+            <div class="price-estimator__description">
+              {{ section.settings.decription }}
+            </div>
+          {% endif %}
+        </div>
         <ul class="price-estimator__services">
           {% for block in section.blocks %}
             <li>{{ block.settings.title }} <span class="price">${{ block.settings.value }}*</span></li>
