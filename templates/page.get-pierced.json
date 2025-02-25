@@ -178,7 +178,7 @@
             "center-content": false,
             "title": "WHY {CHOOSE} {SKINKANDY?}",
             "title_size": "large",
-            "text": "<p>✔ <strong>Global Leaders in Body Piercing: </strong>Over 70 Stores available Australia-wide & in New Zealand</p><p>✔ <strong>Highly Trained Piercers</strong> – Every team member completes our <strong>extensive piercing program</strong></p><p>✔ <strong>Strict Hygiene & Safety</strong> – We follow the highest industry standards for <strong>sterile</strong> and <strong>safe</strong> procedures </p><p>Whether you're getting your <strong>first piercing</strong> or your <strong>next one</strong>, trust <strong>SkinKandy</strong> for a professional experience from start to finish. </p>",
+            "text": "<p>✔ <strong>Global Leaders in Body Piercing: </strong>Over 70 Stores across Australia-wide & in New Zealand</p><p>✔ <strong>Strict Hygiene & Safety</strong> – We follow the highest industry standards for piercing practices</p><p>Whether you're getting your <strong>first piercing</strong> or your <strong>next one</strong>, trust <strong>SkinKandy</strong> for a professional experience throughout your piercing journey.</p>",
             "text_size": "small",
             "button_label": "BOOK YOUR PIERCING NOW",
             "button_link": "shopify://pages/skinkandy-piercing-menu"
@@ -214,9 +214,9 @@
             "center-content": false,
             "title": "{PREMIUM} JEWELLERY OPTIONS ",
             "title_size": "large",
-            "text": "<p>Your jewellery matters. That’s why we offer only high-quality<strong> materials</strong> to ensure a safe and stylish piercing experience.</p><p><strong>14K SOLID GOLD</strong> </p><ul><li>Ideal for sensitive skin </li><li>Won’t tarnish or wear </li></ul><p><strong>IMPLANT GRADE TITANIUM</strong> </p><ul><li>Lightweight and ultra-strong </li><li>Nickel-free </li><li>Encourages faster healing </li></ul><p><strong>316L SURGICAL STEEL</strong> </p><ul><li>Durable and affordable </li><li>High-quality finish </li><li>A great option for healed piercings </li></ul>",
+            "text": "<p>Your jewellery matters. That’s why we only offer high-quality<strong> materials</strong> to ensure a safe and stylish piercing experience.</p><p><strong>14K SOLID GOLD</strong> </p><ul><li>Ideal for sensitive skin </li><li>Won’t tarnish or wear </li></ul><p><strong>IMPLANT GRADE TITANIUM</strong> </p><ul><li>Lightweight and ultra-strong </li><li>Nickel-free </li><li>Encourages faster healing </li></ul><p><strong>316L SURGICAL STEEL</strong> </p><ul><li>Durable and affordable </li><li>High-quality finish </li></ul>",
             "text_size": "small",
-            "button_label": "SHOP OUR JEWELLERY COLLECTION",
+            "button_label": "",
             "button_link": "shopify://collections"
           }
         },
@@ -294,8 +294,8 @@
       ],
       "settings": {
         "title": "{PIERCING} PRICING ESTIMATOR ",
-        "decription": "<p>Wondering how much your piercing will cost? Use our <strong>pricing estimator</strong> to check the cost of your preferred piercing, including different jewellery options.</p>",
-        "footnote": "<p>Want two piercings in one go? Add double operator service for just $15!<br/><em>*Applies to all </em><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\"><em>standard piercings</em></a><em>, surgical steel jewellery included</em></p><p></p><p>\"All piercings are subject to anatomy check, please talk to your piercer about your piercing goals. Healing times are a guide only and can differ dependent on a number of factors – pop instore for a free consult if you have questions.\"</p>",
+        "decription": "<p>Wondering how much your piercing will cost? Use our <strong>pricing estimator</strong> as a guide to check the cost of your preferred piercing, including different piercing jewellery options.</p>",
+        "footnote": "<p>*placement: $45 <br/><em>*Applies to all </em><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\"><em>standard piercings</em></a><em>, surgical steel jewellery included</em></p><p></p><p>\"All piercings are subject to anatomy check, please talk to your piercer about your piercing goals. Pop instore for a free consult if you have questions.\"</p>",
         "calcu_footnote": "<p>The total piercing cost is an estimate and may vary based on your selection and store availability</p>",
         "button_text": "Book Now",
         "button_url": "https://support.skinkandy.com/s/booking-form"
