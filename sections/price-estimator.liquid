@@ -33,7 +33,7 @@
         {% endif %}
         <ul class="price-estimator__services">
           {% for block in section.blocks %}
-            <li>{{ block.settings.title }} <span class="price">*${{ block.settings.value }}</span></li>
+            <li>{{ block.settings.title }} <span class="price">${{ block.settings.value }}*</span></li>
           {% endfor %}
         </ul>
         <div class="price-estimator__footnote">
