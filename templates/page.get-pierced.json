@@ -295,7 +295,7 @@
       "settings": {
         "title": "{PIERCING} PRICING ESTIMATOR ",
         "decription": "<p>Wondering how much your piercing will cost? Use our <strong>pricing estimator</strong> to check the cost of your preferred piercing, including different jewellery options.</p>",
-        "footnote": "<p>Want two piercings in one go? Add double operator service for just $15!<br/><em>*Applies to all </em><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\"><em>standard piercings</em></a><em>, surgical steel jewellery included</em></p>",
+        "footnote": "<p>Want two piercings in one go? Add double operator service for just $15!<br/><em>*Applies to all </em><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\"><em>standard piercings</em></a><em>, surgical steel jewellery included</em></p><p></p><p>\"All piercings are subject to anatomy check, please talk to your piercer about your piercing goals. Healing times are a guide only and can differ dependent on a number of factors – pop instore for a free consult if you have questions.\"</p>",
         "calcu_footnote": "<p>The total piercing cost is an estimate and may vary based on your selection and store availability</p>",
         "button_text": "Book Now",
         "button_url": "https://support.skinkandy.com/s/booking-form"
