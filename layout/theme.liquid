@@ -240,7 +240,9 @@
       }
     </script>
     {% include 'pagefly-app-header' %}
-  </head>
+  {% render 'abconvert-price-test' %}
+{% render 'abconvert-template-test' %}
+</head>
 
   <body
     class='template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %} {% if settings.ss_enable and collection.handle and collection.handle == settings.ss_collection_handle %} ss-shop{% endif %} page-{{ handle }} site-{{ request.locale.root_url }}'
