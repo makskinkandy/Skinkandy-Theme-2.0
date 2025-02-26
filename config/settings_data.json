@@ -106,7 +106,7 @@
     "quick_add_popup_product_image": "shopify://shop_images/transparent-aftercare_1.png",
     "quick_add_popup_title": "<p>Don't forget your</p><h2>Aftercare</h2>",
     "quick_add_popup_text": "<h2>Did you know?</h2><p>Ongoing use of aftercare is essential in keeping your piercings happy and healthy. NeilMed is the must-have aftercare product to cleanse & care for your piercings.</p>",
-    "fst_step_one": "65",
+    "fst_step_one": "70",
     "fst_step_one_nz": "100",
     "fst_step_one_label": "Free Shipping",
     "fst_target": "90",
@@ -173,7 +173,7 @@
           "f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15": {
             "type": "announcement",
             "settings": {
-              "link_text": "FREE SHIPPING ON ORDERS OVER $65",
+              "link_text": "FREE SHIPPING ON ORDERS OVER $70",
               "link": ""
             }
           },
