@@ -186,7 +186,7 @@
             }
 
             message =
-                remaining >= target ? data.message_default.replace('[target]', `$${stepOne}`) :
+                remaining >= stepOne ? data.message_default.replace('[target]', `$${stepOne}`) :
                 remaining <= 0 ? data.message_success : data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`);
 
         }
