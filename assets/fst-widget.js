@@ -188,8 +188,8 @@
 
             message =
                 remaining >= stepOne ? data.message_default.replace('[target]', `$${stepOne}`) :
-                remaininExpress <= 0 ? data.message_success : data.message_ongoing_express.replace('[remaining]', `$${remaininExpress ? remaininExpress.toFixed(2) : target}`) :
-                remaining <= 0 ? data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`);
+                remaininExpress <= 0 ? data.message_ongoing_express.replace('[remaining]', `$${remaininExpress ? remaininExpress.toFixed(2) : target}`) :
+                remaining <= 0 ? data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`) : data.message_success;
 
         }
         else
