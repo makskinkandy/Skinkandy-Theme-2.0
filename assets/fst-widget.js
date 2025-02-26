@@ -186,8 +186,6 @@
 
             }
 
-            message = remaining >= stepOne ? data.message_default.replace('[target]', `$${stepOne}`);
-
             if (remainingExpress <= 0) {
               message = data.message_success;
             } else {
