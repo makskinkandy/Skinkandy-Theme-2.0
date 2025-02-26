@@ -186,15 +186,14 @@
 
             }
 
-            if (remainingExpress <= 0) {
-              message = data.message_success;
-            } else {
-              if (remaining <= 0) {
-                 message = data.message_ongoing_express.replace('[remaining]', `$${remainingExpress ? remainingExpress.toFixed(2) : target}`) 
-              } else {
-                 message = data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`)
-              }
-            }
+          // Update computation and logical message
+
+            message = remainingExpress <= 0 
+              ? data.message_success 
+              : (remaining <= 0 
+                  ? data.message_ongoing_express.replace('[remaining]', `$${(remainingExpress || target).toFixed(2)}`) 
+                  : data.message_ongoing.replace('[remaining]', `$${(remaining || stepOne).toFixed(2)}`)
+                );
 
         }
         else
