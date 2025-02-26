@@ -112,6 +112,7 @@
     "fst_target": "90",
     "fst_target_nz": "125",
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
+    "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE  EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
     "ss_enable": false,
     "ss_search_only": true,
