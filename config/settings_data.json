@@ -109,7 +109,7 @@
     "fst_step_one": "70",
     "fst_step_one_nz": "100",
     "fst_step_one_label": "Free Shipping",
-    "fst_target": "90",
+    "fst_target": "100",
     "fst_target_nz": "125",
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
@@ -180,7 +180,7 @@
           "31778dc5-bfaa-4e1d-9aa7-7f0971794dee": {
             "type": "announcement",
             "settings": {
-              "link_text": "FREE EXPRESS SHIPPING ON ORDERS OVER $90",
+              "link_text": "FREE EXPRESS SHIPPING ON ORDERS OVER $100",
               "link": ""
             }
           },
