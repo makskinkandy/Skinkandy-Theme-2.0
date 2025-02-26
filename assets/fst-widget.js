@@ -80,6 +80,7 @@
 
     function calculateShipping(cartJson, progress_bar) {
         const target = data.target ? parseFloat(data.target) : null;
+        const stepOne = data.step1 ? parseFloat(data.step1) : null;
         let cart_total = (cartJson.total_price ? cartJson.total_price : cartJson.final_price) / 100;
 
         if (data.shop_currency != data.cart_currency) {
@@ -133,7 +134,8 @@
         /* End Labels */
 
         const progress_value = (cart_total / target) * 100;
-        const remaining = target - cart_total;
+        const remaining = stepOne - cart_total;
+        const remainingExpress = target - cart_total;
         let message = '';
 
         if (target) {
@@ -184,9 +186,14 @@
 
             }
 
-            message =
-                remaining >= target ? data.message_default.replace('[target]', `$${target}`) :
-                remaining <= 0 ? data.message_success : data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : target}`);
+          // Update computation and logical message
+
+            message = remainingExpress <= 0 
+              ? data.message_success 
+              : (remaining <= 0 
+                  ? data.message_ongoing_express.replace('[remaining]', `$${(remainingExpress || target).toFixed(2)}`) 
+                  : data.message_ongoing.replace('[remaining]', `$${(remaining || stepOne).toFixed(2)}`)
+                );
 
         }
         else
