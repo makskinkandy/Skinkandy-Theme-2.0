@@ -135,7 +135,7 @@
 
         const progress_value = (cart_total / target) * 100;
         const remaining = stepOne - cart_total;
-        const remaininExpress = target - cart_total;
+        const remainingExpress = target - cart_total;
         let message = '';
 
         if (target) {
@@ -186,10 +186,17 @@
 
             }
 
-            message =
-                remaining >= stepOne ? data.message_default.replace('[target]', `$${stepOne}`) :
-                remaininExpress <= 0 ? data.message_ongoing_express.replace('[remaining]', `$${remaininExpress ? remaininExpress.toFixed(2) : target}`) :
-                remaining <= 0 ? data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`) : data.message_success;
+            message = remaining >= stepOne ? data.message_default.replace('[target]', `$${stepOne}`);
+
+            if (remainingExpress <= 0) {
+              message = data.message_success;
+            } else {
+              if (remaining <= 0) {
+                 message = data.message_ongoing_express.replace('[remaining]', `$${remainingExpress ? remainingExpress.toFixed(2) : target}`) 
+              } else {
+                 message = data.message_ongoing.replace('[remaining]', `$${remaining ? remaining.toFixed(2) : stepOne}`)
+              }
+            }
 
         }
         else
