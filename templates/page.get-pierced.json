@@ -254,6 +254,41 @@
         "hide_line": true
       }
     },
+    "rich_text_8wgQW7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Q8TVTq": {
+          "type": "heading",
+          "settings": {
+            "title": "PIERCING SERVICES & COSTS "
+          }
+        },
+        "text_VH7CqX": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Wondering how much your piercing will cost? Check our pricing services & costs table as a guide to check the cost of your preferred piercing.</p>"
+          }
+        },
+        "text_yFFyCH": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "{{ page.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q8TVTq",
+        "text_VH7CqX",
+        "text_yFFyCH"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "price_estimator_8yLgcE": {
       "type": "price-estimator",
       "blocks": {
@@ -292,6 +327,7 @@
         "services_item_HCLmww",
         "services_item_PKeyjE"
       ],
+      "disabled": true,
       "settings": {
         "title": "{PIERCING} PRICING ESTIMATOR ",
         "decription": "<p>Wondering how much your piercing will cost? Use our <strong>pricing estimator</strong> as a guide to check the cost of your preferred piercing, including different piercing jewellery options.</p>",
@@ -394,6 +430,7 @@
     "columns_block_EVLU3C",
     "columns_block_JfCc3d",
     "columns_block_zXaGw9",
+    "rich_text_8wgQW7",
     "price_estimator_8yLgcE",
     "header_banner_nArfYj",
     "columns_block_CqqbQM"
