@@ -1457,6 +1457,13 @@
       },
       {
         "type": "richtext",
+        "id": "fst_message_ongoing_express",
+        "label": "Express Ongoing message",
+        "info": "Message that is displayed when an item is added to cart. Use [remaining] to display remaining amount before hitting target amount.",
+        "default": "<p>Spend [remaining] extra to get free express shipping!<\/p>"
+      },
+      {
+        "type": "richtext",
         "id": "fst_message_success",
         "label": "Success message",
         "info": "Message that is displayed when a user hits the target amount.",
