@@ -274,14 +274,25 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "{{ page.content }}"
+            "text": "<p>{{ page.content }}</p>"
+          }
+        },
+        "button_patRKQ": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link_text": "BOOK YOUR PIERCING NOW"
           }
         }
       },
       "block_order": [
         "heading_Q8TVTq",
         "text_VH7CqX",
-        "text_yFFyCH"
+        "text_yFFyCH",
+        "button_patRKQ"
+      ],
+      "custom_css": [
+        "tbody {vertical-align: baseline;}"
       ],
       "settings": {
         "align_text": "center",
