@@ -98,7 +98,9 @@
         "description": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_EVLU3C": {
@@ -153,7 +155,9 @@
         "description": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_CqqbQM": {
@@ -209,7 +213,9 @@
         "description": "<p>Not only do we stock a large range of initial piercing jewellery (including titanium and 14kt solid gold), we also have a range of high-quality studs and sleepers in all kinds of fun designs to change to when the piercings are healed.</p>",
         "count": 2,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "featured_collection_dCigGk": {
@@ -335,8 +341,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Group_216_2_1.jpg",
-            "image": "shopify://shop_images/Group_198_1_1.jpg",
+            "image_mobile": "shopify://shop_images/Group_216_3.jpg",
+            "image": "shopify://shop_images/Group_198_2.jpg",
             "banner_url": "shopify://pages/store-locations",
             "heading": "",
             "short_description": "",
