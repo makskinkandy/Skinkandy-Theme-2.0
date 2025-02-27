@@ -16115,3 +16115,7 @@ span.on-sale-divider {
 .feature-collection .grid__image-ratio {
   position: unset;
 }
+
+.highlight {
+  color: var(--colorBtnPrimaryLight);
+}
