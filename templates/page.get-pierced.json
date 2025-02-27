@@ -292,7 +292,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>Single Operator <br/>Double operator </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
@@ -310,7 +310,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>$45 <br/>$60 <br/>*Prices include 316L Surgical Steel Jewellery </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
@@ -366,7 +366,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>1 Piercing <br/>2 Piercings <br/>3 Piercings <br/>4 Piercings </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
@@ -384,7 +384,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>$45 <br/>$80 <br/>$125 <br/>$160 </p><p>Prices include 316L Surgical Steel Jewellery </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
@@ -440,7 +440,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>1 Piercing* </p><p>*If you’d like more than 1 specialised or advanced piercing, please contact our team. </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
@@ -458,7 +458,7 @@
             "title": "",
             "title_size": "small",
             "text": "<p>Nipple $55 <br/>Industrial & Surface $65 <br/>Cheek $90 <br/>Dermal $50 <br/>Lobe Large Gauge $80 <br/>Below the belt – contact us <br/>Prices include 316L Surgical Steel Jewellery </p>",
-            "text_size": "large",
+            "text_size": "small",
             "button_label": "",
             "button_link": ""
           }
