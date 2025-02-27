@@ -507,7 +507,7 @@
         "text_rJThbY": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p>Want to upgrade to a premium piercing jewellery? We offer <strong>14K Solid Gold & Implant-Grade Titanium</strong> options (subject to availability). Chat with our team in-store!</p>"
           }
         }
