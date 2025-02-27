@@ -1041,6 +1041,18 @@
     .grid-scroll {
       @media screen and (max-width: 980px) {
         flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .grid__item {
+        @media screen and (max-width: 980px) {
+          flex: 1;
+        }
+      }
+      .grid__item:first-child {
+        @media screen and (max-width: 980px) {
+          flex: 1 1 100%;
+          width: 100%;
+        }
       }
       .rte-setting p,
       h2,
