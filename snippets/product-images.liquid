@@ -75,6 +75,7 @@
             {%- for media in product.media -%}
               {% assign media_shown = false %}
               {% for variant in product.variants %}
+                {{ variant.inventory_quantity }}
                 {% if variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
                   {% assign media_shown = true %}
                 {% endif %}
