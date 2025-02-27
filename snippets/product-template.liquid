@@ -211,36 +211,7 @@
                                 class="collapsible-content collapsible-content--all">
                                 <div class="collapsible-content__inner rte">
                                   <ul>
-                                    {% assign tag_map = '
-                                      tongue: Tongue,
-                                      tongue bar: Tongue,
-                                      nipple: Nipple,
-                                      nipple bar: Nipple,
-                                      nose: Nose,
-                                      septum: Septum,
-                                      lip: Lips,
-                                      eyebrow: Eyebrow,
-                                      belly: Navel,
-                                      belly bar: Navel,
-                                      belly button: Navel,
-                                      belly ring: Navel,
-                                      daith: Daith,
-                                      cartilage: Cartilage,
-                                      lobe: Lobes,
-                                      lobes: Lobes,
-                                      earlobes: Lobes,
-                                      tragus: Tragus,
-                                      conch: Conch,
-                                      helix: Helix,
-                                      rook: Rook,
-                                      navel: Navel,
-                                      smiley: Smiley,
-                                      all ear: All ear,
-                                      forward helix: Forward Helix,
-                                      vertical philtrum: Vertical Philtrum,
-                                      vertical helix: Vertical Helix,
-                                      vertical labret: Vertical Labret
-                                    ' | strip_newlines | split: ',' %}
+                                    {% render tag_map %}
                                     
                                     {% assign matched_items = "" %}
                                     
