@@ -87,7 +87,8 @@
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": false
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_EVLU3C": {
@@ -143,7 +144,8 @@
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": false
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_JfCc3d": {
@@ -199,7 +201,8 @@
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": false
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_zXaGw9": {
@@ -255,7 +258,8 @@
         "count": 2,
         "bottom_space": true,
         "hide_line": true,
-        "disable_grid": false
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "columns_block_AjqLdC": {
@@ -329,7 +333,8 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": true
+        "disable_grid": true,
+        "max_width": 1224
       }
     },
     "columns_block_wAQr4W": {
@@ -403,7 +408,8 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": true
+        "disable_grid": true,
+        "max_width": 1704
       }
     },
     "columns_block_JMYqi9": {
@@ -477,7 +483,8 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": true
+        "disable_grid": true,
+        "max_width": 1704
       }
     },
     "rich_text_xDG4ww": {
@@ -642,7 +649,8 @@
         "count": 2,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": false
+        "disable_grid": false,
+        "max_width": 1704
       }
     }
   },
