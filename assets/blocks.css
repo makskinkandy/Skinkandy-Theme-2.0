@@ -1060,7 +1060,7 @@
         }
         h2,
         h3,
-        p {
+        .rte-setting p {
           @media screen and (max-widht: 980px) {
             text-align: center !important;
           }
