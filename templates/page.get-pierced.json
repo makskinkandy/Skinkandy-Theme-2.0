@@ -490,6 +490,13 @@
     "rich_text_xDG4ww": {
       "type": "rich-text",
       "blocks": {
+        "button_8JP4c4": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link_text": "Book your piercing now"
+          }
+        },
         "text_mNhwWW": {
           "type": "text",
           "settings": {
@@ -506,6 +513,7 @@
         }
       },
       "block_order": [
+        "button_8JP4c4",
         "text_mNhwWW",
         "text_rJThbY"
       ],
