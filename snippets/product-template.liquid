@@ -190,7 +190,7 @@
                     {% endif %}
                   {%- when 'piercing-placement' -%}
                       {% assign exist = false %}
-                      {% assign piercing_tag = "earrings,earring,tongue,tongue bar,nipple,nipple bar,nose,septum,lip,eyebrow,belly,belly bar,belly button,belly ring,daith,cartilage,lobe,lobes,earlobes" | split: "," %}
+                      {% assign piercing_tag = "all ear, belly, belly bar, belly button, belly ring, cartilage, conch, curved, curved bar, curved barbell, daith, earlobes, eyebrow, forward helix, helix, horseshoe, lip, lobe, lobes, nipple, nipple bar, nose, navel, rook, segment ring, septum, smiley, tongue, tongue bar, tragus, vertical helix, vertical labret, vertical philtrum" | split: "," %}
                       {% for tag in product.tags %}
                         {% if piercing_tag contains tag %}
                           {% assign exist = true %}
