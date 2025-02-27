@@ -325,6 +325,9 @@
         "text_block_Ud3cck",
         "text_block_X6LCBk"
       ],
+      "custom_css": [
+        "em {font-size: 16px;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
@@ -401,7 +404,8 @@
         "text_block_ijMGHE"
       ],
       "custom_css": [
-        "a {font-weight: 400 !important; color: #000;}"
+        "a {font-weight: 400 !important; color: #000;}",
+        "em {font-size: 16px;}"
       ],
       "settings": {
         "dark_mode": false,
@@ -477,6 +481,9 @@
         "text_block_CBa7pd",
         "text_block_EEtbTF",
         "text_block_bYTtbB"
+      ],
+      "custom_css": [
+        "em {font-size: 16px;}"
       ],
       "settings": {
         "dark_mode": false,
