@@ -254,52 +254,223 @@
         "hide_line": true
       }
     },
-    "rich_text_8wgQW7": {
-      "type": "rich-text",
+    "columns_block_AjqLdC": {
+      "type": "columns-block",
       "blocks": {
-        "heading_Q8TVTq": {
-          "type": "heading",
+        "text_block_gBXNUi": {
+          "type": "text_block",
           "settings": {
-            "title": "{PIERCING} SERVICES & COSTS "
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "{CARTRIDGE}",
+            "title_size": "large",
+            "text": "<p>1st & 2nd Lobes only </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "text_VH7CqX": {
-          "type": "text",
+        "text_block_Ud3cck": {
+          "type": "text_block",
           "settings": {
-            "enlarge_text": true,
-            "text": "<p>Wondering how much your piercing will cost? Check our pricing services & costs table as a guide to check the cost of your preferred piercing.</p>"
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "<p>Single Operator <br/>Double operator </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "text_yFFyCH": {
-          "type": "text",
+        "text_block_X6LCBk": {
+          "type": "text_block",
           "settings": {
-            "enlarge_text": true,
-            "text": "<p>{{ page.content }}</p>"
-          }
-        },
-        "button_patRKQ": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/skinkandy-piercing-menu",
-            "link_text": "BOOK YOUR PIERCING NOW"
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "<p>$45 <br/>$60 <br/>*Prices include 316L Surgical Steel Jewellery </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading_Q8TVTq",
-        "text_VH7CqX",
-        "text_yFFyCH",
-        "button_patRKQ"
-      ],
-      "custom_css": [
-        "tbody {vertical-align: baseline;}",
-        "em {font-size: 14px; max-width: 550px; display: block; margin-inline: auto;}",
-        "table p {margin-bottom: 0;}"
+        "text_block_gBXNUi",
+        "text_block_Ud3cck",
+        "text_block_X6LCBk"
       ],
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
+        "dark_mode": false,
+        "class": "",
+        "title": "{PIERCING} SERVICES & COSTS",
+        "description": "<p>Wondering how much your piercing will cost? Check our pricing services & costs table as a guide to check the cost of your preferred piercing.</p>",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": false
+      }
+    },
+    "columns_block_wAQr4W": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_CGmFxV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "{NEEDLE}",
+            "title_size": "large",
+            "text": "<p>Standard Piercings</p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HLKUkg": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "<p>1 Piercing <br/>2 Piercings <br/>3 Piercings <br/>4 Piercings </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ijMGHE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "text": "<p>$45 <br/>$80 <br/>$125 <br/>$160 </p><p>Prices include 316L Surgical Steel Jewellery </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_CGmFxV",
+        "text_block_HLKUkg",
+        "text_block_ijMGHE"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": false
+      }
+    },
+    "columns_block_JMYqi9": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_CBa7pd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "{NEEDLE}",
+            "title_size": "large",
+            "text": "<p>Specialised & Advanced Piercings </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EEtbTF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "<p>1 Piercing* </p><p>*If you’d like more than 1 specialised or advanced piercing, please contact our team. </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_bYTtbB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "<p>Nipple $55 <br/>Industrial & Surface $65 <br/>Cheek $90 <br/>Dermal $50 <br/>Lobe Large Gauge $80 <br/>Below the belt – contact us <br/>Prices include 316L Surgical Steel Jewellery </p>",
+            "text_size": "large",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_CBa7pd",
+        "text_block_EEtbTF",
+        "text_block_bYTtbB"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": false
       }
     },
     "price_estimator_8yLgcE": {
@@ -443,7 +614,9 @@
     "columns_block_EVLU3C",
     "columns_block_JfCc3d",
     "columns_block_zXaGw9",
-    "rich_text_8wgQW7",
+    "columns_block_AjqLdC",
+    "columns_block_wAQr4W",
+    "columns_block_JMYqi9",
     "price_estimator_8yLgcE",
     "header_banner_nArfYj",
     "columns_block_CqqbQM"
