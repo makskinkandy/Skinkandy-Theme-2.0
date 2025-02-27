@@ -250,7 +250,7 @@
         "title": "",
         "description": "",
         "count": 2,
-        "bottom_space": false,
+        "bottom_space": true,
         "hide_line": true
       }
     },
