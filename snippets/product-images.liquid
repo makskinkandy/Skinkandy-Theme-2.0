@@ -28,7 +28,7 @@
               {% endif %}
             {%- endfor -%}
           
-            {% if show_media or media.id == product.featured_media.id %}
+            {% if show_media %}
               {%- render 'media',
                 section_id: section_id,
                 media: media,
@@ -91,7 +91,7 @@
                   endif
                 endif
               -%}
-              {% if show_media or media.id == product.featured_media.id %}
+              {% if show_media %}
                 <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
                 {% if image_set %}
