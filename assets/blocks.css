@@ -1077,7 +1077,8 @@
     }
   }
   h2,
-  h3 {
+  h3,
+  .h3{
     margin-bottom: 15px;
     @media screen and (max-width: 980px) {
       text-align: center;
@@ -1222,6 +1223,7 @@
       order: 1;
       margin-bottom: 25px;
     }
+    .h3,
     h3 {
       margin-top: 30px;
     }
@@ -1261,6 +1263,7 @@
     .circle-overlay {
       display: none;
     }
+    .h3,
     h3 {
       text-align: center;
     }
