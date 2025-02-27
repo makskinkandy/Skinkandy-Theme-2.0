@@ -508,7 +508,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p><a href=\"#\" title=\"#\">Want to upgrade to a premium piercing jewellery?</a> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
+            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p><strong>Want to upgrade to a premium piercing jewellery?</strong> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
           }
         }
       },
@@ -518,7 +518,8 @@
         "text_rJThbY"
       ],
       "custom_css": [
-        "em {font-size: 14px;}"
+        "em {font-size: 14px;}",
+        "strong {color: #eb008c;}"
       ],
       "settings": {
         "align_text": "center",
