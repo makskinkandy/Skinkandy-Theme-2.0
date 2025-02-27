@@ -1048,6 +1048,11 @@
           flex: 1;
         }
       }
+      .rte-setting p,
+      h2,
+      h3 {
+        text-align: left !important;
+      }
       .grid__item:first-child {
         @media screen and (max-width: 980px) {
           flex: 1 1 100%;
@@ -1060,11 +1065,6 @@
             text-align: center !important;
           }
         }
-      }
-      .rte-setting p,
-      h2,
-      h3 {
-        text-align: left !important;
       }
     }
   }
