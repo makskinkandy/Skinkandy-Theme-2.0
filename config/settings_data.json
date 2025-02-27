@@ -198,8 +198,8 @@
           "e9c59e14-cd9c-485a-8447-d2a9d70140bb"
         ],
         "settings": {
-          "main_menu_link_list": "",
-          "mobile_menu_link_list": "",
+          "main_menu_link_list": "new-menu-1",
+          "mobile_menu_link_list": "new-menu-1",
           "main_menu_alignment": "left",
           "header_style": "sticky",
           "sticky_index": false,
