@@ -1044,7 +1044,7 @@
       }
     }
     .rte-setting p {
-      text-align: left;
+      text-align: left !important;
     }
   }
   h2 {
