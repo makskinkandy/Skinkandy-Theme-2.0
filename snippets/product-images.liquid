@@ -19,6 +19,15 @@
       {%- endunless -%}
       <div class="product__main-photos" data-aos data-product-single-media-group>
         <div data-product-photos class="product-slideshow">
+          {% assign main_media = product.featured_media %}
+          {% assign main_media_hidden = false %}
+          
+          {%- for variant in product.variants -%}
+            {% if variant.featured_media and variant.featured_media.id == main_media.id and variant.inventory_quantity <= 0 %}
+              {% assign main_media_hidden = true %}
+            {% endif %}
+          {%- endfor -%}
+          
           {%- for media in product.media -%}
             {% assign show_media = false %}
           
@@ -28,7 +37,11 @@
               {% endif %}
             {%- endfor -%}
           
-            {% if show_media %}
+            {%- if media.id == main_media.id and main_media_hidden == true -%}
+              {% assign show_media = false %}
+            {%- endif -%}
+          
+            {% if show_media or media.id != main_media.id %}
               {%- render 'media',
                 section_id: section_id,
                 media: media,
@@ -72,14 +85,26 @@
 
         <div class="product__thumbs--scroller">
           {%- if product.media.size > 1 -%}
+            {% assign main_media = product.featured_media %}
+            {% assign main_media_hidden = false %}
+            
+            {%- for variant in product.variants -%}
+              {% if variant.featured_media and variant.featured_media.id == main_media.id and variant.inventory_quantity <= 0 %}
+                {% assign main_media_hidden = true %}
+              {% endif %}
+            {%- endfor -%}
             {%- for media in product.media -%}
               {% assign show_media = false %}
-          
+              
               {%- for variant in product.variants -%}
                 {% if variant.featured_media and variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
                   {% assign show_media = true %}
                 {% endif %}
               {%- endfor -%}
+            
+              {%- if media.id == main_media.id and main_media_hidden == true -%}
+                {% assign show_media = false %}
+              {%- endif -%}
               {%- liquid
                 assign image_set = false
                 assign image_set_group = ''
@@ -91,7 +116,7 @@
                   endif
                 endif
               -%}
-              {% if show_media %}
+              {% if show_media or media.id != main_media.id %}
                 <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
                 {% if image_set %}
