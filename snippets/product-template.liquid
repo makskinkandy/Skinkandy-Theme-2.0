@@ -210,31 +210,7 @@
                               <div id="Product-content-{{ block.id }}"
                                 class="collapsible-content collapsible-content--all">
                                 <div class="collapsible-content__inner rte">
-                                  <ul>
-                                    {% render 'tag_map' %}
-                                    
-                                    {% assign matched_items = "" %}
-                                    
-                                    {% for pair in tag_map %}
-                                      {% assign parts = pair | split: ':' %}
-                                      {% assign tag = parts[0] | strip %}
-                                      {% assign label = parts[1] | strip %}
-                                    
-                                      {% if product.tags contains tag %}
-                                        {% unless matched_items contains label %}
-                                          {% assign matched_items = matched_items | append: label | append: ',' %}
-                                        {% endunless %}
-                                      {% endif %}
-                                    {% endfor %}
-                                    
-                                    {% assign matched_items = matched_items | split: ',' %}
-                                    
-                                    {% for item in matched_items %}
-                                      {% if item != "" %}
-                                        <li>{{ item }}</li>
-                                      {% endif %}
-                                    {% endfor %}
-                                  </ul>
+                                  {% render 'tag_map' %}
                                 </div>
                               </div>
                             </div>
