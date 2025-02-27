@@ -293,7 +293,8 @@
       ],
       "custom_css": [
         "tbody {vertical-align: baseline;}",
-        "em {font-size: 14px; max-width: 550px; display: block; margin-inline: auto;}"
+        "em {font-size: 14px; max-width: 550px; display: block; margin-inline: auto;}",
+        "table p {margin-bottom: 0;}"
       ],
       "settings": {
         "align_text": "center",
