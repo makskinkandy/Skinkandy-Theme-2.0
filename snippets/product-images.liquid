@@ -75,11 +75,11 @@
             {%- for media in product.media -%}
               {% assign show_media = false %}
           
-              {% for variant in product.variants %}
-                {% if variant.image and variant.image.id == media.id and variant.inventory_quantity > 0 %}
+              {%- for variant in product.variants -%}
+                {% if variant.featured_media and variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
                   {% assign show_media = true %}
                 {% endif %}
-              {% endfor %}
+              {%- endfor -%}
               {%- liquid
                 assign image_set = false
                 assign image_set_group = ''
@@ -92,7 +92,7 @@
                 endif
               -%}
               {{ show_media }}
-              {% if show_media or media.media_type == "image" %}
+              {% if show_media or media.id == product.featured_media.id %}
                 <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
                 {% if image_set %}
