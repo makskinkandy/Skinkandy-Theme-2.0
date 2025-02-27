@@ -22,13 +22,13 @@
           {%- for media in product.media -%}
             {% assign show_media = false %}
           
-            {% for variant in product.variants %}
-              {% if variant.image and variant.image.id == media.id and variant.inventory_quantity > 0 %}
+            {%- for variant in product.variants -%}
+              {% if variant.featured_media and variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
                 {% assign show_media = true %}
               {% endif %}
-            {% endfor %}
-            
-            {% if show_media or media.media_type == "image"   %}
+            {%- endfor -%}
+          
+            {% if show_media or media.id == product.featured_media.id %}
               {%- render 'media',
                 section_id: section_id,
                 media: media,
@@ -43,7 +43,6 @@
                 video_style: video_style
               -%}
             {% endif %}
-            
           {%- endfor -%}
         </div>
 
