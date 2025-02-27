@@ -20,16 +20,15 @@
       <div class="product__main-photos" data-aos data-product-single-media-group>
         <div data-product-photos class="product-slideshow">
           {%- for media in product.media -%}
-            {% assign media_shown = false %}
+            {% assign show_media = false %}
+          
             {% for variant in product.variants %}
-              {% if variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
-                {% assign media_shown = true %}
+              {% if variant.image and variant.image.id == media.id and variant.inventory_quantity > 0 %}
+                {% assign show_media = true %}
               {% endif %}
             {% endfor %}
-
-            {{ media_shown }}
             
-            {% if media_shown   %}
+            {% if show_media or media.media_type == "image"   %}
               {%- render 'media',
                 section_id: section_id,
                 media: media,
@@ -75,10 +74,11 @@
         <div class="product__thumbs--scroller">
           {%- if product.media.size > 1 -%}
             {%- for media in product.media -%}
-              {% assign media_shown = false %}
+              {% assign show_media = false %}
+          
               {% for variant in product.variants %}
-                {% if variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
-                  {% assign media_shown = true %}
+                {% if variant.image and variant.image.id == media.id and variant.inventory_quantity > 0 %}
+                  {% assign show_media = true %}
                 {% endif %}
               {% endfor %}
               {%- liquid
@@ -92,7 +92,7 @@
                   endif
                 endif
               -%}
-              {% if media_show %}
+              {% if show_media or media.media_type == "image" %}
                 <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
                 {% if image_set %}
