@@ -445,7 +445,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
-            "text": "<p>1 Piercing* </p><p>*More than 1 piercing? <a href=\"https://support.skinkandy.com/s/talk-to-us\" target=\"_blank\" title=\"https://support.skinkandy.com/s/talk-to-us\">Contact us.</a></p>",
+            "text": "<p>1 Piercing* </p><p>*More than 1 piercing?<br/><a href=\"https://support.skinkandy.com/s/talk-to-us\" target=\"_blank\" title=\"https://support.skinkandy.com/s/talk-to-us\">Contact us.</a></p>",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -518,7 +518,7 @@
         "text_rJThbY"
       ],
       "custom_css": [
-        "em {font-size: 14px; @media screen and (max-width: 980px) {font-si }}",
+        "em {font-size: 14px; @media screen and (max-width: 980px) {font-size: 12px; }}",
         "strong {color: #eb008c;}"
       ],
       "settings": {
