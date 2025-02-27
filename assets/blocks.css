@@ -1037,6 +1037,11 @@
   &.bottom-space--true {
     padding-bottom: 95px;
   }
+  &.disable-grid__true .grid-scroll {
+    @media screen and (max-width: 980px) {
+      flex-direction: row;
+    }
+  }
   h2 {
     font-size: 34px;
     margin-bottom: 45px;
