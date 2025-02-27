@@ -470,7 +470,7 @@
         "description": "",
         "count": 3,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": true
       }
     },
     "price_estimator_8yLgcE": {
