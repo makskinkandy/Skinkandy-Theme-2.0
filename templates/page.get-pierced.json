@@ -292,7 +292,8 @@
         "button_patRKQ"
       ],
       "custom_css": [
-        "tbody {vertical-align: baseline;}"
+        "tbody {vertical-align: baseline;}",
+        "em {font-size: 14px; max-width: 550px; display: block; margin-inline: auto;}"
       ],
       "settings": {
         "align_text": "center",
