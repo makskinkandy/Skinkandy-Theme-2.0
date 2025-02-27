@@ -318,12 +318,31 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "text_block_bgdWnM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "text_block_gBXNUi",
         "text_block_Ud3cck",
-        "text_block_X6LCBk"
+        "text_block_X6LCBk",
+        "text_block_bgdWnM"
       ],
       "settings": {
         "dark_mode": false,
@@ -399,6 +418,9 @@
         "text_block_CGmFxV",
         "text_block_HLKUkg",
         "text_block_ijMGHE"
+      ],
+      "custom_css": [
+        "a {font-weight: 400 !important; color: #000;}"
       ],
       "settings": {
         "dark_mode": false,
