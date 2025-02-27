@@ -309,7 +309,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
-            "text": "<p>$45 <br/>$60 <br/>*Prices include 316L Surgical Steel Jewellery </p>",
+            "text": "<p><strong>$45 </strong><br/><strong>$60 </strong><br/>*Prices include 316L Surgical Steel Jewellery </p>",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -383,7 +383,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
-            "text": "<p>$45 <br/>$80 <br/>$125 <br/>$160 </p><p>Prices include 316L Surgical Steel Jewellery </p>",
+            "text": "<p><strong>$45 </strong><br/><strong>$80 </strong><br/><strong>$125 </strong><br/><strong>$160 </strong></p><p>Prices include 316L Surgical Steel Jewellery </p>",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -457,7 +457,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
-            "text": "<p>Nipple $55 <br/>Industrial & Surface $65 <br/>Cheek $90 <br/>Dermal $50 <br/>Lobe Large Gauge $80 <br/>Below the belt – contact us <br/>Prices include 316L Surgical Steel Jewellery </p>",
+            "text": "<p>Nipple:                              <strong>$55 </strong><br/>Industrial & Surface:       <strong>$65 </strong><br/>Cheek:                              <strong>$90 </strong><br/>Dermal:                             <strong>$50 </strong><br/>Lobe Large Gauge:          <strong>$80 </strong><br/>Below the belt – contact us <br/>Prices include 316L Surgical Steel Jewellery </p>",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
