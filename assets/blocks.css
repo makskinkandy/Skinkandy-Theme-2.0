@@ -1069,7 +1069,7 @@
       }
     }
   }
-  .h2 {
+  h2 {
     font-size: 34px;
     margin-bottom: 45px;
     @media screen and (max-width: 560px) {
