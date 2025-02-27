@@ -1042,11 +1042,11 @@
       @media screen and (max-width: 980px) {
         flex-direction: row;
       }
-    }
-    .rte-setting p,
-    h2,
-    h3 {
-      text-align: left !important;
+      .rte-setting p,
+      h2,
+      h3 {
+        text-align: left !important;
+      }
     }
   }
   h2 {
