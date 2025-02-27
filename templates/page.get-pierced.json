@@ -473,6 +473,37 @@
         "hide_line": true
       }
     },
+    "rich_text_xDG4ww": {
+      "type": "rich-text",
+      "blocks": {
+        "text_mNhwWW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><em>All piercings are subject to anatomy check, please talk to your piercer about your piercing goals.</em></p>"
+          }
+        },
+        "text_rJThbY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p>Want to upgrade your jewellery? We offer <a href=\"/collections/14kt-gold\" title=\"14k Solid Gold Jewellery\"><strong>14K Solid Gold</strong></a><strong> & </strong><a href=\"/collections/titanium\" title=\"Titanium Jewellery\"><strong>Implant-Grade Titanium</strong></a> options (subject to availability). Chat with our team in-store! </p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_mNhwWW",
+        "text_rJThbY"
+      ],
+      "custom_css": [
+        "em {font-size: 14px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "price_estimator_8yLgcE": {
       "type": "price-estimator",
       "blocks": {
@@ -617,6 +648,7 @@
     "columns_block_AjqLdC",
     "columns_block_wAQr4W",
     "columns_block_JMYqi9",
+    "rich_text_xDG4ww",
     "price_estimator_8yLgcE",
     "header_banner_nArfYj",
     "columns_block_CqqbQM"
