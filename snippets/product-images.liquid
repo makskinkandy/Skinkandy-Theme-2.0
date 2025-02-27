@@ -92,6 +92,7 @@
                   endif
                 endif
               -%}
+              {{ show_media }}
               {% if show_media or media.media_type == "image" %}
                 <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
