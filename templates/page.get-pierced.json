@@ -86,7 +86,8 @@
         "description": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": true
+        "hide_line": true,
+        "disable_grid": false
       }
     },
     "columns_block_EVLU3C": {
@@ -141,7 +142,8 @@
         "description": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": true
+        "hide_line": true,
+        "disable_grid": false
       }
     },
     "columns_block_JfCc3d": {
@@ -196,7 +198,8 @@
         "description": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": true
+        "hide_line": true,
+        "disable_grid": false
       }
     },
     "columns_block_zXaGw9": {
@@ -251,7 +254,8 @@
         "description": "",
         "count": 2,
         "bottom_space": true,
-        "hide_line": true
+        "hide_line": true,
+        "disable_grid": false
       }
     },
     "columns_block_AjqLdC": {
@@ -324,7 +328,8 @@
         "description": "<p>Wondering how much your piercing will cost? Check our pricing services & costs table as a guide to check the cost of your preferred piercing.</p>",
         "count": 3,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": true
       }
     },
     "columns_block_wAQr4W": {
@@ -397,7 +402,8 @@
         "description": "",
         "count": 3,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": true
       }
     },
     "columns_block_JMYqi9": {
@@ -470,7 +476,8 @@
         "description": "",
         "count": 3,
         "bottom_space": false,
-        "hide_line": true
+        "hide_line": true,
+        "disable_grid": true
       }
     },
     "rich_text_xDG4ww": {
@@ -634,7 +641,8 @@
         "description": "<p>Not only do we stock a large range of initial piercing jewellery (including titanium and 14kt solid gold), we also have a range of high-quality studs and sleepers in all kinds of fun designs to change to when the piercings are healed.</p>",
         "count": 2,
         "bottom_space": false,
-        "hide_line": false
+        "hide_line": false,
+        "disable_grid": false
       }
     }
   },
