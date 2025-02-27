@@ -585,8 +585,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Group_216_2_1.jpg",
-            "image": "shopify://shop_images/Group_198_1_1.jpg",
+            "image_mobile": "shopify://shop_images/Group_216_3.jpg",
+            "image": "shopify://shop_images/Group_198_2.jpg",
             "banner_url": "shopify://pages/store-locations",
             "heading": "",
             "short_description": "",
