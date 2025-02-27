@@ -1037,9 +1037,14 @@
   &.bottom-space--true {
     padding-bottom: 95px;
   }
-  &.disable-grid__true .grid-scroll {
-    @media screen and (max-width: 980px) {
-      flex-direction: row;
+  &.disable-grid__true {
+    .grid-scroll {
+      @media screen and (max-width: 980px) {
+        flex-direction: row;
+      }
+    }
+    .rte-setting {
+      text-align: left;
     }
   }
   h2 {
