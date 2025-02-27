@@ -5,7 +5,23 @@
     <div class="theme-block" {{ block.shopify_attributes }}>
       {%- case block.type -%}
         {%- when 'heading' -%}
-          <h2>{{ block.settings.title | escape }}</h2>
+          {% assign text = block.settings.title %}
+          {% assign words = text | split: ' ' %}
+          
+          {% capture processed_words %}
+            {% for word in words %}
+              {% assign word_1 = word | slice: 0, 1 %}
+              {% assign word_2 = word | slice: -1 %}
+              
+              {% if word_1 == "{" and word_2 == "}" %}
+                {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+                <b>{{ new_word }}</b>
+              {% else %}
+                {{ word }}
+              {% endif %}
+            {% endfor %}
+          {% endcapture %}
+          <h2>{{ processed_words | strip }}</h2>
         {%- when 'page' -%}
           <div class="rte">
             {%- if block.settings.page_text != blank -%}
