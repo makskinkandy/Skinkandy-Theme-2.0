@@ -1037,22 +1037,22 @@
   &.bottom-space--true {
     padding-bottom: 95px;
   }
-  &.disable-grid__true {
-    .grid-scroll {
+  &.disable-grid__true .grid-scroll {
       @media screen and (max-width: 980px) {
         flex-direction: row;
         flex-wrap: wrap;
-      }
-      .grid__item {
-        @media screen and (max-width: 980px) {
-          flex: 1;
-        }
       }
       .rte-setting p,
       h2,
       h3 {
         text-align: left !important;
       }
+      .grid__item {
+        @media screen and (max-width: 980px) {
+          flex: 1;
+        }
+      }
+      
       .grid__item:first-child {
         @media screen and (max-width: 980px) {
           flex: 1 1 100%;
@@ -1066,7 +1066,6 @@
           }
         }
       }
-    }
   }
   h2 {
     font-size: 34px;
