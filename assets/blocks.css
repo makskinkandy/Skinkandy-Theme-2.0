@@ -1043,7 +1043,7 @@
         flex-direction: row;
       }
     }
-    .rte-setting {
+    .rte-setting p {
       text-align: left;
     }
   }
