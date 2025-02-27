@@ -352,7 +352,7 @@
             "center-content": false,
             "title": "{NEEDLE}",
             "title_size": "large",
-            "text": "<p>Standard Piercings</p>",
+            "text": "<p><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\">Standard Piercings</a></p>",
             "text_size": "large",
             "button_label": "",
             "button_link": ""
@@ -508,7 +508,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p>Want to upgrade to a premium piercing jewellery? We offer <strong>14K Solid Gold & Implant-Grade Titanium</strong> options (subject to availability). Chat with our team in-store!</p>"
+            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p><a href=\"#\" title=\"#\">Want to upgrade to a premium piercing jewellery?</a> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
           }
         }
       },
