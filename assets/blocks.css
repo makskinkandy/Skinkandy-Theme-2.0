@@ -1043,7 +1043,9 @@
         flex-direction: row;
       }
     }
-    .rte-setting p {
+    .rte-setting p,
+    h2,
+    h3 {
       text-align: left !important;
     }
   }
