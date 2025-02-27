@@ -518,7 +518,7 @@
         "text_rJThbY"
       ],
       "custom_css": [
-        "em {font-size: 14px;}",
+        "em {font-size: 14px; @media screen and (max-width: 980px) {font-si }}",
         "strong {color: #eb008c;}"
       ],
       "settings": {
