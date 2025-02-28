@@ -96,10 +96,14 @@
           
             {%- for media in product.media -%}
               {% assign show_media = false %}
+              {% assign is_variant_media = false %}
           
               {%- for variant in product.variants -%}
-                {% if variant.featured_media and variant.featured_media.id == media.id and variant.inventory_quantity > 0 %}
-                  {% assign show_media = true %}
+                {% if variant.featured_media and variant.featured_media.id == media.id %}
+                  {% assign is_variant_media = true %}
+                  {% if variant.inventory_quantity > 0 %}
+                    {% assign show_media = true %}
+                  {% endif %}
                 {% endif %}
               {%- endfor -%}
           
@@ -119,7 +123,7 @@
                 {% assign show_media = false %}
               {%- endif -%}
           
-              {% if show_media %}
+              {%- if show_media or is_variant_media == false -%} 
                 <div class="product__thumb-item"
                   data-index="{{ forloop.index0 }}"
                   {% if image_set %}
@@ -165,7 +169,7 @@
                     </a>
                   </div>
                 </div>
-              {% endif %}
+              {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
 
