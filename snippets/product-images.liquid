@@ -20,7 +20,7 @@
       <div class="product__main-photos" data-aos data-product-single-media-group>
         <div data-product-photos class="product-slideshow">
           {% assign main_media = product.featured_media %}
-          {% assign main_media_hidden = true %} {# Assume the main image should be hidden #}
+          {% assign main_media_hidden = true %}
           
           {%- for variant in product.variants -%}
             {% if variant.featured_media and variant.featured_media.id == main_media.id and variant.inventory_quantity > 0 %}
