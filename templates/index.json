@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "top_notification_banner_tkbKN6": {
+      "type": "top-notification-banner",
+      "settings": {
+        "enable": true,
+        "notification_text": "Our Customer Support Team are currently impacted by the severe weather across South East Queensland. If you are having trouble reaching us by phone, please book via our online webform, or pop into store and ask our team about a \"walk-in\" appointment.",
+        "bg_color": "#202020"
+      }
+    },
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
@@ -515,6 +523,7 @@
     }
   },
   "order": [
+    "top_notification_banner_tkbKN6",
     "header_banner_MUPtRQ",
     "rich_text_CxUzXV",
     "flipped_boxes_kG6gXk",
