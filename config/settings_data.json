@@ -144,7 +144,7 @@
     "enable_top_notification": true,
     "top-notification-banner": "Our Customer Support Team are currently impacted by the severe weather across South East Queensland. If you are having trouble reaching us by phone, please book via our online webform, or pop into store and ask our team about a \"walk-in\" appointment.",
     "text_color": "#ffffff",
-    "bg_color": "#e42329",
+    "bg_color": "#000000",
     "shipping_au": "Free shipping over $65",
     "shipping_nz": "Free shipping over $100",
     "checkout_header_image": "shopify://shop_images/black-bg.jpg",
