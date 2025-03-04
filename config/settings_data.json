@@ -142,7 +142,7 @@
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "",
     "enable_top_notification": true,
-    "top-notification-banner": "Our Customer Support Team are currently impacted by the severe weather across South East Queensland. If you are having trouble reaching us by phone, please book via our online webform, or pop into store and ask our team about a \"walk-in\" appointment. <a href=\"https://support.skinkandy.com/s/booking-form\" class=\"btn\" target=\"_blank\">BOOK NOW</a>",
+    "top-notification-banner": "Our Customer Support Team are currently impacted by the severe weather across South East Queensland. If you are having trouble reaching us by phone, please book via our online webform, or pop into store and ask our team about a \"walk-in\" appointment. <a href=\"https://support.skinkandy.com/s/booking-form\" class=\"btn\" target=\"_blank\" style=\"display: block\">BOOK NOW</a>",
     "text_color": "#ffffff",
     "bg_color": "#e42329",
     "shipping_au": "Free shipping over $65",
