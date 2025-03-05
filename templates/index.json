@@ -14,7 +14,7 @@
       "settings": {
         "enable": true,
         "notification_text": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
-        "bg_color": "#E42228"
+        "bg_color": "#e42228"
       }
     },
     "header_banner_MUPtRQ": {
@@ -22,6 +22,7 @@
       "blocks": {
         "image_8MBaRn": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile.jpg",
