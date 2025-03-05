@@ -16,9 +16,9 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile_1_1.jpg",
-            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop_1_1.jpg",
-            "banner_url": "",
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "{{ page.metafields.custom.banner_url.value }}",
             "heading": "",
             "short_description": "",
             "button_text": "",
