@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "top_notification_banner_hGVLtG": {
+      "type": "top-notification-banner",
+      "settings": {
+        "enable": true,
+        "notification_text": "Online orders may be delayed due to Cyclone Alfred. Thankyou for your patience!",
+        "bg_color": "#E42228"
+      }
+    },
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
@@ -511,14 +519,6 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
-    },
-    "top_notification_banner_hGVLtG": {
-      "type": "top-notification-banner",
-      "settings": {
-        "enable": true,
-        "notification_text": "Orders might take a little longer than usual due to Cyclone Alfred. Thanks for your patience!",
-        "bg_color": "#E42228"
-      }
     }
   },
   "order": [
