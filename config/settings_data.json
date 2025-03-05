@@ -142,7 +142,7 @@
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "",
     "enable_top_notification": true,
-    "top-notification-banner": "Online orders may be delayed due to Cyclone Alfred. Thankyou for your patience!",
+    "top-notification-banner": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
     "text_color": "#ffffff",
     "bg_color": "#e42329",
     "shipping_au": "Free shipping over $70",
