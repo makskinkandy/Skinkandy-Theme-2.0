@@ -13,8 +13,8 @@
       "type": "top-notification-banner",
       "settings": {
         "enable": true,
-        "notification_text": "Our Customer Support Team are currently impacted by the severe weather across South East Queensland. If you are having trouble reaching us by phone, please book via our online webform, or pop into store and ask our team about a \"walk-in\" appointment.",
-        "bg_color": "#202020"
+        "notification_text": "Orders might take a little longer than usual due to Cyclone Alfred. Thanks for your patience!",
+        "bg_color": "#c80a0a"
       }
     },
     "header_banner_MUPtRQ": {
