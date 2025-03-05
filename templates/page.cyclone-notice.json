@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "header_banner_taR3qN": {
+      "type": "header-banner",
+      "blocks": {
+        "image_CDmaCr": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile_1_1.jpg",
+            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop_1_1.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_CDmaCr"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -19,6 +47,7 @@
     }
   },
   "order": [
+    "header_banner_taR3qN",
     "main"
   ]
 }
