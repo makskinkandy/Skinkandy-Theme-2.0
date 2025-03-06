@@ -36,6 +36,7 @@
         },
         "image_gwR6Mm": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/EOSS_-_Mobile_Option_2.jpg",
