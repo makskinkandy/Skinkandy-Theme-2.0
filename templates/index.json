@@ -24,8 +24,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile.jpg",
-            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile_2_1.jpg",
+            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop_2_1.jpg",
             "banner_url": "shopify://pages/cyclone-alfred",
             "heading": "",
             "short_description": "",
