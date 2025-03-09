@@ -38,7 +38,7 @@
             {% if block.type == 'icon_text_block' %}
               <div class="icon-text-block">
                 <img src="{{ block.settings.icon | image_url }}" alt="Icon">
-                <div class="icon_text_content">
+                <div class="icon_text_content content-align--{{ block.settings.content_align }}">
                   {% if block.settings.icon_title != blank %}
                     <h3>{{ block.settings.icon_title }}</h3>
                   {% endif %}
@@ -206,7 +206,27 @@
           "type": "textarea",
           "id": "icon_content",
           "label": "Icon Content"
-        }
+        },
+        {
+        "type": "select",
+        "id": "content_align",
+        "label": "Content Align",
+        "default": "start",
+        "options": [
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          }
+        ]
+      },
       ]
     }
   ],

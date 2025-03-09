@@ -255,6 +255,7 @@
     {% if settings.disable_animations %}
       data-disable-animations="true"
     {% endif %}
+    data-created="{{ product.created_at | date: "%B %d, %Y" }}"
   >
     <!-- Google Tag Manager (noscript) -->
     <noscript

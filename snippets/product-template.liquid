@@ -190,7 +190,7 @@
                     {% endif %}
                   {%- when 'piercing-placement' -%}
                       {% assign exist = false %}
-                      {% assign piercing_tag = "earrings,earring,tongue,tongue bar,nipple,nipple bar,nose,septum,lip,eyebrow,belly,belly bar,belly button,belly ring,daith,cartilage,lobe,lobes,earlobes" | split: "," %}
+                      {% assign piercing_tag = "all ear,belly,belly bar,belly button,belly ring,cartilage,conch,curved,curved bar,curved barbell,daith,earlobes,eyebrow,forward helix,helix,horseshoe,lip,lobe,lobes,nipple,nipple bar,nose,navel,rook,segment ring,septum,smiley,tongue,tongue bar,tragus,vertical helix,vertical labret,vertical philtrum" | split: "," %}
                       {% for tag in product.tags %}
                         {% if piercing_tag contains tag %}
                           {% assign exist = true %}
@@ -210,53 +210,7 @@
                               <div id="Product-content-{{ block.id }}"
                                 class="collapsible-content collapsible-content--all">
                                 <div class="collapsible-content__inner rte">
-                                  <ul>
-                                    {% assign tag_map = '
-                                      tongue: Tongue,
-                                      tongue bar: Tongue,
-                                      nipple: Nipple,
-                                      nipple bar: Nipple,
-                                      nose: Nose,
-                                      septum: Septum,
-                                      lip: Lips,
-                                      eyebrow: Eyebrow,
-                                      belly: Navel,
-                                      belly bar: Navel,
-                                      belly button: Navel,
-                                      belly ring: Navel,
-                                      daith: Daith,
-                                      cartilage: Cartilage,
-                                      lobe: Lobes,
-                                      lobes: Lobes,
-                                      earlobes: Lobes,
-                                      tragus: Tragus,
-                                      conch: Conch,
-                                      helix: Helix,
-                                      rook: Rook
-                                    ' | strip_newlines | split: ',' %}
-                                    
-                                    {% assign matched_items = "" %}
-                                    
-                                    {% for pair in tag_map %}
-                                      {% assign parts = pair | split: ':' %}
-                                      {% assign tag = parts[0] | strip %}
-                                      {% assign label = parts[1] | strip %}
-                                    
-                                      {% if product.tags contains tag %}
-                                        {% unless matched_items contains label %}
-                                          {% assign matched_items = matched_items | append: label | append: ',' %}
-                                        {% endunless %}
-                                      {% endif %}
-                                    {% endfor %}
-                                    
-                                    {% assign matched_items = matched_items | split: ',' %}
-                                    
-                                    {% for item in matched_items %}
-                                      {% if item != "" %}
-                                        <li>{{ item }}</li>
-                                      {% endif %}
-                                    {% endfor %}
-                                  </ul>
+                                  {% render 'tag_map' %}
                                 </div>
                               </div>
                             </div>

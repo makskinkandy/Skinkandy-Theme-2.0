@@ -60,8 +60,8 @@
     "enable_product_reviews": false,
     "enable_product_grid_quick_add": true,
     "sale_image_1": "shopify://shop_images/trans-1px.png",
-    "sale_image_2": "shopify://shop_images/Product_Badge.png",
-    "sale_tag": "shop-sale",
+    "sale_image_2": "shopify://shop_images/BUY-3-GET-THE-4TH-FREE-PINK-AND-BLACK.png",
+    "sale_tag": "buy-3-free-4",
     "promo_collection": "",
     "custom_badge_img": "shopify://shop_images/Promo_Tab.png",
     "infinite_scrolling": false,
@@ -106,13 +106,13 @@
     "quick_add_popup_product_image": "shopify://shop_images/transparent-aftercare_1.png",
     "quick_add_popup_title": "<p>Don't forget your</p><h2>Aftercare</h2>",
     "quick_add_popup_text": "<h2>Did you know?</h2><p>Ongoing use of aftercare is essential in keeping your piercings happy and healthy. NeilMed is the must-have aftercare product to cleanse & care for your piercings.</p>",
-    "fst_step_one": "65",
+    "fst_step_one": "70",
     "fst_step_one_nz": "100",
     "fst_step_one_label": "Free Shipping",
-    "fst_target": "90",
+    "fst_target": "100",
     "fst_target_nz": "125",
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
-    "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE  EXPRESS SHIPPING</p>",
+    "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
     "ss_enable": true,
     "ss_search_only": true,
@@ -141,11 +141,11 @@
     "success_popup_button_text": "Book Now",
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "",
-    "enable_top_notification": true,
-    "top-notification-banner": "Orders might take a little longer than usual due to Cyclone Alfred. Thanks for your patience!",
+    "enable_top_notification": false,
+    "top-notification-banner": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
     "text_color": "#ffffff",
-    "bg_color": "#c80a0a",
-    "shipping_au": "Free shipping over $65",
+    "bg_color": "#e42329",
+    "shipping_au": "Free shipping over $70",
     "shipping_nz": "Free shipping over $100",
     "checkout_header_image": "shopify://shop_images/black-bg.jpg",
     "checkout_logo_image": "shopify://shop_images/SK_word_black_bg_94821a0e-7aa6-4e30-a438-ed4b27fd785f.png",
@@ -165,8 +165,8 @@
           "c0903157-a773-474f-84be-01032fac0f7c": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/sk_logo_main.png",
-              "logo_mobile": "shopify://shop_images/sk_logo_main.png",
+              "logo": "shopify://shop_images/Group_22_1_1.png",
+              "logo_mobile": "shopify://shop_images/Group_22_1_1.png",
               "desktop_logo_width": 180,
               "mobile_logo_width": 150
             }
@@ -174,14 +174,14 @@
           "f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15": {
             "type": "announcement",
             "settings": {
-              "link_text": "FREE SHIPPING ON ORDERS OVER $65",
+              "link_text": "FREE SHIPPING ON ORDERS OVER $70",
               "link": ""
             }
           },
           "31778dc5-bfaa-4e1d-9aa7-7f0971794dee": {
             "type": "announcement",
             "settings": {
-              "link_text": "FREE EXPRESS SHIPPING ON ORDERS OVER $90",
+              "link_text": "FREE EXPRESS SHIPPING ON ORDERS OVER $100",
               "link": ""
             }
           },
@@ -222,7 +222,7 @@
           "about_nav": "",
           "find_link": "shopify://pages/store-locations",
           "find_label": "find a store",
-          "country": "",
+          "country": "country",
           "book_now_link": "https://support.skinkandy.com/s/booking-form",
           "book_now_label": "Book a Piercing"
         }
@@ -239,7 +239,9 @@
         "blocks": {
           "78518a5a-082a-42fc-94d3-bf3430935e5d": {
             "type": "logo_social",
-            "settings": {}
+            "settings": {
+              "logo": "shopify://shop_images/Group_22_2.png"
+            }
           },
           "893cd2b2-00f2-450e-af4a-7d15023f6fd5": {
             "type": "menu",
@@ -668,6 +670,11 @@
     },
     "content_for_index": [],
     "blocks": {
+      "6279071938380501511": {
+        "type": "shopify://apps/form-builder-contact-form/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
       "13655089695959051254": {
         "type": "shopify://apps/wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -772,6 +779,31 @@
           "wishlist_path": "/apps/wishlist",
           "money_show_currency_code": true
         }
+      },
+      "starapps-vsk": {
+        "type": "shopify://apps/swatch-king-variants-options/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+        "disabled": false,
+        "settings": {
+          "alignment": "left",
+          "swatch_location": "After price",
+          "switch_on_hover": true,
+          "preselect_variant": false
+        }
+      },
+      "pagefly": {
+        "type": "shopify://apps/pagefly/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "573254258818049612": {
+        "type": "shopify://apps/crazy-egg/blocks/app-embed/7ea73823-6ad9-4252-a63e-088397d54aed",
+        "disabled": true,
+        "settings": {}
+      },
+      "5152489804016246972": {
+        "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
@@ -784,8 +816,10 @@
       ".form-image-section .section-form {max-width: 100%; background: transparent; box-shadow: none;}",
       "wishlist-button-collection .wk-floating {z-index: auto;}",
       ".grid__item[data-product-handle=\"sk-gift-card\"] .btn-quick-add,.grid__item[data-product-handle=\"sk-gift-card\"] .grid-product__price {display: none;}",
-      ".page-14kt-gold .ss__result--inline-banner,.site-\\/en-nz .ss__result--inline-banner {display: none;}",
-      ".page-shop-the-sale .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}"
+      ".page-14kt-gold .ss__result--inline-banner {display: none;}",
+      ".site-\\/en-nz .ss__result--inline-banner:has(> .ss__inline-banner .au-site) {display: none;}",
+      ".page-shop-the-sale .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
+      ".u-link--pin {text-decoration: none;}"
     ]
   }
 }

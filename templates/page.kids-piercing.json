@@ -1,1 +1,376 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"breadcrumbs":false,"heading":true,"content":false}},"header_banner_wxQ3Qx":{"type":"header-banner","blocks":{"image_8Gpt4n":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Homepage_Banner_10_1.jpg","image":"shopify:\/\/shop_images\/Homepage_Banner_9_1.jpg","banner_url":"","heading":"","short_description":"","button_text":"","button_url":"","align_text":"left"}}},"block_order":["image_8Gpt4n"],"settings":{"title":"","banner_size":"short-banner","small_overlay":true,"shuffle":false}},"columns_block_kCrxJB":{"type":"columns-block","blocks":{"text_block_XcLMcy":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":true,"image":"shopify:\/\/shop_images\/Group_163.jpg","video":"","center-content":true,"title":"","title_size":"small","text":"","text_size":"small","button_label":"","button_link":""}},"text_block_7f94bH":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"video":"","center-content":true,"title":"{KIDS} {EAR} {PIERCINGS:}  SAFE, FUN, AND SPECIAL ","title_size":"large","text":"<p>At SkinKandy, we specialise in providing safe and enjoyable ear piercings for kids, starting from as young as 6 months old. Our friendly, professional piercers take the time to consult with you and your child to ensure a safe and comfortable experience. <\/p><p>WHY CHOOSE SKINKANDY FOR YOUR CHILD’S EAR PIERCING? <\/p><p>We know that getting an ear piercing is an exciting milestone for your child, and we treat every piercing with the utmost care and attention. Our expert piercers have undergone specialised training as part of our comprehensive piercing program, ensuring they’re fully equipped to perform children’s lobe piercings with both skilland confidence. \u2028From start to finish, we create a welcoming and comfortable environment where your child will feel relaxed. We use only the best equipment and maintain the highest hygiene standards to ensure a safe and infection-free piercing experience.<\/p><p>OVER 70 STORES ACROSS AUSTRALIA & NEW ZEALAND <\/p>","text_size":"small","button_label":"Book Now","button_link":"shopify:\/\/pages\/skinkandy-piercing-menu"}}},"block_order":["text_block_XcLMcy","text_block_7f94bH"],"settings":{"dark_mode":false,"class":"","title":"","description":"","count":2,"bottom_space":false,"hide_line":false}},"columns_block_EVLU3C":{"type":"columns-block","blocks":{"text_block_HcNJxL":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"video":"","center-content":true,"title":"{THE} {SKINKANDY} {EXPERIENCE:}  SAFETY AND FUN COMBINED","title_size":"large","text":"<p>At SkinKandy, we make the ear-piercing process as fun and stress-free as possible. Here’s what you can expect when you visit us: <\/p><ul><li>IN-HOUSE ANATOMY CONSULTATION: We’ll ensure your child’s lobes are ready for a safe piercing. If the lobes are too small, we’ll advise waiting until they’re the right size.\u2028<\/li><li>DOUBLE OPERATOR SERVICE AVAILABLE: If your child is ready for both ear piercings, we offer a Double Operator Service*, where two piercers perform both piercings simultaneously. This makes the process faster and reduces the chance of your child feeling nervous. <br\/><em>* We suggest making a booking for the double operator service so that we can ensure two piercers are available at your preferred time. Please note that a $15 fee applies for that service. <\/em><\/li><li>GENTLE AND QUICK: Our piercers use the latest sterile, single-use cartridge system <a href=\"\/pages\/needle-free-piercings\" title=\"Needle Free Piercings\">(Read More)<\/a> and gentle hand pressure, ensuring a smooth, comfortable experience. <\/li><\/ul>","text_size":"small","button_label":"Book Now","button_link":"shopify:\/\/pages\/skinkandy-piercing-menu"}},"text_block_YWpbH3":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":true,"image":"shopify:\/\/shop_images\/Rectangle_9.jpg","video":"","center-content":false,"title":"","title_size":"small","text":"","text_size":"small","button_label":"","button_link":""}}},"block_order":["text_block_HcNJxL","text_block_YWpbH3"],"settings":{"dark_mode":false,"class":"","title":"","description":"","count":2,"bottom_space":false,"hide_line":false}},"columns_block_CqqbQM":{"type":"columns-block","blocks":{"text_block_JmmfzK":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"image":"shopify:\/\/shop_images\/image_25_1.jpg","video":"","center-content":false,"title":"14K SOLID GOLD:","title_size":"large","text":"<p>Hypoallergenic, durable, and beautiful. Our solid gold jewellery is perfect for little ears and won’t tarnish or wear down over time.<\/p>","text_size":"small","button_label":"Shop Now","button_link":"shopify:\/\/collections\/14kt-gold-old"}},"text_block_BEHQYK":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"image":"shopify:\/\/shop_images\/image_26_1.jpg","video":"","center-content":false,"title":"IMPLANT GRADE TITANIUM:","title_size":"large","text":"<p>Strong, lightweight, and nickel-free, implant grade titanium is an excellent choice for faster healing, especially for kids with sensitive skin. <\/p>","text_size":"small","button_label":"Shop Now","button_link":"shopify:\/\/collections\/titanium-old"}}},"block_order":["text_block_JmmfzK","text_block_BEHQYK"],"settings":{"dark_mode":false,"class":"","title":"{OUR} {JEWELLERY} {OPTIONS:} BEAUTIFUL AND SAFE ","description":"<p>Not only do we stock a large range of initial piercing jewellery (including titanium and 14kt solid gold), we also have a range of high-quality studs and sleepers in all kinds of fun designs to change to when the piercings are healed.<\/p>","count":2,"bottom_space":false,"hide_line":false}},"featured_collection_dCigGk":{"type":"featured-collection","settings":{"bg_color":"#ffffff","title":"UPGRADES FOR HEALED EARS","featured_collection":"kids-earrings","product_count":5,"product_limit":12,"heading_size":"h2","shop_all":"shopify:\/\/collections\/kids-earrings","bottom_border":true}},"two_column_icon_image_MgLHGd":{"type":"two-column-icon-image","blocks":{"title_block_eYxEkH":{"type":"title_block","settings":{"title":"{AFTERCARE} MADE EASY ","description":"<p>To ensure your child’s piercing heals properly, here are a few simple aftercare tips:<\/p>","button_text":"","button_url":"","text_align":"left"}},"icon_text_block_ygnkCh":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_11.png","icon_title":"","icon_content":"CLEAN DAILY WITH AFTERCARE"}},"icon_text_block_HyaAVf":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_6.png","icon_title":"","icon_content":"AVOID TOUCHING OR PLAYING WITH PIERCINGS "}},"icon_text_block_7RpMHW":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_7.png","icon_title":"","icon_content":"HELP MINIMISE SIDE SLEEPING: USE A TRAVEL PILLOW FOR COMFORT IF NEEDED"}},"icon_text_block_6anp3k":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_8.png","icon_title":"","icon_content":"AVOID SWIMMING DURING HEALING "}},"icon_text_block_LjWMBF":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_9.png","icon_title":"","icon_content":"CLEAN HANDS BEFORE CHANGING JEWELLERY "}},"icon_text_block_iLGfat":{"type":"icon_text_block","settings":{"icon":"shopify:\/\/shop_images\/Group_154_10.png","icon_title":"","icon_content":"KEEP HAIR PRODUCTS AWAY FROM PIERCING AREA "}},"title_block_zgxXkL":{"type":"title_block","settings":{"title":"","description":"","button_text":"SHOP NOW","button_url":"shopify:\/\/products\/piercing-aftercare-mist-spray-neilmed","text_align":"left"}}},"block_order":["title_block_eYxEkH","icon_text_block_ygnkCh","icon_text_block_HyaAVf","icon_text_block_7RpMHW","icon_text_block_6anp3k","icon_text_block_LjWMBF","icon_text_block_iLGfat","title_block_zgxXkL"],"settings":{"image":"shopify:\/\/shop_images\/Rectangle_9_1.jpg","left_align":true,"icon_column":true,"bottom_margin":true,"hide_mobile":false,"hide_description":false,"round_image":false,"circle_drops":false,"bottom_border":false,"reduced_image_size":false}},"header_banner_nArfYj":{"type":"header-banner","blocks":{"image_7DjTCa":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Group_216_2_1.jpg","image":"shopify:\/\/shop_images\/Group_198_1_1.jpg","banner_url":"shopify:\/\/pages\/store-locations","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}}},"block_order":["image_7DjTCa"],"settings":{"title":"","banner_size":"ads-banner","small_overlay":false,"shuffle":false}}},"order":["main","header_banner_wxQ3Qx","columns_block_kCrxJB","columns_block_EVLU3C","columns_block_CqqbQM","featured_collection_dCigGk","two_column_icon_image_MgLHGd","header_banner_nArfYj"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": false,
+        "heading": true,
+        "content": false
+      }
+    },
+    "header_banner_wxQ3Qx": {
+      "type": "header-banner",
+      "blocks": {
+        "image_8Gpt4n": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_10_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_9_1.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_8Gpt4n"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "columns_block_kCrxJB": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_XcLMcy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": true,
+            "image": "shopify://shop_images/Group_163.jpg",
+            "video": "",
+            "center-content": true,
+            "title": "",
+            "title_size": "small",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_7f94bH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "{KIDS} {EAR} {PIERCINGS:}  SAFE, FUN, AND SPECIAL ",
+            "title_size": "large",
+            "text": "<p>At SkinKandy, we specialise in providing safe and enjoyable ear piercings for kids, starting from as young as 6 months old. Our friendly, professional piercers take the time to consult with you and your child to ensure a safe and comfortable experience. </p><p>WHY CHOOSE SKINKANDY FOR YOUR CHILD’S EAR PIERCING? </p><p>We know that getting an ear piercing is an exciting milestone for your child, and we treat every piercing with the utmost care and attention. Our expert piercers have undergone specialised training as part of our comprehensive piercing program, ensuring they’re fully equipped to perform children’s lobe piercings with both skilland confidence.  From start to finish, we create a welcoming and comfortable environment where your child will feel relaxed. We use only the best equipment and maintain the highest hygiene standards to ensure a safe and infection-free piercing experience.</p><p>OVER 70 STORES ACROSS AUSTRALIA & NEW ZEALAND </p>",
+            "text_size": "small",
+            "button_label": "Book Now",
+            "button_link": "shopify://pages/skinkandy-piercing-menu"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_XcLMcy",
+        "text_block_7f94bH"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "columns_block_EVLU3C": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_HcNJxL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "{THE} {SKINKANDY} {EXPERIENCE:}  SAFETY AND FUN COMBINED",
+            "title_size": "large",
+            "text": "<p>At SkinKandy, we make the ear-piercing process as fun and stress-free as possible. Here’s what you can expect when you visit us: </p><ul><li>IN-HOUSE ANATOMY CONSULTATION: We’ll ensure your child’s lobes are ready for a safe piercing. If the lobes are too small, we’ll advise waiting until they’re the right size. </li><li>DOUBLE OPERATOR SERVICE AVAILABLE: If your child is ready for both ear piercings, we offer a Double Operator Service*, where two piercers perform both piercings simultaneously. This makes the process faster and reduces the chance of your child feeling nervous. <br/><em>* We suggest making a booking for the double operator service so that we can ensure two piercers are available at your preferred time. Please note that a $15 fee applies for that service. </em></li><li>GENTLE AND QUICK: Our piercers use the latest sterile, single-use cartridge system <a href=\"/pages/needle-free-piercings\" title=\"Needle Free Piercings\">(Read More)</a> and gentle hand pressure, ensuring a smooth, comfortable experience. </li></ul>",
+            "text_size": "small",
+            "button_label": "Book Now",
+            "button_link": "shopify://pages/skinkandy-piercing-menu"
+          }
+        },
+        "text_block_YWpbH3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": true,
+            "image": "shopify://shop_images/Rectangle_9.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_HcNJxL",
+        "text_block_YWpbH3"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "columns_block_CqqbQM": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_JmmfzK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/image_25_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "14K SOLID GOLD:",
+            "title_size": "large",
+            "text": "<p>Hypoallergenic, durable, and beautiful. Our solid gold jewellery is perfect for little ears and won’t tarnish or wear down over time.</p>",
+            "text_size": "small",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/14kt-gold-old"
+          }
+        },
+        "text_block_BEHQYK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/image_26_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "IMPLANT GRADE TITANIUM:",
+            "title_size": "large",
+            "text": "<p>Strong, lightweight, and nickel-free, implant grade titanium is an excellent choice for faster healing, especially for kids with sensitive skin. </p>",
+            "text_size": "small",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/titanium-old"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_JmmfzK",
+        "text_block_BEHQYK"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "{OUR} {JEWELLERY} {OPTIONS:} BEAUTIFUL AND SAFE ",
+        "description": "<p>Not only do we stock a large range of initial piercing jewellery (including titanium and 14kt solid gold), we also have a range of high-quality studs and sleepers in all kinds of fun designs to change to when the piercings are healed.</p>",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "featured_collection_dCigGk": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "UPGRADES FOR HEALED EARS",
+        "featured_collection": "kids-earrings",
+        "product_count": 5,
+        "product_limit": 12,
+        "heading_size": "h2",
+        "shop_all": "shopify://collections/kids-earrings",
+        "bottom_border": true
+      }
+    },
+    "two_column_icon_image_MgLHGd": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_eYxEkH": {
+          "type": "title_block",
+          "settings": {
+            "title": "{AFTERCARE} MADE EASY ",
+            "title_tag": "h2",
+            "description": "<p>To ensure your child’s piercing heals properly, here are a few simple aftercare tips:</p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        },
+        "icon_text_block_ygnkCh": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_11.png",
+            "icon_title": "",
+            "icon_content": "CLEAN DAILY WITH AFTERCARE",
+            "content_align": "center"
+          }
+        },
+        "icon_text_block_HyaAVf": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_6.png",
+            "icon_title": "",
+            "icon_content": "AVOID TOUCHING OR PLAYING WITH PIERCINGS ",
+            "content_align": "center"
+          }
+        },
+        "icon_text_block_7RpMHW": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_7.png",
+            "icon_title": "",
+            "icon_content": "HELP MINIMISE SIDE SLEEPING: USE A TRAVEL PILLOW FOR COMFORT IF NEEDED",
+            "content_align": "center"
+          }
+        },
+        "icon_text_block_6anp3k": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_8.png",
+            "icon_title": "",
+            "icon_content": "AVOID SWIMMING DURING HEALING ",
+            "content_align": "center"
+          }
+        },
+        "icon_text_block_LjWMBF": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_9.png",
+            "icon_title": "",
+            "icon_content": "CLEAN HANDS BEFORE CHANGING JEWELLERY ",
+            "content_align": "center"
+          }
+        },
+        "icon_text_block_iLGfat": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_10.png",
+            "icon_title": "",
+            "icon_content": "KEEP HAIR PRODUCTS AWAY FROM PIERCING AREA ",
+            "content_align": "center"
+          }
+        },
+        "title_block_zgxXkL": {
+          "type": "title_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "description": "",
+            "button_text": "SHOP NOW",
+            "button_url": "shopify://products/piercing-aftercare-mist-spray-neilmed",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_eYxEkH",
+        "icon_text_block_ygnkCh",
+        "icon_text_block_HyaAVf",
+        "icon_text_block_7RpMHW",
+        "icon_text_block_6anp3k",
+        "icon_text_block_LjWMBF",
+        "icon_text_block_iLGfat",
+        "title_block_zgxXkL"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_9_1.jpg",
+        "left_align": true,
+        "icon_column": true,
+        "bottom_margin": true,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": false
+      }
+    },
+    "header_banner_nArfYj": {
+      "type": "header-banner",
+      "blocks": {
+        "image_7DjTCa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Group_216_3.jpg",
+            "image": "shopify://shop_images/Group_198_2.jpg",
+            "banner_url": "shopify://pages/store-locations",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_7DjTCa"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "ads-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "header_banner_wxQ3Qx",
+    "columns_block_kCrxJB",
+    "columns_block_EVLU3C",
+    "columns_block_CqqbQM",
+    "featured_collection_dCigGk",
+    "two_column_icon_image_MgLHGd",
+    "header_banner_nArfYj"
+  ]
+}

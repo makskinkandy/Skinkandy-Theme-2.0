@@ -8661,6 +8661,10 @@ html[dir=rtl] .grid-product__content{
   border-radius: 50%;
   width: 80px;
   aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   @media screen and (max-width:980px) {
     max-width: 60px;
   }
@@ -16114,4 +16118,8 @@ span.on-sale-divider {
 
 .feature-collection .grid__image-ratio {
   position: unset;
+}
+
+.highlight {
+  color: var(--colorBtnPrimaryLight);
 }

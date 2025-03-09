@@ -9,51 +9,45 @@
  */
 {
   "sections": {
-    "header_banner_YbRgUc": {
+    "header_banner_taR3qN": {
       "type": "header-banner",
       "blocks": {
-        "image_LTQhQM": {
+        "image_CDmaCr": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image": "shopify://shop_images/7R507709.jpg",
-            "banner_url": "",
-            "heading": "Piercing 101",
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "{{ page.metafields.custom.banner_url.value }}",
+            "heading": "",
             "short_description": "",
             "button_text": "",
             "button_url": "",
-            "align_text": "left"
+            "align_text": "center"
           }
         }
       },
       "block_order": [
-        "image_LTQhQM"
+        "image_CDmaCr"
       ],
       "settings": {
         "title": "",
-        "banner_size": "small-banner",
-        "small_overlay": true,
+        "banner_size": "short-banner",
+        "small_overlay": false,
         "shuffle": false
       }
     },
     "main": {
-      "type": "blog-template",
+      "type": "main-page",
       "settings": {
-        "hide_default_header": true,
-        "hide_breadcrumbs": false,
-        "blog_show_tag_filter": false,
-        "blog_show_rss": false,
-        "blog_show_tags": false,
-        "blog_show_date": false,
-        "blog_show_comments": false,
-        "blog_show_author": false,
-        "blog_show_excerpt": true,
-        "blog_image_size": "square"
+        "breadcrumbs": false,
+        "heading": true,
+        "content": true
       }
     }
   },
   "order": [
-    "header_banner_YbRgUc",
+    "header_banner_taR3qN",
     "main"
   ]
 }

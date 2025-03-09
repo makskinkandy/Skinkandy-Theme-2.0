@@ -341,7 +341,7 @@
       "quantity": "Quantity",
       "add_to_cart": "Add to Basket",
       "preorder": "Pre-order",
-      "include_taxes": "Free shipping over $65",
+      "include_taxes": "Free shipping over $70",
       "shipping_policy_html": "<a href='{{ link }}'>SHIPPING POLICY</a>",
       "will_not_ship_until": "Ready to ship {{ date }}",
       "will_be_in_stock_after": "Back in stock {{ date }}",

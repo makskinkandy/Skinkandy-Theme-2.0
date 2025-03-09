@@ -1,0 +1,61 @@
+<ul>
+  {% assign tag_map = '
+    all ear: Helix|Flat|Conch|Tragus|Anti-Tragus|Rook,  
+    belly: Navel,  
+    belly bar: Navel,  
+    belly button: Navel,  
+    belly ring: Navel,  
+    cartilage: Cartilage,  
+    conch: Conch,  
+    curved: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+    curved bar: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+    curved barbell: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+    daith: Daith,  
+    earlobes: Lobes,  
+    eyebrow: Eyebrow,  
+    forward helix: Forward Helix,  
+    helix: Helix,  
+    horseshoe: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+    lip: Lips,  
+    lobe: Lobes,  
+    lobes: Lobes,  
+    nipple: Nipple,  
+    nipple bar: Nipple,  
+    nose: Nose,  
+    navel: Navel,  
+    rook: Rook,  
+    segment ring: Smiley|Daith|Septum|Tragus|Helix|Lip|Labret|Conch|Nostril,  
+    septum: Septum,  
+    smiley: Smiley,  
+    tongue: Tongue,  
+    tongue bar: Tongue,  
+    tragus: Tragus,  
+    vertical helix: Vertical Helix,  
+    vertical labret: Vertical Labret,  
+    vertical philtrum: Vertical Philtrum
+  ' | strip_newlines | split: ',' %}
+  
+{% assign matched_items = "" %}
+
+{% for pair in tag_map %}
+  {% assign parts = pair | split: ':' %}
+  {% assign tag = parts[0] | strip %}
+  {% assign labels = parts[1] | strip | split: '|' %}
+
+  {% if product.tags contains tag %}
+    {% for label in labels %}
+      {% unless matched_items contains label %}
+        {% assign matched_items = matched_items | append: label | append: ',' %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign matched_items = matched_items | split: ',' %}
+
+{% for item in matched_items %}
+  {% if item != "" %}
+    <li>{{ item }}</li>
+  {% endif %}
+{% endfor %}
+</ul>
