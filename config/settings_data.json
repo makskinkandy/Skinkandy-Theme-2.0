@@ -141,7 +141,7 @@
     "success_popup_button_text": "Book Now",
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "",
-    "enable_top_notification": true,
+    "enable_top_notification": false,
     "top-notification-banner": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
     "text_color": "#ffffff",
     "bg_color": "#e42329",
