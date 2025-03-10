@@ -235,8 +235,8 @@
         window.location.href = "{{ '/pages/why-downsize-your-piercing' | url }}";
       }
     </script>
-    {% include 'pagefly-app-header' %}
-  </head>
+    
+  {% include 'pagefly-app-header' %}</head>
 
   <body
     class='template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %} {% if settings.ss_enable and collection.handle and collection.handle == settings.ss_collection_handle %} ss-shop{% endif %} page-{{ handle }} site-{{ request.locale.root_url }}'
