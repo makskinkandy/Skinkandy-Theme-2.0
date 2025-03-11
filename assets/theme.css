@@ -16132,8 +16132,11 @@ span.on-sale-divider {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  input,
-  .field {
+  input {
     width: 100%;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
   }
 }
