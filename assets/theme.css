@@ -16123,3 +16123,16 @@ span.on-sale-divider {
 .highlight {
   color: var(--colorBtnPrimaryLight);
 }
+
+.password-protected {
+  max-width: 420px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  input {
+    width: 100%;
+  }
+}
