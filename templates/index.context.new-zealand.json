@@ -15,12 +15,7 @@
   "sections": {
     "header_banner_MUPtRQ": {
       "settings": {},
-      "blocks": {
-        "image_8MBaRn": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
+      "blocks": {}
     }
   }
 }
