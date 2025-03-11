@@ -11,13 +11,13 @@
     </header>
     {% if block.settings.custom_filter_1 != blank or block.settings.custom_filter_2 != blank or block.settings.custom_filter_3 != blank %}
       <div class="custom-filter__wrapper">
-        {% if block.settings.custom_filter_1 %}
+        {% if block.settings.custom_filter_1 != blank %}
           <a class="ss__list__link btn btn--primary" href="{{ block.settings.custom_filter_1 }}">{{ block.settings.custom_filter_1_text }}</a>
         {% endif %}
-        {% if block.settings.custom_filter_2 %}
+        {% if block.settings.custom_filter_2 != blank %}
           <a class="ss__list__link btn btn--primary" href="{{ block.settings.custom_filter_2 }}">{{ block.settings.custom_filter_2_text }}</a>
         {% endif %}
-        {% if block.settings.custom_filter_3%}
+        {% if block.settings.custom_filter_3 != blank %}
           <a class="ss__list__link btn btn--primary" href="{{ block.settings.custom_filter_3 }}">{{ block.settings.custom_filter_3_text }}</a>
         {% endif %}
       </div>
