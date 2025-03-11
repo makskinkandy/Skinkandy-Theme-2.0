@@ -1,113 +1,150 @@
-<div
-  id="CollectionAjaxResult"
-  class="collection-content"
-  data-section-id="{{ section.id }}"
-  data-section-type="collection-template"
-  style="background-color: {{ section.settings.bg_color }}"
->
-  {%- assign collection_header_block = section.blocks | where: 'type', 'collection_header' | first -%}
-  {% if collection_header_block != blank %}
-    {%- render 'collection-header', collection: collection, block: collection_header_block -%}
+{% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
+  {% assign pageParams = contentForQueryString
+    | split: '"pageurl":"'
+    | last
+    | split: '"'
+    | first
+    | split: '.myshopify.com'
+    | last
+    | split: '?'
+    | last
+    | replace: '\/', '/'
+    | replace: '%20', ' '
+    | replace: '\u0026', '&'
+    | split: '&'
+  %}
+
+{% for param in pageParams %}
+  {% if param contains 'password=' %}
+  {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
   {% endif %}
+{% endfor %}
 
-  <div id="CollectionAjaxContent" class="collection-ajax-content">
-    {% if settings.ss_enable %}
-
-      {% comment %} Searchspring collection content/sidebar {% endcomment %}
-
-      <div id="searchspring-content">
-        <div style="display: grid; place-items: center; min-height: 300px;">
-          {%- if settings.ss_collection_loading_text != blank -%}
-            <div style="align-self: flex-end; max-width: 30em; padding: 1em; text-align: center">{{ settings.ss_collection_loading_text }}</div>
-          {%- endif -%}
-          <div class="btn btn--loading" style="--colorBtnPrimaryDim: transparent; --colorBtnPrimaryText: black; pointer-events: none; align-self: flex-start; padding: 0 10px; height: 44px;"></div>
+{% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
+  <div
+    id="CollectionAjaxResult"
+    class="collection-content"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-template"
+    style="background-color: {{ section.settings.bg_color }}"
+  >
+    {%- assign collection_header_block = section.blocks | where: 'type', 'collection_header' | first -%}
+    {% if collection_header_block != blank %}
+      {%- render 'collection-header', collection: collection, block: collection_header_block -%}
+    {% endif %}
+  
+    <div id="CollectionAjaxContent" class="collection-ajax-content">
+      {% if settings.ss_enable %}
+  
+        {% comment %} Searchspring collection content/sidebar {% endcomment %}
+  
+        <div id="searchspring-content">
+          <div style="display: grid; place-items: center; min-height: 300px;">
+            {%- if settings.ss_collection_loading_text != blank -%}
+              <div style="align-self: flex-end; max-width: 30em; padding: 1em; text-align: center">{{ settings.ss_collection_loading_text }}</div>
+            {%- endif -%}
+            <div class="btn btn--loading" style="--colorBtnPrimaryDim: transparent; --colorBtnPrimaryText: black; pointer-events: none; align-self: flex-start; padding: 0 10px; height: 44px;"></div>
+          </div>
         </div>
-      </div>
-
-    {% else %}
-
-      {% comment %} Default collection content/sidebar {% endcomment %}
-
-      {% render 'collection-sidebar', section: section %}
-
-      <div class="collection-filter-wrapper">
-        <div class="page-width">
-          <div class="collection-filter">
-            {%- liquid
-              assign current_filter_size = 0
-
-              for filter in collection.filters
-                assign current_filter_size = current_filter_size | plus: filter.active_values.size
-              endfor
-            -%}
-            <div class="collection-filter__item collection-filter__item--drawer">
-              <button
-                  type="button"
-                  class="js-drawer-open-collection-filters btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %}"
-                  aria-controls="FilterDrawer">
-                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" width="24" height="20" viewBox="0 0 24 20"><path d="M4 19v-7m0-4V1m8 18v-9m0-4V1m8 18v-5m0-4V1M1 12h6m2-6h6m2 8h6" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/></svg>
-                {{ 'collections.filters.title_tags' | t }}
-                {%- if current_filter_size > 0 -%}
-                  ({{ current_filter_size }})
+  
+      {% else %}
+  
+        {% comment %} Default collection content/sidebar {% endcomment %}
+  
+        {% render 'collection-sidebar', section: section %}
+  
+        <div class="collection-filter-wrapper">
+          <div class="page-width">
+            <div class="collection-filter">
+              {%- liquid
+                assign current_filter_size = 0
+  
+                for filter in collection.filters
+                  assign current_filter_size = current_filter_size | plus: filter.active_values.size
+                endfor
+              -%}
+              <div class="collection-filter__item collection-filter__item--drawer">
+                <button
+                    type="button"
+                    class="js-drawer-open-collection-filters btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %}"
+                    aria-controls="FilterDrawer">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" width="24" height="20" viewBox="0 0 24 20"><path d="M4 19v-7m0-4V1m8 18v-9m0-4V1m8 18v-5m0-4V1M1 12h6m2-6h6m2 8h6" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/></svg>
+                  {{ 'collections.filters.title_tags' | t }}
+                  {%- if current_filter_size > 0 -%}
+                    ({{ current_filter_size }})
+                  {%- endif -%}
+                </button>
+              </div>
+  
+              <div class="collection-filter__item collection-filter__item--count small--hide">
+                {%- if section.settings.enable_collection_count -%}
+                  {{ 'collections.general.items_with_count' | t: count: collection.products_count }}
                 {%- endif -%}
-              </button>
-            </div>
-
-            <div class="collection-filter__item collection-filter__item--count small--hide">
-              {%- if section.settings.enable_collection_count -%}
-                {{ 'collections.general.items_with_count' | t: count: collection.products_count }}
-              {%- endif -%}
-            </div>
-
-            <div class="collection-filter__item collection-filter__item--sort">
-              <div class="collection-filter__sort-container">
-                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
-                <select name="SortBy" id="SortBy" data-default-sortby="{{ collection.default_sort_by }}">
-                  <option value="" selected>{{ 'collections.sorting.title' | t }}</option>
-                  {%- for option in collection.sort_options -%}
-                    <option value="{{ option.value }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name }}</option>
-                  {%- endfor -%}
-                </select>
+              </div>
+  
+              <div class="collection-filter__item collection-filter__item--sort">
+                <div class="collection-filter__sort-container">
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
+                  <select name="SortBy" id="SortBy" data-default-sortby="{{ collection.default_sort_by }}">
+                    <option value="" selected>{{ 'collections.sorting.title' | t }}</option>
+                    {%- for option in collection.sort_options -%}
+                      <option value="{{ option.value }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name }}</option>
+                    {%- endfor -%}
+                  </select>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="page-width collection-grid-wrapper">
-        <div class="grid">
-          <div class="grid__item grid__item--content">
-            <div class="collection-grid__wrapper">
-              {% render 'collection-template', section: section %}
+  
+        <div class="page-width collection-grid-wrapper">
+          <div class="grid">
+            <div class="grid__item grid__item--content">
+              <div class="collection-grid__wrapper">
+                {% render 'collection-template', section: section %}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-    {% endif %}
+  
+      {% endif %}
+    </div>
   </div>
-</div>
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "CollectionPage",
-  {% if collection.description != blank %}
-    "description": {{ collection.description | strip_html | json }},
-  {% endif %}
-  {% if page_image %}
-    {% assign image_size = page_image.width | append: 'x' %}
-    "image": {
-      "@type": "ImageObject",
-      "height": {{ page_image.height | json }},
-      "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
-      "width": {{ page_image.width | json }}
-    },
-  {% endif %}
-  "name": {{ collection.title | json }}
-}
-</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "CollectionPage",
+    {% if collection.description != blank %}
+      "description": {{ collection.description | strip_html | json }},
+    {% endif %}
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "image": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ collection.title | json }}
+  }
+  </script>
+{% else %}
+  <p>
+    {% if pagePassword %}
+    {{ section.settings.wrong_password_prompt_text }}
+    {% else %}
+    {{ section.settings.password_prompt_text }}
+    {%  endif %}
+  </p>
+  <div class="field">
+    <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?password=' + this.value; }"/>
+    <br>
+    <button type="button" class="button" onclick="window.location.href = '{{ request.path }}?password=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
+  </div>
+{% endif %}
 
 {% schema %}
 {
@@ -169,6 +206,24 @@
       "id": "enable_collection_count",
       "label": "Enable collection count",
       "default": true
+    },
+    {
+      "id": "password_prompt_text",
+      "type": "text",
+      "label": "Text to tell visitor to input password",
+      "default": "Please input password to view this page"
+    },
+    {
+      "id": "wrong_password_prompt_text",
+      "type": "text",
+      "label": "Text to tell visitor to input a correct password",
+      "default": "Wrong password, please try again"
+    },
+    {
+      "id": "submit_password_text",
+      "type": "text",
+      "label": "Text for the submit password button",
+      "default": "Submit"
     }
   ],
   "blocks": [
