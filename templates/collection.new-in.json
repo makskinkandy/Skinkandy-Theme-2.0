@@ -126,9 +126,9 @@
           "type": "collection_header",
           "settings": {
             "title_color": "#000000",
-            "custom_filter_1": "/filter:collection_name:Elevated$2520Everyday",
+            "custom_filter_1": "/collections/new-in/filter:collection_name:Elevated$2520Everyday",
             "custom_filter_1_text": "Elevated Everyday",
-            "custom_filter_2": "/filter:collection_name:Luxury$2520Navel",
+            "custom_filter_2": "/collections/new-in/filter:collection_name:Luxury$2520Navel",
             "custom_filter_2_text": "Luxury Navel",
             "custom_filter_3": "",
             "custom_filter_3_text": ""
