@@ -120,7 +120,7 @@
       }
     },
     "main-collection": {
-      "type": "main-collection",
+      "type": "main-collection-afterpay",
       "blocks": {
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484": {
           "type": "collection_header",
