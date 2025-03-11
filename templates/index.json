@@ -21,29 +21,13 @@
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
-        "image_8MBaRn": {
+        "image_chJCWB": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile_2_1.jpg",
-            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop_2_1.jpg",
-            "banner_url": "shopify://pages/cyclone-alfred",
-            "heading": "",
-            "short_description": "",
-            "button_text": "",
-            "button_url": "",
-            "align_text": "center"
-          }
-        },
-        "image_gwR6Mm": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/EOSS_-_Mobile_Option_2.jpg",
-            "image": "shopify://shop_images/EOSS_-_Desktop_Option_3.jpg",
-            "banner_url": "shopify://collections/shop-the-sale",
+            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-NPL-March-11.jpg",
+            "image": "shopify://shop_images/Homepage-Banner-Desktop-NPL-March-11.jpg",
+            "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -81,8 +65,7 @@
         }
       },
       "block_order": [
-        "image_8MBaRn",
-        "image_gwR6Mm",
+        "image_chJCWB",
         "image_A78HWU",
         "image_DREBap"
       ],
