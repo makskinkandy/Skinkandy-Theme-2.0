@@ -37,6 +37,7 @@
         },
         "image_A78HWU": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/NPL_Feb_17th_-_Mobile_1.jpg",
