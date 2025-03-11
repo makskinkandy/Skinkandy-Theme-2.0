@@ -16123,3 +16123,9 @@ span.on-sale-divider {
 .highlight {
   color: var(--colorBtnPrimaryLight);
 }
+
+a.ss__list__link.btn.btn--primary {
+  @media scree and (max-width: 429px) {
+    margin-bottom: 10px;
+  }
+}
