@@ -171,8 +171,7 @@
         "password_prompt_text": "Please input password to view this page",
         "wrong_password_prompt_text": "Wrong password, please try again",
         "submit_password_text": "Submit",
-        "header_banner": "shopify://shop_images/Homepage_Banner_3_1.webp",
-        "header_banner_mobile": "shopify://shop_images/Homepage_Banner_-_Mobile.webp"
+        "header_banner": "shopify://shop_images/Homepage_Banner_-_Mobile.webp"
       }
     },
     "1642136988303d16d6": {
