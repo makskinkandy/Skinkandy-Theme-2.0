@@ -16139,13 +16139,16 @@ span.on-sale-divider {
   margin-bottom: 100px;
   input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+    height: 60px;
   }
   p {
     margin-bottom: 10px;
   }
   img {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   .btn {
     width: 100%;
