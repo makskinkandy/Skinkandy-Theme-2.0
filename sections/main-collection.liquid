@@ -143,7 +143,7 @@
       {{ section.settings.password_prompt_text }}
       {%  endif %}
     </p>
-    <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?password=' + this.value; }"/>
+    <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?key=' + this.value; }"/>
     <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
   </div>
   <style>
