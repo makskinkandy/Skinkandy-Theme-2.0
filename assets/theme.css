@@ -16144,16 +16144,7 @@ span.on-sale-divider {
   p {
     margin-bottom: 10px;
   }
-}
-.password-protected__banner {
-  .desktop {
-    @media screen and (max-width: 980px) {
-      display: none;
-    }
-  }
-  .mobile {
-    @media screen and (min-width: 981px) {
-      display: none;
-    }
+  img {
+    margin-bottom: 15px;
   }
 }
