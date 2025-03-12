@@ -20,15 +20,17 @@
   {% endif %}
 {% endfor %}
 
-{% assign md5_api_url = "https://api.hashify.net/hash/md5/hex?value=" | append: pagePassword %}
+<script>
+  const stringToHash = "your_string_here";
+  fetch(`https://api.hashify.net/hash/md5/hex?value=${encodeURIComponent(stringToHash)}`)
+    .then(response => response.json())
+    .then(data => {
+      {% assign md5Password = data.Digest %}
+    })
+    .catch(error => console.error("Error fetching hash:", error));
+</script>
 
-{% capture md5_hash %}
-  {% render md5_api_url %}
-{% endcapture %}
-
-{{ md5_hash }}
-
-{% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
+{% if collection.metafields.custom.password == empty or collection.metafields.custom.password == md5Password %}
   <div
     id="CollectionAjaxResult"
     class="collection-content"
