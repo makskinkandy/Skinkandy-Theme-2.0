@@ -16147,4 +16147,8 @@ span.on-sale-divider {
   img {
     margin-bottom: 15px;
   }
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }
