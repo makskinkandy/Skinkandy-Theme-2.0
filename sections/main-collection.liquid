@@ -20,6 +20,14 @@
   {% endif %}
 {% endfor %}
 
+{% assign md5_api_url = "https://api.hashify.net/hash/md5/hex?value=" | append: pagePassword %}
+
+{% capture md5_hash %}
+  {% render md5_api_url %}
+{% endcapture %}
+
+{{ md5_hash }}
+
 {% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
   <div
     id="CollectionAjaxResult"
