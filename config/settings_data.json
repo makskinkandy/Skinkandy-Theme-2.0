@@ -165,8 +165,6 @@
           "c0903157-a773-474f-84be-01032fac0f7c": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/Group_22_1_1.png",
-              "logo_mobile": "shopify://shop_images/Group_22_1_1.png",
               "desktop_logo_width": 180,
               "mobile_logo_width": 150
             }
@@ -200,8 +198,8 @@
           "e9c59e14-cd9c-485a-8447-d2a9d70140bb"
         ],
         "settings": {
-          "main_menu_link_list": "new-menu-1",
-          "mobile_menu_link_list": "new-menu-1",
+          "main_menu_link_list": "main-menu",
+          "mobile_menu_link_list": "main-menu",
           "main_menu_alignment": "left",
           "header_style": "sticky",
           "sticky_index": false,
@@ -222,7 +220,7 @@
           "about_nav": "",
           "find_link": "shopify://pages/store-locations",
           "find_label": "find a store",
-          "country": "country",
+          "country": "",
           "book_now_link": "https://support.skinkandy.com/s/booking-form",
           "book_now_label": "Book a Piercing"
         }
@@ -239,9 +237,7 @@
         "blocks": {
           "78518a5a-082a-42fc-94d3-bf3430935e5d": {
             "type": "logo_social",
-            "settings": {
-              "logo": "shopify://shop_images/Group_22_2.png"
-            }
+            "settings": {}
           },
           "893cd2b2-00f2-450e-af4a-7d15023f6fd5": {
             "type": "menu",
@@ -670,11 +666,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "6279071938380501511": {
-        "type": "shopify://apps/form-builder-contact-form/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
-        "disabled": false,
-        "settings": {}
-      },
       "13655089695959051254": {
         "type": "shopify://apps/wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -779,31 +770,6 @@
           "wishlist_path": "/apps/wishlist",
           "money_show_currency_code": true
         }
-      },
-      "starapps-vsk": {
-        "type": "shopify://apps/swatch-king-variants-options/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
-        "disabled": false,
-        "settings": {
-          "alignment": "left",
-          "swatch_location": "After price",
-          "switch_on_hover": true,
-          "preselect_variant": false
-        }
-      },
-      "pagefly": {
-        "type": "shopify://apps/pagefly/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
-      },
-      "573254258818049612": {
-        "type": "shopify://apps/crazy-egg/blocks/app-embed/7ea73823-6ad9-4252-a63e-088397d54aed",
-        "disabled": true,
-        "settings": {}
-      },
-      "5152489804016246972": {
-        "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
