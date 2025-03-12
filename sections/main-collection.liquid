@@ -151,8 +151,9 @@
       display: none;
     }
     div#PageContainer {
-      background: url('{{ section.settings.header_banner | image_url }}');
+      background-image: url('{{ section.settings.header_banner | image_url }}');
       background-size: cover;
+      background-position: center;
     }
     .transition-body {
       height: 100vh;
