@@ -20,7 +20,6 @@
   {% endif %}
 {% endfor %}
 
-
 {% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
   <div
     id="CollectionAjaxResult"
@@ -144,8 +143,8 @@
       {{ section.settings.password_prompt_text }}
       {%  endif %}
     </p>
-    <input type="password" id="userInput" class="field__input" placeholder="Password" autofocus autocomplete="off" />
-    <button id="saveButton" type="button" class="btn btn--primary">{{ section.settings.submit_password_text }}</button>
+    <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?key=' + this.value; }"/>
+    <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
   </div>
   <style>
     .searchspring-recommendations {
@@ -170,16 +169,6 @@
       justify-content: center;
     }
   </style>
-  <script>
-    document.getElementById("saveButton").addEventListener("click", function() {
-        let userInput = document.getElementById("userInput").value;
-        
-        if (userInput) {
-            document.cookie = "userInput=" + encodeURIComponent(userInput) + "; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            location.reload();
-        }
-    });
-  </script>
 {% endif %}
 
 {% schema %}
