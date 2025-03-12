@@ -785,7 +785,7 @@
       ".grid__item[data-product-handle=\"sk-gift-card\"] .btn-quick-add,.grid__item[data-product-handle=\"sk-gift-card\"] .grid-product__price {display: none;}",
       ".page-14kt-gold .ss__result--inline-banner {display: none;}",
       ".site-\\/en-nz .ss__result--inline-banner:has(> .ss__inline-banner .au-site) {display: none;}",
-      ".page-shop-the-sale .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
+      ".page-new-in .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
       ".u-link--pin {text-decoration: none;}"
     ]
   }

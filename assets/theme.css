@@ -16124,6 +16124,12 @@ span.on-sale-divider {
   color: var(--colorBtnPrimaryLight);
 }
 
+a.ss__list__link.btn.btn--primary {
+  @media screen and (max-width: 429px) {
+    margin-bottom: 10px;
+  }
+}
+
 .password-protected {
   max-width: 450px;
   margin-inline: auto;

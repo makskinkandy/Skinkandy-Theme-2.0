@@ -21,29 +21,13 @@
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
-        "image_8MBaRn": {
+        "image_chJCWB": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Cyclone_Notice_-_Mobile_2_1.jpg",
-            "image": "shopify://shop_images/Cyclone_Notice_-_Desktop_2_1.jpg",
-            "banner_url": "shopify://pages/cyclone-alfred",
-            "heading": "",
-            "short_description": "",
-            "button_text": "",
-            "button_url": "",
-            "align_text": "center"
-          }
-        },
-        "image_gwR6Mm": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/EOSS_-_Mobile_Option_2.jpg",
-            "image": "shopify://shop_images/EOSS_-_Desktop_Option_3.jpg",
-            "banner_url": "shopify://collections/shop-the-sale",
+            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-NPL-March-11.jpg",
+            "image": "shopify://shop_images/Homepage-Banner-Desktop-NPL-March-11.jpg",
+            "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -53,6 +37,7 @@
         },
         "image_A78HWU": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/NPL_Feb_17th_-_Mobile_1.jpg",
@@ -81,8 +66,7 @@
         }
       },
       "block_order": [
-        "image_8MBaRn",
-        "image_gwR6Mm",
+        "image_chJCWB",
         "image_A78HWU",
         "image_DREBap"
       ],
@@ -266,157 +250,143 @@
     "collection_showcase_dPaT8V": {
       "type": "collection-showcase",
       "blocks": {
-        "image_aRyBR3": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Nose Ring Hinged Segment",
-            "url": "shopify://products/titanium-hinged-segment-ring",
-            "image": "shopify://shop_images/image_2.jpg"
-          }
-        },
-        "image_rTRWc6": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Labret Stud Internally Threaded with Gem",
-            "url": "shopify://products/titanium-round-gem-internally-threaded-labret",
-            "image": "shopify://shop_images/Rectangle_12.jpg"
-          }
-        },
-        "image_wAawnz": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Square CZ Stud Earrings",
-            "url": "shopify://products/titanium-square-cz-stud-earrings",
-            "image": "shopify://shop_images/image_3_6f22b58f-f6e0-430a-9092-51c68c9cc520.jpg"
-          }
-        },
-        "image_4xFNFR": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Nose Stud Twist with Deep Set CZ",
-            "url": "shopify://products/titanium-press-fit-gem-nose-twist",
-            "image": "shopify://shop_images/image_6.jpg"
-          }
-        },
-        "image_cz93Te": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Steel Belly Ring with Gem",
-            "url": "shopify://products/steel-belly-ring-with-gem",
-            "image": "shopify://shop_images/image_5.jpg"
-          }
-        },
-        "image_eJUQfY": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Steel Barbell with Acrylic Coloured Ball Ends",
-            "url": "shopify://products/steel-barbell-with-acrylic-coloured-ball-ends",
-            "image": "shopify://shop_images/image_7.jpg"
-          }
-        },
         "image_EmW3YP": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Cubic Zirconia Lined Nipple Clicker",
-            "url": "shopify://products/cubic-zirconia-lined-nipple-clicker",
-            "image": "shopify://shop_images/image_8.jpg"
+            "title": "Titanium Flatback with Blue Eye Cubic Zirconia",
+            "url": "shopify://products/titanium-blue-eye-cubic-zirconia-flatback-earring",
+            "image": "shopify://shop_images/9355442045838.jpg"
           }
         },
-        "image_6TWpi6": {
+        "image_PGUbpy": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "22K Gold Plated Sleepers",
-            "url": "shopify://products/22kt-gold-plated-sleepers-pair",
-            "image": "shopify://shop_images/image_9.jpg"
+            "title": "Titanium Navel Bar with Teardrop Cubic Zirconia in Claw Arc Setting",
+            "url": "shopify://products/titanium-teardrop-cz-claw-arc-navel-bar-gold-silver",
+            "image": "shopify://shop_images/9355442044824.jpg"
           }
         },
-        "image_zjBFmr": {
+        "image_HLw3ac": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Nose Stud Twist with Deep Set CZ",
-            "url": "shopify://products/titanium-press-fit-gem-nose-twist",
-            "image": "shopify://shop_images/image_15.jpg"
+            "title": "Titanium Round Ripple Segment Ring with Cubic Zirconia",
+            "url": "shopify://products/titanium-round-ripple-cz-segment-ring",
+            "image": "shopify://shop_images/9355442045043-thumb.jpg"
           }
         },
-        "image_xBy86T": {
+        "image_4ycQMj": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Cubic Zirconia Leaves Hinged Segment Ring",
-            "url": "shopify://products/cubic-zirconia-leaves-hinged-segment-ring",
-            "image": "shopify://shop_images/image_11.jpg"
+            "title": "Titanium Segment Ring with Butterfly Cubic Zirconia",
+            "url": "shopify://products/butterfly-cz-titanium-segment-ring-16g-gold-clear",
+            "image": "shopify://shop_images/9355442044268-thumb.jpg"
           }
         },
-        "image_U6m6wQ": {
+        "image_rzG7Pe": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Daisy Flower Steel Cartilage Barbell",
-            "url": "shopify://products/daisy-flower-steel-cartilage-barbell",
-            "image": "shopify://shop_images/image_12.jpg"
+            "title": "Titanium Flatback with Dual Marquis and Round Dangle Cubic Zirconia",
+            "url": "shopify://products/titanium-dual-marquis-cz-dangle-flatback-earring-16g-gold-silver",
+            "image": "shopify://shop_images/9355442045906.jpg"
           }
         },
-        "image_ALHg3R": {
+        "image_VaJ6GC": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Starburst CZ Paved Flatback Labret",
-            "url": "shopify://products/starburst-cz-paved-flat-back-labret",
-            "image": "shopify://shop_images/image_13.jpg"
+            "title": "Surgical Steel Radiant Heart Earrings",
+            "url": "shopify://products/316l-4mm-radiant-heart-earrings-gold",
+            "image": "shopify://shop_images/9355442044886.jpg"
           }
         },
-        "image_KtzTxk": {
+        "image_HnCXX3": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "CZ Paved Steel Hoop Earrings",
-            "url": "",
-            "image": "shopify://shop_images/image_14.jpg"
+            "title": "Titanium Flatback with Two Star Cubic Zirconia",
+            "url": "shopify://products/titanium-star-cz-flatback-earring-hypoallergenic",
+            "image": "shopify://shop_images/9355442045852-thumb.jpg"
+          }
+        },
+        "image_NKAw4x": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Navel Clicker with Inset Paved Round Cubic Zirconia",
+            "url": "shopify://products/titanium-inset-paved-cz-navel-clicker-14g-gold-silver",
+            "image": "shopify://shop_images/9355442044664.jpg"
+          }
+        },
+        "image_37zdJV": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Segment Ring with Marquis Cubic Zirconia",
+            "url": "shopify://products/titanium-marquis-cz-segment-ring",
+            "image": "shopify://shop_images/9355442044282-thumb.jpg"
+          }
+        },
+        "image_YgGABm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Flatback with Flower, Dual Round, and Marquis Cubic Zirconia",
+            "url": "shopify://products/titanium-flower-dual-round-marquis-cz-flatback-16g",
+            "image": "shopify://shop_images/9355442045951.jpg"
+          }
+        },
+        "image_midiYa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Navel Bar with Three Cubic Zirconia Dangles in Half-Bezel Arc Setting",
+            "url": "shopify://products/3-cz-dangle-titanium-navel-bar-half-bezel-arc-set-14g",
+            "image": "shopify://shop_images/9355442044572-thumb_c8b1141d-a984-4fdf-a43a-e4474a6cbf28.jpg"
+          }
+        },
+        "image_KHJHfk": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Twisted Rope Segment Ring with Cubic Zirconia",
+            "url": "shopify://products/titanium-twisted-rope-cz-segment-ring",
+            "image": "shopify://shop_images/9355442045791-thumb.jpg"
           }
         }
       },
       "block_order": [
-        "image_aRyBR3",
-        "image_rTRWc6",
-        "image_wAawnz",
-        "image_4xFNFR",
-        "image_cz93Te",
-        "image_eJUQfY",
         "image_EmW3YP",
-        "image_6TWpi6",
-        "image_zjBFmr",
-        "image_xBy86T",
-        "image_U6m6wQ",
-        "image_ALHg3R",
-        "image_KtzTxk"
+        "image_PGUbpy",
+        "image_HLw3ac",
+        "image_4ycQMj",
+        "image_rzG7Pe",
+        "image_VaJ6GC",
+        "image_HnCXX3",
+        "image_NKAw4x",
+        "image_37zdJV",
+        "image_YgGABm",
+        "image_midiYa",
+        "image_KHJHfk"
       ],
       "settings": {
-        "title": "TRENDING JEWELLERY PRODUCTS",
+        "title": "JUST LANDED",
         "mode": "light",
         "background": "#ffffff",
         "button_text": "Shop all",
