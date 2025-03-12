@@ -15,7 +15,7 @@
   %}
 
 {% for param in pageParams %}
-  {% if param contains 'password=' %}
+  {% if param contains 'key=' %}
   {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
   {% endif %}
 {% endfor %}
@@ -152,7 +152,7 @@
       {%  endif %}
     </p>
     <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?password=' + this.value; }"/>
-    <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?password=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
+    <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
   </div>
   <style>
     .searchspring-recommendations {
