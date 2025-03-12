@@ -132,6 +132,16 @@
   }
   </script>
 {% else %}
+  {% if section.settings.header_banner_mobile != blank %}
+    <img src="{{ section.settings.header_banner_mobile | img_url }}" class="mobile">
+  {% endif %}
+  
+  {% if section.settings.header_banner != blank %}
+    <img src="{{ section.settings.header_banner | img_url }}" class="desktop">
+    {% unless section.settings.header_banner_mobile != blank %}
+      <img src="{{ section.settings.header_banner | img_url }}" class="mobile">
+    {% endunless %}
+  {% endif %}                 
   <div class="password-protected">
     <p>
       {% if pagePassword %}
