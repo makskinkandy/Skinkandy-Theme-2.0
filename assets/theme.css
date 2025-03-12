@@ -16125,13 +16125,17 @@ span.on-sale-divider {
 }
 
 .password-protected {
-  max-width: 420px;
+  max-width: 450px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  background: #FFF;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 2px 10px 20px #0000004d;
   input {
     width: 100%;
     margin-bottom: 10px;
