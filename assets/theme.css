@@ -16156,6 +16156,17 @@ img.floating-image {
     background: #FFF;
     border-radius: 24px;
     position: relative;
+    overflow: hidden;
+  }
+  .heading {
+    background: #EB008C;
+    h1 {
+      font-family: 'League', sans-serif;
+      font-size: 66.25px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFF;
+    }
   }
   .content {
     padding: 24px 69px;
