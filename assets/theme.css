@@ -16171,6 +16171,9 @@ img.floating-image {
   }
   .content {
     padding: 24px 69px;
+    img {
+      margin-bottom: 20px;
+    }
   }
   input {
     width: 100%;
