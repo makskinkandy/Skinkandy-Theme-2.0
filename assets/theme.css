@@ -16161,7 +16161,7 @@ img.floating-image {
   .heading {
     background: #EB008C;
     h1 {
-      font-family: "League Gothic", serif;
+      font-family: "League Gothic", serif !important;
       font-size: 66.25px;
       text-transform: uppercase;
       text-align: center;
