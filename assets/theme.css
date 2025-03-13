@@ -16202,6 +16202,10 @@ img.floating-image {
       height: 60px;
       background: #E6E6E6;
       margin-inline: auto;
+      @media screen and (max-width: 767px) {
+        font-size: 12px
+        height: 39px;
+      }
     }
     .btn {
       margin-inline: auto;
