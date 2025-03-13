@@ -16198,6 +16198,13 @@ img.floating-image {
       margin-inline: auto;
       display: block;
     }
+
+    .error {
+      display: block;
+      width: 100%;
+      color: #fff;
+      background: red;
+    }
   }
   
   
