@@ -16174,6 +16174,9 @@ img.floating-image {
     img {
       margin-bottom: 20px;
     }
+    h2 {
+      font-family: "Futura Medium 01", sans-serif !important;
+    }
   }
   input {
     width: 100%;
