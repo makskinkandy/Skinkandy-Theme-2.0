@@ -132,6 +132,9 @@
   }
   </script>
 {% else %}            
+  {% if section.settings.floating_image %}
+    <img src="{{ section.settings.floating_image | image_url }}" alt="floating image" class="floating-image">
+  {% endif %}
   <div class="password-protected">
     {% if section.settings.page_small_logo %}
       <div class="small-logo">
