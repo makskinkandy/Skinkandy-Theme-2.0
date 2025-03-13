@@ -16160,6 +16160,7 @@ img.floating-image {
   }
   .heading {
     background: #EB008C;
+    padding: 10px;
     h1 {
       font-family: "League Gothic", serif !important;
       font-size: 66.25px;
