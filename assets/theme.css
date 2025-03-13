@@ -16234,6 +16234,7 @@ img.floating-image {
     border-radius: 24px;
     @media screen and (max-width: 767px) {
       max-width: 130px;
+      top: -35px;
     }
   }
 }
