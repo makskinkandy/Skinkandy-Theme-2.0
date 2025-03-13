@@ -16183,6 +16183,7 @@ img.floating-image {
     p {
       margin-bottom: 10px;
       color: #A5A5A5;
+      text-align: center;
     }
     input {
       width: 100%;
@@ -16191,6 +16192,7 @@ img.floating-image {
       padding: 10px;
       height: 60px;
       background: #E6E6E6;
+      margin-inline: auto;
     }
   }
   
