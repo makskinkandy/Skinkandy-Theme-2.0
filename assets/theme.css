@@ -16194,6 +16194,9 @@ img.floating-image {
       background: #E6E6E6;
       margin-inline: auto;
     }
+    .btn {
+      margin-inline: auto;
+    }
   }
   
   
