@@ -133,18 +133,27 @@
   </script>
 {% else %}            
   <div class="password-protected">
-    {% if section.settings.page_logo != blank %}
-      <img src="{{ section.settings.page_logo | image_url }}" alt="Password Logo">
-    {% endif %}
-    <p>
-      {% if pagePassword %}
-      {{ section.settings.wrong_password_prompt_text }}
-      {% else %}
-      {{ section.settings.password_prompt_text }}
-      {%  endif %}
-    </p>
-    <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?key=' + this.value; }"/>
-    <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
+    <div class="password-protected__wrapper">
+      {% if section.settings.password_title %}
+        <div class="heading">
+          <h1>{{ section.settings.password_title }}</h1>
+        </div>
+      {% endif %}
+      {% if section.settings.page_logo != blank %}
+        <img src="{{ section.settings.page_logo | image_url }}" alt="Password Logo">
+      {% endif %}
+      <div class="content">
+        <p>
+          {% if pagePassword %}
+          {{ section.settings.wrong_password_prompt_text }}
+          {% else %}
+          {{ section.settings.password_prompt_text }}
+          {%  endif %}
+        </p>
+        <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?key=' + this.value; }"/>
+        <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
+      </div>
+    </div>
   </div>
   <style>
     .searchspring-recommendations {
