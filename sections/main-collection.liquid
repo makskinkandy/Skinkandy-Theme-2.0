@@ -133,16 +133,21 @@
   </script>
 {% else %}            
   <div class="password-protected">
+    {% if section.settings.page_small_logo %}
+      <div class="small-logo">
+        <img src="{{ section.settings.page_small_logo | image_url }}" class="small logo">
+      </div>
+    {% endif %}
     <div class="password-protected__wrapper">
       {% if section.settings.password_title %}
         <div class="heading">
           <h1>{{ section.settings.password_title }}</h1>
         </div>
       {% endif %}
-      {% if section.settings.page_logo != blank %}
-        <img src="{{ section.settings.page_logo | image_url }}" alt="Password Logo">
-      {% endif %}
       <div class="content">
+        {% if section.settings.page_logo != blank %}
+          <img src="{{ section.settings.page_logo | image_url }}" alt="Password Logo">
+        {% endif %}
         <p>
           {% if pagePassword %}
           {{ section.settings.wrong_password_prompt_text }}
