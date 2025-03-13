@@ -157,7 +157,7 @@
         <p>{{ section.settings.password_prompt_text }}</p>
         <input type="password" id="password-input" class="field__input" placeholder="Password" autofocus autocomplete="off" onkeypress="if(event.keyCode == 13){ window.location.href = '{{ request.path }}?key=' + this.value; }"/>
         {% if pagePassword %}
-            {{ section.settings.wrong_password_prompt_text }}
+            <p class="error">{{ section.settings.wrong_password_prompt_text }}</p>
         {%  endif %}
         <button type="button" class="btn btn--primary" onclick="window.location.href = '{{ request.path }}?key=' + document.querySelector('#password-input').value;">{{ section.settings.submit_password_text }}</button>
       </div>
