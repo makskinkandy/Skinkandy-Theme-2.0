@@ -16152,6 +16152,12 @@ img.floating-image {
   margin-bottom: 100px;
   position: relative;
   z-index: 2;
+  .password-protected__wrapper {
+    width: 100%;
+    background: #FFF;
+    border-radius: 24px;
+    position: relative;
+  }
   input {
     width: 100%;
     margin-bottom: 20px;
