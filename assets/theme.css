@@ -16130,6 +16130,12 @@ a.ss__list__link.btn.btn--primary {
   }
 }
 
+img.floating-image {
+    position: absolute;
+    top: 28%;
+    z-index: 1;
+}
+
 .password-protected {
   max-width: 450px;
   margin-inline: auto;
@@ -16143,6 +16149,8 @@ a.ss__list__link.btn.btn--primary {
   border-radius: 30px;
   box-shadow: 2px 10px 20px #0000004d;
   margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
   input {
     width: 100%;
     margin-bottom: 20px;
