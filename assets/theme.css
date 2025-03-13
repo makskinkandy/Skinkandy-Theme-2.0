@@ -16196,6 +16196,7 @@ img.floating-image {
     }
     .btn {
       margin-inline: auto;
+      display: block;
     }
   }
   
