@@ -16168,5 +16168,13 @@ img.floating-image {
   p {
     margin-bottom: 10px;
   }
-
+  .small-logo {
+    max-width: 178px;
+    padding: 15px 20px;
+    background: #000;
+    height: 200px;
+    position: absolute;
+    top: -45px;
+    border-radius: 24px;
+  }
 }
