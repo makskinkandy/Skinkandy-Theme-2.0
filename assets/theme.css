@@ -16142,7 +16142,7 @@ img.floating-image {
 }
 
 .password-protected {
-  max-width: 450px;
+  max-width: 490px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
