@@ -16151,6 +16151,9 @@ img.floating-image {
   margin-bottom: 100px;
   position: relative;
   z-index: 2;
+  @media screen and (max-width: 767px) {
+    max-width: 360px;
+  }
   .password-protected__wrapper {
     width: 100%;
     background: #FFF;
