@@ -16166,7 +16166,7 @@ img.floating-image {
   p {
     margin-bottom: 10px;
   }
-  img {
+  .content img {
     margin-bottom: 35px;
   }
   .btn {
