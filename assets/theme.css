@@ -16129,3 +16129,112 @@ a.ss__list__link.btn.btn--primary {
     margin-bottom: 10px;
   }
 }
+
+img.floating-image {
+  position: absolute;
+  top: 46%;
+  z-index: 1;
+  max-width: 90%;
+  margin-inline: auto;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.password-protected {
+  max-width: 490px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+  @media screen and (max-width: 767px) {
+    max-width: 360px;
+  }
+  .password-protected__wrapper {
+    width: 100%;
+    background: #FFF;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .heading {
+    background: #EB008C;
+    padding: 10px;
+    h1 {
+      font-family: "League Gothic", serif !important;
+      font-size: 66.25px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFF;
+      @media screen and (max-width: 767px) {
+        font-size: 48px
+      }
+    }
+  }
+  .content {
+    padding: 24px 69px;
+    img {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-family: "Futura Medium 01", sans-serif !important;
+      font-size: 23px;
+      text-align: center;
+      margin-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        font-size: 17px
+      }
+    }
+    p {
+      margin-bottom: 10px;
+      color: #A5A5A5;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        font-size: 12px
+      }
+    }
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 16px;
+      padding: 10px;
+      height: 60px;
+      background: #E6E6E6;
+      margin-inline: auto;
+      @media screen and (max-width: 767px) {
+        font-size: 12px
+        height: 39px;
+      }
+    }
+    .btn {
+      margin-inline: auto;
+      display: block;
+    }
+
+    .error {
+      display: block;
+      width: 100%;
+      color: #fff;
+      background: red;
+    }
+  }
+  
+  
+  .small-logo {
+    max-width: 178px;
+    padding: 15px 20px;
+    background: #000;
+    height: 200px;
+    position: absolute;
+    top: -45px;
+    border-radius: 24px;
+    @media screen and (max-width: 767px) {
+      max-width: 130px;
+      top: -35px;
+    }
+  }
+}
