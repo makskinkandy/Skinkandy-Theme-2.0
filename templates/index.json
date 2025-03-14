@@ -25,8 +25,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-NPL-March-11.jpg",
-            "image": "shopify://shop_images/Homepage-Banner-Desktop-NPL-March-11.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Luxury_Navel_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Luxury_Navel_1.jpg",
             "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
