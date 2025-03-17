@@ -228,10 +228,8 @@
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
 
     <script>
-      // Check if the current page handle is 'test-url'
-      var currentHandle = "{{ request.path }}";
+      let currentHandle = "{{ request.path }}";
       if (currentHandle === "/blogs/news/why-downsize-your-piercing") {
-        // Redirect to the 'test-1' page
         window.location.href = "{{ '/pages/why-downsize-your-piercing' | url }}";
       }
     </script>
