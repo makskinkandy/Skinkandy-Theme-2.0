@@ -16132,7 +16132,7 @@ a.ss__list__link.btn.btn--primary {
 
 img.floating-image {
   position: absolute;
-  top: 46%;
+  top: 50%;
   z-index: 1;
   max-width: 90%;
   margin-inline: auto;
