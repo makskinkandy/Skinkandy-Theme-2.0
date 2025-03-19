@@ -86,7 +86,7 @@
                             </a>
                         </div>
                     {% else %}
-                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link level-1-menu {% if has_grandchild %}has-child{% endif %} {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">{{ childlink.title }}</a>
+                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link level-1-menu {% if has_grandchild %}has-child{% endif %} {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %} {% if link.url contains 'shop-the-sale' %} sale-text{% endif %}">{{ childlink.title }}</a>
                     {% endif %}
                     
                     {%- liquid
@@ -100,7 +100,7 @@
                     {%- for grandchildlink in childlink.links -%}
                       {% assign link_handle = grandchildlink.url | handle %}
                       <div class="grandchild">
-                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %} {% if link.url contains 'shop-the-sale' %} sale-text{% endif %}">
                             <span>
                             {{grandchildlink.title}}
                             </span>
@@ -132,7 +132,7 @@
                   <ul class="site-nav__deep-dropdown">
                     {%- for grandchildlink in childlink.links -%}
                       <li>
-                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %}">{{ grandchildlink.title | escape }}</a>
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %} {% if link.url contains 'shop-the-sale' %} sale-text{% endif %}">{{ grandchildlink.title | escape }}</a>
                       </li>
                     {%- endfor -%}
                   </ul>
