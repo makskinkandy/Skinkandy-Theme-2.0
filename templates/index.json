@@ -21,13 +21,13 @@
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
-        "image_chJCWB": {
+        "image_azEXYx": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Luxury_Navel_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_Desktop_Luxury_Navel_1.jpg",
-            "banner_url": "shopify://collections/new-in",
+            "image_mobile": "shopify://shop_images/Afterpay_-_Mobile.jpg",
+            "image": "shopify://shop_images/Afterpay_-_Desktop.jpg",
+            "banner_url": "shopify://collections/shop-the-sale",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -35,13 +35,12 @@
             "align_text": "center"
           }
         },
-        "image_A78HWU": {
+        "image_chJCWB": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/NPL_Feb_17th_-_Mobile_1.jpg",
-            "image": "shopify://shop_images/NPL_Feb_17th_-_Desktop_d010befa-bd33-4fa9-9362-38357942318f.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Luxury_Navel_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Luxury_Navel_1.jpg",
             "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
@@ -66,8 +65,8 @@
         }
       },
       "block_order": [
+        "image_azEXYx",
         "image_chJCWB",
-        "image_A78HWU",
         "image_DREBap"
       ],
       "settings": {
