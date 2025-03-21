@@ -16238,3 +16238,8 @@ img.floating-image {
     }
   }
 }
+
+p.piercing-disclaimer i {
+  font-style: normal;
+  font-size: 14px;
+}
