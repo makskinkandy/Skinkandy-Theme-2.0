@@ -21,6 +21,8 @@
     {%- endif -%}
     {% if section.settings.shop_all %}
         <a href="{{ section.settings.shop_all }}" class="btn btn--primary feature-collection__btn">SHOP ALL</a>
+    {% elsif section.settings.featured_collection %}
+        <a href="{{ section.settings.featured_collection | url_escape }}" class="btn btn--primary feature-collection__btn">SHOP ALL</a>
     {% endif %}
     {% if section.settings.bottom_border %}
       <hr class="featured-collection__hr">
