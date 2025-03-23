@@ -4681,7 +4681,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .site-header__search-container{
   display:none;
-  position:absolute;
+  position:relative;
   left:0;
   right:0;
   bottom:200%;
