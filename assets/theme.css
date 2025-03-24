@@ -4687,7 +4687,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   bottom:0;
   height:100%;
   z-index:28;
-  overflow:hidden;
+  overflow:visible;
 }
 
 .site-header__search-container.is-active{
