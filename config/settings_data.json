@@ -819,9 +819,7 @@
       ".page-14kt-gold .ss__result--inline-banner {display: none;}",
       ".site-\\/en-nz .ss__result--inline-banner:has(> .ss__inline-banner .au-site) {display: none;}",
       ".page-new-in .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
-      ".u-link--pin {text-decoration: none;}",
-      ".site-\\/ .nz-site-sale {display: none !important;}",
-      ".site-\\/en-nz .au-site-sale {display: none !important;}"
+      ".u-link--pin {text-decoration: none;}"
     ]
   }
 }
