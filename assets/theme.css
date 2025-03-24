@@ -4704,7 +4704,6 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   right:0;
   z-index:28;
   display:flex;
-  transform:translate3d(0, -110%, 0);
   background-color:#ffffff;
   background-color:var(--colorBody);
   color:#000000;
