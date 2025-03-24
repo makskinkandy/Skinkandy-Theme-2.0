@@ -16243,3 +16243,9 @@ p.piercing-disclaimer i {
   font-style: normal;
   font-size: 14px;
 }
+
+.search-nav-btn {
+  @media screen and (min-width: 980px) {
+    display: none;
+  }
+}
