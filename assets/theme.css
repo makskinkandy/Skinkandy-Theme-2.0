@@ -4728,6 +4728,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 }
 
 .site-header__search-input {
+  border:0;
   @media screen and (min-width: 980px) {
     border: solid 1px #d3d3d3;
     border-radius: 20px;
@@ -4768,7 +4769,6 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   }
 
 .site-header__search-input{
-  border:0;
   width:100px;
   flex:1 1 auto
 }
