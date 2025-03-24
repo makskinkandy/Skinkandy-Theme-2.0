@@ -4708,7 +4708,10 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   background-color:var(--colorBody);
   color:#000000;
   color:var(--colorTextBody);
-  box-shadow:0 15px 45px rgba(0, 0, 0, 0.1)
+  box-shadow:0 15px 45px rgba(0, 0, 0, 0.1);
+  .site-header__search-btn {
+    display: none;
+  }
 }
 
 .site-header__search .page-width{
