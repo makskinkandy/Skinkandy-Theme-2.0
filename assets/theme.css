@@ -4719,6 +4719,12 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
     transform:translateZ(0);
     position: relative;
   }
+  button#SearchClose {
+    @media screen and (min-width: 980px) {
+      display: none;
+    }
+    
+  }
 }
 
 .site-header__search .page-width{
