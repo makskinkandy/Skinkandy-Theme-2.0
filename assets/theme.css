@@ -4753,6 +4753,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   width:100px;
   flex:1 1 auto;
   border-radius: 20px;
+  border: solid 1px #d3d3d3;
 }
 
 .site-header__search-input:focus{
