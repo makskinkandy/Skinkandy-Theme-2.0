@@ -4727,6 +4727,12 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   }
 }
 
+.site-header__search-input {
+  @media screen and (min-width: 980px) {
+    border: solid 1px #d3d3d3;
+    border-radius: 20px;
+  }
+}
 .site-header__search .page-width{
     flex:1 1 100%;
     display:flex;
