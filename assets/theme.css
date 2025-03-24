@@ -4717,6 +4717,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   box-shadow:0 15px 45px rgba(0, 0, 0, 0.1);
   @media screen and (min-width: 980px) {
     transform:translateZ(0);
+    position: relative;
   }
 }
 
