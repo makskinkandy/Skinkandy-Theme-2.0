@@ -4696,7 +4696,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   }
 
 .site-header__search{
-  position:relative;
+  position:absolute;
   top:0;
   left:0;
   bottom:0;
