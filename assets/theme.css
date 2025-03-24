@@ -4688,6 +4688,11 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   height:100%;
   z-index:28;
   overflow:hidden;
+  @media screen and (min-width: 980px) {
+    display: block;
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .site-header__search-container.is-active{
@@ -4709,7 +4714,10 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   background-color:var(--colorBody);
   color:#000000;
   color:var(--colorTextBody);
-  box-shadow:0 15px 45px rgba(0, 0, 0, 0.1)
+  box-shadow:0 15px 45px rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: 980px) {
+    transform:translateZ(0);
+  }
 }
 
 .site-header__search .page-width{
@@ -4726,7 +4734,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
     }
 
 .is-active .site-header__search{
-    transform:translateZ(0)
+    transform:translateZ(0);
 }
 
 .site-header__search .icon{
