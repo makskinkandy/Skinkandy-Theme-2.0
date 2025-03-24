@@ -4751,11 +4751,11 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 .site-header__search-input{
   border:0;
   width:100px;
-  flex:1 1 auto
+  flex:1 1 auto;
+  border-radius: 20px;
 }
 
 .site-header__search-input:focus{
-    border:0;
     outline:0;
   }
 
