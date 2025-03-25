@@ -4686,7 +4686,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   right:0;
   bottom:200%;
   height:100%;
-  z-index:28;
+  z-index:1;
   overflow:hidden;
   @media screen and (min-width: 980px) {
     display: block;
