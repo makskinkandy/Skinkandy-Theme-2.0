@@ -1821,6 +1821,7 @@
     @media screen and (max-width: 980px) {
       font-size: 20px;
       margin-bottom: 18px;
+      max-width: 100%;
     }
     &.large {
       font-size: 48px;
@@ -1844,6 +1845,7 @@
     @media screen and (max-width: 980px) {
       font-size: 12px;
       margin-bottom: 18px;
+      max-width: 100%;
     }
     &.large {
       font-size: 20px;
