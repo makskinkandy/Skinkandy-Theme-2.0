@@ -16243,3 +16243,11 @@ p.piercing-disclaimer i {
   font-style: normal;
   font-size: 14px;
 }
+
+.flickity-next {
+    right: -35px;
+}
+
+.flickity-previous {
+    left: -35px;
+}
