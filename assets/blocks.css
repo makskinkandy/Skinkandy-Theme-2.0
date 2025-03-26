@@ -1874,6 +1874,8 @@
   }
   .right-content {
     width: 50%;
+    position: relative;
+    right: -40px;
     @media screen and (max-width: 980px) {
       width: 100%;
     }
@@ -1884,7 +1886,7 @@
       object-fit: cover;
       object-position: left;
       margin-right: -40px;
-      @media screen and (max-width: 1212px) {
+      @media screen and (max-width: 980px) {
         display: none;
       }
     }
@@ -1896,7 +1898,7 @@
     object-fit: cover;
     object-position: left;
     display: none;
-    @media screen and (max-width: 1212px) {
+    @media screen and (max-width: 980px) {
       display: block;
     }
   }
