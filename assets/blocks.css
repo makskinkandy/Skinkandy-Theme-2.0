@@ -1822,6 +1822,7 @@
       font-size: 20px;
       margin-bottom: 18px;
       max-width: 100%;
+      text-align: center;
     }
     &.large {
       font-size: 48px;
@@ -1846,6 +1847,7 @@
       font-size: 12px;
       margin-bottom: 18px;
       max-width: 100%;
+      text-align: center;
     }
     &.large {
       font-size: 20px;
