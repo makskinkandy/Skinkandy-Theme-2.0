@@ -1814,6 +1814,9 @@
 }
 
 .custom-banner {
+  .highlight-text {
+    color: #EB008C;
+  }
   .custom-baner__wrapper {
     display: flex;
   }
