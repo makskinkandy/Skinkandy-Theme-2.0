@@ -1816,6 +1816,7 @@
 .custom-banner {
   h1,h2,h3 {
     font-weight: bold;
+    max-width: 559px;
     &.large {
       font-size: 48px;
     }
