@@ -1847,6 +1847,9 @@
       width: 100%;
       object-fit: cover;
       object-position: left;
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
     }
   }
 }
