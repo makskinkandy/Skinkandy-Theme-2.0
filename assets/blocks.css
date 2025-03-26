@@ -1881,6 +1881,7 @@
     }
     .btn {
       @media screen and (max-width: 980px) {
+        display: inline-block;
         margin-inline: auto;
       }
     }
