@@ -21,9 +21,11 @@
             {% assign processed_words = processed_words | append: word | append: ' ' %}
           {% endif %}
         {% endfor %}
+
+      {% assign new_title = processed_words | replace: ".", "<span class='highlight-text'>.</span>" %}
       
       <div class="section-header text-{{ section.settings.align_text }}">
-        <h2>{{ processed_words }}</h2>
+        <h2>{{ new_title }}</h2>
         {% if section.settings.description %}
           {{ section.settings.description }}
         {% endif %}
