@@ -1886,6 +1886,10 @@
       object-fit: cover;
       object-position: left;
       margin-right: -40px;
+      @media screen and (max-width: 1366px) {
+        transform: scaleX(-1);
+        object-position: right;
+      }
       @media screen and (max-width: 980px) {
         display: none;
       }
