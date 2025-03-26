@@ -246,6 +246,13 @@
         "disable_grid": false,
         "max_width": 1704
       }
+    },
+    "custom_banner_3bBnUt": {
+      "type": "custom-banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Model_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/Model_-_Mobile.png"
+      }
     }
   },
   "order": [
@@ -253,6 +260,7 @@
     "columns_block_RrDLLK",
     "main",
     "two_column_icon_image_CqyyTa",
-    "columns_block_Niw38L"
+    "columns_block_Niw38L",
+    "custom_banner_3bBnUt"
   ]
 }
