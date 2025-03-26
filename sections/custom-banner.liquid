@@ -42,6 +42,11 @@
           {% endfor %}
         {% endif %}
       </div>
+      <div class="right-content">
+        {% if section.settings.desktop_image != blank %}
+          <img src="{{ section.settings.desktop_image | image_url }}" class="dekstop">
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
