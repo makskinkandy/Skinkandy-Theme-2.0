@@ -104,11 +104,43 @@
         "heading": false,
         "content": false
       }
+    },
+    "two_column_icon_image_CqyyTa": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_ty3RQh": {
+          "type": "title_block",
+          "settings": {
+            "title": "THE SKINKANDY EXPERIENCE.",
+            "title_tag": "h2",
+            "description": "<p>We believe a piercing is more than just jewellery—it’s a statement of self-expression, confidence, and individuality. That’s why our team of professional piercers undergoes extensive training in our industry-leading piercing program, mastering the skills needed to deliver the highest level of expertise. </p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_ty3RQh"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Group_163_2_1.jpg",
+        "left_align": false,
+        "icon_column": true,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": true,
+        "reduced_image_size": false
+      }
     }
   },
   "order": [
     "header_banner_N6HRfN",
     "columns_block_RrDLLK",
-    "main"
+    "main",
+    "two_column_icon_image_CqyyTa"
   ]
 }
