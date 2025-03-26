@@ -127,11 +127,41 @@
             "icon_content": "We don’t just meet industry standards; we redefine them.",
             "content_align": "start"
           }
+        },
+        "icon_text_block_q8hk9d": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_13_1.png",
+            "icon_title": " LEGENDARY SERVICE",
+            "icon_content": "Every customer, every piercing, every time.",
+            "content_align": "start"
+          }
+        },
+        "icon_text_block_T7ttgy": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_14_1.png",
+            "icon_title": "ALWAYS CHASING THE 1%",
+            "icon_content": "Good is just the beginning. We strive for excellence in everything we do. ",
+            "content_align": "start"
+          }
+        },
+        "icon_text_block_JGAf8R": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_15_1.png",
+            "icon_title": "FREE TO BE",
+            "icon_content": "We embrace diversity, self-expression, and the freedom to be unapologetically you.",
+            "content_align": "start"
+          }
         }
       },
       "block_order": [
         "title_block_ty3RQh",
-        "icon_text_block_gzVCmL"
+        "icon_text_block_gzVCmL",
+        "icon_text_block_q8hk9d",
+        "icon_text_block_T7ttgy",
+        "icon_text_block_JGAf8R"
       ],
       "settings": {
         "image": "shopify://shop_images/Group_163_2_1.jpg",
