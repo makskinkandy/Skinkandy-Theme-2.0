@@ -1070,9 +1070,11 @@
     }
   }
   h1,
-  h2 {
+  h2,
+  h3 {
     font-size: 34px;
     margin-bottom: 45px;
+    font-weight: 600;
     @media screen and (max-width: 560px) {
       font-size: 20px;
     }
