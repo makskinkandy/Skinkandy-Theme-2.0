@@ -297,7 +297,8 @@
       ],
       "settings": {
         "desktop_image": "shopify://shop_images/Model_-_Desktop.png",
-        "mobile_image": "shopify://shop_images/Model_-_Mobile.png"
+        "mobile_image": "shopify://shop_images/Model_-_Mobile.png",
+        "bg_color": "#e9e5ed"
       }
     }
   },
