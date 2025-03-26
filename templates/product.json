@@ -205,7 +205,7 @@
     "ss-recommendations-cross-sell": {
       "type": "ss-recommendations-product",
       "settings": {
-        "profileId": "ss-test"
+        "profileId": "customers-also-bought-featured"
       }
     },
     "pagefly-product-section": {
