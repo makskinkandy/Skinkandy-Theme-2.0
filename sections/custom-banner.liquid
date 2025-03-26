@@ -33,6 +33,10 @@
                 {{ block.settings.content }}
               </div>
             {% endif %}
+
+            {% if block.type == 'button' and block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_url }}" class="btn btn--primary">{{ block.settings.button_text }}</a>
+            {% endif %}
             
           
           {% endfor %}
