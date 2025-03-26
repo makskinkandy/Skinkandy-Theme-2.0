@@ -1883,6 +1883,7 @@
       width: 100%;
       object-fit: cover;
       object-position: left;
+      margin-right: -40px;
       @media screen and (max-width: 980px) {
         display: none;
       }
