@@ -196,16 +196,16 @@
       "disabled": true,
       "settings": {}
     },
-    "ss-recommendations-similar": {
-      "type": "ss-recommendations-product",
-      "settings": {
-        "profileId": "similar"
-      }
-    },
     "ss-recommendations-cross-sell": {
       "type": "ss-recommendations-product",
       "settings": {
         "profileId": "customers-also-bought-featured"
+      }
+    },
+    "ss-recommendations-similar": {
+      "type": "ss-recommendations-product",
+      "settings": {
+        "profileId": "similar"
       }
     },
     "pagefly-product-section": {
@@ -218,8 +218,8 @@
     "main",
     "sub",
     "collection-return",
-    "ss-recommendations-similar",
     "ss-recommendations-cross-sell",
+    "ss-recommendations-similar",
     "pagefly-product-section"
   ]
 }
