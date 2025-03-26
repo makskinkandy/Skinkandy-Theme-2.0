@@ -1082,6 +1082,7 @@
   h2,
   h3,
   .h3{
+    margin-bottom: 15px;
     @media screen and (max-width: 980px) {
       text-align: center;
     }
@@ -1094,6 +1095,7 @@
     margin-top: 30px;
   }
   h1.large,
+  h2.large,
   h3.large {
     font-size: 34px;
     margin-bottom: 30px;
