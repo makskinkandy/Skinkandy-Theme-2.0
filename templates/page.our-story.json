@@ -154,6 +154,17 @@
             "icon_content": "We embrace diversity, self-expression, and the freedom to be unapologetically you.",
             "content_align": "start"
           }
+        },
+        "title_block_3zbRYc": {
+          "type": "title_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "description": "",
+            "button_text": "BOOK NOW",
+            "button_url": "shopify://pages/skinkandy-piercing-menu",
+            "text_align": "left"
+          }
         }
       },
       "block_order": [
@@ -161,7 +172,8 @@
         "icon_text_block_gzVCmL",
         "icon_text_block_q8hk9d",
         "icon_text_block_T7ttgy",
-        "icon_text_block_JGAf8R"
+        "icon_text_block_JGAf8R",
+        "title_block_3zbRYc"
       ],
       "settings": {
         "image": "shopify://shop_images/Group_163_2_1.jpg",
@@ -175,12 +187,72 @@
         "bottom_border": true,
         "reduced_image_size": false
       }
+    },
+    "columns_block_Niw38L": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_73GAnd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "image": "shopify://shop_images/Group_163_3_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_8kACAi": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "PREMIUM QUALITY, EVERY TIME. ",
+            "title_size": "large",
+            "title_tag": "h2",
+            "text": "<h3><strong>PREMIUM QUALITY, EVERY TIME. 14K Solid Gold</strong></h3><p>A luxurious, tarnish-free option perfect for sensitive skin.</p><h3><strong>ASTM F136 Implant-Grade Titanium</strong></h3><p>Lightweight, nickel-free, and promotes fast healing. </p><h3><strong>316L Surgical Steel</strong></h3><p>Strong, durable, and resistant to everyday wear.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_73GAnd",
+        "text_block_8kACAi"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
     }
   },
   "order": [
     "header_banner_N6HRfN",
     "columns_block_RrDLLK",
     "main",
-    "two_column_icon_image_CqyyTa"
+    "two_column_icon_image_CqyyTa",
+    "columns_block_Niw38L"
   ]
 }
