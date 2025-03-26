@@ -4,7 +4,7 @@
       <div class="left-content">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
-            {% if block.type == 'title_block' %}
+            {% if block.type == 'title' %}
               {% assign text = block.settings.title %}
               {% assign words = text | split: ' ' %}
               
