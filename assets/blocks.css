@@ -1837,8 +1837,10 @@
   }
   .left-content {
     padding: 50px 0;
+    width: 50%;
   }
   .right-content {
+    width: 50%;
     .desktop {
       margin-bottom: 0;
       height: 100%;
