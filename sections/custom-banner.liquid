@@ -15,7 +15,7 @@
                   
                   {% if word_1 == "{" and word_2 == "}" %}
                     {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
-                    <b>{{ new_word }}</b>
+                    <span class="highlight-text">{{ new_word }}</span>
                   {% else %}
                     {{ word }}
                   {% endif %}
