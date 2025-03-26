@@ -1827,6 +1827,9 @@
   .custom-baner__wrapper {
     display: flex;
   }
+  .left-content {
+    padding: 50px 0;
+  }
   .right-content {
     .desktop {
       margin-bottom: 0;
