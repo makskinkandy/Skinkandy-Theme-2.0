@@ -241,8 +241,8 @@
         "title": "",
         "description": "",
         "count": 2,
-        "bottom_space": false,
-        "hide_line": false,
+        "bottom_space": true,
+        "hide_line": true,
         "disable_grid": false,
         "max_width": 1704
       }
