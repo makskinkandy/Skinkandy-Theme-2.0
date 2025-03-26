@@ -1884,7 +1884,7 @@
       object-fit: cover;
       object-position: left;
       margin-right: -40px;
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 1212px) {
         display: none;
       }
     }
@@ -1896,7 +1896,7 @@
     object-fit: cover;
     object-position: left;
     display: none;
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 1212px) {
       display: block;
     }
   }
