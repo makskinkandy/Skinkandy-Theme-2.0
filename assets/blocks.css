@@ -1812,3 +1812,16 @@
 .feature-collection {
   padding-bottom: 25px;
 }
+
+.custom-banner {
+  .custom-baner__wrapper {
+    display: flex;
+  }
+  .right-content {
+    .desktop {
+      margin-bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
