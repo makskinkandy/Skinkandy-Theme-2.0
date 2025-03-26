@@ -118,10 +118,20 @@
             "button_url": "",
             "text_align": "left"
           }
+        },
+        "icon_text_block_gzVCmL": {
+          "type": "icon_text_block",
+          "settings": {
+            "icon": "shopify://shop_images/Group_154_12_1.png",
+            "icon_title": "SETTING THE STANDARD",
+            "icon_content": "We don’t just meet industry standards; we redefine them.",
+            "content_align": "start"
+          }
         }
       },
       "block_order": [
-        "title_block_ty3RQh"
+        "title_block_ty3RQh",
+        "icon_text_block_gzVCmL"
       ],
       "settings": {
         "image": "shopify://shop_images/Group_163_2_1.jpg",
