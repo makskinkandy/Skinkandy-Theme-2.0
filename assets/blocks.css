@@ -1858,8 +1858,9 @@
   }
   .btn {
     @media screen and (max-width: 980px) {
-      display: inline-block;
+      display: block;
       margin-inline: auto;
+      max-width: fit-content;
     }
   }
   .left-content {
