@@ -1829,7 +1829,11 @@
     display: flex;
   }
   .content {
-    max-width: 729px
+    max-width: 729px;
+    margin-bottom: 30px;
+    &.large {
+      font-size: 20px;
+    }
   }
   .left-content {
     padding: 50px 0;
