@@ -1856,6 +1856,12 @@
       }
     }
   }
+  .btn {
+    @media screen and (max-width: 980px) {
+      display: inline-block;
+      margin-inline: auto;
+    }
+  }
   .left-content {
     padding: 50px 0;
     width: 50%;
@@ -1877,12 +1883,6 @@
       object-position: left;
       @media screen and (max-width: 980px) {
         display: none;
-      }
-    }
-    .btn {
-      @media screen and (max-width: 980px) {
-        display: inline-block;
-        margin-inline: auto;
       }
     }
   }
