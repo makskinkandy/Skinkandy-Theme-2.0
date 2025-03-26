@@ -4,7 +4,7 @@
       <div class="left-content">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
-            {% if block.type == 'title' %}
+            {% if block.type == 'title' and block.settings.title != blank %}
               {% assign text = block.settings.title %}
               {% assign words = text | split: ' ' %}
               
@@ -24,9 +24,14 @@
 
               {% assign new_title = processed_words | replace: ".", "<span class='highlight-text'>.</span>" %}
               
-              {% if block.settings.title != blank %}
-                  <{{ block.settings.title_tag }} class="h2 {{ block.settings.size }}">{{ new_title }}</{{ block.settings.title_tag }}>
-                {% endif %}
+              <{{ block.settings.title_tag }} class="h2 {{ block.settings.size }}">{{ new_title }}</{{ block.settings.title_tag }}>
+              
+            {% endif %}
+
+            {% if block.type == 'text-content' and  block.settings.content != blank %}
+              <div class="content {{ block.settings.size }}">
+                {{ block.settings.content }}
+              </div>
             {% endif %}
             
           
