@@ -20,9 +20,9 @@
             "image": "shopify://shop_images/image_2_7_1.jpg",
             "banner_url": "",
             "heading": "{{ page.title }}",
-            "short_description": "<p>Choosing the right size jewellery is essential for comfort, healing, and style. Our piercing size guide will help you find the perfect fit for your piercing, whether you’re selecting your initial jewellery or upgrading to a new look.</p>",
-            "button_text": "BOOK NOW",
-            "button_url": "shopify://pages/skinkandy-piercing-menu",
+            "short_description": "<p>The material of your jewellery plays a key role in <strong>comfort, healing, and long-term wearability</strong>. At SkinKandy, we only use <strong>high-quality, hypoallergenic materials</strong> to ensure a safe and stylish piercing experience.</p>",
+            "button_text": "",
+            "button_url": "",
             "align_text": "left"
           }
         }
@@ -39,45 +39,11 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": false,
-        "content": true
-      }
-    },
-    "rich_text_wj3tUk": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_TC8t8n": {
-          "type": "heading",
-          "settings": {
-            "title": "FINDING YOUR PERFECT FIT"
-          }
-        },
-        "text_ne6mKz": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Not sure what size you need? Visit your nearest <strong>SkinKandy store</strong>, and our expert piercers will help you find the right fit for your piercing.</p>"
-          }
-        },
-        "button_tWHGXH": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/store-locations",
-            "link_text": "FIND A STORE"
-          }
-        }
-      },
-      "block_order": [
-        "heading_TC8t8n",
-        "text_ne6mKz",
-        "button_tWHGXH"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
+        "content": false
       }
     },
     "columns_block_hh4YBk": {
@@ -130,8 +96,8 @@
       "settings": {
         "dark_mode": false,
         "class": "",
-        "title": "CHOOSING THE RIGHT MATERIAL ",
-        "description": "<p>The material of your jewellery plays a key role in <strong>comfort, healing, and long-term wearability</strong>. At SkinKandy, we only use <strong>high-quality, hypoallergenic materials</strong> to ensure a safe and stylish piercing experience.</p>",
+        "title": "",
+        "description": "",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
@@ -289,7 +255,6 @@
   "order": [
     "header_banner_xCm6ce",
     "main",
-    "rich_text_wj3tUk",
     "columns_block_hh4YBk",
     "columns_block_XAnXdU",
     "columns_block_dbgFBK",
