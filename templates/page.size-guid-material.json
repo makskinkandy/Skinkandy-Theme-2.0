@@ -21,8 +21,8 @@
             "banner_url": "",
             "heading": "{{ page.title }}",
             "short_description": "<p>The material of your jewellery plays a key role in <strong>comfort, healing, and long-term wearability</strong>. At SkinKandy, we only use <strong>high-quality, hypoallergenic materials</strong> to ensure a safe and stylish piercing experience.</p>",
-            "button_text": "",
-            "button_url": "",
+            "button_text": "BOOK NOW",
+            "button_url": "shopify://pages/skinkandy-piercing-menu",
             "align_text": "left"
           }
         }
