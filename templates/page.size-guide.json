@@ -24,7 +24,8 @@
         "text_QCXe9g"
       ],
       "custom_css": [
-        ".text-center {margin-bottom: -40px;}"
+        ".text-center {margin-bottom: -100px;}",
+        "@media screen (max-width: 768px){.text-center {margin-bottom: -40px; }}"
       ],
       "settings": {
         "align_text": "center",
