@@ -690,6 +690,60 @@
         "disable_grid": false,
         "max_width": 1704
       }
+    },
+    "custom_banner_3bAXUt": {
+      "type": "custom-banner",
+      "blocks": {
+        "title_VDkLBN": {
+          "type": "title",
+          "settings": {
+            "title": "OVER {80+} {LOCATIONS} ACROSS AUSTRALIA & NEW ZEALAND! ",
+            "size": "small",
+            "title_tag": "h2"
+          }
+        },
+        "text_content_hBd8ww": {
+          "type": "text-content",
+          "settings": {
+            "content": "With stores in major shopping centres across Queensland, New South Wales, Victoria, Western Australia, and South Australia—plus expanding locations in New Zealand—SkinKandy is the go-to destination for premium piercings and jewellery. ",
+            "size": "small"
+          }
+        },
+        "title_zVLPar": {
+          "type": "title",
+          "settings": {
+            "title": "BOLD. BRAVE. CONFIDENT. FUN.",
+            "size": "large",
+            "title_tag": "h2"
+          }
+        },
+        "text_content_7PEC7x": {
+          "type": "text-content",
+          "settings": {
+            "content": "Your story, your piercing, your style.\nWelcome to SkinKandy.",
+            "size": "large"
+          }
+        },
+        "button_TGnJHM": {
+          "type": "button",
+          "settings": {
+            "button_text": "BOOK NOW",
+            "button_url": "shopify://pages/skinkandy-piercing-menu"
+          }
+        }
+      },
+      "block_order": [
+        "title_VDkLBN",
+        "text_content_hBd8ww",
+        "title_zVLPar",
+        "text_content_7PEC7x",
+        "button_TGnJHM"
+      ],
+      "settings": {
+        "desktop_image": "shopify://shop_images/Model_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/Model_-_Mobile.png",
+        "bg_color": "#e9e5ed"
+      }
     }
   },
   "order": [
@@ -705,6 +759,7 @@
     "rich_text_xDG4ww",
     "price_estimator_8yLgcE",
     "header_banner_nArfYj",
-    "columns_block_CqqbQM"
+    "columns_block_CqqbQM",
+    "custom_banner_3bAXUt"
   ]
 }
