@@ -9,26 +9,19 @@
  */
 {
   "sections": {
-    "rich_text_ddbBqg": {
+    "rich_text_QYketi": {
       "type": "rich-text",
       "blocks": {
-        "heading_HaP79a": {
-          "type": "heading",
-          "settings": {
-            "title": "<b>PIERCING SIZE GUIDE</b>"
-          }
-        },
-        "text_F6atyW": {
+        "text_QCXe9g": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Choosing the right size jewellery is essential for comfort, healing, and style. Our piercing size guide will help you find the perfect fit for your piercing, whether you’re selecting your initial jewellery or upgrading to a new look.</p><p>Choosing the right size jewellery is essential for comfort and style. Our piercing size guide will help you find the perfect fit for your healed piercing.</p>"
+            "text": "<h1><strong>PIERCING SIZE GUIDE</strong></h1><p>Choosing the right size jewellery is essential for comfort, healing, and style. Our piercing size guide will help you find the perfect fit for your piercing, whether you’re selecting your initial jewellery or upgrading to a new look.</p><p>Choosing the right size jewellery is essential for comfortand style. Our piercing size guide will help you find the perfect fit for your healed piercing.</p>"
           }
         }
       },
       "block_order": [
-        "heading_HaP79a",
-        "text_F6atyW"
+        "text_QCXe9g"
       ],
       "settings": {
         "align_text": "center",
@@ -110,7 +103,7 @@
     }
   },
   "order": [
-    "rich_text_ddbBqg",
+    "rich_text_QYketi",
     "header_banner_xCm6ce",
     "main",
     "rich_text_wj3tUk"
