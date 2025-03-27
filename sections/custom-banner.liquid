@@ -1,0 +1,174 @@
+<div class="custom-banner" {% if section.settings.bg_color != blank %}style="background-color: {{ section.settings.bg_color }}"{% endif %}>
+  <div class="page-width">
+    <div class="custom-baner__wrapper">
+      <div class="left-content">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'title' and block.settings.title != blank %}
+              {% assign text = block.settings.title %}
+              {% assign words = text | split: ' ' %}
+              
+              {% capture processed_words %}
+                {% for word in words %}
+                  {% assign word_1 = word | slice: 0, 1 %}
+                  {% assign word_2 = word | slice: -1 %}
+                  
+                  {% if word_1 == "{" and word_2 == "}" %}
+                    {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+                    <span class="highlight-text">{{ new_word }}</span>
+                  {% else %}
+                    {{ word }}
+                  {% endif %}
+                {% endfor %}
+              {% endcapture %}
+
+              {% assign new_title = processed_words | replace: ".", "<span class='highlight-text'>.</span>" %}
+              
+              <{{ block.settings.title_tag }} class="h2 {{ block.settings.size }}">{{ new_title }}</{{ block.settings.title_tag }}>
+              
+            {% endif %}
+
+            {% if block.type == 'text-content' and  block.settings.content != blank %}
+              <div class="content {{ block.settings.size }}">
+                {{ block.settings.content }}
+              </div>
+            {% endif %}
+
+            {% if block.type == 'button' and block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_url }}" class="btn btn--primary">{{ block.settings.button_text }}</a>
+            {% endif %}
+            
+          
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="right-content">
+        {% if section.settings.desktop_image != blank %}
+          <img src="{{ section.settings.desktop_image | image_url }}" class="desktop">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if section.settings.desktop_image != blank %}
+    <img src="{{ section.settings.mobile_image | image_url }}" class="mobile">
+  {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Custom Banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name": "Title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "size",
+            "label": "Font Size",
+            "options": [
+              {
+                "value": "small",
+                "label": "Small"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              },
+            ]
+          },
+          {
+            "type": "select",
+            "id": "title_tag",
+            "label": "Heading Tag",
+            "default": "h2",
+            "options": [
+              {
+                "value": "h1",
+                "label": "H1"
+              },
+              {
+                "value": "h2",
+                "label": "H2"
+              },
+              {
+                "value": "h3",
+                "label": "H3"
+              }
+            ]
+          },
+        ]
+      },
+      {
+        "type": "text-content",
+        "name": "Content",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "select",
+            "id": "size",
+            "label": "Font Size",
+            "options": [
+              {
+                "value": "small",
+                "label": "Small"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              },
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Custom Banner"
+    }]
+  }
+{% endschema %}
