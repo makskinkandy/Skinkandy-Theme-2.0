@@ -229,7 +229,7 @@
         "text_wpbJe8": {
           "type": "text",
           "settings": {
-            "enlarge_text": false,
+            "enlarge_text": true,
             "text": "<p>No matter which material you choose, all SkinKandy jewellery meets the <strong>highest safety and quality standards</strong> to ensure a comfortable and stylish piercing experience. </p><p><strong>Need help choosing?</strong> Visit your nearest <strong>SkinKandy store</strong>, and our expert piercers will guide you to the perfect fit. </p>"
           }
         },
