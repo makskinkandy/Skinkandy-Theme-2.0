@@ -58,7 +58,7 @@
         "text_ne6mKz": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>Not sure what size you need? Visit your nearest <strong>SkinKandy store</strong>, and our expert piercers will help you find the right fit for your piercing.</p>"
           }
         },
@@ -76,7 +76,7 @@
         "button_tWHGXH"
       ],
       "settings": {
-        "align_text": "center",
+        "align_text": "left",
         "narrow_column": true,
         "divider": false
       }
