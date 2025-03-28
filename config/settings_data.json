@@ -804,6 +804,11 @@
         "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
         "disabled": false,
         "settings": {}
+      },
+      "7520711097648287086": {
+        "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
