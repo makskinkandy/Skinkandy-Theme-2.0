@@ -215,7 +215,7 @@
     "raw_code_y8tTKp": {
       "type": "raw-code",
       "settings": {
-        "custom_html": "<div class=\"page-width\">\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
+        "custom_html": "<div class=\"page-width\">\n<h2><b>SHOP THE LOOK</b></h2>\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
       }
     }
   },
@@ -223,10 +223,10 @@
     "164559128170c3ea30",
     "main",
     "sub",
+    "raw_code_y8tTKp",
     "collection-return",
     "ss-recommendations-cross-sell",
     "ss-recommendations-similar",
-    "pagefly-product-section",
-    "raw_code_y8tTKp"
+    "pagefly-product-section"
   ]
 }
