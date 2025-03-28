@@ -211,6 +211,12 @@
     "pagefly-product-section": {
       "type": "pagefly-product-section",
       "settings": {}
+    },
+    "raw_code_y8tTKp": {
+      "type": "raw-code",
+      "settings": {
+        "custom_html": "<div data-id=\"22433\" class=\"lookfy-gallery\"></div>"
+      }
     }
   },
   "order": [
@@ -220,6 +226,7 @@
     "collection-return",
     "ss-recommendations-cross-sell",
     "ss-recommendations-similar",
-    "pagefly-product-section"
+    "pagefly-product-section",
+    "raw_code_y8tTKp"
   ]
 }
