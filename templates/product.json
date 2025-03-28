@@ -191,6 +191,12 @@
         "max_width": true
       }
     },
+    "raw_code_y8tTKp": {
+      "type": "raw-code",
+      "settings": {
+        "custom_html": "<div class=\"page-width\">\n<h2><b>SHOP THE LOOK</b></h2>\n<br>\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
+      }
+    },
     "collection-return": {
       "type": "collection-return",
       "disabled": true,
@@ -211,12 +217,6 @@
     "pagefly-product-section": {
       "type": "pagefly-product-section",
       "settings": {}
-    },
-    "raw_code_y8tTKp": {
-      "type": "raw-code",
-      "settings": {
-        "custom_html": "<div class=\"page-width\">\n<h2><b>SHOP THE LOOK</b></h2>\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
-      }
     }
   },
   "order": [
