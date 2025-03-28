@@ -215,7 +215,7 @@
     "raw_code_y8tTKp": {
       "type": "raw-code",
       "settings": {
-        "custom_html": "<div data-id=\"22433\" class=\"lookfy-gallery\"></div>"
+        "custom_html": "<div class=\"page-width\">\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
       }
     }
   },
