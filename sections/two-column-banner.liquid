@@ -1,4 +1,4 @@
-{% if template.suffix == "store-details"  %}
+{% if template.suffix == "store-details" or template.suffix == "store-details-dynamic-banner"  %}
   {% assign metafield_date = product.metafields.custom.opening_day | date: "%Y-%m-%d" %}
   {% assign today_date = "now" | date: "%Y-%m-%d" %}
   {% if page.metafields.custom.enable_2for1_banner == true or metafield_date <= today_date %}
