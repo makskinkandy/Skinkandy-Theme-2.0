@@ -1,8 +1,8 @@
 {% if template.suffix == "store-details" or template.suffix == "store-details-dynamic-banner"  %}
-  {% assign metafield_date = product.metafields.custom.opening_day | date: "%Y-%m-%d" %}
+  {% assign metafield_date = product.metafields.custom.date | date: "%s" %}
+  {% assign future_date = metafield_date | plus: 259200 | date: "%Y-%m-%d" %}
   {% assign today_date = "now" | date: "%Y-%m-%d" %}
-  {% if page.metafields.custom.enable_2for1_banner == true or metafield_date <= today_date %}
-    {{ page.metafields.custom.enable_2for1_banner }}
+  {% if page.metafields.custom.enable_2for1_banner == true and metafield_date <= today_date %}
     {% render 'two-column-banner' %}
   {% endif %}
 {% else %}
