@@ -40,8 +40,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Your_Love_Refreshed_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_Desktop_Your_Most_Loved_Refreshed.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Bold_Pieces_Statement_Looks.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Bold_Pieces_Statement_Looks.jpg",
             "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
