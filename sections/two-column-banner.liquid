@@ -1,5 +1,5 @@
 {% if template.suffix == "store-details"  %}
-  {% if page.metafields.custom.enable_2for1_banner %}
+  {% if page.metafields.custom.enable_2for1_banner == true %}
     {% render 'two-column-banner' %}
   {% endif %}
 {% else %}
