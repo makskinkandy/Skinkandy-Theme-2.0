@@ -14,11 +14,18 @@
       "settings": {
         "breadcrumbs": false,
         "heading": true,
-        "content": true
+        "content": false
+      }
+    },
+    "raw_code_gQDLEt": {
+      "type": "raw-code",
+      "settings": {
+        "custom_html": "<div class=\"page-width\">\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "raw_code_gQDLEt"
   ]
 }
