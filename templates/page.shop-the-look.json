@@ -17,6 +17,26 @@
         "content": false
       }
     },
+    "rich_text_Jbh9JG": {
+      "type": "rich-text",
+      "blocks": {
+        "text_qCr8WC": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>From curated ear stacks to striking face and navel jewellery—discover complete looks styled for comfort, shine, and everyday wear.<br/><br/>Mix, match, and personalise your piercings with luxe combinations that express your vibe.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_qCr8WC"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "raw_code_gQDLEt": {
       "type": "raw-code",
       "settings": {
@@ -26,6 +46,7 @@
   },
   "order": [
     "main",
+    "rich_text_Jbh9JG",
     "raw_code_gQDLEt"
   ]
 }
