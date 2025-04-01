@@ -65,11 +65,44 @@
             "url": "shopify://collections/nose-jewellery",
             "image": "shopify://shop_images/9355442045791-1.jpg"
           }
+        },
+        "image_y6VRDn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NAVEL",
+            "url": "shopify://collections/belly",
+            "image": "shopify://shop_images/9355442044787.jpg"
+          }
+        },
+        "image_Q7wXjm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "LIP",
+            "url": "shopify://collections/lip",
+            "image": "shopify://shop_images/image_21.jpg"
+          }
+        },
+        "image_8BVatN": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": false,
+            "disable_button": false,
+            "title": "NIPPLE",
+            "url": "shopify://collections/nipple",
+            "image": "shopify://shop_images/image_22.jpg"
+          }
         }
       },
       "block_order": [
         "image_hBXamf",
-        "image_gbweBd"
+        "image_gbweBd",
+        "image_y6VRDn",
+        "image_Q7wXjm",
+        "image_8BVatN"
       ],
       "settings": {
         "title": "SHOP BY PIERCING",
