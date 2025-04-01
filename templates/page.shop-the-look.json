@@ -43,6 +43,44 @@
         "custom_html": "<div class=\"page-width\">\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
       }
     },
+    "collection_showcase_eQjPjA": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_hBXamf": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "EAR",
+            "url": "shopify://collections/cartilage-labret",
+            "image": "shopify://shop_images/9355442045203.jpg"
+          }
+        },
+        "image_gbweBd": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NOSE",
+            "url": "shopify://collections/nose-jewellery",
+            "image": "shopify://shop_images/9355442045791-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hBXamf",
+        "image_gbweBd"
+      ],
+      "settings": {
+        "title": "SHOP BY PIERCING",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": true,
+        "enable_hover": false
+      }
+    },
     "custom_banner_3bBnUt": {
       "type": "custom-banner",
       "blocks": {
@@ -102,6 +140,7 @@
     "main",
     "rich_text_Jbh9JG",
     "raw_code_gQDLEt",
+    "collection_showcase_eQjPjA",
     "custom_banner_3bBnUt"
   ]
 }
