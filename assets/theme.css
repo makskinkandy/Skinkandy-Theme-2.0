@@ -8854,6 +8854,9 @@ html[dir=rtl] .grid-product__content{
   @media screen and (max-width: 980px) {
     font-size: 12px;
   }
+  @media screen and (max-width: 332px) {
+    font-size: 10px;
+  }
 }
 
 .grid-product--btn-grp .btn:hover {
