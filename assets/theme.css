@@ -8661,8 +8661,8 @@ html[dir=rtl] .grid-product__content{
   font-weight: bold;
   text-transform: uppercase;
   position:absolute;
-  top:0;
-  right:0;
+  bottom: 10px;
+  right: 10px;
   padding: 8px 10px;
   background-color:var(--colorDefaultTag, #000000);
   color:var(--colorDefaultTagText, white);
