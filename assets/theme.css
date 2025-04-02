@@ -15646,6 +15646,9 @@ button.action.previous.classic-button {
 .collection-header-wrapper a {
   border-bottom: 0 !important;
   font-weight: bold;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px !important;
+  }
 }
 
 /* Kandy Club Page */
