@@ -1148,6 +1148,10 @@ html[dir=rtl] .grid--center .grid__item{
   .medium-up--one-quarter{width:25%;}
 }
 
+@media only screen and (max-width:1024px) {
+  .medium-up--one-quarter{width:50%;}
+}
+
 .show{display:block !important;}
 
 .hide{display:none !important;}
