@@ -47,38 +47,36 @@
           {{ 'products.product.sold_out' | t }}
         </div>
       {%- endunless -%}
-
-      {% if settings.custom_badge_img != blank and settings.promo_collection != blank and product.tags contains settings.promo_collection %}
-        <div class="grid-product__tag grid-product__tag--image">
-          <img src="{{ settings.custom_badge_img | img_url: '100x' }}" alt="">
-        </div>
-      {% else %}
-        {%- if settings.sale_image_1 != blank -%}
-          {%- unless product.tags contains "gift card" -%}
-            {%- if settings.sale_image_2 != blank and settings.sale_tag != blank and product.tags contains settings.sale_tag -%}
-              <div class="grid-product__tag grid-product__tag--image">
-                  <img src="{{ settings.sale_image_2 | img_url: '100x' }}" alt="">
-              </div>
-            {%- else -%}
-              <div class="grid-product__tag grid-product__tag--image">
-                  <img src="{{ settings.sale_image_1 | img_url: '100x' }}" alt="">
-              </div>
-            {%- endif -%}
-          {%- endunless -%}
-        {%- else -%}
-          {%- if on_sale and product.available -%}
-              <div class="grid-product__tag grid-product__tag--sale">
-                {{ 'products.general.sale' | t }}
-              </div>
-          {%- endif -%}
-        {%- endif -%}
-      {% endif %}
-
       
     {%- endif -%}
 
     <product-grid class="grid-product--wrapper">
       <div class="grid-product__image-mask">
+        {% if settings.custom_badge_img != blank and settings.promo_collection != blank and product.tags contains settings.promo_collection %}
+          <div class="grid-product__tag grid-product__tag--image">
+            <img src="{{ settings.custom_badge_img | img_url: '100x' }}" alt="">
+          </div>
+        {% else %}
+          {%- if settings.sale_image_1 != blank -%}
+            {%- unless product.tags contains "gift card" -%}
+              {%- if settings.sale_image_2 != blank and settings.sale_tag != blank and product.tags contains settings.sale_tag -%}
+                <div class="grid-product__tag grid-product__tag--image">
+                    <img src="{{ settings.sale_image_2 | img_url: '100x' }}" alt="">
+                </div>
+              {%- else -%}
+                <div class="grid-product__tag grid-product__tag--image">
+                    <img src="{{ settings.sale_image_1 | img_url: '100x' }}" alt="">
+                </div>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- else -%}
+            {%- if on_sale and product.available -%}
+                <div class="grid-product__tag grid-product__tag--sale">
+                  {{ 'products.general.sale' | t }}
+                </div>
+            {%- endif -%}
+          {%- endif -%}
+        {% endif %}
         {%- render 'product-grid-item-media', product: product, section: section, video_looping: true -%}
         <span class="wishlist-wrapper medium-up--hide">
           <!-- include 'wishlist-button-collection' with '{{ product.id }}' -->
