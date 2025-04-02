@@ -15647,7 +15647,7 @@ button.action.previous.classic-button {
   border-bottom: 0 !important;
   font-weight: bold;
   @media screen and (max-width: 767px) {
-    margin-bottom: 25px !important;
+    margin-bottom: 10px !important;
   }
 }
 
