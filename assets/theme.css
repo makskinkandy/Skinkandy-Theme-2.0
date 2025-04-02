@@ -8562,6 +8562,9 @@ html[dir=rtl] .grid-product__content{
   text-transform: uppercase;
   font-size:calc(var(--typeBaseSize)*0.857);
   background-color: var(--colorBody, white);
+  @media screen and (max-width: 380px) {
+    padding: 8px;
+  }
 }
 
 .grid-product__meta .link--underline {
