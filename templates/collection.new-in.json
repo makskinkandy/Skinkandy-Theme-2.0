@@ -130,8 +130,8 @@
             "custom_filter_1_text": "Elevated Everyday",
             "custom_filter_2": "/collections/new-in#/filter:collection_name:Luxury$2520Navel",
             "custom_filter_2_text": "Luxury Navel",
-            "custom_filter_3": "",
-            "custom_filter_3_text": ""
+            "custom_filter_3": "/collections/new-in#/filter:tags:Hoops%20&%20Huggies",
+            "custom_filter_3_text": "Hoops & Huggies"
           }
         },
         "subcollections": {
@@ -167,7 +167,12 @@
         "filter_style": "sidebar",
         "enable_color_swatches": true,
         "enable_sort": true,
-        "enable_collection_count": true
+        "enable_collection_count": true,
+        "password_title": "",
+        "password_subtitle": "",
+        "password_prompt_text": "Please input password to view this page",
+        "wrong_password_prompt_text": "Wrong password, please try again",
+        "submit_password_text": "Submit"
       }
     },
     "1642136988303d16d6": {
