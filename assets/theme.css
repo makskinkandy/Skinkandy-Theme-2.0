@@ -8670,7 +8670,7 @@ html[dir=rtl] .grid-product__content{
   transition:opacity 0.4s ease;
   background: #FFF;
   border-radius: 50%;
-  width: 80px;
+  width: 70px;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
