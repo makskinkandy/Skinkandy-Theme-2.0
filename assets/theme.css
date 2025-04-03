@@ -16052,6 +16052,7 @@ button.label.collapsible-trigger.collapsible-trigger-btn.collapsible--auto-heigh
   width: 120px;
   aspect-ratio: 1 / 1;
   top: 10px;
+  max-height: 120px;
   @media screen and (max-width: 1200px) {
     max-width: 100px;
   }
