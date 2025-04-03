@@ -55,6 +55,7 @@
   {% if request.locale.root_url contains 'en-nz' %}
     const countryCode = "NZ"
   {% elsif request.locale.root_url contains 'en-us' %}
+    const countryCode = "US"
   {% else %}
     const countryCode = "AU"
   {% endif %}
