@@ -89,8 +89,8 @@
         "image_8BVatN": {
           "type": "image",
           "settings": {
-            "disable_overlay": false,
-            "disable_button": false,
+            "disable_overlay": true,
+            "disable_button": true,
             "title": "NIPPLE",
             "url": "shopify://collections/nipple",
             "image": "shopify://shop_images/image_22.jpg"
