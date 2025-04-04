@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', e => {
     });
   });
 
-  const changeCountry = (countryCode) => {
+  const call_change_country_ = (countryCode) => {
     const urls = {
       'NZ': 'https://skinkandy.com/en-nz',
       'AU': 'https://skinkandy.com/'
