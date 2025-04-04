@@ -7849,4 +7849,19 @@ lazySizesConfig.expFactor = 4;
   // Start observing the document body for added nodes
   observer.observe(document.body, { childList: true, subtree: true });
 
+  function call_change_country_(countryCode) {
+    const urls = {
+      'NZ': 'https://skinkandy.com/',
+      'AU': 'https://skinkandy.com/en-nz'
+    };
+  
+    const targetUrl = urls[countryCode];
+  
+    if (targetUrl) {
+      window.location.href = targetUrl;
+    } else {
+      console.error('Invalid country code:', countryCode);
+    }
+  }
+
 })();
