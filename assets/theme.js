@@ -7849,7 +7849,7 @@ lazySizesConfig.expFactor = 4;
   // Start observing the document body for added nodes
   observer.observe(document.body, { childList: true, subtree: true });
 
-  function call_change_country_(countryCode) {
+  function call_change_country(countryCode) {
     console.log("TEST")
     const urls = {
       'NZ': 'https://skinkandy.com/',
