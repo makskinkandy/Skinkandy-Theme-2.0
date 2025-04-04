@@ -457,3 +457,18 @@ const domReady = () => {
 }
 
 document.addEventListener('DOMContentLoaded', domReady);
+
+function changeCountry(countryCode) {
+  const urls = {
+    'NZ': 'https://skinkandy.com/',
+    'AU': 'https://skinkandy.com/en-nz'
+  };
+
+  const targetUrl = urls[countryCode];
+
+  if (targetUrl) {
+    window.location.href = targetUrl;
+  } else {
+    console.error('Invalid country code:', countryCode);
+  }
+}
