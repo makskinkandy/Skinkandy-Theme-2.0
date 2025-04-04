@@ -458,7 +458,7 @@ const domReady = () => {
 
 document.addEventListener('DOMContentLoaded', domReady);
 
-function changeCountry(countryCode) {
+function call_change_country_(countryCode) {
   const urls = {
     'NZ': 'https://skinkandy.com/',
     'AU': 'https://skinkandy.com/en-nz'
