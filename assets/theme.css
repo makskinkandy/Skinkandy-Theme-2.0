@@ -16059,6 +16059,7 @@ button.label.collapsible-trigger.collapsible-trigger-btn.collapsible--auto-heigh
   }
   @media screen and (max-width: 769px) {
     top: 110px;
+    left: 10px;
   }
   @media screen and (max-width:580px) {
     max-width: 70px;
