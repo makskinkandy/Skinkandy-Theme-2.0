@@ -332,6 +332,7 @@ document.addEventListener('DOMContentLoaded', e => {
   });
 
   const call_change_country_ = (countryCode) => {
+    console.log(":TEST")
     const urls = {
       'NZ': 'https://skinkandy.com/en-nz',
       'AU': 'https://skinkandy.com/'
