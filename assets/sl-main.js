@@ -331,4 +331,20 @@ document.addEventListener('DOMContentLoaded', e => {
     });
   });
 
+  function call_change_country(countryCode) {
+    console.log("TEST")
+    const urls = {
+      'NZ': 'https://skinkandy.com/',
+      'AU': 'https://skinkandy.com/en-nz'
+    };
+  
+    const targetUrl = urls[countryCode];
+  
+    if (targetUrl) {
+      window.location.href = targetUrl;
+    } else {
+      console.error('Invalid country code:', countryCode);
+    }
+  }
+
 });
