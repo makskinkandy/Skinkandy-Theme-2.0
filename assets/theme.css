@@ -16055,12 +16055,14 @@ button.label.collapsible-trigger.collapsible-trigger-btn.collapsible--auto-heigh
   max-height: 120px;
   @media screen and (max-width: 1200px) {
     max-width: 100px;
+    max-height: 100px;
   }
   @media screen and (max-width: 769px) {
     top: 110px;
   }
   @media screen and (max-width:580px) {
     max-width: 70px;
+    max-height: 70px;
   }
 }
 
