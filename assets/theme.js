@@ -7850,6 +7850,7 @@ lazySizesConfig.expFactor = 4;
   observer.observe(document.body, { childList: true, subtree: true });
 
   function call_change_country_(countryCode) {
+    console.log("TEST")
     const urls = {
       'NZ': 'https://skinkandy.com/',
       'AU': 'https://skinkandy.com/en-nz'
