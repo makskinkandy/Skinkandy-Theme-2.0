@@ -38,6 +38,7 @@
         },
         "image_chJCWB": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Luxury_for_Everyone.jpg",
@@ -52,7 +53,6 @@
         },
         "image_ng66KH": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Hoops_and_Huggies_1.jpg",
