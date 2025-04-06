@@ -50,6 +50,21 @@
             "align_text": "center"
           }
         },
+        "image_ng66KH": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Luxury_for_Everyone.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Luxury_for_Everyone.jpg",
+            "banner_url": "shopify://collections/new-in",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
         "image_DREBap": {
           "type": "image",
           "settings": {
@@ -68,6 +83,7 @@
       "block_order": [
         "image_azEXYx",
         "image_chJCWB",
+        "image_ng66KH",
         "image_DREBap"
       ],
       "settings": {
