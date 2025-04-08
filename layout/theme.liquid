@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
-  <head>
+  <head>{% render 'spdn' %}
     {% comment %}
-    {% render 'spdn' %}
+    
     {% endcomment %}
     {% include 'flyinghearts' %}
     {% include 'booster-seo' %}
@@ -397,5 +397,5 @@
         }
       </script>
     {% endif %}
-  </body>
+  {% render 'spdn4' %}</body>
 </html>
