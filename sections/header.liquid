@@ -1,5 +1,5 @@
 {% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
-  <a href="#!" class="btn btn--popup btn--black js-popup-btn">{{ settings.popup_btn }}</a>
+  <a href="#!" id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
   <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
       <a href="javascript.void(0)" class="popup-close" role="button"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/close-btn.png?v=1725430171" alt="close icon"></a>
