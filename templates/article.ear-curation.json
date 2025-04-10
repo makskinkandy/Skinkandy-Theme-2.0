@@ -266,7 +266,7 @@
         "align_text": "left",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "two_column_icon_image_88QgTC": {
