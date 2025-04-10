@@ -16287,3 +16287,7 @@ a.btn--popup {
     font-size: 12px;
   } 
 }
+
+.page-width.page-width--narrow.page-content.page-content--article.disable-padding--true {
+  padding-bottom: 0;
+}
