@@ -52,7 +52,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": true
+        "reduced_image_size": true,
+        "reduced_content_width": true
       }
     },
     "two_column_icon_image_9CpNnY": {
@@ -83,7 +84,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": true
+        "reduced_image_size": true,
+        "reduced_content_width": false
       }
     },
     "two_column_icon_image_VHB8WC": {
@@ -114,7 +116,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": true
+        "reduced_image_size": true,
+        "reduced_content_width": false
       }
     },
     "rich_text_MwBgrj": {
