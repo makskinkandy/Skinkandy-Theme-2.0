@@ -239,6 +239,33 @@
         "reduced_content_width": true
       }
     },
+    "rich_text_EmrR7n": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wcAqGj": {
+          "type": "heading",
+          "settings": {
+            "title": "Give it some edge with asymmetry "
+          }
+        },
+        "text_GxBrff": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>An asymmetrical look involves mixing different piercings on each ear rather than opting for a perfectly matched set. It can include a variety of placements like Helix, Conch and Rook Piercings, creating an effortlessly cool and edgy aesthetic.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wcAqGj",
+        "text_GxBrff"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -285,6 +312,7 @@
     "rich_text_FVc896",
     "two_column_icon_image_TmERdN",
     "two_column_icon_image_FxqgUt",
+    "rich_text_EmrR7n",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
