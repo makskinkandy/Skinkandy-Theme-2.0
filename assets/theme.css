@@ -16272,3 +16272,15 @@ p.piercing-disclaimer i {
 .flickity-previous {
     left: -35px;
 }
+
+.btn--black {
+  background: #000;
+}
+
+a.btn--popup {
+    position: fixed !important;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
