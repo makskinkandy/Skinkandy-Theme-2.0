@@ -327,6 +327,34 @@
         "divider": false
       }
     },
+    "rich_text_LtXCaK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jU9m9F": {
+          "type": "heading",
+          "settings": {
+            "title": "Look to the stars with a celestial statement ",
+            "heading_tag": "h3"
+          }
+        },
+        "text_cpDpyT": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>For those who love storytelling through jewellery, a celestial ear stack is a dream come true. Featuring motifs like stars, moons and planets, this style adds a unique, personal touch to your ear curation.</p><p><a href=\"/products/cz-paved-crescent-moon-top-flat-back-stud\" title=\"CZ Paved Crescent Moon Top Flatback Stud\">CZ Paved Crescent Moon Top Flatback Stud</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jU9m9F",
+        "text_cpDpyT"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -376,6 +404,7 @@
     "rich_text_EmrR7n",
     "two_column_icon_image_88QgTC",
     "rich_text_QDQpCw",
+    "rich_text_LtXCaK",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
