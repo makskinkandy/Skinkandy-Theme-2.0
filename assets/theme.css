@@ -16278,6 +16278,6 @@ p.piercing-disclaimer i {
 a.btn--popup {
     position: fixed !important;
     bottom: 20px;
-    z-index: 9;
+    z-index: 99;
     left: 10px;
 }
