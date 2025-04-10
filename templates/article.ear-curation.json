@@ -42,9 +42,7 @@
       "block_order": [
         "title_block_LkF6Py"
       ],
-      "custom_css": [
-        ".two-column-section {margin-top: -120px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/7R505813_1.jpg",
         "left_align": true,
@@ -79,7 +77,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/7R506473_2.jpg",
-        "left_align": false,
+        "left_align": true,
         "icon_column": true,
         "bottom_margin": false,
         "hide_mobile": false,
