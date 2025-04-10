@@ -1,5 +1,5 @@
 <div class="two-column-section">
-  <div class="page-width">
+  <div class="page-width {% if section.settings.reduced_content_width %}page-width--narrow{% endif %}">
     <div class="two-column-section__wrapper {% if section.settings.bottom_margin %} bottom-margin{% endif %} reduced-img-size--{{ section.settings.reduced_image_size }}">
       <div class="blocks-column {% if section.settings.left_align %} left-align{% endif %} icon-column--{{ section.settings.icon_column }}">
         {% if section.blocks.size > 0 %}
