@@ -42,7 +42,9 @@
       "block_order": [
         "title_block_LkF6Py"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".two-column-section {margin-top: -100px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/7R505813_1.jpg",
         "left_align": true,
@@ -167,6 +169,7 @@
       "block_order": [
         "text_zbH4VB"
       ],
+      "custom_css": [],
       "settings": {
         "align_text": "left",
         "narrow_column": true,
