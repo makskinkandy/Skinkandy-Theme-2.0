@@ -42,9 +42,7 @@
       "block_order": [
         "title_block_LkF6Py"
       ],
-      "custom_css": [
-        ".two-column-section {margin-top: -100px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/7R505813_1.jpg",
         "left_align": true,
@@ -162,7 +160,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>Each of these piercings can be mixed and matched to create a personalised, stylish and balanced ear curation. Whether you want a sleek minimalist stack or a bold, edgy combination, your ear curation can be as unique as you are!</p>"
+            "text": "<p>Each of these piercings can be mixed and matched to create a personalised, stylish and balanced ear curation. Whether you want a sleek minimalist stack or a bold, edgy combination, your ear curation can be as unique as you are!</p><h2>Stacked ear piercing ideas: shop the look </h2><p>One of the best things about ear curation is its versatility – you can mix and match different piercings and jewellery styles to create a look that suits your unique aesthetic. Whether you prefer an elegant, edgy or minimalist approach, the right combination of piercings will bring your stacked ear vision to life. </p>"
           }
         }
       },
@@ -170,33 +168,6 @@
         "text_zbH4VB"
       ],
       "custom_css": [],
-      "settings": {
-        "align_text": "left",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "rich_text_phTXHe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_6GXte7": {
-          "type": "heading",
-          "settings": {
-            "title": "Stacked ear piercing ideas: shop the look "
-          }
-        },
-        "text_6Tnj7i": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>One of the best things about ear curation is its versatility – you can mix and match different piercings and jewellery styles to create a look that suits your unique aesthetic. Whether you prefer an elegant, edgy or minimalist approach, the right combination of piercings will bring your stacked ear vision to life. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_6GXte7",
-        "text_6Tnj7i"
-      ],
       "settings": {
         "align_text": "left",
         "narrow_column": true,
@@ -233,6 +204,37 @@
         "bottom_border": false,
         "reduced_image_size": true,
         "reduced_content_width": true
+      }
+    },
+    "two_column_icon_image_FxqgUt": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_98Vc9R": {
+          "type": "title_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "description": "",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_98Vc9R"
+      ],
+      "settings": {
+        "left_align": false,
+        "icon_column": false,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": false,
+        "reduced_content_width": false
       }
     },
     "rich_text_MwBgrj": {
@@ -279,8 +281,8 @@
     "two_column_icon_image_VHB8WC",
     "two_column_icon_image_Lmxh7i",
     "rich_text_FVc896",
-    "rich_text_phTXHe",
     "two_column_icon_image_TmERdN",
+    "two_column_icon_image_FxqgUt",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
