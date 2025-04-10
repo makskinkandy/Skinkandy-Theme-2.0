@@ -359,6 +359,35 @@
         "reduce_spacing": true
       }
     },
+    "rich_text_UcVtHd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LGJVmC": {
+          "type": "heading",
+          "settings": {
+            "title": "Live on the edge with an industrial vibe ",
+            "heading_tag": "h3"
+          }
+        },
+        "text_PBUYAK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>This bold style includes striking piercings like industrial bars, multiple Helix Piercings and Daith Piercings. With statement pieces like barbells and geometric designs, an industrial look is ideal for those who love a rebellious and edgy look.</p><p><a href=\"/products/arrow-industrial-steel-barbell\" title=\"Arrow Industrial Steel Barbell\">Arrow Industrial Steel Barbell</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LGJVmC",
+        "text_PBUYAK"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -392,35 +421,6 @@
         "heading_size": "h2",
         "shop_all": "",
         "bottom_border": false
-      }
-    },
-    "rich_text_UcVtHd": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_LGJVmC": {
-          "type": "heading",
-          "settings": {
-            "title": "Rich text",
-            "heading_tag": "h2"
-          }
-        },
-        "text_PBUYAK": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_LGJVmC",
-        "text_PBUYAK"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
       }
     }
   },
