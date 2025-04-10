@@ -21,7 +21,8 @@
         "blog_show_date": false,
         "blog_show_comments": false,
         "blog_show_author": false,
-        "social_sharing_blog": true
+        "social_sharing_blog": true,
+        "disable_padding": true
       }
     },
     "two_column_icon_image_APkhWL": {
