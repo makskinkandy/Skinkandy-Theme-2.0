@@ -1629,6 +1629,12 @@
         "id": "popup_delay",
         "label": "Form delay befor it opens in seconds"
       },
+      {
+        "type": "text",
+        "id": "popup_btn",
+        "label": "Button Label",
+        "default": "JOIN KANDYCLUB NOW"
+      }
     ]
   },
   {
