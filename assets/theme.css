@@ -16296,4 +16296,7 @@ a.btn--popup {
 .index-section:has(>.reduce-spacing--true) {
   margin-top: 40px;
   margin-bottom: 0;
+  @media screen and (max-width: 960px) {
+    margin-top: 10px;
+  }
 }
