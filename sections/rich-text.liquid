@@ -1,6 +1,6 @@
 {%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
 
-<div class="text-{{ section.settings.align_text }} page-width{% if section.settings.narrow_column %} page-width--narrow{% endif %}">
+<div class="text-{{ section.settings.align_text }} page-width{% if section.settings.narrow_column %} page-width--narrow{% endif %} reduce-spacing--{{ section.settings.reduce_spacing }}">
   {%- for block in section.blocks -%}
     <div class="theme-block" {{ block.shopify_attributes }}>
       {%- case block.type -%}
@@ -88,6 +88,12 @@
         "type": "checkbox",
         "id": "divider",
         "label": "Show section divider",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "reduce_spacing",
+        "label": "Reduce Section spacing",
         "default": false
       }
     ],
