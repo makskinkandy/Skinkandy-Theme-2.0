@@ -21,7 +21,7 @@
               {% endif %}
             {% endfor %}
           {% endcapture %}
-          <h2>{{ processed_words | strip }}</h2>
+          <{{ block.settings.heading_tag }}>{{ processed_words | strip }}</{{ block.settings.heading_tag }}>
         {%- when 'page' -%}
           <div class="rte">
             {%- if block.settings.page_text != blank -%}
@@ -101,7 +101,27 @@
             "id": "title",
             "label": "Heading",
             "default": "Rich text"
-          }
+          },
+          {
+            "type": "select",
+            "id": "heading_tag",
+            "label": "Heading Tag",
+            "default": "h2",
+            "options": [
+              {
+                "value": "h1",
+                "label": "H1"
+              },
+              {
+                "value": "h2",
+                "label": "H2"
+              },
+              {
+                "value": "h3",
+                "label": "H3"
+              }
+            ]
+          },
         ]
       },
       {
