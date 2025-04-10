@@ -16284,6 +16284,6 @@ a.btn--popup {
     transform: translateX(-50%);
     bottom: 20px;
   @media screen and (max-width: 767px) {
-    font-size: 14px;
+    font-size: 12px;
   } 
 }
