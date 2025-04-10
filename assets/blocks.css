@@ -548,7 +548,7 @@
   &.reduced-img-size--true {
     .image-column {
       width: 30%;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 960px) {
         width: 100%;
       }
     }
