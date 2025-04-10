@@ -85,7 +85,7 @@
         "circle_drops": false,
         "bottom_border": false,
         "reduced_image_size": true,
-        "reduced_content_width": false
+        "reduced_content_width": true
       }
     },
     "two_column_icon_image_VHB8WC": {
@@ -117,7 +117,7 @@
         "circle_drops": false,
         "bottom_border": false,
         "reduced_image_size": true,
-        "reduced_content_width": false
+        "reduced_content_width": true
       }
     },
     "rich_text_MwBgrj": {
