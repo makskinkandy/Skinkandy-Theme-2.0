@@ -83,7 +83,7 @@
           alt="{{ article.image.alt | escape }}">
   {%- endif -%}
 </div>
-<div class="page-width page-width--narrow page-content page-content--article">
+<div class="page-width page-width--narrow page-content page-content--article disable-padding--{{ section.settings.disable_padding }}">
   <article class="article">
     {% assign text = article.title %}
 
