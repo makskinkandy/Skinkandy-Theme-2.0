@@ -700,6 +700,9 @@
       font-size: 12px;
     }
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
   .btn {
     font-size: 15px;
     margin-top: 25px;
