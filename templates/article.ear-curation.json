@@ -213,9 +213,9 @@
         "title_block_98Vc9R": {
           "type": "title_block",
           "settings": {
-            "title": "",
+            "title": "Keep it subtle with a minimalist vibe ",
             "title_tag": "h2",
-            "description": "",
+            "description": "<p>This style focuses on delicate, subtle piercings with small studs and dainty hoops. Multiple Lobe Piercings are a great foundation, while a single Helix or Rook Piercing adds just a touch of intrigue. Tiny studs, discreet hoops and cohesive metal tones keep the style sleek and modern. </p>",
             "button_text": "",
             "button_url": "",
             "text_align": "left"
@@ -226,16 +226,17 @@
         "title_block_98Vc9R"
       ],
       "settings": {
-        "left_align": false,
-        "icon_column": false,
+        "image": "shopify://shop_images/SK-0_214.jpg",
+        "left_align": true,
+        "icon_column": true,
         "bottom_margin": false,
         "hide_mobile": false,
         "hide_description": false,
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": false,
-        "reduced_content_width": false
+        "reduced_image_size": true,
+        "reduced_content_width": true
       }
     },
     "rich_text_MwBgrj": {
