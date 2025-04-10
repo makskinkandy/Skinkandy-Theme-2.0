@@ -232,21 +232,6 @@
         "reduced_content_width": true
       }
     },
-    "two_column_icon_image_x7qFMc": {
-      "type": "two-column-icon-image",
-      "settings": {
-        "left_align": false,
-        "icon_column": false,
-        "bottom_margin": false,
-        "hide_mobile": false,
-        "hide_description": false,
-        "round_image": false,
-        "circle_drops": false,
-        "bottom_border": false,
-        "reduced_image_size": false,
-        "reduced_content_width": false
-      }
-    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -293,7 +278,6 @@
     "rich_text_FVc896",
     "rich_text_phTXHe",
     "two_column_icon_image_TmERdN",
-    "two_column_icon_image_x7qFMc",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
