@@ -1,0 +1,165 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "custom_css": [
+        "p {line-height: 25px;}",
+        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}"
+      ],
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true
+      }
+    },
+    "two_column_icon_image_APkhWL": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_LkF6Py": {
+          "type": "title_block",
+          "settings": {
+            "title": "Lobe Piercings: the foundation ",
+            "title_tag": "h3",
+            "description": "<p>Standard Lobe Piercings – A classic starting point for any ear curation. <br/><br/>Stacked Lobe Piercings – Multiple lobe piercings stacked vertically for a layered look. <br/><br/>Transverse Lobe Piercing – A unique horizontal piercing across the lobe. </p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_LkF6Py"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/7R505813_1.jpg",
+        "left_align": true,
+        "icon_column": true,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": true
+      }
+    },
+    "two_column_icon_image_9CpNnY": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_4dj7fj": {
+          "type": "title_block",
+          "settings": {
+            "title": "Helix Piercings: elegant and versatile ",
+            "title_tag": "h3",
+            "description": "<p>Helix Piercing – A simple yet stylish piercing along the outer upper ear. <br/><br/>Double or Triple Helix – A bold take on the classic helix, with multiple piercings in a row. <br/><br/>Forward Helix Piercing – Placed at the front of the helix, near the face, for a delicate touch. </p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_4dj7fj"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/7R506473_2.jpg",
+        "left_align": false,
+        "icon_column": true,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": true
+      }
+    },
+    "two_column_icon_image_VHB8WC": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_xfCk9q": {
+          "type": "title_block",
+          "settings": {
+            "title": "Inner Ear Piercings: a bold choice  ",
+            "title_tag": "h3",
+            "description": "<p><strong>Conch Piercing</strong> – Positioned in the middle of the ear’s cartilage; great for hoops or studs. </p><p><strong>Daith Piercing</strong> – A stylish inner-ear piercing, rumoured to help with migraines. </p><p><strong>Rook Piercing</strong> – A vertical piercing in the cartilage fold above the daith, adding depth and dimension. </p><p><strong>Snug Piercing</strong> – A horizontal piercing along the inner ridge of the ear for an edgy look. </p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_xfCk9q"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2142.jpg",
+        "left_align": true,
+        "icon_column": true,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": true
+      }
+    },
+    "rich_text_MwBgrj": {
+      "type": "rich-text",
+      "blocks": {
+        "button_BDyXzz": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link_text": "book now"
+          }
+        }
+      },
+      "block_order": [
+        "button_BDyXzz"
+      ],
+      "custom_css": [
+        ".text-center {margin-top: -25px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1662086193d23e863f": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "NOW TRENDING",
+        "featured_collection": "{{ article.metafields.custom.linked_collection.value }}",
+        "product_count": 4,
+        "product_limit": 12,
+        "heading_size": "h2",
+        "shop_all": "",
+        "bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "two_column_icon_image_APkhWL",
+    "two_column_icon_image_9CpNnY",
+    "two_column_icon_image_VHB8WC",
+    "rich_text_MwBgrj",
+    "1662086193d23e863f"
+  ]
+}
