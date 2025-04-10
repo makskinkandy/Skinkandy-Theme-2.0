@@ -315,7 +315,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>A mixed metal ear curation blends different metals like gold, silver and rose gold to create contrast and dimension. This style adds versatility and depth, making it a great choice for those who love experimenting with different jewellery tones.</p><p><a href=\"/products/double-chain-steel-hoop-earrings-pair\" title=\"Double Chain Steel Hoop Earrings - Pair\">Double Chain Steel Hoop Earrings</a></p>"
+            "text": "<p>A mixed metal ear curation blends different metals like gold, silver and rose gold to create contrast and dimension. This style adds versatility and depth, making it a great choice for those who love experimenting with different jewellery tones.</p><p><a href=\"https://3c9a9phmu0ck7h7u-55575085194.shopifypreview.com/products/double-chain-steel-hoop-earrings-pair\" title=\"Double Chain Steel Hoop Earrings - Pair\">Double Chain Steel Hoop Earrings</a></p>"
           }
         }
       },
@@ -330,63 +330,33 @@
         "reduce_spacing": true
       }
     },
-    "rich_text_LtXCaK": {
+    "rich_text_w7Jgnp": {
       "type": "rich-text",
       "blocks": {
-        "heading_jU9m9F": {
+        "heading_hk7fmC": {
           "type": "heading",
           "settings": {
             "title": "Look to the stars with a celestial statement ",
             "heading_tag": "h3"
           }
         },
-        "text_cpDpyT": {
+        "text_BHngcN": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>For those who love storytelling through jewellery, a celestial ear stack is a dream come true. Featuring motifs like stars, moons and planets, this style adds a unique, personal touch to your ear curation.</p><p><a href=\"/products/cz-paved-crescent-moon-top-flat-back-stud\" title=\"CZ Paved Crescent Moon Top Flatback Stud\">CZ Paved Crescent Moon Top Flatback Stud</a></p>"
+            "text": "<p>For those who love storytelling through jewellery, a celestial ear stack is a dream come true. Featuring motifs like stars, moons and planets, this style adds a unique, personal touch to your ear curation.</p><p><a href=\"https://3c9a9phmu0ck7h7u-55575085194.shopifypreview.com/products/cz-paved-crescent-moon-top-flat-back-stud\">CZ Paved Crescent Moon Top Flatback Stud</a></p>"
           }
         }
       },
       "block_order": [
-        "heading_jU9m9F",
-        "text_cpDpyT"
+        "heading_hk7fmC",
+        "text_BHngcN"
       ],
-      "custom_css": [],
       "settings": {
         "align_text": "left",
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": true
-      }
-    },
-    "rich_text_Wd4xcE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_pYE7Yn": {
-          "type": "heading",
-          "settings": {
-            "title": "Live on the edge with an industrial vibe ",
-            "heading_tag": "h3"
-          }
-        },
-        "text_ccgALP": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>This bold style includes striking piercings like industrial bars, multiple Helix Piercings and Daith Piercings. With statement pieces like barbells and geometric designs, an industrial look is ideal for those who love a rebellious and edgy look. </p><p><a href=\"/products/double-chain-steel-hoop-earrings-pair\" title=\"Double Chain Steel Hoop Earrings - Pair\">Double Chain Steel Hoop Earrings</a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_pYE7Yn",
-        "text_ccgALP"
-      ],
-      "settings": {
-        "align_text": "left",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
       }
     },
     "rich_text_MwBgrj": {
@@ -403,9 +373,7 @@
       "block_order": [
         "button_BDyXzz"
       ],
-      "custom_css": [
-        ".text-center {margin-top: -25px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -425,6 +393,35 @@
         "shop_all": "",
         "bottom_border": false
       }
+    },
+    "rich_text_UcVtHd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LGJVmC": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text",
+            "heading_tag": "h2"
+          }
+        },
+        "text_PBUYAK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LGJVmC",
+        "text_PBUYAK"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
@@ -439,8 +436,8 @@
     "rich_text_EmrR7n",
     "two_column_icon_image_88QgTC",
     "rich_text_QDQpCw",
-    "rich_text_LtXCaK",
-    "rich_text_Wd4xcE",
+    "rich_text_w7Jgnp",
+    "rich_text_UcVtHd",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
