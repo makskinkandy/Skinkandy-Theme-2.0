@@ -253,7 +253,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>An asymmetrical look involves mixing different piercings on each ear rather than opting for a perfectly matched set. It can include a variety of placements like Helix, Conch and Rook Piercings, creating an effortlessly cool and edgy aesthetic.</p>"
+            "text": "<p>An asymmetrical look involves mixing different piercings on each ear rather than opting for a perfectly matched set. It can include a variety of placements like Helix, Conch and Rook Piercings, creating an effortlessly cool and edgy aesthetic.</p><p><a href=\"/products/titanium-flat-back-oval-cubic-zirconia-marquis\" title=\"Titanium Flatback Oval Cubic Zirconia Marquis\">Titanium Flatback Oval Cubic Zirconia Marquis</a></p>"
           }
         }
       },
@@ -265,6 +265,38 @@
         "align_text": "left",
         "narrow_column": true,
         "divider": false
+      }
+    },
+    "two_column_icon_image_88QgTC": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_KkjFW8": {
+          "type": "title_block",
+          "settings": {
+            "title": "Make a statement ",
+            "title_tag": "h3",
+            "description": "<p>If you love a statement look, embrace different styles using large hoops, chains and intricate jewellery designs. A Rook Piercing creates a dimensional, statement-making effect, especially when combined with a Daith Piercing and multiple Stacked Lobe Piercings. A Conch Piercing with a bold hoop adds an extra punch. Dark metals or geometric designs enhance the edgy appeal. </p><p>Titanium Flatback with Blue Eye Cubic Zirconia</p>",
+            "button_text": "",
+            "button_url": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_KkjFW8"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/SK-0_65.jpg",
+        "left_align": true,
+        "icon_column": true,
+        "bottom_margin": false,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": true,
+        "reduced_content_width": true
       }
     },
     "rich_text_MwBgrj": {
@@ -314,6 +346,7 @@
     "two_column_icon_image_TmERdN",
     "two_column_icon_image_FxqgUt",
     "rich_text_EmrR7n",
+    "two_column_icon_image_88QgTC",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
