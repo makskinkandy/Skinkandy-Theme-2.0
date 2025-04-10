@@ -9,13 +9,12 @@
  */
 {
   "sections": {
-    "top_notification_banner_hGVLtG": {
+    "top_notification_banner_yteqNA": {
       "type": "top-notification-banner",
-      "disabled": true,
       "settings": {
-        "enable": true,
-        "notification_text": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
-        "bg_color": "#e42228"
+        "enable": false,
+        "notification_text": "SkinKandy AU & NZ will be closed on Good Friday",
+        "bg_color": "#E42228"
       }
     },
     "header_banner_MUPtRQ": {
@@ -113,7 +112,8 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "flipped_boxes_kG6gXk": {
@@ -439,7 +439,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": true,
-        "reduced_image_size": false
+        "reduced_image_size": false,
+        "reduced_content_width": false
       }
     },
     "grid_image_xGVpcK": {
@@ -510,7 +511,7 @@
     }
   },
   "order": [
-    "top_notification_banner_hGVLtG",
+    "top_notification_banner_yteqNA",
     "header_banner_MUPtRQ",
     "rich_text_9MzUhB",
     "flipped_boxes_kG6gXk",
