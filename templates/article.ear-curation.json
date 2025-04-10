@@ -183,7 +183,7 @@
           "type": "title_block",
           "settings": {
             "title": "Explore a stacked lobe for first-timers ",
-            "title_tag": "h2",
+            "title_tag": "h3",
             "description": "<p>A stacked lobe style features multiple lobe piercings arranged in a neat, cascading pattern. It allows for creative layering of hoops, studs and huggies. This is a great option for first-time curators looking for a low-commitment yet stylish approach.</p><p><a href=\"/products/316l-heart-hoop-earrings-rounded-square-edge\" title=\"Surgical Steel Heart Hoop Earrings with Rounded Square Edge\"><strong>Surgical Steel Heart Hoop Earrings with Rounded Square Edge</strong></a></p>",
             "button_text": "",
             "button_url": "",
@@ -215,7 +215,7 @@
           "type": "title_block",
           "settings": {
             "title": "Keep it subtle with a minimalist vibe ",
-            "title_tag": "h2",
+            "title_tag": "h3",
             "description": "<p>This style focuses on delicate, subtle piercings with small studs and dainty hoops. Multiple Lobe Piercings are a great foundation, while a single Helix or Rook Piercing adds just a touch of intrigue. Tiny studs, discreet hoops and cohesive metal tones keep the style sleek and modern. </p><p><a href=\"/products/titanium-bold-hoop-earrings-gold-silver\" title=\"Titanium Classic Bold Hoop Earrings\"><strong>Titanium Classic Bold Hoop Earrings</strong></a></p>",
             "button_text": "",
             "button_url": "",
@@ -388,6 +388,35 @@
         "reduce_spacing": true
       }
     },
+    "rich_text_tNH74r": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p6LE9L": {
+          "type": "heading",
+          "settings": {
+            "title": "Steps to building your unique style",
+            "heading_tag": "h2"
+          }
+        },
+        "text_xmtEf3": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Designing your dream ear piercing stack isn’tjust about picking random piercings–it’s an art! No matter the look you’re going for, a well-thought-out approach will ensure your ear stack looks cohesive and stylish. Follow these steps to craft an ear stack that’s uniquely yours.</p><h3>Consider your ear anatomy </h3><p>Not all piercings work for every ear shape. Some people have the perfect ridge for a snug Rook Piercing, while others might suit a Helix Piercing better. Work with one of our professional piercers to determine the best placements based on your anatomy (<a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\"><span style=\"text-decoration:underline\">Book a FREE consultation)</span></a>. This ensures your piercings heal well, sit comfortably and look stunning. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p6LE9L",
+        "text_xmtEf3"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -438,6 +467,7 @@
     "rich_text_QDQpCw",
     "rich_text_w7Jgnp",
     "rich_text_UcVtHd",
+    "rich_text_tNH74r",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
