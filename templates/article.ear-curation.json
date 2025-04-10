@@ -299,6 +299,34 @@
         "reduced_content_width": true
       }
     },
+    "rich_text_QDQpCw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8HTb3P": {
+          "type": "heading",
+          "settings": {
+            "title": "Embrace mixed metal ear curation ",
+            "heading_tag": "h3"
+          }
+        },
+        "text_mktVti": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>A mixed metal ear curation blends different metals like gold, silver and rose gold to create contrast and dimension. This style adds versatility and depth, making it a great choice for those who love experimenting with different jewellery tones.</p><p><a href=\"/products/double-chain-steel-hoop-earrings-pair\" title=\"Double Chain Steel Hoop Earrings - Pair\">Double Chain Steel Hoop Earrings</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8HTb3P",
+        "text_mktVti"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -347,6 +375,7 @@
     "two_column_icon_image_FxqgUt",
     "rich_text_EmrR7n",
     "two_column_icon_image_88QgTC",
+    "rich_text_QDQpCw",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
