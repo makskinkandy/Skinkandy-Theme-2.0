@@ -49,6 +49,188 @@
         "height": 250
       }
     },
+    "banner_3kMhWG": {
+      "type": "banner",
+      "settings": {
+        "class": "",
+        "bg_color": "#FFF2D6",
+        "height": 330,
+        "preheading": "",
+        "heading": "<p>MOTHER'S DAY</p>",
+        "heading_element": "h2",
+        "text": "",
+        "link": "",
+        "linktext": "",
+        "linkclass": ""
+      }
+    },
+    "columns_block_yRDVAQ": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_34w3LN": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EhR3Ve": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_knXJXG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_iQJRcX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_PNbrTT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_XRejeW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_34w3LN",
+        "text_block_EhR3Ve",
+        "text_block_knXJXG",
+        "text_block_iQJRcX",
+        "text_block_PNbrTT",
+        "text_block_XRejeW"
+      ],
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "faq_XaKaWA": {
+      "type": "faq",
+      "blocks": {
+        "question_yQpRc9": {
+          "type": "question",
+          "settings": {
+            "title": "HOW IT WORKS",
+            "text": "<p><strong>Cart Value</strong>   <strong>Discount</strong> </p><p>$50+             15% </p><p></p><p> </p>"
+          }
+        },
+        "question_j8n8xY": {
+          "type": "question",
+          "settings": {
+            "title": "EXCLUSIONS",
+            "text": "<p>GOLD AFTERCARE GIFT CARD</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_yQpRc9",
+        "question_j8n8xY"
+      ],
+      "settings": {
+        "title": "SPEND AND SAVE"
+      }
+    },
     "16401466794d03c3f5": {
       "type": "text-columns",
       "blocks": {
@@ -58,7 +240,7 @@
             "enable_image": false,
             "image_width": 650,
             "title": "",
-            "text": "<p><strong>AUSTRALIA'S LARGEST SPECIALIST IN BODY <br/>PIERCING & BODY JEWELLERY</strong></p>",
+            "text": "<p><strong>SPEND & SAVE</strong></p>",
             "button_label": "",
             "button_link": ""
           }
@@ -124,6 +306,7 @@
       "blocks": {
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484": {
           "type": "collection_header",
+          "disabled": true,
           "settings": {
             "title_color": "#000000",
             "custom_filter_1": "",
@@ -206,6 +389,9 @@
   "order": [
     "header_banner_gdLhND",
     "collection-header",
+    "banner_3kMhWG",
+    "columns_block_yRDVAQ",
+    "faq_XaKaWA",
     "16401466794d03c3f5",
     "16424817062061b522",
     "main-collection",
