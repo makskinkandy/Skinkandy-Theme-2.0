@@ -245,7 +245,8 @@
         "heading_wcAqGj": {
           "type": "heading",
           "settings": {
-            "title": "Give it some edge with asymmetry "
+            "title": "Give it some edge with asymmetry ",
+            "heading_tag": "h3"
           }
         },
         "text_GxBrff": {
