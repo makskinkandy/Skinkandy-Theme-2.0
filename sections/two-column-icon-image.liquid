@@ -24,7 +24,7 @@
               
               <div class="title-block {% if section.settings.hide_description %} hide-description{% endif %} text--{{ block.settings.text_align }}">
                 {% if block.settings.title != blank %}
-                  <{{ block.settings.title_tag }} class="h2">{{ processed_words | strip }}</{{ block.settings.title_tag }}>
+                  <{{ block.settings.title_tag }}>{{ processed_words | strip }}</{{ block.settings.title_tag }}>
                 {% endif %}
                 {% if block.settings.description != blank %}
                   {{ block.settings.description }}
