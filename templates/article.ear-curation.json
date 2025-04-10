@@ -349,9 +349,7 @@
         "heading_jU9m9F",
         "text_cpDpyT"
       ],
-      "custom_css": [
-        ".text-left {margin-top: -55px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "align_text": "left",
         "narrow_column": true,
