@@ -27,7 +27,7 @@
                   <{{ block.settings.title_tag }} class="h2">{{ processed_words | strip }}</{{ block.settings.title_tag }}>
                 {% endif %}
                 {% if block.settings.description != blank %}
-                  <p>{{ block.settings.description }}</p>
+                  {{ block.settings.description }}
                 {% endif %}
                 {% if block.settings.button_text != '' %}
                   <a href="{{ block.settings.button_url }}" class="btn btn--primary">{{block.settings.button_text }}</a>
@@ -43,7 +43,7 @@
                     <h3>{{ block.settings.icon_title }}</h3>
                   {% endif %}
                   {% if block.settings.icon_content %}
-                    {{ block.settings.icon_content }}
+                    <p>{{ block.settings.icon_content }}</p>
                   {% endif; %}
                 </div>
               </div>
