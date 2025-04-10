@@ -16278,7 +16278,7 @@ p.piercing-disclaimer i {
 a.btn--popup {
     position: fixed !important;
     z-index: 9;
-    left: 10px;
-    transform: translateY(-50%);
-    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
 }
