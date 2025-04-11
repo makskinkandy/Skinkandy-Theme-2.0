@@ -16308,3 +16308,14 @@ a.btn--popup {
 span.cart__price.cart__discount {
     font-size: 20px;
 }
+
+small.cart__discount.amount {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+small.cart__discount.percentage {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
