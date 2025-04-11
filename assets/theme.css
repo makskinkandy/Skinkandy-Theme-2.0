@@ -16315,7 +16315,8 @@ small.cart__discount.amount {
 }
 
 small.cart__discount.percentage {
-    font-size: 16px;
-    color: red;
-    font-weight: bold;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
 }
