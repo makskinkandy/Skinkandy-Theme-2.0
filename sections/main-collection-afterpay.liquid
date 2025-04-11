@@ -21,7 +21,6 @@
 {% endfor %}
 
 {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
-  TEST
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -150,7 +149,6 @@
   }
   </script>
 {% else %}
-                    HEYHEYHEY
   <p>
     {% if pagePassword %}
     {{ section.settings.wrong_password_prompt_text }}
