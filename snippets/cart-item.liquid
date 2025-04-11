@@ -53,7 +53,7 @@
               <small class="cart__discount">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small>
               <small class="cart__discount">
                 {% if discount_allocation.discount_application.value_type == 'percentage' %}
-                  {{ discount_allocation.discount_application.value }}%
+                  {{ discount_allocation.discount_application.value | round }}%
                 {% endif %}
               </small>
             {%- endfor -%}
