@@ -260,7 +260,6 @@
     {% endfor %}
     
     {% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
-      HEYHEYHEY
       <script>
         window.addEventListener('DOMContentLoaded', () => {
           const urlParams = new URLSearchParams(window.location.search);
@@ -280,8 +279,6 @@
           }
         });
       </script>
-      {% else %}
-        TESTHEY {{ page.metafields.custom.password }}
       {% endif %}
     {% endif %}
   </head>
