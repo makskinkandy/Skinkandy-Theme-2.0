@@ -114,7 +114,7 @@
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
     "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
-    "ss_enable": false,
+    "ss_enable": true,
     "ss_search_only": true,
     "ss_collection_loading_text": "<p>Content loading...</p>",
     "enable_sticky_footer_banner": false,
