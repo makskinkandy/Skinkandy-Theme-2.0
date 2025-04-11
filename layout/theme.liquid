@@ -234,7 +234,55 @@
       }
     </script>
     
-  {% include 'pagefly-app-header' %}</head>
+  {% include 'pagefly-app-header' %}
+  
+  {% if template.suffix == 'afterpay' %}
+      {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
+      {% assign pageParams = contentForQueryString
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | split: '?'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+        | split: '&'
+      %}
+    
+    {% for param in pageParams %}
+      {% if param contains 'key=' %}
+      {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
+      HEYHEYHEY
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const key = urlParams.get('key');
+      
+          if (key) {
+            // Get the main domain (root domain)
+            const mainDomain = window.location.hostname.split('.').slice(-2).join('.');
+      
+            // Construct the silent URL for the checkout page
+            const targetUrl = `https://${mainDomain}/checkout?key=${encodeURIComponent(key)}`;
+      
+            // Fire the silent visit
+            fetch(targetUrl).catch(() => {
+              // Fail silently
+            });
+          }
+        });
+      </script>
+      {% endif %}
+    {% endif %}
+  </head>
 
   <body
     class='template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %} {% if settings.ss_enable and collection.handle and collection.handle == settings.ss_collection_handle %} ss-shop{% endif %} page-{{ handle }} site-{{ request.locale.root_url }}'
@@ -398,52 +446,6 @@
       </script>
     {% endif %}
   {% render 'spdn4' %}
-  {% if template.suffix == 'afterpay' %}
-      {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
-      {% assign pageParams = contentForQueryString
-        | split: '"pageurl":"'
-        | last
-        | split: '"'
-        | first
-        | split: '.myshopify.com'
-        | last
-        | split: '?'
-        | last
-        | replace: '\/', '/'
-        | replace: '%20', ' '
-        | replace: '\u0026', '&'
-        | split: '&'
-      %}
-    
-    {% for param in pageParams %}
-      {% if param contains 'key=' %}
-      {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
-      {% endif %}
-    {% endfor %}
-    
-    {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
-      HEYHEYHEY
-      <script>
-        window.addEventListener('DOMContentLoaded', () => {
-          const urlParams = new URLSearchParams(window.location.search);
-          const key = urlParams.get('key');
-      
-          if (key) {
-            // Get the main domain (root domain)
-            const mainDomain = window.location.hostname.split('.').slice(-2).join('.');
-      
-            // Construct the silent URL for the checkout page
-            const targetUrl = `https://${mainDomain}/checkout?key=${encodeURIComponent(key)}`;
-      
-            // Fire the silent visit
-            fetch(targetUrl).catch(() => {
-              // Fail silently
-            });
-          }
-        });
-      </script>
-      {% endif %}
-    {% endif %}
     {% comment %}
       AudioEye
     {% endcomment %}
