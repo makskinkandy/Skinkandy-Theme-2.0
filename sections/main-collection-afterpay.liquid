@@ -21,6 +21,24 @@
 {% endfor %}
 
 {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
+  <script>
+    (function() {
+      function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        const url = window.location.href;
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+  
+      const discountCode = getParameterByName('key');
+      if (discountCode) {
+        localStorage.setItem('shopify_discount_code', discountCode);
+      }
+    })();
+  </script>
   <div
     id="CollectionAjaxResult"
     class="collection-content"
