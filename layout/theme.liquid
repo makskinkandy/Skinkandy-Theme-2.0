@@ -398,7 +398,7 @@
         }
       </script>
     {% endif %}
-  {% render 'spdn4' %}
+  
 
     {% if template.suffix == 'afterpay' %}
       {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
@@ -451,5 +451,5 @@
       AudioEye
     {% endcomment %}
     <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "a8a7cf9316a13485d7ac5135bd8d13a2"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
-  </body>
+  {% render 'spdn4' %}</body>
   </html>
