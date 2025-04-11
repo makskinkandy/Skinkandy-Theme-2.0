@@ -399,6 +399,7 @@
         }
       </script>
     {% endif %}
+
     {% if template.suffix == 'afterpay' %}
       {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
       {% assign pageParams = contentForQueryString
@@ -422,7 +423,7 @@
       {% endif %}
     {% endfor %}
     
-    {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
+    {% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
       <script>
         window.addEventListener('DOMContentLoaded', () => {
           const urlParams = new URLSearchParams(window.location.search);
@@ -433,11 +434,12 @@
             const mainDomain = window.location.hostname.split('.').slice(-2).join('.');
       
             // Construct the silent URL for the checkout page
-            const targetUrl = `https://${mainDomain}/checkout?key=${encodeURIComponent(key)}`;
+            const targetUrl = `/discount/${encodeURIComponent(key)}`;
       
             // Fire the silent visit
             fetch(targetUrl).catch(() => {
               // Fail silently
+              console.log("ERROR")
             });
           }
         });
