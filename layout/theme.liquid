@@ -399,6 +399,7 @@
     {% endif %}
   {% render 'spdn4' %}
   {% if template.suffix == 'afterpay' %}
+      HEYHEYHEY
       {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
       {% assign pageParams = contentForQueryString
         | split: '"pageurl":"'
