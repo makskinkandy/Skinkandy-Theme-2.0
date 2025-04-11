@@ -15277,6 +15277,10 @@ ul.quick-links > li a {
   font-weight: 700;
 }
 
+.cart__item-price-col .cart__price:is(.cart__price--strikethrough) {
+  font-size: 16px;
+}
+
 .cart__remove {
   width: 15%;
 }
