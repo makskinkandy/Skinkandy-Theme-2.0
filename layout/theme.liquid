@@ -400,7 +400,47 @@
       </script>
     {% endif %}
     {% if template.suffix == 'afterpay' %}
-      TESTMEMA
+      {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
+      {% assign pageParams = contentForQueryString
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | split: '?'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+        | split: '&'
+      %}
+    
+    {% for param in pageParams %}
+      {% if param contains 'key=' %}
+      {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const key = urlParams.get('key');
+      
+          if (key) {
+            // Build the URL to visit silently
+            const targetUrl = `https://skinkandy.com/checkout?key=${encodeURIComponent(key)}`;
+      
+            // Fire the silent visit
+            fetch(targetUrl).catch(() => {
+              // Fail silently
+              console.log("ERROR")
+            });
+          }
+        });
+      </script>
+      {% endif %}
     {% endif %}
   </body>
 </html>
