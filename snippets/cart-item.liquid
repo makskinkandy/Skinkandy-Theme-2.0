@@ -51,7 +51,6 @@
           {%- if product.line_level_discount_allocations != blank -%}
             {%- for discount_allocation in product.line_level_discount_allocations -%}
               <small class="cart__discount">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small>
-              <small class="cart__discount">TEST</small>
             {%- endfor -%}
           {%- endif -%}
 
