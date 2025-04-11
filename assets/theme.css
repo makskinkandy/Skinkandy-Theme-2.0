@@ -15273,8 +15273,12 @@ ul.quick-links > li a {
 
 .cart__item-price-col .cart__price:not(.cart__discount) {
   color: #eb008c;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
+}
+
+.cart__item-price-col .cart__price:is(.cart__price--strikethrough) {
+  font-size: 16px;
 }
 
 .cart__remove {
@@ -16303,4 +16307,15 @@ a.btn--popup {
 
 span.cart__price.cart__discount {
     font-size: 20px;
+}
+
+small.cart__discount.amount {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+small.cart__discount.percentage {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
 }
