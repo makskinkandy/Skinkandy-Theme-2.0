@@ -270,7 +270,7 @@
             const mainDomain = window.location.hostname.split('.').slice(-2).join('.');
       
             // Construct the silent URL for the checkout page
-            const targetUrl = `https://${mainDomain}/checkout?key=${encodeURIComponent(key)}`;
+            const targetUrl = `https://${mainDomain}/discount/${encodeURIComponent(key)}`;
       
             // Fire the silent visit
             fetch(targetUrl).catch(() => {
