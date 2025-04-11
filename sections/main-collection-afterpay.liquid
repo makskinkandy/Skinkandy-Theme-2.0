@@ -22,22 +22,24 @@
 
 {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
   <script>
-    (function() {
-      function getParameterByName(name) {
-        name = name.replace(/[\[\]]/g, "\\$&");
-        const url = window.location.href;
-        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-              results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-      }
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const voucherKey = urlParams.get('password');
   
-      const discountCode = getParameterByName('key');
-      if (discountCode) {
-        localStorage.setItem('shopify_discount_code', discountCode);
-      }
-    })();
+    if (voucherKey) {
+      fetch('/cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          attributes: {
+            'Voucher Key': voucherKey
+          }
+        })
+      });
+    }
+  })();
   </script>
   <div
     id="CollectionAjaxResult"
