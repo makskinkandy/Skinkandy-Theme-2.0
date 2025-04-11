@@ -24,7 +24,7 @@
   <script>
   (function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const voucherKey = urlParams.get('password');
+    const voucherKey = urlParams.get('key');
   
     if (voucherKey) {
       fetch('/cart/update.js', {
