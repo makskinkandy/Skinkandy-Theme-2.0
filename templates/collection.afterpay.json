@@ -125,7 +125,13 @@
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484": {
           "type": "collection_header",
           "settings": {
-            "title_color": "#000000"
+            "title_color": "#000000",
+            "custom_filter_1": "",
+            "custom_filter_1_text": "",
+            "custom_filter_2": "",
+            "custom_filter_2_text": "",
+            "custom_filter_3": "",
+            "custom_filter_3_text": ""
           }
         },
         "subcollections": {
@@ -161,7 +167,15 @@
         "filter_style": "sidebar",
         "enable_color_swatches": true,
         "enable_sort": true,
-        "enable_collection_count": true
+        "enable_collection_count": true,
+        "password_title": "",
+        "password_subtitle": "",
+        "password_prompt_text": "Please input password to view this page",
+        "wrong_password_prompt_text": "Wrong password, please try again",
+        "submit_password_text": "Submit",
+        "page_logo": "shopify://shop_images/Group_1.png",
+        "header_banner": "shopify://shop_images/Group_1442_2.jpg",
+        "floating_image": "shopify://shop_images/Group_1442_1.png"
       }
     },
     "1642136988303d16d6": {
