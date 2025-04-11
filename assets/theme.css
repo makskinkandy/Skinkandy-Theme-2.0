@@ -15202,7 +15202,7 @@ ul.quick-links > li a {
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  color: #ffffff;
+  color: #000;
   display: flex;
   font-weight: 300;
   text-transform: uppercase;
