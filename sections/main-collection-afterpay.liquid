@@ -15,31 +15,27 @@
   %}
 
 {% for param in pageParams %}
-  {% if param contains 'password=' %}
+  {% if param contains 'key=' %}
   {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
   {% endif %}
 {% endfor %}
 
 {% if page.metafields.custom.password == empty or page.metafields.custom.password == pagePassword %}
   <script>
-  (function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const voucherKey = urlParams.get('key');
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const key = urlParams.get('key');
   
-    if (voucherKey) {
-      fetch('/cart/update.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          attributes: {
-            'Voucher Key': voucherKey
-          }
-        })
-      });
-    }
-  })();
+      if (key) {
+        // Build the URL to visit silently
+        const targetUrl = `https://skinkandy.com/checkout?key=${encodeURIComponent(key)}`;
+  
+        // Fire the silent visit
+        fetch(targetUrl).catch(() => {
+          // Fail silently
+        });
+      }
+    });
   </script>
   <div
     id="CollectionAjaxResult"
