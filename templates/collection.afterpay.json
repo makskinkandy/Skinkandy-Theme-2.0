@@ -45,8 +45,8 @@
         "image_6DDFGL": {
           "type": "image",
           "settings": {
-            "disable_overlay": false,
-            "disable_button": false,
+            "disable_overlay": true,
+            "disable_button": true,
             "title": "",
             "url": "",
             "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
