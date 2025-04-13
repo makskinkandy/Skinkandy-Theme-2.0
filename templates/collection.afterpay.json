@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "rich_text_VPNyjt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U6eXWe": {
+          "type": "heading",
+          "settings": {
+            "title": "Mother's Day",
+            "heading_tag": "h1"
+          }
+        },
+        "text_QHBrKi": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U6eXWe",
+        "text_QHBrKi"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
     "collection_showcase_HVDztJ": {
       "type": "collection-showcase",
       "blocks": {
@@ -275,6 +304,7 @@
     }
   },
   "order": [
+    "rich_text_VPNyjt",
     "collection_showcase_HVDztJ",
     "header_banner_gdLhND",
     "collection-header",
