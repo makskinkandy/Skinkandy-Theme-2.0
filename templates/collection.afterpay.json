@@ -46,8 +46,8 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "CURATED BY YOU WORN BY HER",
-            "url": "/collections/shop-all#/filter:collection_name:Hearts",
+            "title": "Hearts",
+            "url": "#/filter:collection_name:Hearts",
             "image": "shopify://shop_images/SK-0_65.jpg"
           }
         },
@@ -56,8 +56,8 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "CURATED BY YOU WORN BY HER",
-            "url": "",
+            "title": "Nature",
+            "url": "#/filter:collection_name:Animal$2520Collection",
             "image": "shopify://shop_images/SK-0_214.jpg"
           }
         },
@@ -66,7 +66,7 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "CURATED BY YOU WORN BY HER",
+            "title": "Astral",
             "url": "",
             "image": "shopify://shop_images/SK-0_109.jpg"
           }
@@ -76,7 +76,7 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "CURATED BY YOU WORN BY HER",
+            "title": "Under 50",
             "url": "",
             "image": "shopify://shop_images/7R505813_1.jpg"
           }
@@ -86,7 +86,7 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "CURATED BY YOU WORN BY HER",
+            "title": "Under 100",
             "url": "",
             "image": "shopify://shop_images/shop_the_look_curated_ears_3.jpg"
           }
