@@ -99,6 +99,9 @@
         "image_6DDFGL",
         "image_f3wHn9"
       ],
+      "custom_css": [
+        ".collection-showcase {padding-top: 0;}"
+      ],
       "settings": {
         "title": "",
         "mode": "light",
