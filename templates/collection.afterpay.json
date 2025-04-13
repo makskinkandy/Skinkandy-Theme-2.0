@@ -9,6 +9,77 @@
  */
 {
   "sections": {
+    "collection_showcase_HVDztJ": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_Lq8hHX": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
+          }
+        },
+        "image_wFKqQp": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
+          }
+        },
+        "image_LbUYjn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
+          }
+        },
+        "image_6DDFGL": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": false,
+            "disable_button": false,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
+          }
+        },
+        "image_f3wHn9": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mother_s_Day_Images_Mood_Board.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Lq8hHX",
+        "image_wFKqQp",
+        "image_LbUYjn",
+        "image_6DDFGL",
+        "image_f3wHn9"
+      ],
+      "settings": {
+        "title": "",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false
+      }
+    },
     "header_banner_gdLhND": {
       "type": "header-banner",
       "blocks": {
@@ -124,6 +195,7 @@
       "blocks": {
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484": {
           "type": "collection_header",
+          "disabled": true,
           "settings": {
             "title_color": "#000000",
             "custom_filter_1": "",
@@ -203,6 +275,7 @@
     }
   },
   "order": [
+    "collection_showcase_HVDztJ",
     "header_banner_gdLhND",
     "collection-header",
     "16401466794d03c3f5",
