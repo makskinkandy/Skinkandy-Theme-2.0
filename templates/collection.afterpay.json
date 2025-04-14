@@ -78,7 +78,7 @@
             "disable_overlay": true,
             "disable_button": true,
             "title": "Under 50",
-            "url": "",
+            "url": "#/filter:collection_name:Under$252050",
             "image": "shopify://shop_images/7R505813_1.jpg"
           }
         },
@@ -88,7 +88,7 @@
             "disable_overlay": true,
             "disable_button": true,
             "title": "Under 100",
-            "url": "",
+            "url": "#/filter:collection_name:Under$2520100",
             "image": "shopify://shop_images/shop_the_look_curated_ears_3.jpg"
           }
         }
