@@ -314,7 +314,7 @@ body.no-scroll {
       font-style: normal;
       font-variation-settings: "wdth" 100;
       margin-bottom: 35px;
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 689px) {
         margin-bottom: 3px;
         font-size: 24px;
       }
