@@ -113,6 +113,33 @@
         "enable_hover": false
       }
     },
+    "faq_NykAFT": {
+      "type": "faq",
+      "blocks": {
+        "question_7rCiRy": {
+          "type": "question",
+          "settings": {
+            "title": "HOW IT WORKS",
+            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off </p><p>$75+ | 20% off </p><p>$100+ | 25% off </p><p>$150+ | 30% off </p>"
+          }
+        },
+        "question_dA9ENi": {
+          "type": "question",
+          "settings": {
+            "title": "EXCLUSIONS",
+            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_7rCiRy",
+        "question_dA9ENi"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SPEND AND SAVE"
+      }
+    },
     "header_banner_gdLhND": {
       "type": "header-banner",
       "blocks": {
@@ -305,37 +332,12 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
-    },
-    "faq_tTRag9": {
-      "type": "faq",
-      "blocks": {
-        "question_W4Agdx": {
-          "type": "question",
-          "settings": {
-            "title": "HOW IT WORKS",
-            "text": "<p><strong>Cart Value</strong>  | <strong>Discount</strong> </p><p>$50+            |  15% off </p><p>$75+            |   20% off </p><p>$100+           |  25% off </p><p>$150+           | 30% off </p>"
-          }
-        },
-        "question_mGa8ex": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_W4Agdx",
-        "question_mGa8ex"
-      ],
-      "settings": {
-        "title": "SPEND AND SAVE"
-      }
     }
   },
   "order": [
     "rich_text_VPNyjt",
     "collection_showcase_HVDztJ",
+    "faq_NykAFT",
     "header_banner_gdLhND",
     "collection-header",
     "16401466794d03c3f5",
@@ -343,7 +345,6 @@
     "main-collection",
     "1642136988303d16d6",
     "ss_recommendations_bGwMqW",
-    "pagefly-collection-section",
-    "faq_tTRag9"
+    "pagefly-collection-section"
   ]
 }
