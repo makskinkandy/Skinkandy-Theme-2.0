@@ -313,7 +313,7 @@
           "type": "question",
           "settings": {
             "title": "HOW IT WORKS",
-            "text": "<p><strong>Cart Value</strong>  | <strong>Discount</strong> </p><p>$50+              15% off </p><p>$75+              20% off </p><p>$100+            25% off </p><p>$150+            30% off </p>"
+            "text": "<p><strong>Cart Value</strong>  | <strong>Discount</strong> </p><p>$50+            |  15% off </p><p>$75+            |   20% off </p><p>$100+           |  25% off </p><p>$150+           | 30% off </p>"
           }
         },
         "question_mGa8ex": {
