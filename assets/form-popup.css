@@ -300,9 +300,12 @@ body.no-scroll {
   &.bfcm {
     background-color: transparent;
     width:  1065px;
-    max-height: 585px;
+    max-height: 705px;
     font-family: "Montserrat", sans-serif;
     overflow: visible;
+    @media screen and (max-width: 768px) {
+        max-height: 755px;
+    }
     h3 {
       font-family: "League Gothic", serif;
       font-size: 34px;
