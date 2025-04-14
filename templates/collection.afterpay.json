@@ -305,6 +305,32 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
+    },
+    "faq_tTRag9": {
+      "type": "faq",
+      "blocks": {
+        "question_W4Agdx": {
+          "type": "question",
+          "settings": {
+            "title": "HOW IT WORKS",
+            "text": "<p><strong>Cart Value</strong>  | <strong>Discount</strong> </p><p>$50+              15% off </p><p>$75+              20% off </p><p>$100+            25% off </p><p>$150+            30% off </p>"
+          }
+        },
+        "question_mGa8ex": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_W4Agdx",
+        "question_mGa8ex"
+      ],
+      "settings": {
+        "title": "SPEND AND SAVE"
+      }
     }
   },
   "order": [
@@ -317,6 +343,7 @@
     "main-collection",
     "1642136988303d16d6",
     "ss_recommendations_bGwMqW",
-    "pagefly-collection-section"
+    "pagefly-collection-section",
+    "faq_tTRag9"
   ]
 }
