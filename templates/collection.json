@@ -197,10 +197,6 @@
       "settings": {
         "profileId": "recently-viewed"
       }
-    },
-    "pagefly-collection-section": {
-      "type": "pagefly-collection-section",
-      "settings": {}
     }
   },
   "order": [
@@ -210,7 +206,6 @@
     "16424817062061b522",
     "main-collection",
     "1642136988303d16d6",
-    "ss_recommendations_bGwMqW",
-    "pagefly-collection-section"
+    "ss_recommendations_bGwMqW"
   ]
 }
