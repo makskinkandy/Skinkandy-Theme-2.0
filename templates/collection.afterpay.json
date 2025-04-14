@@ -9,6 +9,107 @@
  */
 {
   "sections": {
+    "rich_text_VPNyjt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U6eXWe": {
+          "type": "heading",
+          "settings": {
+            "title": "Mother's Day"
+          }
+        },
+        "text_QHBrKi": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U6eXWe",
+        "text_QHBrKi"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "collection_showcase_HVDztJ": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_Lq8hHX": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "Hearts",
+            "url": "#/filter:collection_name:Hearts",
+            "image": "shopify://shop_images/SK-0_65.jpg"
+          }
+        },
+        "image_wFKqQp": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "Nature",
+            "url": "#/filter:collection_name:Animal$2520Collection",
+            "image": "shopify://shop_images/SK-0_214.jpg"
+          }
+        },
+        "image_LbUYjn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "Astral",
+            "url": "#/filter:collection_name:Astral$2520Curation",
+            "image": "shopify://shop_images/SK-0_109.jpg"
+          }
+        },
+        "image_6DDFGL": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "Under 50",
+            "url": "",
+            "image": "shopify://shop_images/7R505813_1.jpg"
+          }
+        },
+        "image_f3wHn9": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "Under 100",
+            "url": "",
+            "image": "shopify://shop_images/shop_the_look_curated_ears_3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Lq8hHX",
+        "image_wFKqQp",
+        "image_LbUYjn",
+        "image_6DDFGL",
+        "image_f3wHn9"
+      ],
+      "custom_css": [
+        ".collection-showcase {padding-top: 0;}"
+      ],
+      "settings": {
+        "title": "",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false
+      }
+    },
     "header_banner_gdLhND": {
       "type": "header-banner",
       "blocks": {
@@ -124,8 +225,15 @@
       "blocks": {
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484": {
           "type": "collection_header",
+          "disabled": true,
           "settings": {
-            "title_color": "#000000"
+            "title_color": "#000000",
+            "custom_filter_1": "",
+            "custom_filter_1_text": "",
+            "custom_filter_2": "",
+            "custom_filter_2_text": "",
+            "custom_filter_3": "",
+            "custom_filter_3_text": ""
           }
         },
         "subcollections": {
@@ -161,7 +269,15 @@
         "filter_style": "sidebar",
         "enable_color_swatches": true,
         "enable_sort": true,
-        "enable_collection_count": true
+        "enable_collection_count": true,
+        "password_title": "",
+        "password_subtitle": "",
+        "password_prompt_text": "Please input password to view this page",
+        "wrong_password_prompt_text": "Wrong password, please try again",
+        "submit_password_text": "Submit",
+        "page_logo": "shopify://shop_images/Group_1.png",
+        "header_banner": "shopify://shop_images/Group_1442_2.jpg",
+        "floating_image": "shopify://shop_images/Group_1442_1.png"
       }
     },
     "1642136988303d16d6": {
@@ -189,6 +305,8 @@
     }
   },
   "order": [
+    "rich_text_VPNyjt",
+    "collection_showcase_HVDztJ",
     "header_banner_gdLhND",
     "collection-header",
     "16401466794d03c3f5",
