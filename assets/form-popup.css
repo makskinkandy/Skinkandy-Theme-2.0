@@ -422,6 +422,12 @@ body.no-scroll {
       #response.success {
         display: none;
       }
+
+      p.form-note {
+          font-size: 12px;
+          color: #000;
+          font-style: italic;
+      }
     }
   }
 }
