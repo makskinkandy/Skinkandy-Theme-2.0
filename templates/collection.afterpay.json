@@ -31,7 +31,6 @@
         "heading_U6eXWe",
         "text_QHBrKi"
       ],
-      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -100,7 +99,6 @@
         "image_6DDFGL",
         "image_f3wHn9"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-showcase {padding-top: 0;}"
       ],
