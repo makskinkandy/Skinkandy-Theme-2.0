@@ -207,10 +207,6 @@
       "settings": {
         "profileId": "cross-sell"
       }
-    },
-    "pagefly-product-section": {
-      "type": "pagefly-product-section",
-      "settings": {}
     }
   },
   "order": [
@@ -219,7 +215,6 @@
     "sub",
     "collection-return",
     "ss-recommendations-similar",
-    "ss-recommendations-cross-sell",
-    "pagefly-product-section"
+    "ss-recommendations-cross-sell"
   ]
 }
