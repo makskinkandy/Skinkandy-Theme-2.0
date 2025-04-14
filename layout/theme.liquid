@@ -416,7 +416,7 @@
       %}
       
       {% for param in pageParams %}
-        {% if param contains 'token=' %}
+        {% if param contains 'sktoken=' %}
         {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
         {% endif %}
       {% endfor %}
@@ -425,7 +425,7 @@
         <script>
           window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const key = urlParams.get('token');
+            const key = urlParams.get('sktoken');
         
             if (key) {
               // Get the main domain (root domain)
