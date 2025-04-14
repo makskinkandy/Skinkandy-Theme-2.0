@@ -1,1 +1,34 @@
-{"sections":{"main":{"type":"main-cart","settings":{}},"ss-recommendations-view-cart":{"type":"ss-recommendations-cart","settings":{"profileId":"view-cart"}},"ss-recommendations-recently-viewed":{"type":"ss-recommendations","settings":{"profileId":"recently-viewed"}},"16619227640a5c4a81":{"type":"background-image-text","disabled":true,"settings":{"height":450,"focal_point":"center","parallax":false,"bg_color":"#ffffff","text_color":"#000000","text_position":"center","text_alignment":"center","framed":false,"subtitle":"","title":"","text":"","button_label":"CHECKOUT","button_link":"https:\/\/skinkandy.com\/checkout","button_class":""}},"1661922817e02d17d8":{"type":"advanced-content","blocks":{"1661922816c5416500-1":{"type":"liquid","disabled":true,"settings":{"code":"<!DOCTYPE html>\n<html>\n<head>\n<style>\n.button {\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 20px;\n  margin: 4px 2px;\n  cursor: pointer;\n}\n.button1 {background-color: #EB008C;} \/* Green *\/\n<\/style>\n<\/head>\n<body>\n<center><button class=\"button button1\"><a href=\"https:\/\/skinkandy.com\/checkout\">CHECKOUT<\/a><\/button><\/center>\n<\/body>\n<\/html>","width":"100%","alignment":"center"}}},"block_order":["1661922816c5416500-1"],"disabled":true,"settings":{"full_width":true,"space_around":false}}},"order":["main","ss-recommendations-view-cart","ss-recommendations-recently-viewed","16619227640a5c4a81","1661922817e02d17d8"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {}
+    },
+    "ss-recommendations-view-cart": {
+      "type": "ss-recommendations-cart",
+      "settings": {
+        "profileId": "view-cart"
+      }
+    },
+    "ss-recommendations-recently-viewed": {
+      "type": "ss-recommendations",
+      "settings": {
+        "profileId": "recently-viewed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss-recommendations-view-cart",
+    "ss-recommendations-recently-viewed"
+  ]
+}
