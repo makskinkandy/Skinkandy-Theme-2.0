@@ -60,10 +60,10 @@
             "hide-image": false,
             "video": "",
             "center-content": false,
-            "title": "14K SOLID GOLD Luxurious everyday wear",
+            "title": "14K SOLID GOLD",
             "title_size": "large",
             "title_tag": "h3",
-            "text": "<p>Gold has been a trusted jewellery material for centuries, and 14K solid gold is a premium choice for those looking for a safe, stylish, and long-lasting option.  14KT gold is the perfect balance of purity, strength and affordability.</p><p>Generally safe option for those with mild skin sensitivities – Minimised risk of irritation and reactions.</p><p>Won’t tarnish or wear – Unlike plated or filled gold, solid gold will maintain its shape and colour without fading over time </p><p>Ideal for both new & healed piercings </p><p>Durable – stronger than 18K or 24K Solid Gold</p>",
+            "text": "<h4><strong>Luxurious everyday wear</strong></h4><p></p><p>Gold has been a trusted jewellery material for centuries, and 14K solid gold is a premium choice for those looking for a safe, stylish, and long-lasting option.  14KT gold is the perfect balance of purity, strength and affordability.</p><p>Generally safe option for those with mild skin sensitivities – Minimised risk of irritation and reactions.</p><p>Won’t tarnish or wear – Unlike plated or filled gold, solid gold will maintain its shape and colour without fading over time </p><p>Ideal for both new & healed piercings </p><p>Durable – stronger than 18K or 24K Solid Gold</p>",
             "text_size": "small",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/14kt-gold"
@@ -139,10 +139,10 @@
             "hide-image": false,
             "video": "",
             "center-content": false,
-            "title": "ASTM F136 IMPLANT GRADE TITANIUM <br>Lightweight & Biocompatible",
+            "title": "ASTM F136 IMPLANT GRADE TITANIUM",
             "title_size": "large",
             "title_tag": "h3",
-            "text": "<p>Titanium is one of the safest metals for body jewellery, often used in medical implants due to its biocompatibility and hypoallergenic properties. </p><p>Extremely lightweight – About 45% lighter than steel, reducing pressure on your piercing </p><p>Nickel-free & hypoallergenic – The best option for those with metal sensitivities </p><p>Encourages faster healing – Reduces the risk of irritation and rejection </p><p>Corrosion-resistant – Won’t rust or tarnish, even in water </p>",
+            "text": "<h4>Lightweight & Biocompatible</h4><p></p><p>Titanium is one of the safest metals for body jewellery, often used in medical implants due to its biocompatibility and hypoallergenic properties. </p><p>Extremely lightweight – About 45% lighter than steel, reducing pressure on your piercing </p><p>Nickel-free & hypoallergenic – The best option for those with metal sensitivities </p><p>Encourages faster healing – Reduces the risk of irritation and rejection </p><p>Corrosion-resistant – Won’t rust or tarnish, even in water </p>",
             "text_size": "small",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/titanium"
@@ -178,10 +178,10 @@
             "hide-image": false,
             "video": "",
             "center-content": false,
-            "title": "316L SURGICAL STEEL <br>Durable & Affordable ",
+            "title": "316L SURGICAL STEEL",
             "title_size": "large",
             "title_tag": "h3",
-            "text": "<p>Surgical steel is a widely used metal in piercing jewellery due to its strength, affordability, and polished finish. </p><p>High-quality, durable material – Resistant to scratches and everyday wear </p><p>Affordable option – A great choice for healed piercings </p><p>Corrosion-resistant – Won’t rust or degrade over time </p><p>Keep in mind: While 316L surgical steel is suitable for most people, it does contain a small amount of nickel. If you have a known nickel allergy, we recommend opting for implant-grade titanium or 14K solid gold for a completely hypoallergenic experience.</p>",
+            "text": "<h4>Durable & Affordable </h4><p></p><p>Surgical steel is a widely used metal in piercing jewellery due to its strength, affordability, and polished finish. </p><p>High-quality, durable material – Resistant to scratches and everyday wear </p><p>Affordable option – A great choice for healed piercings </p><p>Corrosion-resistant – Won’t rust or degrade over time </p><p>Keep in mind: While 316L surgical steel is suitable for most people, it does contain a small amount of nickel. If you have a known nickel allergy, we recommend opting for implant-grade titanium or 14K solid gold for a completely hypoallergenic experience.</p>",
             "text_size": "small",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/316l-surgical-steel-piercing-jewellery"
@@ -249,7 +249,8 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": false,
+        "reduce_spacing": false
       }
     }
   },
