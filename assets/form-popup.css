@@ -20,6 +20,9 @@ body.no-scroll {
   &.giveaway {
     align-items: start;
   }
+  &.bfcm {
+    padding-top: 0;
+  }
   @media screen and (max-width: 640px) {
     align-items: start;
     min-height: 992px;
