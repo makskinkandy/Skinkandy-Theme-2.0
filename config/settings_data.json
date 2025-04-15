@@ -142,7 +142,7 @@
     "success_popup_button_text": "SHOP NOW",
     "sucess_popup_button": "shopify://collections/shop-all",
     "sucess_popup_tc": "",
-    "enable_top_notification": false,
+    "enable_top_notification": true,
     "top-notification-banner": "SkinKandy AU & NZ will be closed on Good Friday",
     "text_color": "#ffffff",
     "bg_color": "#e42329",

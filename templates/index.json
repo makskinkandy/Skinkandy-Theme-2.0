@@ -12,9 +12,9 @@
     "top_notification_banner_yteqNA": {
       "type": "top-notification-banner",
       "settings": {
-        "enable": false,
+        "enable": true,
         "notification_text": "SkinKandy AU & NZ will be closed on Good Friday",
-        "bg_color": "#E42228"
+        "bg_color": "#e42228"
       }
     },
     "header_banner_MUPtRQ": {
