@@ -1214,8 +1214,8 @@
       margin-bottom: 0;
     }
   }
-  .grid__item:nth-child(2) {
-    margin-left: 35px;
+  .grid__item {
+    margin-left: 15px;
     @media screen and (max-width: 980px) {
       margin-left: 0;
     }
