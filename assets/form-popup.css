@@ -303,7 +303,7 @@ body.no-scroll {
   &.bfcm {
     background-color: transparent;
     width:  1065px;
-    max-height: 585px;
+    max-height: 685px;
     font-family: "Montserrat", sans-serif;
     overflow: visible;
     h3 {
