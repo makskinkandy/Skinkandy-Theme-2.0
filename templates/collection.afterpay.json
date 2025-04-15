@@ -160,6 +160,9 @@
         "text_block_AUriEp"
       ],
       "disabled": true,
+      "custom_css": [
+        "h3 {font-size: 24px;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
