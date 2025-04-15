@@ -300,12 +300,9 @@ body.no-scroll {
   &.bfcm {
     background-color: transparent;
     width:  1065px;
-    max-height: 705px;
+    max-height: 585px;
     font-family: "Montserrat", sans-serif;
     overflow: visible;
-    @media screen and (max-width: 768px) {
-        max-height: 755px;
-    }
     h3 {
       font-family: "League Gothic", serif;
       font-size: 34px;
@@ -314,7 +311,7 @@ body.no-scroll {
       font-style: normal;
       font-variation-settings: "wdth" 100;
       margin-bottom: 35px;
-      @media screen and (max-width: 689px) {
+      @media screen and (max-width: 640px) {
         margin-bottom: 3px;
         font-size: 24px;
       }
@@ -330,10 +327,7 @@ body.no-scroll {
       }
       &.success {
         font-size: 34px;
-        margin-bottom: 20px;
-        @media screen and (max-width: 767px) {
-          margin-bottom: 5px;
-        }
+        margin-bottom: 5px;
       }
     }
     img.kc-logo {
@@ -370,7 +364,7 @@ body.no-scroll {
         max-width: 100%;
         width: 100%;
         @media screen and (max-width: 640px) {
-          object-position: 0 -130px;
+          object-position: center;
           height: 200px;
           width: 100%;
           margin: 0 auto;
@@ -405,9 +399,6 @@ body.no-scroll {
         color: #000;
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
-        @media screen and (max-width: 689px) {
-          font-size: 13px;
-        }
         &.success h4 {
           font-family: "Montserrat", sans-serif;
           font-size: 24px;
@@ -428,14 +419,8 @@ body.no-scroll {
           margin: 0 auto;
           display: block;
       }
-      /* #response.success {
+      #response.success {
         display: none;
-      } */
-
-      p.form-note {
-          font-size: 12px;
-          color: #000;
-          font-style: italic;
       }
     }
   }
