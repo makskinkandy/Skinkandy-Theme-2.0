@@ -203,7 +203,6 @@
         "text_block_YTqCY7",
         "text_block_br3X3E"
       ],
-      "disabled": true,
       "custom_css": [
         "h3 {font-size: 24px;}"
       ],
@@ -219,31 +218,25 @@
         "max_width": 900
       }
     },
-    "faq_NykAFT": {
-      "type": "faq",
+    "rich_text_7TUqcz": {
+      "type": "rich-text",
       "blocks": {
-        "question_7rCiRy": {
-          "type": "question",
+        "text_EJth3d": {
+          "type": "text",
           "settings": {
-            "title": "HOW IT WORKS",
-            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>"
-          }
-        },
-        "question_dA9ENi": {
-          "type": "question",
-          "settings": {
-            "title": "EXCLUSIONS",
-            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
+            "enlarge_text": false,
+            "text": "<p>*To be eligible for the promotion you need to be a KandyClub member. Does not apply to Gold Products, Gift Cards or Aftercare Neilmed. Online exclusive sale. </p>"
           }
         }
       },
       "block_order": [
-        "question_7rCiRy",
-        "question_dA9ENi"
+        "text_EJth3d"
       ],
-      "disabled": true,
       "settings": {
-        "title": "SPEND & SAVE"
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "header_banner_gdLhND": {
@@ -444,7 +437,7 @@
     "rich_text_VPNyjt",
     "collection_showcase_HVDztJ",
     "columns_block_aRdPrb",
-    "faq_NykAFT",
+    "rich_text_7TUqcz",
     "header_banner_gdLhND",
     "collection-header",
     "16401466794d03c3f5",
