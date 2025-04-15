@@ -370,7 +370,7 @@ body.no-scroll {
         max-width: 100%;
         width: 100%;
         @media screen and (max-width: 640px) {
-          object-position: center;
+          object-position: 0 -132px;
           height: 200px;
           width: 100%;
           margin: 0 auto;
