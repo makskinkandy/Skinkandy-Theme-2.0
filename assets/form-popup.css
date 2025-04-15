@@ -315,8 +315,8 @@ body.no-scroll {
       font-variation-settings: "wdth" 100;
       margin-bottom: 35px;
       @media screen and (max-width: 689px) {
-        margin-bottom: 3px;
-        font-size: 24px;
+        margin-bottom: 7px;
+        font-size: 18px;
       }
       span {
         display: block;
@@ -406,7 +406,7 @@ body.no-scroll {
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
         @media screen and (max-width: 689px) {
-          font-size: 13px;
+          font-size: 12px;
         }
         &.success h4 {
           font-family: "Montserrat", sans-serif;
