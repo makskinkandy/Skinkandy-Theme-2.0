@@ -104,7 +104,7 @@
         ".collection-showcase {padding-top: 0;}"
       ],
       "settings": {
-        "title": "",
+        "title": "CHOOSE FROM THIS COLLECTIONS",
         "mode": "light",
         "background": "#ffffff",
         "button_text": "",
@@ -113,31 +113,62 @@
         "enable_hover": false
       }
     },
-    "faq_NykAFT": {
-      "type": "faq",
+    "columns_block_aRdPrb": {
+      "type": "columns-block",
       "blocks": {
-        "question_7rCiRy": {
-          "type": "question",
+        "text_block_P4aT7p": {
+          "type": "text_block",
           "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
             "title": "HOW IT WORKS",
-            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off </p><p>$75+ | 20% off </p><p>$100+ | 25% off </p><p>$150+ | 30% off </p>"
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> <br/>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "question_dA9ENi": {
-          "type": "question",
+        "text_block_AUriEp": {
+          "type": "text_block",
           "settings": {
-            "title": "EXCLUSIONS",
-            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Gold, Aftercare, and Gift card products are excluded from this promotion.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "question_7rCiRy",
-        "question_dA9ENi"
+        "text_block_P4aT7p",
+        "text_block_AUriEp"
       ],
-      "disabled": true,
       "settings": {
-        "title": "SPEND AND SAVE"
+        "dark_mode": false,
+        "class": "",
+        "title": "SPEND & SAVE",
+        "description": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
       }
     },
     "header_banner_gdLhND": {
@@ -332,11 +363,39 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
+    },
+    "faq_NykAFT": {
+      "type": "faq",
+      "blocks": {
+        "question_7rCiRy": {
+          "type": "question",
+          "settings": {
+            "title": "HOW IT WORKS",
+            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>"
+          }
+        },
+        "question_dA9ENi": {
+          "type": "question",
+          "settings": {
+            "title": "EXCLUSIONS",
+            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_7rCiRy",
+        "question_dA9ENi"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SPEND & SAVE"
+      }
     }
   },
   "order": [
     "rich_text_VPNyjt",
     "collection_showcase_HVDztJ",
+    "columns_block_aRdPrb",
     "faq_NykAFT",
     "header_banner_gdLhND",
     "collection-header",
