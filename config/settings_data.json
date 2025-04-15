@@ -127,7 +127,7 @@
     "sticky_footer_banner_img_2_width": 150,
     "sticky_footer_banner_url": "shopify://collections/gift-cards",
     "sticky_footer_banner_btn_text": "Shop now",
-    "popup_enable": false,
+    "popup_enable": true,
     "popup_layout": "bfcm",
     "popup_left_image": "shopify://shop_images/KandyClub_-_PopUp_Image_1.jpg",
     "popup_title": "Join KandyClub <br><b>& Get 10% Off</b>",
