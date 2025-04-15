@@ -345,8 +345,12 @@ body.no-scroll {
     }
     .popup-close {
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 0;
+      top: -60px;
+      @media screen and (max-width: 640px) {
+        top: 10px;
+        right: 10px;
+      }
     }
     .form-popup__left {
       background: transparent;
