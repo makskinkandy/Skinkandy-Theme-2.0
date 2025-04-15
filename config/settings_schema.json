@@ -1615,9 +1615,14 @@
         "label": "Form Sub-title"
       },
       {
-        "type": "html",
+        "type": "text",
         "id": "popup_embed_form",
-        "label": "Embed form"
+        "label": "Form End Point"
+      },
+      {
+        "type": "text",
+        "id": "popup_discount_code",
+        "label": "Discount Code"
       },
       {
         "type": "text",
