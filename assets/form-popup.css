@@ -402,7 +402,9 @@ body.no-scroll {
         color: #000;
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
-        
+        @media screen and (max-width:767px) {
+          font-size: 12px;
+        }
         &.success h4 {
           font-family: "Montserrat", sans-serif;
           font-size: 24px;
