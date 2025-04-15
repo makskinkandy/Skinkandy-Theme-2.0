@@ -145,7 +145,7 @@
             "hide-image": false,
             "video": "",
             "center-content": false,
-            "title": "",
+            "title": "EXCLUSIONS",
             "title_size": "small",
             "title_tag": "h3",
             "text": "<p>Gold, Aftercare, and Gift card products are excluded from this promotion.</p>",
@@ -169,7 +169,7 @@
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
-        "max_width": 1704
+        "max_width": 900
       }
     },
     "faq_NykAFT": {
