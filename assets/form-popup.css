@@ -405,9 +405,12 @@ body.no-scroll {
         @media screen and (max-width:767px) {
           font-size: 12px;
         }
-        &.success h4 {
-          font-family: "Montserrat", sans-serif;
-          font-size: 24px;
+        &.success {
+          font-size: 15px;
+          h4 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 24px;
+          }
         }
       }
       .footnote {
@@ -425,9 +428,9 @@ body.no-scroll {
           margin: 0 auto;
           display: block;
       }
-      #response.success {
+      /* #response.success {
         display: none;
-      }
+      } */
     }
   }
 }
