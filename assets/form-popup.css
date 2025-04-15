@@ -104,10 +104,6 @@ body.no-scroll {
   .tc_link {
     color: #FFF;
   }
-
-  &.bfcm {
-    padding-top: 0;
-  }
 }
 .form-popup__wrapper {
   background-color: rgb(230, 230, 230);
@@ -319,8 +315,8 @@ body.no-scroll {
       font-variation-settings: "wdth" 100;
       margin-bottom: 35px;
       @media screen and (max-width: 689px) {
-        margin-bottom: 7px;
-        font-size: 18px;
+        margin-bottom: 3px;
+        font-size: 24px;
       }
       span {
         display: block;
@@ -374,7 +370,7 @@ body.no-scroll {
         max-width: 100%;
         width: 100%;
         @media screen and (max-width: 640px) {
-          object-position: 0 -132px;
+          object-position: center;
           height: 200px;
           width: 100%;
           margin: 0 auto;
@@ -410,7 +406,7 @@ body.no-scroll {
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
         @media screen and (max-width: 689px) {
-          font-size: 12px;
+          font-size: 13px;
         }
         &.success h4 {
           font-family: "Montserrat", sans-serif;
@@ -432,9 +428,9 @@ body.no-scroll {
           margin: 0 auto;
           display: block;
       }
-      #response.success {
+      /* #response.success {
         display: none;
-      }
+      } */
 
       p.form-note {
           font-size: 12px;
