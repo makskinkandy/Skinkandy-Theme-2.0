@@ -63,7 +63,50 @@
             {{ page.metafields.custom.popup_form_override }}
           {% else %}
             {% if settings.popup_embed_form %}
-              {{ settings.popup_embed_form }}
+              <form id="discountForm" action="{{ settings.popup_embed_form }}" method="POST" class="custom-form">
+                <input type="hidden" name="oid" value="00D6C0000009xRa">
+                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+                <input type="hidden" name="discount_code" value="{{ settings.popup_discount_code }}">
+                
+                <div class="first-row">
+                    <div class="form-field" style="--width: 100;">
+                      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" aria-label="First Name" required="" aria-required="true">
+                    </div>
+                </div>
+                    <div class="form-field " style="--width: 100;">
+                      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required="" placeholder="Last Name" aria-label="Last Name" aria-required="true">
+                    </div>
+                
+              
+                <div class="form-field" style="--width: 100;">
+                  <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email" required="" aria-label="Email" aria-required="true">
+                </div>
+              
+                <div class="first-row">
+                  <div class="form-field half" style="--width: 50;">
+                    <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone Number" required="" aria-label="Phone Number" aria-required="true">
+                  </div>
+                  <div class="form-field half" style="--width: 50;">
+                    <input id="dob" maxlength="80" name="dob" size="20" type="text" placeholder="dd/mm/yyyy" required="" aria-label="Date of Birth" aria-required="true">
+                  </div>
+                </div>
+              
+                <input id="country" name="country" type="hidden" value="Australia">
+              
+                <div class="form-field checkbox" style="--width: 50;">
+                  <input id="agree" name="agree" size="20" type="checkbox" checked required="">
+                  <label for="agree" class="agree-label">
+                  I agree to to sign up to KandyClub, SkinKandy's loyalty program. By completing this form you are signing up to receive our marketing material and can unsubscribe at any time. Ts and Cs apply.
+                  <br><br>
+                  *Discount excludes 14K solid gold products, and git cards.
+                  </label>
+                </div>
+              
+              
+                <div class="form-field" style="--width: 100;">
+                <input type="submit" name="submit" value="JOIN Now" class="btn btn--full btn--submit">
+                </div>
+              </form>
             {%- endif %}
           {% endif %}
           {% if template != "page.pf-c525936e" %}
