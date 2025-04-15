@@ -100,6 +100,7 @@
         "image_6DDFGL",
         "image_f3wHn9"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-showcase {padding-top: 0;}"
       ],
@@ -159,9 +160,9 @@
         "text_block_P4aT7p",
         "text_block_AUriEp"
       ],
-      "disabled": true,
       "custom_css": [
-        "h3 {font-size: 24px;}"
+        "h3 {font-size: 24px;}",
+        "h2 {text-align: left;}"
       ],
       "settings": {
         "dark_mode": false,
