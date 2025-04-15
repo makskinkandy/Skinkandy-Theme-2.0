@@ -349,7 +349,7 @@ body.no-scroll {
       top: -60px;
       @media screen and (max-width: 640px) {
         top: 10px;
-        right: 30px;
+        right: 10px;
       }
     }
     .form-popup__left {
