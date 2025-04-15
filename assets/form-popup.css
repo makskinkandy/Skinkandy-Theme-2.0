@@ -104,6 +104,10 @@ body.no-scroll {
   .tc_link {
     color: #FFF;
   }
+
+  &.bfcm {
+    padding-top: 0;
+  }
 }
 .form-popup__wrapper {
   background-color: rgb(230, 230, 230);
