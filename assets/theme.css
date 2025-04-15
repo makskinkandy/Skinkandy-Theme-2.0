@@ -16320,9 +16320,3 @@ small.cart__discount.percentage {
   font-weight: bold;
   margin-top: 5px;
 }
-
-.rte {
-  td, th {
-    border: solid 1px #000;
-  }
-}
