@@ -345,8 +345,8 @@ body.no-scroll {
     }
     .popup-close {
       position: absolute;
-      right: 0;
-      top: -40px;
+      right: 10px;
+      top: 10px;
     }
     .form-popup__left {
       background: transparent;
