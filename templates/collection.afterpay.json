@@ -124,12 +124,13 @@
             "fullwidth-image": false,
             "fullheight-image": false,
             "hide-image": false,
+            "image": "shopify://shop_images/Mothers-Day-Stack-your-Savings_03.jpg",
             "video": "",
             "center-content": false,
-            "title": "HOW IT WORKS",
+            "title": "",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> <br/>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>",
+            "text": "",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -143,12 +144,53 @@
             "fullwidth-image": false,
             "fullheight-image": false,
             "hide-image": false,
+            "image": "shopify://shop_images/Mothers-Day-Stack-your-Savings_05.jpg",
             "video": "",
             "center-content": false,
-            "title": "EXCLUSIONS",
+            "title": "",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<p>Gold, Aftercare, and Gift card products are excluded from this promotion.</p>",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_YTqCY7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Mothers-Day-Stack-your-Savings_03.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_br3X3E": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Mothers-Day-Stack-your-Savings_09.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -157,19 +199,19 @@
       },
       "block_order": [
         "text_block_P4aT7p",
-        "text_block_AUriEp"
+        "text_block_AUriEp",
+        "text_block_YTqCY7",
+        "text_block_br3X3E"
       ],
-      "disabled": true,
       "custom_css": [
-        "h3 {font-size: 24px;}",
-        "h2 {text-align: left;}"
+        "h3 {font-size: 24px;}"
       ],
       "settings": {
         "dark_mode": false,
         "class": "",
-        "title": "SPEND & SAVE",
+        "title": "STACK YOUR GIFT, STACK YOUR SAVINGS*",
         "description": "",
-        "count": 2,
+        "count": 4,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
