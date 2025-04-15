@@ -104,7 +104,7 @@
         ".collection-showcase {padding-top: 0;}"
       ],
       "settings": {
-        "title": "CHOOSE FROM THIS COLLECTIONS",
+        "title": "",
         "mode": "light",
         "background": "#ffffff",
         "button_text": "",
@@ -159,6 +159,7 @@
         "text_block_P4aT7p",
         "text_block_AUriEp"
       ],
+      "disabled": true,
       "settings": {
         "dark_mode": false,
         "class": "",
@@ -169,6 +170,33 @@
         "hide_line": true,
         "disable_grid": false,
         "max_width": 1704
+      }
+    },
+    "faq_NykAFT": {
+      "type": "faq",
+      "blocks": {
+        "question_7rCiRy": {
+          "type": "question",
+          "settings": {
+            "title": "HOW IT WORKS",
+            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>"
+          }
+        },
+        "question_dA9ENi": {
+          "type": "question",
+          "settings": {
+            "title": "EXCLUSIONS",
+            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_7rCiRy",
+        "question_dA9ENi"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SPEND & SAVE"
       }
     },
     "header_banner_gdLhND": {
@@ -363,33 +391,6 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
-    },
-    "faq_NykAFT": {
-      "type": "faq",
-      "blocks": {
-        "question_7rCiRy": {
-          "type": "question",
-          "settings": {
-            "title": "HOW IT WORKS",
-            "text": "<p><strong>Cart Value</strong> | <strong>Discount</strong> </p><p>$50+ | 15% off <br/>$75+ | 20% off <br/>$100+ | 25% off <br/>$150+ | 30% off </p>"
-          }
-        },
-        "question_dA9ENi": {
-          "type": "question",
-          "settings": {
-            "title": "EXCLUSIONS",
-            "text": "<p>Gold, Aftercare products, and Gift card are excluded from this promotion.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_7rCiRy",
-        "question_dA9ENi"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "SPEND & SAVE"
-      }
     }
   },
   "order": [
