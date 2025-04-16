@@ -16320,3 +16320,10 @@ small.cart__discount.percentage {
   font-weight: bold;
   margin-top: 5px;
 }
+
+.grid-product__tag--black {
+    padding: 5px;
+    text-align: center;
+    background: #000;
+    color: #FFF;
+}
