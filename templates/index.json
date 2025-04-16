@@ -13,7 +13,7 @@
       "type": "top-notification-banner",
       "settings": {
         "enable": true,
-        "notification_text": "SkinKandy AU & NZ will be closed on Good Friday",
+        "notification_text": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
         "bg_color": "#e42228"
       }
     },
