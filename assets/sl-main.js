@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
   const linkAU = document.getElementById('link-au');
-    const linkNZ = document.getElementById('link-nz');
+  const linkNZ = document.getElementById('link-nz');
 
     linkAU.addEventListener('click', function (e) {
       e.preventDefault();
