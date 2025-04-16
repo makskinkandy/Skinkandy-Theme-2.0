@@ -343,43 +343,4 @@ document.addEventListener('DOMContentLoaded', e => {
     targetUrl ? window.location.href = targetUrl : console.error(`Invalid country code: ${countryCode}`);
   };
 
-
-  const linkAU = document.getElementById('link-au');
-  const linkNZ = document.getElementById('link-nz');
-
-    if (linkAU) {
-      linkAU.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const currentUrl = new URL(window.location.href);
-        let newPath = currentUrl.pathname;
-
-        // Remove /en-nz from start of path
-        if (newPath.startsWith('/en-nz')) {
-          newPath = newPath.replace(/^\/en-nz/, '') || '/';
-        }
-
-        // Redirect to same page without /en-nz
-        const newUrl = currentUrl.origin + newPath + currentUrl.search;
-        window.location.href = newUrl;
-      });
-    }
-
-    if (linkNZ) {
-      linkNZ.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const currentUrl = new URL(window.location.href);
-        let newPath = currentUrl.pathname;
-
-        // Add /en-nz to the start if not already there
-        if (!newPath.startsWith('/en-nz')) {
-          newPath = '/en-nz' + newPath;
-        }
-
-        // Redirect to same page with /en-nz
-        const newUrl = currentUrl.origin + newPath + currentUrl.search;
-        window.location.href = newUrl;
-      });
-    }
 });
