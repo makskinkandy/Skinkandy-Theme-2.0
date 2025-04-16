@@ -343,8 +343,18 @@
                     </button>
                     <div class="dropdown-box" style="width: 57.93px;">
                      
-                          <a onclick="call_change_country_('AU');" style="cursor:pointer">AU</a>
-                          <a onclick="call_change_country_('NZ');" style="cursor:pointer">NZ</a>
+                          {% assign current_path = request.path %}
+  
+                          {% if current_path contains '/en-nz' %}
+                            {%- assign au_path = current_path | remove_first: '/en-nz' -%}
+                            {%- assign nz_path = current_path -%}
+                          {% else %}
+                            {%- assign au_path = current_path -%}
+                            {%- assign nz_path = '/en-nz' | append: current_path -%}
+                          {% endif %}
+                        
+                          <a href="{{ au_path | prepend: shop.url }}" style="cursor:pointer">AU</a>
+                          <a href="{{ nz_path | prepend: shop.url }}" style="cursor:pointer">NZ</a>
                     </div>
                   </li>
                 {% endif %}
