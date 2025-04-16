@@ -143,7 +143,7 @@
     "sucess_popup_button": "shopify://collections/shop-all",
     "sucess_popup_tc": "",
     "enable_top_notification": true,
-    "top-notification-banner": "SkinKandy AU & NZ will be closed on Good Friday",
+    "top-notification-banner": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
     "text_color": "#ffffff",
     "bg_color": "#e42329",
     "shipping_au": "Free shipping over $70",
