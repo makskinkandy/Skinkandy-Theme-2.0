@@ -11,7 +11,7 @@
     data-has-slideshow="{% if product.media.size > 1 %}true{% else %}false{% endif %}">
     <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}">
       {%- unless product.tags contains "gift card" -%}
-        {%- if settings.sale_image_2 != blank and settings.sale_tag != blank and product.tags contains settings.sale_tag -%}
+        {%- if settings.sale_tag != blank and product.tags contains settings.sale_tag -%}
           {% if settings.sale_tag == 'buy-3-free-4' %}
             <div class="grid-product__tag--b3f4">BUY 3 GET THE 4TH FREE</div>
           {% else %}
