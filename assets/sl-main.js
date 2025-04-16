@@ -347,6 +347,8 @@ document.addEventListener('DOMContentLoaded', e => {
   const linkAU = document.getElementById('link-au');
   const linkNZ = document.getElementById('link-nz');
 
+  console.log("TEST");
+
     linkAU.addEventListener('click', function (e) {
       e.preventDefault();
       const url = new URL(window.location.href);
