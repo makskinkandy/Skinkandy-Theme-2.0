@@ -104,21 +104,10 @@
             "is_open": true
           }
         },
-        "piercing_placement_U6j9hf": {
+        "piercing_placement_jFQcr7": {
           "type": "piercing-placement",
           "settings": {
             "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\" height=\"800px\" width=\"800px\" version=\"1.1\" id=\"Layer_1\" viewbox=\"0 0 512 512\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M510.228,166.833L412.915,42.98c-1.573-2-3.978-3.169-6.522-3.169H105.606c-2.545,0-4.95,1.169-6.521,3.169L1.772,166.833    c-2.435,3.1-2.352,7.485,0.198,10.49l247.706,291.94c1.576,1.858,3.888,2.927,6.324,2.927c2.436,0,4.748-1.07,6.324-2.927    l247.706-291.94C512.58,174.318,512.663,169.932,510.228,166.833z M394.573,56.398l-35.771,98.898l-84.771-98.898H394.573z     M344.127,163.664H167.872l88.127-102.815L344.127,163.664z M237.968,56.398l-84.77,98.898l-35.773-98.898H237.968z     M102.891,64.984l35.694,98.68H25.357L102.891,64.984z M26.207,180.251h118.377l87.96,243.183L26.207,180.251z M255.999,439.514    l-93.776-259.263h187.551L255.999,439.514z M279.455,423.433l87.959-243.182h118.377L279.455,423.433z M373.413,163.664    l35.693-98.681l77.535,98.681H373.413z\"></path>\n\t</g>\n</g>\n</svg>"
-          }
-        },
-        "tab_ywXqhX": {
-          "type": "tab",
-          "disabled": true,
-          "settings": {
-            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\" height=\"800px\" width=\"800px\" version=\"1.1\" id=\"Layer_1\" viewbox=\"0 0 512 512\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M510.228,166.833L412.915,42.98c-1.573-2-3.978-3.169-6.522-3.169H105.606c-2.545,0-4.95,1.169-6.521,3.169L1.772,166.833    c-2.435,3.1-2.352,7.485,0.198,10.49l247.706,291.94c1.576,1.858,3.888,2.927,6.324,2.927c2.436,0,4.748-1.07,6.324-2.927    l247.706-291.94C512.58,174.318,512.663,169.932,510.228,166.833z M394.573,56.398l-35.771,98.898l-84.771-98.898H394.573z     M344.127,163.664H167.872l88.127-102.815L344.127,163.664z M237.968,56.398l-84.77,98.898l-35.773-98.898H237.968z     M102.891,64.984l35.694,98.68H25.357L102.891,64.984z M26.207,180.251h118.377l87.96,243.183L26.207,180.251z M255.999,439.514    l-93.776-259.263h187.551L255.999,439.514z M279.455,423.433l87.959-243.182h118.377L279.455,423.433z M373.413,163.664    l35.693-98.681l77.535,98.681H373.413z\"></path>\n\t</g>\n</g>\n</svg>",
-            "title": "Piercing Placements",
-            "content": "{{ product.metafields.custom.piercing_placement | metafield_tag }}",
-            "page": "",
-            "is_open": false
           }
         },
         "tab_z3Vb3r": {
@@ -137,7 +126,7 @@
           "settings": {
             "icon": "<svg width=\"20\" height=\"15\" viewbox=\"0 0 20 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                        <path d=\"M18.6963 7.8671L15.4911 4.2258C15.2274 3.92361 14.8277 3.74986 14.4201 3.74986C13.4449 3.74986 12.6297 3.74986 12.0622 3.74986H11.7664V2.32205C11.7664 1.58926 11.143 1 10.3677 1H8.36945C7.33037 1 6.23535 1 5.29218 1H3.28597C2.51066 1 1.88721 1.58926 1.88721 2.32205H1.91119V10.9494C1.36767 11.2969 1 11.8861 1 12.5585C1 13.6312 1.91918 14.5 3.05417 14.5C3.97336 14.5 4.74867 13.9183 5.00444 13.1251H9.74423H10.3437C11.119 13.1251 11.7425 12.5358 11.7425 11.803V4.88304H12.0382C12.6057 4.88304 13.421 4.88304 14.3961 4.88304C14.452 4.88304 14.508 4.90571 14.548 4.95104L17.7531 8.59233C17.7531 8.59233 17.8011 8.66788 17.8011 8.71321V11.803C17.8011 11.9088 17.7131 11.9919 17.6012 11.9919H16.722C16.4663 11.1987 15.6909 10.617 14.7718 10.617C13.6368 10.617 12.7176 11.4857 12.7176 12.5585C12.7176 13.6312 13.6368 14.5 14.7718 14.5C15.6909 14.5 16.4663 13.9183 16.722 13.1251H17.6012C18.3766 13.1251 19 12.5358 19 11.803V8.71321C19 8.40347 18.8881 8.10129 18.6723 7.8671H18.6963ZM3.06217 13.3668C2.59059 13.3668 2.20693 13.0042 2.20693 12.5585C2.20693 12.1128 2.59059 11.7501 3.06217 11.7501C3.53375 11.7501 3.91741 12.1128 3.91741 12.5585C3.91741 13.0042 3.53375 13.3668 3.06217 13.3668ZM10.5595 2.34471V11.803C10.5595 11.9088 10.4716 11.9919 10.3597 11.9919H5.09236H5.02043C4.76465 11.1987 3.98934 10.617 3.07016 10.617V2.3296H3.09414C3.09414 2.22384 3.18206 2.14074 3.29396 2.14074H3.89343C4.28508 2.14074 4.76465 2.14074 5.29218 2.14074C6.23535 2.14074 7.33037 2.14074 8.36945 2.14074C8.89698 2.14074 9.37655 2.14074 9.76821 2.14074H10.3677C10.4796 2.14074 10.5675 2.22384 10.5675 2.3296V2.34471H10.5595ZM14.7957 13.3668C14.3242 13.3668 13.9405 13.0042 13.9405 12.5585C13.9405 12.1128 14.3242 11.7501 14.7957 11.7501C15.2673 11.7501 15.651 12.1128 15.651 12.5585C15.651 13.0042 15.2673 13.3668 14.7957 13.3668Z\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"0.225\"></path>\n                      </svg>",
             "title": "Shipping & Handling",
-            "content": "<p>Free Standard delivery for orders over $70 and Free Express shipping for orders over $100.</p><p>Flat Fee applies for orders under $70, Standard delivery $ 8.25 and Express $15.00.</p><p>For our full shipping policy: <a href=\"/pages/refunds-and-shipping\" title=\"Shipping Policy\">CLICK HERE</a></p>",
+            "content": "<p>Free Standard delivery for orders over $65 and Free Express shipping for orders over $90.</p><p>Flat Fee applies for orders under $65, Standard delivery $ 8.25 and Express $15.00.</p><p>For our full shipping policy: <a href=\"/pages/refunds-and-shipping\" title=\"Shipping Policy\">CLICK HERE</a></p>",
             "page": "",
             "is_open": false
           }
@@ -163,8 +152,7 @@
         "75552a25-1e35-4c18-a288-64186c890f22",
         "description",
         "tab_br7KJq",
-        "piercing_placement_U6j9hf",
-        "tab_ywXqhX",
+        "piercing_placement_jFQcr7",
         "tab_z3Vb3r",
         "tab_zYMynE",
         "tab_aiEJG7"
@@ -180,7 +168,7 @@
         "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted",
-        "shipping": "<p>Free Standard delivery for orders over $70 and Free Express shipping for orders over $90.</p><p>Flat Fee applies for orders under $70, Standard delivery $ 8.25 and Express $15.00.</p><p>For our full shipping policy: <a href=\"/pages/refunds-and-shipping\" title=\"Shipping Policy\">CLICK HERE</a></p>",
+        "shipping": "<p>Free Standard delivery for orders over $65 and Free Express shipping for orders over $90.</p><p>Flat Fee applies for orders under $65, Standard delivery $ 8.25 and Express $15.00.</p><p>For our full shipping policy: <a href=\"/pages/refunds-and-shipping\" title=\"Shipping Policy\">CLICK HERE</a></p>",
         "refund": "<p>Unfortunately due to the nature of this product, We cannot offer refunds or accept exchanges for change of mind.</p><p>For our full refund policy: <a href=\"/policies/refund-policy\" target=\"_blank\" title=\"Refund Policy\">CLICK HERE</a> </p>"
       }
     },
@@ -191,22 +179,10 @@
         "max_width": true
       }
     },
-    "raw_code_y8tTKp": {
-      "type": "raw-code",
-      "settings": {
-        "custom_html": "<div class=\"page-width\">\n<h2><b>SHOP THE LOOK</b></h2>\n<br>\n<div data-id=\"22433\" class=\"lookfy-gallery\"></div>\n</div>"
-      }
-    },
     "collection-return": {
       "type": "collection-return",
       "disabled": true,
       "settings": {}
-    },
-    "ss-recommendations-cross-sell": {
-      "type": "ss-recommendations-product",
-      "settings": {
-        "profileId": "customers-also-bought-featured"
-      }
     },
     "ss-recommendations-similar": {
       "type": "ss-recommendations-product",
@@ -214,19 +190,19 @@
         "profileId": "similar"
       }
     },
-    "pagefly-product-section": {
-      "type": "pagefly-product-section",
-      "settings": {}
+    "ss-recommendations-cross-sell": {
+      "type": "ss-recommendations-product",
+      "settings": {
+        "profileId": "cross-sell"
+      }
     }
   },
   "order": [
     "164559128170c3ea30",
     "main",
     "sub",
-    "raw_code_y8tTKp",
     "collection-return",
-    "ss-recommendations-cross-sell",
     "ss-recommendations-similar",
-    "pagefly-product-section"
+    "ss-recommendations-cross-sell"
   ]
 }
