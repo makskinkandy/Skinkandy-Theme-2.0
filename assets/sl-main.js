@@ -347,24 +347,39 @@ document.addEventListener('DOMContentLoaded', e => {
   const linkAU = document.getElementById('link-au');
   const linkNZ = document.getElementById('link-nz');
 
-    linkAU.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      const url = new URL(window.location.href);
-      if (url.pathname.startsWith('/en-nz')) {
-        console.log("TEST");
-        url.pathname = url.pathname.replace(/^\/en-nz/, '') || '/';
-      }
-      window.location.href = url.origin + url.pathname + url.search;
-    });
+    if (linkAU) {
+      linkAU.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    linkNZ.addEventListener('click', function (e) {
-      e.preventDefault();
-      const url = new URL(window.location.href);
-      if (!url.pathname.startsWith('/en-nz')) {
-        console.log("TEST");
-        url.pathname = '/en-nz' + url.pathname;
-      }
-      window.location.href = url.origin + url.pathname + url.search;
-    });
+        const currentUrl = new URL(window.location.href);
+        let newPath = currentUrl.pathname;
+
+        // Remove /en-nz from start of path
+        if (newPath.startsWith('/en-nz')) {
+          newPath = newPath.replace(/^\/en-nz/, '') || '/';
+        }
+
+        // Redirect to same page without /en-nz
+        const newUrl = currentUrl.origin + newPath + currentUrl.search;
+        window.location.href = newUrl;
+      });
+    }
+
+    if (linkNZ) {
+      linkNZ.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const currentUrl = new URL(window.location.href);
+        let newPath = currentUrl.pathname;
+
+        // Add /en-nz to the start if not already there
+        if (!newPath.startsWith('/en-nz')) {
+          newPath = '/en-nz' + newPath;
+        }
+
+        // Redirect to same page with /en-nz
+        const newUrl = currentUrl.origin + newPath + currentUrl.search;
+        window.location.href = newUrl;
+      });
+    }
 });
