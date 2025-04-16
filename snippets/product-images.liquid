@@ -13,7 +13,7 @@
       {%- unless product.tags contains "gift card" -%}
         {%- if settings.sale_tag != blank and product.tags contains settings.sale_tag -%}
           {% if settings.sale_tag == 'buy-3-free-4' %}
-            <div class="grid-product__tag">BUY 3 GET THE 4TH FREE</div>
+            <div class="grid-product__tag--black">BUY 3 GET THE 4TH FREE</div>
           {% else %}
             <div class="grid-product__tag grid-product__tag--image">
                 <img src="{{ settings.sale_image_2 | img_url: '150x' }}" alt="">
