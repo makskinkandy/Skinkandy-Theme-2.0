@@ -354,7 +354,7 @@
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 640px) {
-      font-size: 18px;
+      font-size: 13px;
       padding: 15px;
       display: block;
     }
