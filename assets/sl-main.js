@@ -362,6 +362,7 @@ document.addEventListener('DOMContentLoaded', e => {
       e.preventDefault();
       const url = new URL(window.location.href);
       if (!url.pathname.startsWith('/en-nz')) {
+        console.log("TEST");
         url.pathname = '/en-nz' + url.pathname;
       }
       window.location.href = url.origin + url.pathname + url.search;
