@@ -343,4 +343,25 @@ document.addEventListener('DOMContentLoaded', e => {
     targetUrl ? window.location.href = targetUrl : console.error(`Invalid country code: ${countryCode}`);
   };
 
+
+  const linkAU = document.getElementById('link-au');
+    const linkNZ = document.getElementById('link-nz');
+
+    linkAU.addEventListener('click', function (e) {
+      e.preventDefault();
+      const url = new URL(window.location.href);
+      if (url.pathname.startsWith('/en-nz')) {
+        url.pathname = url.pathname.replace(/^\/en-nz/, '') || '/';
+      }
+      window.location.href = url.origin + url.pathname + url.search;
+    });
+
+    linkNZ.addEventListener('click', function (e) {
+      e.preventDefault();
+      const url = new URL(window.location.href);
+      if (!url.pathname.startsWith('/en-nz')) {
+        url.pathname = '/en-nz' + url.pathname;
+      }
+      window.location.href = url.origin + url.pathname + url.search;
+    });
 });
