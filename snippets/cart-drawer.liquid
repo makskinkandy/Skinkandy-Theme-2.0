@@ -1,13 +1,5 @@
 {%- if settings.cart_type == 'drawer' -%}
   <div id="CartDrawer" class="drawer drawer--right">
-    {% if settings.ss_enable %}
-      <div
-        data-section-type="ss-recommendations"
-        data-section-id="cart-upsell"
-      >
-        <script type="searchspring/personalized-recommendations" profile="cart-upsell"></script>
-      </div>
-    {% endif %}
     <div class="mobile-only">
       <canvas id="confettiMobileCart"></canvas>
     </div>
