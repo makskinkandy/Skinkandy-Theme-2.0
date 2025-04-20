@@ -444,10 +444,31 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
+    },
+    "ads_block_PQYdQU": {
+      "type": "ads-block",
+      "blocks": {
+        "image_pniQNR": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_0_Top.jpg",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_pniQNR"
+      ],
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "rich_text_VPNyjt",
+    "ads_block_PQYdQU",
     "collection_showcase_HVDztJ",
     "columns_block_aRdPrb",
     "rich_text_7TUqcz",
