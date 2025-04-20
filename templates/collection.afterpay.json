@@ -32,11 +32,32 @@
         "heading_U6eXWe",
         "text_QHBrKi"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": false
+      }
+    },
+    "ads_block_PQYdQU": {
+      "type": "ads-block",
+      "blocks": {
+        "image_pniQNR": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_0_Top.jpg",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_pniQNR"
+      ],
+      "settings": {
+        "title": ""
       }
     },
     "collection_showcase_HVDztJ": {
@@ -444,26 +465,6 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
-    },
-    "ads_block_PQYdQU": {
-      "type": "ads-block",
-      "blocks": {
-        "image_pniQNR": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "url": "",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_0_Top.jpg",
-            "bg_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_pniQNR"
-      ],
-      "settings": {
-        "title": ""
-      }
     }
   },
   "order": [
