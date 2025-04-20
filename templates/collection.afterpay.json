@@ -112,7 +112,7 @@
         "image_f3wHn9"
       ],
       "custom_css": [
-        ".collection-showcase {padding-top: 0;}"
+        ".collection-showcase {padding-top: 0; margin-bottom: 15px;}"
       ],
       "settings": {
         "title": "",
