@@ -11,6 +11,7 @@
   "sections": {
     "top_notification_banner_yteqNA": {
       "type": "top-notification-banner",
+      "disabled": true,
       "settings": {
         "enable": true,
         "notification_text": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
