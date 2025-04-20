@@ -1,5 +1,18 @@
 {%- if settings.cart_type == 'drawer' -%}
   <div id="CartDrawer" class="drawer drawer--right">
+    {% if settings.ss_enable %}
+    <div
+      data-section-type="ss-recommendations-cart"
+      data-section-id="cart-recommendations"
+    >
+      <script type="searchspring/personalized-recommendations" profile="cart-upsell">
+        cart = [];
+        {% for item in cart.items %}
+          cart.push("{{ item.product.variants[0].sku }}");
+        {% endfor %}
+      </script>
+    </div>
+  {% endif %}
     <div class="mobile-only">
       <canvas id="confettiMobileCart"></canvas>
     </div>
