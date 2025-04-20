@@ -47,9 +47,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "Hearts",
+            "title": "",
             "url": "#/filter:collection_name:Hearts",
-            "image": "shopify://shop_images/SK-0_65.jpg"
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_1.jpg"
           }
         },
         "image_wFKqQp": {
@@ -57,9 +57,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "Nature",
+            "title": "",
             "url": "#/filter:collection_name:Animal$2520Collection",
-            "image": "shopify://shop_images/SK-0_214.jpg"
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_2.jpg"
           }
         },
         "image_LbUYjn": {
@@ -67,9 +67,19 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "Astral",
+            "title": "",
             "url": "#/filter:collection_name:Astral$2520Curation",
-            "image": "shopify://shop_images/SK-0_109.jpg"
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_3.jpg"
+          }
+        },
+        "image_TYc3GC": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Radiant",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_4.jpg"
           }
         },
         "image_6DDFGL": {
@@ -77,9 +87,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "Under 50",
+            "title": "",
             "url": "#/filter:collection_name:Under$252050",
-            "image": "shopify://shop_images/7R505813_1.jpg"
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_5.jpg"
           }
         },
         "image_f3wHn9": {
@@ -87,9 +97,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": true,
-            "title": "Under 100",
+            "title": "",
             "url": "#/filter:collection_name:Under$2520100",
-            "image": "shopify://shop_images/shop_the_look_curated_ears_3.jpg"
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_6.jpg"
           }
         }
       },
@@ -97,6 +107,7 @@
         "image_Lq8hHX",
         "image_wFKqQp",
         "image_LbUYjn",
+        "image_TYc3GC",
         "image_6DDFGL",
         "image_f3wHn9"
       ],
