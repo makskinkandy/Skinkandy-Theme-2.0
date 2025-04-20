@@ -36,7 +36,9 @@
               <button class="btn btn--black">SHOP NOW</button>
             {% endif %}
             {% if section.settings.mode == 'light' and block.settings.disable_button == true %}
-              <h3 class="collection-showcase__title no-btn">{{ block.settings.title }}</h3>
+              {% if block.settings.title != blank %}
+                <h3 class="collection-showcase__title no-btn">{{ block.settings.title }}</h3>
+              {% endif %}
             {% endif %}
           </a>
         </div>
