@@ -1,5 +1,7 @@
 {% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
-  <a href="#!" id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
+  {% if settings.popup_btn != blank %}
+    <a href="#!" id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
+  {% endif %}
   <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
       <a href="javascript.void(0)" class="popup-close" role="button"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/close-btn.png?v=1725430171" alt="close icon"></a>
@@ -28,7 +30,8 @@
             </div>
           {% else %}
             {% if settings.popup_left_image %}
-              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image">
+              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
+              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
             {% else %}
               <div class="video-container">
                 <video loop muted loop autoplay playsinline>
@@ -54,7 +57,7 @@
             <div id="subtitle" class="subtitle">{{ page.metafields.custom.popup_subtitle }}</div>
         {% else %}
           {% if settings.popup_subtitle %}
-            <div id="subtitle" class="subtitle">{{ settings.popup_subtitle | metafield_tag }}</div>
+            <div id="subtitle" class="subtitle">{{ settings.popup_subtitle }}</div>
           {% endif %}
         {% endif %}
         <div id="response"></div>
@@ -342,7 +345,6 @@
                       {% endif %}
                     </button>
                     <div class="dropdown-box" style="width: 57.93px;">
-                     
                           {% assign current_path = request.path %}
   
                           {% if current_path contains '/en-nz' %}
@@ -361,7 +363,7 @@
                 
                 {% comment %} search {% endcomment %}
                 {%- if settings.search_enable -%}
-                  <li class="search-nav-btn">
+                  <li>
                     <button class="js-search-header site-nav__link site-nav__link--icon btn-search" href="{{ section.settings.find_link | escape }}" aria-label="Search">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" aria-label="Mobile Search" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" role="presentation">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -369,8 +371,7 @@
                     </button>
                   </li>
                 {%- endif -%}
-                
-                          
+
                 {% comment %} accounts {% endcomment %}
                 {%- if shop.customer_accounts_enabled -%}
                   <li class="mobile-only" style="display:none;">
@@ -421,7 +422,7 @@
               {% if settings.ss_enable %}
 
                 {% comment %} Searchspring search form {% endcomment %}
-                <form action="/collections/{{ settings.ss_collection_handle }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form search-form-rewrite">
+                <form action="{% if current_path contains '/en-nz' %}/en-nz{%  endif %}/collections/{{ settings.ss_collection_handle }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form search-form-rewrite">
                   <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
                     <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
