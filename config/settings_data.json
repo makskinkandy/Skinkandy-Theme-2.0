@@ -130,6 +130,7 @@
     "popup_enable": true,
     "popup_layout": "bfcm",
     "popup_left_image": "shopify://shop_images/KandyClub_-_PopUp_Image_1.jpg",
+    "popup_left_image_mobile": "shopify://shop_images/KandyClub_-_PopUp_Image_1.jpg",
     "popup_title": "Join KandyClub <br><b>& Get 10% Off</b>",
     "popup_subtitle": "Sign up now and get 10%* off your first online jewellery purchase—but don’t wait, your code is valid for 24 hours only. Plus, enjoy exclusive member perks, birthday offers, and access to promos you won’t want to miss.",
     "popup_embed_form": "https://shopifyapi.skinkandyonline.com.au/create-discount",
