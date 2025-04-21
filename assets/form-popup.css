@@ -304,12 +304,12 @@ body.no-scroll {
   &.bfcm {
     background-color: transparent;
     width:  1065px;
-    max-height: 605px;
     font-family: "Montserrat", sans-serif;
+    max-height: calc(100% - 90px);
     overflow: visible;
     h3 {
       font-family: "League Gothic", serif;
-      font-size: 34px;
+      font-size: 30px;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
