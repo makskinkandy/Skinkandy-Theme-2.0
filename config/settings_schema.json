@@ -1605,12 +1605,18 @@
         "info": "Add the image you want to use on you popup"
       },
       {
+        "type": "image_picker",
+        "id": "popup_left_image_mobile",
+        "label": "Left Image Mobile",
+        "info": "Add the image you want to use on you popup"
+      },
+      {
         "type": "text",
         "id": "popup_title",
         "label": "Form Title"
       },
       {
-        "type": "textarea",
+        "type": "richtext",
         "id": "popup_subtitle",
         "label": "Form Sub-title"
       },
@@ -1638,7 +1644,7 @@
         "type": "text",
         "id": "popup_btn",
         "label": "Button Label",
-        "default": "JOIN KANDY CLUB NOW!"
+        "default": "JOIN KANDYCLUB NOW"
       }
     ]
   },
