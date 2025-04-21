@@ -22,6 +22,7 @@ body.no-scroll {
   }
   &.bfcm {
     padding-top: 0;
+    padding-bottom: 0;
   }
   @media screen and (max-width: 640px) {
     align-items: start;
@@ -303,12 +304,12 @@ body.no-scroll {
   &.bfcm {
     background-color: transparent;
     width:  1065px;
-    max-height: 585px;
     font-family: "Montserrat", sans-serif;
+    max-height: calc(100% - 90px);
     overflow: visible;
     h3 {
       font-family: "League Gothic", serif;
-      font-size: 34px;
+      font-size: 30px;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
@@ -346,7 +347,7 @@ body.no-scroll {
     .popup-close {
       position: absolute;
       right: 0;
-      top: -60px;
+      top: -43px;
       @media screen and (max-width: 640px) {
         top: 10px;
         right: 10px;
@@ -375,7 +376,6 @@ body.no-scroll {
           height: 200px;
           width: 100%;
           margin: 0 auto;
-          display: block;
         }
       }
     }
@@ -446,6 +446,17 @@ body.no-scroll {
     height: 240px;
     width: 100%;
     max-width: 100%;
+  }
+  &.desktop {
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+  &.mobile {
+    display: block;
+    @media screen and (min-width: 641px) {
+      display: none;
+    }
   }
 }
 .form-popup__left {
