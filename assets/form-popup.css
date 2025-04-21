@@ -446,6 +446,7 @@ body.no-scroll {
     height: 240px;
     width: 100%;
     max-width: 100%;
+    object-position: top center;
   }
   &.desktop {
     @media screen and (max-width: 640px) {
