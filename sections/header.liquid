@@ -57,7 +57,7 @@
             <div id="subtitle" class="subtitle">{{ page.metafields.custom.popup_subtitle }}</div>
         {% else %}
           {% if settings.popup_subtitle %}
-            <div id="subtitle" class="subtitle">{{ settings.popup_subtitle | metafield_tag }}</div>
+            <div id="subtitle" class="subtitle">{{ settings.popup_subtitle }}</div>
           {% endif %}
         {% endif %}
         <div id="response"></div>
