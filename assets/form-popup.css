@@ -453,6 +453,7 @@ body.no-scroll {
     }
   }
   &.mobile {
+    display: block;
     @media screen and (min-width: 641px) {
       display: none;
     }
