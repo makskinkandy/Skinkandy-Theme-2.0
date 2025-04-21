@@ -1616,7 +1616,7 @@
         "label": "Form Title"
       },
       {
-        "type": "textarea",
+        "type": "richtext",
         "id": "popup_subtitle",
         "label": "Form Sub-title"
       },
