@@ -200,7 +200,7 @@
                         <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
                           <div class="collapsibles-wrapper">
                               <button type="button"
-                                class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height" aria-controls="Product-content-{{ block.id }}">
+                                class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height {% if block.settings.is_open %} is-open{% endif %}" aria-controls="Product-content-{{ block.id }}" {% if block.settings.is_open %}aria-expanded="true"{% endif %}>
                                 {% if block.settings.icon %}
                                   {{ block.settings.icon }}
                                 {% endif %}
@@ -208,7 +208,7 @@
                                 {%- render 'collapsible-icons' -%}
                               </button>
                               <div id="Product-content-{{ block.id }}"
-                                class="collapsible-content collapsible-content--all">
+                                class="collapsible-content collapsible-content--all {% if block.settings.is_open %}is-open{% endif %}" {% if block.settings.is_open %}style="height: auto;"{% endif %}>
                                 <div class="collapsible-content__inner rte">
                                   {% render 'tag_map' %}
                                   <p class="piercing-disclaimer"><i>This jewellery is designed to fit most of the placements listed above; however, suitability depends on individual anatomy.</i></p>
