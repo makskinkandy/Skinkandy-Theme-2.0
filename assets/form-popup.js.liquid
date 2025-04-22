@@ -83,6 +83,15 @@ function setCookie(name, value, options = {}) {
     POPUP.classList.remove("hidden");
     document.body.classList.add('no-scroll');
   });
+
+  document.body.addEventListener('click', function (event) {
+    
+    if (event.target.matches('.js-btn-popup')) {
+      console.log("test");
+      POPUP.classList.remove("hidden");
+      document.body.classList.add('no-scroll');
+    }
+  });
   
 });
 
