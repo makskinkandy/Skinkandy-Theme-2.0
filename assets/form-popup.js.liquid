@@ -1,4 +1,5 @@
 const btnPopup = document.getElementById('btn-popup');
+const genBtn = document.querySelector(".js-btn-popup");
 
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -81,6 +82,11 @@ function setCookie(name, value, options = {}) {
 const dobInput = document.getElementById('dob');
 
 btnPopup.addEventListener("click", () => {
+  POPUP.classList.remove("hidden");
+  document.body.classList.add('no-scroll');
+});
+
+genBtn.addEventListener("click", () => {
   POPUP.classList.remove("hidden");
   document.body.classList.add('no-scroll');
 });
