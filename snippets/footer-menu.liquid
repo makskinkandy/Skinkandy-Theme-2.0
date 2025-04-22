@@ -7,7 +7,7 @@
                 {%- render 'icons', icon: 'arrow-down' -%}
             </p>
             {% if link.links.size > 1 %}
-                <ul class="footer-submenu no-bullets inline-list">
+                <ul class="footer-submenu no-bullets inline-list" role="menu">
                     {% for childlink in link.links %}
                         <li><a href="{{ childlink.url }}" role="menuitem">{{ childlink.title }}</a></li>
                     {% endfor %}
