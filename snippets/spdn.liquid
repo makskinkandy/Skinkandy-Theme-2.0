@@ -7,7 +7,7 @@ if(node.tagName==='SCRIPT'&&node.innerHTML.includes('asyncLoad')){node.type='tex
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('hotjar')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('guest_login')){return;}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('xklaviyo')){node.type='text/spdnscript'}
-if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('recaptcha')){node.type='text/spdnscript'}
+if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('norecaptcha')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('klaviyo')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('shop.app')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('chat')){node.type='text/spdnscript'}
@@ -25,9 +25,5 @@ if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('privy')){node.
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('incart')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('webui')){node.type='text/spdnscript'}
 
- if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('gtag')){node.type='text/spdnscript'}
-if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('tagmanager')){node.type='text/spdnscript'}
-if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('gtm')){node.type='text/spdnscript'}
-if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('googlet')){node.type='text/spdnscript'}
-if(node.tagName==='SCRIPT'&&node.className=='analytics'){node.type='text/spdnscript'}  })})})
-var ua = navigator.userAgent.toLowerCase();if ((ua.indexOf('chrome') > -1 || ua.indexOf('firefox') > -1) && window.location.href.indexOf("no-optimization") === -1 && window.location.href.indexOf("debug") === -1 && window.location.href.indexOf("cart") === -1 ) {observer.observe(document.documentElement,{childList:true,subtree:true})}</script>{% endif %}
+ if(node.tagName==='SCRIPT'&&node.className=='analytics'){node.type='text/javascript'}  })})})
+var ua = navigator.userAgent.toLowerCase();if ((ua.indexOf('chrome') > -1 || ua.indexOf('firefox') > -1) && window.location.href.indexOf("pages") === -1 && window.location.href.indexOf("collections") === -1 && window.location.href.indexOf("cart") === -1 ) {observer.observe(document.documentElement,{childList:true,subtree:true})}</script>{% endif %}
