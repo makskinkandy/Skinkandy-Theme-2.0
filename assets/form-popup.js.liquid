@@ -86,7 +86,8 @@ btnPopup.addEventListener("click", () => {
   document.body.classList.add('no-scroll');
 });
 
-genBtn.addEventListener("click", () => {
+genBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   POPUP.classList.remove("hidden");
   document.body.classList.add('no-scroll');
 });
