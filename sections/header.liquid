@@ -1,6 +1,6 @@
 {% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
   {% if settings.popup_btn != blank %}
-    <a href="#!" id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
+    <a id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
   {% endif %}
   <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
