@@ -76,19 +76,19 @@ function setCookie(name, value, options = {}) {
     var hiddenField = document.getElementById('country');
     hiddenField.value = 'United States';
   }
+
+  genBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("test");
+    POPUP.classList.remove("hidden");
+    document.body.classList.add('no-scroll');
+  });
   
 });
 
 const dobInput = document.getElementById('dob');
 
 btnPopup.addEventListener("click", () => {
-  POPUP.classList.remove("hidden");
-  document.body.classList.add('no-scroll');
-});
-
-genBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log("test");
   POPUP.classList.remove("hidden");
   document.body.classList.add('no-scroll');
 });
