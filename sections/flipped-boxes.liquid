@@ -5,6 +5,10 @@
       {% comment %}1st Item{% endcomment %}
       <div class="flipped-boxes__half">
         {% for block in section.blocks %}
+          {% assign original = block.settings.Title %}
+          {% assign lowercased = original | downcase %}
+          {% assign first_letter = lowercased | slice: 0, 1 | upcase %}
+          {% assign rest_of_sentence = lowercased | slice: 1 %}
           {% if forloop.index == 1 %}
             <div class="flipped-boxes__item first-item no-flip--{{ block.settings.no_flip }}">
               <div class="flip-card">
@@ -13,12 +17,12 @@
                       {% if block.settings.no_flip %}
                         <a href="{{ block.settings.page_url }}">
                           <h3 class="flipped-boxes__title">{{ block.settings.Title }}</h3>
-                          <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.Title }} Image">
+                          <img src="{{ block.settings.image | image_url }}" alt="{{ first_letter }}{{ rest_of_sentence }} Image">
                           <div class="overlay"></div>
                         </a>
                       {% else %}
                         <h3 class="flipped-boxes__title">{{ block.settings.Title }}</h3>
-                        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.Title }} Image">
+                        <img src="{{ block.settings.image | image_url }}" alt="{{ first_letter }}{{ rest_of_sentence }} Image">
                         <div class="overlay"></div>
                       {% endif %}
                     </div>
