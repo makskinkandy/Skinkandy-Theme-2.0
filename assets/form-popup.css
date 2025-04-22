@@ -317,7 +317,7 @@ body.no-scroll {
       margin-bottom: 35px;
       @media screen and (max-width: 640px) {
         margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 16px;
       }
       span {
         display: block;
@@ -396,7 +396,7 @@ body.no-scroll {
         border-radius: 8px;
         @media screen and (max-width: 640px) {
           padding: 10px;
-          font-size: 12px !important;
+          font-size: 10px !important;
         }
       }
       input::placeholder {
@@ -427,7 +427,7 @@ body.no-scroll {
         margin-top: 10px;
       }
       input[type=submit] {
-          font-size: 16px;
+          font-size: 12px;
           max-width: fit-content;
           margin: 0 auto;
           display: block;
