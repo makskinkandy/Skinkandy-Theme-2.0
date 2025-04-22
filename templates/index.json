@@ -406,7 +406,7 @@
         "title": "JUST LANDED",
         "mode": "light",
         "background": "#ffffff",
-        "button_text": "Shop all",
+        "button_text": "Shop now",
         "button_url": "shopify://collections/shop-all",
         "bottom_border": true,
         "enable_hover": false
