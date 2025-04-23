@@ -80,7 +80,7 @@
     "continue_shopping_enabled": false,
     "empty_cart_heading": "Your basket is currently empty",
     "empty_cart": "",
-    "empty_cart_link": "shopify://collections",
+    "empty_cart_link": "shopify://collections/shop-all",
     "empty_cart_link_label": "Shop now",
     "social_facebook_link": "https://www.facebook.com/skinkandy/",
     "social_instagram_link": "https://www.instagram.com/skinkandy/",
