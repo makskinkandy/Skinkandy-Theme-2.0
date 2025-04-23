@@ -165,10 +165,10 @@ document.addEventListener('DOMContentLoaded', function () {
     return allHaveAriaLabel;
   }
 
-  
+
   let intervalId = setInterval(() => {
     if (addAriaLabel()) {
-   
+
       clearInterval(intervalId);
     }
   }, 100);
@@ -179,10 +179,12 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const svgElements = document.querySelectorAll('.__pf svg');
 
+  console.log(svgElements, 'svgElements')
+
   function addAriaLabelForSvg() {
     let allHaveAriaLabel = true;
     svgElements.forEach(svg => {
- console.log(svg, 'svg')
+      console.log(svg, 'svg')
       const xmlns = svg.getAttribute('xmlns');
       if (!svg.hasAttribute('aria-label')) {
         svg.setAttribute('aria-label', "icon_pf");
