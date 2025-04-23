@@ -351,6 +351,7 @@ function initMap() {
         url: `https://cdn.shopify.com/s/files/1/0555/7508/5194/files/MapPin_1.png`,
         scaledSize: new google.maps.Size(30, 40),
       },
+      title: "Location Marker"
     };
   });
 
