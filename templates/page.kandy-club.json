@@ -114,7 +114,29 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": true
+        "reduced_image_size": true,
+        "reduced_content_width": false
+      }
+    },
+    "rich_text_xbWDwG": {
+      "type": "rich-text",
+      "blocks": {
+        "text_U4crmF": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible. </em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_U4crmF"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
       }
     },
     "16418769900ca051a6": {
@@ -148,6 +170,7 @@
     "main",
     "header_banner_hFcUAT",
     "two_column_icon_image_6WifJH",
+    "rich_text_xbWDwG",
     "16418769900ca051a6",
     "raw_code_k63WfG"
   ]
