@@ -149,25 +149,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Lấy tất cả các nút bấm có class "pf-close-btn"
-const closeBtns = document.querySelectorAll('.pf-close-btn');
+document.addEventListener('DOMContentLoaded', function () {
+  const closeBtns = document.querySelectorAll('.pf-close-btn');
 
-// Hàm thêm aria-label
-function addAriaLabel() {
-  let allHaveAriaLabel = true;
-  closeBtns.forEach(btn => {
-    // Thêm aria-label nếu chưa có
-    if (!btn.hasAttribute('aria-label')) {
-      btn.setAttribute('aria-label', 'Close');
-      allHaveAriaLabel = false;
-    }
-  });
-  return allHaveAriaLabel;
-}
-
-// Gọi hàm thêm aria-label mỗi 100ms
-let intervalId = setInterval(() => {
-  if (addAriaLabel()) {
-    // Dừng setInterval nếu tất cả nút bấm đã có aria-label
-    clearInterval(intervalId);
+  // Hàm thêm aria-label
+  function addAriaLabel() {
+    let allHaveAriaLabel = true;
+    closeBtns.forEach(btn => {
+      console.log(btn, 'btn')
+      // Thêm aria-label nếu chưa có
+      if (!btn.hasAttribute
+        ('aria-label')) {
+        btn.setAttribute('aria-label', 'Close');
+        allHaveAriaLabel = false;
+      }
+    });
+    return allHaveAriaLabel;
   }
-}, 100);</script>
+
+  // Gọi hàm thêm aria-label mỗi 100ms
+  let intervalId = setInterval(() => {
+    if (addAriaLabel()) {
+      // Dừng setInterval nếu tất cả nút bấm đã có aria-label
+      clearInterval(intervalId);
+    }
+  }, 100);
+});</script>
