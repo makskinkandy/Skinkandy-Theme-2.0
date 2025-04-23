@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function addAriaLabelForSvg() {
     let allHaveAriaLabel = true;
     svgElements.forEach(svg => {
+ console.log(svg, 'svg')
       const xmlns = svg.getAttribute('xmlns');
       if (!svg.hasAttribute('aria-label')) {
         svg.setAttribute('aria-label', "icon_pf");
