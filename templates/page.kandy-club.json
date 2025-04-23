@@ -132,6 +132,9 @@
       "block_order": [
         "text_U4crmF"
       ],
+      "custom_css": [
+        "p {font-size: 14px;}"
+      ],
       "settings": {
         "align_text": "center",
         "narrow_column": true,
