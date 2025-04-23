@@ -202,25 +202,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const anchorElementsa = document.querySelectorAll('.__pf a');
+// document.addEventListener('DOMContentLoaded', function () {
+//   const anchorElementsa = document.querySelectorAll('.__pf a');
 
-  console.log(anchorElementsa, 'anchorElementsa')
-  function addAriaLabelForAnchors() {
-    let allHaveAriaLabel = true;
-    anchorElementsa.forEach(anchor => {
-      const href = anchor.getAttribute('href');
-      if (!anchor.hasAttribute('aria-label')) {
-        anchor.setAttribute('aria-label', href);
-        allHaveAriaLabel = false;
-      }
-    });
-    return allHaveAriaLabel;
-  }
+//   console.log(anchorElementsa, 'anchorElementsa')
+//   function addAriaLabelForAnchors() {
+//     let allHaveAriaLabel = true;
+//     anchorElementsa.forEach(anchor => {
+//       const href = anchor.getAttribute('href');
+//       if (!anchor.hasAttribute('aria-label')) {
+//         anchor.setAttribute('aria-label', href);
+//         allHaveAriaLabel = false;
+//       }
+//     });
+//     return allHaveAriaLabel;
+//   }
 
-  let intervalIda = setInterval(() => {
-    if (addAriaLabelForAnchors()) {
-      clearInterval(intervalIda);
-    }
-  }, 100);
-});</script>
+//   let intervalIda = setInterval(() => {
+//     if (addAriaLabelForAnchors()) {
+//       clearInterval(intervalIda);
+//     }
+//   }, 100);
+// });</script>
