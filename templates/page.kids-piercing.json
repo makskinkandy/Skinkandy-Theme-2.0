@@ -62,6 +62,7 @@
             "center-content": true,
             "title": "",
             "title_size": "small",
+            "title_tag": "h3",
             "text": "",
             "text_size": "small",
             "button_label": "",
@@ -80,6 +81,7 @@
             "center-content": true,
             "title": "{KIDS} {EAR} {PIERCINGS:}  SAFE, FUN, AND SPECIAL ",
             "title_size": "large",
+            "title_tag": "h1",
             "text": "<p>At SkinKandy, we specialise in providing safe and enjoyable ear piercings for kids, starting from as young as 6 months old. Our friendly, professional piercers take the time to consult with you and your child to ensure a safe and comfortable experience. </p><p>WHY CHOOSE SKINKANDY FOR YOUR CHILD’S EAR PIERCING? </p><p>We know that getting an ear piercing is an exciting milestone for your child, and we treat every piercing with the utmost care and attention. Our expert piercers have undergone specialised training as part of our comprehensive piercing program, ensuring they’re fully equipped to perform children’s lobe piercings with both skilland confidence.  From start to finish, we create a welcoming and comfortable environment where your child will feel relaxed. We use only the best equipment and maintain the highest hygiene standards to ensure a safe and infection-free piercing experience.</p><p>OVER 70 STORES ACROSS AUSTRALIA & NEW ZEALAND </p>",
             "text_size": "small",
             "button_label": "Book Now",
@@ -118,6 +120,7 @@
             "center-content": true,
             "title": "{THE} {SKINKANDY} {EXPERIENCE:}  SAFETY AND FUN COMBINED",
             "title_size": "large",
+            "title_tag": "h3",
             "text": "<p>At SkinKandy, we make the ear-piercing process as fun and stress-free as possible. Here’s what you can expect when you visit us: </p><ul><li>IN-HOUSE ANATOMY CONSULTATION: We’ll ensure your child’s lobes are ready for a safe piercing. If the lobes are too small, we’ll advise waiting until they’re the right size. </li><li>DOUBLE OPERATOR SERVICE AVAILABLE: If your child is ready for both ear piercings, we offer a Double Operator Service*, where two piercers perform both piercings simultaneously. This makes the process faster and reduces the chance of your child feeling nervous. <br/><em>* We suggest making a booking for the double operator service so that we can ensure two piercers are available at your preferred time. Please note that a $15 fee applies for that service. </em></li><li>GENTLE AND QUICK: Our piercers use the latest sterile, single-use cartridge system <a href=\"/pages/needle-free-piercings\" title=\"Needle Free Piercings\">(Read More)</a> and gentle hand pressure, ensuring a smooth, comfortable experience. </li></ul>",
             "text_size": "small",
             "button_label": "Book Now",
@@ -137,6 +140,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
+            "title_tag": "h3",
             "text": "",
             "text_size": "small",
             "button_label": "",
@@ -176,6 +180,7 @@
             "center-content": false,
             "title": "14K SOLID GOLD:",
             "title_size": "large",
+            "title_tag": "h3",
             "text": "<p>Hypoallergenic, durable, and beautiful. Our solid gold jewellery is perfect for little ears and won’t tarnish or wear down over time.</p>",
             "text_size": "small",
             "button_label": "Shop Now",
@@ -195,6 +200,7 @@
             "center-content": false,
             "title": "IMPLANT GRADE TITANIUM:",
             "title_size": "large",
+            "title_tag": "h3",
             "text": "<p>Strong, lightweight, and nickel-free, implant grade titanium is an excellent choice for faster healing, especially for kids with sensitive skin. </p>",
             "text_size": "small",
             "button_label": "Shop Now",
@@ -331,7 +337,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": false
+        "reduced_image_size": false,
+        "reduced_content_width": false
       }
     },
     "header_banner_nArfYj": {
