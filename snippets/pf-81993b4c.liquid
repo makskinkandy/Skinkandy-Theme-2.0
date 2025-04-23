@@ -176,24 +176,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const svgElements = document.querySelectorAll('svg');
+document.addEventListener('DOMContentLoaded', function () {
+  const svgElements = document.querySelectorAll('.__pf svg');
 
-//   function addAriaLabelForSvg() {
-//     let allHaveAriaLabel = true;
-//     svgElements.forEach(svg => {
-//       const xmlns = svg.getAttribute('xmlns');
-//       if (!svg.hasAttribute('aria-label')) {
-//         svg.setAttribute('aria-label', xmlns);
-//         allHaveAriaLabel = false;
-//       }
-//     });
-//     return allHaveAriaLabel;
-//   }
+  function addAriaLabelForSvg() {
+    let allHaveAriaLabel = true;
+    svgElements.forEach(svg => {
+      const xmlns = svg.getAttribute('xmlns');
+      if (!svg.hasAttribute('aria-label')) {
+        svg.setAttribute('aria-label', "icon_pf");
+        allHaveAriaLabel = false;
+      }
+    });
+    return allHaveAriaLabel;
+  }
 
-//   let intervalId = setInterval(() => {
-//     if (addAriaLabelForSvg()) {
-//       clearInterval(intervalId);
-//     }
-//   }, 100);
-// });</script>
+  let intervalId = setInterval(() => {
+    if (addAriaLabelForSvg()) {
+      clearInterval(intervalId);
+    }
+  }, 100);
+});</script>
