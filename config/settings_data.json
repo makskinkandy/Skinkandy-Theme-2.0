@@ -828,7 +828,8 @@
       ".page-new-in .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
       ".u-link--pin {text-decoration: none;}",
       "h4.hotspot-item-title {min-height: 39px;}",
-      ".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}"
+      ".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}",
+      ".ss__results__inline-banner {display: none;}"
     ]
   }
 }
