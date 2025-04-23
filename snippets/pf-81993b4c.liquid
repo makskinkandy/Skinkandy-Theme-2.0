@@ -148,68 +148,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// // Lấy tất cả các nút bấm có class "pf-close-btn"
-// document.addEventListener('DOMContentLoaded', function () {
-//   const closeBtns = document.querySelectorAll('.pf-close-btn');
 
-//   // Hàm thêm aria-label
-//   function addAriaLabel() {
-//     let allHaveAriaLabel = true;
-//     closeBtns.forEach(btn => {
-//       console.log(btn, 'btn')
-//       // Thêm aria-label nếu chưa có
-//       if (!btn.hasAttribute
-//         ('aria-label')) {
-//         btn.setAttribute('aria-label', 'Close');
-//         allHaveAriaLabel = false;
-//       }
-//     });
-//     return allHaveAriaLabel;
-//   }
-
-//   // Gọi hàm thêm aria-label mỗi 100ms
-//   let intervalId = setInterval(() => {
-//     if (addAriaLabel()) {
-//       // Dừng setInterval nếu tất cả nút bấm đã có aria-label
-//       clearInterval(intervalId);
-//     }
-//   }, 100);
-// });
-
-// Lấy tất cả các nút bấm có class "pf-close-btn"
 document.addEventListener('DOMContentLoaded', function () {
   const closeBtns = document.querySelectorAll('.pf-close-btn');
-  const svgElements = document.querySelectorAll('svg');
 
-  // Hàm thêm aria-label
   function addAriaLabel() {
     let allHaveAriaLabel = true;
     closeBtns.forEach(btn => {
-      // Thêm aria-label cho nút bấm nếu chưa có
-      if (!btn.hasAttribute('aria-label')) {
+      console.log(btn, 'btn')
+      if (!btn.hasAttribute
+        ('aria-label')) {
         btn.setAttribute('aria-label', 'Close');
         allHaveAriaLabel = false;
       }
     });
+    return allHaveAriaLabel;
+  }
 
-    // Thêm aria-label cho các thẻ svg
+  
+  let intervalId = setInterval(() => {
+    if (addAriaLabel()) {
+   
+      clearInterval(intervalId);
+    }
+  }, 100);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const svgElements = document.querySelectorAll('svg');
+
+  function addAriaLabelForSvg() {
+    let allHaveAriaLabel = true;
     svgElements.forEach(svg => {
-      // Lấy giá trị của xmlns trong thẻ svg
       const xmlns = svg.getAttribute('xmlns');
-      // Thêm aria-label nếu chưa có
       if (!svg.hasAttribute('aria-label')) {
         svg.setAttribute('aria-label', xmlns);
         allHaveAriaLabel = false;
       }
     });
-
     return allHaveAriaLabel;
   }
 
-  // Gọi hàm thêm aria-label mỗi 100ms
   let intervalId = setInterval(() => {
-    if (addAriaLabel()) {
-      // Dừng setInterval nếu tất cả nút bấm và thẻ svg đã có aria-label
+    if (addAriaLabelForSvg()) {
       clearInterval(intervalId);
     }
   }, 100);
