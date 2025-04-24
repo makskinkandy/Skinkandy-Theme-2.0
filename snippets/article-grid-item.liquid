@@ -18,7 +18,7 @@
                     data-widths="[540, 720, 900, 1080]"
                     data-aspectratio="{{ article.image.aspect_ratio }}"
                     data-sizes="auto"
-                    alt="{{ article.image.alt | escape }}">
+                    alt="{{ article.title }}">
               </div>
               <noscript>
                 <img class="lazyloaded" src="{{ article.image | img_url: '600x' }}" alt="{{ article.title | escape }}">
@@ -32,7 +32,7 @@
                   data-widths="[540, 720, 900, 1080]"
                   data-aspectratio="{{ article.image.aspect_ratio }}"
                   data-sizes="auto"
-                  alt="{{ article.image.alt | escape }}">
+                  alt="{{ article.title }}">
               <noscript>
                 <img class="lazyloaded" src="{{ article.image | img_url: '600x' }}" alt="{{ article.title | escape }}">
               </noscript>
