@@ -123,7 +123,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/image_27_cebb10c5-84ef-4516-b8c8-171b703ce2bb.jpg",
+            "image": "shopify://shop_images/ear-piercing-service.jpg",
             "video": "",
             "center-content": false,
             "title": "",
@@ -551,7 +551,8 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "price_estimator_8yLgcE": {
