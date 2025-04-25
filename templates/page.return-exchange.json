@@ -113,8 +113,8 @@
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": false,
-        "max_width": 1704
+        "disable_grid": true,
+        "max_width": 984
       }
     },
     "columns_block_QY9XJT": {
@@ -173,7 +173,7 @@
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
-        "max_width": 1704
+        "max_width": 984
       }
     },
     "columns_block_fBGBRb": {
