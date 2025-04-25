@@ -9,37 +9,6 @@
  */
 {
   "sections": {
-    "rich_text_VPNyjt": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U6eXWe": {
-          "type": "heading",
-          "settings": {
-            "title": "Mother's Day",
-            "heading_tag": "h1"
-          }
-        },
-        "text_QHBrKi": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U6eXWe",
-        "text_QHBrKi"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
-      }
-    },
     "ads_block_PQYdQU": {
       "type": "ads-block",
       "blocks": {
@@ -259,7 +228,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>*To be eligible for the promotion you need to be a KandyClub member. Does not apply to Gold Products, Gift Cards or Aftercare Neilmed. Online exclusive sale. </p>"
+            "text": "<p>*To be eligible for the promotion you need to be a KandyClub member. Does not apply to Gold Products, Gift Cards or Aftercare Neilmed. Online exclusive sale. </p><p>Promotion ends Sunday, 11 May 2025 at 11.59pm AEST. Check full <a href=\"/pages/terms-and-conditions-kandyclub-mother-s-day-online-exclusive-promotion\" target=\"_blank\" title=\"Terms and Conditions – KandyClub Mother’s Day Online Exclusive Promotion\">Terms & Conditions here.</a></p>"
           }
         }
       },
@@ -469,7 +438,6 @@
     }
   },
   "order": [
-    "rich_text_VPNyjt",
     "ads_block_PQYdQU",
     "collection_showcase_HVDztJ",
     "columns_block_aRdPrb",
