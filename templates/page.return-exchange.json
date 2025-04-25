@@ -16,9 +16,89 @@
         "heading": true,
         "content": true
       }
+    },
+    "columns_block_8NkYQi": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_zJzeHA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_Pjd7xE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_kpWCBz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Example title",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_zJzeHA",
+        "text_block_Pjd7xE",
+        "text_block_kpWCBz"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "columns_block_8NkYQi"
   ]
 }
