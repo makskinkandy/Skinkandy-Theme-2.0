@@ -135,6 +135,27 @@
         "max_width": 900
       }
     },
+    "rich_text_7TUqcz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_EJth3d": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>*To be eligible for the promotion you need to be a KandyClub member. Does not apply to Gold Products, Gift Cards or Aftercare Neilmed. Online exclusive sale. </p><p>Promotion ends Sunday, 11 May 2025 at 11.59pm AEST. Check full <a href=\"/pages/terms-and-conditions-kandyclub-mother-s-day-online-exclusive-promotion\" target=\"_blank\" title=\"Terms and Conditions – KandyClub Mother’s Day Online Exclusive Promotion\">Terms & Conditions here.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EJth3d"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
     "collection_showcase_HVDztJ": {
       "type": "collection-showcase",
       "blocks": {
@@ -144,7 +165,7 @@
             "disable_overlay": true,
             "disable_button": true,
             "title": "",
-            "url": "#/filter:collection_name:Hearts",
+            "url": "#!/filter:collection_name:Hearts",
             "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_1.jpg"
           }
         },
@@ -218,27 +239,6 @@
         "button_url": "",
         "bottom_border": false,
         "enable_hover": false
-      }
-    },
-    "rich_text_7TUqcz": {
-      "type": "rich-text",
-      "blocks": {
-        "text_EJth3d": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>*To be eligible for the promotion you need to be a KandyClub member. Does not apply to Gold Products, Gift Cards or Aftercare Neilmed. Online exclusive sale. </p><p>Promotion ends Sunday, 11 May 2025 at 11.59pm AEST. Check full <a href=\"/pages/terms-and-conditions-kandyclub-mother-s-day-online-exclusive-promotion\" target=\"_blank\" title=\"Terms and Conditions – KandyClub Mother’s Day Online Exclusive Promotion\">Terms & Conditions here.</a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_EJth3d"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
       }
     },
     "header_banner_gdLhND": {
