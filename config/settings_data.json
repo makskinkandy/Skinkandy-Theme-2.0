@@ -61,7 +61,7 @@
     "enable_product_grid_quick_add": true,
     "sale_image_1": "shopify://shop_images/trans-1px.png",
     "sale_image_2": "shopify://shop_images/BUY-3-GET-THE-4TH-FREE-PINK-AND-BLACK.png",
-    "sale_tag": "buy-3-free-4",
+    "sale_tag": "",
     "promo_collection": "",
     "custom_badge_img": "shopify://shop_images/Promo_Tab.png",
     "infinite_scrolling": false,
