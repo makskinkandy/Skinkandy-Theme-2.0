@@ -438,7 +438,7 @@
       "type": "raw-code",
       "name": "Custom HTML Section",
       "settings": {
-        "custom_html": "<script>\ndocument.addEventListener('click', function(event) {\n  const link = event.target.closest('a');\n  if (link) {\n    const parentDiv = link.closest('#shopify-section-template--18066961072266__collection_showcase_HVDztJ'); // replace with your actual div id\n    if (parentDiv) {\n      // Optional: stop normal link behaviour\n      location.reload();\n    }\n  }\n});\n</script>"
+        "custom_html": "<script>\ndocument.addEventListener('click', function(event) {\n  const link = event.target.closest('a');\n  if (link) {\n    const parentDiv = link.closest('#shopify-section-template--18066961072266__collection_showcase_HVDztJ'); // Replace with your real div id\n    if (parentDiv) {\n      event.preventDefault(); // Stop the AJAX navigation\n      window.location.href = link.href; // Do a normal full page load to the link\n    }\n  }\n});\n</script>"
       }
     }
   },
