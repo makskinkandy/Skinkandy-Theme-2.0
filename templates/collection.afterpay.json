@@ -438,7 +438,7 @@
       "type": "raw-code",
       "name": "Custom HTML Section",
       "settings": {
-        "custom_html": "<script>\ndocument.addEventListener('click', function(event) {\n  const link = event.target.closest('a');\n  if (link) {\n    const parentDiv = link.closest('#shopify-section-template--18066961072266__collection_showcase_HVDztJ'); // replace with your actual div id\n    if (parentDiv) {\n      // Optional: stop normal link behaviour\n      setTimeout(function(){\nlocation.reload();\n}, 200)\n    }\n  }\n});\n</script>"
+        "custom_html": "<script>\ndocument.addEventListener('click', function(event) {\n  const link = event.target.closest('a');\n  if (!link) return;\n\n  const parentDiv = link.closest('#shopify-section-template--18066961072266__collection_showcase_HVDztJ'); \n  if (!parentDiv) return;\n\n  // At this point, the click is inside your target div on a link.\n\n  // Super aggressive stop\n  event.preventDefault();\n  event.stopImmediatePropagation();\n  event.stopPropagation();\n\n  // Set a tiny timeout to force the browser to navigate away\n  setTimeout(function() {\n    window.location = link.href;\n  }, 0);\n});\n</script>"
       }
     }
   },
