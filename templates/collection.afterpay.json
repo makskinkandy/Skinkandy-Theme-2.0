@@ -165,7 +165,7 @@
             "disable_overlay": true,
             "disable_button": true,
             "title": "",
-            "url": "/filter:collection_name:Hearts",
+            "url": "/collections/mothers-day/filter:collection_name:Hearts",
             "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_1.jpg"
           }
         },
