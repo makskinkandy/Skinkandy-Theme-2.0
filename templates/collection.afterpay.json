@@ -433,6 +433,13 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
+    },
+    "raw_code_P3iFyT": {
+      "type": "raw-code",
+      "name": "Custom HTML Section",
+      "settings": {
+        "custom_html": "<script>\ndocument.addEventListener('click', function(event) {\n  // Check if the clicked element is an <a> tag\n  if (event.target.tagName === 'A') {\n    // Check if the <a> is inside a specific parent div (say, id=\"myDiv\")\n    if (event.target.closest('#shopify-section-template--18066961072266__collection_showcase_HVDztJ')) {\n      event.preventDefault(); // Prevent the default link action if needed\n      location.reload(); // Reload the page\n    }\n  }\n});\n</script>"
+      }
     }
   },
   "order": [
@@ -447,6 +454,7 @@
     "main-collection",
     "1642136988303d16d6",
     "ss_recommendations_bGwMqW",
-    "pagefly-collection-section"
+    "pagefly-collection-section",
+    "raw_code_P3iFyT"
   ]
 }
