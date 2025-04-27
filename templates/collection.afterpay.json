@@ -30,6 +30,91 @@
         "title": ""
       }
     },
+    "collection_showcase_HVDztJ": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_Lq8hHX": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Hearts",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_1.jpg"
+          }
+        },
+        "image_wFKqQp": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Animal$2520Collection",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_2.jpg"
+          }
+        },
+        "image_LbUYjn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Celestial",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_3.jpg"
+          }
+        },
+        "image_TYc3GC": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Radiant$2520Piercing$2520Collection",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_4.jpg"
+          }
+        },
+        "image_6DDFGL": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Under$252050",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_5.jpg"
+          }
+        },
+        "image_f3wHn9": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "#/filter:collection_name:Under$2520100",
+            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Lq8hHX",
+        "image_wFKqQp",
+        "image_LbUYjn",
+        "image_TYc3GC",
+        "image_6DDFGL",
+        "image_f3wHn9"
+      ],
+      "custom_css": [
+        ".collection-showcase {padding-top: 0; margin-bottom: 55px;}"
+      ],
+      "settings": {
+        "title": "",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false
+      }
+    },
     "columns_block_aRdPrb": {
       "type": "columns-block",
       "blocks": {
@@ -154,91 +239,6 @@
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": false
-      }
-    },
-    "collection_showcase_HVDztJ": {
-      "type": "collection-showcase",
-      "blocks": {
-        "image_Lq8hHX": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "/collections/mothers-day/filter:collection_name:Hearts",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_1.jpg"
-          }
-        },
-        "image_wFKqQp": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "#/filter:collection_name:Animal$2520Collection",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_2.jpg"
-          }
-        },
-        "image_LbUYjn": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "#/filter:collection_name:Celestial",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_3.jpg"
-          }
-        },
-        "image_TYc3GC": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "#/filter:collection_name:Radiant$2520Piercing$2520Collection",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_4.jpg"
-          }
-        },
-        "image_6DDFGL": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "#/filter:collection_name:Under$252050",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_5.jpg"
-          }
-        },
-        "image_f3wHn9": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "#/filter:collection_name:Under$2520100",
-            "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_6.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_Lq8hHX",
-        "image_wFKqQp",
-        "image_LbUYjn",
-        "image_TYc3GC",
-        "image_6DDFGL",
-        "image_f3wHn9"
-      ],
-      "custom_css": [
-        ".collection-showcase {padding-top: 0; margin-bottom: 55px;}"
-      ],
-      "settings": {
-        "title": "",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
-        "bottom_border": false,
-        "enable_hover": false
       }
     },
     "header_banner_gdLhND": {
@@ -437,9 +437,9 @@
   },
   "order": [
     "ads_block_PQYdQU",
+    "collection_showcase_HVDztJ",
     "columns_block_aRdPrb",
     "rich_text_7TUqcz",
-    "collection_showcase_HVDztJ",
     "header_banner_gdLhND",
     "collection-header",
     "16401466794d03c3f5",
