@@ -205,7 +205,6 @@
         "text_block_YTqCY7",
         "text_block_br3X3E"
       ],
-      "disabled": true,
       "custom_css": [
         "h3 {font-size: 24px;}"
       ],
@@ -235,7 +234,6 @@
       "block_order": [
         "text_EJth3d"
       ],
-      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
