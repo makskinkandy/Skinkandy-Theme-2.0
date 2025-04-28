@@ -369,9 +369,10 @@ document.addEventListener('DOMContentLoaded', e => {
 
   document.querySelectorAll('.pf-close-btn').forEach(el => {
     el.setAttribute('aria-hidden', 'true');
+    el.setAttribute('tabindex', '-1');
   });
 
-  document.querySelectorAll('.pf-close-btn a').forEach(el => {
+  document.querySelectorAll('.pf-close-btn svg').forEach(el => {
     el.setAttribute('aria-hidden', 'true');
   });
 });
