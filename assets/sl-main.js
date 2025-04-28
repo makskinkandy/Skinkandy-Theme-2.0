@@ -370,4 +370,8 @@ document.addEventListener('DOMContentLoaded', e => {
   document.querySelectorAll('.pf-close-btn').forEach(el => {
     el.setAttribute('aria-hidden', 'true');
   });
+
+  document.querySelectorAll('.pf-close-btn a').forEach(el => {
+    el.setAttribute('aria-hidden', 'true');
+  });
 });
