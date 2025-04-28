@@ -1636,7 +1636,7 @@
         "label": "Form Note"
       },
             {
-        "type": "text",
+        "type": "textarea",
         "id": "popup_form_disclaimer",
         "label": "Form Disclaimer"
       },
