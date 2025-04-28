@@ -376,7 +376,9 @@ document.addEventListener('DOMContentLoaded', e => {
     el.setAttribute('aria-hidden', 'true');
   });
 
-  document.querySelectorAll('script[role][app="vsk"]').forEach(el => {
-    el.removeAttribute('role');
+  document.querySelectorAll('script[app]').forEach(el => {
+    if (el.getAttribute('app') === 'vsk') {
+      el.removeAttribute('role');
+    }
   });
 });
