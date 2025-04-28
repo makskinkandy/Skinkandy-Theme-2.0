@@ -367,5 +367,7 @@ document.addEventListener('DOMContentLoaded', e => {
     i.replaceWith(b);
   });
 
-  document.querySelector(".pf-close-btn").setAttribute('aria-label'. 'Close button');
+  document.querySelectorAll('.pf-close-btn').forEach(el => {
+    el.setAttribute('aria-label', 'Close Button');
+  });
 });
