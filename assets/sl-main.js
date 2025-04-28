@@ -343,4 +343,8 @@ document.addEventListener('DOMContentLoaded', e => {
     targetUrl ? window.location.href = targetUrl : console.error(`Invalid country code: ${countryCode}`);
   };
 
+  document.querySelectorAll('.pfa-arrow-up').forEach(el => {
+    el.setAttribute('aria-hidden', 'true');
+  });
+
 });
