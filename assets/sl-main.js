@@ -375,4 +375,8 @@ document.addEventListener('DOMContentLoaded', e => {
   document.querySelectorAll('.pf-close-btn svg').forEach(el => {
     el.setAttribute('aria-hidden', 'true');
   });
+
+  document.querySelectorAll('script[role][app="vsk"]').forEach(el => {
+    el.removeAttribute('role');
+  });
 });
