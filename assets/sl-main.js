@@ -356,4 +356,14 @@ document.addEventListener('DOMContentLoaded', e => {
     });
     i.replaceWith(em);
   });
+
+  document.querySelectorAll('b').forEach(i => {
+    const b = document.createElement('strong');
+    b.innerHTML = i.innerHTML;
+    // Copy attributes if needed (optional)
+    Array.from(i.attributes).forEach(attr => {
+      b.setAttribute(attr.name, attr.value);
+    });
+    i.replaceWith(b);
+  });
 });
