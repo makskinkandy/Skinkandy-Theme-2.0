@@ -347,4 +347,13 @@ document.addEventListener('DOMContentLoaded', e => {
     el.setAttribute('aria-hidden', 'true');
   });
 
+  document.querySelectorAll('i').forEach(i => {
+    const em = document.createElement('em');
+    em.innerHTML = i.innerHTML;
+    // Copy attributes if needed (optional)
+    Array.from(i.attributes).forEach(attr => {
+      em.setAttribute(attr.name, attr.value);
+    });
+    i.replaceWith(em);
+  });
 });
