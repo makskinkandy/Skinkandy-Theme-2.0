@@ -366,4 +366,6 @@ document.addEventListener('DOMContentLoaded', e => {
     });
     i.replaceWith(b);
   });
+
+  document.querySelector(".pf-close-btn").setAttribute('aria-label'. 'Close button');
 });
