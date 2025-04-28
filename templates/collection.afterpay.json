@@ -9,23 +9,24 @@
  */
 {
   "sections": {
-    "ads_block_PQYdQU": {
+    "ads_block_iXnWyt": {
       "type": "ads-block",
       "blocks": {
-        "image_pniQNR": {
+        "image_3J97NB": {
           "type": "image",
           "settings": {
             "title": "",
             "url": "",
             "image": "shopify://shop_images/Mothers_Day_Landing_Page_-_0_Top.jpg",
-            "image_mobile": "shopify://shop_images/Mothers_Day_Landing_Page_-_0_Top.jpg",
+            "image_mobile": "shopify://shop_images/Mothers-Day-Landing-Page-Banner---Desktopheading-mobile.jpg",
             "bg_color": "#000000"
           }
         }
       },
       "block_order": [
-        "image_pniQNR"
+        "image_3J97NB"
       ],
+      "name": "Ads Block",
       "settings": {
         "title": ""
       }
@@ -443,7 +444,7 @@
     }
   },
   "order": [
-    "ads_block_PQYdQU",
+    "ads_block_iXnWyt",
     "collection_showcase_HVDztJ",
     "columns_block_aRdPrb",
     "rich_text_7TUqcz",
