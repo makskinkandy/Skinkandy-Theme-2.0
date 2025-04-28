@@ -1635,6 +1635,11 @@
         "id": "popup_form_note",
         "label": "Form Note"
       },
+            {
+        "type": "text",
+        "id": "popup_form_disclaimer",
+        "label": "Form Disclaimer"
+      },
       {
         "type": "text",
         "id": "popup_delay",
