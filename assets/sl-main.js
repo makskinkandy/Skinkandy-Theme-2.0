@@ -368,6 +368,6 @@ document.addEventListener('DOMContentLoaded', e => {
   });
 
   document.querySelectorAll('.pf-close-btn').forEach(el => {
-    el.setAttribute('aria-label', 'Close Button');
+    el.setAttribute('aria-hidden', 'true');
   });
 });
