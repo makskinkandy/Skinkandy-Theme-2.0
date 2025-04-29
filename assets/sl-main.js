@@ -376,6 +376,14 @@ document.addEventListener('DOMContentLoaded', e => {
     el.setAttribute('aria-hidden', 'true');
   });
 
+  document.querySelectorAll('.kt-loading-overlay__spinner svg').forEach(el => {
+    el.setAttribute('aria-hidden', 'true');
+  });
+
+  document.querySelectorAll('.kt-loading-overlay__check svg').forEach(el => {
+    el.setAttribute('aria-hidden', 'true');
+  });
+
   document.querySelectorAll('script[app]').forEach(el => {
     if (el.getAttribute('app') === 'vsk') {
       el.removeAttribute('role');
