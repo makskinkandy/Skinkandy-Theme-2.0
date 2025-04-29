@@ -185,7 +185,8 @@
         "round_image": false,
         "circle_drops": false,
         "bottom_border": true,
-        "reduced_image_size": false
+        "reduced_image_size": false,
+        "reduced_content_width": false
       }
     },
     "columns_block_Niw38L": {
@@ -283,8 +284,8 @@
         "button_TGnJHM": {
           "type": "button",
           "settings": {
-            "button_text": "BOOK NOW",
-            "button_url": "shopify://pages/skinkandy-piercing-menu"
+            "button_text": "Find a store",
+            "button_url": "shopify://pages/store-locations"
           }
         }
       },
