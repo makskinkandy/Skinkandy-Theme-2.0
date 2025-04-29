@@ -44,13 +44,13 @@
       </div>
       <div class="right-content">
         {% if section.settings.desktop_image != blank %}
-          <img src="{{ section.settings.desktop_image | image_url }}" class="desktop">
+          <img src="{{ section.settings.desktop_image | image_url }}" class="desktop" alt="Right desktop image for banner">
         {% endif %}
       </div>
     </div>
   </div>
   {% if section.settings.desktop_image != blank %}
-    <img src="{{ section.settings.mobile_image | image_url }}" class="mobile">
+    <img src="{{ section.settings.mobile_image | image_url }}" class="mobile" alt="Mobile image for banner">
   {% endif %}
 </div>
 {% schema %}
