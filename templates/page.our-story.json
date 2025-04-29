@@ -17,7 +17,7 @@
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/image_28_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_11_1.jpg",
+            "image": "shopify://shop_images/SKFX2-0_245_1.jpg",
             "banner_url": "",
             "heading": "OUR STORY",
             "short_description": "",
@@ -47,7 +47,7 @@
             "enable_round": false,
             "fullwidth-image": false,
             "fullheight-image": true,
-            "hide-image": false,
+            "hide-image": true,
             "image": "shopify://shop_images/SKFX2-0_245_1.jpg",
             "video": "",
             "center-content": true,
