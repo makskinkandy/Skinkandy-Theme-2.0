@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/image_28_1.jpg",
-            "image": "shopify://shop_images/SKFX2-0_245_1.jpg",
+            "image_mobile": "shopify://shop_images/SKFX2-0_245_1.jpg",
+            "image": "shopify://shop_images/image_28_1.jpg",
             "banner_url": "",
             "heading": "OUR STORY",
             "short_description": "",
