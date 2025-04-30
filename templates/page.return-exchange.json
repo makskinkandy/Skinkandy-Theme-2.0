@@ -192,7 +192,7 @@
             "title": "Pricing & Payment",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<ul><li>What you see is what you pay—prices are listed in AUD or NZD<br/>and include GST (unless stated otherwise).</li><li>Prices can change if there's a glitch before purchase.</li><li>You’re responsible for any extra taxes/duties, depending on<br/>where you're shopping from.</li><li>We accept major cards, EFTPOS, cash (in-store), and<br/>buy-now-pay-later options where available.</li></ul>",
+            "text": "<ul><li>What you see is what you pay—prices are listed in AUD or NZD<br/>and include GST (unless stated otherwise).</li><li>You’re responsible for any extra taxes/duties, depending on<br/>where you're shopping from.</li><li>We accept major cards, EFTPOS, cash (in-store), and buy-now-pay-later options where available.</li></ul>",
             "text_size": "small",
             "button_label": "",
             "button_link": ""
@@ -208,7 +208,7 @@
             "hide-image": false,
             "video": "",
             "center-content": false,
-            "title": "No Reselling, Please",
+            "title": "No Reselling",
             "title_size": "small",
             "title_tag": "h3",
             "text": "<p>SkinKandy products and services are for personal use only. Want to resell? You’ll need our written okay first.</p><p></p><h3>Special Offers & Sales</h3><p>Some promos are online-only, others in-store only—so double-check where a deal applies. SkinKandy might tweak the length of a sale or promo as needed.</p>",
