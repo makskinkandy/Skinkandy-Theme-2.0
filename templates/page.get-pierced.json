@@ -535,14 +535,23 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p><p><strong>Want to upgrade to premium piercing jewellery?</strong> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
+            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p>"
+          }
+        },
+        "text_9FQEzk": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Want to upgrade to premium piercing jewellery?</strong> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
           }
         }
       },
       "block_order": [
         "button_8JP4c4",
         "text_mNhwWW",
-        "text_rJThbY"
+        "text_rJThbY",
+        "text_9FQEzk"
       ],
       "custom_css": [
         "em {font-size: 14px; @media screen and (max-width: 980px) {font-size: 12px; }}",
