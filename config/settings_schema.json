@@ -619,6 +619,11 @@
         "type": "checkbox",
         "id": "vendor_enable",
         "label": "Show vendor"
+      },
+      {
+        "type": "url",
+        "id": "size_guide",
+        "label": "Size Guide Link"
       }
     ]
   },
