@@ -410,6 +410,10 @@
                           data-base-url="{{ shop.url }}{{ routes.root_url }}"
                           ></div>
                       {%- endif -%}
+
+                      {% if settings.size_guide != blank %}
+                        <a href="{{ settings.size_guide | url_escape }}" target="_blank" class="size-guide__link">Size Guide</a>
+                      {% endif %}
                     </div>
                   {%- when 'sales_point' -%}
                     {%- unless block.settings.text == blank -%}
