@@ -16327,3 +16327,8 @@ small.cart__discount.percentage {
     background: #000;
     color: #FFF;
 }
+
+.size-guide__link {
+  font-weight: 600;
+  text-decoration: underline;
+}
