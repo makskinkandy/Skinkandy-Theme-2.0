@@ -159,7 +159,7 @@
       ],
       "settings": {
         "bg_color": "#ffffff",
-        "sku_enable": false,
+        "sku_enable": true,
         "image_position": "left",
         "image_size": "medium",
         "product_zoom_enable": true,
