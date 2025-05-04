@@ -127,6 +127,9 @@
 
             <div data-product-blocks>
               {%- capture form_id -%}AddToCartForm-{{ section_id }}-{{ product.id }}{%- endcapture -%}
+              {% if settings.size_guide != blank %}
+                <a href="{{ settings.size_guide | url_escape }}">Size Guide </a>
+              {% endif %}
               {%- for block in blocks -%}
                 {%- case block.type -%}
                   {%- when '@app' -%}
