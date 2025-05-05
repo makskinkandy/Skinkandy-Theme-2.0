@@ -16331,4 +16331,6 @@ small.cart__discount.percentage {
 .size-guide__link {
   font-weight: 600;
   text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 14px;
 }
