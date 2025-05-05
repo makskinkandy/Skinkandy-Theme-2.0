@@ -52,7 +52,6 @@
     "icon_linecaps": "round",
     "product_save_amount": false,
     "product_save_type": "dollar",
-    "size_guide": "shopify://pages/piercing-size-guide",
     "product_grid_image_size": "square",
     "product_grid_image_fill": true,
     "product_hover_image": true,
