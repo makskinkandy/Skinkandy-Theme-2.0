@@ -16398,6 +16398,10 @@ small.cart__discount.percentage {
 
 /* Desktop: show inline, hide select */
 @media (min-width: 768px) {
+  .filter-title {
+    display: inline-block;
+  }
+  
   .filter-select {
     display: none;
   }
