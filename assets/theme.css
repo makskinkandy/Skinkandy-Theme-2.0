@@ -16379,3 +16379,13 @@ small.cart__discount.percentage {
     right: 5px;
   }
 }
+
+.filter-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+}
