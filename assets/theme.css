@@ -16424,5 +16424,8 @@ small.cart__discount.percentage {
     display: flex;
     align-items: center;
     justify-content: center;
+    p {
+      margin-right: 10px; 
+    }
   }
 }
