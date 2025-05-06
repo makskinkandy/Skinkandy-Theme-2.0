@@ -16406,6 +16406,7 @@ small.cart__discount.percentage {
   
   .filter-title {
     display: inline-block;
+    margin-right: 10px;
   }
   
   .filter-select {
@@ -16419,7 +16420,7 @@ small.cart__discount.percentage {
   }
 
   .filter-inline a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
   }
 }
