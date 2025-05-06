@@ -73,7 +73,7 @@
             "text": "<p>At SkinKandy, we’re all about safe, high-quality piercings performed by expert piercers in a clean and welcoming environment. Whether it’s your first piercing or you’re adding to your collection, our team is here to provide a professional, comfortable, and enjoyable experience. </p>",
             "text_size": "small",
             "button_label": "Book Now",
-            "button_link": "shopify://pages/skinkandy-piercing-menu"
+            "button_link": "https://support.skinkandy.com/s/booking-form"
           }
         }
       },
@@ -191,7 +191,7 @@
             "text": "<p>✔ <strong>Global Leaders in Body Piercing: </strong>Over 80 stores across Australia-wide & in New Zealand and growing</p><p>✔ <strong>Highly Trained Piercers</strong> – Every team member completes our <strong>extensive piercing program </strong>and completes a Nationally accredited certification in infection prevention.</p><p>✔ <strong>Strict Hygiene & Safety</strong> – We follow the highest industry standards for piercing practices</p><p>Whether you're getting your <strong>first piercing</strong> or your <strong>next one</strong>, trust <strong>SkinKandy</strong> for a professional experience throughout your piercing journey.</p>",
             "text_size": "small",
             "button_label": "BOOK YOUR PIERCING NOW",
-            "button_link": "shopify://pages/skinkandy-piercing-menu"
+            "button_link": "https://support.skinkandy.com/s/booking-form"
           }
         }
       },
@@ -230,7 +230,7 @@
             "text": "<p>Your jewellery matters. That’s why we only offer high-quality<strong> materials</strong> to ensure a safe and stylish piercing experience.</p><p><strong>14K SOLID GOLD</strong>  </p><ul><li>Durable – stronger than 18K or 24K Solid Gold</li><li>High quality 14K solid gold</li><li>Tarnish resistant  </li></ul><p><strong>F136 IMPLANT GRADE TITANIUM</strong></p><ul><li>Lightweight and ultra-strong </li><li>Biocompatible hypoallergenic and safe for prolonged skin contact</li><li>Encourages faster healing </li></ul><p><strong>316L SURGICAL STEEL</strong> </p><ul><li>Durable and affordable </li><li>High-quality finish </li><li>Water and corrosion resistant</li><li>Biocompatible medical implant grade</li></ul>",
             "text_size": "small",
             "button_label": "LEARN MORE",
-            "button_link": ""
+            "button_link": "https://support.skinkandy.com/s/booking-form"
           }
         },
         "text_block_6Mn7wU": {
@@ -520,7 +520,7 @@
         "button_8JP4c4": {
           "type": "button",
           "settings": {
-            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link": "https://support.skinkandy.com/s/booking-form",
             "link_text": "Book your piercing now"
           }
         },
@@ -710,7 +710,7 @@
           "type": "button",
           "settings": {
             "button_text": "BOOK NOW",
-            "button_url": "shopify://pages/skinkandy-piercing-menu"
+            "button_url": "https://support.skinkandy.com/s/booking-form"
           }
         }
       },
