@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', e => {
     });
   });
   
-  document.querySelectorAll('.popup-link').forEach(link => {
+  document.querySelectorAll('.js-popup-link').forEach(link => {
     link.addEventListener('click', async (e) => {
       e.preventDefault();
       const url = link.getAttribute('href');
