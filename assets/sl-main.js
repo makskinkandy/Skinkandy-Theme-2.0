@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', e => {
           document.getElementById('popup-inner').innerHTML = mainContent.innerHTML;
           document.getElementById('popup-overlay').style.display = 'flex';
         } else {
-          alert('MainContent not found in the loaded page.');
+          console.log('MainContent not found in the loaded page.');
         }
       } catch (err) {
         console.error('Failed to load content:', err);
