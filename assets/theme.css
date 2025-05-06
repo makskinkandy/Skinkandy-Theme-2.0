@@ -16380,19 +16380,29 @@ small.cart__discount.percentage {
   }
 }
 
-.filter-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  p,
-  a {
-    margin-right: 10px;
-    text-transform: uppercase;
+/* Mobile styles */
+.filter-dropdown {
+  display: block;
+}
+
+.filter-dropdown summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .filter-dropdown summary {
+    display: none;
   }
-  a {
-    text-decoration: underline;
+
+  .filter-links {
+    display: flex;
+    gap: 1rem;
   }
-  a:last-child {
-    margin-right: 0;
+
+  .filter-dropdown[open] .filter-links {
+    display: flex;
   }
 }
