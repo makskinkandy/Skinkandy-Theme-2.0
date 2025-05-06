@@ -16382,6 +16382,9 @@ small.cart__discount.percentage {
 
 
 /* Default: hide desktop version, show mobile select */
+.filter-title {
+  display: none;
+}
 .filter-select {
   display: block;
   width: 100%;
