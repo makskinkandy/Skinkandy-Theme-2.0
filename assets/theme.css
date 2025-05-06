@@ -16374,4 +16374,8 @@ small.cart__discount.percentage {
   border-radius: 50%;
   height: 30px;
   width: 30px;
+  @media screen and (max-width: 980px) {
+    top: 10px;
+    right: 5px;
+  }
 }
