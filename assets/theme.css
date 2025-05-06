@@ -16380,6 +16380,7 @@ small.cart__discount.percentage {
   }
 }
 
+
 /* Hide inline links on mobile, show dropdown */
 .filter-links .link-inline {
   display: none;
@@ -16404,7 +16405,7 @@ small.cart__discount.percentage {
 }
 
 /* Desktop: show inline links, hide dropdown */
-@media (min-width: 768px) {
+@media (min-width: 981px) {
   .filter-dropdown {
     display: none;
   }
@@ -16418,5 +16419,10 @@ small.cart__discount.percentage {
   .link-inline a {
     text-decoration: none;
     color: inherit;
+  }
+  .filter-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
