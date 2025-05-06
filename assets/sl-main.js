@@ -330,6 +330,23 @@ document.addEventListener('DOMContentLoaded', e => {
         this.classList.toggle('active');
     });
   });
+
+  const fixRelativeURLs = (html, baseUrl) => {
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+  
+    // Update img src
+    temp.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src');
+      if (src && !src.startsWith('http') && !src.startsWith('//')) {
+        img.src = new URL(src, baseUrl).href;
+      }
+    });
+  
+    // You can also fix <link>, <script>, etc. similarly if needed.
+  
+    return temp;
+  };
   
   document.querySelectorAll('.js-popup-link').forEach(link => {
     link.addEventListener('click', async (e) => {
@@ -339,10 +356,9 @@ document.addEventListener('DOMContentLoaded', e => {
       try {
         const response = await fetch(url);
         const text = await response.text();
-
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = text;
-
+        const baseUrl = new URL(url).origin + '/';
+        const tempDiv = fixRelativeURLs(text, baseUrl);
+        
         const mainContent = tempDiv.querySelector('#MainContent');
         if (mainContent) {
           document.getElementById('popup-inner').innerHTML = mainContent.innerHTML;
