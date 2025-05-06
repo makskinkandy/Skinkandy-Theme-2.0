@@ -445,6 +445,13 @@
       </script>
       {% endif %}
     {% endif %}
-    template test: {{ template }}
+    {% if template == 'product' %}
+      <div id="popup-overlay" class="popup-overlay">
+        <div id="popup-content" class="popup-content">
+          <button id="popup-close" class="popup-close">×</button>
+          <div id="popup-inner" class="popup-inner"></div>
+        </div>
+      </div>
+    {% endif %}
   </body>
 </html>
