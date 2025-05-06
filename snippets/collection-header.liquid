@@ -26,24 +26,25 @@
       {% assign filter = linklists[block.settings.filter_menu] %}
       <div class="filter-menu">
         {% if block.settings.filter_title %}
-          <details class="filter-dropdown">
-            <summary>{{ block.settings.filter_title }}</summary>
-            <div class="filter-links">
-              {% for link in filter.links %}
-                <a href="{{ link.url }}">{{ link.title }}</a>
-              {% endfor %}
-            </div>
-          </details>
-        {% else %}
-          <details class="filter-dropdown">
-            <summary>Filter</summary>
-            <div class="filter-links">
-              {% for link in filter.links %}
-                <a href="{{ link.url }}">{{ link.title }}</a>
-              {% endfor %}
-            </div>
-          </details>
+          <p class="filter-title">{{ block.settings.filter_title }}:</p>
         {% endif %}
+    
+        <div class="filter-links">
+          <details class="filter-dropdown">
+            <summary>Choose an option</summary>
+            <div class="dropdown-content">
+              {% for link in filter.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
+            </div>
+          </details>
+    
+          <div class="link-inline">
+            {% for link in filter.links %}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     {% endif %}
   </div>
