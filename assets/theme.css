@@ -16417,7 +16417,7 @@ small.cart__discount.percentage {
   }
 
   .link-inline a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
   }
   .filter-menu {
