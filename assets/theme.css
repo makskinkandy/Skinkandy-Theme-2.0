@@ -16380,29 +16380,43 @@ small.cart__discount.percentage {
   }
 }
 
-/* Mobile styles */
+/* Hide inline links on mobile, show dropdown */
+.filter-links .link-inline {
+  display: none;
+}
+
 .filter-dropdown {
   display: block;
 }
 
 .filter-dropdown summary {
   cursor: pointer;
-  font-weight: bold;
-  padding: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
 }
 
-/* Desktop styles */
+.filter-dropdown .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+/* Desktop: show inline links, hide dropdown */
 @media (min-width: 768px) {
-  .filter-dropdown summary {
+  .filter-dropdown {
     display: none;
   }
 
-  .filter-links {
+  .filter-links .link-inline {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
-  .filter-dropdown[open] .filter-links {
-    display: flex;
+  .link-inline a {
+    text-decoration: none;
+    color: inherit;
   }
 }
