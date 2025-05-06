@@ -16384,8 +16384,12 @@ small.cart__discount.percentage {
   display: flex;
   justify-content: center;
   align-items: center;
-  p {
+  p,
+  a {
     margin-right: 10px;
     text-transform: uppercase;
+  }
+  a:last-child {
+    margin-right: 0;
   }
 }
