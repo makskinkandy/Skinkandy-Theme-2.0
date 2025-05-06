@@ -26,7 +26,7 @@
       <div class="filter-menu">
         {% assign filter = linklists[block.settings.filter_menu] %}
         {% if block.settings.filter_title %}
-          <p>{{ block.settings.filter_title }}</p>
+          <p>{{ block.settings.filter_title }}:</p>
         {% endif %}
         {% for link in filter.links %}
           <a href="{{ link.url }}">{{ link.title }}</a>
