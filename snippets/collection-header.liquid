@@ -22,5 +22,11 @@
         {% endif %}
       </div>
     {% endif %}
+    {% if block.settings.filter_menu != blank %}
+      {% assign filter = linklists[block.settings.filter_menu] %}
+      {% for link in filter.links %}
+        {{ link.title }}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
