@@ -29,21 +29,19 @@
           <p class="filter-title">{{ block.settings.filter_title }}:</p>
         {% endif %}
     
-        <div class="filter-links">
-          <details class="filter-dropdown">
-            <summary>Choose an option</summary>
-            <div class="dropdown-content">
-              {% for link in filter.links %}
-                <a href="{{ link.url }}">{{ link.title }}</a>
-              {% endfor %}
-            </div>
-          </details>
+        <!-- Mobile dropdown -->
+        <select class="filter-select" onchange="if (this.value) window.location.href=this.value;">
+          <option value="">{{ block.settings.filter_title | default: 'Choose an option' }}</option>
+          {% for link in filter.links %}
+            <option value="{{ link.url }}">{{ link.title }}</option>
+          {% endfor %}
+        </select>
     
-          <div class="link-inline">
-            {% for link in filter.links %}
-              <a href="{{ link.url }}">{{ link.title }}</a>
-            {% endfor %}
-          </div>
+        <!-- Desktop inline links -->
+        <div class="filter-inline">
+          {% for link in filter.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
         </div>
       </div>
     {% endif %}
