@@ -16349,12 +16349,18 @@ small.cart__discount.percentage {
 }
 
 .popup-content {
-  background: white;
-  max-width: 600px;
+  background: #fff;
+  max-width: 1540px;
   width: 90%;
   padding: 20px;
   border-radius: 8px;
   position: relative;
+  margin-inline: 20px;
+  max-height: 90%;
+  overflow: auto;
+  .section__hero-banner {
+    display: none;
+  }
 }
 
 .popup-close {
