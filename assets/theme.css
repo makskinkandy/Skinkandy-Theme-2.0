@@ -16389,6 +16389,9 @@ small.cart__discount.percentage {
     margin-right: 10px;
     text-transform: uppercase;
   }
+  a {
+    text-decoration: underline;
+  }
   a:last-child {
     margin-right: 0;
   }
