@@ -16381,51 +16381,33 @@ small.cart__discount.percentage {
 }
 
 
-/* Hide inline links on mobile, show dropdown */
-.filter-links .link-inline {
-  display: none;
-}
-
-.filter-dropdown {
+/* Default: hide desktop version, show mobile select */
+.filter-select {
   display: block;
-}
-
-.filter-dropdown summary {
-  cursor: pointer;
+  width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  list-style: none;
-}
-
-.filter-dropdown .dropdown-content {
-  display: flex;
-  flex-direction: column;
   margin-top: 8px;
 }
 
-/* Desktop: show inline links, hide dropdown */
-@media (min-width: 981px) {
-  .filter-dropdown {
+.filter-inline {
+  display: none;
+}
+
+/* Desktop: show inline, hide select */
+@media (min-width: 768px) {
+  .filter-select {
     display: none;
   }
 
-  .filter-links .link-inline {
+  .filter-inline {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 8px;
   }
 
-  .link-inline a {
-    text-decoration: underline;
+  .filter-inline a {
+    text-decoration: none;
     color: inherit;
-  }
-  .filter-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-      margin-right: 10px; 
-    }
   }
 }
