@@ -144,7 +144,8 @@
                       data-product-thumb
                       class="product__thumb"
                       data-index="{{ forloop.index0 }}"
-                      data-id="{{ media.id }}">
+                      data-id="{{ media.id }}"
+                      aria-label="{{ media.alt }}">
                       {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                         <span class="product__thumb-icon">
                           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="18.24 17.35 24.52 28.3">
