@@ -16385,7 +16385,7 @@ small.cart__discount.percentage {
   background: transparent;
   border-radius: 0;
   &:hover {
-    background: transparent;
+    background: transparent !important;
   }
 }
 
