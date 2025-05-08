@@ -1926,7 +1926,9 @@
     display: block;
   }
   a {
+    padding: 20px;
     width: 50%;
     color: #FFF;
+    max-width: 300px;
   }
 }
