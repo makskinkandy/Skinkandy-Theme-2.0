@@ -35,6 +35,17 @@
         "mobile_height": "auto"
       }
     },
+    "inline_buttons_JFqDJU": {
+      "type": "inline-buttons",
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "Book Now",
+        "button_1_url": "shopify://pages/skinkandy-piercing-menu",
+        "button_2_text": "Shop Now",
+        "button_2_url": "shopify://collections/shop-all",
+        "bg_color": "#000000"
+      }
+    },
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
@@ -514,6 +525,7 @@
   "order": [
     "top_notification_banner_hGVLtG",
     "hero_video_gAPFUJ",
+    "inline_buttons_JFqDJU",
     "header_banner_MUPtRQ",
     "rich_text_9MzUhB",
     "flipped_boxes_kG6gXk",
