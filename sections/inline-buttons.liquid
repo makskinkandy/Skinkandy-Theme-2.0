@@ -1,6 +1,45 @@
+{% if section.settings.enable %}
+  <div class="inline-buttons__block" {% if section.settings.bg_color %}style="background-color: {{ section.settings.bg_color }}"{% endif %}>
+    {{ section.settings.notification_text }}
+  </div>
+{% endif %}
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Inline Buttons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_1_text",
+        "label": "Button Text",
+        "default": "Book Now"
+      },
+
+      {
+          "type": "url",
+          "id": "button_1_url",
+          "label": "Notification Text"
+      },
+            {
+        "type": "text",
+        "id": "button_2_text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+
+      {
+          "type": "url",
+          "id": "button_2_url",
+          "label": "Notification Text"
+      },
+      {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#E42228"
+      }
+    ],
+    "presets": [{
+        "name": "Top Notification Banner"
+    }]
   }
 {% endschema %}
