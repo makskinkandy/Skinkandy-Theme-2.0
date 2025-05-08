@@ -1930,6 +1930,7 @@
     width: 50%;
     color: #FFF;
     max-width: 450px;
+    text-decoration: underline;
     &:first-child {
       border-right: solid 1px #FFF;
     }
