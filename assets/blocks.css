@@ -1907,3 +1907,31 @@
     }
   }
 }
+
+
+/* Top Notification */
+.inline-buttons__block {
+    padding: 15px 35px;
+    font-family: "Montserrat", sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 640px) {
+      font-size: 18px;
+      padding: 15px;
+      display: block;
+    }
+  .btn {
+    margin-left: 10px;
+    @media screen and (max-width: 640px) {
+      display: block;
+      max-width: fit-content;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+}
