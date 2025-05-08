@@ -1929,7 +1929,7 @@
     padding: 20px;
     width: 50%;
     color: #FFF;
-    max-width: 300px;
+    max-width: 400px;
     &:first-child {
       border-right: solid 1px #FFF;
     }
