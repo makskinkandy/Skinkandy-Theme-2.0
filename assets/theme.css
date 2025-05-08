@@ -16383,7 +16383,7 @@ small.cart__discount.percentage {
 /* button styles */
 .btn--clear {
   background: transparent;
-  border-radius: none;
+  border-radius: 0;
 }
 
 
