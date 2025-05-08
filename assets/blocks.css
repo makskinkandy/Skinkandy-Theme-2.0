@@ -1930,5 +1930,8 @@
     width: 50%;
     color: #FFF;
     max-width: 300px;
+    &:first-child {
+      border-right: solid 1px #FFF;
+    }
   }
 }
