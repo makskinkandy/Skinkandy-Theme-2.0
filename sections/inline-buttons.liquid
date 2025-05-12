@@ -1,0 +1,48 @@
+<div class="inline-buttons__block" {% if section.settings.bg_color %}style="background-color: {{ section.settings.bg_color }}"{% endif %}>
+  {% if section.settings.button_1_text %}
+    <a href="{{ section.settings.button_1_url }}" class="btn btn--clear">{{ section.settings.button_1_text }}</a>
+  {% endif %}
+  {% if section.settings.button_2_text %}
+    <a href="{{ section.settings.button_2_url }}" class="btn btn--clear">{{ section.settings.button_2_text }}</a>
+  {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Inline Buttons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_1_text",
+        "label": "Button Text",
+        "default": "Book Now"
+      },
+
+      {
+          "type": "url",
+          "id": "button_1_url",
+          "label": "Notification Text"
+      },
+            {
+        "type": "text",
+        "id": "button_2_text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+
+      {
+          "type": "url",
+          "id": "button_2_url",
+          "label": "Notification Text"
+      },
+      {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#E42228"
+      }
+    ],
+    "presets": [{
+        "name": "Inline Buttons"
+    }]
+  }
+{% endschema %}
