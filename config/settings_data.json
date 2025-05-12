@@ -146,7 +146,7 @@
     "success_popup_button_text": "SHOP NOW",
     "sucess_popup_button": "shopify://collections/shop-all",
     "sucess_popup_tc": "shopify://pages/terms-and-conditions-kandyclub-mother-s-day-online-exclusive-promotion",
-    "enable_top_notification": true,
+    "enable_top_notification": false,
     "top-notification-banner": "Shop Mother's Day sales up to 30% off exclusively for KandyClub members  <a href=\"/collections/mothers-day\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">SHOP NOW</a>",
     "text_color": "#ffffff",
     "bg_color": "#000000",
