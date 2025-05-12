@@ -1904,3 +1904,31 @@
     }
   }
 }
+
+/* Inline buttons */
+.inline-buttons__block {
+  padding: 0 35px;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 640px) {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  a {
+    padding: 20px;
+    width: 50%;
+    color: #FFF;
+    max-width: 450px;
+    text-decoration: underline;
+    font-weight: 600;
+    &:first-child {
+      border-right: solid 1px #FFF;
+    }
+  }
+}
