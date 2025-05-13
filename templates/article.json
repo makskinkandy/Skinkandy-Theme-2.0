@@ -22,7 +22,8 @@
         "blog_show_date": false,
         "blog_show_comments": false,
         "blog_show_author": false,
-        "social_sharing_blog": true
+        "social_sharing_blog": true,
+        "disable_padding": false
       }
     },
     "rich_text_MwBgrj": {
@@ -31,7 +32,7 @@
         "button_BDyXzz": {
           "type": "button",
           "settings": {
-            "link": "shopify://pages/skinkandy-piercing-menu",
+            "link": "shopify://pages/professional-body-piercing-services",
             "link_text": "book now"
           }
         }
@@ -45,7 +46,8 @@
       "settings": {
         "align_text": "center",
         "narrow_column": true,
-        "divider": false
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "1662086193d23e863f": {
