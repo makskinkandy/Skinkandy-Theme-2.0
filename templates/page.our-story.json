@@ -57,7 +57,8 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         },
         "text_block_f6zGHE": {
@@ -76,7 +77,8 @@
             "text": "<p>SkinKandy is the only place for piercings only.</p><p>With expert piercers, quality jewellery, and specialty locations—we help you make your mark.</p><p>Our story starts back in 2010. Piercings were becoming more and more mainstream, but premium piercing practices were pretty much impossible to find.</p><p>We invested in:</p><ul><li>Expert piercing training</li><li>Specially designed piercing spaces</li><li>innovative, fashion-first jewellery</li></ul><p>Fast forward: we’ve got 80+ stores across Australia and New Zealand, all operated by expert piercers.</p><p>While we’re experts in piercing, our real mission is self expression. We bring beauty and craftsmanship to body art, so you can feel free to be.</p>",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         }
       },
@@ -162,7 +164,7 @@
             "title_tag": "h2",
             "description": "",
             "button_text": "BOOK NOW",
-            "button_url": "shopify://pages/skinkandy-piercing-menu",
+            "button_url": "shopify://pages/professional-body-piercing-services",
             "text_align": "left"
           }
         }
@@ -209,7 +211,8 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         },
         "text_block_8kACAi": {
@@ -228,7 +231,8 @@
             "text": "<h3><strong>14K Solid Gold</strong></h3><p>A luxurious, tarnish-free option perfect for sensitive skin.</p><p></p><h3><strong>ASTM F136 Implant-Grade Titanium</strong></h3><p>Lightweight, nickel-free, and promotes fast healing. </p><p></p><h3><strong>316L Surgical Steel</strong></h3><p>Strong, durable, and resistant to everyday wear.</p>",
             "text_size": "small",
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/shop-all"
+            "button_link": "shopify://collections/shop-all",
+            "new_tab": false
           }
         }
       },
