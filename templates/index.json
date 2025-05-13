@@ -102,7 +102,7 @@
         "button_1_text": "Shop Now",
         "button_1_url": "shopify://collections/shop-all",
         "button_2_text": "Book Now",
-        "button_2_url": "shopify://pages/skinkandy-piercing-menu",
+        "button_2_url": "shopify://pages/professional-body-piercing-services",
         "bg_color": "#000000"
       }
     },
@@ -140,7 +140,7 @@
             "image": "shopify://shop_images/Group_31.jpg",
             "Title": "LOBES",
             "description": "<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!</p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         },
         "boxes_tbcpHk": {
@@ -150,7 +150,7 @@
             "image": "shopify://shop_images/Group_30.jpg",
             "Title": "HELIX",
             "description": "<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!</p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         },
         "boxes_mn8wG3": {
@@ -160,7 +160,7 @@
             "image": "shopify://shop_images/Group_32_1.jpg",
             "Title": "SEPTUM",
             "description": "<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. </p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         },
         "boxes_HhxQgk": {
@@ -170,7 +170,7 @@
             "image": "shopify://shop_images/Group_34.jpg",
             "Title": "NOSTRIL",
             "description": "<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.</p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         },
         "boxes_8CTFjj": {
@@ -180,7 +180,7 @@
             "image": "shopify://shop_images/Group_33_1.jpg",
             "Title": "FORWARD HELIX",
             "description": "<p>Forward Helix piercings are positioned through the front of the<strong> </strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.</p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         },
         "boxes_wVQegA": {
@@ -190,7 +190,7 @@
             "image": "shopify://shop_images/Rectangle_10.jpg",
             "Title": "SEE OUR FULL RANGE OF PIERCING SERVICES",
             "description": "<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.</p>",
-            "page_url": "shopify://pages/skinkandy-piercing-menu"
+            "page_url": "shopify://pages/professional-body-piercing-services"
           }
         }
       },
@@ -435,7 +435,7 @@
             "title_tag": "h1",
             "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
             "button_text": "Book Now",
-            "button_url": "shopify://pages/skinkandy-piercing-menu",
+            "button_url": "shopify://pages/professional-body-piercing-services",
             "text_align": "left"
           }
         }
