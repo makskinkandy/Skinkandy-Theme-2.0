@@ -1,6 +1,6 @@
 <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %}">
 
-  <div class="custom-faq custom-faq--{{ section.id }}">
+  <div class="custom-faq custom-faq--{{ section.id }}" style="max-width: {{ section.settings.max_width }}px; {% if section.settings.image == blank %}width: 100%;{% endif %}">
     {% if section.settings.image != blank %}
     <div class="custom-faq__image">
       <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
@@ -158,6 +158,16 @@
         "id": "hide_image",
         "label": "Hide Image on Mobile",
         "default": false
+      },
+      {
+        "type": "range",
+        "id": "max_width",
+        "min": 900,
+        "max": 1704,
+        "step": 12,
+        "unit": "px",
+        "label": "Max Width",
+        "default": 1704
       }
     ],
     "blocks": [
