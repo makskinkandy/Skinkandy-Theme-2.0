@@ -1,6 +1,6 @@
 <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %}">
 
-  <div class="custom-faq custom-faq--{{ section.id }}" style="max-width: {{ section.settings.max_width }}px;">
+  <div class="custom-faq custom-faq--{{ section.id }}" style="max-width: {{ section.settings.max_width }}px; margin-inline: auto;">
     {% if section.settings.image != blank %}
     <div class="custom-faq__image">
       <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
