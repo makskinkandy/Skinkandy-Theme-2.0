@@ -30,7 +30,7 @@
         "text_Q79bU8": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
           }
         },
@@ -175,7 +175,7 @@
         "text_anNKf6": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>We’ve got <strong>great offers across all piercings</strong>—just chat with your nearest store and we’ll find the perfect deal for you.</p>"
           }
         }
@@ -255,7 +255,7 @@
         "text_DbTYUm": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>There’s no official end date—but like all good things, it won’t last forever. <strong>Book now to avoid missing out!</strong></p>"
           }
         }
@@ -299,7 +299,7 @@
         "text_TQX7Qn": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p>Wondering if you’re eligible for a piercing or need an anatomy check? Just pop into your nearest store or give us a call—<strong>consultations are always free</strong>.</p>"
           }
         },
