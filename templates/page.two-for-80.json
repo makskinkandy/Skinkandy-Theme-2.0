@@ -133,33 +133,13 @@
         "class": "",
         "title": "What Piercings Are Included?",
         "description": "",
+        "button_text": "BOOK A PIERCING NOW",
+        "button_url": "shopify://pages/professional-body-piercing-services",
         "count": 3,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
         "max_width": 996
-      }
-    },
-    "rich_text_JNHDBV": {
-      "type": "rich-text",
-      "blocks": {
-        "button_4P9xaN": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/professional-body-piercing-services",
-            "link_text": "BOOK A PIERCING NOW"
-          }
-        }
-      },
-      "block_order": [
-        "button_4P9xaN"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
       }
     },
     "rich_text_FLApyE": {
@@ -332,7 +312,6 @@
     "main",
     "rich_text_DFaziX",
     "columns_block_mhRaTq",
-    "rich_text_JNHDBV",
     "rich_text_FLApyE",
     "custom_faq_arEDPk",
     "rich_text_6mfDNp",
