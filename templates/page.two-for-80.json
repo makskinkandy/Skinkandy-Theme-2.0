@@ -219,10 +219,11 @@
       ],
       "name": "Custom FAQ",
       "settings": {
-        "title": "FAQ Section Title",
+        "title": "FAQs ",
         "narrow": false,
         "position": "left",
-        "hide_image": false
+        "hide_image": false,
+        "max_width": 996
       }
     }
   },
