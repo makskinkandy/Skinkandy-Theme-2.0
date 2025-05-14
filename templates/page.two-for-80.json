@@ -47,6 +47,9 @@
         "text_Q79bU8",
         "button_KcVNjp"
       ],
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
@@ -165,7 +168,7 @@
         "heading_Pjt7Jx": {
           "type": "heading",
           "settings": {
-            "title": "2 for $80 Piercings",
+            "title": "Don’t see your piercing here? ",
             "heading_tag": "h2"
           }
         },
@@ -173,21 +176,16 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
-          }
-        },
-        "button_RxPWtb": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/professional-body-piercing-services",
-            "link_text": "BOOK A PIERCING NOW"
+            "text": "<p>We’ve got <strong>great offers across all piercings</strong>—just chat with your nearest store and we’ll find the perfect deal for you.</p>"
           }
         }
       },
       "block_order": [
         "heading_Pjt7Jx",
-        "text_anNKf6",
-        "button_RxPWtb"
+        "text_anNKf6"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
       ],
       "name": "Rich text",
       "settings": {
@@ -196,6 +194,36 @@
         "divider": false,
         "reduce_spacing": false
       }
+    },
+    "custom_faq_arEDPk": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_T7A8ff": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_64Tzge": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_T7A8ff",
+        "question_64Tzge"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "FAQ Section Title",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false
+      }
     }
   },
   "order": [
@@ -203,6 +231,7 @@
     "rich_text_DFaziX",
     "columns_block_mhRaTq",
     "rich_text_JNHDBV",
-    "rich_text_FLApyE"
+    "rich_text_FLApyE",
+    "custom_faq_arEDPk"
   ]
 }
