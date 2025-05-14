@@ -285,6 +285,47 @@
         "button_2_url": "shopify://pages/store-locations",
         "bg_color": "#202020"
       }
+    },
+    "rich_text_tQMGGb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TzzLtq": {
+          "type": "heading",
+          "settings": {
+            "title": "Want to know more?",
+            "heading_tag": "h2"
+          }
+        },
+        "text_TQX7Qn": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Wondering if you’re eligible for a piercing or need an anatomy check? Just pop into your nearest store or give us a call—<strong>consultations are always free</strong>.</p>"
+          }
+        },
+        "button_Mh6RTG": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/store-locations",
+            "link_text": "FIND A STORE"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TzzLtq",
+        "text_TQX7Qn",
+        "button_Mh6RTG"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
@@ -295,6 +336,7 @@
     "rich_text_FLApyE",
     "custom_faq_arEDPk",
     "rich_text_6mfDNp",
-    "inline_buttons_tywXjb"
+    "inline_buttons_tywXjb",
+    "rich_text_tQMGGb"
   ]
 }
