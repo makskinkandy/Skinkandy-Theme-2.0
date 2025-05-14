@@ -55,7 +55,7 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "columns_block_mhRaTq": {
@@ -192,7 +192,7 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "custom_faq_arEDPk": {
