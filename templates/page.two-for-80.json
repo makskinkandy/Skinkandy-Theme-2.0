@@ -264,7 +264,8 @@
         "button_1_url": "shopify://pages/professional-body-piercing-services",
         "button_2_text": "FIND A STORE",
         "button_2_url": "shopify://pages/store-locations",
-        "bg_color": "#202020"
+        "text_color": "#eb008c",
+        "bg_color": "#ffffff"
       }
     },
     "rich_text_tQMGGb": {
