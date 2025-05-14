@@ -13705,15 +13705,16 @@ html[dir=rtl] .product-single__meta .rte{
 
 .custom-faq .js-accordion {
   cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 18px 35px 10px 10px;
+  font-weight: 400;
+  font-size: 25px;
+  padding: 18px 35px 15px 10px;
   position: relative;
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: .4s;
+  text-transform: uppercase;
 }
 
 .custom-faq .panel {
@@ -13731,7 +13732,7 @@ html[dir=rtl] .product-single__meta .rte{
 
 .custom-faq .js-accordion .fa-plus {
   display: inline-block;
-  width: 15px;
+  width: 21px;
   position: absolute;
   right: 10px;
   top: 50%;
