@@ -16331,6 +16331,12 @@ small.cart__discount.percentage {
     color: #FFF;
 }
 
+.grid-product__content ..grid-product__tag--black {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .size-guide__link {
   font-weight: 600;
   text-decoration: underline;
