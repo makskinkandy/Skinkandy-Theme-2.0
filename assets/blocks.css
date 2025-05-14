@@ -1313,6 +1313,9 @@
   .grid-scroll:after {
     display: none;
   }
+  .btn {
+    margin-inline: auto;
+  }
 }
 
 /* Grid Image */
