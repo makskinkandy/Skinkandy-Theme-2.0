@@ -13,12 +13,196 @@
       "type": "main-page",
       "settings": {
         "breadcrumbs": false,
-        "heading": true,
-        "content": true
+        "heading": false,
+        "content": false
+      }
+    },
+    "rich_text_DFaziX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9AAcX6": {
+          "type": "heading",
+          "settings": {
+            "title": "2 for $80 Piercings",
+            "heading_tag": "h1"
+          }
+        },
+        "text_Q79bU8": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
+          }
+        },
+        "button_KcVNjp": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "BOOK A PIERCING NOW"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9AAcX6",
+        "text_Q79bU8",
+        "button_KcVNjp"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_mhRaTq": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_Jx9r66": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h2",
+            "text": "<p>Lobes<br/>Helix<br/>Conch<br/>Outer Conch<br/>Tragus<br/>Anti-Tragus<br/>Rook<br/>Forward Helix<br/>Daith</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_YJpbBN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Snug<br/>Transverse Lobe<br/>Nostril<br/>Septum<br/>Eyebrow<br/>Bridge<br/>Lip<br/>Labret<br/>Tongue</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_wGRp8t": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Smiley<br/>Tongue Webbing<br/>Ashley<br/>Vertical Labret<br/>Philtrum<br/>Jestrum<br/>Navel<br/>Lower Navel</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Jx9r66",
+        "text_block_YJpbBN",
+        "text_block_wGRp8t"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "What Piercings Are Included?",
+        "description": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_JNHDBV": {
+      "type": "rich-text",
+      "blocks": {
+        "button_4P9xaN": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "BOOK A PIERCING NOW"
+          }
+        }
+      },
+      "block_order": [
+        "button_4P9xaN"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "rich_text_FLApyE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Pjt7Jx": {
+          "type": "heading",
+          "settings": {
+            "title": "2 for $80 Piercings",
+            "heading_tag": "h2"
+          }
+        },
+        "text_anNKf6": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
+          }
+        },
+        "button_RxPWtb": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "BOOK A PIERCING NOW"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pjt7Jx",
+        "text_anNKf6",
+        "button_RxPWtb"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_DFaziX",
+    "columns_block_mhRaTq",
+    "rich_text_JNHDBV",
+    "rich_text_FLApyE"
   ]
 }
