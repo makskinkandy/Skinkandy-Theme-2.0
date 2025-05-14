@@ -13700,7 +13700,7 @@ html[dir=rtl] .product-single__meta .rte{
   margin-bottom: 15px;
 }
 .custom-faq__question {
-  border-bottom: 1px solid #E0007A;
+  border-bottom: 1px solid #000;
 }
 
 .custom-faq .js-accordion {
