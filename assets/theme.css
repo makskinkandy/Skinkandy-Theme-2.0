@@ -1678,7 +1678,7 @@ label{
 }
 
 .h1,h1{
-  font-size:calc(var(--typeHeaderSize)*1.2);
+  font-size:calc(var(--typeHeaderSize)*1.3);
 }
 
 .h2,h2{
