@@ -201,21 +201,37 @@
         "question_T7A8ff": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+            "question": "What’s included in the 2 for $80 deal? ",
+            "answer": "<p>All the piercings listed above are part of the offer. These are considered our <a href=\"https://skinkandy.com/pages/standard-piercings\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>standard piercings</strong></span><span style=\"text-decoration:underline\">.</span></a> Price includes surgical steel jewellery.</p>"
           }
         },
         "question_64Tzge": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+            "question": "What if the piercing I want isn’t included? ",
+            "answer": "<p>No problem—we still have amazing value offers across all services. Check our<a href=\"https://skinkandy.com/pages/professional-body-piercing-services\" target=\"_blank\"><span style=\"text-decoration:underline\">Piercing Services here</span></a> orspeak to <a href=\"https://skinkandy.com/pages/store-locations\" target=\"_blank\"><span style=\"text-decoration:underline\">your local store</span></a>to find the best price for your piercing combo.</p>"
+          }
+        },
+        "question_UdHEAQ": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the usual price for a single piercing? ",
+            "answer": "<p>Our standard piercings start from <strong>$45 each with surgical steel jewellery</strong>—so you’re saving at least $10 with this promo.</p>"
+          }
+        },
+        "question_U4VwGJ": {
+          "type": "question",
+          "settings": {
+            "question": "Can I share this offer with a friend? ",
+            "answer": "<p>This one's just for you! You can mix and match any <strong>two standard piercings</strong>, but both must be done on the same person, in the same appointment.</p>"
           }
         }
       },
       "block_order": [
         "question_T7A8ff",
-        "question_64Tzge"
+        "question_64Tzge",
+        "question_UdHEAQ",
+        "question_U4VwGJ"
       ],
       "name": "Custom FAQ",
       "settings": {
