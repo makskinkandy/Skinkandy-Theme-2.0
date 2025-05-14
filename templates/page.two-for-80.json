@@ -241,6 +241,50 @@
         "hide_image": false,
         "max_width": 996
       }
+    },
+    "rich_text_6mfDNp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rYkt3y": {
+          "type": "heading",
+          "settings": {
+            "title": "How long will the promotion run?",
+            "heading_tag": "h2"
+          }
+        },
+        "text_DbTYUm": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>There’s no official end date—but like all good things, it won’t last forever. <strong>Book now to avoid missing out!</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rYkt3y",
+        "text_DbTYUm"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "inline_buttons_tywXjb": {
+      "type": "inline-buttons",
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "VIEW PIERCING SERVICES",
+        "button_1_url": "shopify://pages/professional-body-piercing-services",
+        "button_2_text": "FIND A STORE",
+        "button_2_url": "shopify://pages/store-locations",
+        "bg_color": "#202020"
+      }
     }
   },
   "order": [
@@ -249,6 +293,8 @@
     "columns_block_mhRaTq",
     "rich_text_JNHDBV",
     "rich_text_FLApyE",
-    "custom_faq_arEDPk"
+    "custom_faq_arEDPk",
+    "rich_text_6mfDNp",
+    "inline_buttons_tywXjb"
   ]
 }
