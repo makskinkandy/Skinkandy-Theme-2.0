@@ -1315,6 +1315,8 @@
   }
   .btn {
     margin-inline: auto;
+    display: block;
+    width: fit-content;
   }
 }
 
