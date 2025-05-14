@@ -13715,6 +13715,9 @@ html[dir=rtl] .product-single__meta .rte{
   outline: none;
   transition: .4s;
   text-transform: uppercase;
+  @media screen and (max-width:980px) {
+    font-size: 16px;
+  }
 }
 
 .custom-faq .panel {
