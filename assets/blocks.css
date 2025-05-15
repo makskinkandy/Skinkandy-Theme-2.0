@@ -1958,9 +1958,14 @@
   .form-column {
     width: 50%;
   }
-  .kandy-club-form .terms-message {
-    font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 35px;
+  .kandy-club-form {
+    .marketing-message {
+      margin-top: 0;
+    }
+    .terms-message {
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+    }
   }
 }
