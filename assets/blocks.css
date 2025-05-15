@@ -1993,6 +1993,9 @@
       font-size: 12px;
       margin-top: 10px;
       margin-bottom: 35px;
+      a {
+        color: #FFF;
+      }
     }
   }
   .embed-form {
