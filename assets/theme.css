@@ -16352,3 +16352,14 @@ small.cart__discount.percentage {
     background: transparent !important;
   }
 }
+
+/* Custom FAQ additional styles */
+.custom-faq__question {
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 20px;
+  }
+}
