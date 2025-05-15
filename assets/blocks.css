@@ -629,7 +629,7 @@
 }
 .icon-text-block {
   display: flex;
-  margin-bottom: 20px;
+  margin-top: 20px;
   width: 45%;
   @media screen and (max-width: 960px) {
     text-align: left;
