@@ -104,7 +104,7 @@
             "fullheight-image": false,
             "hide-image": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "",
             "title_size": "small",
             "title_tag": "h3",
