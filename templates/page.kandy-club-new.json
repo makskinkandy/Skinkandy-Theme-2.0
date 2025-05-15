@@ -109,7 +109,7 @@
         "left_align": false,
         "icon_column": false,
         "bottom_margin": true,
-        "hide_mobile": true,
+        "hide_mobile": false,
         "hide_description": false,
         "bottom_border": false,
         "reduced_content_width": false
