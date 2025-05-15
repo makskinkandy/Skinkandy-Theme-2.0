@@ -1,6 +1,224 @@
+<div class="two-column-section">
+  <div class="page-width {% if section.settings.reduced_content_width %}page-width--narrow{% endif %}">
+    <div class="two-column-section__wrapper {% if section.settings.bottom_margin %} bottom-margin{% endif %} reduced-img-size--{{ section.settings.reduced_image_size }}">
+      <div class="blocks-column {% if section.settings.left_align %} left-align{% endif %} icon-column--{{ section.settings.icon_column }}">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'title_block' %}
+              {% assign text = block.settings.title %}
+              {% assign words = text | split: ' ' %}
+              
+              {% capture processed_words %}
+                {% for word in words %}
+                  {% assign word_1 = word | slice: 0, 1 %}
+                  {% assign word_2 = word | slice: -1 %}
+                  
+                  {% if word_1 == "{" and word_2 == "}" %}
+                    {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
+                    <strong>{{ new_word }}</strong>
+                  {% else %}
+                    {{ word }}
+                  {% endif %}
+                {% endfor %}
+              {% endcapture %}
+              
+              <div class="title-block {% if section.settings.hide_description %} hide-description{% endif %} text--{{ block.settings.text_align }}">
+                {% if block.settings.title != blank %}
+                  <{{ block.settings.title_tag }}>{{ processed_words | strip }}</{{ block.settings.title_tag }}>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  {{ block.settings.description }}
+                {% endif %}
+                {% if block.settings.button_text != '' %}
+                  <a href="{{ block.settings.button_url }}" class="btn btn--primary">{{block.settings.button_text }}</a>
+                {% endif %}
+              </div>
+            {% endif %}
+            
+            {% if block.type == 'icon_text_block' %}
+              <div class="icon-text-block">
+                <img src="{{ block.settings.icon | image_url }}" alt="Icon list" aria-hidden="true">
+                <div class="icon_text_content content-align--{{ block.settings.content_align }}">
+                  {% if block.settings.icon_title != blank %}
+                    <h3>{{ block.settings.icon_title }}</h3>
+                  {% endif %}
+                  {% if block.settings.icon_content %}
+                    <p>{{ block.settings.icon_content }}</p>
+                  {% endif; %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% if section.settings.form_embed != blank %}
+        <div class="form-column{% if section.settings.left_align %} left-align{% endif %} {% if section.settings.hide_mobile %} hide-mobile{% endif %}">
+          {{ section.settings.form_embed }}
+        </div>
+      {% endif %}
+    </div>
+    {% if section.settings.bottom_border %}
+      <hr>
+    {%  endif %}
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "Two Column with Form",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "form_embed",
+      "label": "Form Code"
+    },
+    {
+      "type": "checkbox",
+      "id": "left_align",
+      "label": "Left align Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "icon_column",
+      "label": "One Column Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_margin",
+      "label": "Bottom Margin"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_mobile",
+      "label": "Hide Image on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_description",
+      "label": "Hide Description on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_border",
+      "label": "Enable Bottom border"
+    },
+    {
+      "type": "checkbox",
+      "id": "reduced_content_width",
+      "label": "Reduce Page Content Size"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title_block",
+      "name": "Title & Description",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+        "type": "select",
+        "id": "title_tag",
+        "label": "Heading Tag",
+        "default": "h2",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          }
+        ]
+      },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text Align",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      ]
+    },
+    {
+      "type": "icon_text_block",
+      "name": "Icon and Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_title",
+          "label": "Icon Title"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_content",
+          "label": "Icon Content"
+        },
+        {
+        "type": "select",
+        "id": "content_align",
+        "label": "Content Align",
+        "default": "start",
+        "options": [
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          }
+        ]
+      },
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Two Column with Form"
+  }]
+}
 {% endschema %}
