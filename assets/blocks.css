@@ -1951,3 +1951,11 @@
     }
   }
 }
+
+/* Two Column with Form */
+
+.two-column-section {
+  .form-column {
+    width: 50%;
+  }
+}
