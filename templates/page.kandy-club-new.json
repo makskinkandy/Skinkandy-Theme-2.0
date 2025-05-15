@@ -54,7 +54,7 @@
           "type": "title_block",
           "settings": {
             "title": "HEY! BEEN THINKING OF {JOINING} {OUR} {CLUB?}",
-            "title_tag": "h2",
+            "title_tag": "h1",
             "description": "<p>Quit thinking and start doing - it’s a decision you won’t regret. Don’t just take our word for it, here are exclusive in-store perks you’ll receive:</p>",
             "button_text": "",
             "button_url": "",
