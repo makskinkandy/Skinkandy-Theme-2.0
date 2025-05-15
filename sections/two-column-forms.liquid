@@ -53,7 +53,9 @@
       </div>
       {% if section.settings.form_embed != blank %}
         <div class="form-column{% if section.settings.left_align %} left-align{% endif %} {% if section.settings.hide_mobile %} hide-mobile{% endif %}">
-          {{ section.settings.form_embed }}
+          <div class="form-column__embed">
+            {{ section.settings.form_embed }}
+          </div>
         </div>
       {% endif %}
     </div>
