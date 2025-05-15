@@ -16362,6 +16362,7 @@ small.cart__discount.percentage {
   h4 {
     margin-bottom: 20px;
   }
+  
   a[href*="booking-form"] {
     line-height: 1.42;
     text-decoration: none;
@@ -16387,5 +16388,9 @@ small.cart__discount.percentage {
     background: #111;
     background: var(--colorBtnPrimary);
     border-radius: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
