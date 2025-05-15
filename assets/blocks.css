@@ -1957,6 +1957,10 @@
 .two-column-section {
   .form-column {
     width: 50%;
+    margin-left: 100px;
+    @media screen and (max-width: 980px) {
+      order: 2;
+    }
     label {
       margin-bottom: 10px;
     }
@@ -2001,7 +2005,7 @@
   .embed-form {
     padding: 50px;
     border-radius: 40px;
-    box-shadow: 0 0 10px #ECECEC;
+    box-shadow: 0 7px 10px #d1d1d1;
     background-size: cover;
     color: #FFF;
   }
