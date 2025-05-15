@@ -1957,6 +1957,9 @@
 .two-column-section {
   .form-column {
     width: 50%;
+    label {
+      margin-bottom: 15px;
+    }
   }
   .kandy-club-form {
     .marketing-message {
