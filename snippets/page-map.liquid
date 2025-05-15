@@ -41,6 +41,11 @@
         {{- 'page.autostyle.css' | asset_url | stylesheet_tag -}}
         <script src="{{- 'page.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
 
+    {%- when 'page.kandy-club-new' -%}
+        {%- # Page: All -%}
+        {{- 'page.autostyle.css' | asset_url | stylesheet_tag -}}
+        <script src="{{- 'page.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
+
     {%- when 'customers/account' -%}
         {%- # Accounts -%}
 
