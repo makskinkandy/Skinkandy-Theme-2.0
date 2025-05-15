@@ -1983,7 +1983,8 @@
         height: 19px;
       }
 
-      input,
+      input[type=text],
+      input[type=email],
       select {
         width: 100%;
         border-radius: 8px;
