@@ -46,8 +46,8 @@
         "shuffle": false
       }
     },
-    "two_column_icon_image_6WifJH": {
-      "type": "two-column-icon-image",
+    "two_column_forms_6WifJH": {
+      "type": "two-column-forms",
       "blocks": {
         "title_block_pJbw4L": {
           "type": "title_block",
@@ -105,16 +105,12 @@
         "icon_text_block_B3wNB9"
       ],
       "settings": {
-        "image": "shopify://shop_images/Rectangle_21.jpg",
         "left_align": false,
         "icon_column": false,
         "bottom_margin": true,
         "hide_mobile": true,
         "hide_description": false,
-        "round_image": false,
-        "circle_drops": false,
         "bottom_border": false,
-        "reduced_image_size": true,
         "reduced_content_width": false
       }
     },
@@ -172,7 +168,7 @@
   "order": [
     "main",
     "header_banner_hFcUAT",
-    "two_column_icon_image_6WifJH",
+    "two_column_forms_6WifJH",
     "rich_text_xbWDwG",
     "16418769900ca051a6",
     "raw_code_k63WfG"
