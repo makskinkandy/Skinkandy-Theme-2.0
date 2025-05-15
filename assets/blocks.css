@@ -1958,8 +1958,9 @@
   .form-column {
     width: 50%;
     margin-left: 100px;
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 992px) {
       order: 2;
+      margin-top: 25px;
     }
     label {
       margin-bottom: 10px;
