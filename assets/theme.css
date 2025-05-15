@@ -16386,5 +16386,6 @@ small.cart__discount.percentage {
     color: var(--colorBtnPrimaryText);
     background: #111;
     background: var(--colorBtnPrimary);
+    border-radius: 40px;
   }
 }
