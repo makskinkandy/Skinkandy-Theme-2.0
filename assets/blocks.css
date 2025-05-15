@@ -1318,6 +1318,11 @@
   .grid-scroll:after {
     display: none;
   }
+  .btn--last {
+    margin-inline: auto;
+    display: block;
+    width: fit-content;
+  }
 }
 
 /* Grid Image */
