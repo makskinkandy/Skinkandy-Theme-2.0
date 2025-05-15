@@ -518,6 +518,230 @@
         "disable_grid": false,
         "max_width": 996
       }
+    },
+    "columns_block_HqfyQ8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_cz7YjA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/mix1.png",
+            "video": "",
+            "center-content": false,
+            "title": "STUDENT ID WITH PHOTO & NAME ONLY",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Formal Card or Digital Portal log-in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_zGATqm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/mix1b.png",
+            "video": "",
+            "center-content": false,
+            "title": "BIRTH CERTIFICATE WITH NAME & DOB",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Must be an Original or Certified copy</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_cz7YjA",
+        "text_block_zGATqm"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "{MIX} & MATCH",
+        "description": "<p>We understand that not everyone has access to a single form of PHOTO ID that verifies Name, DOB and your photo. We'll also accept 2 ID types that verify all 3 requirements (Name, DOB and PHOTO).<br/><br/><strong>Below are some examples of acceptable ID combinations:</strong></p>",
+        "button_text": "BOOK A PIERCING NOW",
+        "button_url": "https://support.skinkandy.com/s/booking-form",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "columns_block_cheWbF": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_kwDhNC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/mix1.png",
+            "video": "",
+            "center-content": false,
+            "title": "STUDENT ID WITH PHOTO & NAME ONLY",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Formal Card or Digital Portal log-in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_KT3eWA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/mix1c.png",
+            "video": "",
+            "center-content": false,
+            "title": "MYGOV, CENTRELINK OR MEDICARE PORTAL",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Show staff your log in and verify your Name and DOB or Log into your Service NSW or Service VIC App and show staff your profile confirming your name & DOB.<br/><br/></p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kwDhNC",
+        "text_block_KT3eWA"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "<p><strong>Another example below:</strong></p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_M9Hzyx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UjUQQA": {
+          "type": "heading",
+          "settings": {
+            "title": "Ready for a SkinKandy piercing experience?",
+            "heading_tag": "h2"
+          }
+        },
+        "button_iXP3ii": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "Piercing Menu & Prices"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UjUQQA",
+        "button_iXP3ii"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_GkdUWL": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_wL6kjc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/7R506589.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_qx7hKA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "WANT TO KNOW MORE?",
+            "title_size": "large",
+            "title_tag": "h3",
+            "text": "<p>Want to know if you meet our piercing requirements? Call your nearest store. All piercings require a quick anatomy check. Come and see us for a free consultation!<br/></p>",
+            "text_size": "small",
+            "button_label": "Find a Store",
+            "button_link": "shopify://pages/store-locations",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wL6kjc",
+        "text_block_qx7hKA"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": true,
+        "hide_line": true,
+        "disable_grid": false,
+        "max_width": 1704
+      }
     }
   },
   "order": [
@@ -530,6 +754,10 @@
     "columns_block_4N6Xjp",
     "columns_block_PfjgFF",
     "columns_block_eBL7J8",
-    "columns_block_emXqDz"
+    "columns_block_emXqDz",
+    "columns_block_HqfyQ8",
+    "columns_block_cheWbF",
+    "rich_text_M9Hzyx",
+    "columns_block_GkdUWL"
   ]
 }
