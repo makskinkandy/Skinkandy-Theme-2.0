@@ -32,6 +32,104 @@
           }
         }
       }
+    },
+    "columns_block_NR8nF8": {
+      "settings": {},
+      "blocks": {
+        "text_block_X8AyT7": {
+          "settings": {
+            "title": "DRIVERS LICENCE",
+            "text": "<p><strong>Your licence must be current.</strong></p><p>Expired licences may be accepted if expired no more than 12 months ago. This includes learners and provisional licences.</p>"
+          }
+        },
+        "text_block_NTyRmj": {
+          "settings": {
+            "image": "shopify://shop_images/1-drivers-license_3ff845b3-6781-4d6d-8973-9a68501e0540.png"
+          }
+        }
+      }
+    },
+    "columns_block_h8r3rA": {
+      "settings": {},
+      "blocks": {
+        "text_block_h8NGy3": {
+          "settings": {
+            "title": "PROOF OF AGE OR PHOTO ID CARD",
+            "text": "<p>The Kiwi Access Card, previously known as the 18+ Card, is a Government recognised form of photographic ID and evidence of age card.</p>"
+          }
+        },
+        "text_block_EtdQUf": {
+          "settings": {
+            "image": "shopify://shop_images/3-Proof-of-Age-Card_80805fb3-d2db-4330-8eb2-ddc8baf97609.png"
+          }
+        }
+      }
+    },
+    "columns_block_yPeVHN": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "columns_block_4N6Xjp": {
+      "settings": {},
+      "blocks": {
+        "text_block_iFFKRm": {
+          "settings": {
+            "title": "PASSPORT - NEW ZEALAND OR INTERNATIONAL, VISA CARD OR IMMICARD",
+            "text": "<p>A valid New Zealand or International Passport, Visa Immicard (Immigration Evidence Card)</p>"
+          }
+        },
+        "text_block_fJtam6": {
+          "settings": {
+            "image": "shopify://shop_images/4-Passport_b4382e94-3f41-4a87-936d-266022ec216e.png"
+          }
+        }
+      }
+    },
+    "columns_block_PfjgFF": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "columns_block_eBL7J8": {
+      "settings": {},
+      "blocks": {
+        "text_block_ENbG87": {
+          "settings": {
+            "text": "<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.</p>"
+          }
+        },
+        "text_block_a769aF": {
+          "settings": {
+            "image": "shopify://shop_images/6-Formal-School-ID_16899f4b-242d-433a-8b96-f09510ffeb0f.png"
+          }
+        }
+      }
+    },
+    "columns_block_emXqDz": {
+      "settings": {},
+      "blocks": {
+        "text_block_HMne8V": {
+          "settings": {
+            "text": "<p>A current government issued firearms or shooters licence showing name, DOB and photo.</p>"
+          }
+        },
+        "text_block_VFKCzh": {
+          "settings": {
+            "image": "shopify://shop_images/7-Firearms-License_dcdf19f3-b2db-43e8-a1a3-c978a5497b00.png"
+          }
+        }
+      }
+    },
+    "columns_block_HqfyQ8": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "columns_block_cheWbF": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
