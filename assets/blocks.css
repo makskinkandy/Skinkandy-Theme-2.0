@@ -1958,7 +1958,10 @@
   .form-column {
     width: 50%;
     label {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+    }
+    .form-field {
+      margin-bottom: 10px;
     }
   }
   .kandy-club-form {
