@@ -134,12 +134,402 @@
         "disable_grid": false,
         "max_width": 996
       }
+    },
+    "columns_block_h8r3rA": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_EtdQUf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/2-Digital-ID.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_h8NGy3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "DIGITAL DRIVERS LICENCE, RIDERS LICENCE, LEARNERS OR PROVISIONAL LICENCE",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Allow staff to witness you logging into your SAGOV or Service NSW app to site your digital licence</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_EtdQUf",
+        "text_block_h8NGy3"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_yPeVHN": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_KXqdkw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/3-Proof-of-Age-Card.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_UeFCQR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "PROOF OF AGE OR PHOTO ID CARD",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>These state government issued photo ID cards are available from 15 years of age in QLD, 16 in NSW & WA, or 18 years in VIC, ACT or SA.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_KXqdkw",
+        "text_block_UeFCQR"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_4N6Xjp": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_fJtam6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/4-Passport.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_iFFKRm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "PASSPORT - AUSTRALIAN OR INTERNATIONAL, VISA CARD OR IMMICARD",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>A valid Australian or International Passport, Visa Immicard (Immigration Evidence Card)</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fJtam6",
+        "text_block_iFFKRm"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_PfjgFF": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_tQJRJH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/5-Australian-Post-Keypass.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_Wf6NWa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "AUSTRALIA POST KEYPASS & DIGITAL ID",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Keypass are issued by Australia post and are accessible to ages from 18 yearsYou can also show our staff your Digital ID log in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_tQJRJH",
+        "text_block_Wf6NWa"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_eBL7J8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_a769aF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/6-Formal-School-ID.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_ENbG87": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "FORMAL SCHOOL ID OR SCHOOL PORTAL LOG IN",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_a769aF",
+        "text_block_ENbG87"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_emXqDz": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_VFKCzh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/7-Firearms-License.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_HMne8V": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "FIREARMS OR SHOOTERS LICENCE",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>A current government issued firearms or shooters licence showing name, DOB and photo.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VFKCzh",
+        "text_block_HMne8V"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 996
+      }
     }
   },
   "order": [
     "main",
     "rich_text_z9P3gK",
     "custom_faq_e8RzQx",
-    "columns_block_NR8nF8"
+    "columns_block_NR8nF8",
+    "columns_block_h8r3rA",
+    "columns_block_yPeVHN",
+    "columns_block_4N6Xjp",
+    "columns_block_PfjgFF",
+    "columns_block_eBL7J8",
+    "columns_block_emXqDz"
   ]
 }
