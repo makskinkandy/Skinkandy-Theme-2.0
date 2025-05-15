@@ -1974,7 +1974,8 @@
         height: 19px;
       }
 
-      input {
+      input,
+      select {
         width: 100%;
       }
     }
