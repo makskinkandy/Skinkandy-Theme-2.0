@@ -16363,8 +16363,28 @@ small.cart__discount.percentage {
     margin-bottom: 20px;
   }
   a[href*="booking-form"] {
-    /* Your styles here */
-    color: red;
-    font-weight: bold;
+    line-height: 1.42;
+    text-decoration: none;
+    text-align: center;
+    white-space: normal;
+    font-size: calc(var(--typeBaseSize) * 1);
+    text-transform: uppercase;
+    letter-spacing: 0;
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 0;
+    width: auto;
+    min-width: 90px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #fff;
+    color: var(--colorBtnPrimaryText);
+    background: #111;
+    background: var(--colorBtnPrimary);
   }
 }
