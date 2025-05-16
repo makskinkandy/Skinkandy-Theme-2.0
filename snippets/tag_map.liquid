@@ -45,6 +45,7 @@
 {% endif %}
 
 {% if is_segment_ring and is_8mm %}
+  TEST
   {% assign all_ear_labels = 'Helix,Flat,Conch,Tragus,Anti-Tragus,Rook' | split: ',' %}
   {% for label in all_ear_labels %}
     {% unless matched_items contains label %}
