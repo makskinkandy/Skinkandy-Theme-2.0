@@ -23,28 +23,18 @@
         }
       }
     },
-    "custom_faq_e8RzQx": {
-      "settings": {},
-      "blocks": {
-        "question_rJ9YGD": {
-          "settings": {
-            "answer": "<h2>How old do I need to be?</h2><p>6 months -  1st Lobe Piercing with Cartridge System<br/>5 years -  1st Lobe Piercing with Needle<br/>10 years -  2nd Lobe Piercings (Seconds)<br/>13 Years - Standard Needle Piercings (including 3rd Lobes or Thirds)<br/>16 Years - Standard Piercings without Parental Consent<br/>16-17 years - Advanced Piercings without Parental Consent<br/>18 years - All Piercings including Advanced and Restricted 18+</p><h2>How do i prove identity & age?</h2><h3>Lobe Piercings with Cartridge: Ages 6 months - 15 years</h3><p>You will need a parent or legal guardian to consent to the procedure.Your Parent or Legal Guardian must verbally verify your age and DOB, provide PHOTO ID for themselves.</p><h2>Standard (needle) Piercings : Ages 5 - 15 years</h2><p>You must be able to provide ID that confirms your NAME, and DOB such as a birth certificate, formal school ID (with or without photo), passport etc.<br/><br/>You will need a parent or legal guardian to consent to the procedure Your Parent or Legal Guardian must provide PHOTO ID for themselves.</p><h2>All Piercings: Ages 16 years and over</h2><p>You must be 16 years and over to receive a piercing without parental consent. If you are over 16 but look under the age of 25 you WILL be asked to provide ID that confirms your NAME, DOB and PHOTO.<br/><br/>This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB).</p><h2>Restricted 18+ Piercings:</h2><p>A single form of approved PHOTO ID must be presented for 18+ Restricted Piercings. This must be an original copy - pictures or photos of licences etc will not be accepted.<br/><br/>Restricted piercings, including nipple cannot be performed on anyone under the age of 18 years - even if you have parental or guardian consent.</p><p><a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\">BOOK A PIERCING NOW</a></p><h2>How do I prove parental/guardianship?</h2><p>You must be a legal guardian/parent to consent to a piercing procedure for a child under the age of 16, and be willing to sign a legally binding consent form prior to the procedure. Our staff need to be reasonably satisfied that there is a genuine parental relationship between yourself and the child being pierced, and will therefore ask to see ID and verbal confirmation from the child.</p><h2>Does a parent / guardian need to be present?</h2><p>We understand that as a busy parent it can sometimes be difficult to find the time to accompany your child to their piercing appointment. There may be instances where it’s acceptable for your child to be accompanied by another responsible adult if you are unable to attend the appointment in person - here’s what’s required:<br/><br/> Written consent is allowable. Written consent can be arranged by completing and returning our consent form in advance and providing copies of the relevant ID for the child and parent/guardian. </p><h2>What ID do I need as a parent or guardian?</h2><p>You will need to provide photo ID. This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB). See our info sheet below for options.</p><p><a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\">BOOK A PIERCING NOW</a></p>"
-          }
-        }
-      }
-    },
     "columns_block_NR8nF8": {
       "settings": {},
       "blocks": {
+        "text_block_NTyRmj": {
+          "settings": {
+            "image": "shopify://shop_images/1-drivers-license_3ff845b3-6781-4d6d-8973-9a68501e0540.png"
+          }
+        },
         "text_block_X8AyT7": {
           "settings": {
             "title": "DRIVERS LICENCE",
             "text": "<p><strong>Your licence must be current.</strong></p><p>Expired licences may be accepted if expired no more than 12 months ago. This includes learners and provisional licences.</p>"
-          }
-        },
-        "text_block_NTyRmj": {
-          "settings": {
-            "image": "shopify://shop_images/1-drivers-license_3ff845b3-6781-4d6d-8973-9a68501e0540.png"
           }
         }
       }
@@ -52,15 +42,15 @@
     "columns_block_h8r3rA": {
       "settings": {},
       "blocks": {
+        "text_block_EtdQUf": {
+          "settings": {
+            "image": "shopify://shop_images/3-Proof-of-Age-Card_80805fb3-d2db-4330-8eb2-ddc8baf97609.png"
+          }
+        },
         "text_block_h8NGy3": {
           "settings": {
             "title": "PROOF OF AGE OR PHOTO ID CARD",
             "text": "<p>The Kiwi Access Card, previously known as the 18+ Card, is a Government recognised form of photographic ID and evidence of age card.</p>"
-          }
-        },
-        "text_block_EtdQUf": {
-          "settings": {
-            "image": "shopify://shop_images/3-Proof-of-Age-Card_80805fb3-d2db-4330-8eb2-ddc8baf97609.png"
           }
         }
       }
@@ -73,15 +63,15 @@
     "columns_block_4N6Xjp": {
       "settings": {},
       "blocks": {
+        "text_block_fJtam6": {
+          "settings": {
+            "image": "shopify://shop_images/4-Passport_b4382e94-3f41-4a87-936d-266022ec216e.png"
+          }
+        },
         "text_block_iFFKRm": {
           "settings": {
             "title": "PASSPORT - NEW ZEALAND OR INTERNATIONAL, VISA CARD OR IMMICARD",
             "text": "<p>A valid New Zealand or International Passport, Visa Immicard (Immigration Evidence Card)</p>"
-          }
-        },
-        "text_block_fJtam6": {
-          "settings": {
-            "image": "shopify://shop_images/4-Passport_b4382e94-3f41-4a87-936d-266022ec216e.png"
           }
         }
       }
@@ -94,14 +84,14 @@
     "columns_block_eBL7J8": {
       "settings": {},
       "blocks": {
-        "text_block_ENbG87": {
-          "settings": {
-            "text": "<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.</p>"
-          }
-        },
         "text_block_a769aF": {
           "settings": {
             "image": "shopify://shop_images/6-Formal-School-ID_16899f4b-242d-433a-8b96-f09510ffeb0f.png"
+          }
+        },
+        "text_block_ENbG87": {
+          "settings": {
+            "text": "<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.</p>"
           }
         }
       }
@@ -109,14 +99,14 @@
     "columns_block_emXqDz": {
       "settings": {},
       "blocks": {
-        "text_block_HMne8V": {
-          "settings": {
-            "text": "<p>A current government issued firearms or shooters licence showing name, DOB and photo.</p>"
-          }
-        },
         "text_block_VFKCzh": {
           "settings": {
             "image": "shopify://shop_images/7-Firearms-License_dcdf19f3-b2db-43e8-a1a3-c978a5497b00.png"
+          }
+        },
+        "text_block_HMne8V": {
+          "settings": {
+            "text": "<p>A current government issued firearms or shooters licence showing name, DOB and photo.</p>"
           }
         }
       }
@@ -130,6 +120,70 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "custom_faq_e8RzQx": {
+      "settings": {},
+      "blocks": {
+        "question_gK6w4p": {
+          "settings": {
+            "answer": "<p>6 months -  1st Lobe Piercing with Cartridge System<br/>5 years -  1st Lobe Piercing with Needle<br/>10 years -  2nd Lobe Piercings (Seconds)<br/>13 Years - Standard Needle Piercings (including 3rd Lobes or Thirds)<br/>16 Years - Standard Piercings without Parental Consent<br/>16-17 years - Advanced Piercings without Parental Consent<br/>18 years - All Piercings including Advanced and Restricted 18+</p>"
+          }
+        },
+        "question_Lc6eUG": {
+          "settings": {
+            "answer": "<p>You will need a parent or legal guardian to consent to the procedure.Your Parent or Legal Guardian must verbally verify your age and DOB, provide PHOTO ID for themselves.</p>"
+          }
+        },
+        "question_kJWMWg": {
+          "settings": {
+            "question": "Standard (needle) Piercings : Ages 5 - 15 years",
+            "answer": "<p>You must be able to provide ID that confirms your NAME, and DOB such as a birth certificate, formal school ID (with or without photo), passport etc.</p><p>You will need a parent or legal guardian to consent to the procedure Your Parent or Legal Guardian must provide PHOTO ID for themselves.</p>"
+          }
+        },
+        "question_YEEQTc": {
+          "settings": {
+            "question": "All Piercings: Ages 16 years and over",
+            "answer": "<p>You must be 16 years and over to receive a piercing without parental consent. If you are over 16 but look under the age of 25 you WILL be asked to provide ID that confirms your NAME, DOB and PHOTO.<br/><br/>This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB).</p>"
+          }
+        },
+        "question_Dcdpmz": {
+          "settings": {
+            "answer": "<p>A single form of approved PHOTO ID must be presented for 18+ Restricted Piercings. This must be an original copy - pictures or photos of licences etc will not be accepted.<br/><br/>Restricted piercings, including nipple cannot be performed on anyone under the age of 18 years - even if you have parental or guardian consent.</p><p><a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\">BOOK A PIERCING NOW</a></p>"
+          }
+        },
+        "question_UVAYMA": {
+          "settings": {
+            "question": "How do I prove parental / guardianship?",
+            "answer": "<p>You must be a legal guardian/parent to consent to a piercing procedure for a child under the age of 16, and be willing to sign a legally binding consent form prior to the procedure. Our staff need to be reasonably satisfied that there is a genuine parental relationship between yourself and the child being pierced, and will therefore ask to see ID and verbal confirmation from the child.</p>"
+          }
+        },
+        "question_YxqyP": {
+          "type": "question",
+          "disabled": false,
+          "settings": {
+            "question": "Does a parent / guardian need to be present?",
+            "answer": "<p>We understand that as a busy parent it can sometimes be difficult to find the time to accompany your child to their piercing appointment. There may be instances where it’s acceptable for your child to be accompanied by another responsible adult if you are unable to attend the appointment in person - here’s what’s required:<br/><br/> Written consent is allowable. Written consent can be arranged by completing and returning our consent form in advance and providing copies of the relevant ID for the child and parent/guardian. <br/><br/></p>"
+          }
+        },
+        "question_eT4F7": {
+          "type": "question",
+          "disabled": false,
+          "settings": {
+            "question": "What ID do I need as a parent or guardian?",
+            "answer": "<p>You will need to provide photo ID. This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB). See our info sheet below for options.</p><p><a href=\"https://skinkandy.com/pages/piercing-age-id-and-consent\" target=\"_blank\">BOOK A PIERCING NOW</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_gK6w4p",
+        "question_Lc6eUG",
+        "question_kJWMWg",
+        "question_YEEQTc",
+        "question_Dcdpmz",
+        "question_UVAYMA",
+        "question_YxqyP",
+        "question_eT4F7"
+      ]
     }
   }
 }
