@@ -3,16 +3,39 @@
 {%- comment -%}
   Handle specific tag combinations first
 {%- endcomment -%}
-{% assign tags = product.tags %}
+{% assign is_segment_ring = '' %}
+{% assign is_6mm = '' %}
+{% assign is_8mm = '' %}
+{% assign is_10mm = '' %}
+{% assign is_12mm = '' %}
+{% assign is_16g = '' %}
+{% assign is_18g = '' %}
+{% assign is_20g = '' %}
 
-{% assign is_segment_ring = tags contains 'segment ring' %}
-{% assign is_6mm = tags contains '6mm' %}
-{% assign is_8mm = tags contains '8mm' %}
-{% assign is_10mm = tags contains '10mm' %}
-{% assign is_12mm = tags contains '12mm' %}
-{% assign is_16g = tags contains '16G' %}
-{% assign is_18g = tags contains '18G' %}
-{% assign is_20g = tags contains '20G' %}
+{% if product.tags contains 'segment ring' %}
+  {% assign is_segment_ring = 'true' %}
+{% endif %}
+{% if product.tags contains '6mm' %}
+  {% assign is_6mm = 'true' %}
+{% endif %}
+{% if product.tags contains '8mm' %}
+  {% assign is_8mm = 'true' %}
+{% endif %}
+{% if product.tags contains '10mm' %}
+  {% assign is_10mm = 'true' %}
+{% endif %}
+{% if product.tags contains '12mm' %}
+  {% assign is_12mm = 'true' %}
+{% endif %}
+{% if product.tags contains '16G' %}
+  {% assign is_16g = 'true' %}
+{% endif %}
+{% if product.tags contains '18G' %}
+  {% assign is_18g = 'true' %}
+{% endif %}
+{% if product.tags contains '20G' %}
+  {% assign is_20g = 'true' %}
+{% endif %}
 
 {% if is_segment_ring and is_6mm and is_16g %}
   {% unless matched_items contains 'Anti-Tragus' %}
