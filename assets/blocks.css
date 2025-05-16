@@ -1871,6 +1871,12 @@
       flex-direction: row-reverse;
       .right-content {
         right: 0;
+        .desktop {
+          @media screen and (max-width: 1366px) {
+            transform: scaleX(1);
+            object-position: right;
+          }
+        }
       }
     }
   }
