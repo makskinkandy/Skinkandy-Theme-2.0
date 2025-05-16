@@ -16397,3 +16397,47 @@ small.cart__discount.percentage {
     font-weight: 600;
   }
 }
+
+/* Default: hide desktop version, show mobile select */
+.filter-title {
+  display: none;
+}
+.filter-select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.filter-inline {
+  display: none;
+}
+
+/* Desktop: show inline, hide select */
+@media (min-width: 768px) {
+  .filter-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filter-title {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .filter-select {
+    display: none;
+  }
+
+  .filter-inline {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-inline a {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
