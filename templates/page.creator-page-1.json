@@ -83,11 +83,74 @@
         "divider": false,
         "reduce_spacing": false
       }
-    }
+    },
+    "grid_image_xGVpcK": {
+      "type": "grid-image",
+      "blocks": {
+        "image_NVjLjR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1_5.jpg",
+            "url": ""
+          }
+        },
+        "image_V8Fx64": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg",
+            "url": ""
+          }
+        },
+        "image_tpipmG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_3_6.jpg",
+            "url": ""
+          }
+        },
+        "image_Ah6kdW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_4_2.jpg",
+            "url": ""
+          }
+        },
+        "image_yB9iCH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_5_2.jpg",
+            "url": ""
+          }
+        },
+        "image_mVGzCR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_2_10.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NVjLjR",
+        "image_V8Fx64",
+        "image_tpipmG",
+        "image_Ah6kdW",
+        "image_yB9iCH",
+        "image_mVGzCR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Vector.jpg",
+        "bottom_margin": false,
+        "title": "@SKINKANDY",
+        "url": "https://www.instagram.com/skinkandy/",
+        "description": ""
+      }
+    },
   },
   "order": [
     "main",
     "header_banner_4TGzWN",
-    "rich_text_k8ddpK"
+    "rich_text_k8ddpK",
+    "grid_image_xGVpcK"
   ]
 }
