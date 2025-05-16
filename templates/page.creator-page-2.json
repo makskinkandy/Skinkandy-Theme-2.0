@@ -186,7 +186,8 @@
         "count": 4,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": true,
+        "disable_grid": false,
+        "two_column": true,
         "max_width": 900
       }
     },
@@ -374,6 +375,7 @@
         "bottom_space": false,
         "hide_line": false,
         "disable_grid": false,
+        "two_column": false,
         "max_width": 1704
       }
     }
