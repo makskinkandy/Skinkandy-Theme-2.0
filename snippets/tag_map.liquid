@@ -64,10 +64,12 @@
   {% endunless %}
 {% endif %}
 
-{% if is_segment_ring and (is_18g or is_20g) %}
-  {% unless matched_items contains 'Nostril' %}
-    {% assign matched_items = matched_items | append: 'Nostril,' %}
-  {% endunless %}
+{% if is_segment_ring == 'true' %}
+  {% if is_18g == 'true' or is_20g == 'true' %}
+    {% unless matched_items contains 'Nostril' %}
+      {% assign matched_items = matched_items | append: 'Nostril,' %}
+    {% endunless %}
+  {% endif %}
 {% endif %}
 
 {%- comment -%}
