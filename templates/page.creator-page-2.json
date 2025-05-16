@@ -186,7 +186,7 @@
         "count": 4,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": false,
+        "disable_grid": true,
         "max_width": 900
       }
     },
