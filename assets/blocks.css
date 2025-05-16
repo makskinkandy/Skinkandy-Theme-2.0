@@ -1867,6 +1867,9 @@
     @media screen and (max-width: 980px) {
       display: block;
     }
+    &.left-image--true {
+      flex-direction: row-reverse;
+    }
   }
   .content {
     max-width: 729px;
