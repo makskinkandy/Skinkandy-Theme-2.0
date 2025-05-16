@@ -16439,6 +16439,7 @@ small.cart__discount.percentage {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .filter-inline a {
