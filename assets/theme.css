@@ -16335,6 +16335,7 @@ small.cart__discount.percentage {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 9;
 }
 
 .size-guide__link {
