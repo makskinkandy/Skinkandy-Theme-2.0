@@ -37,15 +37,13 @@
   {% assign is_20g = 'true' %}
 {% endif %}
 
-{% if is_segment_ring and is_6mm and is_16g %}
-  {{ is_6mm }}
+{% if is_segment_ring != blank and is_6mm != blank and is_16g != blank %}
   {% unless matched_items contains 'Anti-Tragus' %}
     {% assign matched_items = matched_items | append: 'Anti-Tragus,' %}
   {% endunless %}
 {% endif %}
 
 {% if is_segment_ring and is_8mm %}
-  TEST
   {% assign all_ear_labels = 'Helix,Flat,Conch,Tragus,Anti-Tragus,Rook' | split: ',' %}
   {% for label in all_ear_labels %}
     {% unless matched_items contains label %}
