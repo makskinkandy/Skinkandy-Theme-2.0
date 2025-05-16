@@ -410,6 +410,36 @@
         "bg_color": "#cfd4d7",
         "left_image": true
       }
+    },
+    "rich_text_R4egLn": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jiiwNb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>If you think you have what it takes to represent our brand, complete the application process below! Each application is carefully reviewed to make sure you have what it takes to represent our brand in a positive way and can contribute to the team.</p><p>Due to the high demand of our ambassador program, applications can take some to process. Please be assured that we value the time and effort you put into your applications and we will contact you to let you know the outcome, whether successful or unsuccessful. <br/><br/>We appreciate your patience.</p>"
+          }
+        },
+        "button_3TyNzk": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/brand-ambassador-application",
+            "link_text": "Apply now"
+          }
+        }
+      },
+      "block_order": [
+        "text_jiiwNb",
+        "button_3TyNzk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
@@ -419,6 +449,7 @@
     "columns_block_Bxp38V",
     "custom_banner_rHiVzF",
     "columns_block_9FWM3y",
-    "custom_banner_BjJYAH"
+    "custom_banner_BjJYAH",
+    "rich_text_R4egLn"
   ]
 }
