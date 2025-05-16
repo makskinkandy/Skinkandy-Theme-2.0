@@ -14933,7 +14933,8 @@ ul.header-icons > li .site-nav__link--icon svg + span {
 #NavDrawer .mobile-nav__toggle svg {
   display: inline-block;
   fill: #000;
-  width: 20px;
+  width: 28px;
+  height: 28px;
 }
 
 #NavDrawer .mobile-nav .link-icon > svg {
@@ -16086,6 +16087,10 @@ button.label.collapsible-trigger.collapsible-trigger-btn.collapsible--auto-heigh
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  svg {
+    width: 27px;
+    height: 22px;
+  }
   &.active svg {
     transform: rotate(180deg);
   }
