@@ -185,9 +185,37 @@
         "button_url": "",
         "count": 4,
         "bottom_space": false,
-        "hide_line": false,
+        "hide_line": true,
         "disable_grid": false,
         "max_width": 900
+      }
+    },
+    "custom_banner_rHiVzF": {
+      "type": "custom-banner",
+      "blocks": {
+        "title_DckLtL": {
+          "type": "title",
+          "settings": {
+            "title": "ABOUT YOU",
+            "size": "small",
+            "title_tag": "h2"
+          }
+        },
+        "text_content_k8x9rJ": {
+          "type": "text-content",
+          "settings": {
+            "content": "",
+            "size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "title_DckLtL",
+        "text_content_k8x9rJ"
+      ],
+      "name": "Custom Banner",
+      "settings": {
+        "bg_color": ""
       }
     }
   },
@@ -195,6 +223,7 @@
     "main",
     "header_banner_rg4LVD",
     "rich_text_PitRf8",
-    "columns_block_Bxp38V"
+    "columns_block_Bxp38V",
+    "custom_banner_rHiVzF"
   ]
 }
