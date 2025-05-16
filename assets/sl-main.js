@@ -320,16 +320,32 @@ document.addEventListener('DOMContentLoaded', e => {
     });
   });
 
-  document.querySelectorAll('.level-2-menu').forEach(menu => {
+  document.querySelectorAll('.js-dropdown').forEach(menu => {
     menu.addEventListener('click', function () {
         let sibling = this.nextElementSibling;
         if (sibling && sibling.classList.contains('level-2-sub')) {
             sibling.classList.toggle('open');
         }
-
         this.classList.toggle('active');
     });
   });
+
+  document.querySelectorAll('.js-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const parentLi = this.closest('li');
+      const submenu = parentLi.querySelector('.level-2-sub');
+      const parentA = parentLi.querySelector('.level-2-menu');
+
+      parentA.classList.toggle('active');
+  
+      if (submenu) {
+        submenu.classList.toggle('open');
+        this.classList.toggle('active');
+      }
+    });
+});
 
   const call_change_country_ = (countryCode) => {
     console.log(":TEST")
