@@ -405,8 +405,8 @@
       ],
       "name": "Custom Banner",
       "settings": {
-        "desktop_image": "shopify://shop_images/Model_-_Desktop_e5585ca5-c100-48f9-9c85-ab1aee3fc706.png",
-        "mobile_image": "shopify://shop_images/Model_-_Mobile_271017f1-91c3-4291-b696-d4780faa8e0f.png",
+        "desktop_image": "shopify://shop_images/creator-image_1.png",
+        "mobile_image": "shopify://shop_images/creator-image-1.png",
         "bg_color": "#cfd4d7",
         "left_image": true
       }
