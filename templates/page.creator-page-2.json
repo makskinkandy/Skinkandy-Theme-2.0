@@ -26,12 +26,12 @@
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Homepage_Banner_6_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_4_1.jpg",
+            "image": "shopify://shop_images/image_30_1.jpg",
             "banner_url": "",
-            "heading": "",
+            "heading": "Join Our Creator Community",
             "short_description": "",
-            "button_text": "",
-            "button_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/brand-ambassador-application",
             "align_text": "center"
           }
         }
@@ -46,10 +46,148 @@
         "small_overlay": false,
         "shuffle": false
       }
+    },
+    "rich_text_PitRf8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_88HCgC": {
+          "type": "heading",
+          "settings": {
+            "title": "AT SKINKANDY, WE BELIEVE IN BEING {BOLD.} {CONFIDENT.} & {FREE} {TO} {BE!}",
+            "heading_tag": "h2"
+          }
+        },
+        "text_qnWzEj": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>We are on a mission to share our love & expression for piercings & jewellery.We’re always looking for creators who want to share our passion with us and be apart of something truly special.</p><p>If you’re all about what we do and have a platform to spread the word – whether it’s through your socials, creativity, or something else – we’d love to chat with you!Simply apply below -Let’s create something amazing together!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_88HCgC",
+        "text_qnWzEj"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_Bxp38V": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_PXHEVV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/1_1.png",
+            "video": "",
+            "center-content": false,
+            "title": "Sign Up",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_zAhQDn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Chat withour team",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_nQ8RaX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Share",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_jqYaUB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": false,
+            "title": "Be rewarded",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_PXHEVV",
+        "text_block_zAhQDn",
+        "text_block_nQ8RaX",
+        "text_block_jqYaUB"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 4,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 900
+      }
     }
   },
   "order": [
     "main",
-    "header_banner_rg4LVD"
+    "header_banner_rg4LVD",
+    "rich_text_PitRf8",
+    "columns_block_Bxp38V"
   ]
 }
