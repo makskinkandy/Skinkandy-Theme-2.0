@@ -204,7 +204,7 @@
         "text_content_k8x9rJ": {
           "type": "text-content",
           "settings": {
-            "content": "",
+            "content": "<ul><li>You live & breathe SkinKandy</li><li>You have a PASSION for jewellery & piercings</li><li>A strong following/community</li><li>A love for curations & creating incredible looks with your piercings/jewellery</li><li>Ability to integrate SkinKandy products & experiences into your content</li><li>Basic understanding of SkinKandy & who WE ARE!</li></ul>",
             "size": "small"
           }
         }
@@ -215,7 +215,9 @@
       ],
       "name": "Custom Banner",
       "settings": {
-        "bg_color": ""
+        "desktop_image": "shopify://shop_images/Model_-_Desktop_e5585ca5-c100-48f9-9c85-ab1aee3fc706.png",
+        "mobile_image": "shopify://shop_images/Model_-_Mobile_271017f1-91c3-4291-b696-d4780faa8e0f.png",
+        "bg_color": "#cfd4d7"
       }
     }
   },
