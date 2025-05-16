@@ -34,19 +34,11 @@
             "enlarge_text": false,
             "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
           }
-        },
-        "button_KcVNjp": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/professional-body-piercing-services",
-            "link_text": "BOOK A PIERCING NOW"
-          }
         }
       },
       "block_order": [
         "heading_9AAcX6",
-        "text_Q79bU8",
-        "button_KcVNjp"
+        "text_Q79bU8"
       ],
       "custom_css": [
         "h1 {font-weight: 600;}"
