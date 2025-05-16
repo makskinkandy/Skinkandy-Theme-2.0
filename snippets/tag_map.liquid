@@ -38,7 +38,7 @@
 {% endif %}
 
 {% if is_segment_ring and is_6mm and is_16g %}
-  TEST
+  {{ is_6mm }}
   {% unless matched_items contains 'Anti-Tragus' %}
     {% assign matched_items = matched_items | append: 'Anti-Tragus,' %}
   {% endunless %}
