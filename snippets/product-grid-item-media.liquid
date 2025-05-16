@@ -76,7 +76,7 @@
           style="aspect-ratio: {{ preview_image.aspect_ratio }}; height: 100%; object-fit: contain;" />
 
         {%- if enable_quick_add and product.media.size > 1 -%}
-          {% for media in product.media %}
+          {% for media in product.media limit: 1 %}
             {%- unless media == preview_image -%}
               {%- if media.media_type == 'image' -%}
                 <img alt="{{ media.alt | escape }}" src="{{ media.preview_image | image_url: width: 450 }}" data-position="{{ media.position }}">
