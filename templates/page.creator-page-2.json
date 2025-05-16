@@ -219,6 +219,163 @@
         "mobile_image": "shopify://shop_images/Model_-_Mobile_271017f1-91c3-4291-b696-d4780faa8e0f.png",
         "bg_color": "#cfd4d7"
       }
+    },
+    "columns_block_9FWM3y": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_fQVYFA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/2_4.png",
+            "video": "",
+            "center-content": false,
+            "title": "Free + Discounted Jewellery",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_RkQtbM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/3_4.png",
+            "video": "",
+            "center-content": false,
+            "title": "Free Piercing",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_ChbT9L": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/4_1_2.png",
+            "video": "",
+            "center-content": false,
+            "title": "Featured onSkinKandy Socials",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_EW67NW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/2_3.png",
+            "video": "",
+            "center-content": false,
+            "title": "VIP Access to new products & offers",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_d93gAf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/3_5.png",
+            "video": "",
+            "center-content": false,
+            "title": "Further SkinKandy offers & discounts",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_BfF3ix": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/4_1_4.png",
+            "video": "",
+            "center-content": false,
+            "title": "Access to our Creative Community Team & members",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fQVYFA",
+        "text_block_RkQtbM",
+        "text_block_ChbT9L",
+        "text_block_EW67NW",
+        "text_block_d93gAf",
+        "text_block_BfF3ix"
+      ],
+      "custom_css": [
+        "img {max-width: 131px;}",
+        "h3 {text-align: center;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 5,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "max_width": 1704
+      }
     }
   },
   "order": [
@@ -226,6 +383,7 @@
     "header_banner_rg4LVD",
     "rich_text_PitRf8",
     "columns_block_Bxp38V",
-    "custom_banner_rHiVzF"
+    "custom_banner_rHiVzF",
+    "columns_block_9FWM3y"
   ]
 }
