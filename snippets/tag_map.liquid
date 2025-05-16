@@ -1,41 +1,114 @@
-<ul>
-  {% assign tag_map = '
-    all ear: Helix|Flat|Conch|Tragus|Anti-Tragus|Rook,  
-    belly: Navel,  
-    belly bar: Navel,  
-    belly button: Navel,  
-    belly ring: Navel,  
-    cartilage: Cartilage,  
-    conch: Conch,  
-    curved: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    curved bar: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    curved barbell: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    daith: Daith,  
-    earlobes: Lobes,  
-    eyebrow: Eyebrow,  
-    forward helix: Forward Helix,  
-    helix: Helix,  
-    horseshoe: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    lip: Lips,  
-    lobe: Lobes,  
-    lobes: Lobes,  
-    nipple: Nipple,  
-    nipple bar: Nipple,  
-    nose: Nose,  
-    navel: Navel,  
-    rook: Rook,  
-    segment ring: Smiley|Daith|Septum|Tragus|Helix|Lip|Labret|Conch|Nostril,  
-    septum: Septum,  
-    smiley: Smiley,  
-    tongue: Tongue,  
-    tongue bar: Tongue,  
-    tragus: Tragus,  
-    vertical helix: Vertical Helix,  
-    vertical labret: Vertical Labret,  
-    vertical philtrum: Vertical Philtrum
-  ' | strip_newlines | split: ',' %}
-  
 {% assign matched_items = "" %}
+
+{%- comment -%}
+  Handle specific tag combinations first
+{%- endcomment -%}
+{% assign is_segment_ring = '' %}
+{% assign is_6mm = '' %}
+{% assign is_8mm = '' %}
+{% assign is_10mm = '' %}
+{% assign is_12mm = '' %}
+{% assign is_16g = '' %}
+{% assign is_18g = '' %}
+{% assign is_20g = '' %}
+
+{% if product.tags contains 'segment ring' %}
+  {% assign is_segment_ring = 'true' %}
+{% endif %}
+{% if product.tags contains '6mm' %}
+  {% assign is_6mm = 'true' %}
+{% endif %}
+{% if product.tags contains '8mm' %}
+  {% assign is_8mm = 'true' %}
+{% endif %}
+{% if product.tags contains '10mm' %}
+  {% assign is_10mm = 'true' %}
+{% endif %}
+{% if product.tags contains '12mm' %}
+  {% assign is_12mm = 'true' %}
+{% endif %}
+{% if product.tags contains '16G' or product.tags contains '16GA' %}
+  {% assign is_16g = 'true' %}
+{% endif %}
+{% if product.tags contains '18G' or product.tags contains '18GA' %}
+  {% assign is_18g = 'true' %}
+{% endif %}
+{% if product.tags contains '20G' or product.tags contains '20GA' %}
+  {% assign is_20g = 'true' %}
+{% endif %}
+
+{% if is_segment_ring != blank and is_6mm != blank and is_16g != blank %}
+  {% unless matched_items contains 'Anti-Tragus' %}
+    {% assign matched_items = matched_items | append: 'Anti-Tragus,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring != blank and is_8mm != blank %}
+  {% assign all_ear_labels = 'Helix,Flat,Conch,Tragus,Anti-Tragus,Rook,Lobes' | split: ',' %}
+  {% for label in all_ear_labels %}
+    {% unless matched_items contains label %}
+      {% assign matched_items = matched_items | append: label | append: ',' %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+{% if is_segment_ring != blank and is_10mm != blank and is_16g != blank %}
+  {% unless matched_items contains 'Smiley' %}
+    {% assign matched_items = matched_items | append: 'Smiley,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring != blank and is_12mm != blank and is_16g != blank %}
+  {% unless matched_items contains 'Conch' %}
+    {% assign matched_items = matched_items | append: 'Conch,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring == 'true' %}
+  {% if is_18g == 'true' or is_20g == 'true' %}
+    {% unless matched_items contains 'Nostril' %}
+      {% assign matched_items = matched_items | append: 'Nostril,' %}
+    {% endunless %}
+  {% endif %}
+{% endif %}
+
+{%- comment -%}
+  Standard tag-to-label mapping
+{%- endcomment -%}
+{% assign tag_map = '
+  all ear: Helix|Flat|Conch|Tragus|Anti-Tragus|Rook|Lobes,  
+  belly: Navel,  
+  belly bar: Navel,  
+  belly button: Navel,  
+  belly ring: Navel,  
+  cartilage: Cartilage,  
+  conch: Conch,  
+  curved: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  curved bar: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  curved barbell: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  daith: Daith,  
+  earlobes: Lobes,  
+  eyebrow: Eyebrow,  
+  forward helix: Forward Helix,  
+  helix: Helix,  
+  horseshoe: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  lip: Lips,  
+  lobe: Lobes,  
+  lobes: Lobes,  
+  nipple: Nipple,  
+  nipple bar: Nipple,  
+  nose: Nose,  
+  navel: Navel,  
+  rook: Rook,
+  septum: Septum,  
+  smiley: Smiley,  
+  tongue: Tongue,  
+  tongue bar: Tongue,  
+  tragus: Tragus,  
+  vertical helix: Vertical Helix,  
+  vertical labret: Vertical Labret,  
+  vertical philtrum: Vertical Philtrum
+' | strip_newlines | split: ',' %}
 
 {% for pair in tag_map %}
   {% assign parts = pair | split: ':' %}
@@ -53,6 +126,7 @@
 
 {% assign matched_items = matched_items | split: ',' %}
 
+<ul>
 {% for item in matched_items %}
   {% if item != "" %}
     <li>{{ item }}</li>
