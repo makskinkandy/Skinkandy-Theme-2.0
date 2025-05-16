@@ -11,14 +11,83 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": true,
         "content": true
       }
+    },
+    "header_banner_4TGzWN": {
+      "type": "header-banner",
+      "blocks": {
+        "image_tQqmhc": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image": "shopify://shop_images/image_2_9_1.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_tQqmhc"
+      ],
+      "name": "Hero Banner Slider",
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "rich_text_k8ddpK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XbBEPR": {
+          "type": "heading",
+          "settings": {
+            "title": "JOIN THE {SKINKANDY} {CREATOR} {COMMUNITY}",
+            "heading_tag": "h1"
+          }
+        },
+        "text_KXmake": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>We’re always on the lookout for passionate individuals who share our love for self-expression and creativity! If you’re a fan of SkinKandy, have a passion for piercings and jewellery, or a voice on social media, we’d love to collaborate with you to inspire and empower our amazing community.<br/></p><p><strong>Free To Be — Let’s work together & apply today!</strong></p>"
+          }
+        },
+        "button_NU6XLn": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/join-our-creator-community",
+            "link_text": "APPLY NOW"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XbBEPR",
+        "text_KXmake",
+        "button_NU6XLn"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "header_banner_4TGzWN",
+    "rich_text_k8ddpK"
   ]
 }
