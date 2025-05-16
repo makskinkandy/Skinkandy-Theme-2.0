@@ -1890,6 +1890,11 @@
       padding: 42px 0;
       width: 100%;
     }
+    li {
+      @media screen and (max-width: 980px) {
+        text-align: left;
+      }
+    }
   }
   .right-content {
     width: 50%;
