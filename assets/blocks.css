@@ -1869,6 +1869,9 @@
     }
     &.left-image--true {
       flex-direction: row-reverse;
+      .right-content {
+        right: 0;
+      }
     }
   }
   .content {
