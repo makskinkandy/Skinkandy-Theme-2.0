@@ -197,7 +197,7 @@
           "type": "title",
           "settings": {
             "title": "ABOUT YOU",
-            "size": "small",
+            "size": "large",
             "title_tag": "h2"
           }
         },
@@ -205,7 +205,7 @@
           "type": "text-content",
           "settings": {
             "content": "<ul><li>You live & breathe SkinKandy</li><li>You have a PASSION for jewellery & piercings</li><li>A strong following/community</li><li>A love for curations & creating incredible looks with your piercings/jewellery</li><li>Ability to integrate SkinKandy products & experiences into your content</li><li>Basic understanding of SkinKandy & who WE ARE!</li></ul>",
-            "size": "small"
+            "size": "large"
           }
         }
       },
