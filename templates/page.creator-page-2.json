@@ -386,7 +386,7 @@
         "title_fhRxpT": {
           "type": "title",
           "settings": {
-            "title": "ABOUT YOU",
+            "title": "REQUIREMENTS",
             "size": "large",
             "title_tag": "h2"
           }
@@ -394,7 +394,7 @@
         "text_content_CmpQAJ": {
           "type": "text-content",
           "settings": {
-            "content": "<ul><li>You live & breathe SkinKandy</li><li>You have a PASSION for jewellery & piercings</li><li>A strong following/community</li><li>A love for curations & creating incredible looks with your piercings/jewellery</li><li>Ability to integrate SkinKandy products & experiences into your content</li><li>Basic understanding of SkinKandy & who WE ARE!</li></ul>",
+            "content": "<ul><li>Share your love for SkinKandy, jewellery & piercings on your platform</li><li>Have basic editing skills for content</li></ul>",
             "size": "large"
           }
         }
