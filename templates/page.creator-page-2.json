@@ -171,6 +171,10 @@
         "text_block_nQ8RaX",
         "text_block_jqYaUB"
       ],
+      "custom_css": [
+        "img {max-width: 131px;}",
+        "h3 {text-align: center;}"
+      ],
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
