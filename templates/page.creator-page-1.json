@@ -146,11 +146,34 @@
         "description": ""
       }
     },
+    "ads_block_xLqyjb": {
+      "type": "ads-block",
+      "blocks": {
+        "image_GUERJf": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": "shopify://pages/kandy-club",
+            "image": "shopify://shop_images/Group_24.png",
+            "image_mobile": "shopify://shop_images/Leaderboard_KandyClub_Mobile_1.png",
+            "bg_image": "shopify://shop_images/Leaderboard_KandyClub_3_1.jpg",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_GUERJf"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
   },
   "order": [
     "main",
     "header_banner_4TGzWN",
     "rich_text_k8ddpK",
-    "grid_image_xGVpcK"
+    "grid_image_xGVpcK",
+    "ads_block_xLqyjb"
   ]
 }
