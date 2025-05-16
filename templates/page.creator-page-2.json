@@ -218,7 +218,8 @@
       "settings": {
         "desktop_image": "shopify://shop_images/Model_-_Desktop_e5585ca5-c100-48f9-9c85-ab1aee3fc706.png",
         "mobile_image": "shopify://shop_images/Model_-_Mobile_271017f1-91c3-4291-b696-d4780faa8e0f.png",
-        "bg_color": "#cfd4d7"
+        "bg_color": "#cfd4d7",
+        "left_image": false
       }
     },
     "columns_block_9FWM3y": {
@@ -378,6 +379,37 @@
         "two_column": true,
         "max_width": 1704
       }
+    },
+    "custom_banner_BjJYAH": {
+      "type": "custom-banner",
+      "blocks": {
+        "title_fhRxpT": {
+          "type": "title",
+          "settings": {
+            "title": "ABOUT YOU",
+            "size": "large",
+            "title_tag": "h2"
+          }
+        },
+        "text_content_CmpQAJ": {
+          "type": "text-content",
+          "settings": {
+            "content": "<ul><li>You live & breathe SkinKandy</li><li>You have a PASSION for jewellery & piercings</li><li>A strong following/community</li><li>A love for curations & creating incredible looks with your piercings/jewellery</li><li>Ability to integrate SkinKandy products & experiences into your content</li><li>Basic understanding of SkinKandy & who WE ARE!</li></ul>",
+            "size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_fhRxpT",
+        "text_content_CmpQAJ"
+      ],
+      "name": "Custom Banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Model_-_Desktop_e5585ca5-c100-48f9-9c85-ab1aee3fc706.png",
+        "mobile_image": "shopify://shop_images/Model_-_Mobile_271017f1-91c3-4291-b696-d4780faa8e0f.png",
+        "bg_color": "#cfd4d7",
+        "left_image": true
+      }
     }
   },
   "order": [
@@ -386,6 +418,7 @@
     "rich_text_PitRf8",
     "columns_block_Bxp38V",
     "custom_banner_rHiVzF",
-    "columns_block_9FWM3y"
+    "columns_block_9FWM3y",
+    "custom_banner_BjJYAH"
   ]
 }
