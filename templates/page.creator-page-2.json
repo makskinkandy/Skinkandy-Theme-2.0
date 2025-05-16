@@ -373,9 +373,9 @@
         "button_url": "",
         "count": 5,
         "bottom_space": false,
-        "hide_line": false,
+        "hide_line": true,
         "disable_grid": false,
-        "two_column": false,
+        "two_column": true,
         "max_width": 1704
       }
     }
