@@ -1,41 +1,90 @@
-<ul>
-  {% assign tag_map = '
-    all ear: Helix|Flat|Conch|Tragus|Anti-Tragus|Rook,  
-    belly: Navel,  
-    belly bar: Navel,  
-    belly button: Navel,  
-    belly ring: Navel,  
-    cartilage: Cartilage,  
-    conch: Conch,  
-    curved: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    curved bar: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    curved barbell: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    daith: Daith,  
-    earlobes: Lobes,  
-    eyebrow: Eyebrow,  
-    forward helix: Forward Helix,  
-    helix: Helix,  
-    horseshoe: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
-    lip: Lips,  
-    lobe: Lobes,  
-    lobes: Lobes,  
-    nipple: Nipple,  
-    nipple bar: Nipple,  
-    nose: Nose,  
-    navel: Navel,  
-    rook: Rook,  
-    segment ring: Smiley|Daith|Septum|Tragus|Helix|Lip|Labret|Conch|Nostril,  
-    septum: Septum,  
-    smiley: Smiley,  
-    tongue: Tongue,  
-    tongue bar: Tongue,  
-    tragus: Tragus,  
-    vertical helix: Vertical Helix,  
-    vertical labret: Vertical Labret,  
-    vertical philtrum: Vertical Philtrum
-  ' | strip_newlines | split: ',' %}
-  
 {% assign matched_items = "" %}
+
+{%- comment -%}
+  Handle specific tag combinations first
+{%- endcomment -%}
+{% assign tags = product.tags %}
+
+{% assign is_segment_ring = tags contains 'segment ring' %}
+{% assign is_6mm = tags contains '6mm' %}
+{% assign is_8mm = tags contains '8mm' %}
+{% assign is_10mm = tags contains '10mm' %}
+{% assign is_12mm = tags contains '12mm' %}
+{% assign is_16g = tags contains '16G' %}
+{% assign is_18g = tags contains '18G' %}
+{% assign is_20g = tags contains '20G' %}
+
+{% if is_segment_ring and is_6mm and is_16g %}
+  {% unless matched_items contains 'Anti-Tragus' %}
+    {% assign matched_items = matched_items | append: 'Anti-Tragus,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring and is_8mm %}
+  {% assign all_ear_labels = 'Helix,Flat,Conch,Tragus,Anti-Tragus,Rook' | split: ',' %}
+  {% for label in all_ear_labels %}
+    {% unless matched_items contains label %}
+      {% assign matched_items = matched_items | append: label | append: ',' %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+{% if is_segment_ring and is_10mm and is_16g %}
+  {% unless matched_items contains 'Smiley' %}
+    {% assign matched_items = matched_items | append: 'Smiley,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring and is_12mm and is_16g %}
+  {% unless matched_items contains 'Conch' %}
+    {% assign matched_items = matched_items | append: 'Conch,' %}
+  {% endunless %}
+{% endif %}
+
+{% if is_segment_ring and (is_18g or is_20g) %}
+  {% unless matched_items contains 'Nostril' %}
+    {% assign matched_items = matched_items | append: 'Nostril,' %}
+  {% endunless %}
+{% endif %}
+
+{%- comment -%}
+  Standard tag-to-label mapping
+{%- endcomment -%}
+{% assign tag_map = '
+  all ear: Helix|Flat|Conch|Tragus|Anti-Tragus|Rook,  
+  belly: Navel,  
+  belly bar: Navel,  
+  belly button: Navel,  
+  belly ring: Navel,  
+  cartilage: Cartilage,  
+  conch: Conch,  
+  curved: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  curved bar: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  curved barbell: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  daith: Daith,  
+  earlobes: Lobes,  
+  eyebrow: Eyebrow,  
+  forward helix: Forward Helix,  
+  helix: Helix,  
+  horseshoe: Rook|Eyebrow|Jestrum|Snug|Vertical Labret|Anti-Tragus,  
+  lip: Lips,  
+  lobe: Lobes,  
+  lobes: Lobes,  
+  nipple: Nipple,  
+  nipple bar: Nipple,  
+  nose: Nose,  
+  navel: Navel,  
+  rook: Rook,  
+  segment ring: Smiley|Daith|Septum|Tragus|Helix|Lip|Labret|Conch|Nostril,  
+  septum: Septum,  
+  smiley: Smiley,  
+  tongue: Tongue,  
+  tongue bar: Tongue,  
+  tragus: Tragus,  
+  vertical helix: Vertical Helix,  
+  vertical labret: Vertical Labret,  
+  vertical philtrum: Vertical Philtrum
+' | strip_newlines | split: ',' %}
 
 {% for pair in tag_map %}
   {% assign parts = pair | split: ':' %}
@@ -53,6 +102,7 @@
 
 {% assign matched_items = matched_items | split: ',' %}
 
+<ul>
 {% for item in matched_items %}
   {% if item != "" %}
     <li>{{ item }}</li>
