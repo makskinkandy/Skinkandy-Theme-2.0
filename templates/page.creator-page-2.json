@@ -173,7 +173,7 @@
       ],
       "custom_css": [
         "img {max-width: 131px;}",
-        "h3 {text-align: center;}"
+        "h3 {text-align: center !important;}"
       ],
       "name": "Columns Block",
       "settings": {
@@ -186,7 +186,7 @@
         "count": 4,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": true,
+        "disable_grid": false,
         "max_width": 900
       }
     },
