@@ -1256,6 +1256,17 @@
     @media screen and (max-width: 980px) {
       flex-direction: column;
     }
+    &.two-column__mobile--true {
+      @media screen and (max-width: 980px) {
+        display: grid;
+        grid-template-columns: 1fr 1ft;
+      }
+      .rte {
+        @media screen and (max-width: 980px) {
+          text-align: center;
+        }
+      }
+    }
   }
   .grid-scroll:has(>.center-content) {
     display: flex;
