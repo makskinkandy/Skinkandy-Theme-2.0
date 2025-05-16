@@ -13,37 +13,37 @@
 {% assign is_20g = '' %}
 
 {% if product.tags contains 'segment ring' %}
-  {% assign is_segment_ring = true %}
+  {% assign is_segment_ring = 'true' %}
 {% endif %}
 {% if product.tags contains '6mm' %}
-  {% assign is_6mm = true %}
+  {% assign is_6mm = 'true' %}
 {% endif %}
 {% if product.tags contains '8mm' %}
-  {% assign is_8mm = true %}
+  {% assign is_8mm = 'true' %}
 {% endif %}
 {% if product.tags contains '10mm' %}
-  {% assign is_10mm = true %}
+  {% assign is_10mm = 'true' %}
 {% endif %}
 {% if product.tags contains '12mm' %}
-  {% assign is_12mm = true %}
+  {% assign is_12mm = 'true' %}
 {% endif %}
 {% if product.tags contains '16G' %}
-  {% assign is_16g = true %}
+  {% assign is_16g = 'true' %}
 {% endif %}
 {% if product.tags contains '18G' %}
-  {% assign is_18g = true %}
+  {% assign is_18g = 'true' %}
 {% endif %}
 {% if product.tags contains '20G' %}
-  {% assign is_20g = true %}
+  {% assign is_20g = 'true' %}
 {% endif %}
 
-{% if is_segment_ring and is_6mm and is_16g %}
+{% if is_segment_ring != blank and is_6mm != blank and is_16g != blank %}
   {% unless matched_items contains 'Anti-Tragus' %}
     {% assign matched_items = matched_items | append: 'Anti-Tragus,' %}
   {% endunless %}
 {% endif %}
 
-{% if is_segment_ring and is_8mm %}
+{% if is_segment_ring != blank and is_8mm != blank %}
   {% assign all_ear_labels = 'Helix,Flat,Conch,Tragus,Anti-Tragus,Rook' | split: ',' %}
   {% for label in all_ear_labels %}
     {% unless matched_items contains label %}
@@ -52,20 +52,20 @@
   {% endfor %}
 {% endif %}
 
-{% if is_segment_ring and is_10mm and is_16g %}
+{% if is_segment_ring != blank and is_10mm != blank and is_16g != blank %}
   {% unless matched_items contains 'Smiley' %}
     {% assign matched_items = matched_items | append: 'Smiley,' %}
   {% endunless %}
 {% endif %}
 
-{% if is_segment_ring and is_12mm and is_16g %}
+{% if is_segment_ring != blank and is_12mm != blank and is_16g != blank %}
   {% unless matched_items contains 'Conch' %}
     {% assign matched_items = matched_items | append: 'Conch,' %}
   {% endunless %}
 {% endif %}
 
-{% if is_segment_ring %}
-  {% if is_18g or is_20g %}
+{% if is_segment_ring == 'true' %}
+  {% if is_18g == 'true' or is_20g == 'true' %}
     {% unless matched_items contains 'Nostril' %}
       {% assign matched_items = matched_items | append: 'Nostril,' %}
     {% endunless %}
