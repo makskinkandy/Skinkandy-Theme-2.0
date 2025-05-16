@@ -121,7 +121,7 @@
                         
                         <li class="main-menu-item">
                           <a href="{{ childlink.url }}"
-                            class="mobile-nav__link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %} level-2-menu {% if childlink.url == "#" %}js-dropdown{% endif %} {{ link_handle }}"
+                            class="mobile-nav__link {% if link_handle == 'products-sk-gift-card' %}highlight{% endif %} level-2-menu {% if link_handle == blank %}js-dropdown{% endif %}"
                             id="Sublabel-{{ grand_child_list_handle }}" aria-controls="Linklist-{{ child_list_handle }}"
                             {% if childlink.active %}data-active="true"{% endif %}>
                             {{ childlink.title | escape }}
