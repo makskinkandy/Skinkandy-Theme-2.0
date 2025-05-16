@@ -11,14 +11,45 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": true,
         "content": true
       }
+    },
+    "header_banner_rg4LVD": {
+      "type": "header-banner",
+      "blocks": {
+        "image_iBXWeY": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_6_1.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_4_1.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_iBXWeY"
+      ],
+      "name": "Hero Banner Slider",
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "header_banner_rg4LVD"
   ]
 }
