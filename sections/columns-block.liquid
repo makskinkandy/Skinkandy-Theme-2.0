@@ -44,10 +44,11 @@
         endcase
     -%}
   
-    <div class="grid-scroll">
+    <div class="grid-scroll two-column__mobile--{{ section.settings.two_column }}">
       {%- for block in section.blocks -%}
+        
+      
         {% assign text = block.settings.title %}
-
         {% assign words = text | split: ' ' %}
         {% assign processed_words = '' %}
         
