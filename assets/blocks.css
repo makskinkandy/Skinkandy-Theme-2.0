@@ -1883,6 +1883,9 @@
   .left-content {
     padding: 50px 0;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media screen and (max-width: 980px) {
       padding: 42px 0;
       width: 100%;
