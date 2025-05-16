@@ -16331,7 +16331,7 @@ small.cart__discount.percentage {
     color: #FFF;
 }
 
-.grid-product__content ..grid-product__tag--black {
+.grid-product__content .grid-product__tag--black {
     position: absolute;
     bottom: 0;
     width: 100%;
