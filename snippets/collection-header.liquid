@@ -25,7 +25,6 @@
     {% if block.settings.filter_menu != blank %}
       {% assign filter = linklists[block.settings.filter_menu] %}
     
-      {% comment %} Count parents with children manually {% endcomment %}
       {% assign parent_count = 0 %}
       {% for link in filter.links %}
         {% if link.links != blank %}
@@ -34,39 +33,42 @@
       {% endfor %}
     
       <div class="filter-menu">
-  
+        {% if block.settings.filter_title %}
+          <p class="filter-title">{{ block.settings.filter_title }}:</p>
+        {% endif %}
+    
         {% if parent_count < 2 %}
-          <!-- Flat dropdown version -->
-          <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.href = this.value;">
+          <!-- Default single dropdown -->
+          <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.hash = this.value;">
             <option value="#"> {{ block.settings.filter_title | default: 'Choose an option' }}</option>
             {% for link in filter.links %}
               {% if link.links != blank %}
                 {% for child in link.links %}
-                  <option value="{{ child.url }}">{{ child.title }}</option>
+                  <option value="{{ child.title | handle }}">{{ child.title }}</option>
                 {% endfor %}
               {% else %}
-                <option value="{{ link.url }}">{{ link.title }}</option>
+                <option value="{{ link.title | handle }}">{{ link.title }}</option>
               {% endif %}
             {% endfor %}
           </select>
     
-          <!-- Desktop inline links -->
+          <!-- Inline desktop version -->
           <div class="filter-inline">
             {% for link in filter.links %}
-              <a href="{{ link.url }}">{{ link.title }}</a>
+              <a href="#{{ link.title | handle }}">{{ link.title }}</a>
             {% endfor %}
           </div>
     
         {% else %}
-          <!-- Grouped dropdowns -->
+          <!-- Grouped dropdowns for parents with children -->
           {% for link in filter.links %}
             {% if link.links != blank %}
               <div class="filter-group">
                 <label class="filter-label">{{ link.title }}</label>
-                <select class="filter-select" onchange="updateURLParam('{{ link.title | handleize }}', this.value)">
+                <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.hash = this.value;">
                   <option value="#">Choose an option</option>
                   {% for child in link.links %}
-                    <option value="{{ child.url | uri_escape }}">{{ child.title }}</option>
+                    <option value="{{ child.title | handle }}">{{ child.title }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -74,15 +76,6 @@
           {% endfor %}
         {% endif %}
       </div>
-    
-      <script>
-        function updateURLParam(param, value) {
-          if (!value || value === "#") return;
-          const url = new URL(window.location.href);
-          url.searchParams.set(param, value);
-          window.location.href = url.toString();
-        }
-      </script>
     {% endif %}
   </div>
 </div>
