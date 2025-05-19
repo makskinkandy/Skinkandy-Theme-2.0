@@ -34,10 +34,7 @@
       {% endfor %}
     
       <div class="filter-menu">
-        {% if block.settings.filter_title %}
-          <p class="filter-title">{{ block.settings.filter_title }}:</p>
-        {% endif %}
-    
+  
         {% if parent_count < 2 %}
           <!-- Flat dropdown version -->
           <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.href = this.value;">
