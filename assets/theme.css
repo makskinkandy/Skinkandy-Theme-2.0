@@ -16405,6 +16405,10 @@ small.cart__discount.percentage {
   display: none;
 }
 
+.filter-label {
+  font-weight: 600px;
+}
+
 /* Desktop: show inline, hide select */
 @media (min-width: 768px) {
   .filter-menu {
@@ -16416,6 +16420,10 @@ small.cart__discount.percentage {
   .filter-title {
     display: inline-block;
     margin-right: 10px;
+  }
+  
+  .filter-select {
+    display: none;
   }
 
   .filter-inline {
