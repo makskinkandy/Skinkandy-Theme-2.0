@@ -22,8 +22,6 @@
         {% endif %}
       </div>
     {% endif %}
-
-    
     {% if block.settings.filter_menu != blank %}
       {% assign filter = linklists[block.settings.filter_menu] %}
     
@@ -71,7 +69,7 @@
                 <select class="filter-select" onchange="updateURLParam('{{ link.title | handleize }}', this.value)">
                   <option value="#">Choose an option</option>
                   {% for child in link.links %}
-                    <option value="{{ child.url | url_escape }}">{{ child.title }}</option>
+                    <option value="{{ child.url | uri_escape }}">{{ child.title }}</option>
                   {% endfor %}
                 </select>
               </div>
