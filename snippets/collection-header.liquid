@@ -38,7 +38,7 @@
         {% endif %}
     
         {% if parent_count < 2 %}
-          <!-- Default single dropdown -->
+          <!-- Single dropdown -->
           <select class="filter-select" onchange="if (this.value && this.value !== '#') updateHash(this.value);">
             <option value="#"> {{ block.settings.filter_title | default: 'Choose an option' }}</option>
             {% for link in filter.links %}
@@ -52,7 +52,7 @@
             {% endfor %}
           </select>
     
-          <!-- Desktop inline version -->
+          <!-- Inline links -->
           <div class="filter-inline">
             {% for link in filter.links %}
               <a href="#{{ link.url }}">{{ link.title }}</a>
@@ -79,8 +79,8 @@
     
       <script>
         function updateHash(value) {
-          // Set the full URL as a hash
-          window.location.hash = encodeURIComponent(value);
+          // Set raw URL string as hash without encoding
+          window.location.hash = value;
         }
       </script>
     {% endif %}
