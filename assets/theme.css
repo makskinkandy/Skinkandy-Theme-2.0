@@ -16407,7 +16407,7 @@ small.cart__discount.percentage {
 }
 
 .filter-label {
-  font-weight: 600;
+  font-size: 16px;
 }
 
 .filter-group {
@@ -16424,6 +16424,10 @@ small.cart__discount.percentage {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .filter-label {
+    font-weight: 600;
   }
   
   .filter-title {
