@@ -38,20 +38,6 @@
         {% endif %}
     
         {% if parent_count < 2 %}
-          <!-- Single dropdown -->
-          <select class="filter-select" onchange="if (this.value && this.value !== '#') updateHash(this.value);">
-            <option value="#"> {{ block.settings.filter_title | default: 'Choose an option' }}</option>
-            {% for link in filter.links %}
-              {% if link.links != blank %}
-                {% for child in link.links %}
-                  <option value="{{ child.url }}">{{ child.title }}</option>
-                {% endfor %}
-              {% else %}
-                <option value="{{ link.url }}">{{ link.title }}</option>
-              {% endif %}
-            {% endfor %}
-          </select>
-    
           <!-- Inline links -->
           <div class="filter-inline">
             {% for link in filter.links %}
@@ -65,7 +51,7 @@
             {% if link.links != blank %}
               <div class="filter-group">
                 <label class="filter-label">{{ link.title }}</label>
-                <select class="filter-select" onchange="if (this.value && this.value !== '#') updateHash(this.value);">
+                <select class="filter-select">
                   <option value="#">Choose an option</option>
                   {% for child in link.links %}
                     <option value="{{ child.url }}">{{ child.title }}</option>
@@ -78,20 +64,31 @@
       </div>
     
       <script>
-        function updateHash(value) {
-          if (!value || value === "#") return;
+        function updateHashFromAllDropdowns() {
+          const selects = document.querySelectorAll('.filter-select');
+          const values = [];
       
-          const currentHash = window.location.hash.replace(/^#/, ''); // remove leading #
-          const parts = currentHash ? currentHash.split('/') : [];
+          selects.forEach(select => {
+            const val = select.value;
+            if (val && val !== '#' && !values.includes(val)) {
+              values.push(val);
+            }
+          });
       
-          // Avoid adding duplicates
-          if (!parts.includes(value)) {
-            parts.push(value);
+          if (values.length > 0) {
+            window.location.hash = values.join('/');
+          } else {
+            window.location.hash = '';
           }
-      
-          // Update the hash with all parts joined by "/"
-          window.location.hash = parts.join('');
         }
+      
+        // Attach to all dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+          const selects = document.querySelectorAll('.filter-select');
+          selects.forEach(select => {
+            select.addEventListener('change', updateHashFromAllDropdowns);
+          });
+        });
       </script>
     {% endif %}
   </div>
