@@ -23,27 +23,66 @@
       </div>
     {% endif %}
     {% if block.settings.filter_menu != blank %}
-      {% assign filter = linklists[block.settings.filter_menu] %}
-      <div class="filter-menu">
-        {% if block.settings.filter_title %}
-          <p class="filter-title">{{ block.settings.filter_title }}:</p>
-        {% endif %}
-    
-        <!-- Mobile dropdown -->
-        <select class="filter-select" onchange="if (this.value) window.location.href=this.value;">
-          <option value="">{{ block.settings.filter_title | default: 'Choose an option' }}</option>
-          {% for link in filter.links %}
-            <option value="{{ link.url }}">{{ link.title }}</option>
-          {% endfor %}
-        </select>
-    
-        <!-- Desktop inline links -->
-        <div class="filter-inline">
-          {% for link in filter.links %}
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
+  {% assign filter = linklists[block.settings.filter_menu] %}
+  {% assign parent_with_children = '' | split: ',' %}
+
+  {% for link in filter.links %}
+    {% if link.links != blank %}
+      {% assign parent_with_children = parent_with_children | push: link %}
     {% endif %}
+  {% endfor %}
+
+  <div class="filter-menu">
+    {% if block.settings.filter_title %}
+      <p class="filter-title">{{ block.settings.filter_title }}:</p>
+    {% endif %}
+
+    {% if parent_with_children.size < 2 %}
+      <!-- Default dropdown -->
+      <select class="filter-select" onchange="if (this.value && this.value != '#') window.location.href = this.value;">
+        <option value="#">{{ block.settings.filter_title | default: 'Choose an option' }}</option>
+        {% for link in filter.links %}
+          {% if link.links != blank %}
+            {% for child in link.links %}
+              <option value="{{ child.url }}">{{ child.title }}</option>
+            {% endfor %}
+          {% else %}
+            <option value="{{ link.url }}">{{ link.title }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+
+      <!-- Inline desktop version -->
+      <div class="filter-inline">
+        {% for link in filter.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+
+    {% else %}
+      <!-- Dropdowns for each parent with children -->
+      {% for parent in parent_with_children %}
+        <div class="filter-group">
+          <label class="filter-label">{{ parent.title }}</label>
+          <select class="filter-select" onchange="updateURLParam('filter', this.value)">
+            <option value="#">Choose an option</option>
+            {% for child in parent.links %}
+              <option value="{{ child.url | uri_escape }}">{{ child.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <script>
+    function updateURLParam(key, value) {
+      if (value === "#" || !value) return;
+      const url = new URL(window.location);
+      url.searchParams.set(key, value);
+      window.location.href = url.toString();
+    }
+  </script>
+{% endif %}
   </div>
 </div>
