@@ -16399,6 +16399,7 @@ small.cart__discount.percentage {
   width: 100%;
   padding: 8px;
   margin-top: 8px;
+  min-width: 200px;
 }
 
 .filter-inline {
@@ -16407,6 +16408,14 @@ small.cart__discount.percentage {
 
 .filter-label {
   font-weight: 600px;
+}
+
+.filter-group {
+  margin-right: 15px;
+}
+
+.filter-group:last-child {
+  margin-right: 0;
 }
 
 /* Desktop: show inline, hide select */
