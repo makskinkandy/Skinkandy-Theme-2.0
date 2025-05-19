@@ -79,8 +79,18 @@
     
       <script>
         function updateHash(value) {
-          // Set raw URL string as hash without encoding
-          window.location.hash = value;
+          if (!value || value === "#") return;
+      
+          const currentHash = window.location.hash.replace(/^#/, ''); // remove leading #
+          const parts = currentHash ? currentHash.split('/') : [];
+      
+          // Avoid adding duplicates
+          if (!parts.includes(value)) {
+            parts.push(value);
+          }
+      
+          // Update the hash with all parts joined by "/"
+          window.location.hash = parts.join('/');
         }
       </script>
     {% endif %}
