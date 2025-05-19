@@ -33,39 +33,42 @@
       {% endfor %}
     
       <div class="filter-menu">
+        {% if block.settings.filter_title %}
+          <p class="filter-title">{{ block.settings.filter_title }}:</p>
+        {% endif %}
     
         {% if parent_count < 2 %}
           <!-- Default single dropdown -->
-          <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.hash = this.value;">
+          <select class="filter-select" onchange="if (this.value && this.value !== '#') updateHash(this.value);">
             <option value="#"> {{ block.settings.filter_title | default: 'Choose an option' }}</option>
             {% for link in filter.links %}
               {% if link.links != blank %}
                 {% for child in link.links %}
-                  <option value="{{ child.title | handle }}">{{ child.title }}</option>
+                  <option value="{{ child.url }}">{{ child.title }}</option>
                 {% endfor %}
               {% else %}
-                <option value="{{ link.title | handle }}">{{ link.title }}</option>
+                <option value="{{ link.url }}">{{ link.title }}</option>
               {% endif %}
             {% endfor %}
           </select>
     
-          <!-- Inline desktop version -->
+          <!-- Desktop inline version -->
           <div class="filter-inline">
             {% for link in filter.links %}
-              <a href="#{{ link.title | handle }}">{{ link.title }}</a>
+              <a href="#{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
           </div>
     
         {% else %}
-          <!-- Grouped dropdowns for parents with children -->
+          <!-- Grouped dropdowns -->
           {% for link in filter.links %}
             {% if link.links != blank %}
               <div class="filter-group">
                 <label class="filter-label">{{ link.title }}</label>
-                <select class="filter-select" onchange="if (this.value && this.value !== '#') window.location.hash = this.value;">
+                <select class="filter-select" onchange="if (this.value && this.value !== '#') updateHash(this.value);">
                   <option value="#">Choose an option</option>
                   {% for child in link.links %}
-                    <option value="{{ child.title | handle }}">{{ child.title }}</option>
+                    <option value="{{ child.url }}">{{ child.title }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -73,6 +76,13 @@
           {% endfor %}
         {% endif %}
       </div>
+    
+      <script>
+        function updateHash(value) {
+          // Set the full URL as a hash
+          window.location.hash = encodeURIComponent(value);
+        }
+      </script>
     {% endif %}
   </div>
 </div>
