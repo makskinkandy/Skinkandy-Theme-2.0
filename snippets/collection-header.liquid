@@ -64,31 +64,20 @@
       </div>
     
       <script>
-        function updateHashFromAllDropdowns() {
-          const selects = document.querySelectorAll('.filter-select');
-          const values = [];
-      
-          selects.forEach(select => {
-            const val = select.value;
-            if (val && val !== '#' && !values.includes(val)) {
-              values.push(val);
+          function updateHash(value) {
+            if (!value || value === "#") return;
+        
+            const currentHash = window.location.hash.replace(/^#/, ''); // remove leading #
+            const parts = currentHash ? currentHash.split('/') : [];
+        
+            // Avoid adding duplicates
+            if (!parts.includes(value)) {
+              parts.push(value);
             }
-          });
-      
-          if (values.length > 0) {
-            window.location.hash = values.join('');
-          } else {
-            window.location.hash = '';
+        
+            // Update the hash with all parts joined by "/"
+            window.location.hash = parts.join('/');
           }
-        }
-      
-        // Attach to all dropdowns
-        document.addEventListener('DOMContentLoaded', function() {
-          const selects = document.querySelectorAll('.filter-select');
-          selects.forEach(select => {
-            select.addEventListener('change', updateHashFromAllDropdowns);
-          });
-        });
       </script>
     {% endif %}
   </div>
