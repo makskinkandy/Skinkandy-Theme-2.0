@@ -103,6 +103,7 @@
         "button_1_url": "shopify://collections/shop-all",
         "button_2_text": "Book Now",
         "button_2_url": "shopify://pages/professional-body-piercing-services",
+        "text_color": "#ffffff",
         "bg_color": "#000000"
       }
     },
@@ -285,9 +286,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Flatback with Blue Eye Cubic Zirconia",
-            "url": "shopify://products/titanium-blue-eye-cubic-zirconia-flatback-earring",
-            "image": "shopify://shop_images/9355442045838.jpg"
+            "title": "Titanium Segment Ring with Spike Heart Design",
+            "url": "shopify://products/titanium-segment-ring-with-spike-heart-design",
+            "image": "shopify://shop_images/9355442045739-1.jpg"
           }
         },
         "image_PGUbpy": {
@@ -295,9 +296,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Navel Bar with Teardrop Cubic Zirconia in Claw Arc Setting",
-            "url": "shopify://products/titanium-teardrop-cz-claw-arc-navel-bar-gold-silver",
-            "image": "shopify://shop_images/9355442044824.jpg"
+            "title": "Titanium Segment Ring with Pink Heart Cubic Zirconia",
+            "url": "shopify://products/titanium-segment-ring-with-pink-heart-cubic-zirconia",
+            "image": "shopify://shop_images/9355442045760-1.jpg"
           }
         },
         "image_HLw3ac": {
@@ -305,9 +306,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Round Ripple Segment Ring with Cubic Zirconia",
-            "url": "shopify://products/titanium-round-ripple-cz-segment-ring",
-            "image": "shopify://shop_images/9355442045043-thumb.jpg"
+            "title": "Titanium Segment Ring with Micro Tennis Set Cubic Zirconia",
+            "url": "shopify://products/titanium-segment-ring-with-micro-tennis-set-cubic-zirconia",
+            "image": "shopify://shop_images/9355442045814-1.jpg"
           }
         },
         "image_4ycQMj": {
@@ -315,9 +316,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Segment Ring with Butterfly Cubic Zirconia",
-            "url": "shopify://products/butterfly-cz-titanium-segment-ring-16g-gold-clear",
-            "image": "shopify://shop_images/9355442044268-thumb.jpg"
+            "title": "Titanium Hinged Segment Ring with Homing Design",
+            "url": "shopify://products/titanium-hinged-segment-ring-with-homing-design",
+            "image": "shopify://shop_images/9355442045777-2.jpg"
           }
         },
         "image_rzG7Pe": {
@@ -325,9 +326,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Flatback with Dual Marquis and Round Dangle Cubic Zirconia",
-            "url": "shopify://products/titanium-dual-marquis-cz-dangle-flatback-earring-16g-gold-silver",
-            "image": "shopify://shop_images/9355442045906.jpg"
+            "title": "Titanium Segment Ring with 2 Snakes and Cubic Zirconia",
+            "url": "shopify://products/titanium-segment-ring-with-2-snakes-and-cubic-zirconia",
+            "image": "shopify://shop_images/9355442045746-1.jpg"
           }
         },
         "image_VaJ6GC": {
@@ -335,9 +336,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Surgical Steel Radiant Heart Earrings",
-            "url": "shopify://products/316l-4mm-radiant-heart-earrings-gold",
-            "image": "shopify://shop_images/9355442044886.jpg"
+            "title": "Titanium Segment Ring with 2 Hand Heart Design",
+            "url": "shopify://products/titanium-segment-ring-with-2-hand-heart-design-gold",
+            "image": "shopify://shop_images/9355442045784-1.jpg"
           }
         },
         "image_HnCXX3": {
@@ -345,9 +346,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Flatback with Two Star Cubic Zirconia",
-            "url": "shopify://products/titanium-star-cz-flatback-earring-hypoallergenic",
-            "image": "shopify://shop_images/9355442045852-thumb.jpg"
+            "title": "Titanium Threadless Nipple Bar with Heart Cubic Zirconia",
+            "url": "shopify://products/titanium-threadless-nipple-bar-with-heart-cubic-zirconia",
+            "image": "shopify://shop_images/9355442045678.jpg"
           }
         },
         "image_NKAw4x": {
@@ -355,9 +356,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Navel Clicker with Inset Paved Round Cubic Zirconia",
+            "title": "Titanium Internally Threaded Floating Navel Bar with Teardrop Claw-Set Cubic Zirconia",
             "url": "shopify://products/titanium-inset-paved-cz-navel-clicker-14g-gold-silver",
-            "image": "shopify://shop_images/9355442044664.jpg"
+            "image": "shopify://shop_images/9355442098728.jpg"
           }
         },
         "image_37zdJV": {
@@ -365,9 +366,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Segment Ring with Marquis Cubic Zirconia",
-            "url": "shopify://products/titanium-marquis-cz-segment-ring",
-            "image": "shopify://shop_images/9355442044282-thumb.jpg"
+            "title": "Titanium Internally Threaded Floating Navel Bar with Heart Claw-Set Cubic Zirconia",
+            "url": "shopify://products/titanium-internally-threaded-floating-navel-bar-with-heart-claw-set-cubic-zirconia",
+            "image": "shopify://shop_images/9355442098681.jpg"
           }
         },
         "image_YgGABm": {
@@ -375,9 +376,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Flatback with Flower, Dual Round, and Marquis Cubic Zirconia",
-            "url": "shopify://products/titanium-flower-dual-round-marquis-cz-flatback-16g",
-            "image": "shopify://shop_images/9355442045951.jpg"
+            "title": "Titanium Internally Threaded Floating Navel Bar with Claw-Set Cubic Zirconia",
+            "url": "shopify://products/titanium-internally-threaded-floating-navel-bar-with-claw-set-cubic-zirconia",
+            "image": "shopify://shop_images/9355442098704.jpg"
           }
         },
         "image_midiYa": {
@@ -385,9 +386,9 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Navel Bar with Three Cubic Zirconia Dangles in Half-Bezel Arc Setting",
-            "url": "shopify://products/3-cz-dangle-titanium-navel-bar-half-bezel-arc-set-14g",
-            "image": "shopify://shop_images/9355442044572-thumb_c8b1141d-a984-4fdf-a43a-e4474a6cbf28.jpg"
+            "title": "Titanium Internally Threaded Flatback with Radiating Crimped Heart",
+            "url": "shopify://products/titanium-internally-threaded-flatback-earring-with-radiating-crimped-heart",
+            "image": "shopify://shop_images/9355442045968-2.jpg"
           }
         },
         "image_KHJHfk": {
@@ -395,9 +396,29 @@
           "settings": {
             "disable_overlay": true,
             "disable_button": false,
-            "title": "Titanium Twisted Rope Segment Ring with Cubic Zirconia",
-            "url": "shopify://products/titanium-twisted-rope-cz-segment-ring",
-            "image": "shopify://shop_images/9355442045791-thumb.jpg"
+            "title": "Titanium Internally Threaded Flatback with Moss Agate and Cubic Zirconia Spear",
+            "url": "shopify://products/titanium-internally-threaded-flatback-earring-with-moss-agate-and-cubic-zirconia-spear-silver-tone",
+            "image": "shopify://shop_images/9355442045920-2_25e3ca02-2622-4b76-83e7-82fee2e737ec.jpg"
+          }
+        },
+        "image_AXefMQ": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "316L Stainless Steel Basic Hoop Earring with 3 Round Cubic Zirconia",
+            "url": "shopify://products/316l-stainless-steel-basic-hoop-earring-with-3-round-cubic-zirconia",
+            "image": "shopify://shop_images/9355442046149_534469ca-262f-4770-b604-4c52db9d6bf8.jpg"
+          }
+        },
+        "image_LL3Ftn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "Titanium Hoop Earring with 2.5mm Rounded Rectangle Design",
+            "url": "shopify://products/titanium-hoop-earring-with-2-5mm-rounded-rectangle-design",
+            "image": "shopify://shop_images/9355442046057.jpg"
           }
         }
       },
@@ -413,7 +434,9 @@
         "image_37zdJV",
         "image_YgGABm",
         "image_midiYa",
-        "image_KHJHfk"
+        "image_KHJHfk",
+        "image_AXefMQ",
+        "image_LL3Ftn"
       ],
       "settings": {
         "title": "JUST LANDED",
