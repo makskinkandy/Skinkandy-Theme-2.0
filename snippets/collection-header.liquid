@@ -64,20 +64,32 @@
       </div>
     
       <script>
-          function updateHash(value) {
-            if (!value || value === "#") return;
-        
-            const currentHash = window.location.hash.replace(/^#/, ''); // remove leading #
-            const parts = currentHash ? currentHash.split('/') : [];
-        
-            // Avoid adding duplicates
-            if (!parts.includes(value)) {
-              parts.push(value);
+        function updateHashWithSingleValue(selectElement) {
+          const selectedValue = selectElement.value;
+      
+          // Reset all other dropdowns
+          document.querySelectorAll('.filter-select').forEach(select => {
+            if (select !== selectElement) {
+              select.selectedIndex = 0; // reset to first option
             }
-        
-            // Update the hash with all parts joined by "/"
-            window.location.hash = parts.join('/');
+          });
+      
+          // Update hash with only the selected value
+          if (selectedValue && selectedValue !== '#') {
+            window.location.hash = selectedValue;
+          } else {
+            window.location.hash = '';
           }
+        }
+      
+        // Attach handler
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('.filter-select').forEach(select => {
+            select.addEventListener('change', function() {
+              updateHashWithSingleValue(this);
+            });
+          });
+        });
       </script>
     {% endif %}
   </div>
