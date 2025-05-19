@@ -16408,10 +16408,11 @@ small.cart__discount.percentage {
 
 .filter-label {
   font-size: 16px;
+  font-weight: 600;
 }
 
 .filter-group {
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .filter-group:last-child {
@@ -16426,8 +16427,8 @@ small.cart__discount.percentage {
     justify-content: center;
   }
 
-  .filter-label {
-    font-weight: 600;
+  .filter-group {
+    margin-right: 15px;
   }
   
   .filter-title {
