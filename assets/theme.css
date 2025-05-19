@@ -16430,10 +16430,6 @@ small.cart__discount.percentage {
     display: inline-block;
     margin-right: 10px;
   }
-  
-  .filter-select {
-    display: none;
-  }
 
   .filter-inline {
     display: flex;
