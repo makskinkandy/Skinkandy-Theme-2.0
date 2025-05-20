@@ -278,7 +278,9 @@
         "button_text": "",
         "button_url": "",
         "bottom_border": false,
-        "enable_hover": true
+        "enable_hover": true,
+        "get_product_list": false,
+        "collection_link": ""
       }
     },
     "collection_showcase_dPaT8V": {
@@ -448,7 +450,9 @@
         "button_text": "Shop now",
         "button_url": "shopify://collections/shop-all",
         "bottom_border": true,
-        "enable_hover": false
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": ""
       }
     },
     "two_column_icon_image_c79Kr9": {
