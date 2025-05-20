@@ -390,7 +390,9 @@
         "button_text": "Shop now",
         "button_url": "shopify://collections/shop-all",
         "bottom_border": true,
-        "enable_hover": false
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "new-in"
       }
     },
     "two_column_icon_image_c79Kr9": {
