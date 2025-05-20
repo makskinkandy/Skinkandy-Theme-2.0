@@ -16447,3 +16447,12 @@ small.cart__discount.percentage {
     color: inherit;
   }
 }
+
+.page-new-in .section-content__text:after {
+  content: "Most popular placements:";
+  display: block;
+  margin-inline: auto;
+  max-width: fit-content;
+  margin-top: 25px;
+  font-weight: 600;
+}
