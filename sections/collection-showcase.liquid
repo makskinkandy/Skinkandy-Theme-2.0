@@ -20,27 +20,45 @@
       {{ processed_words }}
     </h2>
     <div class="collection-showcase__slider">
-      {% for block in section.blocks %}
-        <div class="collection-showcase__item">
-          <a href="{{ block.settings.url }}">
-            {% if block.settings.disable_button == false %}
-              <h3 class="collection-showcase__title">{{ block.settings.title }}</h3>
-            {% endif %}
-            <div class="image-wrapper">
-              <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Collections" class="collection-showcase__img">
-            </div>
-            {% if block.settings.disable_overlay != true %}
-              <div class="overlay"></div>
-            {% endif %}
-            {% if section.settings.mode == 'light' and block.settings.disable_button == false  %}
-              <a class="btn btn--black">SHOP NOW</a>
-            {% endif %}
-            {% if section.settings.mode == 'light' and block.settings.disable_button == true and block.settings.title != blank %}
-              <h3 class="collection-showcase__title no-btn">{{ block.settings.title }}</h3>
-            {% endif %}
-          </a>
-        </div>
-      {% endfor%}
+      {% if section.settings.get_product_list and section.settings.collection_link != blank %}
+        {% assign collection_handle = section.settings.collection_link %}
+        {% assign product_collection = collections[collection_handle] %}
+        {% for product in product_collection.products limit: 14 %}
+          <div class="collection-showcase__item">
+            <a href="{{ product.url }}">
+              <h3 class="collection-showcase__title">{{ product.title }}</h3>
+              <div class="image-wrapper">
+                <img src="{{ product.featured_image | image_url }}" alt="Image for {{ product.title }}" class="collection-showcase__img">
+              </div>
+              {% if section.settings.mode == 'light' %}
+                <a class="btn btn--black">SHOP NOW</a>
+              {% endif %}
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          <div class="collection-showcase__item">
+            <a href="{{ block.settings.url }}">
+              {% if block.settings.disable_button == false %}
+                <h3 class="collection-showcase__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              <div class="image-wrapper">
+                <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Collections" class="collection-showcase__img">
+              </div>
+              {% if block.settings.disable_overlay != true %}
+                <div class="overlay"></div>
+              {% endif %}
+              {% if section.settings.mode == 'light' and block.settings.disable_button == false %}
+                <a class="btn btn--black">SHOP NOW</a>
+              {% endif %}
+              {% if section.settings.mode == 'light' and block.settings.disable_button == true and block.settings.title != blank %}
+                <h3 class="collection-showcase__title no-btn">{{ block.settings.title }}</h3>
+              {% endif %}
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}
     </div>
     {% if section.settings.button_text != blank %}
       <a href="{{ section.settings.button_url }}" class="btn btn--line">{{ section.settings.button_text }}</a>
@@ -51,7 +69,12 @@
   </div>
 </div>
 
-{% if section.blocks.size > 1 and section.blocks.size > 5 %}
+{% assign slider_item_count = section.blocks.size %}
+{% if section.settings.get_product_list and section.settings.collection_link != blank %}
+  {% assign slider_item_count = 14 %}
+{% endif %}
+
+{% if slider_item_count > 1 and slider_item_count > 5 %}
   <script>
     $('.showcase-{{ section.id }} .collection-showcase__slider').slick({
       infinite: true,
@@ -184,6 +207,16 @@
         "type": "checkbox",
         "id": "enable_hover",
         "label": "Enable Image Hover"
+      },
+      {
+        "type": "checkbox",
+        "id": "get_product_list",
+        "label": "Get Product List from Collection"
+      },
+      {
+        "type": "collection",
+        "id": "collection_link",
+        "label": "Collection to Pull Products From"
       }
     ],
     "blocks": [
