@@ -33,7 +33,7 @@ function setCookie(name, value, options = {}) {
 }
 
 
-  document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
     let timeDelay = 2;
     
     if ({{ settings.popup_delay }}) {
@@ -86,6 +86,8 @@ function setCookie(name, value, options = {}) {
       document.body.classList.add("no-scroll");
     });
   });
+
+  console.log("Form Loaded");
   
 });
 
