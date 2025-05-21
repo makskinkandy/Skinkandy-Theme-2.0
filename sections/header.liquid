@@ -132,6 +132,13 @@
     </div>
   </div>
   {% render 'form-popup-script' %}
+  {% if page.metafields.custom.giveaway %}
+    <style>
+      div#response {
+        display: none;
+      }
+    </style>
+  {% endif %}
 {%  endif %}
 
 
