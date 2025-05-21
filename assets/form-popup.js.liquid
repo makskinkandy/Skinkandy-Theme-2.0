@@ -80,6 +80,7 @@ function setCookie(name, value, options = {}) {
 
   popupButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      console.log("TEST");
       e.preventDefault();
       POPUP.classList.remove("hidden");
       document.body.classList.add("no-scroll");
