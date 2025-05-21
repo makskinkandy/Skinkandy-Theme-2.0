@@ -19,7 +19,8 @@
           {% endif %}
         {% endif %}
         {% if page.metafields.custom.popup_image != blank %}
-          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image">
+          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
+          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
         {% else %}
           {% if page.metafields.custom.giveaway %}
             <div class="video-container">
