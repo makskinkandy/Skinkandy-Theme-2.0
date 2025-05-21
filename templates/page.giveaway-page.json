@@ -120,6 +120,7 @@
         "text_6j4jia",
         "button_BkU3Lc"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "center",
@@ -151,6 +152,7 @@
         "text_dycJhX",
         "button_PLKNXr"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "center",
