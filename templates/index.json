@@ -102,7 +102,7 @@
       "settings": {
         "button_1_text": "Shop Now",
         "button_1_url": "shopify://collections/shop-all",
-        "button_2_text": "Book Now",
+        "button_2_text": "BOOK A PIERCING",
         "button_2_url": "shopify://pages/professional-body-piercing-services",
         "text_color": "#ffffff",
         "bg_color": "#000000"
