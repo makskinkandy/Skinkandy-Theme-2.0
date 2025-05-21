@@ -1,4 +1,6 @@
 const btnPopup = document.getElementById('btn-popup');
+const POPUP = document.querySelector(".form-popup");
+const templateName = "{{ page.metafields | default: 'No metafield value' | escape }}";
 
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -33,8 +35,7 @@ function setCookie(name, value, options = {}) {
 
   document.addEventListener('DOMContentLoaded', (event) => {
     let timeDelay = 2;
-    const POPUP = document.querySelector(".form-popup");
-
+    
     if ({{ settings.popup_delay }}) {
         timeDelay = {{ settings.popup_delay }};
     }
@@ -48,7 +49,6 @@ function setCookie(name, value, options = {}) {
         }, totalDelay);
     }
 
-    const templateName = "{{ page.metafields | default: 'No metafield value' | escape }}";
     console.log("Current template name: ", templateName);
 
     document.querySelector(".popup-close").addEventListener("click", (e) => {
