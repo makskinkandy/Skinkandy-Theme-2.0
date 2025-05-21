@@ -19,6 +19,7 @@ body.no-scroll {
   align-items: center;
   &.giveaway {
     align-items: start;
+    padding-top: 0;
   }
   &.bfcm {
     padding-top: 0;
