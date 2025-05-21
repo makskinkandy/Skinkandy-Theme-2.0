@@ -12,5 +12,24 @@
   "context": {
     "market": "new-zealand"
   },
-  "sections": {}
+  "sections": {
+    "raw_code_J9gab": {
+      "type": "raw-code",
+      "disabled": false,
+      "settings": {
+        "custom_html": "<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n      window.location.href = \"https://skinkandy.com/en-nz\";\n    });\n  </script>"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Custom HTML Section"
+    }
+  },
+  "order": [
+    "header_banner_pDgLB3",
+    "main",
+    "rich_text_qq6MK6",
+    "rich_text_zywGRq",
+    "rich_text_Fw6LhT",
+    "raw_code_J9gab"
+  ]
 }
