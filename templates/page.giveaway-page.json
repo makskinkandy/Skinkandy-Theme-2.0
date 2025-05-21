@@ -68,7 +68,8 @@
           "type": "button",
           "settings": {
             "link": "shopify://pages/store-locations",
-            "link_text": "Find your Closest Store"
+            "link_text": "Find your Closest Store",
+            "css_class": ""
           }
         }
       },
@@ -102,7 +103,8 @@
           "type": "button",
           "settings": {
             "link": "https://support.skinkandy.com/s/booking-form",
-            "link_text": "Book now"
+            "link_text": "Book now",
+            "css_class": ""
           }
         }
       },
@@ -127,10 +129,19 @@
             "enlarge_text": true,
             "text": "<p><strong>Join our KandyClub to be the first in the know about opening details and promotions.</strong></p>"
           }
+        },
+        "button_PLKNXr": {
+          "type": "button",
+          "settings": {
+            "link": "#!",
+            "link_text": "Join Now",
+            "css_class": "js-btn-popup"
+          }
         }
       },
       "block_order": [
-        "text_dycJhX"
+        "text_dycJhX",
+        "button_PLKNXr"
       ],
       "name": "Rich text",
       "settings": {
