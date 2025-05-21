@@ -160,13 +160,6 @@
         "divider": false,
         "reduce_spacing": false
       }
-    },
-    "raw_code_eYbqBH": {
-      "type": "raw-code",
-      "name": "Custom HTML Section",
-      "settings": {
-        "custom_html": "<script>\nfetch('https://ipinfo.io/json?token=419c3753b441d1')\n  .then(response => response.json())\n  .then(data => {\n    console.log('User IP:', data.ip);\n    console.log('User country:', data.country);\n\n    if (data.country === 'NZ') {\n      window.location.href = 'https://skinkandy.com/en-nz';\n    }\n  })\n  .catch(err => {\n    console.error('Failed to get IP info', err);\n  });\n</script>"
-      }
     }
   },
   "order": [
@@ -174,7 +167,6 @@
     "main",
     "rich_text_qq6MK6",
     "rich_text_zywGRq",
-    "rich_text_Fw6LhT",
-    "raw_code_eYbqBH"
+    "rich_text_Fw6LhT"
   ]
 }
