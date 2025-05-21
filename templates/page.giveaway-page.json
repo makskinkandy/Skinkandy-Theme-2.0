@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Location_NT_Mobile_Banner_7_1.jpg",
-            "image": "shopify://shop_images/Location_NT_Banner_8_1.jpg",
+            "image_mobile": "shopify://shop_images/May-Comp-Landing-Page-Banner-Mobile.jpg",
+            "image": "shopify://shop_images/May-Comp-Landing-Page-Banner-Desktop.jpg",
             "banner_url": "",
             "heading": "",
             "short_description": "",
