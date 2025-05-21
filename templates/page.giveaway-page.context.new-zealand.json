@@ -17,7 +17,7 @@
       "type": "raw-code",
       "disabled": false,
       "settings": {
-        "custom_html": "<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n      window.location.href = \"https://skinkandy.com/en-nz\";\n    });\n  </script>"
+        "custom_html": ""
       },
       "blocks": {},
       "block_order": [],
