@@ -245,7 +245,7 @@ body.no-scroll {
           font-size: 10px;
           max-width: 440px;
           margin-inline: auto;
-          margin-bottom: 13px;
+          margin-top: 13px;
         }
         &.success {
           max-width: 369px;
