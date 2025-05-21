@@ -53,7 +53,7 @@
         "heading_HgBbid": {
           "type": "heading",
           "settings": {
-            "title": "WIN IPAD + APPLE PENCIL",
+            "title": "{WIN} {IPAD} {+} {APPLE} {PENCIL}",
             "heading_tag": "h1"
           }
         },
@@ -61,16 +61,46 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Join our KandyClub for a chance to win. </p><p>Exclusive perks, special events, member-only offers and discounts...</p><p><br/></p><p><br/></p><p>To enter our giveaway, enter your details below. Once you have joined, you are automatically in the running to WIN! </p>"
+            "text": "<p>Join our KandyClub for a chance to win. </p><p>Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details. Once you have joined, you are automatically in the running to WIN!</p>"
+          }
+        },
+        "button_9GJpYb": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/store-locations",
+            "link_text": "Find your Closest Store"
           }
         }
       },
       "block_order": [
         "heading_HgBbid",
-        "text_iX7awe"
+        "text_iX7awe",
+        "button_9GJpYb"
       ],
       "custom_css": [
         "h1 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_zywGRq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6j4jia": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We are the premier destination for all piercing services and accessories. Our highly trained team of piercing experts look forward to making your piercing dreams a reality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_6j4jia"
       ],
       "name": "Rich text",
       "settings": {
@@ -84,6 +114,7 @@
   "order": [
     "header_banner_pDgLB3",
     "main",
-    "rich_text_qq6MK6"
+    "rich_text_qq6MK6",
+    "rich_text_zywGRq"
   ]
 }
