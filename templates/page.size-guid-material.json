@@ -66,7 +66,8 @@
             "text": "<h4><strong>Luxurious everyday wear</strong></h4><p></p><p>Gold has been a trusted jewellery material for centuries, and 14K solid gold is a premium choice for those looking for a safe, stylish, and long-lasting option.  14KT gold is the perfect balance of purity and strength.</p><ul><li>Durable – stronger than 18K or 24K Solid Gold</li><li>Generally safe option for those with mild skin sensitivities – Minimised risk of irritation and reactions</li><li>Tarnish and wear resistant – Unlike plated or filled gold, solid gold will maintain its shape and colour without fading over time </li><li>Ideal for both new & healed piercings </li></ul>",
             "text_size": "small",
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/14kt-gold"
+            "button_link": "shopify://collections/14kt-gold",
+            "new_tab": false
           }
         },
         "text_block_AW7aTb": {
@@ -86,7 +87,8 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         }
       },
@@ -99,10 +101,13 @@
         "class": "",
         "title": "CHOOSING THE RIGHT PIERCING JEWELLERY MATERIAL",
         "description": "<p>The material of your jewellery plays a key role in comfort, healing, and long-term wearability. At SkinKandy, we only use high-quality materials to ensure a safe and stylish piercing experience.</p>",
+        "button_text": "",
+        "button_url": "",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
+        "two_column": false,
         "max_width": 1704
       }
     },
@@ -126,7 +131,8 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         },
         "text_block_DLeX76": {
@@ -145,7 +151,8 @@
             "text": "<h4>Lightweight & Biocompatible</h4><p></p><p>Titanium is the preferred material among professional piercers and is considered one of the safest metals for body jewellery. Commonly used in surgical implants, it’s highly biocompatible and hypoallergenic, making it ideal for sensitive skin and long-term wear.</p><ul><li>Extremely lightweight – About 45% lighter than steel, reducing pressure on your piercing </li><li>Nickel-free & hypoallergenic – The best option for those with metal sensitivities </li><li>Encourages faster healing – Reduces the risk of irritation and rejection </li><li>Resistant to corrosion and tarnishing — even in water or sweat</li></ul>",
             "text_size": "small",
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/titanium"
+            "button_link": "shopify://collections/titanium",
+            "new_tab": false
           }
         }
       },
@@ -158,10 +165,13 @@
         "class": "",
         "title": "",
         "description": "",
+        "button_text": "",
+        "button_url": "",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
+        "two_column": false,
         "max_width": 1704
       }
     },
@@ -184,7 +194,8 @@
             "text": "<h4>Durable & Affordable </h4><p></p><p>Surgical steel is a widely used metal in piercing jewellery due to its strength, affordability, and polished finish. </p><ul><li>High-quality, durable material – Resistant to scratches and everyday wear </li><li>Affordable option – A great choice for healed piercings </li><li>Corrosion-resistant – Won’t rust or degrade over time </li></ul><p><strong>Keep in mind: </strong>While 316L surgical steel is suitable for most people, it does contain a small amount of nickel. If you have a known nickel allergy, we recommend opting for implant-grade titanium or 14K solid gold for a completely hypoallergenic experience.</p>",
             "text_size": "small",
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/316l-surgical-steel-piercing-jewellery"
+            "button_link": "shopify://collections/316l-surgical-steel-piercing-jewellery",
+            "new_tab": false
           }
         },
         "text_block_fD4QTm": {
@@ -204,7 +215,8 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": ""
+            "button_link": "",
+            "new_tab": false
           }
         }
       },
@@ -217,10 +229,13 @@
         "class": "",
         "title": "",
         "description": "",
+        "button_text": "",
+        "button_url": "",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
+        "two_column": false,
         "max_width": 1704
       }
     },
@@ -237,8 +252,8 @@
         "button_8nT9jJ": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/shop-all",
-            "link_text": "SHOP NOW"
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "BOOK NOW"
           }
         }
       },
