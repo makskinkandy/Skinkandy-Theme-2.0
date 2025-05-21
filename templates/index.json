@@ -43,8 +43,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Dare_to_be_different_Mobile.jpg",
-            "image": "shopify://shop_images/Dare_to_be_different_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-Campaign.jpg",
+            "image": "shopify://shop_images/Homepage-Banner-Desktop-Campaign.jpg",
             "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",
@@ -98,7 +98,6 @@
     },
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
-      "disabled": true,
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "Shop Now",
