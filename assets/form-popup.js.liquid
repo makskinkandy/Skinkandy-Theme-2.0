@@ -79,6 +79,7 @@ function setCookie(name, value, options = {}) {
   const genBtn = document.querySelector(".js-btn-popup");
   
   genBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     POPUP.classList.remove("hidden");
     document.body.classList.add('no-scroll');
   });
@@ -87,7 +88,8 @@ function setCookie(name, value, options = {}) {
 
 const dobInput = document.getElementById('dob');
 
-btnPopup.addEventListener("click", () => {
+btnPopup.addEventListener("click", (e) => {
+  e.preventDefault();
   POPUP.classList.remove("hidden");
   document.body.classList.add('no-scroll');
 });
