@@ -1897,10 +1897,10 @@
     }
   }
   .btn {
+    max-width: fit-content;
     @media screen and (max-width: 980px) {
       display: block;
       margin-inline: auto;
-      max-width: fit-content;
     }
   }
   .left-content {
