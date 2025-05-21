@@ -13,15 +13,15 @@
     "market": "au"
   },
   "sections": {
-    "liquid_block_EQ6w8": {
-      "type": "liquid-block",
+    "raw_code_XcmRr": {
+      "type": "raw-code",
       "disabled": false,
       "settings": {
-        "custom_liquid_code": "<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    {% if localization.country.iso_code == 'NZ' %}\n      window.location.href = \"https://skinkandy.com/en-nz\"; // or your custom NZ page\n    {% endif %}\n  });\n</script>"
+        "custom_html": "<script>\nfetch('https://ipinfo.io/json?token=419c3753b441d1')\n  .then(response => response.json())\n  .then(data => {\n    console.log('User IP:', data.ip);\n    console.log('User country:', data.country);\n\n    if (data.country === 'NZ') {\n      window.location.href = 'https://skinkandy.com/en-nz';\n    }\n  })\n  .catch(err => {\n    console.error('Failed to get IP info', err);\n  });\n</script>"
       },
       "blocks": {},
       "block_order": [],
-      "name": "Custom Liquid Section"
+      "name": "Custom HTML Section"
     }
   },
   "order": [
@@ -30,6 +30,6 @@
     "rich_text_qq6MK6",
     "rich_text_zywGRq",
     "rich_text_Fw6LhT",
-    "liquid_block_EQ6w8"
+    "raw_code_XcmRr"
   ]
 }
