@@ -17,7 +17,7 @@
       "type": "liquid-block",
       "disabled": false,
       "settings": {
-        "custom_liquid_code": "<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    {% if request.country.iso_code == 'NZ' %}\n      window.location.href = \"https://skinkandy.com/en-nz\"; // or your custom NZ page\n    {% endif %}\n  });\n</script>\n\n{{ localization.country.iso_code }}"
+        "custom_liquid_code": "<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    {% if localization.country.iso_code == 'NZ' %}\n      window.location.href = \"https://skinkandy.com/en-nz\"; // or your custom NZ page\n    {% endif %}\n  });\n</script>"
       },
       "blocks": {},
       "block_order": [],
