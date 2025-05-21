@@ -64,6 +64,13 @@
             "text": "<p><strong>Join our KandyClub</strong> for a chance to win. </p><p>Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details. Once you have joined, you are automatically in the running to <strong>WIN!</strong></p><p>The lucky winner will be contacted on the <strong>23rd of June 2025.</strong></p><p><strong>GOODLUCK</strong></p>"
           }
         },
+        "text_aa77zK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p>"
+          }
+        },
         "button_9GJpYb": {
           "type": "button",
           "settings": {
@@ -76,6 +83,7 @@
       "block_order": [
         "heading_HgBbid",
         "text_iX7awe",
+        "text_aa77zK",
         "button_9GJpYb"
       ],
       "custom_css": [
