@@ -78,12 +78,14 @@ function setCookie(name, value, options = {}) {
   
 });
 
-const genBtn = document.querySelector(".js-btn-popup");
-  
-genBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  POPUP.classList.remove("hidden");
-  document.body.classList.add('no-scroll');
+const popupButtons = document.querySelectorAll(".js-btn-popup");
+
+popupButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    POPUP.classList.remove("hidden");
+    document.body.classList.add("no-scroll");
+  });
 });
 
 const dobInput = document.getElementById('dob');
