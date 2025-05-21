@@ -135,7 +135,6 @@ body.no-scroll {
     border-radius: 1.5625em;
     padding-top: 4.375em;
     min-height: 58.6875em;
-    overflow: hidden;
     @media screen and (max-width: 640px) {
       display: block;
       max-height: 100%;
@@ -261,6 +260,7 @@ body.no-scroll {
     }
     .form-popup__left {
       border-radius: 1.5625em;
+      overflow: hidden;
      .popup-image {
         max-width: 100%;
         width: 100%;
