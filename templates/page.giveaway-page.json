@@ -133,7 +133,7 @@
         "button_PLKNXr": {
           "type": "button",
           "settings": {
-            "link": "#!",
+            "link": "#",
             "link_text": "Join Now",
             "css_class": "js-btn-popup"
           }
