@@ -1,6 +1,21 @@
+<div class="custom-liquid-section">
+  {{ section.settings.custom_liquid_code }}
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Liquid Section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid_code",
+      "label": "Custom Liquid Code",
+      "info": "Enter Liquid code to render in this section. For example: {{ shop.name }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Liquid Section"
+    }
+  ]
+}
 {% endschema %}
