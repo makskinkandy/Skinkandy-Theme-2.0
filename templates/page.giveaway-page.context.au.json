@@ -12,24 +12,12 @@
   "context": {
     "market": "au"
   },
-  "sections": {
-    "raw_code_e6BxH": {
-      "type": "raw-code",
-      "disabled": false,
-      "settings": {
-        "custom_html": "<script>\nfetch('https://ipinfo.io/json?token=419c3753b441d1')\n  .then(response => response.json())\n  .then(data => {\n    console.log('User IP:', data.ip);\n    console.log('User country:', data.country);\n\n    if (data.country === 'NZ') {\n      window.location.href = 'https://skinkandy.com/en-nz';\n    }\n  })\n  .catch(err => {\n    console.error('Failed to get IP info', err);\n  });\n</script>"
-      },
-      "blocks": {},
-      "block_order": [],
-      "name": "Custom HTML Section"
-    }
-  },
+  "sections": {},
   "order": [
     "header_banner_pDgLB3",
     "main",
     "rich_text_qq6MK6",
     "rich_text_zywGRq",
-    "rich_text_Fw6LhT",
-    "raw_code_e6BxH"
+    "rich_text_Fw6LhT"
   ]
 }
