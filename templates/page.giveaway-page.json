@@ -76,7 +76,7 @@
           "settings": {
             "link": "#!",
             "link_text": "JOIN KANDYCLUB NOW",
-            "css_class": ""
+            "css_class": "js-btn-popup"
           }
         }
       },
