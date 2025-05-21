@@ -42,7 +42,7 @@
           </div>
         {%- when 'button' -%}
           <div class="rte">
-            <a href="{{ block.settings.link }}" class="btn btn--primary">
+            <a href="{{ block.settings.link }}" class="btn btn--primary {{ block.settings.css_class }}">
               {{ block.settings.link_text }}
             </a>
           </div>
@@ -162,6 +162,11 @@
             "id": "link_text",
             "label": "Button text",
             "default": "Button"
+          },
+          {
+            "type": "text",
+            "id": "css_class",
+            "label": "CSS class"
           }
         ]
       },
