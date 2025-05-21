@@ -61,7 +61,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Join our KandyClub for a chance to win. </p><p>Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details. Once you have joined, you are automatically in the running to WIN!</p>"
+            "text": "<p><strong>Join our KandyClub</strong> for a chance to win. </p><p>Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details. Once you have joined, you are automatically in the running to <strong>WIN!</strong></p><p>The lucky winner will be contacted on the <strong>23rd of June 2025.</strong></p><p><strong>GOODLUCK</strong></p>"
           }
         },
         "button_9GJpYb": {
@@ -97,10 +97,40 @@
             "enlarge_text": true,
             "text": "<p>We are the premier destination for all piercing services and accessories. Our highly trained team of piercing experts look forward to making your piercing dreams a reality.</p>"
           }
+        },
+        "button_BkU3Lc": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "Book now"
+          }
         }
       },
       "block_order": [
-        "text_6j4jia"
+        "text_6j4jia",
+        "button_BkU3Lc"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_Fw6LhT": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dycJhX": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Join our KandyClub to be the first in the know about opening details and promotions.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_dycJhX"
       ],
       "name": "Rich text",
       "settings": {
@@ -115,6 +145,7 @@
     "header_banner_pDgLB3",
     "main",
     "rich_text_qq6MK6",
-    "rich_text_zywGRq"
+    "rich_text_zywGRq",
+    "rich_text_Fw6LhT"
   ]
 }
