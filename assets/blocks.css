@@ -2066,6 +2066,6 @@
 .bg--pink {
   background: #eb008c;
   &:hover {
-    background: #eb008c;
+    background: #eb008c !important;
   }
 }
