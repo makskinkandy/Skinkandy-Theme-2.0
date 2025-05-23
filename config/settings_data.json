@@ -812,7 +812,7 @@
       },
       "5152489804016246972": {
         "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
