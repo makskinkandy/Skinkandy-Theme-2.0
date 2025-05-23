@@ -162,7 +162,6 @@
         "product_grid",
         "a93001b2-fbf4-409c-b650-4a8c89ebe0f8"
       ],
-      "disabled": true,
       "settings": {
         "bg_color": "#fafafa",
         "enable_sidebar": true,
@@ -197,27 +196,12 @@
     },
     "ss_recommendations_bGwMqW": {
       "type": "ss-recommendations",
-      "disabled": true,
       "settings": {
         "profileId": "recently-viewed"
       }
     },
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
-      "disabled": true,
-      "settings": {}
-    },
-    "b9f4e452-53f5-462c-8f2e-74dd17187eb3": {
-      "type": "apps",
-      "blocks": {
-        "de818f99-5756-45c7-be0b-3738979f53db": {
-          "type": "shopify://apps/boost-ai-search-discovery/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "de818f99-5756-45c7-be0b-3738979f53db"
-      ],
       "settings": {}
     }
   },
@@ -229,7 +213,6 @@
     "main-collection",
     "1642136988303d16d6",
     "ss_recommendations_bGwMqW",
-    "pagefly-collection-section",
-    "b9f4e452-53f5-462c-8f2e-74dd17187eb3"
+    "pagefly-collection-section"
   ]
 }
