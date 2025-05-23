@@ -9,5 +9,8 @@
   {%- if template == 'password' -%}
     {{ shop.name }}
   {%- endif -%}
+  {%- if template == 'product' -%}
+    {{ shop.name }}
+  {%- endif -%}
 {%- endcapture -%}
 <title>{{ seo_title }}</title>
