@@ -10,7 +10,7 @@
     {{ shop.name }}
   {%- endif -%}
   {%- if template == 'product' -%}
-    | SkinKandy
+    | SkinKandy {{ localization.country.iso_code }}
   {%- endif -%}
 {%- endcapture -%}
 <title>{{ seo_title }}</title>
