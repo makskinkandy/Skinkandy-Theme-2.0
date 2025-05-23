@@ -89,7 +89,7 @@
     "share_twitter": false,
     "favicon": "shopify://shop_images/sk_logo_footer.png",
     "search_type": "product,article,page,collection",
-    "show_breadcrumbs": true,
+    "show_breadcrumbs": false,
     "show_breadcrumbs_collection_link": true,
     "disable_animations": true,
     "app_wk_enabled": true,
