@@ -13,47 +13,91 @@
   endif
 -%}
 
-{% comment %}
 <script type="application/ld+json">
+{% if product.variants.size > 1 %}
+  
+    {
+    "@context": "http://schema.org",
+    "@type": "ProductGroup",
+    "@id": "{{ shop.url }}{{ product.url }}#ProductGroup",
+    "productGroupID": {{ product.id}},
+    "name": {{ product.title | json }},
+    "url": "{{ shop.url }}{{ product.url }}",
+    "category": "{{ product.type }}",
+    "description": {% if product.page_description != blank %}{{ product.page_description | json }}{% else %}{{ product.description | strip_html | json }}{% endif %},
+    "brand": {
+      "@type": "Brand",
+      "name": "SkinKandy",
+      "@id": "{{ shop.url }}{{ product.url }}#Brand"
+    },
+    "image": [
+    {% for media in product.media %}
+      {
+          "@type": "ImageObject",
+          "height": 1024,
+          "width": 1024,
+          "url": "{{ media | image_url }}",
+          "@id": "{{ media | image_url }}"
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ],
+    "hasVariant": [
+      {% for variant in product.variants %}
+        {
+            "@type": "Product",
+            "@id": "{{ shop.url }}{{ product.url }}#Product_{{ variant.id }}",
+            "name": "{{ product.title }} - {{ variant.title }}",
+            "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}",
+            "category": "{{ product.type }}",
+            "offers": {
+              "@type": "Offer",
+              "name": "{{ product.title }} - {{ variant.title }}",
+              "price": {{ variant.price | divided_by: 100.00 | json }},
+              "priceCurrency": "AUD",
+              "itemCondition": "http://schema.org/NewCondition",
+              "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ variant.id }}",
+              "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"
+            }{% if variant.image %},
+            "image": {
+              "@id": "{{ variant.image | image_url }}"
+            }
+            {% endif %}
+          }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  
+{% else %}
   {
     "@context": "http://schema.org",
     "@type": "Product",
-    "offers": [
-      {%- for variant in product.variants -%}
-        {
-          "@type" : "Offer",
-          {%- if variant.sku != blank -%}
-            "sku": {{ variant.sku | json }},
-          {%- endif -%}
-          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-          "price" : {{ variant.price | divided_by: 100.00 | json }},
-          "priceCurrency" : {{ cart.currency.iso_code | json }},
-          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_price_valid_until | date: '%Y-%m-%d' }}",
-          "url" : {{ shop.url | append: variant.url | json }}
-        }{% unless forloop.last %},{% endunless %}
-      {%- endfor -%}
-    ],
-    "brand": {{ product.vendor | json }},
-    "sku": {{ current_variant.sku | json }},
+    "@id": "{{ shop.url }}{{ product.url }}#Product",
     "name": {{ product.title | json }},
-    "description": {{ product.description | strip_html | json }},
-    "category": "",
     "url": "{{ shop.url }}{{ product.url }}",
-    {%- if is_barcode_available and is_valid_gtin_length %}
-      "{{gtin_option}}": {{ current_variant.barcode | json }},
-      "productId": {{ current_variant.barcode | json }},
-    {%- elsif is_barcode_available %}
-      "mpn": {{ current_variant.barcode | json }},
-      "productId": {{ current_variant.barcode | json }},
-    {%- endif -%}
+    "category": "{{ product.type }}",
+    "description": {% if product.page_description != blank %}{{ product.page_description | json }}{% else %}{{ product.description | strip_html | json }}{% endif %},
+    "offers": {
+      "@type": "Offer",
+      "name": {{ product.title | json }},
+      "price": {{ product.price | divided_by: 100.00 | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "itemCondition": "http://schema.org/NewCondition",
+      "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ product.id }}",
+      "url": "{{ shop.url }}{{ product.url }}?variant={{ product.id }}",
+      "gtin13": {{ current_variant.sku | json }}
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Skinkandy",
+      "@id": "{{ shop.url }}{{ product.url }}#Brand"
+    },
     "image": {
       "@type": "ImageObject",
-      "url": "https:{{ product.featured_media.preview_image | img_url: '1024x1024' }}",
-      "image": "https:{{ product.featured_media.preview_image | img_url: '1024x1024' }}",
-      "name": {{ product.title | json }},
-      "width": 1024,
-      "height": 1024
+      "height": 2000,
+      "width": 2000,
+      "url": "{{ product.media.first | image_url }}",
+      "@id": "{{ product.media.first | image_url }}"
     }
   }
+{% endif %}
 </script>
-{% endcomment %}
