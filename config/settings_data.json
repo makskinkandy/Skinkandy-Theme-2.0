@@ -115,8 +115,8 @@
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
     "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
-    "ss_enable": true,
-    "ss_search_only": true,
+    "ss_enable": false,
+    "ss_search_only": false,
     "ss_collection_loading_text": "<p>Content loading...</p>",
     "enable_sticky_footer_banner": false,
     "sticky_footer_banner_bg_color": "#e8e8e8",
@@ -128,7 +128,7 @@
     "sticky_footer_banner_img_2_width": 150,
     "sticky_footer_banner_url": "shopify://collections/gift-cards",
     "sticky_footer_banner_btn_text": "Shop now",
-    "popup_enable": true,
+    "popup_enable": false,
     "popup_layout": "bfcm",
     "popup_left_image": "shopify://shop_images/Mothers_Day_pop_up_-_desktop.jpg",
     "popup_left_image_mobile": "shopify://shop_images/Mothers_Day_pop_up_-_mobile.jpg",
@@ -169,8 +169,6 @@
           "c0903157-a773-474f-84be-01032fac0f7c": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/sk_logo_main.png",
-              "logo_mobile": "shopify://shop_images/sk_logo_main.png",
               "desktop_logo_width": 180,
               "mobile_logo_width": 150
             }
@@ -269,7 +267,6 @@
           "popup_seconds": 5,
           "popup_days": 30,
           "popup_title": "Join Kandy Club",
-          "popup_image": "shopify://shop_images/SkinKandy-Kandy-Club.png",
           "popup_text": "<p><strong>Signup today and earn reward points with every purchase. </strong></p><p><strong>You can also see you balance when you sign in to your account.</strong></p>",
           "close_text": "",
           "enable_newsletter": false,
@@ -670,119 +667,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "13655089695959051254": {
-        "type": "shopify://apps/wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "version": "main"
-        }
-      },
-      "4139971114690857691": {
-        "type": "shopify://apps/wishlist-king/blocks/wishlist-button-collection/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "button_style": "plain_accent_2",
-          "button_placement": "top-start",
-          "button_offset_horizontal": 0,
-          "button_offset_vertical": 0,
-          "button_background_opacity": 85,
-          "button_background_size": 34,
-          "button_background_border_radius": 24,
-          "button_border_width": 1,
-          "show_shadow": false,
-          "icon_size": 18,
-          "icon_stroke_width": 1.2,
-          "app_integration_preset": "none",
-          "product_link_selector": "a.grid-product__link[href*='/products']",
-          "floating_reference_js": "target.closest('.grid-product__content')"
-        }
-      },
-      "6680288666557934739": {
-        "type": "shopify://apps/wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "column_width": "md",
-          "wishlist_empty_link": "shopify://collections/all",
-          "page_max_width": 1800,
-          "page_padding_top": 60,
-          "page_padding_bottom": 80,
-          "show_share_button": true,
-          "show_buy_all_button": true,
-          "show_clear_wishlist_button": true,
-          "add_to_cart_remove_from_wishlist": false,
-          "product_options": "dropdowns",
-          "cta_button": "add_to_cart",
-          "cta_button_style": "solid_accent_2",
-          "alignment": "center",
-          "image_aspect_ratio": "1/1",
-          "image_object_fit": "cover",
-          "show_vendor": false,
-          "show_product_title": true,
-          "show_price": true,
-          "show_variant_input_label": false
-        }
-      },
-      "3915993389370480168": {
-        "type": "shopify://apps/wishlist-king/blocks/wishlist-link-floating/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": true,
-        "settings": {
-          "button_style": "solid_accent_1",
-          "button_mode": "always_show",
-          "button_position": "bottom-end",
-          "button_offset_horizontal": 10,
-          "button_offset_vertical": 20,
-          "button_size": 56,
-          "button_border_width": 2,
-          "button_border_radius": 40,
-          "show_shadow": true,
-          "icon_size": 24,
-          "icon_stroke_width": 2,
-          "counter_style": "outline_accent_1",
-          "counter_mode": "always_show",
-          "counter_position": "bottom-end",
-          "counter_offset_vertical": -5,
-          "counter_offset_horizontal": 0,
-          "counter_size": 16,
-          "counter_border_width": 1
-        }
-      },
-      "14197025361042770389": {
-        "type": "shopify://apps/wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "theme_preset": "dawn",
-          "color_accent_1": "#000000",
-          "color_accent_2": "#eb008c",
-          "color_solid_button_label": "#ffffff",
-          "color_outline_button_label": "#000000",
-          "color_background_1": "#ffffff",
-          "color_background_2": "#ffffff",
-          "color_text": "#000000",
-          "button_min_height": 45,
-          "button_border_width": 1,
-          "button_border_radius": 25,
-          "input_min_height": 45,
-          "input_border_width": 1,
-          "input_border_radius": 0,
-          "shadow_opacity": 15,
-          "shadow_horizontal_offset": 0,
-          "shadow_vertical_offset": 2,
-          "shadow_blur": 4,
-          "font_text_scale": 100,
-          "access_mode": "UNRESTRICTED",
-          "wishlist_mode": "PRODUCT",
-          "wishlist_path": "/apps/wishlist",
-          "money_show_currency_code": true
-        }
-      },
-      "7520711097648287086": {
-        "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   },
   "platform_customizations": {
     "custom_css": [
