@@ -9,9 +9,8 @@
   {%- if template == 'password' -%}
     {{ shop.name }}
   {%- endif -%}
-  {%- if template == 'product' -%}
-    | SkinKandy
+  {%- if template != 'index' -%}
+    | SkinKandy {{ localization.country.iso_code }}
   {%- endif -%}
-  {{ localization.country.iso_code }}
 {%- endcapture -%}
 <title>{{ seo_title }}</title>
