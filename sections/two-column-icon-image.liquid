@@ -53,7 +53,7 @@
       </div>
       
       <div class="image-column{% if section.settings.left_align %} left-align{% endif %} {% if section.settings.hide_mobile %} hide-mobile{% endif %}">
-        <img src="{{ section.settings.image | image_url }}" alt="Section Image" class="round-{{ section.settings.round_image }}">
+        <img src="{{ section.settings.image | image_url }}" alt="Section Image" class="round-{{ section.settings.round_image }}" loading="lazy">
         {% if section.settings.circle_drops %}
           <div class="circle-overlay lazyload"></div>
           <div class="circle-overlay right lazyload"></div>
