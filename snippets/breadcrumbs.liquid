@@ -8,26 +8,26 @@
 
       <span id="dynamic-collection-title"></span>
       <noscript>
-        <span class="breadcrumb__divider" aria-hidden="true">/</span>
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
         <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
       </noscript>
-      <span class="breadcrumb__divider" aria-hidden="true">/</span>
+      <span class="breadcrumb__divider" aria-hidden="true">></span>
       <span>{{ product.title }}</span>
 
     {% elsif template.name == 'collection' and collection.handle %}
       {% if settings.show_breadcrumbs_collection_link %}
-        <span class="breadcrumb__divider" aria-hidden="true">/</span>
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
         <a href="{{ routes.collections_url }}">{{ 'general.search.collections' | t | replace: ':', ''}}</a>
       {% endif %}
 
-      <span class="breadcrumb__divider" aria-hidden="true">/</span>
+      <span class="breadcrumb__divider" aria-hidden="true">></span>
 
       {% if current_tags %}
 
         {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
         {{ collection.title | link_to: url }}
 
-        <span class="breadcrumb__divider" aria-hidden="true">/</span>
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
 
         {% for tag in current_tags %}
           {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
