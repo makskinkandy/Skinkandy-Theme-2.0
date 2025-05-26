@@ -81,7 +81,7 @@
                   {%- assign img_url = block.settings.image | image_url -%}
                   <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %}"
                         src="{{ img_url }}"
-                        alt="{{ block.settings.image.alt }}">
+                        alt="{{ block.settings.image.alt }}" loading="lazy">
                     {% if block.settings.fullwidth-image %}
                       <div class="circle-overlay lazyload"></div>
                       <div class="circle-overlay right lazyload"></div>
