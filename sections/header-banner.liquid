@@ -2,7 +2,10 @@
   {% if section.blocks.size > 0 %}
     <div class="hero-banner__wrapper slider-wrapper">
       {% for block in section.blocks %}
-        <link rel="preload" as="image" href="{{ block.settings.image | image_url }}">
+        {% assign preload_image = block.settings.image %}
+        {% if preload_image %}
+          {{ '<link rel="preload" as="image" href="' | append: preload_image | image_url | append: '">' | strip_newlines }}
+        {% endif %}
         {% assign text = block.settings.heading %}
         {% assign words = text | split: ' ' %}
         {% assign processed_words = '' %}
