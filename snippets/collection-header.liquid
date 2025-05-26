@@ -1,5 +1,8 @@
 <div class="collection-header-wrapper banner-section page-content">
   <div class="page-width">
+    <div class="breadcrumbs-container flex-grid">
+      {%- render 'breadcrumbs' -%}
+    </div>
     <header class="section-header">
       <h1 class="section-content__heading h1" style="color: {{ block.settings.title_color }}">{{ collection.title | escape }}</h1>
 
