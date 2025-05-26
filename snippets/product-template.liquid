@@ -43,14 +43,16 @@
 
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 
+  {%- if isModal != true -%}
+    <div class="page-width">
+      <div class="breadcrumbs-container flex-grid">
+        {%- render 'breadcrumbs' -%}
+      </div>
+    </div>
+  {%- endif -%}
+
   <div class="page-content page-content--product" style="background-color: {{ section.settings.bg_color }}">
     <div class="page-width">
-      {%- if isModal != true -%}
-        <div class="flex-grid">
-          {%- render 'breadcrumbs' -%}
-        </div>
-      {%- endif -%}
-
       <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
         {%- if image_position == 'left' -%}
           <div class="grid__item {{ product_image_width }} product-single__sticky">
