@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', e => {
         this.classList.toggle('active');
       }
     });
-});
+  });
 
   const call_change_country_ = (countryCode) => {
     console.log(":TEST")
@@ -405,4 +405,40 @@ document.addEventListener('DOMContentLoaded', e => {
       el.removeAttribute('role');
     }
   });
+
+  
 });
+
+function processNewItems() {
+  const items = document.querySelectorAll('.ss__result--item:not([data-collection])');
+
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const currentHandle = pathParts[pathParts.length - 1];
+
+  items.forEach(item => {
+    
+    item.setAttribute('data-collection', currentHandle);
+
+    item.addEventListener('click', function () {
+      const collectionHandle = this.getAttribute('data-collection');
+      if (collectionHandle) {
+        sessionStorage.setItem('selectedCollection', collectionHandle);
+      }
+    }, { once: true });
+  });
+}
+
+const observer = new MutationObserver((mutationsList) => {
+  for (let mutation of mutationsList) {
+    if (mutation.addedNodes.length > 0) {
+      processNewItems();
+    }
+  }
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
+processNewItems();
