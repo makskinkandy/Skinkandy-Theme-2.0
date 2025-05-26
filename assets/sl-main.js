@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const container = document.getElementById('dynamic-collection-title');
     if (container) {
       container.innerHTML = `
-        <span class="breadcrumb__divider" aria-hidden="true">/</span>
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
         <a href="/collections/${handle}">${title}</a>
       `;
     }
