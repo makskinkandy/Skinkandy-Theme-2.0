@@ -406,7 +406,20 @@ document.addEventListener('DOMContentLoaded', e => {
     }
   });
 
-  
+  if (!document.body.classList.contains('template-product')) return;
+
+  const handle = sessionStorage.getItem('selectedCollection');
+  const title = window.collectionTitles?.[handle];
+
+  if (handle && title) {
+    const container = document.getElementById('dynamic-collection-title');
+    if (container) {
+      container.innerHTML = `
+        <span class="breadcrumb__divider" aria-hidden="true">/</span>
+        <a href="/collections/${handle}">${title}</a>
+      `;
+    }
+  }
 });
 
 function processNewItems() {
