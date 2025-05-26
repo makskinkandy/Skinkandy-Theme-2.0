@@ -6,19 +6,13 @@
 
     {% if template.name == 'product' %}
 
-      {% if collection %}
-        {% if settings.show_breadcrumbs_collection_link %}
-          <span class="breadcrumb__divider" aria-hidden="true">/</span>
-          <a href="{{ routes.collections_url }}">{{ 'general.search.collections' | t | replace: ':', ''}}</a>
-        {% endif %}
-
+      <span id="dynamic-collection-title"></span>
+      <noscript>
         <span class="breadcrumb__divider" aria-hidden="true">/</span>
-        {% if collection.handle %}
-          {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
-          {{ collection.title | link_to: url }}
-        {% endif %}
-      {% endif %}
+        <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
+      </noscript>
       <span class="breadcrumb__divider" aria-hidden="true">/</span>
+      <span>{{ product.title }}</span>
 
     {% elsif template.name == 'collection' and collection.handle %}
       {% if settings.show_breadcrumbs_collection_link %}
@@ -82,5 +76,13 @@
     {% endif %}
   </nav>
 {% endunless %}
+
+  <script>
+  window.collectionTitles = {
+    {% for collection in collections %}
+      "{{ collection.handle }}": "{{ collection.title | escape }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
 
 {% endif %}
