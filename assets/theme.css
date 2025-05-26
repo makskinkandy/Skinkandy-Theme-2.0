@@ -16456,3 +16456,8 @@ small.cart__discount.percentage {
   margin-top: 25px;
   font-weight: 600;
 }
+
+.breadcrumbs {
+  text-transform: capitalize;
+  font-weight: 600;
+}
