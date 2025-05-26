@@ -13,8 +13,8 @@
         <span class="breadcrumb__divider" aria-hidden="true">></span>
         <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
       </noscript>
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      <span>{{ product.title }}</span>
+      <span class="breadcrumb__divider pdp-divider" aria-hidden="true">></span>
+      <span class="pdp-title">{{ product.title }}</span>
 
     {% elsif template.name == 'collection' and collection.handle %}
       {% if settings.show_breadcrumbs_collection_link %}
