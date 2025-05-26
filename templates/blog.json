@@ -40,7 +40,7 @@
       "type": "blog-template",
       "settings": {
         "hide_default_header": true,
-        "hide_breadcrumbs": false,
+        "hide_breadcrumbs": true,
         "blog_show_tag_filter": false,
         "blog_show_rss": false,
         "blog_show_tags": false,
