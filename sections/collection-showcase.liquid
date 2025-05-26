@@ -28,7 +28,7 @@
             <a href="{{ product.url }}">
               <h3 class="collection-showcase__title">{{ product.title }}</h3>
               <div class="image-wrapper">
-                <img src="{{ product.featured_image | image_url }}" alt="Image for {{ product.title }}" class="collection-showcase__img">
+                <img src="{{ product.featured_image | image_url }}" alt="Image for {{ product.title }}" class="collection-showcase__img" loading="lazy">
               </div>
               {% if section.settings.mode == 'light' %}
                 <a class="btn btn--black">SHOP NOW</a>
@@ -44,7 +44,7 @@
                 <h3 class="collection-showcase__title">{{ block.settings.title }}</h3>
               {% endif %}
               <div class="image-wrapper">
-                <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Collections" class="collection-showcase__img">
+                <img src="{{ block.settings.image | image_url }}" alt="Image for {{ block.settings.title }} Collections" class="collection-showcase__img" loading="lazy">
               </div>
               {% if block.settings.disable_overlay != true %}
                 <div class="overlay"></div>
