@@ -6,7 +6,7 @@
   {%- endfor -%}
 
   {%- if group.user_agent.value == '*' -%}
-    {{ 'Disallow: /*?q=*' }}
+{{ 'Disallow: /*?q=*' }}
 {{ 'Disallow: /collections/shop?q=*' }}
   {%- endif -%}
 
