@@ -101,7 +101,7 @@
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "Shop Now",
-        "button_1_url": "shopify://collections/shop-all",
+        "button_1_url": "shopify://collections/new-in",
         "button_2_text": "BOOK A PIERCING",
         "button_2_url": "https://support.skinkandy.com/s/booking-form",
         "text_color": "#ffffff",
