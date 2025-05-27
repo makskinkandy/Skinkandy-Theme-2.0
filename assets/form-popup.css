@@ -311,6 +311,9 @@ body.no-scroll {
         top: -48px;
       }
     }
+    #response.success {
+      display: none;
+    }
   }
   &.bfcm {
     background-color: transparent;
