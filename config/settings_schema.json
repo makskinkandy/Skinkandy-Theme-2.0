@@ -1652,6 +1652,12 @@
       },
       {
         "type": "text",
+        "id": "popup_source",
+        "label": "Popup Source",
+        "default": "Main Popup"
+      },
+      {
+        "type": "text",
         "id": "popup_btn",
         "label": "Button Label",
         "default": "JOIN KANDYCLUB NOW"
