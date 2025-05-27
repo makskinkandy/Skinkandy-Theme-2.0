@@ -95,7 +95,11 @@
                     <input id="dob" maxlength="80" name="dob" size="20" type="text" placeholder="dd/mm/yyyy" required="" aria-label="Date of Birth" aria-required="true">
                   </div>
                 </div>
-              
+                {% if settings.giveaway %}
+                  <div class="form-field" style="--width: 50;">
+                    <input id="post" maxlength="80" name="post" size="20" type="text" placeholder="Post Code" required="" aria-label="Post Code" aria-required="true">
+                  </div>
+                {% endif %}
                 <input id="country" name="country" type="hidden" value="Australia">
               
                 <div class="form-field checkbox" style="--width: 50;">
