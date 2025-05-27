@@ -43,8 +43,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-Campaign.jpg",
-            "image": "shopify://shop_images/Homepage-Banner-Desktop-Campaign.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Wear_it_your_way.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Wear_it_your_way.jpg",
             "banner_url": "shopify://collections/new-in",
             "heading": "",
             "short_description": "",

@@ -814,16 +814,6 @@
         "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
         "disabled": false,
         "settings": {}
-      },
-      "36909921495456953": {
-        "type": "shopify://apps/ai-speed/blocks/ai-speed/f9e4b8d0-6523-47d0-b77a-783072cc6552",
-        "disabled": false,
-        "settings": {
-          "enable_optimization": true,
-          "debug_mode": false,
-          "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
-          "image_threshold": 30
-        }
       }
     }
   },
