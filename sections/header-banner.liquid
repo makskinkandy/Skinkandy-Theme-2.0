@@ -26,6 +26,10 @@
         {% endfor %}
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
+          {% if block.settings.heading == blank %}
+            <img src="{{ block.settings.image | image_url }}" alt="Image for slider {{ forloop.index }}" class="desktop">
+            <img src="{{ block.settings.image_mobile | image_url }}" alt="Image for slider {{ forloop.index }}" class="mobile">
+          {% endif %}
           <div class="hero-banner__content-wrapper">
             <div class="page-width hero-banner__content alignment--{{ block.settings.align_text }}">
               <div class="content-wrapper">
@@ -67,14 +71,33 @@
 </div>
 <style>
   {% for block in section.blocks %}
+    {% if block.settings.heading != blank %}
     .block-{{ block.id }} {
       background-image: url({{ block.settings.image | image_url }});
-      {% if block.settings.image_mobile %}
-        @media screen and (max-width: 992px) {
-          background-image: url({{ block.settings.image_mobile | image_url }});
-        } 
+        {% if block.settings.image_mobile %}
+          @media screen and (max-width: 992px) {
+            background-image: url({{ block.settings.image_mobile | image_url }});
+          } 
+        {% endif %}
+      }
+      {% else %}
+        .block-{{ block.id }} img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          &.mobile {
+            @media screen and (min-width: 993px) {
+              display:none;
+            }
+          }
+          &.desktop {
+            @media screen and (max-width: 992px) {
+              display:none;
+            }
+          }
+        }
       {% endif %}
-    }
   {% endfor %}
 </style>
 {% if section.blocks.size > 1 %}
