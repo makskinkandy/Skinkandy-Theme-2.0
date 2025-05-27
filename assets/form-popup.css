@@ -488,7 +488,7 @@ body.no-scroll {
 .form-popup__right {
   padding: 1.5625em 1em;
   padding-top: 2.8125em;
-  background-image: url('https://cdn.shopify.com/s/files/1/0879/0373/1991/t/7/assets/Desktop%20BG.png');
+  background: linear-gradient(135deg,rgba(205, 1, 111, 1) 0%, rgba(62, 37, 118, 1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
