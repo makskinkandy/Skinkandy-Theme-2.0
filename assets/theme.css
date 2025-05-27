@@ -1573,7 +1573,7 @@ p {
 }
 
 p + p {
-  margin-top: 28px;
+  margin-top: 15px;
   @media screen and (max-width:580px) {
     margin-top: 16px;
   }
