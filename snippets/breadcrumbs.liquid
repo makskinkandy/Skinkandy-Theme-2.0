@@ -1,75 +1,198 @@
 {% if settings.show_breadcrumbs %}
-
-{% unless template.name == 'index' or template.name == 'cart' %}
-  <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
-    <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+  {% unless template.name == 'index' or template.name == 'cart' %}
+    
+    {% assign breadcrumb_1 = nil %}
+    {% assign breadcrumb_2 = nil %}
+    {% assign breadcrumb_3 = nil %}
 
     {% if template.name == 'product' %}
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      <a href="/collections/shop-all">Shop All</a>
-      <span id="dynamic-collection-title"></span>
-      <noscript>
-        <a href="/collections/shop-all">Shop All</a>
-        <span class="breadcrumb__divider" aria-hidden="true">></span>
-        <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
-      </noscript>
-      <span class="breadcrumb__divider pdp-divider" aria-hidden="true">></span>
-      <span class="pdp-title">{{ product.title }}</span>
+      {% assign breadcrumb_1 = product.metafields.breadcrumbs.collection_1.value %}
+      {% assign breadcrumb_2 = product.metafields.breadcrumbs.collection_2.value %}
+      {% assign breadcrumb_3 = product.metafields.breadcrumbs.collection_3.value %}
+    {% elsif template.name == 'collection' %}
+      {% assign breadcrumb_1 = collection.metafields.breadcrumbs.collection_1.value %}
+      {% assign breadcrumb_2 = collection.metafields.breadcrumbs.collection_2.value %}
+      {% assign breadcrumb_3 = collection.metafields.breadcrumbs.collection_3.value %}
+    {% endif %}
 
-    {% elsif template.name == 'collection' and collection.handle %}
-      {% if settings.show_breadcrumbs_collection_link %}
-        <span class="breadcrumb__divider" aria-hidden="true">></span>
-        {% if collection.handle == "shop-all" %}
-          <span>Shop All</span>
+    <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+      <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home_link_title' | t }}">
+        {{ 'general.breadcrumbs.home' | t }}
+      </a>
+
+      {% if template.name == 'product' %}
+        {% if breadcrumb_1 %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <a href="{{ breadcrumb_1.url }}">{{ breadcrumb_1.title }}</a>
         {% else %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
           <a href="/collections/shop-all">Shop All</a>
+        {% endif %}
+
+        {% if breadcrumb_2 %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <a href="{{ breadcrumb_2.url }}">{{ breadcrumb_2.title }}</a>
+        {% elsif product.collections.first %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
+        {% endif %}
+
+        {% if breadcrumb_3 %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <a href="{{ breadcrumb_3.url }}">{{ breadcrumb_3.title }}</a>
+        {% elsif product.collections.last %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <a href="{{ product.collections.last.url }}">{{ product.collections.last.title }}</a>
+        {% endif %}
+
+        <span class="breadcrumb__divider pdp-divider" aria-hidden="true">></span>
+        <span class="pdp-title">{{ product.title }}</span>
+
+      {% elsif template.name == 'collection' %}
+        {% if settings.show_breadcrumbs_collection_link %}
+          {% if breadcrumb_1 %}
+            <span class="breadcrumb__divider" aria-hidden="true">></span>
+            <a href="{{ breadcrumb_1.url }}">{{ breadcrumb_1.title }}</a>
+          {% else %}
+            {% unless collection.handle == "shop-all" %}
+              <span class="breadcrumb__divider" aria-hidden="true">></span>
+              <a href="/collections/shop-all">Shop All</a>
+            {% endunless %}
+          {% endif %}
+
+          {% if breadcrumb_2 %}
+            <span class="breadcrumb__divider" aria-hidden="true">></span>
+            <a href="{{ breadcrumb_2.url }}">{{ breadcrumb_2.title }}</a>
+          {% endif %}
+
+          {% if breadcrumb_3 %}
+            <span class="breadcrumb__divider" aria-hidden="true">></span>
+            <a href="{{ breadcrumb_3.url }}">{{ breadcrumb_3.title }}</a>
+          {% endif %}
+
           <span class="breadcrumb__divider" aria-hidden="true">></span>
           <span>{{ collection.title | escape }}</span>
         {% endif %}
-        
-      {% endif %}
 
-    
-    {% elsif template.name == 'blog' %}
+      {% elsif template.name == 'blog' %}
+        {% if current_tags %}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          {{ blog.title | link_to: blog.url }}
+          <span class="breadcrumb__divider" aria-hidden="true">></span>
+          <span>{{ current_tags | join: " + " }}</span>
+        {% endif %}
 
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      {% if current_tags %}
+      {% elsif template.name == 'article' %}
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
         {{ blog.title | link_to: blog.url }}
         <span class="breadcrumb__divider" aria-hidden="true">></span>
-        <span>{{ current_tags | join: " + " }}</span>
+        <span>{{ article.title }}</span>
+
+      {% elsif template.name == 'page' %}
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
+        <span>{{ page.title }}</span>
+
+      {% elsif template.name == 'search' %}
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
+        <span>{{ page_title | replace: '*', '' }}</span>
+
+      {% else %}
+        <span class="breadcrumb__divider" aria-hidden="true">></span>
+        <span>{{ page_title }}</span>
       {% endif %}
+    </nav>
 
-    {% elsif template.name == 'article' %}
-
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      {{ blog.title | link_to: blog.url }}
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-
-    {% elsif template.name == 'page' %}
-
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      <span>{{ page.title }}</span>
-
-    {% elsif template.name == 'search' %}
-
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      <span>{{ page_title | replace: '*', '' }}</span>
-
-    {% else %}
-
-      <span class="breadcrumb__divider" aria-hidden="true">></span>
-      <span>{{ page_title }}</span>
-
-    {% endif %}
-  </nav>
-{% endunless %}
-
-  <script>
-  window.collectionTitles = {
-    {% for collection in collections %}
-      "{{ collection.handle }}": "{{ collection.title | escape }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  };
-</script>
-
+    <script>
+      window.collectionTitles = {
+        {% for c in collections %}
+          "{{ c.handle }}": "{{ c.title | escape }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      };
+    </script>
+  {% endunless %}
 {% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ routes.root_url | prepend: request.origin }}"
+    }
+    {% assign pos = 2 %}
+
+    {% if breadcrumb_1 %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ breadcrumb_1.title | escape }}",
+        "item": "{{ breadcrumb_1.url | prepend: request.origin }}"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% else %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "Shop All",
+        "item": "{{ request.origin }}/collections/shop-all"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% endif %}
+
+    {% if breadcrumb_2 %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ breadcrumb_2.title | escape }}",
+        "item": "{{ breadcrumb_2.url | prepend: request.origin }}"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% elsif template.name == 'product' and product.collections.first %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ product.collections.first.title | escape }}",
+        "item": "{{ product.collections.first.url | prepend: request.origin }}"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% endif %}
+
+    {% if breadcrumb_3 %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ breadcrumb_3.title | escape }}",
+        "item": "{{ breadcrumb_3.url | prepend: request.origin }}"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% elsif template.name == 'product' and product.collections.last %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ product.collections.last.title | escape }}",
+        "item": "{{ product.collections.last.url | prepend: request.origin }}"
+      }
+      {% assign pos = pos | plus: 1 %}
+    {% endif %}
+
+    {% if template.name == 'product' %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ product.title | escape }}",
+        "item": "{{ product.url | prepend: request.origin }}"
+      }
+    {% elsif template.name == 'collection' %}
+      ,{
+        "@type": "ListItem",
+        "position": {{ pos }},
+        "name": "{{ collection.title | escape }}",
+        "item": "{{ collection.url | prepend: request.origin }}"
+      }
+    {% endif %}
+  ]
+}
+</script>
