@@ -181,7 +181,7 @@
             "type": "announcement",
             "settings": {
               "link_text": "FREE SHIPPING ON ORDERS OVER $70",
-              "link": ""
+              "link": "shopify://policies/shipping-policy"
             }
           },
           "31778dc5-bfaa-4e1d-9aa7-7f0971794dee": {
@@ -813,16 +813,6 @@
       },
       "pagefly": {
         "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
-      },
-      "4551646370426404704": {
-        "type": "shopify://apps/turbo-speed-boost-pasilobus/blocks/turbo/b60f64a7-2618-4d56-876c-fcf619939a47",
-        "disabled": true,
-        "settings": {}
-      },
-      "15885977890469162556": {
-        "type": "shopify://apps/ea-page-speed-boost/blocks/app-embed-block/b667776a-3444-4aab-a7b6-a467a3438097",
         "disabled": false,
         "settings": {}
       }
