@@ -29,5 +29,8 @@ if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('webui')){node.
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('tagmanager')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('gtm')){node.type='text/spdnscript'}
 if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.src.includes('googlet')){node.type='text/spdnscript'}
-if(node.tagName==='SCRIPT'&&node.className=='analytics'){node.type='text/spdnscript'}  })})})
+if(node.tagName==='SCRIPT'&&node.className=='analytics'){node.type='text/spdnscript'} if(node.tagName==='IMG'){node.loading='lazy'}
+if(node.tagName==='IFRAME'){node.loading='lazy'}
+if(node.id==='svgicon'){node.loading='eager'}
+ })})})
 var ua = navigator.userAgent.toLowerCase();if ((ua.indexOf('chrome') > -1 || ua.indexOf('firefox') > -1) && window.location.href.indexOf("no-optimization") === -1 && window.location.href.indexOf("debug") === -1 && window.location.href.indexOf("cart") === -1 ) {observer.observe(document.documentElement,{childList:true,subtree:true})}</script>{% endif %}
