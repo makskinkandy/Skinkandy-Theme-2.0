@@ -28,10 +28,10 @@
         {% for blocks in section.blocks %}
           {% if blocks.settings.url %}
             <a href="{{ blocks.settings.url }}" target="_blank" class="link-img" aria-label="Instagram Link {{ forloop.index }}">
-              <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}">
+              <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}" loading="lazy">
             </a>
           {% else %}
-            <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}" class="grid-image__img">
+            <img src="{{ blocks.settings.image | image_url }}" alt="Image of instagram post number {{ forloop.index }}" class="grid-image__img" loading="lazy">
           {% endif %}
         {% endfor %}
       </div>
