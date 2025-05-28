@@ -92,7 +92,7 @@
       };
     </script>
 
-    {{ content_for_header }}
+    {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
     <script id="vopo-head">
       (function () { if (((document.documentElement.innerHTML.includes('asyncLoad') && !document.documentElement.innerHTML.includes('\\/obscure' + '-escarpment-2240')) || (window.bcpo && bcpo.disabled)) && !window.location.href.match(/[&?]yesbcpo/)) return; var script = document.createElement('script'); script.src = "https://obscure-escarpment-2240.herokuapp.com/js/best_custom_product_options.js?shop={{ shop.permanent_domain }}"; var vopoHead = document.getElementById('vopo-head'); vopoHead.parentNode.insertBefore(script, vopoHead); })();
     </script>
@@ -398,7 +398,7 @@
       </script>
     {% endif %}
   
-    {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
+    {% capture contentForQueryString %}{%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}{% endcapture %}
       {% assign pageParams = contentForQueryString
         | split: '"pageurl":"'
         | last
