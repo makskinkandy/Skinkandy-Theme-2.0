@@ -148,6 +148,9 @@
         "text_block_HcNJxL",
         "text_block_YWpbH3"
       ],
+      "custom_css": [
+        ".grid__item.center-content.medium-up--one-half.text-.aos-init.aos-animate {width: 100%; max-width: 100%;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
