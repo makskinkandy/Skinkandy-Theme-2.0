@@ -123,6 +123,7 @@
         },
         "text_block_YWpbH3": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "enable_round": false,
@@ -559,7 +560,8 @@
           "type": "button",
           "settings": {
             "link": "https://support.skinkandy.com/s/booking-form",
-            "link_text": "Book your piercing now"
+            "link_text": "Book your piercing now",
+            "css_class": ""
           }
         },
         "text_mNhwWW": {
