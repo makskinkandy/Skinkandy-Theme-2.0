@@ -1,4 +1,4 @@
- #container {
+#container {
   display: flex;
 }
 .content {
@@ -66,7 +66,7 @@ button {
 
 h6 {
   margin-bottom: 5px;
-  font-family: "Futura Medium 01", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
