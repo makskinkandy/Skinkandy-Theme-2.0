@@ -821,10 +821,13 @@
         "disabled": false,
         "settings": {}
       },
-      "16437886600928722036": {
-        "type": "shopify://apps/amote/blocks/amote/14aa5bc3-7a5d-47bd-abcb-3baaa5c02f17",
+      "10003540932433742857": {
+        "type": "shopify://apps/addly-bundle-upsell/blocks/addly-embed/ba93f155-a558-4082-82dd-21b22b27b698",
         "disabled": false,
-        "settings": {}
+        "settings": {
+          "n9_embed_css": "/* CSS Rules */",
+          "n9_embed_js": "/* JS Code */"
+        }
       }
     }
   },
