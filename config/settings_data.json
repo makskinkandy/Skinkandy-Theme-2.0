@@ -820,6 +820,11 @@
         "type": "shopify://apps/crazy-egg/blocks/app-embed/7ea73823-6ad9-4252-a63e-088397d54aed",
         "disabled": false,
         "settings": {}
+      },
+      "16437886600928722036": {
+        "type": "shopify://apps/amote/blocks/amote/14aa5bc3-7a5d-47bd-abcb-3baaa5c02f17",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
