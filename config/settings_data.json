@@ -115,8 +115,8 @@
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
     "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
-    "ss_enable": false,
-    "ss_search_only": false,
+    "ss_enable": true,
+    "ss_search_only": true,
     "ss_collection_loading_text": "<p>Content loading...</p>",
     "enable_sticky_footer_banner": false,
     "sticky_footer_banner_bg_color": "#e8e8e8",
@@ -668,22 +668,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "16422382648059844097": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/instant-search-app-embedded/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {}
-      },
-      "ad4c7c36-e8e8-4bda-88e8-2f3cfb629bfe": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {
-          "templateId": "5C6t2ceCLn",
-          "productGridSelector": ""
-        }
-      }
-    }
+    "content_for_index": []
   },
   "platform_customizations": {
     "custom_css": [
