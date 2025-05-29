@@ -17,28 +17,6 @@
         "content": true
       }
     },
-    "rich_text_TyEpNe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_DVjWTp": {
-          "type": "heading",
-          "settings": {
-            "title": "Apply here",
-            "heading_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DVjWTp"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
-      }
-    },
     "1748480959608e0a98": {
       "type": "apps",
       "blocks": {
@@ -60,7 +38,6 @@
   },
   "order": [
     "main",
-    "rich_text_TyEpNe",
     "1748480959608e0a98"
   ]
 }
