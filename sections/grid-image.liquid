@@ -22,7 +22,7 @@
         {%- endif -%}
       </div>
       {% if section.settings.image %}
-        <img src="{{ section.settings.image | image_url }}" alt="Image of {{ section.settings.title }}" class="grid-image__logo">
+        <img src="{{ section.settings.image | image_url }}" alt="Image of {{ section.settings.title }}" class="grid-image__logo" loading="lazy">
       {% endif %}
       <div class="grid-image__items">
         {% for blocks in section.blocks %}
