@@ -42,7 +42,9 @@
     {%- render 'social-meta-tags' -%}
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    {% comment %}
     {%- render 'font-face' -%}
+    {% endcomment %}
     {%- render 'css-variables' -%}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
 
@@ -92,7 +94,7 @@
       };
     </script>
 
-    {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
+    {{ content_for_header }}
     <script id="vopo-head">
       (function () { if (((document.documentElement.innerHTML.includes('asyncLoad') && !document.documentElement.innerHTML.includes('\\/obscure' + '-escarpment-2240')) || (window.bcpo && bcpo.disabled)) && !window.location.href.match(/[&?]yesbcpo/)) return; var script = document.createElement('script'); script.src = "https://obscure-escarpment-2240.herokuapp.com/js/best_custom_product_options.js?shop={{ shop.permanent_domain }}"; var vopoHead = document.getElementById('vopo-head'); vopoHead.parentNode.insertBefore(script, vopoHead); })();
     </script>
@@ -204,7 +206,7 @@
 
     {% comment %}
       //Futura Font is not working by default need to add the Font face to enable the font
-    {% endcomment %}
+    
     <style>
       @font-face {
         font-family: 'Futura Medium 01';
@@ -212,6 +214,7 @@
         font-display: swap;
       }
     </style>
+    {% endcomment %}
     {% if template == '404' %}
       <link rel="stylesheet" href="{{ '404-page.css' | asset_url }}">
     {% endif %}
@@ -398,7 +401,7 @@
       </script>
     {% endif %}
   
-    {% capture contentForQueryString %}{%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}{% endcapture %}
+    {% capture contentForQueryString %}{{ content_for_header }}{% endcapture %}
       {% assign pageParams = contentForQueryString
         | split: '"pageurl":"'
         | last
@@ -443,6 +446,5 @@
         </script>
       {% endif %}
     
-  {{'tiny-img-link-preloader.js' | asset_url | script_tag }}
-</body>
+  </body>
   </html>
