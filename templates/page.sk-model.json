@@ -16,9 +16,51 @@
         "heading": true,
         "content": true
       }
+    },
+    "rich_text_TyEpNe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DVjWTp": {
+          "type": "heading",
+          "settings": {
+            "title": "Apply here",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DVjWTp"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "1748480959608e0a98": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_kLD3bc": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI2MzUx\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_kLD3bc"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_TyEpNe",
+    "1748480959608e0a98"
   ]
 }
