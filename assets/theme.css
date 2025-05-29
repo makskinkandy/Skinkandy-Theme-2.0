@@ -16473,3 +16473,7 @@ small.cart__discount.percentage {
     margin-top: 0;
   }
 }
+
+button.action.previous.material_outlined-button {
+    border-radius: 40px;
+}
