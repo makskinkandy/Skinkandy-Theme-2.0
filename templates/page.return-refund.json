@@ -16,9 +16,166 @@
         "heading": true,
         "content": true
       }
+    },
+    "rich_text_Aht9Jz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jxVNhE": {
+          "type": "heading",
+          "settings": {
+            "title": "Australian Consumer Law & New Zealand Consumer Guarantees Act",
+            "heading_tag": "h2"
+          }
+        },
+        "text_wAiQjf": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>SkinKandy’s goods and services are subject to guarantees under the Australian Consumer Law and the New Zealand Consumer Guarantees Act, which cannot be excluded. These guarantees include remedies for major failures and reasonable compensation for other failures.</p><p>Apart from these guarantees, SkinKandy’s liability is limited to the total amount paid for the relevant goods or services. SkinKandy is not liable for indirect or unforeseeable losses.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jxVNhE",
+        "text_wAiQjf"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_DmqVGw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jiBm4q": {
+          "type": "heading",
+          "settings": {
+            "title": "Consumer Rights and Obligations",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nwxqgM": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Under Australian Consumer Law & New Zealand Consumer Guarantees Act, Customers:</p><p>a. Have the right to request a refund, replacement, or repair for products that are deemed faulty, do not meet acceptable standards, or fail to perform as expected.</p><p>b. Must provide proof of purchase, such as a receipt or invoice, when seeking a refund or replacement.</p><p>c. Must promptly notify SkinKandy of any faults or defects within a reasonable timeframe from the date of purchase.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jiBm4q",
+        "text_nwxqgM"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_7xXAd6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_z6aAPR": {
+          "type": "heading",
+          "settings": {
+            "title": "Refund Policy Overview",
+            "heading_tag": "h2"
+          }
+        },
+        "text_xxfwHQ": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>At SkinKandy, we prioritise customer satisfaction and are committed to complying with the standards set by the Australian Competition and Consumer Commission (ACCC) and New Zealand’s Ministry of Business, Innovation and Employment (MBIE). We fully respect the rights and responsibilities outlined under the Australian Consumer Law and the New Zealand Consumer Guarantees Act.</p><p>SkinKandy provides refunds or replacements for products that are found to be faulty or defective. Subject to applicable laws, we do not offer refunds or returns for in-store or online purchases, piercing services, or gift cards due to change of mind, or where the incorrect size, gauge, or type of jewellery has been selected by the customer.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z6aAPR",
+        "text_xxfwHQ"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "custom_faq_rj73re": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_tLEwGJ": {
+          "type": "question",
+          "settings": {
+            "question": "Exclusions",
+            "answer": "<p>Refunds will not be provided for products that are damaged due to misuse, neglect, or normal wear and tear.</p><p>Services such as body piercing are non-refundable.</p><p>Gift cards and vouchers are non-refundable and cannot be exchanged for cash.</p><p>Refunds or exchanges will not be accepted on sale items.</p>"
+          }
+        },
+        "question_TMKw48": {
+          "type": "question",
+          "settings": {
+            "question": "Pricing",
+            "answer": "<p>Prices for goods and services are as displayed, both in-store and online. However, SkinKandy reserves the right to amend prices prior to purchase if pricing errors or inaccuracies are identified.</p><p>Customers are responsible for all taxes, duties, charges, and customs fees related to their purchase from SkinKandy. Any additional region-specific taxes or duties will be calculated and displayed during the checkout process.</p><p>Unless otherwise stated, all prices include GST and other applicable taxes, and are listed in either Australian Dollars (AUD) or New Zealand Dollars (NZD). SkinKandy is not responsible for any currency conversion fees or fluctuations when purchases are made in currencies other than AUD or NZD.</p>"
+          }
+        },
+        "question_DHF8jh": {
+          "type": "question",
+          "settings": {
+            "question": "Payment Options",
+            "answer": "<p>SkinKandy accepts the following payment methods:</p><ul><li>In-store: Cash, EFTPOS, and credit/debit card payments</li><li>Online: Credit/debit card payments</li></ul><p>We also accept selected buy now, pay later options in most regions, both online and in-store. Availability may vary depending on your location.</p>"
+          }
+        },
+        "question_QhyUmy": {
+          "type": "question",
+          "settings": {
+            "question": "Unauthorised Resale",
+            "answer": "<p>Canva Goods and services provided by SkinKandy are intended for <strong>personal use only</strong> and must <strong>not be resold</strong> without <strong>prior written consent</strong> from SkinKandy.</p>"
+          }
+        },
+        "question_rdjLLk": {
+          "type": "question",
+          "settings": {
+            "question": "Offers, Sales and Promotions",
+            "answer": "<p>SkinKandy may, from time to time, offer sales, promotions, and exclusive offers both in-store and online.</p><ul><li>Online Only offers are available exclusively through our website and do not apply to in-store purchases.</li><li>In-Store Only offers are available exclusively in-store and do not apply to online purchases.</li></ul><p>SkinKandy reserves the right to adjust the duration or terms of any sale, promotion, or exclusive offer as necessary.<br/><br/></p>"
+          }
+        },
+        "question_7TWJNn": {
+          "type": "question",
+          "settings": {
+            "question": "Gift Cards",
+            "answer": "<p>Treat SkinKandy gift cards as cash. Damaged, lost, or stolen cards will not be replaced, refunded, or redeemed for cash.</p><ul><li>Gift cards purchased in Australia display their value and balance in Australian Dollars (AUD).</li><li>Gift cards purchased in New Zealand display their value and balance in New Zealand Dollars (NZD).</li></ul><p>SkinKandy is not responsible for any currency conversion or exchange rate differences when a gift card is redeemed in a country other than where it was originally purchased.</p><p>a. Physical Gift Cards<br/><br/>Available for purchase in-store only<br/><br/>Redeemable in-store or online within the country of purchase<br/><br/>To redeem online, enter the code located on the back of the card at checkout<br/><br/>To redeem in-store, present your physical gift card to the team<br/><br/>b. Digital / e-Gift Cards</p><p>Available for purchase online only<br/><br/>Issued via email and available to recipients with Australian or New Zealand residential addresses<br/><br/>Redeemable online or in-store within the country of purchase<br/><br/>To redeem in-store, present the digital code received via email<br/><br/>For any queries regarding gift cards, please contact our Customer Support Team.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_tLEwGJ",
+        "question_TMKw48",
+        "question_DHF8jh",
+        "question_QhyUmy",
+        "question_rdjLLk",
+        "question_7TWJNn"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 972
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_Aht9Jz",
+    "rich_text_DmqVGw",
+    "rich_text_7xXAd6",
+    "custom_faq_rj73re"
   ]
 }
