@@ -169,6 +169,128 @@
         "hide_image": false,
         "max_width": 972
       }
+    },
+    "rich_text_HxLDpQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9pkNaB": {
+          "type": "heading",
+          "settings": {
+            "title": "In-Store Purchases",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9pkNaB"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "custom_faq_7H73JQ": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_HtKn4E": {
+          "type": "question",
+          "settings": {
+            "question": "Refund and Returns Procedure for In-store Purchases",
+            "answer": "<p>Refunds, returns, or exchanges are <strong>not provided for change of mind.</strong></p><p>Customers must present the <strong>faulty or defective product</strong>, along with <strong>proof of purchase</strong>, at any SkinKandy store within <strong>30 days</strong> of the purchase date. Our team will assess the product to determine eligibility under the <strong>Australian Consumer Law</strong> or the <strong>New Zealand Consumer Guarantees Act</strong>.</p><p>If the product is confirmed to be faulty or defective, customers may choose between a <strong>refund</strong>, <strong>replacement</strong>, or <strong>store credit</strong> for the purchase amount, subject to product availability.</p><p>Refunds will be processed using the <strong>original payment method</strong>, unless alternative arrangements are agreed upon between the customer and SkinKandy.</p><p>Customers may also contact our Customer Support Centre within 30 days of the purchase date to request a refund for a faulty or defective item.</p><p>Customers may be asked to provide:</p><ul><li>Details of the product fault, and</li><li>Proof of purchase</li></ul><p>Our Customer Support team will assess the claim to determine eligibility under the Australian Consumer Law or the New Zealand Consumer Guarantees Act.</p><p>If the product is deemed faulty or defective, a refund for the full purchase amount will be provided. Refunds will be processed within 7 days of the product being confirmed as faulty and will be issued via direct deposit to the customer's nominated bank account.</p>"
+          }
+        },
+        "question_ayxEFm": {
+          "type": "question",
+          "settings": {
+            "question": "Our Piercing Guarantee",
+            "answer": "<p>SkinKandy offers a 7-day satisfaction guarantee on all piercing services if a customer is not satisfied with the placement or position of the piercing.</p><ul><li>Customers must return to store or contact our Customer Support Team within 7 days of the service date to request a free re-pierce.</li><li>Customers may be asked to provide photos, details of the piercing, and proof of purchase (e.g. receipt or invoice).</li><li>The re-piercing will be scheduled by one of our experienced Piercers at a suitable time, allowing for appropriate healing, if required.</li><li>The re-pierce may be performed on a different location on the body if requested, but must be of equal or lesser value than the original service.</li></ul><p>Important Notice:<br/>Customers are responsible for the piercing procedure, post-procedure care, healing, and aftercare. SkinKandy is not liable for any unexpected or unforeseen issues or injuries, provided all due care was taken during the piercing procedure.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_HtKn4E",
+        "question_ayxEFm"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 972
+      }
+    },
+    "rich_text_iCMYjY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3cLPLV": {
+          "type": "heading",
+          "settings": {
+            "title": "Online Orders",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3cLPLV"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "custom_faq_tjiUnX": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_rGfLLL": {
+          "type": "question",
+          "settings": {
+            "question": "Placing Online Orders",
+            "answer": "<p>Orders for goods and services are considered finalised once customers complete the checkout process by:</p><ol><li>Navigating through our online store.</li><li>Entering the required order and payment details.</li><li>Confirming payment.</li></ol><p>Upon successful payment, an order confirmation email will be sent to the email address provided during the purchase process.</p><p>It is the <strong>customer’s responsibility</strong> to verify and confirm the accuracy of all order details—<strong>including product selection and delivery address</strong>—at the time of placing an online order.</p><p>SkinKandy accepts <strong>no liability for errors</strong> in order details, to the extent permitted by law.</p><p>Once an order is placed, <strong>amendments to product, customer, or delivery details are generally not feasible</strong>. If the order has <strong>not yet been dispatched</strong>, cancellation or delivery detail adjustments <strong>may be possible</strong>, but are <strong>not guaranteed</strong>.</p><p><strong>Ownership and liability</strong> for goods purchased online remain with SkinKandy until <strong>full payment is received</strong> and the goods have been <strong>successfully dispatched</strong> to the delivery address provided at checkout.</p>"
+          }
+        },
+        "question_PXY8pJ": {
+          "type": "question",
+          "settings": {
+            "question": "Shipping & Delivery",
+            "answer": "<p>SkinKandy offers shipping and delivery services to <strong>residential addresses within Australia and New Zealand</strong>.</p><p>Once an online order is <strong>confirmed and paid</strong>, the goods will be <strong>dispatched from our warehouse</strong> to the customer’s nominated address.</p><p>Customers will receive a <strong>dispatch notification via email</strong> to the address provided during checkout once the order has been shipped.</p>"
+          }
+        },
+        "question_ndFQPz": {
+          "type": "question",
+          "settings": {
+            "question": "Issues with On-Line Orders",
+            "answer": "<p>SkinKandy reserves the right to cancel any online order in the following circumstances:</p><ul><li>Pricing errors, inaccuracies, or outdated information related to pricing, stock availability, or product descriptions.</li><li>Suspected fraudulent or malicious activity</li></ul><p>In the event of a cancellation due to the above reasons, customers may be offered alternative arrangements, such as substitute products, and are entitled to a full and prompt refund for any cancelled orders.</p>"
+          }
+        },
+        "question_CdAP8K": {
+          "type": "question",
+          "settings": {
+            "question": "Refund Procedure for Online Purchases",
+            "answer": "<p>Customers should contact our Customer Service team within 30 days of purchase to report any faults or defects in products bought online. Contact methods include:</p><ul><li>Phone</li><li>The “Talk to Us” page on the SkinKandy website</li><li>Email</li></ul><p>Customers may be asked to provide photographic evidence of the fault or defect to help assess eligibility for a refund or replacement.</p><p>If a product qualifies for a refund, customers will receive a refund for the purchase amount, excluding any shipping or handling fees, via the original payment method.</p><p>Alternatively, customers may choose a replacement, subject to product availability and agreement with SkinKandy.</p><p>All online returns and refunds will be processed within 10 business days of SkinKandy deeming the item faulty. Customers will receive an email confirmation once the refund has been processed.</p><p>Where customers are required to return the faulty item to SkinKandy, we will reimburse reasonable shipping costs.</p><p>Please note: Online orders cannot be refunded in-store.</p><p>SkinKandy reserves the right to amend or update this Refund Policy and Procedure as necessary. Customers are encouraged to review this policy periodically for any changes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_rGfLLL",
+        "question_PXY8pJ",
+        "question_ndFQPz",
+        "question_CdAP8K"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 972
+      }
     }
   },
   "order": [
@@ -176,6 +298,10 @@
     "rich_text_Aht9Jz",
     "rich_text_DmqVGw",
     "rich_text_7xXAd6",
-    "custom_faq_rj73re"
+    "custom_faq_rj73re",
+    "rich_text_HxLDpQ",
+    "custom_faq_7H73JQ",
+    "rich_text_iCMYjY",
+    "custom_faq_tjiUnX"
   ]
 }
