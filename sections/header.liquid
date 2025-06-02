@@ -31,8 +31,8 @@
             </div>
           {% else %}
             {% if settings.popup_left_image %}
-              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
-              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
+              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" loading="lazy">
+              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" loading="lazy">
             {% else %}
               <div class="video-container">
                 <video loop muted loop autoplay playsinline>
