@@ -108,7 +108,6 @@
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"
-      defer
     ></script>
 
     {%- if shop.enabled_currencies.size > 1 -%}
@@ -127,6 +126,7 @@
       integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      
     >
     <link
       rel="stylesheet"
@@ -140,7 +140,6 @@
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-      defer
     ></script>
 
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
@@ -228,7 +227,7 @@
 
     {% if settings.popup_enable %}
       <link rel="stylesheet" href="{{ 'form-popup.css' | asset_url }}">
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     {% endif %}
 
     <script>
@@ -358,7 +357,7 @@
       var afterpay_cart_total_price = {{ cart.total_price | json }};
       var afterpay_js_snippet_version = '1.0.12';
     </script>
-    <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js" defer></script>
+    <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
     <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
 
     {% if template == 'index' %}
