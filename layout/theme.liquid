@@ -239,8 +239,9 @@
         window.location.href = "{{ '/collections/shop-all' | url }}";
       }
     </script>
-    
-  {% include 'pagefly-app-header' %}
+  {% unless template != 'index' %}
+    {% include 'pagefly-app-header' %}
+  {% endunless %}
   </head>
 
   <body
