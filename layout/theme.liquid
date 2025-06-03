@@ -46,11 +46,11 @@
     {%- render 'font-face' -%}
     {% endcomment %}
     {%- render 'css-variables' -%}
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
     {% if settings.popup_layout == 'bfcm' %}
       <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
     
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
