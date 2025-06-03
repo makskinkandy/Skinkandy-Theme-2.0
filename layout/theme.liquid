@@ -239,7 +239,7 @@
         window.location.href = "{{ '/collections/shop-all' | url }}";
       }
     </script>
-  {% unless template != 'index' %}
+  {% unless template == 'index' %}
     {% include 'pagefly-app-header' %}
   {% endunless %}
   </head>
