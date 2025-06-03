@@ -358,7 +358,7 @@
       var afterpay_cart_total_price = {{ cart.total_price | json }};
       var afterpay_js_snippet_version = '1.0.12';
     </script>
-    <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+    <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js" defer></script>
     <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
 
     {% if template == 'index' %}
