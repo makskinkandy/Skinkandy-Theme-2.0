@@ -13,12 +13,12 @@
         {{- 'homepage.autostyle.css' | asset_url | stylesheet_tag -}}
 
         {% # theme-check-disable ParserBlockingScript %}
-        <script src="{{- 'homepage.autojs.js' | asset_url -}}" type="text/javascript"></script>
+        <script src="{{- 'homepage.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
         {% # theme-check-enable ParserBlockingScript %}
 
     {%- when 'product' -%}
         {% # theme-check-disable ParserBlockingScript %}
-        <script src="{{- 'product.autojs.js' | asset_url -}}" type="text/javascript"></script>
+        <script src="{{- 'product.autojs.js' | asset_url -}}" type="text/javascript" defer></script>
         {% # theme-check-enable ParserBlockingScript %}
 
     {%- when 'collection' or 'collection.searchspring' -%}
