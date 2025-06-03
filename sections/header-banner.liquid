@@ -3,12 +3,8 @@
     <div class="hero-banner__wrapper slider-wrapper">
       {% for block in section.blocks %}
         {% assign preload_image = block.settings.image | image_url  %}
-        {% assign preload_image_mobile = block.settings.image_mobile | image_url  %}
         {% if preload_image != blank %}
           {{ '<link rel="preload" as="image" href="'| append: preload_image | append: '">' | strip_newlines }}
-        {% endif %}
-        {% if preload_image_mobile != blank %}
-          {{ '<link rel="preload" as="image" href="'| append: preload_image_mobile | append: '">' | strip_newlines }}
         {% endif %}
         {% assign text = block.settings.heading %}
         {% assign words = text | split: ' ' %}
@@ -31,8 +27,33 @@
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
           {% if block.settings.heading == blank %}
-            <img src="{{ block.settings.image | image_url }}" alt="Image for slider {{ forloop.index }}" class="desktop" fetchpriority="high">
-            <img src="{{ block.settings.image_mobile | image_url }}" alt="Image for slider {{ forloop.index }}" class="mobile" fetchpriority="high">
+            <picture>
+              <!-- Mobile image for ≤767px -->
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  {{ block.settings.image_mobile | image_url: width: 640 }} 640w,
+                  {{ block.settings.image_mobile | image_url: width: 480 }} 480w,
+                  {{ block.settings.image_mobile | image_url: width: 375 }} 375w
+                "
+                sizes="100vw"
+              >
+              <!-- Desktop image fallback -->
+              <img
+                src="{{ block.settings.image | image_url: width: 2200 }}"
+                alt="Image for slider {{ forloop.index }}"
+                class="hero-image"
+                srcset="
+                  {{ block.settings.image | image_url: width: 2200 }} 1920w,
+                  {{ block.settings.image | image_url: width: 1600 }} 1600w,
+                  {{ block.settings.image | image_url: width: 1440 }} 1440w,
+                  {{ block.settings.image | image_url: width: 1200 }} 1200w,
+                  {{ block.settings.image | image_url: width: 992 }} 992w,
+                  {{ block.settings.image | image_url: width: 768 }} 768w
+                "
+                sizes="100vw"
+              >
+            </picture>
           {% endif %}
           <div class="hero-banner__content-wrapper">
             <div class="page-width hero-banner__content alignment--{{ block.settings.align_text }}">
