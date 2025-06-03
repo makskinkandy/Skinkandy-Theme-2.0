@@ -1,4 +1,4 @@
-import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js';
 
 // Add plugins for DayJs
 dayjs.extend(window.dayjs_plugin_isBetween)
