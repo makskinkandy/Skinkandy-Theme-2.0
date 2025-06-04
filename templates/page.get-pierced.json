@@ -750,15 +750,15 @@
         "text_content_7PEC7x": {
           "type": "text-content",
           "settings": {
-            "content": "<p>Your story, your piercing, your style.\nWelcome to SkinKandy.</p>",
+            "content": "<p>Your story, your piercing, your style.<br/>Welcome to SkinKandy.</p>",
             "size": "large"
           }
         },
         "button_TGnJHM": {
           "type": "button",
           "settings": {
-            "button_text": "BOOK NOW",
-            "button_url": "https://support.skinkandy.com/s/booking-form"
+            "button_text": "Find a Store",
+            "button_url": "shopify://pages/store-locations"
           }
         }
       },
