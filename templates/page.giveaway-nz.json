@@ -71,11 +71,11 @@
             "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>The NZ Rhythm & Vines Giveaway 2025 is exclusive to New Zealand only. The festival is for 18+, winner must of age. Comp is open to both existing and new KandyClub members.</strong><br/><br/></p><p><a href=\"/pages/ipad-apple-pencil-giveaway-t-cs\" target=\"_blank\" title=\"IPad & Apple Pencil Giveaway T&C's\">Terms & Conditions</a></p>"
           }
         },
-        "button_9GJpYb": {
+        "button_wTJDyw": {
           "type": "button",
           "settings": {
             "link": "#!",
-            "link_text": "JOIN KANDYCLUB NOW",
+            "link_text": "Book Now",
             "css_class": "js-btn-popup"
           }
         }
@@ -84,7 +84,7 @@
         "heading_HgBbid",
         "text_iX7awe",
         "text_aa77zK",
-        "button_9GJpYb"
+        "button_wTJDyw"
       ],
       "custom_css": [
         "h1 {font-weight: 600;}"
@@ -104,15 +104,15 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>We are the premier destination for all piercing services and accessories. Our highly trained team of piercing experts look forward to making your piercing dreams a reality.</p>"
+            "text": "<p><em>Are you already a KandyClub member? No need to fill in your details, all you need to do BOOK your appointment & get your piercing.</em></p>"
           }
         },
         "button_BkU3Lc": {
           "type": "button",
           "settings": {
             "link": "https://support.skinkandy.com/s/booking-form",
-            "link_text": "Book now",
-            "css_class": ""
+            "link_text": "JOIN THE KANDYCLUB",
+            "css_class": "js-btn-popup"
           }
         }
       },
@@ -120,7 +120,6 @@
         "text_6j4jia",
         "button_BkU3Lc"
       ],
-      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "center",
