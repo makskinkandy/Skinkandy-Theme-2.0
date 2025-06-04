@@ -16475,5 +16475,9 @@ small.cart__discount.percentage {
 }
 
 button.action.previous.material_outlined-button {
-    border-radius: 40px;
+  border-radius: 40px;
+}
+
+.bg--pink {
+  background-color: #eb008c;
 }
