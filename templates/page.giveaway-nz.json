@@ -53,7 +53,14 @@
         "heading_HgBbid": {
           "type": "heading",
           "settings": {
-            "title": "WIN {Rhythm} {&} {VinesFestival} Ticket Glamping Package {FOR} {YOU} & {3} {FRIENDS} valued at {over} {$5,000}",
+            "title": "WIN",
+            "heading_tag": "h2"
+          }
+        },
+        "heading_PXyLC6": {
+          "type": "heading",
+          "settings": {
+            "title": "{Rhythm} {&} {Vines} Festival Package <br> {FOR} {YOU} & {3} {FRIENDS} <br> valued at {over} {$5,000}",
             "heading_tag": "h1"
           }
         },
@@ -61,7 +68,15 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p><strong>GET PIERCED</strong> & <strong>Join our KandyClub </strong>for a chance to win!</p><p>Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details & join the KandyClub + get ANY piercing over the next 6 weeks. </p><p>Once you have joined & have your NEW piercing, you are automatically in the <br/>running to <strong>WIN!</strong></p><p>The lucky winner will be contacted on the <strong>15th August 2025. Competition ends <br/>on July 30 2025.</strong></p><p><strong>GOODLUCK</strong></p>"
+            "text": "<p><strong>GET PIERCED</strong> & <strong>Join our KandyClub </strong>for a chance to win!Exclusive perks, special events, member-only offers and discounts...</p><p>To enter our giveaway, enter your details & join the KandyClub + get ANY piercing  over the next 6 weeks.</p><p>Once you have joined & have your NEW piercing, you are automatically in the <br/>running to <strong>WIN!</strong></p><p>The lucky winner will be contacted on the <strong>15th August 2025. Competition ends <br/>on July 30 2025.</strong></p><p><strong>GOODLUCK</strong></p>"
+          }
+        },
+        "button_BMGybz": {
+          "type": "button",
+          "settings": {
+            "link": "#!",
+            "link_text": "JOIN THE KANDYCLUB",
+            "css_class": "js-btn-popup"
           }
         },
         "text_aa77zK": {
@@ -70,23 +85,18 @@
             "enlarge_text": false,
             "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>The NZ Rhythm & Vines Giveaway 2025 is exclusive to New Zealand only. The festival is for 18+, winner must of age. Comp is open to both existing and new KandyClub members.</strong><br/><br/></p><p><a href=\"/pages/ipad-apple-pencil-giveaway-t-cs\" target=\"_blank\" title=\"IPad & Apple Pencil Giveaway T&C's\">Terms & Conditions</a></p>"
           }
-        },
-        "button_wTJDyw": {
-          "type": "button",
-          "settings": {
-            "link": "#!",
-            "link_text": "Book Now",
-            "css_class": "js-btn-popup"
-          }
         }
       },
       "block_order": [
         "heading_HgBbid",
+        "heading_PXyLC6",
         "text_iX7awe",
-        "text_aa77zK",
-        "button_wTJDyw"
+        "button_BMGybz",
+        "text_aa77zK"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h2 {font-size: 67px; font-weight: 600;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
@@ -105,18 +115,18 @@
             "text": "<p><em>Are you already a KandyClub member? No need to fill in your details, all you need to do BOOK your appointment & get your piercing.</em></p>"
           }
         },
-        "button_BkU3Lc": {
+        "button_hNybxR": {
           "type": "button",
           "settings": {
             "link": "#!",
-            "link_text": "JOIN THE KANDYCLUB",
+            "link_text": "Book Now",
             "css_class": "js-btn-popup"
           }
         }
       },
       "block_order": [
         "text_6j4jia",
-        "button_BkU3Lc"
+        "button_hNybxR"
       ],
       "name": "Rich text",
       "settings": {
