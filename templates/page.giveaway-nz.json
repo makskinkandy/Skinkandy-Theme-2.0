@@ -86,9 +86,7 @@
         "text_aa77zK",
         "button_wTJDyw"
       ],
-      "custom_css": [
-        "h1 {font-weight: 600;}"
-      ],
+      "custom_css": [],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
