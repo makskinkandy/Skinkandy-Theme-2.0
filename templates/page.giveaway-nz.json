@@ -108,7 +108,7 @@
         "button_BkU3Lc": {
           "type": "button",
           "settings": {
-            "link": "https://support.skinkandy.com/s/booking-form",
+            "link": "#!",
             "link_text": "JOIN THE KANDYCLUB",
             "css_class": "js-btn-popup"
           }
