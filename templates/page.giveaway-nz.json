@@ -118,9 +118,9 @@
         "button_hNybxR": {
           "type": "button",
           "settings": {
-            "link": "#!",
+            "link": "https://support.skinkandy.com/s/booking-form",
             "link_text": "Book Now",
-            "css_class": "js-btn-popup"
+            "css_class": ""
           }
         }
       },
