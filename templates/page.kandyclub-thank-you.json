@@ -115,6 +115,9 @@
       "block_order": [
         "heading_U6E7y4"
       ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
