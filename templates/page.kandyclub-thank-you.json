@@ -68,7 +68,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/9x16_-_1_1.jpg",
+            "image": "shopify://shop_images/1x1_-_2_1.jpg",
             "video": "",
             "center-content": false,
             "title": "Buy 3, Get the 4th Free",
@@ -99,6 +99,40 @@
         "disable_grid": false,
         "two_column": false,
         "max_width": 1704
+      }
+    },
+    "rich_text_aD4JNc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U6E7y4": {
+          "type": "heading",
+          "settings": {
+            "title": "Ready to Build Your Dream Stack?",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U6E7y4"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "inline_buttons_Ye377A": {
+      "type": "inline-buttons",
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "SHOP JEWELLERY",
+        "button_1_url": "shopify://collections/shop-all",
+        "button_2_text": "Book a piercing",
+        "button_2_url": "https://support.skinkandy.com/s/booking-form?_gl=1*1u39ceh*_gcl_au*MTA3MTA0NzEzNy4xNzQ4NDE3MDk5",
+        "text_color": "#eb008c",
+        "bg_color": "#ffffff"
       }
     },
     "custom_banner_3bAXUt": {
@@ -154,40 +188,6 @@
         "mobile_image": "shopify://shop_images/Model_-_Mobile.png",
         "bg_color": "#e9e5ed",
         "left_image": false
-      }
-    },
-    "rich_text_aD4JNc": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U6E7y4": {
-          "type": "heading",
-          "settings": {
-            "title": "Ready to Build Your Dream Stack?",
-            "heading_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U6E7y4"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
-      }
-    },
-    "inline_buttons_Ye377A": {
-      "type": "inline-buttons",
-      "name": "Inline Buttons",
-      "settings": {
-        "button_1_text": "SHOP JEWELLERY",
-        "button_1_url": "shopify://collections/shop-all",
-        "button_2_text": "Book a piercing",
-        "button_2_url": "https://support.skinkandy.com/s/booking-form?_gl=1*1u39ceh*_gcl_au*MTA3MTA0NzEzNy4xNzQ4NDE3MDk5",
-        "text_color": "#eb008c",
-        "bg_color": "#ffffff"
       }
     }
   },
