@@ -94,7 +94,7 @@
         "button_text": "",
         "button_url": "",
         "count": 2,
-        "bottom_space": false,
+        "bottom_space": true,
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
