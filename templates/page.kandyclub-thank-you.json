@@ -18,24 +18,6 @@
         "content": false
       }
     },
-    "columns_block_gPQ7P9": {
-      "type": "columns-block",
-      "name": "Columns Block",
-      "settings": {
-        "dark_mode": false,
-        "class": "",
-        "title": "Welcome to {KandyClub!}",
-        "description": "<p>You’re officially part of Australia and New Zealand’s biggest piercing community.</p><p>At SkinKandy, we’re global leaders in safe, professional body piercings—with over 80 stores across Australia and New Zealand and a reputation built on trust, hygiene, and style. Whether you’re booking your first piercing or curating your next stack, you’re in expert hands.</p><p>Now that you're in, you’ve unlocked access to exclusive member perks!<br/></p>",
-        "button_text": "",
-        "button_url": "",
-        "count": 3,
-        "bottom_space": false,
-        "hide_line": true,
-        "disable_grid": false,
-        "two_column": false,
-        "max_width": 1704
-      }
-    },
     "columns_block_CqqbQM": {
       "type": "columns-block",
       "blocks": {
@@ -89,8 +71,8 @@
       "settings": {
         "dark_mode": false,
         "class": "",
-        "title": "",
-        "description": "",
+        "title": "Welcome to {KandyClub!}",
+        "description": "<p>You’re officially part of Australia and New Zealand’s biggest piercing community.</p><p>At SkinKandy, we’re global leaders in safe, professional body piercings—with over 80 stores across Australia and New Zealand and a reputation built on trust, hygiene, and style. Whether you’re booking your first piercing or curating your next stack, you’re in expert hands.</p><p>Now that you're in, you’ve unlocked access to exclusive member perks!<br/></p>",
         "button_text": "",
         "button_url": "",
         "count": 2,
@@ -199,7 +181,6 @@
   },
   "order": [
     "main",
-    "columns_block_gPQ7P9",
     "columns_block_CqqbQM",
     "rich_text_aD4JNc",
     "inline_buttons_Ye377A",
