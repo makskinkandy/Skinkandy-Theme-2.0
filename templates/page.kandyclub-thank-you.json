@@ -68,6 +68,9 @@
         "text_block_JmmfzK",
         "text_block_BEHQYK"
       ],
+      "custom_css": [
+        ".grid__item.medium-up--one-half.text-.aos-init.aos-animate {text-align: center;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
