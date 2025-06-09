@@ -183,8 +183,8 @@
           "f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15": {
             "type": "announcement",
             "settings": {
-              "link_text": "FREE SHIPPING ON ORDERS OVER $70",
-              "link": "shopify://policies/shipping-policy"
+              "link_text": "FREE SHIPPING FOR KANDYCLUB MEMBERS. NOT A MEMBER YET? JOIN NOW",
+              "link": "shopify://pages/kandy-club"
             }
           },
           "31778dc5-bfaa-4e1d-9aa7-7f0971794dee": {
