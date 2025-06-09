@@ -55,6 +55,11 @@
               <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
             </div>
           {% endif %}
+          {% if settings.kc_cart_text != blank %}
+            <div class="kandy-club__text with-cart">
+              <p>{{ settings.kc_cart_text }} {% if settings.kc_link_text != blank %}<a href="{{ settings.kc_link }}">{{ settings.kc_link_text }}</a>{% endif %}</p>
+            </div>
+          {% endif %}
         </div>
 
         <div class="drawer__footer cart-drawer__footer appear-animation appear-delay-4">
@@ -234,7 +239,7 @@
             <img src="{{ settings.empty_image | image_url: width: 100 }}" alt="" width="100" height="100" >
             {% endif %}
             {% if settings.empty_cart_heading != blank %}
-            <p>{{ settings.empty_cart_heading }}</h3>
+            <p>{{ settings.empty_cart_heading }}</p>
             {% endif %}
             {% if settings.empty_cart != blank %}
               {{ settings.empty_cart }}
@@ -243,8 +248,14 @@
               <a href="{{ settings.empty_cart_link }}" class="btn btn--small">{{ settings.empty_cart_link_label }}</a>
             {% endif %}
           </div>
+          {% if settings.kc_cart_text != blank %}
+            <div class="kandy-club__text">
+              <p>{{ settings.kc_cart_text }} {% if settings.kc_link_text != blank %}<a href="{{ settings.kc_link }}">{{ settings.kc_link_text }}</a>{% endif %}</p>
+            </div>
+          {% endif %}
         </div>
       </div>
+      
     </form>
   </div>
 {%- endif -%}
