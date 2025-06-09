@@ -29,7 +29,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/Model_1x1_1_1.jpg",
+            "image": "shopify://shop_images/Model_1x1_3_1.jpg",
             "video": "",
             "center-content": false,
             "title": "2 for $80",
@@ -50,7 +50,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/1x1_-_2_1.jpg",
+            "image": "shopify://shop_images/1x1_-_1_1.jpg",
             "video": "",
             "center-content": false,
             "title": "Buy 3, Get the 4th Free",
@@ -84,46 +84,6 @@
         "disable_grid": false,
         "two_column": false,
         "max_width": 1704
-      }
-    },
-    "rich_text_aD4JNc": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U6E7y4": {
-          "type": "heading",
-          "settings": {
-            "title": "Ready to Build Your Dream Stack?",
-            "heading_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U6E7y4"
-      ],
-      "custom_css": [
-        "h2 {font-weight: 600;}"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
-      }
-    },
-    "inline_buttons_Ye377A": {
-      "type": "inline-buttons",
-      "custom_css": [
-        ".inline-buttons__block {margin-bottom: 35px; max-width: 660px; margin-inline: auto;}"
-      ],
-      "name": "Inline Buttons",
-      "settings": {
-        "button_1_text": "SHOP JEWELLERY",
-        "button_1_url": "shopify://collections/shop-all",
-        "button_2_text": "Book a piercing",
-        "button_2_url": "https://support.skinkandy.com/s/booking-form?_gl=1*1u39ceh*_gcl_au*MTA3MTA0NzEzNy4xNzQ4NDE3MDk5",
-        "text_color": "#eb008c",
-        "bg_color": "#ffffff"
       }
     },
     "custom_banner_3bAXUt": {
@@ -185,8 +145,6 @@
   "order": [
     "main",
     "columns_block_CqqbQM",
-    "rich_text_aD4JNc",
-    "inline_buttons_Ye377A",
     "custom_banner_3bAXUt"
   ]
 }
