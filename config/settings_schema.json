@@ -1002,6 +1002,21 @@
         "id": "empty_cart_link_label",
         "label": "Link Label",
         "default": "Take me shopping please"
+      },
+      {
+        "type": "text",
+        "id": "kc_cart_text",
+        "label": "KandyClub Cart Text"
+      },
+      {
+        "type": "text",
+        "id": "kc_link_text",
+        "label": "KandyClub Cart Link Text"
+      },
+      {
+        "type": "url",
+        "id": "kc_link",
+        "label": "KandyClub Cart Link"
       }
     ]
   },
