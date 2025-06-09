@@ -43,9 +43,9 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Wear_it_your_way.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_Desktop_Wear_it_your_way.jpg",
-            "banner_url": "shopify://collections/new-in",
+            "image_mobile": "shopify://shop_images/Homepage_Gold_Statement_-_V1_Mobile.jpg",
+            "image": "shopify://shop_images/Homepage_Gold_Statement_-_V1_Desktop.jpg",
+            "banner_url": "shopify://collections/guided-internally-threaded-jewellery",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -104,7 +104,7 @@
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "Shop Now",
-        "button_1_url": "shopify://collections/new-in",
+        "button_1_url": "shopify://collections/guided-internally-threaded-jewellery",
         "button_2_text": "BOOK A PIERCING",
         "button_2_url": "https://support.skinkandy.com/s/booking-form",
         "text_color": "#ffffff",
