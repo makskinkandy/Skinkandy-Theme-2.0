@@ -441,8 +441,10 @@
         "no_rates_for_cart_or_destination_notice": "There are no shipping methods available for your basket or address"
       },
       "payment": {
-        "subscription_agreement_label": "One or more items in your basket is a deferred or subscription purchase. By continuing with your payment, you agree that your payment method will automatically be charged at the price and frequency listed on this page until it ends or you cancel. All cancellations are subject to the {{ cancelled }}.",
-        "gift_card_checkbox_label": "Subscribe as a Kandyclub member and get free shipping on all of your orders."
+        "subscription_agreement_label": "One or more items in your basket is a deferred or subscription purchase. By continuing with your payment, you agree that your payment method will automatically be charged at the price and frequency listed on this page until it ends or you cancel. All cancellations are subject to the {{ cancelled }}."
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Subscribe as a Kandyclub member and get free shipping on all of your orders."
       }
     },
     "email_marketing": {
