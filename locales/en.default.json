@@ -444,7 +444,7 @@
         "subscription_agreement_label": "One or more items in your basket is a deferred or subscription purchase. By continuing with your payment, you agree that your payment method will automatically be charged at the price and frequency listed on this page until it ends or you cancel. All cancellations are subject to the {{ cancelled }}."
       },
       "marketing": {
-        "accept_marketing_checkbox_label": "Subscribe as a Kandyclub member and get free shipping on all of your orders."
+        "accept_marketing_checkbox_label": "Subscribe as a Kandyclub member and get free shipping on all of your orders. <a href=\"\" target=\"_blank\">Join KandyClub</a>"
       }
     },
     "email_marketing": {
