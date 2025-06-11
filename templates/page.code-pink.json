@@ -112,6 +112,55 @@
         "bg_color": "#000000"
       }
     },
+    "rich_text_gwEVLb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EPRTMT": {
+          "type": "heading",
+          "settings": {
+            "title": "Your next ear stack starts here",
+            "heading_tag": "h1"
+          }
+        },
+        "page_nkw3Et": {
+          "type": "page",
+          "settings": {
+            "page_text": "homepage-dev"
+          }
+        },
+        "text_b6GqnX": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_B6Mjmb": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/skinkandy-2-for-80-promotion",
+            "link_text": "See all body piercings included",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_EPRTMT",
+        "page_nkw3Et",
+        "text_b6GqnX",
+        "button_B6Mjmb"
+      ],
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
     "columns_block_HhremV": {
       "type": "columns-block",
       "blocks": {
@@ -161,6 +210,7 @@
         "text_block_XFLcLt",
         "text_block_RadN3G"
       ],
+      "disabled": true,
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
@@ -169,7 +219,7 @@
         "description": "",
         "button_text": "",
         "button_url": "",
-        "count": 2,
+        "count": 1,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
@@ -368,6 +418,7 @@
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
     "inline_buttons_f7DDkA",
+    "rich_text_gwEVLb",
     "columns_block_HhremV",
     "columns_block_AAVbUH",
     "rich_text_YyxiLB",
