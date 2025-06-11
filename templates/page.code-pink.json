@@ -114,10 +114,9 @@
       "blocks": {
         "heading_EPRTMT": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "title": "Your next ear stack starts here",
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "page_nkw3Et": {
@@ -129,7 +128,7 @@
         "text_b6GqnX": {
           "type": "text",
           "settings": {
-            "enlarge_text": true,
+            "enlarge_text": false,
             "text": "<p><a href=\"/pages/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\"><strong>See all body piercings included in the offer</strong></a></p>"
           }
         },
