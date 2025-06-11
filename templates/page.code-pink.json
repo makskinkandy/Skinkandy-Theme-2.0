@@ -344,6 +344,35 @@
         "reduce_spacing": false
       }
     },
+    "collection_showcase_LUAbee": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_iJTG6Y": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": false,
+            "title": "",
+            "url": "shopify://collections/buy-3-get-one-free"
+          }
+        }
+      },
+      "block_order": [
+        "image_iJTG6Y"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "G",
+        "mode": "light",
+        "background": "",
+        "button_text": "SHOP ALL",
+        "button_url": "shopify://collections/buy-3-get-one-free",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": ""
+      }
+    },
     "grid_image_xGVpcK": {
       "type": "grid-image",
       "blocks": {
@@ -433,6 +462,7 @@
     "columns_block_HhremV",
     "columns_block_AAVbUH",
     "rich_text_YyxiLB",
+    "collection_showcase_LUAbee",
     "grid_image_xGVpcK",
     "pagefly-home",
     "raw_code_wM84LU"
