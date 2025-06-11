@@ -98,10 +98,7 @@
     },
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
-      "custom_css": [
-        ".btn--clear {background-color: #eb008c;}",
-        ".bg--pink {background-color: red;}"
-      ],
+      "custom_css": [],
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "Shop Now",
