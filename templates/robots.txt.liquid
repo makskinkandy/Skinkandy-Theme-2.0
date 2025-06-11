@@ -8,6 +8,7 @@
   {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
 {{ 'Disallow: /collections/shop?q=*' }}
+{{ 'Disallow: /pages/homepage-dev' }}
   {%- endif -%}
 
   {%- if group.sitemap != blank -%}
