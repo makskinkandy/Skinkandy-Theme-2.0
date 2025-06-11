@@ -135,8 +135,8 @@
         "button_B6Mjmb": {
           "type": "button",
           "settings": {
-            "link": "shopify://pages/skinkandy-2-for-80-promotion",
-            "link_text": "See all body piercings included",
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "BOOK NOW",
             "css_class": ""
           }
         }
