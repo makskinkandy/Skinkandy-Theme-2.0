@@ -96,6 +96,71 @@
         "shuffle": false
       }
     },
+    "columns_block_HhremV": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_XFLcLt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "image": "shopify://shop_images/Ear_Map_-_final-2_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_RadN3G": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "video": "",
+            "center-content": true,
+            "title": "Your next ear stack starts here",
+            "title_size": "large",
+            "title_tag": "h2",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text_size": "small",
+            "button_label": "See all piercing Included",
+            "button_link": "shopify://pages/skinkandy-2-for-80-promotion",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_XFLcLt",
+        "text_block_RadN3G"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1704
+      }
+    },
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
       "custom_css": [
@@ -110,38 +175,6 @@
         "button_2_url": "https://support.skinkandy.com/s/booking-form",
         "text_color": "#ffffff",
         "bg_color": "#000000"
-      }
-    },
-    "two_column_icon_image_c79Kr9": {
-      "type": "two-column-icon-image",
-      "blocks": {
-        "title_block_XFEQTg": {
-          "type": "title_block",
-          "settings": {
-            "title": "YOUR NEXT EAR STACKS STARTS HERE",
-            "title_tag": "h1",
-            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p><p><a href=\"/pages/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\">See all body piercings included in the offer</a></p>",
-            "button_text": "Book Now",
-            "button_url": "shopify://pages/professional-body-piercing-services",
-            "text_align": "left"
-          }
-        }
-      },
-      "block_order": [
-        "title_block_XFEQTg"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Ear_Map_-_final-2_1.jpg",
-        "left_align": true,
-        "icon_column": false,
-        "bottom_margin": true,
-        "hide_mobile": false,
-        "hide_description": false,
-        "round_image": false,
-        "circle_drops": false,
-        "bottom_border": true,
-        "reduced_image_size": false,
-        "reduced_content_width": false
       }
     },
     "columns_block_AAVbUH": {
@@ -303,8 +336,8 @@
     "top_notification_banner_yteqNA",
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
+    "columns_block_HhremV",
     "inline_buttons_f7DDkA",
-    "two_column_icon_image_c79Kr9",
     "columns_block_AAVbUH",
     "grid_image_xGVpcK",
     "pagefly-home"
