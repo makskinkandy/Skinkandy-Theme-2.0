@@ -121,7 +121,7 @@
             "enable_image": true,
             "enable_round": false,
             "fullwidth-image": false,
-            "fullheight-image": false,
+            "fullheight-image": true,
             "hide-image": false,
             "image": "shopify://shop_images/Ear_Map_-_final-2_1.jpg",
             "video": "",
