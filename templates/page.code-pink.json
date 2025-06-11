@@ -112,362 +112,15 @@
         "bg_color": "#000000"
       }
     },
-    "rich_text_9MzUhB": {
-      "type": "rich-text",
-      "blocks": {
-        "button_UPcCPy": {
-          "type": "button",
-          "settings": {
-            "link": "https://support.skinkandy.com/s/booking-form",
-            "link_text": "BOOK A PIERCING NOW",
-            "css_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "button_UPcCPy"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (min-width: 980px) {.text-center {display: none; }}"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
-      }
-    },
-    "flipped_boxes_kG6gXk": {
-      "type": "flipped-boxes",
-      "blocks": {
-        "boxes_zpCPhf": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": false,
-            "image": "shopify://shop_images/Group_31.jpg",
-            "Title": "LOBES",
-            "description": "<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!</p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        },
-        "boxes_tbcpHk": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": false,
-            "image": "shopify://shop_images/Group_30.jpg",
-            "Title": "HELIX",
-            "description": "<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!</p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        },
-        "boxes_mn8wG3": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": false,
-            "image": "shopify://shop_images/Group_32_1.jpg",
-            "Title": "SEPTUM",
-            "description": "<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. </p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        },
-        "boxes_HhxQgk": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": false,
-            "image": "shopify://shop_images/Group_34.jpg",
-            "Title": "NOSTRIL",
-            "description": "<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.</p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        },
-        "boxes_8CTFjj": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": false,
-            "image": "shopify://shop_images/Group_33_1.jpg",
-            "Title": "FORWARD HELIX",
-            "description": "<p>Forward Helix piercings are positioned through the front of the<strong> </strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.</p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        },
-        "boxes_wVQegA": {
-          "type": "boxes",
-          "settings": {
-            "no_flip": true,
-            "image": "shopify://shop_images/Rectangle_10.jpg",
-            "Title": "SEE OUR FULL RANGE OF PIERCING SERVICES",
-            "description": "<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.</p>",
-            "page_url": "shopify://pages/professional-body-piercing-services"
-          }
-        }
-      },
-      "block_order": [
-        "boxes_zpCPhf",
-        "boxes_tbcpHk",
-        "boxes_mn8wG3",
-        "boxes_HhxQgk",
-        "boxes_8CTFjj",
-        "boxes_wVQegA"
-      ],
-      "settings": {
-        "title": "TRENDING PIERCINGS"
-      }
-    },
-    "collection_showcase_TiBJeR": {
-      "type": "collection-showcase",
-      "blocks": {
-        "image_bPqmL3": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "EAR",
-            "url": "shopify://collections/cartilage-labret",
-            "image": "shopify://shop_images/image_19.jpg"
-          }
-        },
-        "image_3jRFGa": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "NOSE",
-            "url": "shopify://collections/nose-jewellery",
-            "image": "shopify://shop_images/Rectangle_12_1.jpg"
-          }
-        },
-        "image_b6EctF": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "NAVEL",
-            "url": "shopify://collections/belly",
-            "image": "shopify://shop_images/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"
-          }
-        },
-        "image_Nge4Bm": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "LIP",
-            "url": "shopify://collections/lip",
-            "image": "shopify://shop_images/image_21.jpg"
-          }
-        },
-        "image_jm9bq3": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "NIPPLE",
-            "url": "shopify://collections/nipple",
-            "image": "shopify://shop_images/image_22.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_bPqmL3",
-        "image_3jRFGa",
-        "image_b6EctF",
-        "image_Nge4Bm",
-        "image_jm9bq3"
-      ],
-      "settings": {
-        "title": "SHOP BY PIERCING",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
-        "bottom_border": false,
-        "enable_hover": true,
-        "get_product_list": false,
-        "collection_link": ""
-      }
-    },
-    "collection_showcase_dPaT8V": {
-      "type": "collection-showcase",
-      "blocks": {
-        "image_EmW3YP": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Segment Ring with Spike Heart Design",
-            "url": "shopify://products/titanium-segment-ring-with-spike-heart-design",
-            "image": "shopify://shop_images/9355442045739-1.jpg"
-          }
-        },
-        "image_PGUbpy": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Segment Ring with Pink Heart Cubic Zirconia",
-            "url": "shopify://products/titanium-segment-ring-with-pink-heart-cubic-zirconia",
-            "image": "shopify://shop_images/9355442045760-1.jpg"
-          }
-        },
-        "image_HLw3ac": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Segment Ring with Micro Tennis Set Cubic Zirconia",
-            "url": "shopify://products/titanium-segment-ring-with-micro-tennis-set-cubic-zirconia",
-            "image": "shopify://shop_images/9355442045814-1.jpg"
-          }
-        },
-        "image_4ycQMj": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Hinged Segment Ring with Homing Design",
-            "url": "shopify://products/titanium-hinged-segment-ring-with-homing-design",
-            "image": "shopify://shop_images/9355442045777-2.jpg"
-          }
-        },
-        "image_rzG7Pe": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Segment Ring with 2 Snakes and Cubic Zirconia",
-            "url": "shopify://products/titanium-segment-ring-with-2-snakes-and-cubic-zirconia",
-            "image": "shopify://shop_images/9355442045746-1.jpg"
-          }
-        },
-        "image_VaJ6GC": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Segment Ring with 2 Hand Heart Design",
-            "url": "shopify://products/titanium-segment-ring-with-2-hand-heart-design-gold",
-            "image": "shopify://shop_images/9355442045784-1.jpg"
-          }
-        },
-        "image_HnCXX3": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Threadless Nipple Bar with Heart Cubic Zirconia",
-            "url": "shopify://products/titanium-threadless-nipple-bar-with-heart-cubic-zirconia",
-            "image": "shopify://shop_images/9355442045678.jpg"
-          }
-        },
-        "image_NKAw4x": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Internally Threaded Floating Navel Bar with Teardrop Claw-Set Cubic Zirconia",
-            "url": "shopify://products/titanium-inset-paved-cz-navel-clicker-14g-gold-silver",
-            "image": "shopify://shop_images/9355442098728.jpg"
-          }
-        },
-        "image_37zdJV": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Internally Threaded Floating Navel Bar with Heart Claw-Set Cubic Zirconia",
-            "url": "shopify://products/titanium-internally-threaded-floating-navel-bar-with-heart-claw-set-cubic-zirconia",
-            "image": "shopify://shop_images/9355442098681.jpg"
-          }
-        },
-        "image_YgGABm": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Internally Threaded Floating Navel Bar with Claw-Set Cubic Zirconia",
-            "url": "shopify://products/titanium-internally-threaded-floating-navel-bar-with-claw-set-cubic-zirconia",
-            "image": "shopify://shop_images/9355442098704.jpg"
-          }
-        },
-        "image_midiYa": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Internally Threaded Flatback with Radiating Crimped Heart",
-            "url": "shopify://products/titanium-internally-threaded-flatback-earring-with-radiating-crimped-heart",
-            "image": "shopify://shop_images/9355442045968-2.jpg"
-          }
-        },
-        "image_KHJHfk": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Internally Threaded Flatback with Moss Agate and Cubic Zirconia Spear",
-            "url": "shopify://products/titanium-internally-threaded-flatback-earring-with-moss-agate-and-cubic-zirconia-spear-silver-tone",
-            "image": "shopify://shop_images/9355442045920-2_25e3ca02-2622-4b76-83e7-82fee2e737ec.jpg"
-          }
-        },
-        "image_AXefMQ": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "316L Stainless Steel Basic Hoop Earring with 3 Round Cubic Zirconia",
-            "url": "shopify://products/316l-stainless-steel-basic-hoop-earring-with-3-round-cubic-zirconia",
-            "image": "shopify://shop_images/9355442046149_534469ca-262f-4770-b604-4c52db9d6bf8.jpg"
-          }
-        },
-        "image_LL3Ftn": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": false,
-            "title": "Titanium Hoop Earring with 2.5mm Rounded Rectangle Design",
-            "url": "shopify://products/titanium-hoop-earring-with-2-5mm-rounded-rectangle-design",
-            "image": "shopify://shop_images/9355442046057.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_EmW3YP",
-        "image_PGUbpy",
-        "image_HLw3ac",
-        "image_4ycQMj",
-        "image_rzG7Pe",
-        "image_VaJ6GC",
-        "image_HnCXX3",
-        "image_NKAw4x",
-        "image_37zdJV",
-        "image_YgGABm",
-        "image_midiYa",
-        "image_KHJHfk",
-        "image_AXefMQ",
-        "image_LL3Ftn"
-      ],
-      "settings": {
-        "title": "JUST LANDED",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "Shop now",
-        "button_url": "shopify://collections/shop-all",
-        "bottom_border": true,
-        "enable_hover": false,
-        "get_product_list": true,
-        "collection_link": "new-in"
-      }
-    },
     "two_column_icon_image_c79Kr9": {
       "type": "two-column-icon-image",
       "blocks": {
         "title_block_XFEQTg": {
           "type": "title_block",
           "settings": {
-            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR  {EXPERTLY} {TRAINED} {PIERCERS}",
+            "title": "YOUR NEXT EAR STACKS STARTS HERE",
             "title_tag": "h1",
-            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
+            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p><p><a href=\"/pages/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\">See all body piercings included in the offer</a></p>",
             "button_text": "Book Now",
             "button_url": "shopify://pages/professional-body-piercing-services",
             "text_align": "left"
@@ -478,7 +131,7 @@
         "title_block_XFEQTg"
       ],
       "settings": {
-        "image": "shopify://shop_images/image_18_1.jpg",
+        "image": "shopify://shop_images/Ear_Map_-_final-2_1.jpg",
         "left_align": true,
         "icon_column": false,
         "bottom_margin": true,
@@ -556,6 +209,58 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
+    },
+    "collection_showcase_FpgJwd": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_PyryK8": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085358.png"
+          }
+        },
+        "image_LVhx63": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085413.png"
+          }
+        },
+        "image_MRkYqN": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085446.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_PyryK8",
+        "image_LVhx63",
+        "image_MRkYqN"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "CURATE YOUR LOOK",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": false,
+        "collection_link": ""
+      }
     }
   },
   "order": [
@@ -563,11 +268,8 @@
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
     "inline_buttons_f7DDkA",
-    "rich_text_9MzUhB",
-    "flipped_boxes_kG6gXk",
-    "collection_showcase_TiBJeR",
-    "collection_showcase_dPaT8V",
     "two_column_icon_image_c79Kr9",
+    "collection_showcase_FpgJwd",
     "grid_image_xGVpcK",
     "pagefly-home"
   ]
