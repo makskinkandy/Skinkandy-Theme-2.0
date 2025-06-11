@@ -144,6 +144,94 @@
         "reduced_content_width": false
       }
     },
+    "columns_block_AAVbUH": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_JUgX3f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085358.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_QQbbtk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085413.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_qnPyxt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "image": "shopify://shop_images/Screenshot_2025-06-11_085446.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_JUgX3f",
+        "text_block_QQbbtk",
+        "text_block_qnPyxt"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "CURATE YOUR LOOK",
+        "description": "<p>Buy three get your fourth FREE on all fashion jewellery</p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1704
+      }
+    },
     "grid_image_xGVpcK": {
       "type": "grid-image",
       "blocks": {
@@ -209,58 +297,6 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
-    },
-    "collection_showcase_FpgJwd": {
-      "type": "collection-showcase",
-      "blocks": {
-        "image_PyryK8": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "",
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085358.png"
-          }
-        },
-        "image_LVhx63": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "",
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085413.png"
-          }
-        },
-        "image_MRkYqN": {
-          "type": "image",
-          "settings": {
-            "disable_overlay": true,
-            "disable_button": true,
-            "title": "",
-            "url": "",
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085446.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_PyryK8",
-        "image_LVhx63",
-        "image_MRkYqN"
-      ],
-      "name": "Collection Showcase Block",
-      "settings": {
-        "title": "CURATE YOUR LOOK",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
-        "bottom_border": false,
-        "enable_hover": false,
-        "get_product_list": false,
-        "collection_link": ""
-      }
     }
   },
   "order": [
@@ -269,7 +305,7 @@
     "header_banner_MUPtRQ",
     "inline_buttons_f7DDkA",
     "two_column_icon_image_c79Kr9",
-    "collection_showcase_FpgJwd",
+    "columns_block_AAVbUH",
     "grid_image_xGVpcK",
     "pagefly-home"
   ]
