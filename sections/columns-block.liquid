@@ -80,7 +80,7 @@
                 <div class="image-wrap text-spacing hide-image--{{ block.settings.hide-image }}">
                   {%- assign img_url = block.settings.image | image_url -%}
                   {%- if block.settings.button_label == blank and block.settings.button_link != blank -%}
-                    <a href="{{ block.settings.button_link }}" class="btn" {% if block.settings.new_tab %}target="_blank"{% endif %}>
+                    <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
                       <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %}"
                           src="{{ img_url }}"
                           alt="{{ block.settings.image.alt }}" loading="lazy">
