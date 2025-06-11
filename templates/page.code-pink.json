@@ -43,8 +43,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Gold_Statement_-_V1_Mobile.jpg",
-            "image": "shopify://shop_images/Homepage_Gold_Statement_-_V1_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Screenshot_2025-06-11_081231.png",
+            "image": "shopify://shop_images/Screenshot_2025-06-11_081231.png",
             "banner_url": "shopify://collections/guided-internally-threaded-jewellery",
             "heading": "",
             "short_description": "",
@@ -91,7 +91,7 @@
       ],
       "settings": {
         "title": "",
-        "banner_size": "short-banner",
+        "banner_size": "default",
         "small_overlay": true,
         "shuffle": false
       }
@@ -99,7 +99,8 @@
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
       "custom_css": [
-        ".bg--pink {background-color: #eb008c;}"
+        ".btn--clear {background-color: #eb008c;}",
+        ".bg--pink {background-color: red;}"
       ],
       "name": "Inline Buttons",
       "settings": {
