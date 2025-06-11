@@ -101,10 +101,10 @@
       "custom_css": [],
       "name": "Inline Buttons",
       "settings": {
-        "button_1_text": "Shop Now",
-        "button_1_url": "shopify://collections/buy-3-get-one-free",
-        "button_2_text": "BOOK A PIERCING",
-        "button_2_url": "https://support.skinkandy.com/s/booking-form",
+        "button_1_text": "BOOK NOW",
+        "button_1_url": "https://support.skinkandy.com/s/booking-form",
+        "button_2_text": "SHOP NOW",
+        "button_2_url": "shopify://collections/buy-3-get-one-free",
         "text_color": "#ffffff",
         "bg_color": "#000000"
       }
