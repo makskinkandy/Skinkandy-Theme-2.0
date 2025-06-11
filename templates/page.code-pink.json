@@ -96,6 +96,22 @@
         "shuffle": false
       }
     },
+    "inline_buttons_f7DDkA": {
+      "type": "inline-buttons",
+      "custom_css": [
+        ".btn--clear {background-color: #eb008c;}",
+        ".bg--pink {background-color: red;}"
+      ],
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "Shop Now",
+        "button_1_url": "shopify://collections/guided-internally-threaded-jewellery",
+        "button_2_text": "BOOK A PIERCING",
+        "button_2_url": "https://support.skinkandy.com/s/booking-form",
+        "text_color": "#ffffff",
+        "bg_color": "#000000"
+      }
+    },
     "columns_block_HhremV": {
       "type": "columns-block",
       "blocks": {
@@ -133,7 +149,7 @@
             "title": "Your next ear stack starts here",
             "title_size": "large",
             "title_tag": "h2",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
             "text_size": "small",
             "button_label": "See all piercing Included",
             "button_link": "shopify://pages/skinkandy-2-for-80-promotion",
@@ -159,22 +175,6 @@
         "disable_grid": false,
         "two_column": false,
         "max_width": 1704
-      }
-    },
-    "inline_buttons_f7DDkA": {
-      "type": "inline-buttons",
-      "custom_css": [
-        ".btn--clear {background-color: #eb008c;}",
-        ".bg--pink {background-color: red;}"
-      ],
-      "name": "Inline Buttons",
-      "settings": {
-        "button_1_text": "Shop Now",
-        "button_1_url": "shopify://collections/guided-internally-threaded-jewellery",
-        "button_2_text": "BOOK A PIERCING",
-        "button_2_url": "https://support.skinkandy.com/s/booking-form",
-        "text_color": "#ffffff",
-        "bg_color": "#000000"
       }
     },
     "columns_block_AAVbUH": {
@@ -336,8 +336,8 @@
     "top_notification_banner_yteqNA",
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
-    "columns_block_HhremV",
     "inline_buttons_f7DDkA",
+    "columns_block_HhremV",
     "columns_block_AAVbUH",
     "grid_image_xGVpcK",
     "pagefly-home"
