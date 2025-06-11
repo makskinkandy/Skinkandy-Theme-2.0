@@ -505,15 +505,15 @@
         "image_VVyiPN"
       ],
       "settings": {
-        "title": "JUST LANDED",
+        "title": "BUY 3 GET THE 4TH FREE",
         "mode": "light",
         "background": "#ffffff",
-        "button_text": "Shop now",
+        "button_text": "Shop ALL",
         "button_url": "shopify://collections/shop-all",
         "bottom_border": true,
         "enable_hover": false,
         "get_product_list": true,
-        "collection_link": "new-in"
+        "collection_link": "buy-3-get-one-free"
       }
     },
     "grid_image_xGVpcK": {
