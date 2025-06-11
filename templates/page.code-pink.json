@@ -411,6 +411,13 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
+    },
+    "raw_code_wM84LU": {
+      "type": "raw-code",
+      "name": "Custom HTML Section",
+      "settings": {
+        "custom_html": "<meta name=\"robots\" content=\"noindex\">"
+      }
     }
   },
   "order": [
@@ -423,6 +430,7 @@
     "columns_block_AAVbUH",
     "rich_text_YyxiLB",
     "grid_image_xGVpcK",
-    "pagefly-home"
+    "pagefly-home",
+    "raw_code_wM84LU"
   ]
 }
