@@ -129,7 +129,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "text": "<p><strong>See all body piercings included in the offer</strong></p>"
           }
         },
         "button_B6Mjmb": {
@@ -235,7 +235,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085358.png",
+            "image": "shopify://shop_images/Code_Pink_-_Web_Banners_Tile_1.jpg",
             "video": "",
             "center-content": false,
             "title": "",
@@ -256,7 +256,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085413.png",
+            "image": "shopify://shop_images/Code_Pink_-_Web_Banners_Tile_2.jpg",
             "video": "",
             "center-content": false,
             "title": "",
@@ -277,7 +277,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "image": "shopify://shop_images/Screenshot_2025-06-11_085446.png",
+            "image": "shopify://shop_images/Code_Pink_-_Web_Banners_Tile_3.jpg",
             "video": "",
             "center-content": false,
             "title": "",
