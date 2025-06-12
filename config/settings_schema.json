@@ -1716,6 +1716,95 @@
     ]
   },
   {
+    "name": "NZ Pop Up Content",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "nz_popup_enable",
+        "label": "Enable Popup",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "nz_popup_left_image",
+        "label": "Left Image",
+        "info": "Add the image you want to use on you popup"
+      },
+      {
+        "type": "image_picker",
+        "id": "nz_popup_left_image_mobile",
+        "label": "Left Image Mobile",
+        "info": "Add the image you want to use on you popup"
+      },
+      {
+        "type": "text",
+        "id": "nz_popup_title",
+        "label": "Form Title"
+      },
+      {
+        "type": "richtext",
+        "id": "nz_popup_subtitle",
+        "label": "Form Sub-title"
+      },
+      {
+        "type": "text",
+        "id": "nz_popup_embed_form",
+        "label": "Form End Point"
+      },
+      {
+        "type": "text",
+        "id": "nz_popup_discount_code",
+        "label": "Discount Code"
+      },
+      {
+        "type": "text",
+        "id": "nz_popup_form_note",
+        "label": "Form Note"
+      },
+            {
+        "type": "text",
+        "id": "Nz_popup_form_disclaimer",
+        "label": "Form Disclaimer"
+      },
+      {
+        "type": "text",
+        "id": "nz_popup_source",
+        "label": "Popup Source",
+        "default": "Main Popup - NZ"
+      }
+    ]
+  },
+  {
+    "name": "NZ Pop Up Success content",
+    "settings": [
+      {
+        "type": "text",
+        "id": "nz_success_popup_title",
+        "label": "Form Title"
+      },
+      {
+        "type": "richtext",
+        "id": "nz_sucess_popup_subtitle",
+        "label": "Form Sub-title"
+      },
+      {
+        "type": "text",
+        "id": "nz_success_popup_button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "nz_sucess_popup_button",
+        "label": "Button Link"
+      },
+      {
+        "type": "url",
+        "id": "nz_sucess_popup_tc",
+        "label": "Terms and Condition link"
+      }
+    ]
+  },
+  {
     "name": "Top Notification Banner",
     "settings": [
       {
