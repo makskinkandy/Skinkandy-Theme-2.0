@@ -145,6 +145,17 @@
     "success_popup_button_text": "SHOP NOW",
     "sucess_popup_button": "shopify://collections/shop-all",
     "sucess_popup_tc": "",
+    "nz_popup_enable": true,
+    "nz_popup_left_image": "shopify://shop_images/NZ_Comp_pop_up_2.jpg",
+    "nz_popup_left_image_mobile": "shopify://shop_images/NZ_Comp_pop_up_2.jpg",
+    "nz_popup_title": "WIN<br> Rhythm & Vines Festival Package",
+    "nz_popup_subtitle": "<p>Book your NEW piercing & join our KandyClub to enter! <br/><br/><em>The NZ Rhythm & Vines Giveaway 2025 is exclusive to New Zealand only. The festival is for 18+, winner must of age. Comp is open to both existing and new KandyClub members.</em></p>",
+    "nz_popup_embed_form": "https://shopifyapi.skinkandyonline.com.au/devsite/create-discount",
+    "nz_popup_source": "Main Popup - NZ giveaway",
+    "nz_success_popup_title": "CONGRATS!",
+    "nz_sucess_popup_subtitle": "<h4>YOU ARE NOW IN THE DRAW</h4><p>We will contact the winner by phone & email.We do not contact winners via socials.</p><p><strong>Welcome to the KandyClub!</strong></p>",
+    "nz_success_popup_button_text": "SHOP NOW",
+    "nz_sucess_popup_button": "shopify://collections/new-in",
     "enable_top_notification": false,
     "top-notification-banner": "Online orders may be delayed due to Cyclone Alfred. <a href=\"https://skinkandy.com/pages/cyclone-alfred\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">Click here </a> to check affected stores.",
     "text_color": "#ffffff",
@@ -169,7 +180,6 @@
           "c0903157-a773-474f-84be-01032fac0f7c": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/SK_Black.png",
               "desktop_logo_width": 180,
               "mobile_logo_width": 150
             }
@@ -203,7 +213,7 @@
           "e9c59e14-cd9c-485a-8447-d2a9d70140bb"
         ],
         "settings": {
-          "main_menu_link_list": "megamenu",
+          "main_menu_link_list": "",
           "mobile_menu_link_list": "",
           "main_menu_alignment": "left",
           "header_style": "sticky",
