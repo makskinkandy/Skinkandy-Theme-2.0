@@ -1,7 +1,4 @@
 {% assign website_path = request.locale.root_url | remove_first: '/' %}
-
-console.log({{ website_path }})
-
 const btnPopup = document.getElementById('btn-popup');
 const POPUP = document.querySelector(".form-popup");
 const templateName = "{{ page.metafields | default: 'No metafield value' | escape }}";
@@ -38,6 +35,8 @@ function setCookie(name, value, options = {}) {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
+  console.log({{ website_path }})
+
     let timeDelay = 2;
     
     if ({{ settings.popup_delay }}) {
