@@ -1,6 +1,6 @@
 {% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
   {% if settings.popup_btn != blank %}
-    <a href="#!" id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
+    <a id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
   {% endif %}
   <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
@@ -10,16 +10,15 @@
       {% endif %}
       <div class="form-popup__left">
         {% if page.metafields.custom.giveaway %}
-            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
-            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner desktop" alt="giveaway-banner">
         {% else %}
-          {% if settings.giveaway %}
-            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+          {% if settings.popup_layout == 'giveaway' %}
             <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
           {% endif %}
         {% endif %}
         {% if page.metafields.custom.popup_image != blank %}
-          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image">
+          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
+          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
         {% else %}
           {% if page.metafields.custom.giveaway %}
             <div class="video-container">
@@ -30,8 +29,8 @@
             </div>
           {% else %}
             {% if settings.popup_left_image %}
-              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
-              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
+              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" loading="lazy">
+              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" loading="lazy">
             {% else %}
               <div class="video-container">
                 <video loop muted loop autoplay playsinline>
@@ -45,12 +44,12 @@
         
       </div>
       <div class="form-popup__right">
-        <div class="form-loader hidden"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/7/assets/pink-loader.gif"></div>
+        <div class="form-loader hidden"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/7/assets/pink-loader.gif" alt="Form loader" loading="lazy"></div>
         {% if page.metafields.custom.popup_title %}
-            <h3 id="popup-title">{{ page.metafields.custom.popup_title }}</h3>
+            <div class="h3" id="popup-title">{{ page.metafields.custom.popup_title }}</div>
         {% else %}
           {% if settings.popup_title %}
-            <h3 id="popup-title">{{ settings.popup_title }}</h3>
+            <div class="h3" id="popup-title">{{ settings.popup_title }}</div>
           {% endif %}
         {% endif %}
         {% if page.metafields.custom.popup_subtitle %}
@@ -70,7 +69,7 @@
                 <input type="hidden" name="oid" value="00D6C0000009xRa">
                 <input type="hidden" name="recaptcha_token" id="recaptcha_token">
                 <input type="hidden" name="discount_code" value="{{ settings.popup_discount_code }}">
-                <input type="hidden" name="source" value="Main Popup">
+                <input type="hidden" name="source" value="{{ settings.popup_source }}">
                 
                 <div class="first-row">
                     <div class="form-field" style="--width: 100;">
@@ -94,7 +93,11 @@
                     <input id="dob" maxlength="80" name="dob" size="20" type="text" placeholder="dd/mm/yyyy" required="" aria-label="Date of Birth" aria-required="true">
                   </div>
                 </div>
-              
+                {% if settings.popup_layout == 'giveaway' %}
+                  <div class="form-field" style="--width: 50;">
+                    <input id="post" maxlength="80" name="post" size="20" type="text" placeholder="Post Code" required="" aria-label="Post Code" aria-required="true">
+                  </div>
+                {% endif %}
                 <input id="country" name="country" type="hidden" value="Australia">
               
                 <div class="form-field checkbox" style="--width: 50;">
@@ -102,7 +105,7 @@
                   <label for="agree" class="agree-label">
                   I agree to to sign up to KandyClub, SkinKandy's loyalty program. By completing this form you are signing up to receive our marketing material and can unsubscribe at any time. Ts and Cs apply.
                   <br><br>
-                  *Discount excludes 14K solid gold products, and gift cards.
+                  {{ settings.popup_form_disclaimer }}
                   </label>
                 </div>
               
@@ -133,6 +136,13 @@
     </div>
   </div>
   {% render 'form-popup-script' %}
+  {% if page.metafields.custom.giveaway %}
+    <style>
+      #response.success {
+        display: none;
+      }
+    </style>
+  {% endif %}
 {%  endif %}
 
 
@@ -224,7 +234,7 @@
                     type="button"
                     class="site-nav__link site-nav__link--icon js-drawer-open-nav"
                     aria-controls="NavDrawer">
-                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Open Navigation">
                       <rect width="39" height="39" fill="url(#pattern0_238_2)"/>
                       <defs>
                       <pattern id="pattern0_238_2" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -376,8 +386,8 @@
                 {% comment %} accounts {% endcomment %}
                 {%- if shop.customer_accounts_enabled -%}
                   <li class="mobile-only" style="display:none;">
-                    <a class="site-nav__link site-nav__link--icon icon-account " href="{{ routes.account_url }}">
-                      <svg xmlns="http://www.w3.org/2000/svg" aria-label="My Account" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" role="presentation">
+                    <a class="site-nav__link site-nav__link--icon icon-account " href="{{ routes.account_url }}" aria-label="My Account" title="My Account">
+                      <svg alt="My Account" xmlns="http://www.w3.org/2000/svg" aria-label="My Account" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" role="presentation">
                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
                       </svg>
                     </a>
