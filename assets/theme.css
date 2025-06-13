@@ -5196,7 +5196,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1126px) {
     font-size: 11px;
     padding: 30px 2px;
   }
