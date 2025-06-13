@@ -214,6 +214,10 @@
   endif
 -%}
 
+{% if section.settings.nz_main_menu_link_list != blank and website_path == "en-nz" %}
+  {% assign main_menu = linklists[section.settings.nz_main_menu_link_list] %}
+{% endif %}
+
 {%- render 'drawer-menu',
   section: section,
   main_menu: mobile_menu,
