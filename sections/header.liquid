@@ -30,16 +30,30 @@
               </video>
             </div>
           {% else %}
-            {% if settings.popup_left_image %}
-              <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" loading="lazy">
-              <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" loading="lazy">
+            {% if website_path == "en-nz" and settings.nz_popup_enable %}
+              {% if settings.popup_left_image %}
+                  <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" loading="lazy">
+                  <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" loading="lazy">
+                {% else %}
+                  <div class="video-container">
+                    <video loop muted loop autoplay playsinline>
+                      <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                {% endif %}
             {% else %}
-              <div class="video-container">
-                <video loop muted loop autoplay playsinline>
-                  <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+                {% if settings.popup_left_image %}
+                  <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" loading="lazy">
+                  <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" loading="lazy">
+                {% else %}
+                  <div class="video-container">
+                    <video loop muted loop autoplay playsinline>
+                      <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                {% endif %}
             {% endif %}
           {% endif %}
         {% endif %}
@@ -50,14 +64,18 @@
         {% if page.metafields.custom.popup_title %}
             <div class="h3" id="popup-title">{{ page.metafields.custom.popup_title }}</div>
         {% else %}
-          {% if settings.popup_title %}
+          {% if website_path == "en-nz" and settings.nz_popup_enable  %}
+            <div class="h3" id="popup-title">{{ settings.nz_popup_title }}</div>
+          {% else %}
             <div class="h3" id="popup-title">{{ settings.popup_title }}</div>
           {% endif %}
         {% endif %}
         {% if page.metafields.custom.popup_subtitle %}
             <div id="subtitle" class="subtitle">{{ page.metafields.custom.popup_subtitle }}</div>
         {% else %}
-          {% if settings.popup_subtitle %}
+          {% if website_path == "en-nz" and settings.nz_popup_enable  %}
+            <div id="subtitle" class="subtitle">{{ settings.nz_popup_subtitle }}</div>
+          {% else %}
             <div id="subtitle" class="subtitle">{{ settings.popup_subtitle }}</div>
           {% endif %}
         {% endif %}
@@ -66,12 +84,11 @@
           {% if page.metafields.custom.popup_form_override %}
             {{ page.metafields.custom.popup_form_override }}
           {% else %}
-            {% if settings.popup_embed_form %}
-              <form id="discountForm" action="{{ settings.popup_embed_form }}" method="POST" class="custom-form">
+            <form id="discountForm" action="{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_embed_form }}{% else %}{{ settings.popup_embed_form }}{% endif %}" method="POST" class="custom-form">
                 <input type="hidden" name="oid" value="00D6C0000009xRa">
                 <input type="hidden" name="recaptcha_token" id="recaptcha_token">
-                <input type="hidden" name="discount_code" value="{{ settings.popup_discount_code }}">
-                <input type="hidden" name="source" value="{{ settings.popup_source }}">
+                <input type="hidden" name="discount_code" value="{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_discount_code }}{% else %}{{ settings.popup_discount_code }}{% endif %}">
+                <input type="hidden" name="source" value="{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_source }}{% else %}{{ settings.popup_source }}{% endif %}">
                 
                 <div class="first-row">
                     <div class="form-field" style="--width: 100;">
@@ -107,7 +124,11 @@
                   <label for="agree" class="agree-label">
                   I agree to to sign up to KandyClub, SkinKandy's loyalty program. By completing this form you are signing up to receive our marketing material and can unsubscribe at any time. Ts and Cs apply.
                   <br><br>
-                  {{ settings.popup_form_disclaimer }}
+                  {% if website_path == "en-nz" and settings.nz_popup_enable %}
+                    {{ settings.nz_popup_form_disclaimer }}
+                  {% else %}
+                    {{ settings.popup_form_disclaimer }}
+                  {% endif %}
                   </label>
                 </div>
               
@@ -116,21 +137,36 @@
                 <input type="submit" name="submit" value="JOIN Now" class="btn btn--full btn--submit">
                 </div>
               </form>
-            {%- endif %}
           {% endif %}
           {% if template != "page.pf-c525936e" %}
-            {% if settings.popup_form_note %}
-              <p class="form-note">{{ settings.popup_form_note }}</p>
+            {% if website_path == "en-nz" and settings.nz_popup_enable %}
+              {% if settings.nz_popup_form_note %}
+                <p class="form-note">{{ settings.popup_form_note }}</p>
+              {% endif %}
+            {% else %}
+              {% if settings.popup_form_note %}
+                <p class="form-note">{{ settings.popup_form_note }}</p>
+              {% endif %}
             {% endif %}
+            
           {% endif %}
         </div>
-        <a href="{{ settings.sucess_popup_button }}" target="_blank" class="btn bottom__btn hidden">{{ settings.success_popup_button_text }}</a>
+        {% if website_path == "en-nz" and settings.nz_popup_enable %}
+          <a href="{{ settings.nz_sucess_popup_button }}" target="_blank" class="btn bottom__btn hidden">{{ settings.nz_success_popup_button_text }}</a>
+        {% else %}
+          <a href="{{ settings.sucess_popup_button }}" target="_blank" class="btn bottom__btn hidden">{{ settings.success_popup_button_text }}</a>
+        {% endif %}
 
         {% if page.metafields.custom.giveaway %}
           <a href="{{ page.metafields.custom.terms_and_condition_link }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
         {% else %}
           {% if settings.giveaway %}
-            <a href="{{ settings.sucess_popup_tc }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
+            {% if website_path == "en-nz" and settings.nz_popup_enable %}
+              <a href="{{ settings.nz_sucess_popup_tc }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
+            {% else %}
+              <a href="{{ settings.sucess_popup_tc }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
+            {% endif %}
+            
           {% endif %}
         {% endif %}
         
