@@ -5186,7 +5186,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   white-space:nowrap;
   color:#000000;
   color:var(--colorNavText);
-  @media screen and (max-width: 1356px) {
+  @media screen and (max-width: 1556px) {
     padding: 30px 5px;
   }
   @media screen and (max-width: 1250px) {
