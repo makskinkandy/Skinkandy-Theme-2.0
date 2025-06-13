@@ -223,8 +223,8 @@
         "settings": {
           "main_menu_link_list": "new-menu-1",
           "mobile_menu_link_list": "new-menu-1",
-          "nz_main_menu_link_list": "new-menu-1",
-          "nz_mobile_menu_link_list": "new-menu-1",
+          "nz_main_menu_link_list": "megamenu-2-1-nz",
+          "nz_mobile_menu_link_list": "megamenu-2-1-nz",
           "main_menu_alignment": "left",
           "header_style": "sticky",
           "sticky_index": false,
