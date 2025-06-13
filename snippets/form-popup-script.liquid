@@ -1,3 +1,4 @@
+{% assign website_path = request.locale.root_url | remove_first: '/' %}``
 <script>
   function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -163,10 +164,10 @@ function onSubmit(token) {
           embedForm.classList.add("hidden");
           responseDiv.classList.add("success");
           responseDiv.classList.add("copy-link");
-          popupTitle.textContent = '{% if page.metafields.custom.popup_success_title %}{{ page.metafields.custom.popup_success_title }}{% else %}{{settings.success_popup_title}}{% endif %}';
+          popupTitle.textContent = "{% if page.metafields.custom.popup_success_title %}{{ page.metafields.custom.popup_success_title }}{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{settings.nz_success_popup_title}}{% else %}{{settings.success_popup_title}}{% endif %}{% endif %}";
           subTitle.textContent = "";
           subTitle.classList.add("success");
-          subTitle.innerHTML = '{% if page.metafields.custom.popup_success_message %}{{ page.metafields.custom.popup_success_message | metafield_tag }}{% else %}{{settings.sucess_popup_subtitle }}{% endif %}';
+          subTitle.innerHTML = "{% if page.metafields.custom.popup_success_message %}{{ page.metafields.custom.popup_success_message | metafield_tag }}{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{settings.nz_sucess_popup_subtitle }}{% else %}{{settings.sucess_popup_subtitle }}{% endif %}{% endif %}";
           setCookie('popupClosed', 'true', { 'max-age': 3600 * 24 * 30 });
           loader.classList.add("hidden");
           bottomButton.classList.remove("hidden");
