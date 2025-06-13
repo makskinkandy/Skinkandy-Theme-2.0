@@ -1721,7 +1721,7 @@
       {
         "type": "checkbox",
         "id": "nz_popup_enable",
-        "label": "Enable Popup",
+        "label": "Enable NZ Content on Popup",
         "default": false
       },
       {
