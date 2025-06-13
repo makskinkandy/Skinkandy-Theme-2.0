@@ -19,6 +19,7 @@ body.no-scroll {
   align-items: center;
   &.giveaway {
     align-items: start;
+    padding-top: 0;
   }
   &.bfcm {
     padding-top: 0;
@@ -47,7 +48,7 @@ body.no-scroll {
       border: 0px;
       border-radius: 2.5em;
       color: rgb(255, 255, 255);
-      font-family: "Futura Medium 01", sans-serif;
+      font-family: "Mo", sans-serif;
       letter-spacing: 0px;
       text-align: center;
       transition: all 250ms ease 0s;
@@ -138,8 +139,8 @@ body.no-scroll {
     @media screen and (max-width: 640px) {
       display: block;
       max-height: 100%;
-      top: 1.25em;
       margin-inline: 0.9375em;
+      padding-top:7px;
     }
     
     .popup-close {
@@ -202,7 +203,11 @@ body.no-scroll {
     }
     .form-popup__right {
       border-radius: 0 0 1.5625em 1.5625em;
-      h3 {
+      padding: 20px 1em 10px;
+      @media screen and (max-width: 640px) {
+        padding-top: 15px;
+      }
+      .h3 {
         text-align: center;
         font-family: Montserrat;
         font-size: 2em;
@@ -239,6 +244,13 @@ body.no-scroll {
         @media screen and (max-width: 640px) {
           font-size: 9.63px;
         }
+        em {
+          display: block;
+          font-size: 10px;
+          max-width: 440px;
+          margin-inline: auto;
+          margin-top: 13px;
+        }
         &.success {
           max-width: 369px;
           h4 {
@@ -259,16 +271,15 @@ body.no-scroll {
       }
     }
     .form-popup__left {
-      border-radius: 1.5625em;
+      border-radius: 1.5625em 1.5625em 0 0;
+      overflow: hidden;
      .popup-image {
         max-width: 100%;
-        margin-top: -1.5625em;
-        margin-bottom: 3em;
+        width: 100%;
         @media screen and (max-width: 640px) {
           height: auto;
           width: 100%;
           max-width: 100%;
-          margin-top: -16px;
         }
       }
       .video-container {
@@ -300,6 +311,9 @@ body.no-scroll {
         top: -48px;
       }
     }
+    #response.success {
+      display: none;
+    }
   }
   &.bfcm {
     background-color: transparent;
@@ -307,7 +321,7 @@ body.no-scroll {
     font-family: "Montserrat", sans-serif;
     max-height: calc(100% - 90px);
     overflow: visible;
-    h3 {
+    .h3 {
       font-family: "League Gothic", serif;
       font-size: 30px;
       font-optical-sizing: auto;
@@ -317,7 +331,7 @@ body.no-scroll {
       margin-bottom: 35px;
       @media screen and (max-width: 640px) {
         margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 16px;
       }
       span {
         display: block;
@@ -372,7 +386,7 @@ body.no-scroll {
         max-width: 100%;
         width: 100%;
         @media screen and (max-width: 640px) {
-          object-position: center center;
+          object-position: center;
           height: 200px;
           width: 100%;
           margin: 0 auto;
@@ -396,7 +410,7 @@ body.no-scroll {
         border-radius: 8px;
         @media screen and (max-width: 640px) {
           padding: 10px;
-          font-size: 12px !important;
+          font-size: 10px !important;
         }
       }
       input::placeholder {
@@ -407,10 +421,10 @@ body.no-scroll {
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
         @media screen and (max-width:767px) {
-          font-size: 12px;
+          font-size: 10px;
         }
         &.success {
-          font-size: 15px;
+          font-size: 14px;
           h4 {
             font-family: "Montserrat", sans-serif;
             font-size: 24px;
@@ -427,14 +441,14 @@ body.no-scroll {
         margin-top: 10px;
       }
       input[type=submit] {
-          font-size: 16px;
+          font-size: 12px;
           max-width: fit-content;
           margin: 0 auto;
           display: block;
       }
-      /* #response.success {
+      #response.success {
         display: none;
-      } */
+      }
     }
   }
 }
@@ -446,7 +460,6 @@ body.no-scroll {
     height: 240px;
     width: 100%;
     max-width: 100%;
-    object-position: top center;
   }
   &.desktop {
     @media screen and (max-width: 640px) {
@@ -475,7 +488,7 @@ body.no-scroll {
 .form-popup__right {
   padding: 1.5625em 1em;
   padding-top: 2.8125em;
-  background-image: url('https://cdn.shopify.com/s/files/1/0879/0373/1991/t/7/assets/Desktop%20BG.png');
+  background: linear-gradient(135deg,rgba(205, 1, 111, 1) 0%, rgba(62, 37, 118, 1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -542,7 +555,7 @@ body.no-scroll {
     font-weight: 500;
     margin-inline: auto;
     margin-top: 1.5625em;
-    font-family: "Futura Medium 01";
+    font-family: "Montserrat";
     margin-bottom: 1.4375em;
     @media screen and (max-width: 640px) {
       font-size: 10px;
@@ -552,9 +565,9 @@ body.no-scroll {
     cursor: pointer;
   }
 }
-.form-popup__right h3 {
+.form-popup__right .h3 {
   font-size: 2em;
-  font-family: "Futura Medium 01";
+  font-family: "Montserrat";
   margin-bottom: 15px;
   text-align: center;
 }
