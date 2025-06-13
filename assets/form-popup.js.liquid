@@ -1,3 +1,4 @@
+{% assign website_path = request.locale.root_url | remove_first: '/' %}
 const btnPopup = document.getElementById('btn-popup');
 const POPUP = document.querySelector(".form-popup");
 const templateName = "{{ page.metafields | default: 'No metafield value' | escape }}";
