@@ -43,8 +43,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Web_Banner_Gradient_Desktop.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Web_Banner_Gradient_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_-_1.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_-_1.jpg",
             "banner_url": "shopify://collections/guided-internally-threaded-jewellery",
             "heading": "",
             "short_description": "",
