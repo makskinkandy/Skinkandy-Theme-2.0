@@ -23,6 +23,7 @@
       {% if section.settings.get_product_list and section.settings.collection_link != blank %}
         {% assign collection_handle = section.settings.collection_link %}
         {% assign product_collection = collections[collection_handle] %}
+        {% assign sorted_products = collections[collection_handle].products | sort: 'created_at' %}
         {% for product in product_collection.products limit: 14 %}
           <div class="collection-showcase__item">
             <a href="{{ product.url }}">
