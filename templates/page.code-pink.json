@@ -139,7 +139,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Code_Pink_-_Web_Banner_Gradient_Desktop_copy_b3ec833b-1a00-47a4-b136-6731d19a1439.jpg",
-            "image_width": 1400,
+            "image_width": 1020,
             "title": "",
             "text": "",
             "button_label": "",
@@ -190,7 +190,7 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "columns_block_HhremV": {
