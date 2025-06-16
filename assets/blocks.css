@@ -1216,7 +1216,7 @@
         max-height: 362px;
       }
       &.short-image {
-        height: 570px
+        height: 570px;
         @media screen and (max-width: 580px) {
           max-height: 362px;
         }
