@@ -397,7 +397,6 @@
       "blocks": {
         "image_NVjLjR": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_1_5.jpg",
             "url": ""
@@ -405,7 +404,6 @@
         },
         "image_V8Fx64": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg",
             "url": ""
@@ -413,7 +411,6 @@
         },
         "image_tpipmG": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_3_6.jpg",
             "url": ""
@@ -421,7 +418,6 @@
         },
         "image_Ah6kdW": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_4_2.jpg",
             "url": ""
@@ -429,7 +425,6 @@
         },
         "image_yB9iCH": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_5_2.jpg",
             "url": ""
@@ -437,7 +432,6 @@
         },
         "image_mVGzCR": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Image_2_10.jpg",
             "url": ""
