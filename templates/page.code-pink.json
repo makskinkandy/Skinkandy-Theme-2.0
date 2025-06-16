@@ -109,22 +109,59 @@
         "bg_color": "#000000"
       }
     },
-    "rich_text_gwEVLb": {
+    "rich_text_MJpXyQ": {
       "type": "rich-text",
       "blocks": {
-        "heading_EPRTMT": {
+        "heading_QXLKVR": {
           "type": "heading",
           "settings": {
             "title": "Your next ear stack starts here",
             "heading_tag": "h2"
           }
-        },
-        "page_nkw3Et": {
-          "type": "page",
+        }
+      },
+      "block_order": [
+        "heading_QXLKVR"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "text_columns_raE44D": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_8AGype": {
+          "type": "text_block",
           "settings": {
-            "page_text": "homepage-dev"
+            "enable_image": true,
+            "image": "shopify://shop_images/Code_Pink_-_Web_Banner_Gradient_Desktop_copy_b3ec833b-1a00-47a4-b136-6731d19a1439.jpg",
+            "image_width": 1400,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
-        },
+        }
+      },
+      "block_order": [
+        "text_block_8AGype"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "class": "",
+        "title": "",
+        "align_text": "center",
+        "count": 1,
+        "scrollable": true
+      }
+    },
+    "rich_text_gwEVLb": {
+      "type": "rich-text",
+      "blocks": {
         "text_b6GqnX": {
           "type": "text",
           "settings": {
@@ -142,8 +179,6 @@
         }
       },
       "block_order": [
-        "heading_EPRTMT",
-        "page_nkw3Et",
         "text_b6GqnX",
         "button_B6Mjmb"
       ],
@@ -156,34 +191,6 @@
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": false
-      }
-    },
-    "text_columns_raE44D": {
-      "type": "text-columns",
-      "blocks": {
-        "text_block_8AGype": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Code_Pink_-_Web_Banner_Gradient_Desktop_copy_b3ec833b-1a00-47a4-b136-6731d19a1439.jpg",
-            "image_width": 650,
-            "title": "",
-            "text": "",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_8AGype"
-      ],
-      "name": "Text columns with images",
-      "settings": {
-        "class": "",
-        "title": "",
-        "align_text": "center",
-        "count": 1,
-        "scrollable": true
       }
     },
     "columns_block_HhremV": {
@@ -628,8 +635,9 @@
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
     "inline_buttons_f7DDkA",
-    "rich_text_gwEVLb",
+    "rich_text_MJpXyQ",
     "text_columns_raE44D",
+    "rich_text_gwEVLb",
     "columns_block_HhremV",
     "columns_block_AAVbUH",
     "rich_text_YyxiLB",
