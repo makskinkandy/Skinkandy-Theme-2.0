@@ -11,14 +11,327 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": true,
         "content": true
       }
+    },
+    "header_banner_bgiUTz": {
+      "type": "header-banner",
+      "blocks": {
+        "image_taNMTU": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/7R506295-_1_1.jpg",
+            "image": "shopify://shop_images/7R506295-_1_1.jpg",
+            "banner_url": "",
+            "heading": "FAQ's",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_taNMTU"
+      ],
+      "custom_css": [
+        "h1 {font-size: 110px;}",
+        "@media screen and (max-width: 767px) {.hero-banner__item.short-banner {background-position: 90% center; }}"
+      ],
+      "name": "Hero Banner Slider",
+      "settings": {
+        "title": "",
+        "banner_size": "short-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "collection_showcase_Xchh6H": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_XgkJ6K": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "PIERCE",
+            "url": "shopify://pages/faq",
+            "image": "shopify://shop_images/Pierce.jpg"
+          }
+        },
+        "image_e8MiRM": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "APPOINTMENTS",
+            "url": "shopify://pages/faq-appointments",
+            "image": "shopify://shop_images/appointments.jpg"
+          }
+        },
+        "image_3gjzYa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "AFTERCARE",
+            "url": "shopify://pages/faq-aftercare",
+            "image": "shopify://shop_images/Aftercare.jpg"
+          }
+        },
+        "image_XdBe8N": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "KIDS PIERCING",
+            "url": "shopify://pages/faq-kids-piercing",
+            "image": "shopify://shop_images/Kids.jpg"
+          }
+        },
+        "image_rAyM3m": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "ONLINE ORDERS",
+            "url": "shopify://pages/faq-online-orders",
+            "image": "shopify://shop_images/online-shopping.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_XgkJ6K",
+        "image_e8MiRM",
+        "image_3gjzYa",
+        "image_XdBe8N",
+        "image_rAyM3m"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": false,
+        "collection_link": ""
+      }
+    },
+    "rich_text_zXTyQx": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "custom_faq_EL4DXN": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_gf69xN": {
+          "type": "question",
+          "settings": {
+            "question": "Why Choose SkinKandy for Piercing?",
+            "answer": "<p>At SkinKandy, we’re the leaders in piercing for a reason. We combine legendary service with the highest industry standards to create a fun, safe, and unforgettable experience for every customer. Whether it’s your first piercing or your fiftieth, we’re here to help you express your bold, brave, and confident self!</p>"
+          }
+        },
+        "question_HbTX6f": {
+          "type": "question",
+          "settings": {
+            "question": "How Much Does a Piercing Cost?",
+            "answer": "<p>You’ll pay a piercing fee plus the cost of your preferred jewellery. We have options to suit every budget, so you can find something perfect without breaking the bank! Our most popular deal is <a href=\"https://skinkandy.com/pages/skinkandy-2-for-80-promotion\" target=\"_self\">2 for $80</a>.</p>"
+          }
+        },
+        "question_adQCmT": {
+          "type": "question",
+          "settings": {
+            "question": "What is your piercing guarantee?",
+            "answer": "<p>We want you to LOVE your piercing, so if it doesn’t feel quite right, we’ll fix it – for FREE! If you’ve been pierced at any SkinKandy store and something’s not working out, just keep the jewellery in and visit us within 7 days. Be sure to bring your aftercare card so we can assess the situation and take the necessary steps to make it perfect.</p>"
+          }
+        },
+        "question_UD7EDm": {
+          "type": "question",
+          "settings": {
+            "question": "What training and qualifications do SkinKandy employees have?",
+            "answer": "<p>At SkinKandy, we set the standard when it comes to piercing expertise! Each member of our SkinKandy Squad must earn a nationally accredited infection control certificate before they can pierce independently. While this certificate isn't required in some states, we believe in raising the bar for all our team members. Once they've got their certification and fully understand our high standards and values, they go through an extensive in-house training program. Under the supervision of senior piercers, they perfect their technique at their own pace, ensuring they are confident and capable before they pierce unsupervised.<br/><br/></p>"
+          }
+        },
+        "question_UnEwJ7": {
+          "type": "question",
+          "settings": {
+            "question": "Is Everything Clean and Sterile?",
+            "answer": "<p>Absolutely! All our staff hold a nationally accredited infection prevention certificate. We maintain an extremely clean and sterile environment, adhering to industry-leading hygiene practices to ensure your safety.</p>"
+          }
+        },
+        "question_jEKbYQ": {
+          "type": "question",
+          "settings": {
+            "question": "What do I need to know before getting pierced?",
+            "answer": "<p>Do your research! Always ensure that the clinic is licensed and registered, and that your piercer holds an infection control certificate. Remember, cheap isn’t always better! We recommend using internally threaded, implant-grade titanium jewellery – your body will thank you for it! Also, consider your lifestyle (sports, pets, headphones, diet) before making your choice. It's important your piercing gets the best possible start in life.</p>"
+          }
+        },
+        "question_ifjxKN": {
+          "type": "question",
+          "settings": {
+            "question": "What Jewellery Do You Pierce With?",
+            "answer": "<p>We use only the highest quality jewellery for your piercings, including 14K gold, titanium, and surgical steel. Each option is chosen for its durability, safety, and style, so you can feel confident and bold from the moment you get pierced.</p>"
+          }
+        },
+        "question_QM9Vpt": {
+          "type": "question",
+          "settings": {
+            "question": "Can I Bring My Own Jewellery to Be Pierced With? What if I Bought It from SkinKandy's Online Store?",
+            "answer": "<p>Unfortunately, we can’t use outside jewellery as we cannot guarantee the quality of the metal. For safety and sterility, we only pierce with SkinKandy piercing jewellery purchased at the time of your appointment.. During your appointment, you’ll consult with a piercer who can recommend the best pieces for you based on your unique anatomy.<br/><br/>All of our piercing jewellery is made from high-quality metals, including surgical steel, titanium, or 14K gold.<br/><br/>If you’ve purchased fashion jewellery online from SkinKandy for fully healed piercings, we’re happy to help! You can book a jewellery change appointment <a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_self\">HERE</a> for this service.<br/><br/></p>"
+          }
+        },
+        "question_k7ztXQ": {
+          "type": "question",
+          "settings": {
+            "question": "How Do You Know if You Have the Right Anatomy for a Piercing?",
+            "answer": "<p>Not every piercing suits every anatomy, and that’s where our expert piercers come in! Some piercings require a sufficient “lip” or edge to support the jewellery, while others need grabbable tissue or pliable surfaces. If you’re unsure, visit your nearest SkinKandy or <a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_self\">book online</a> a free consultation—we’ll assess your anatomy and recommend the best piercing options for you.</p>"
+          }
+        },
+        "question_MQk9Dt": {
+          "type": "question",
+          "settings": {
+            "question": "What is the Kandy Club?",
+            "answer": "<p>The Kandy Club is our free loyalty programme packed with sweet perks:<br/>- 10% Back in Store Credit on all purchases.<br/>- $20 Off a Piercing for Your Birthday, valid throughout your birthday month.<br/>- $15 Off During Your Signup Anniversary Month.<br/>- $5 Off Downsized Jewellery and a free downsize service.<br/>- Exclusive Member Offers, Events, and Competitions.<br/><br/><a href=\"https://skinkandy.com/pages/kandy-club\" target=\"_self\">Join now</a> and enjoy these exclusive rewards!<br/></p>"
+          }
+        },
+        "question_jdjJRM": {
+          "type": "question",
+          "settings": {
+            "question": "How Many Piercings Can I Get at Once? ",
+            "answer": "<p>We cap the number of piercings performed in one sitting at 4. This ensures your body has the best change at healing your new piercings and helps minimise the risk of adverse reactions. This will depend on your anatomy, the position of the piercings, and previous healing experiences. Multiple piercings in a small area may increase the chance of excessive swelling, and as such may be limited to 2 or 3 in one sitting. Please discuss options with one of our professional piercers prior to your appointment.</p>"
+          }
+        },
+        "question_wCCKBC": {
+          "type": "question",
+          "settings": {
+            "question": "Can Both Ears Be Pierced Simultaneously?",
+            "answer": "<p>Absolutely! For <a href=\"https://skinkandy.com/pages/needle-free-piercings\" target=\"_self\">needle-free piercings</a> (1st and 2nd lobes), we offer a Double Operator Service (an extra $15), where two of our team members pierce both lobes at the same time. It’s perfect for little ones or if you're in a hurry. You can book this service online or chat with our customer support team for more details.</p>"
+          }
+        },
+        "question_gmUeJc": {
+          "type": "question",
+          "settings": {
+            "question": "What Do You Pierce With? ",
+            "answer": "<p>All body piercings are performed with single use sterile needles. We do however, offer a needle-free option for 1st and 2nd lobe piercings. The needle-free option uses a single-use, sterile cartridge system that’s not spring-activated, making it gentle and hygienic.Want to know more information about the needle-free option? <a href=\"https://skinkandy.com/pages/needle-free-piercings\" target=\"_self\">Check here.</a></p>"
+          }
+        },
+        "question_iWzmnp": {
+          "type": "question",
+          "settings": {
+            "question": "Do You Use Piercing Guns?",
+            "answer": "<p>No, we don’t use old-school piercing guns. These are spring-loaded and can’t be sterilised, which may cause unnecessary damage to the tissue and increase the risk of infection.At SkinKandy, we use a sterile, single-use cartridge system that applies gentle hand pressure to pierce the lobe with sterile jewellery. Our <a href=\"https://skinkandy.com/pages/needle-free-piercings\" target=\"_self\">Needle-Free piercings</a> are available for 1st and 2nd lobe piercings only. We don’t recommend using piercing devices or needle-less systems on other areas of the body, especially ear cartilage or nostrils.</p>"
+          }
+        },
+        "question_6LDhVN": {
+          "type": "question",
+          "settings": {
+            "question": "How Long Do I Need to Wait to Get More Piercings?",
+            "answer": "<p>We can generally do up to 4 piercings in one sitting. Depending on how many you get and how many more you’re wanting, we recommend waiting around 4-6 weeks. It’s important to let your body do its magical thing and not overwhelm it with too much to heal at once.</p>"
+          }
+        },
+        "question_nCTA7c": {
+          "type": "question",
+          "settings": {
+            "question": "Do You Take Appointments? What About Walk-Ins?",
+            "answer": "<p>We accept both walk-ins and appointments, but bookings take priority. Secure your spot by booking online or calling our customer support team.</p>"
+          }
+        },
+        "question_fNYdwg": {
+          "type": "question",
+          "settings": {
+            "question": "I’m prone to fainting. Can I still get pierced?",
+            "answer": "<p>Yes, you can! Just let your piercer know so they can ensure your safety. If you need to lie down for your piercing, you can stay in that position for a few minutes afterward until you’re feeling fine. We’ll make sure you’re 100% before you leave.</p>"
+          }
+        },
+        "question_akNk84": {
+          "type": "question",
+          "settings": {
+            "question": "Can I get pierced with a retainer?",
+            "answer": "<p>Yes, we offer glass retainers for nose piercings. However, while they are more discreet, keep in mind that they won’t be completely invisible. So, if discretion is important to you, just be aware of that.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_gf69xN",
+        "question_HbTX6f",
+        "question_adQCmT",
+        "question_UD7EDm",
+        "question_UnEwJ7",
+        "question_jEKbYQ",
+        "question_ifjxKN",
+        "question_QM9Vpt",
+        "question_k7ztXQ",
+        "question_MQk9Dt",
+        "question_jdjJRM",
+        "question_wCCKBC",
+        "question_gmUeJc",
+        "question_iWzmnp",
+        "question_6LDhVN",
+        "question_nCTA7c",
+        "question_fNYdwg",
+        "question_akNk84"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "PIERCE",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 1008
+      }
+    },
+    "rich_text_hmmAJK": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dGNcMR": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Still not sure?  We are here to help you!</p>"
+          }
+        },
+        "button_AeRHjk": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/talk-to-us",
+            "link_text": "Contact Us",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_dGNcMR",
+        "button_AeRHjk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "header_banner_bgiUTz",
+    "collection_showcase_Xchh6H",
+    "rich_text_zXTyQx",
+    "custom_faq_EL4DXN",
+    "rich_text_hmmAJK"
   ]
 }
