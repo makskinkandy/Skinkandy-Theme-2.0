@@ -56,7 +56,7 @@
             "disable_overlay": true,
             "disable_button": true,
             "title": "PIERCE",
-            "url": "",
+            "url": "/pages/faq",
             "image": "shopify://shop_images/Pierce.jpg"
           }
         },
