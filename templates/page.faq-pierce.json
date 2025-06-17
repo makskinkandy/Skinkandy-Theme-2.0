@@ -40,7 +40,8 @@
         "image_taNMTU"
       ],
       "custom_css": [
-        "h1 {font-size: 110px;}"
+        "h1 {font-size: 110px;}",
+        "@media screen and (max-width:767px) {.hero-banner.hero-banner__item.short-banner {background-position: right; }}"
       ],
       "name": "Hero Banner Slider",
       "settings": {
