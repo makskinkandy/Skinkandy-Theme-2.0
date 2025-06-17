@@ -1362,6 +1362,9 @@
     height: 570px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
+    @media screen and (max-width: 580px) {
+      height: 362px;
+    }
   }
   
   /* This container is needed to position the front and back side */
