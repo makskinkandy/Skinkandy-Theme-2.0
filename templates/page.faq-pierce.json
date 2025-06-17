@@ -39,6 +39,9 @@
       "block_order": [
         "image_taNMTU"
       ],
+      "custom_css": [
+        "h1 {font-size: 110px;}"
+      ],
       "name": "Hero Banner Slider",
       "settings": {
         "title": "",
