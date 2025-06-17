@@ -155,7 +155,7 @@
         "align_text": "center",
         "narrow_column": false,
         "divider": false,
-        "reduce_spacing": true
+        "reduce_spacing": false
       }
     },
     "columns_block_HhremV": {
