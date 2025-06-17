@@ -77,16 +77,34 @@
             {%- if block.settings.enable_image -%}
             <div>
               {%- if block.settings.image != blank -%}
-                <div class="image-wrap text-spacing hide-image--{{ block.settings.hide-image }} flip-image--{{ flip-image-enable }}">
+                <div class="image-wrap text-spacing hide-image--{{ block.settings.hide-image }}">
                   {%- assign img_url = block.settings.image | image_url -%}
+                  {%- assign img_url_flip = block.settings.flip-image | image_url -%}
                   {%- if block.settings.button_label == blank and block.settings.button_link != blank -%}
-                    <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
-                      <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
-                          src="{{ img_url }}"
-                          alt="{{ block.settings.image.alt }}" loading="lazy">
+                    {% if block.settings.flip-image-enable %}
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                             <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
+                            src="{{ img_url }}"
+                            alt="{{ block.settings.image.alt }}" loading="lazy">
+                          </div>
+                          <div class="flip-card-back">
+                            <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
+                            src="{{ img_url_flip }}"
+                            alt="{{ block.settings.flip-image.alt }}" loading="lazy">
+                          </div>
+                        </div>
+                      </div>
+                    {% else %}
+                      <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
+                        <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
+                            src="{{ img_url }}"
+                            alt="{{ block.settings.image.alt }}" loading="lazy">
                       </a>
+                    {% endif %}
                   {% else %}
-                  <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
+                    <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
                         src="{{ img_url }}"
                         alt="{{ block.settings.image.alt }}" loading="lazy">
                   {% endif %}
