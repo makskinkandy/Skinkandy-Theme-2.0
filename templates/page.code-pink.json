@@ -153,7 +153,7 @@
       "name": "Rich text",
       "settings": {
         "align_text": "center",
-        "narrow_column": true,
+        "narrow_column": false,
         "divider": false,
         "reduce_spacing": true
       }
