@@ -138,104 +138,168 @@
     "custom_faq_EL4DXN": {
       "type": "custom-faq",
       "blocks": {
-        "question_gf69xN": {
-          "type": "question",
-          "settings": {
-            "question": "How Can I Make an Appointment?",
-            "answer": "<p>You can <a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_self\">book online</a> or call us on 1300 129 991.<br/><br/></p>"
-          }
-        },
-        "question_KjTpCB": {
-          "type": "question",
-          "settings": {
-            "question": "Do You Take Appointments? What About Walk-Ins?",
-            "answer": "<p>We accept both walk-ins and appointments, but bookings take priority. Secure your spot by booking online or calling our customer support team.</p>"
-          }
-        },
-        "question_yQLmxw": {
-          "type": "question",
-          "settings": {
-            "question": "What do I need to do to prepare for my appointment?",
-            "answer": "<p>Before your appointment, make sure you’ve had a good meal within the last 4 hours to avoid feeling dizzy. A sugary drink and a salty snack are a good idea to bring along, just in case! Don’t forget your photo ID (required in most cases). All clients must complete a consent form and address any pre-existing conditions or medications that may affect your ability to get pierced. Arriving 10 minutes early is a good idea to get these details sorted. It’s also helpful to think about your piercing location (e.g., belly button) and choose clothing accordingly.</p>"
-          }
-        },
-        "question_A4z4XT": {
-          "type": "question",
-          "settings": {
-            "question": "What happens during my appointment?",
-            "answer": "<p>Once we’ve chosen the perfect jewellery, the piercing area will be cleaned and marked. You'll have a chance to double-check the placement before we proceed. All equipment is sterile and single-use, and after the piercing is done, you’ll see that perfect result – and your once anxious face will turn into a big smile! Before you leave, we’ll go over aftercare instructions so you know exactly how to care for your new piercing.</p>"
-          }
-        },
-        "question_egnNg4": {
-          "type": "question",
-          "settings": {
-            "question": "Can I Apply Numbing Cream Before My Appointment?",
-            "answer": "<p>The effectiveness of numbing spray or cream during a piercing procedure is questionable, as it typically only numbs the first few layers of skin. Some piercers believe numbing agents containing lidocaine may change the skin’s tension, potentially affecting how the piercing sits once the spray or cream wears off.<br/><br/>While it’s not something we actively promote or use in-store, choosing to use a numbing agent before you arrive is a personal decision. Please inform your piercer if you have applied a numbing agent before your procedure.</p>"
-          }
-        },
-        "question_JCrUUP": {
-          "type": "question",
-          "settings": {
-            "question": "How Old Do I Need to Be to Get a Piercing?",
-            "answer": "<p>6 months - 1st Lobe Piercing with Cartridge System<br/>5 years - 1st Lobe Piercing with Needle<br/>10 years - 2nd Lobe Piercings (Seconds)<br/>13 years - Standard Needle Piercings (including 3rd Lobes or Thirds)<br/>16 years - Standard Piercings without Parental Consent (except in WA)<br/>16-17 years - Advanced Piercings with Parental Consent<br/>18 years - All Piercings, including Advanced and Restricted 18+ (Note: In WA, you must be 18 years old to get a piercing without consent.)</p>"
-          }
-        },
-        "question_GK9QBV": {
-          "type": "question",
-          "settings": {
-            "question": "Can I Get a Nipple Piercing if I'm Under 18?",
-            "answer": "<p>No. Nipple and genital piercings are restricted to clients 18 years of age or older, and photo ID must be provided. No exceptions.</p>"
-          }
-        },
-        "question_QLXtD4": {
-          "type": "question",
-          "settings": {
-            "question": "Which IDs Do I Need to Bring?",
-            "answer": "<p>At SkinKandy, we take our responsibility to protect our customers seriously. You may be asked to provide proof of age and/or guardianship prior to your piercing procedure. Here are the requirements:<br/><br/><strong>Lobe Piercings with Cartridge (Ages 6 months - 15 years):</strong> - A parent or legal guardian must consent to the procedure.<br/>- The parent or legal guardian must provide photo ID and proof of guardianship.<br/><br/><strong>Standard (Needle) Piercings (Ages 5 - 15 years; 5-17 years in WA):</strong>- ID confirming your name and DOB (e.g., birth certificate, formal school ID, Medicare app).<br/>- A parent or legal guardian must consent and provide photo ID and proof of guardianship.<br/><br/><strong>All Piercings (Ages 16 years and over; 18 years in WA):</strong>- ID confirming your name, DOB, and photo (e.g., driver's licence, passport).<br/><br/>Restricted 18+ Piercings:<br/>- A single form of approved photo ID is required.<br/><br/>For more details, <a href=\"https://skinkandy.com/pages/piercing-age-id-and-consent\" target=\"_self\">visit our ID page</a>.<br/><br/></p>"
-          }
-        },
-        "question_CXDLcz": {
-          "type": "question",
-          "settings": {
-            "question": "I'm starting to feel a bit sick. Can I still get pierced?",
-            "answer": "<p>We highly recommend postponing your piercing if you aren’t feeling your best. This is to ensure your immune system can focus its attention on helping your piercing heal.<br/><br/>If you are currently experiencing any symptoms of COVID-19, please stay home and seek medical advice!</p>"
-          }
-        },
-        "question_6EC4Xb": {
-          "type": "question",
-          "settings": {
-            "question": "Can I bring my child with me to my appointment?",
-            "answer": "<p>We love kids and they are always welcome in our store! However, it’s not always appropriate to have them in the clinic with you during a piercing.<br/><br/>We’d like to have your undivided attention and you need to have ours. Any kind of distraction can quickly become a hazard and we don’t want anything to compromise your safety (or ours!). So, if you have little ones that need supervision, please either bring someone along to watch them during your procedure or come on your own – what a perfect excuse for some “you” time!</p>"
-          }
-        },
-        "question_VbNrKV": {
-          "type": "question",
-          "settings": {
-            "question": "Can I get pierced if I'm pregnant?",
-            "answer": "<p>We can't pierce anyone who’s pregnant due to the higher risk of infection. Your body is busy growing and caring for new life, which can impact how well a piercing heals. After giving birth, your body needs time to recover and focus on your little one. We recommend waiting at least 3 months after giving birth if you’re not breastfeeding, or 6 months if you are, before getting a piercing.</p>"
-          }
-        },
         "question_hWqd6c": {
           "type": "question",
           "settings": {
-            "question": "I have a medical condition and taking medication. Can I still get a piercing?",
-            "answer": "<p>There are certain medical conditions and medications that need careful consideration in determining if it’s safe to perform a piercing. In some cases, a medical certificate is required before proceeding. It’s our duty of care to ensure we are doing what’s right for you and we will never do anything to compromise your safety. Please <a href=\"https://support.skinkandy.com/s/talk-to-us\" target=\"_self\">contact our customer care team</a> for more information before making an appointment.<br/><br/></p>"
+            "question": "How Do I Clean My Piercing?",
+            "answer": "<p>- Never remove or rotate the jewellery when cleaning a fresh piercing, and avoid touching it with your fingers.<br/>- Start with a warm shower to gently rinse the area, loosening any build-up.<br/>- Use sterile saline spray (available at all SkinKandy stores) directly on the piercing twice daily.<br/>- For any crusty build-up, soak the area with saline spray, then gently remove it with a soaked cotton tip.<br/>- Pat the area dry with a clean tissue or makeup pad.<br/>- Avoid using towels, as they can harbour bacteria.<br/>- Ensure your saline solution is alcohol-free and stored correctly for future use.<br/><br/>Learn more about <a href=\"https://skinkandy.com/pages/post-piercing-aftercare-guide\" target=\"_self\">aftercare in our guide.</a></p>"
+          }
+        },
+        "question_Y8TYcW": {
+          "type": "question",
+          "settings": {
+            "question": "How long should my piercing be swollen for?",
+            "answer": "<p>Everyone heals differently, but typically, you’ll notice swelling start to go down within 6-8 weeks, provided you’re following proper aftercare. Stick to your routine, and you’ll be on your way to a healthy piercing!</p>"
+          }
+        },
+        "question_RNqz9k": {
+          "type": "question",
+          "settings": {
+            "question": "What is downsizing and why is it important?",
+            "answer": "<p>Downsizing refers to changing your jewellery to a sterile shorter piece once the initial swelling has gone down. If you leave the longer jewellery in place for too long, it can cause irritation and affect healing. Most piercings can be downsized after 6-8 weeks, but we recommend you do so with a professional piercer’s help to ensure it’s done properly.</p>"
+          }
+        },
+        "question_ihWjML": {
+          "type": "question",
+          "settings": {
+            "question": "How long should I wait before downsizing my jewellery?",
+            "answer": "<p>We recommend waiting at least 6-8 weeks before downsizing your jewellery to a shorter, sterile piece. We prefer that you come back for a free check-up so we can assess your piercing and even change the jewellery for you. Don’t rush the process – it's important not to downsize too quickly or change jewellery before your piercing is fully healed.</p>"
+          }
+        },
+        "question_wnkhTg": {
+          "type": "question",
+          "settings": {
+            "question": "Can I go swimming with my new piercing?",
+            "answer": "<p>We strongly recommend avoiding swimming (in pools, oceans, lakes) until your piercing is fully healed. Bodies of water can contain bacteria that may cause infections. If swimming is a must, apply a waterproof dressing over the piercing, but be sure it seals properly to keep water out. Always remove the dressing as soon as you’re done swimming.</p>"
+          }
+        },
+        "question_XqLMCG": {
+          "type": "question",
+          "settings": {
+            "question": "I think my piercing is infected. What should I do?",
+            "answer": "<p>While we follow the highest infection control standards, your role in aftercare is crucial. It’s normal for a new piercing to be slightly red, swollen, or sore in the first few weeks. However, if you suspect infection, don’t remove the jewellery – this can lead to an abscess. Visit a doctor immediately for proper treatment, and come to SkinKandy for a free check-up so we can offer advice.</p>"
+          }
+        },
+        "question_RhYm7h": {
+          "type": "question",
+          "settings": {
+            "question": "I have a bump on my piercing. What should I do?",
+            "answer": "<p>A bump is often a sign of irritation or healing. The best thing to do is assess the cause – is it the placement, the quality of jewellery, or accidental bumps? If you’re unsure, visit us for a free check-up so our professional piercers can advise you on next steps.</p>"
+          }
+        },
+        "question_eX34Nj": {
+          "type": "question",
+          "settings": {
+            "question": "Are “crusties” a bad sign on a new piercing, even if I clean it regularly?",
+            "answer": "<p>No need to worry! Crusty build-up is completely normal as part of the healing process. Think of it like scabbing over a cut – it’s your body’s way of protecting the wound. However, if the crust changes colour or becomes excessive, it’s worth checking in with us.</p>"
+          }
+        },
+        "question_t4HWyY": {
+          "type": "question",
+          "settings": {
+            "question": "All my piercings end up infected, irritated or rejecting. Should I keep trying?",
+            "answer": "<p>We understand your frustration. It’s important to differentiate between an infection, irritation, or a piercing that’s not fully healed. If you suspect infection, see a doctor right away. Otherwise, it may be due to poor jewellery quality, piercing placement, or aftercare. If none of those are issues, patience is key – healing takes time, and everyone's body reacts differently. Lifestyle factors like sports, pets, or diet can affect healing too.</p>"
+          }
+        },
+        "question_Vme9x4": {
+          "type": "question",
+          "settings": {
+            "question": "How Should I Care for My Lobe Piercings?",
+            "answer": "<p>- Avoid touching your piercing and never sleep on it. Use a travel pillow to keep pressure off your ear.<br/>- Clean daily with sterile saline spray and avoid removing the jewellery during the healing process.<br/>- Stay away from swimming or soaking in water, and rinse thoroughly after showers.<br/>- Regularly check the earring backings to ensure they aren’t too tight.<br/>- Avoid wearing over-the-head headphones, as they can cause pressure, movement, and irritation to the piercing jewellery.<br/>- Healing typically takes 3–4 months. Jewellery changes can be done after 6–8 weeks if downsized by a professional.</p>"
+          }
+        },
+        "question_rLA7EN": {
+          "type": "question",
+          "settings": {
+            "question": "How Do I Care for Cartilage Ear Piercings?",
+            "answer": "<p>- Never touch or apply pressure to your piercing.<br/>- Clean with sterile saline spray and avoid removing the jewellery during the healing process.<br/>- Avoid swimming or soaking in water and rinse well after showers.<br/>- Use a travel pillow to avoid sleeping on the piercing and change pillowcases regularly.<br/>- For piercings in tight spaces (such as rooks, forward helix), we recommend the use of a handheld electric fan to dry the area thoroughly. Excess moisture promotes bacterial growth and creates an environment that hinders healing.<br/>- Avoid over-the-head headphones for outer ear piercings (e.g., helix, flat, industrial) and in-ear headphones for inner ear piercings (e.g., conch, tragus, rook, daith) to prevent pressure, movement, and irritation of the jewellery.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_Xg4Mkz": {
+          "type": "question",
+          "settings": {
+            "question": "How Do I Care for Nose Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Avoid placing foreign chemicals or objects inside the pierced nostril, as some medicated nasal sprays can disrupt the healing process.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_bpNBqB": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the Aftercare for Eyebrow Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 4-6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_MANXUE": {
+          "type": "question",
+          "settings": {
+            "question": "How Should I Care for Mouth and Oral Piercings?",
+            "answer": "<p>- Avoid touching the piercing.<br/>- Clean your new piercing with sterile saline only, and rinse your mouth with clean water after spraying, spitting it out into a sink.<br/>- Get a new toothbrush to reduce bacteria exposure.<br/>- Avoid changing your dental hygiene routine, as excessive cleaning can increase the risk of oral thrush. If mouthwash is part of your routine, use only alcohol-free mouthwash.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Downsize your initial piercing jewellery according to your piercer's recommendations to prevent any dental damage.<br/>- Healing times vary but generally takes about 4–6 months depending on the type of piercing. Jewellery changes can be done after 6–8 weeks if needed.<br/><br/>-<strong>Things to tvoid while healing your oral piercing:</strong>-<strong>Alcohol:</strong>Can cause swelling and disrupt the balance of bacteria, leading to oral thrush.<br/>-<strong>Dairy:</strong>Adds bacteria, which can interfere with the healing process and aftercare.<br/>-<strong>Tooth whitening products:</strong>Can be too harsh on new piercings, increasing the risk of tissue issues.<br/>-<strong>Smoking</strong>(including vaping, nicotine, and cannabis): Slows healing due to irritation and harmful chemicals.</p>"
+          }
+        },
+        "question_3Wmimz": {
+          "type": "question",
+          "settings": {
+            "question": "How Do I Care for Navel Piercings?",
+            "answer": "<p>Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- For piercings in tight spaces such as navel, we recommend the use of a handheld electric fan to dry the area thoroughly. Excess moisture promotes bacterial growth and creates an environment that hinders healing.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_qayH47": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the Aftercare for Septum Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Avoid placing foreign chemicals or objects inside the pierced nostril, as some medicated nasal sprays can disrupt the healing process.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_zJYRah": {
+          "type": "question",
+          "settings": {
+            "question": "How Do I Care for Bridge Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 6-12 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_anRQdq": {
+          "type": "question",
+          "settings": {
+            "question": "How Should I Care for Nipple Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- For people with breasts, wearing a bra or bralette is advised to prevent the piercing from snagging.<br/>- Menstruating individuals should ensure their jewellery allows for nipple swelling during their cycle, with at least 1mm of space on each side post-healing. Consult your piercer to confirm a proper fit.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_Wq86qN": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the Aftercare for Surface Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+          }
+        },
+        "question_FaMAkX": {
+          "type": "question",
+          "settings": {
+            "question": "How Do I Care for Dermal Piercings?",
+            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Keep the area covered with a band aid 24/7 for at least two weeks, changing it twice a day. This helps protect it from bumps and bacteria during the initial healing phase. Before showering, remove the band aid and replace it with a fresh one after completing your aftercare routine.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
           }
         }
       },
       "block_order": [
-        "question_gf69xN",
-        "question_KjTpCB",
-        "question_yQLmxw",
-        "question_A4z4XT",
-        "question_egnNg4",
-        "question_JCrUUP",
-        "question_GK9QBV",
-        "question_QLXtD4",
-        "question_CXDLcz",
-        "question_6EC4Xb",
-        "question_VbNrKV",
-        "question_hWqd6c"
+        "question_hWqd6c",
+        "question_Y8TYcW",
+        "question_RNqz9k",
+        "question_ihWjML",
+        "question_wnkhTg",
+        "question_XqLMCG",
+        "question_RhYm7h",
+        "question_eX34Nj",
+        "question_t4HWyY",
+        "question_Vme9x4",
+        "question_rLA7EN",
+        "question_Xg4Mkz",
+        "question_bpNBqB",
+        "question_MANXUE",
+        "question_3Wmimz",
+        "question_qayH47",
+        "question_zJYRah",
+        "question_anRQdq",
+        "question_Wq86qN",
+        "question_FaMAkX"
       ],
       "name": "Custom FAQ",
       "settings": {
