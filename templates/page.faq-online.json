@@ -138,172 +138,140 @@
     "custom_faq_EL4DXN": {
       "type": "custom-faq",
       "blocks": {
-        "question_hWqd6c": {
-          "type": "question",
-          "settings": {
-            "question": "How Do I Clean My Piercing?",
-            "answer": "<p>- Never remove or rotate the jewellery when cleaning a fresh piercing, and avoid touching it with your fingers.<br/>- Start with a warm shower to gently rinse the area, loosening any build-up.<br/>- Use sterile saline spray (available at all SkinKandy stores) directly on the piercing twice daily.<br/>- For any crusty build-up, soak the area with saline spray, then gently remove it with a soaked cotton tip.<br/>- Pat the area dry with a clean tissue or makeup pad.<br/>- Avoid using towels, as they can harbour bacteria.<br/>- Ensure your saline solution is alcohol-free and stored correctly for future use.<br/><br/>Learn more about <a href=\"https://skinkandy.com/pages/post-piercing-aftercare-guide\" target=\"_self\">aftercare in our guide.</a></p>"
-          }
-        },
-        "question_Y8TYcW": {
-          "type": "question",
-          "settings": {
-            "question": "How long should my piercing be swollen for?",
-            "answer": "<p>Everyone heals differently, but typically, you’ll notice swelling start to go down within 6-8 weeks, provided you’re following proper aftercare. Stick to your routine, and you’ll be on your way to a healthy piercing!</p>"
-          }
-        },
-        "question_RNqz9k": {
-          "type": "question",
-          "settings": {
-            "question": "What is downsizing and why is it important?",
-            "answer": "<p>Downsizing refers to changing your jewellery to a sterile shorter piece once the initial swelling has gone down. If you leave the longer jewellery in place for too long, it can cause irritation and affect healing. Most piercings can be downsized after 6-8 weeks, but we recommend you do so with a professional piercer’s help to ensure it’s done properly.</p>"
-          }
-        },
-        "question_ihWjML": {
-          "type": "question",
-          "settings": {
-            "question": "How long should I wait before downsizing my jewellery?",
-            "answer": "<p>We recommend waiting at least 6-8 weeks before downsizing your jewellery to a shorter, sterile piece. We prefer that you come back for a free check-up so we can assess your piercing and even change the jewellery for you. Don’t rush the process – it's important not to downsize too quickly or change jewellery before your piercing is fully healed.</p>"
-          }
-        },
-        "question_wnkhTg": {
-          "type": "question",
-          "settings": {
-            "question": "Can I go swimming with my new piercing?",
-            "answer": "<p>We strongly recommend avoiding swimming (in pools, oceans, lakes) until your piercing is fully healed. Bodies of water can contain bacteria that may cause infections. If swimming is a must, apply a waterproof dressing over the piercing, but be sure it seals properly to keep water out. Always remove the dressing as soon as you’re done swimming.</p>"
-          }
-        },
-        "question_XqLMCG": {
-          "type": "question",
-          "settings": {
-            "question": "I think my piercing is infected. What should I do?",
-            "answer": "<p>While we follow the highest infection control standards, your role in aftercare is crucial. It’s normal for a new piercing to be slightly red, swollen, or sore in the first few weeks. However, if you suspect infection, don’t remove the jewellery – this can lead to an abscess. Visit a doctor immediately for proper treatment, and come to SkinKandy for a free check-up so we can offer advice.</p>"
-          }
-        },
-        "question_RhYm7h": {
-          "type": "question",
-          "settings": {
-            "question": "I have a bump on my piercing. What should I do?",
-            "answer": "<p>A bump is often a sign of irritation or healing. The best thing to do is assess the cause – is it the placement, the quality of jewellery, or accidental bumps? If you’re unsure, visit us for a free check-up so our professional piercers can advise you on next steps.</p>"
-          }
-        },
-        "question_eX34Nj": {
-          "type": "question",
-          "settings": {
-            "question": "Are “crusties” a bad sign on a new piercing, even if I clean it regularly?",
-            "answer": "<p>No need to worry! Crusty build-up is completely normal as part of the healing process. Think of it like scabbing over a cut – it’s your body’s way of protecting the wound. However, if the crust changes colour or becomes excessive, it’s worth checking in with us.</p>"
-          }
-        },
-        "question_t4HWyY": {
-          "type": "question",
-          "settings": {
-            "question": "All my piercings end up infected, irritated or rejecting. Should I keep trying?",
-            "answer": "<p>We understand your frustration. It’s important to differentiate between an infection, irritation, or a piercing that’s not fully healed. If you suspect infection, see a doctor right away. Otherwise, it may be due to poor jewellery quality, piercing placement, or aftercare. If none of those are issues, patience is key – healing takes time, and everyone's body reacts differently. Lifestyle factors like sports, pets, or diet can affect healing too.</p>"
-          }
-        },
-        "question_Vme9x4": {
-          "type": "question",
-          "settings": {
-            "question": "How Should I Care for My Lobe Piercings?",
-            "answer": "<p>- Avoid touching your piercing and never sleep on it. Use a travel pillow to keep pressure off your ear.<br/>- Clean daily with sterile saline spray and avoid removing the jewellery during the healing process.<br/>- Stay away from swimming or soaking in water, and rinse thoroughly after showers.<br/>- Regularly check the earring backings to ensure they aren’t too tight.<br/>- Avoid wearing over-the-head headphones, as they can cause pressure, movement, and irritation to the piercing jewellery.<br/>- Healing typically takes 3–4 months. Jewellery changes can be done after 6–8 weeks if downsized by a professional.</p>"
-          }
-        },
-        "question_rLA7EN": {
-          "type": "question",
-          "settings": {
-            "question": "How Do I Care for Cartilage Ear Piercings?",
-            "answer": "<p>- Never touch or apply pressure to your piercing.<br/>- Clean with sterile saline spray and avoid removing the jewellery during the healing process.<br/>- Avoid swimming or soaking in water and rinse well after showers.<br/>- Use a travel pillow to avoid sleeping on the piercing and change pillowcases regularly.<br/>- For piercings in tight spaces (such as rooks, forward helix), we recommend the use of a handheld electric fan to dry the area thoroughly. Excess moisture promotes bacterial growth and creates an environment that hinders healing.<br/>- Avoid over-the-head headphones for outer ear piercings (e.g., helix, flat, industrial) and in-ear headphones for inner ear piercings (e.g., conch, tragus, rook, daith) to prevent pressure, movement, and irritation of the jewellery.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_Xg4Mkz": {
-          "type": "question",
-          "settings": {
-            "question": "How Do I Care for Nose Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Avoid placing foreign chemicals or objects inside the pierced nostril, as some medicated nasal sprays can disrupt the healing process.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_bpNBqB": {
-          "type": "question",
-          "settings": {
-            "question": "What’s the Aftercare for Eyebrow Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 4-6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_MANXUE": {
-          "type": "question",
-          "settings": {
-            "question": "How Should I Care for Mouth and Oral Piercings?",
-            "answer": "<p>- Avoid touching the piercing.<br/>- Clean your new piercing with sterile saline only, and rinse your mouth with clean water after spraying, spitting it out into a sink.<br/>- Get a new toothbrush to reduce bacteria exposure.<br/>- Avoid changing your dental hygiene routine, as excessive cleaning can increase the risk of oral thrush. If mouthwash is part of your routine, use only alcohol-free mouthwash.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Downsize your initial piercing jewellery according to your piercer's recommendations to prevent any dental damage.<br/>- Healing times vary but generally takes about 4–6 months depending on the type of piercing. Jewellery changes can be done after 6–8 weeks if needed.<br/><br/>-<strong>Things to tvoid while healing your oral piercing:</strong>-<strong>Alcohol:</strong>Can cause swelling and disrupt the balance of bacteria, leading to oral thrush.<br/>-<strong>Dairy:</strong>Adds bacteria, which can interfere with the healing process and aftercare.<br/>-<strong>Tooth whitening products:</strong>Can be too harsh on new piercings, increasing the risk of tissue issues.<br/>-<strong>Smoking</strong>(including vaping, nicotine, and cannabis): Slows healing due to irritation and harmful chemicals.</p>"
-          }
-        },
-        "question_3Wmimz": {
-          "type": "question",
-          "settings": {
-            "question": "How Do I Care for Navel Piercings?",
-            "answer": "<p>Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- For piercings in tight spaces such as navel, we recommend the use of a handheld electric fan to dry the area thoroughly. Excess moisture promotes bacterial growth and creates an environment that hinders healing.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_qayH47": {
-          "type": "question",
-          "settings": {
-            "question": "What’s the Aftercare for Septum Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Avoid placing foreign chemicals or objects inside the pierced nostril, as some medicated nasal sprays can disrupt the healing process.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_zJYRah": {
-          "type": "question",
-          "settings": {
-            "question": "How Do I Care for Bridge Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 6-12 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_anRQdq": {
-          "type": "question",
-          "settings": {
-            "question": "How Should I Care for Nipple Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- For people with breasts, wearing a bra or bralette is advised to prevent the piercing from snagging.<br/>- Menstruating individuals should ensure their jewellery allows for nipple swelling during their cycle, with at least 1mm of space on each side post-healing. Consult your piercer to confirm a proper fit.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
-        "question_Wq86qN": {
-          "type": "question",
-          "settings": {
-            "question": "What’s the Aftercare for Surface Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
-          }
-        },
         "question_FaMAkX": {
           "type": "question",
           "settings": {
-            "question": "How Do I Care for Dermal Piercings?",
-            "answer": "<p>- Avoid touching the piercing and clean daily with sterile saline spray.<br/>- Keep the area free from makeup, cleansers, or moisturisers.<br/>- Avoid swimming or soaking in water, and rinse thoroughly after showers.<br/>- Keep the area covered with a band aid 24/7 for at least two weeks, changing it twice a day. This helps protect it from bumps and bacteria during the initial healing phase. Before showering, remove the band aid and replace it with a fresh one after completing your aftercare routine.<br/>- Healing times vary but generally takes about 6 months. Jewellery changes can be done after 6–8 weeks if recommended by your piercer.</p>"
+            "question": "Where do you ship to?",
+            "answer": "<p>We currently offer shipping within Australia and New Zealand.</p>"
+          }
+        },
+        "question_tTEFe4": {
+          "type": "question",
+          "settings": {
+            "question": "What are the shipping options and costs?",
+            "answer": "<p><strong>AU:<br/></strong>Free Standard delivery for orders over $70 and Free Express shipping for orders over $100.<br/><br/>Flat Fee applies for orders under $70, Standard delivery $5.00 and Express $15.00.<br/><br/>For our full shipping policy: <a href=\"https://skinkandy.com/policies/shipping-policy\" target=\"_self\">CLICK HERE</a></p><p><strong>NZ:<br/></strong>Free Standard delivery for orders over $100 and Free Express shipping for orders over $125.<br/><br/>Flat Fee applies for orders under $100, Standard delivery $5.00 and Express $19.99.<br/><br/>For our full shipping policy: <a href=\"https://skinkandy.com/en-nz/policies/shipping-policy\" target=\"_self\">CLICK HERE</a></p>"
+          }
+        },
+        "question_mVkKjf": {
+          "type": "question",
+          "settings": {
+            "question": "When will my order be dispatched?",
+            "answer": "<p>Orders placed before 11 am will be dispatched the same day. During sale periods and public holidays, there may be a delay of 2-3 business days.</p>"
+          }
+        },
+        "question_dxgdRr": {
+          "type": "question",
+          "settings": {
+            "question": "I’m a KandyClub member—how do I claim my free shipping?",
+            "answer": "<p>Free standard shipping is automatically applied at checkout when you use the email address you signed up to KandyClub with. No code or login required—just enter your email at checkout and the discount will appear. <a href=\"https://skinkandy.com/pages/kandy-club\" target=\"_self\">Join the KandyClub now.</a></p>"
+          }
+        },
+        "question_XUw4Ud": {
+          "type": "question",
+          "settings": {
+            "question": "Is there a minimum spend for free shipping as a KandyClub member?",
+            "answer": "<p>Nope! KandyClub members get free standard shipping on all orders. <a href=\"https://skinkandy.com/pages/kandy-club\" target=\"_self\">Join the KandyClub now.</a></p>"
+          }
+        },
+        "question_3Lk7YQ": {
+          "type": "question",
+          "settings": {
+            "question": "What if the free shipping doesn’t apply?",
+            "answer": "<p>Double-check that you're using the same email you signed up to KandyClub with. If you still need help, reach out to our friendly <a href=\"https://support.skinkandy.com/s/talk-to-us\" target=\"_blank\">Customer Support</a> team and we’ll sort it out.</p>"
+          }
+        },
+        "question_Rb7r9m": {
+          "type": "question",
+          "settings": {
+            "question": "How long will delivery take?",
+            "answer": "<p>Standard Delivery: Expect your order to arrive within 3-7 business days.<br/><br/>Express Delivery: Get your order in as little as 1-3 business days for faster delivery.</p>"
+          }
+        },
+        "question_hUXx96": {
+          "type": "question",
+          "settings": {
+            "question": "What should I do if my order is delayed or lost?",
+            "answer": "<p>Once your order is dispatched, it becomes the responsibility of our courier partners. For any issues with delays, missing, or lost packages, please contact the courier directly using your tracking number to lodge a claim.</p>"
+          }
+        },
+        "question_bqKCYH": {
+          "type": "question",
+          "settings": {
+            "question": "Can I return or exchange my jewellery?",
+            "answer": "<p>Unfortunately, due to hygiene and safety standards, we are unable to accept returns or exchanges for change of mind. For our full refund policy: CLICK HERE<br/><br/></p>"
+          }
+        },
+        "question_jWTLKG": {
+          "type": "question",
+          "settings": {
+            "question": "I received a broken or faulty item. What should I do?",
+            "answer": "<p>If you've received a broken or faulty item, please send your order number, along with a brief description and a photo of the item, via our <a href=\"https://support.skinkandy.com/s/talk-to-us\" target=\"_blank\">Contact Us form.</a></p>"
+          }
+        },
+        "question_iwMAzP": {
+          "type": "question",
+          "settings": {
+            "question": "My order hasn't arrived yet. Who should I contact?",
+            "answer": "<p>Our courier services are currently experiencing significant delays. Please allow up to 7 business days for delivery. If your order hasn't arrived after this period, submit an enquiry through the tracking link included in your order confirmation email, or contact us if your order is deemed lost.</p>"
+          }
+        },
+        "question_hTM8AF": {
+          "type": "question",
+          "settings": {
+            "question": "Where is my order confirmation?",
+            "answer": "<p>Sometimes our order confirmation emails may end up in your junk/spam folder. Please check there first, and if you still can't find it, contact our customer service team with your order number. We'll resend the confirmation to the email address provided during checkout.</p>"
+          }
+        },
+        "question_FM86NQ": {
+          "type": "question",
+          "settings": {
+            "question": "Can I return an online purchase in-store?",
+            "answer": "<p>No, online purchases cannot be returned in-store.</p>"
+          }
+        },
+        "question_kNij6c": {
+          "type": "question",
+          "settings": {
+            "question": "Can I exchange or return my gift card?",
+            "answer": "<p>No, gift cards are non-refundable and cannot be exchanged. For more details, check our <a href=\"https://skinkandy.com/pages/gift-cards-terms-and-conditions\" target=\"_self\">Gift Card Policy.</a></p>"
+          }
+        },
+        "question_GCwLg9": {
+          "type": "question",
+          "settings": {
+            "question": "How do I redeem a digital gift card?",
+            "answer": "<p>Redeeming your SkinKandy gift card is easy! Visit our website and add your favourite styles to your cart. At checkout:<br/><br/>- On a computer, enter your unique gift card number in the 'Discount code or gift card' box on the right-hand side.<br/><br/>-On a phone or tablet, click 'Show order summary' at the top of the checkout screen to reveal the 'Discount code or gift card' box.<br/><br/>If there’s a remaining balance after applying the gift card, proceed with payment as usual.</p>"
+          }
+        },
+        "question_YQ76Xi": {
+          "type": "question",
+          "settings": {
+            "question": "Can I use my gift card in-store?",
+            "answer": "<p>Absolutely! Digital and physical SkinKandy gift cards can be redeemed in-store for both piercing services and jewellery.</p>"
           }
         }
       },
       "block_order": [
-        "question_hWqd6c",
-        "question_Y8TYcW",
-        "question_RNqz9k",
-        "question_ihWjML",
-        "question_wnkhTg",
-        "question_XqLMCG",
-        "question_RhYm7h",
-        "question_eX34Nj",
-        "question_t4HWyY",
-        "question_Vme9x4",
-        "question_rLA7EN",
-        "question_Xg4Mkz",
-        "question_bpNBqB",
-        "question_MANXUE",
-        "question_3Wmimz",
-        "question_qayH47",
-        "question_zJYRah",
-        "question_anRQdq",
-        "question_Wq86qN",
-        "question_FaMAkX"
+        "question_FaMAkX",
+        "question_tTEFe4",
+        "question_mVkKjf",
+        "question_dxgdRr",
+        "question_XUw4Ud",
+        "question_3Lk7YQ",
+        "question_Rb7r9m",
+        "question_hUXx96",
+        "question_bqKCYH",
+        "question_jWTLKG",
+        "question_iwMAzP",
+        "question_hTM8AF",
+        "question_FM86NQ",
+        "question_kNij6c",
+        "question_GCwLg9",
+        "question_YQ76Xi"
       ],
       "name": "Custom FAQ",
       "settings": {
-        "title": "APPOINTMENTS",
+        "title": "ONLINE ORDERS",
         "narrow": false,
         "position": "left",
         "hide_image": false,
