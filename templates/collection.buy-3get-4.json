@@ -33,7 +33,7 @@
       "disabled": true,
       "settings": {
         "title": "",
-        "banner_size": "short-banner",
+        "banner_size": "ads-banner",
         "small_overlay": false,
         "shuffle": false
       }
