@@ -200,7 +200,7 @@
     "ss-recommendations-similar": {
       "type": "ss-recommendations-product",
       "settings": {
-        "profileId": "similar"
+        "profileId": "customer-also-bought-charms-chains"
       }
     },
     "ss-recommendations-cross-sell": {
