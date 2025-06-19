@@ -100,10 +100,10 @@
       "custom_css": [],
       "name": "Inline Buttons",
       "settings": {
-        "button_1_text": "BOOK NOW",
-        "button_1_url": "https://support.skinkandy.com/s/booking-form",
-        "button_2_text": "SHOP NOW",
-        "button_2_url": "shopify://collections/buy-3-get-one-free",
+        "button_1_text": "SHOP NOW",
+        "button_1_url": "shopify://collections/buy-3-get-one-free",
+        "button_2_text": "BOOK NOW",
+        "button_2_url": "https://support.skinkandy.com/s/booking-form",
         "text_color": "#ffffff",
         "bg_color": "#000000"
       }
