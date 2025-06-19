@@ -864,7 +864,8 @@
       "h4.hotspot-item-title {min-height: 39px;}",
       ".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}",
       ".ss__results__inline-banner {display: none;}",
-      ".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}"
+      ".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}",
+      ".grid-product__tag--b3f4 {background: #EB008C !important;}"
     ]
   }
 }
