@@ -980,6 +980,55 @@
         "max_width": 1704
       }
     },
+    "rich_text_Urkint": {
+      "type": "rich-text",
+      "blocks": {
+        "button_aNbfUj": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "Book now",
+            "css_class": ""
+          }
+        },
+        "text_ayDNF8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>All piercings are subject to anatomy check, please talk to your piercer about your piercing goals.</p>"
+          }
+        },
+        "text_KyAqhn": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Unsure about a piercing?</strong> Pop in-store for a free consultation!  </p>"
+          }
+        },
+        "text_3Fn7df": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Want to upgrade to premium piercing jewellery?</strong> We offer 14K Solid Gold & Implant-Grade Titanium options (subject to availability). Chat with our team in-store!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "button_aNbfUj",
+        "text_ayDNF8",
+        "text_KyAqhn",
+        "text_3Fn7df"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
     "price_estimator_8yLgcE": {
       "type": "price-estimator",
       "blocks": {
@@ -1172,6 +1221,7 @@
     "columns_block_rcx9HL",
     "rich_text_xDG4ww",
     "custom_faq_G7NdEa",
+    "rich_text_Urkint",
     "price_estimator_8yLgcE",
     "columns_block_CqqbQM",
     "custom_banner_3bAXUt"
