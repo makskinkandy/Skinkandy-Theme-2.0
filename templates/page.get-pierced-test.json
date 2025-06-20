@@ -935,18 +935,25 @@
             "answer": "<p>We want you to LOVE your piercing, so if it doesn’t feel quite right, we’ll fix it – for FREE! If you’ve been pierced at any SkinKandy store and something’s not working out, just keep the jewellery in and visit us within 7 days. Be sure to bring your aftercare card so we can assess the situation and take the necessary steps to make it perfect.</p>"
           }
         },
+        "question_cQaieq": {
+          "type": "question",
+          "settings": {
+            "question": "do you pierce children?",
+            "answer": "<p>Yes, we do! We pierce children’s ear lobes starting from 6 months, following an in-house anatomy consultation. If the lobes are too small, we may advise waiting to ensure proper placement, which is important for the piercing’s comfort and healing as the child grows.</p>"
+          }
+        },
+        "question_EKRxq7": {
+          "type": "question",
+          "settings": {
+            "question": "do you accept walk-ins?",
+            "answer": "<p>We accept both walk-ins and appointments, but bookings take priority. Secure your spot by booking online or calling our customer support team.</p>"
+          }
+        },
         "question_Q4UaJm": {
           "type": "question",
           "settings": {
             "question": "what do i need to know before getting pierced?",
             "answer": "<p>Do your research! Always ensure that the clinic is licensed and registered, and that your piercer holds an infection control certificate. Remember, cheap isn’t always better! We recommend using internally threaded, implant-grade titanium jewellery – your body will thank you for it! Also, consider your lifestyle (sports, pets, headphones, diet) before making your choice. It's important your piercing gets the best possible start in life.</p>"
-          }
-        },
-        "question_FCPCqc": {
-          "type": "question",
-          "settings": {
-            "question": "Can i bring my own jewellery to be pierced with?",
-            "answer": "<p>Unfortunately, we can’t use outside jewellery as we cannot guarantee the quality of the metal. For safety and sterility, we only pierce with SkinKandy piercing jewellery purchased at the time of your appointment.. During your appointment, you’ll consult with a piercer who can recommend the best pieces for you based on your unique anatomy.<br/><br/>All of our piercing jewellery is made from high-quality metals, including surgical steel, titanium, or 14K gold.<br/><br/>If you’ve purchased fashion jewellery online from SkinKandy for fully healed piercings, we’re happy to help! You can book a jewellery change appointment for this service.</p>"
           }
         },
         "question_ETnLAM": {
@@ -956,20 +963,21 @@
             "answer": "<p>We cap the number of piercings performed in one sitting at 4. This ensures your body has the best change at healing your new piercings and helps minimise the risk of adverse reactions. This will depend on your anatomy, the position of the piercings, and previous healing experiences. Multiple piercings in a small area may increase the chance of excessive swelling, and as such may be limited to 2 or 3 in one sitting. Please discuss options with one of our professional piercers prior to your appointment.</p>"
           }
         },
-        "question_EKRxq7": {
+        "question_FCPCqc": {
           "type": "question",
           "settings": {
-            "question": "do you accept walk-ins?",
-            "answer": "<p>We accept both walk-ins and appointments, but bookings take priority. Secure your spot by booking online or calling our customer support team.</p>"
+            "question": "Can i bring my own jewellery to be pierced with?",
+            "answer": "<p>Unfortunately, we can’t use outside jewellery as we cannot guarantee the quality of the metal. For safety and sterility, we only pierce with SkinKandy piercing jewellery purchased at the time of your appointment.. During your appointment, you’ll consult with a piercer who can recommend the best pieces for you based on your unique anatomy.<br/><br/>All of our piercing jewellery is made from high-quality metals, including surgical steel, titanium, or 14K gold.<br/><br/>If you’ve purchased fashion jewellery online from SkinKandy for fully healed piercings, we’re happy to help! You can book a jewellery change appointment for this service.</p>"
           }
         }
       },
       "block_order": [
         "question_nQEaVx",
+        "question_cQaieq",
+        "question_EKRxq7",
         "question_Q4UaJm",
-        "question_FCPCqc",
         "question_ETnLAM",
-        "question_EKRxq7"
+        "question_FCPCqc"
       ],
       "name": "Custom FAQ",
       "settings": {
