@@ -13,9 +13,16 @@
         {% if page.metafields.custom.giveaway %}
             <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner desktop" alt="giveaway-banner">
         {% else %}
-          {% if settings.popup_layout == 'giveaway' %}
-            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+          {% if website_path == "en-nz" and settings.nz_popup_enable %}
+            {% if settings.nz_popup_layout == 'giveaway' %}
+              <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+            {% endif %}
+          {% else %}
+            {% if settings.popup_layout == 'giveaway' %}
+              <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner" alt="giveaway-banner">
+            {% endif %}
           {% endif %}
+          
         {% endif %}
         {% if page.metafields.custom.popup_image != blank %}
           <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
