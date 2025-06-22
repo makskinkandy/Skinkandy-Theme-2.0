@@ -1719,6 +1719,25 @@
     "name": "NZ Pop Up Content",
     "settings": [
       {
+        "type": "select",
+        "label": "Layout",
+        "id": "nz_popup_layout",
+        "options": [
+          {
+            "label": "Default",
+            "value": "default"
+          },
+          {
+            "label": "Vertical",
+            "value": "giveaway"
+          },
+          {
+            "label": "Black Friday",
+            "value": "bfcm"
+          }
+        ]
+      },
+      {
         "type": "checkbox",
         "id": "nz_popup_enable",
         "label": "Enable Popup",
