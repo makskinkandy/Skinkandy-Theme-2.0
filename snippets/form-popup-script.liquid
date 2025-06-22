@@ -164,7 +164,7 @@ function onSubmit(token) {
           embedForm.classList.add("hidden");
           responseDiv.classList.add("success");
           responseDiv.classList.add("copy-link");
-          popupTitle.textContent = '{% if page.metafields.custom.popup_success_title %}{{ page.metafields.custom.popup_success_title }}{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{settings.nz_success_popup_title}}{% else %}{{settings.success_popup_title}}{% endif %}{{settings.success_popup_title}}{% endif %}';
+          popupTitle.textContent = '{% if page.metafields.custom.popup_success_title %}{{ page.metafields.custom.popup_success_title }}{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{settings.nz_success_popup_title}}{% else %}{{settings.success_popup_title}}{% endif %}{% endif %}';
           subTitle.textContent = "";
           subTitle.classList.add("success");
           subTitle.innerHTML = '{% if page.metafields.custom.popup_success_message %}{{ page.metafields.custom.popup_success_message | metafield_tag }}{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{settings.nz_sucess_popup_subtitle }}{% else %}{{settings.sucess_popup_subtitle }}{% endif %}{% endif %}';
