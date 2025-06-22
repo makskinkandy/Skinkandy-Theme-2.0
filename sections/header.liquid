@@ -3,7 +3,7 @@
   {% if settings.popup_btn != blank %}
     <a id="btn-popup" class="btn btn--popup btn--black">{{ settings.popup_btn }}</a>
   {% endif %}
-  <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
+  <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_layout }}{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}">
       <a href="javascript.void(0)" class="popup-close" role="button"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/close-btn.png?v=1725430171" alt="close icon"></a>
       {% if settings.popup_layout == "bfcm" and page.metafields.custom.giveaway != true %}
