@@ -6,9 +6,15 @@
   <div class="form-popup hidden {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_layout }}{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}{% endif %}">
     <div class="form-popup__wrapper {% if page.metafields.custom.giveaway %}giveaway{% else %}{% if settings.giveaway %}giveaway{% else %}{% if website_path == "en-nz" and settings.nz_popup_enable %}{{ settings.nz_popup_layout }}{% else %}{{ settings.popup_layout }}{% endif %}{% endif %}{% endif %}">
       <a href="javascript.void(0)" class="popup-close" role="button"><img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/close-btn.png?v=1725430171" alt="close icon"></a>
-      {% if settings.popup_layout == "bfcm" and page.metafields.custom.giveaway != true %}
-        <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
-      {% endif %}
+        {% if website_path == "en-nz" and settings.nz_popup_enable %}
+           {% if settings.nz_popup_layout == "bfcm" and page.metafields.custom.giveaway != true %}
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+          {% endif %}
+        {% else %}
+          {% if settings.popup_layout == "bfcm" and page.metafields.custom.giveaway != true %}
+            <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group-163.png?v=1725431086" class="kc-logo" alt="KC Logo">
+          {% endif %}
+        {% endif %}
       <div class="form-popup__left">
         {% if page.metafields.custom.giveaway %}
             <img src="https://cdn.shopify.com/s/files/1/0879/0373/1991/t/8/assets/Group%20158.jpg" class="giveaway-banner desktop" alt="giveaway-banner">
