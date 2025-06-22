@@ -150,6 +150,7 @@
     "success_popup_button_text": "BOOK NOW",
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "",
+    "nz_popup_layout": "giveaway",
     "nz_popup_enable": true,
     "nz_popup_left_image": "shopify://shop_images/NZ_Comp_pop_up_2.jpg",
     "nz_popup_left_image_mobile": "shopify://shop_images/NZ_Comp_pop_up_2.jpg",
