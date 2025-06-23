@@ -108,6 +108,82 @@
         "bg_color": "#000000"
       }
     },
+    "flipped_boxes_kG6gXk": {
+      "type": "flipped-boxes",
+      "blocks": {
+        "boxes_zpCPhf": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_31.jpg",
+            "Title": "LOBES",
+            "description": "<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_tbcpHk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_30.jpg",
+            "Title": "HELIX",
+            "description": "<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_mn8wG3": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_32_1.jpg",
+            "Title": "SEPTUM",
+            "description": "<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. </p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_HhxQgk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_34.jpg",
+            "Title": "NOSTRIL",
+            "description": "<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_8CTFjj": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_33_1.jpg",
+            "Title": "FORWARD HELIX",
+            "description": "<p>Forward Helix piercings are positioned through the front of the<strong> </strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_wVQegA": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": true,
+            "image": "shopify://shop_images/Rectangle_10.jpg",
+            "Title": "SEE OUR FULL RANGE OF PIERCING SERVICES",
+            "description": "<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        }
+      },
+      "block_order": [
+        "boxes_zpCPhf",
+        "boxes_tbcpHk",
+        "boxes_mn8wG3",
+        "boxes_HhxQgk",
+        "boxes_8CTFjj",
+        "boxes_wVQegA"
+      ],
+      "settings": {
+        "title": "TRENDING PIERCINGS"
+      }
+    },
     "rich_text_gwEVLb": {
       "type": "rich-text",
       "blocks": {
@@ -347,6 +423,79 @@
         "reduce_spacing": false
       }
     },
+    "collection_showcase_TiBJeR": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_bPqmL3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "EAR",
+            "url": "shopify://collections/cartilage-labret",
+            "image": "shopify://shop_images/image_19.jpg"
+          }
+        },
+        "image_3jRFGa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NOSE",
+            "url": "shopify://collections/nose-jewellery",
+            "image": "shopify://shop_images/Rectangle_12_1.jpg"
+          }
+        },
+        "image_b6EctF": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NAVEL",
+            "url": "shopify://collections/belly",
+            "image": "shopify://shop_images/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"
+          }
+        },
+        "image_Nge4Bm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "LIP",
+            "url": "shopify://collections/lip",
+            "image": "shopify://shop_images/image_21.jpg"
+          }
+        },
+        "image_jm9bq3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NIPPLE",
+            "url": "shopify://collections/nipple",
+            "image": "shopify://shop_images/image_22.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_bPqmL3",
+        "image_3jRFGa",
+        "image_b6EctF",
+        "image_Nge4Bm",
+        "image_jm9bq3"
+      ],
+      "settings": {
+        "title": "SHOP BY PIERCING",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": true,
+        "get_product_list": false,
+        "collection_link": ""
+      }
+    },
     "collection_showcase_RnD7cq": {
       "type": "collection-showcase",
       "settings": {
@@ -359,6 +508,38 @@
         "enable_hover": false,
         "get_product_list": true,
         "collection_link": "buy-3-get-one-free"
+      }
+    },
+    "two_column_icon_image_c79Kr9": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_XFEQTg": {
+          "type": "title_block",
+          "settings": {
+            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR  {EXPERTLY} {TRAINED} {PIERCERS}",
+            "title_tag": "h1",
+            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
+            "button_text": "Book Now",
+            "button_url": "shopify://pages/professional-body-piercing-services",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_XFEQTg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_18_1.jpg",
+        "left_align": true,
+        "icon_column": false,
+        "bottom_margin": true,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": true,
+        "reduced_image_size": false,
+        "reduced_content_width": false
       }
     },
     "grid_image_xGVpcK": {
@@ -446,11 +627,14 @@
     "hero_video_Ar6Ham",
     "header_banner_MUPtRQ",
     "inline_buttons_f7DDkA",
+    "flipped_boxes_kG6gXk",
     "rich_text_gwEVLb",
     "columns_block_HhremV",
     "columns_block_AAVbUH",
     "rich_text_YyxiLB",
+    "collection_showcase_TiBJeR",
     "collection_showcase_RnD7cq",
+    "two_column_icon_image_c79Kr9",
     "grid_image_xGVpcK",
     "pagefly-home",
     "raw_code_wM84LU"
