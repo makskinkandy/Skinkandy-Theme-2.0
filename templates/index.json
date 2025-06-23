@@ -504,7 +504,7 @@
         "background": "#ffffff",
         "button_text": "Shop ALL",
         "button_url": "shopify://collections/shop-all",
-        "bottom_border": false,
+        "bottom_border": true,
         "enable_hover": false,
         "get_product_list": true,
         "collection_link": "buy-3-get-one-free"
