@@ -504,7 +504,7 @@
         "background": "#ffffff",
         "button_text": "Shop ALL",
         "button_url": "shopify://collections/shop-all",
-        "bottom_border": true,
+        "bottom_border": false,
         "enable_hover": false,
         "get_product_list": true,
         "collection_link": "buy-3-get-one-free"
@@ -537,7 +537,7 @@
         "hide_description": false,
         "round_image": false,
         "circle_drops": false,
-        "bottom_border": true,
+        "bottom_border": false,
         "reduced_image_size": false,
         "reduced_content_width": false
       }
