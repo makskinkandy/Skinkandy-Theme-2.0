@@ -866,7 +866,7 @@
       ".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}",
       ".ss__results__inline-banner {display: none;}",
       ".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}",
-      ".grid-product__tag--b3f4 {background: #eb008c !important; font-weight: 600;}",
+      ".grid-product__tag--b3f4,.grid-product__tag--black {background: #eb008c !important; font-weight: 600;}",
       ".page-buy-3-get-one-free .ss__result--inline-banner:has(> .ss__inline-banner .buy-3-4) {display: none;}"
     ]
   }
