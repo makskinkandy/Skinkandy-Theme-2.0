@@ -71,8 +71,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_-_Chains_and_Charms.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Homepage_-_Chains_and_Charms.jpg",
+            "image_mobile": "shopify://shop_images/Code-Pink-Homepage-Charms-and-Chains.jpg",
+            "image": "shopify://shop_images/Code-Pink-Homepage-Charms-and-Chains.jpg",
             "banner_url": "shopify://collections/charms-and-chains",
             "heading": "",
             "short_description": "",
