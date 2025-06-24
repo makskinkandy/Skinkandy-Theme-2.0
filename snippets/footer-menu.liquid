@@ -9,7 +9,7 @@
             {% if link.links.size > 1 %}
                 <ul class="footer-submenu no-bullets inline-list" role="menu">
                     {% for childlink in link.links %}
-                        <li><a href="{{ childlink.url }}" role="menuitem">{{ childlink.title }}</a></li>
+                        <li role="menuitem"><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
                     {% endfor %}
                 </ul>
             {% endif %}
