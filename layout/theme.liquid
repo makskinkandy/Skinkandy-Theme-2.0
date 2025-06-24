@@ -41,13 +41,13 @@
 
     {%- render 'social-meta-tags' -%}
 
-    <link href="{{ 'montserrat-font.css' | asset_url | stylesheet_tag }}" rel="stylesheet">
+    <link href="{{ 'montserrat-font.css' | asset_url | stylesheet_tag }}">
     {% comment %}
     {%- render 'font-face' -%}
     {% endcomment %}
     {%- render 'css-variables' -%}
     {% if settings.popup_layout == 'bfcm' %}
-      <link href="{{ 'league-gothic.css' | asset_url | stylesheet_tag }}" rel="stylesheet">
+      <link href="{{ 'league-gothic.css' | asset_url | stylesheet_tag }}">
     {% endif %}
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
     {{ 'theme.css' | asset_url | stylesheet_tag }}
