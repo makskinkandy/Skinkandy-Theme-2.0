@@ -204,8 +204,18 @@
                 {% endif %}
               </button>
               <div class="dropdown-box" style="width: 57.93px;">
-                    <a  style="cursor:pointer" id="link-au">AU</a>
-                    <a  style="cursor:pointer" id="link-nz">NZ</a>
+                {% assign current_path = request.path %}
+
+                {% if current_path contains '/en-nz' %}
+                  {%- assign au_path = current_path | remove_first: '/en-nz' -%}
+                  {%- assign nz_path = current_path -%}
+                {% else %}
+                  {%- assign au_path = current_path -%}
+                  {%- assign nz_path = '/en-nz' | append: current_path -%}
+                {% endif %}
+              
+                <a href="{{ au_path | prepend: shop.url }}" style="cursor:pointer">AU</a>
+                <a href="{{ nz_path | prepend: shop.url }}" style="cursor:pointer">NZ</a>
               </div>
             </li>
           </ul>
