@@ -47,7 +47,7 @@
     {% endcomment %}
     {%- render 'css-variables' -%}
     {% if settings.popup_layout == 'bfcm' %}
-      <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+      <link href="{{ 'league-gothic.css' | asset_url | stylesheet_tag }}" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
     {{ 'theme.css' | asset_url | stylesheet_tag }}
