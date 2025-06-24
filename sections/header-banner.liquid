@@ -24,7 +24,7 @@
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
           {% assign preload_image = block.settings.image | image_url  %}
           {% if preload_image != blank %}
-            {{ '<link rel="preload" as="image" href="'| append: preload_image | append: '">' | strip_newlines }}
+            {{ '<link rel="preload" as="image" fetchpriority="high" href="'| append: preload_image | append: '">' | strip_newlines }}
           {% endif %}
           {% if block.settings.heading == blank %}
             <picture>
@@ -36,7 +36,7 @@
                   {{ block.settings.image_mobile | image_url: width: 480 }} 480w,
                   {{ block.settings.image_mobile | image_url: width: 375 }} 375w
                 "
-                sizes="100vw"
+                sizes="100vw" fetchpriority="high"
               >
               <!-- Desktop image fallback -->
               <img
@@ -51,7 +51,7 @@
                   {{ block.settings.image | image_url: width: 992 }} 992w,
                   {{ block.settings.image | image_url: width: 768 }} 768w
                 "
-                sizes="100vw"
+                sizes="100vw" fetchpriority="high"
               >
             </picture>
           {% endif %}
