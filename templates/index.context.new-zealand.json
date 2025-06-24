@@ -14,9 +14,7 @@
   },
   "sections": {
     "header_banner_MUPtRQ": {
-      "custom_css": [
-        ".block-image_PFE9d8 img {position: absolute; width: 100%; height: 100%; object-fit: contain;}"
-      ],
+      "custom_css": [],
       "settings": {
         "banner_size": "default"
       },
@@ -24,7 +22,7 @@
         "image_PFE9d8": {
           "settings": {
             "image_mobile": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Mobile.jpg",
-            "image": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Desktop.jpg",
+            "image": "shopify://shop_images/nz-giveaway.jpg",
             "banner_url": "shopify://pages/win-rhythm-vines-festival-package"
           }
         }
