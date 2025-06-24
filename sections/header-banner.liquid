@@ -24,7 +24,7 @@
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
           {% assign preload_image = block.settings.image | image_url  %}
           {% if preload_image != blank %}
-            {{ '<link rel="preload" as="image" fetchpriority="high" href="'| append: preload_image | append: '">' | strip_newlines }}
+            {{ '<link rel="preload" as="image" href="'| append: preload_image | append: '">' | strip_newlines }}
           {% endif %}
           {% if block.settings.heading == blank %}
             <picture>
