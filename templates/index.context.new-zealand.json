@@ -14,7 +14,9 @@
   },
   "sections": {
     "header_banner_MUPtRQ": {
-      "settings": {},
+      "settings": {
+        "banner_size": "small-banner"
+      },
       "blocks": {
         "image_PFE9d8": {
           "settings": {
