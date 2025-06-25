@@ -208,6 +208,13 @@
       "settings": {
         "profileId": "cross-sell"
       }
+    },
+    "raw_code_9ydbkT": {
+      "type": "raw-code",
+      "name": "Custom HTML Section",
+      "settings": {
+        "custom_html": "<div data-id=\"27456\" class=\"lookfy-gallery\"></div>"
+      }
     }
   },
   "order": [
@@ -216,6 +223,7 @@
     "sub",
     "collection-return",
     "ss-recommendations-similar",
+    "raw_code_9ydbkT",
     "ss-recommendations-cross-sell"
   ]
 }
