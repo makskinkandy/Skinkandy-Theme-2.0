@@ -236,7 +236,7 @@
         "text_F3QVPw"
       ],
       "custom_css": [
-        ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -35px }}"
+        ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -25px; }}"
       ],
       "name": "Rich text",
       "settings": {
