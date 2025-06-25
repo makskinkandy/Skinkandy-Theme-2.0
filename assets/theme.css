@@ -16368,7 +16368,9 @@ small.cart__discount.percentage {
   h4 {
     margin-bottom: 20px;
   }
-
+  a {
+    font-weight: 600;
+  }
   h2 {
     font-size: 24px;
     text-transform: uppercase;
