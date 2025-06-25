@@ -141,10 +141,102 @@
         "button_url": "",
         "count": 2,
         "bottom_space": false,
-        "hide_line": false,
+        "hide_line": true,
         "disable_grid": false,
         "two_column": false,
         "max_width": 1704
+      }
+    },
+    "columns_block_if7KgT": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_HgBXMM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/DSC02730_8bf1bff2-6af5-4414-8c6a-3a8cdfd44b56.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "Studs + a fine link",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>For a clean, modern twist<br/><br/></p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_jYdfrG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/2782.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "Nose piercings",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Chains highlight facial features with bold intention</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_HgBXMM",
+        "text_block_jYdfrG"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_bXKAcP": {
+      "type": "rich-text",
+      "blocks": {
+        "text_F3QVPw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>These pieces are designed to connect, elevate, and completely transform your piercings.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_F3QVPw"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
       }
     },
     "rich_text_MwBgrj": {
@@ -162,9 +254,7 @@
       "block_order": [
         "button_BDyXzz"
       ],
-      "custom_css": [
-        ".text-center {margin-top: -75px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -191,6 +281,8 @@
     "rich_text_86xf37",
     "collection_showcase_egKDgR",
     "columns_block_eEWy84",
+    "columns_block_if7KgT",
+    "rich_text_bXKAcP",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
