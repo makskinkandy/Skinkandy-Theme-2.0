@@ -364,11 +364,20 @@
             "enlarge_text": false,
             "text": "<p>Charms + Chains aren’t just jewellery. They’re tools for self-expression. For mood shifts. For a little extra drama on a Monday or effortless elegance on a night out. </p><p>So go ahead. Link it up. Layer it on. Obsess a little. </p><p>We already are. </p>"
           }
+        },
+        "button_RPKtwT": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "BOOK NOW",
+            "css_class": ""
+          }
         }
       },
       "block_order": [
         "heading_i4Y6ad",
-        "text_eC8w8R"
+        "text_eC8w8R",
+        "button_RPKtwT"
       ],
       "custom_css": [
         "h2 {font-weight: 600;}"
@@ -378,28 +387,6 @@
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": false
-      }
-    },
-    "rich_text_34kpNr": {
-      "type": "rich-text",
-      "blocks": {
-        "button_wjJHGh": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/professional-body-piercing-services",
-            "link_text": "book now",
-            "css_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "button_wjJHGh"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
       }
     },
     "1662086193d23e863f": {
@@ -426,7 +413,6 @@
     "columns_block_L8BcVw",
     "rich_text_GNttmF",
     "rich_text_MwBgrj",
-    "rich_text_34kpNr",
     "1662086193d23e863f"
   ]
 }
