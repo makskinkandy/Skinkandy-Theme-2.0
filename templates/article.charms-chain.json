@@ -71,6 +71,79 @@
         "collection_link": "charms-and-chains"
       }
     },
+    "columns_block_eEWy84": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_8Xi6Yb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/660.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "Helix to conch",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>A soft drape gives full statement energy</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_tPNMnd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/158-7R505601.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "Hoops + chains",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "<p>Adds depth to a classic stack</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_8Xi6Yb",
+        "text_block_tPNMnd"
+      ],
+      "custom_css": [
+        "div {text-align: left;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "Chains: The Game-Changer Your Stack Has Been Waiting For ",
+        "description": "<p>If charms are the finishing touch, chains are the style statement. </p><p>Draped between piercings. Looping from hoop to stud. Hanging from a nose ring or wrapping around a conch. Chains instantly bring movement, drama, and that cool, editorial edge. </p><p>And the best part? They work with what you already wear. </p><p>Here’s how to wear them: </p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1704
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -108,105 +181,14 @@
         "shop_all": "",
         "bottom_border": false
       }
-    },
-    "columns_block_eEWy84": {
-      "type": "columns-block",
-      "blocks": {
-        "text_block_8Xi6Yb": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "enable_round": false,
-            "fullwidth-image": false,
-            "fullheight-image": false,
-            "hide-image": false,
-            "short-image": false,
-            "flip-image-enable": false,
-            "video": "",
-            "center-content": false,
-            "title": "Example title",
-            "title_size": "small",
-            "title_tag": "h3",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "text_size": "small",
-            "button_label": "Optional button",
-            "button_link": "",
-            "new_tab": false
-          }
-        },
-        "text_block_tPNMnd": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "enable_round": false,
-            "fullwidth-image": false,
-            "fullheight-image": false,
-            "hide-image": false,
-            "short-image": false,
-            "flip-image-enable": false,
-            "video": "",
-            "center-content": false,
-            "title": "Example title",
-            "title_size": "small",
-            "title_tag": "h3",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "text_size": "small",
-            "button_label": "Optional button",
-            "button_link": "",
-            "new_tab": false
-          }
-        },
-        "text_block_rAiR3J": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "enable_round": false,
-            "fullwidth-image": false,
-            "fullheight-image": false,
-            "hide-image": false,
-            "short-image": false,
-            "flip-image-enable": false,
-            "video": "",
-            "center-content": false,
-            "title": "Example title",
-            "title_size": "small",
-            "title_tag": "h3",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "text_size": "small",
-            "button_label": "Optional button",
-            "button_link": "",
-            "new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_block_8Xi6Yb",
-        "text_block_tPNMnd",
-        "text_block_rAiR3J"
-      ],
-      "name": "Columns Block",
-      "settings": {
-        "dark_mode": false,
-        "class": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
-        "button_url": "",
-        "count": 3,
-        "bottom_space": false,
-        "hide_line": false,
-        "disable_grid": false,
-        "two_column": false,
-        "max_width": 1704
-      }
     }
   },
   "order": [
     "main",
     "rich_text_86xf37",
     "collection_showcase_egKDgR",
+    "columns_block_eEWy84",
     "rich_text_MwBgrj",
-    "1662086193d23e863f",
-    "columns_block_eEWy84"
+    "1662086193d23e863f"
   ]
 }
