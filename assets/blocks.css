@@ -1094,6 +1094,7 @@
   h3,
   .h3{
     margin-bottom: 15px;
+    font-weight: 600;
     @media screen and (max-width: 980px) {
       text-align: center;
     }
@@ -1101,9 +1102,6 @@
       color: var(--colorBtnPrimaryLight);
       font-weight: 600;
     }
-  }
-  h3 {
-    margin-top: 30px;
   }
   .h3.large {
     font-size: 34px;
