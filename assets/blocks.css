@@ -1898,7 +1898,7 @@
 
 /* Custom Banner */
 .custom-banner {
-  h1,h2,h3 {
+  .h2 {
     font-weight: bold;
     max-width: 559px;
     margin-bottom: 30px;
