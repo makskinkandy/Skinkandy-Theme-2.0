@@ -206,7 +206,8 @@
     "raw_code_9ydbkT": {
       "type": "raw-code",
       "custom_css": [
-        ".lookfy-gallery{max-width: 1704px;}"
+        ".lookfy-gallery {max-width: 1704px;}",
+        ".hotspot-item-image {max-height: 387px;}"
       ],
       "name": "Custom HTML Section",
       "settings": {
