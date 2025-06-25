@@ -301,10 +301,19 @@
             "enlarge_text": true,
             "text": "<p>Still not sure? We are here to help you!</p>"
           }
+        },
+        "button_rJxwgj": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/talk-to-us",
+            "link_text": "CONTACT US",
+            "css_class": ""
+          }
         }
       },
       "block_order": [
-        "text_bwpTFY"
+        "text_bwpTFY",
+        "button_rJxwgj"
       ],
       "name": "Rich text",
       "settings": {
