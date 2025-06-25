@@ -198,7 +198,7 @@
           "type": "question",
           "settings": {
             "question": "Can I return or exchange my jewellery?",
-            "answer": "<p>Unfortunately, due to hygiene and safety standards, we are unable to accept returns or exchanges for change of mind. For our full refund policy: CLICK HERE<br/><br/></p>"
+            "answer": "<p>Unfortunately, due to hygiene and safety standards, we are unable to accept returns or exchanges for change of mind. For our full refund policy: <a href=\"/policies/refund-policy\" title=\"Refund Policy\">CLICK HERE</a><br/><br/></p>"
           }
         },
         "question_jWTLKG": {
