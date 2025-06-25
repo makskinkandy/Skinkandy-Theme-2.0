@@ -91,6 +91,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -101,31 +102,6 @@
         "disable_grid": false,
         "two_column": false,
         "max_width": 1704
-      }
-    },
-    "rich_text_U7PfAG": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_LHcPFa": {
-          "type": "heading",
-          "settings": {
-            "title": "Body Piercing Services",
-            "heading_tag": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_LHcPFa"
-      ],
-      "custom_css": [
-        "h1 {font-weight: 700;}"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
       }
     },
     "columns_block_JfCc3d": {
@@ -168,7 +144,7 @@
             "center-content": false,
             "title": "WHY {CHOOSE} {SKINKANDY?}",
             "title_size": "large",
-            "title_tag": "h3",
+            "title_tag": "h2",
             "text": "<p>Step into SkinKandy, where expert piercers, premium jewellery, and clinical-level hygiene come together to deliver a piercing experience you can trust.</p><p>✔<strong>Global Leaders in Body Piercing: </strong>With 80+ locations across Australia and New Zealand (and more on the way!), SkinKandy is your go-to for safe, professional piercings that don’t compromise on style.</p><p>✔<strong>Highly Trained Piercers: </strong>Every SkinKandy piercer completes our comprehensive training program along with a nationally accredited certification in infection prevention. With over 10,000 training hours invested each year, you’re in safe, capable hands.</p><p>✔<strong>Premium Jewellery for Safer Piercings: </strong>We only use high-quality materials like F136 implant grade titanium, 14K solid gold, and 316L surgical steel - so your piercing not only looks great, but heals right.</p><p>✔<strong>Strict Hygiene & Safety: </strong>Our piercing studios are hygienic, comfortable and private - equipped with medical-grade sterilisation units and thorough cleaning protocols to ensure every piercing is performed with your safety in mind. From your first consultation to aftercare support, every step of your SkinKandy experience is designed to feel safe, empowering, and entirely your own.</p><p>Book your next piercing with SkinKandy and experience the difference.</p>",
             "text_size": "small",
             "button_label": "",
@@ -181,10 +157,14 @@
         "text_block_P9FTX3",
         "text_block_HfaRrd"
       ],
+      "custom_css": [
+        "h1 {font-weight: 700;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
-        "title": "",
+        "title_tag": "h1",
+        "title": "Body Piercing Services",
         "description": "",
         "button_text": "",
         "button_url": "",
@@ -267,6 +247,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "PIERCING METHODS: {NEEDLE} OR {NEEDLE} {FREE}",
         "description": "<p>At SkinKandy, we offer two professional piercing methods so you can choose the one that best suits your comfort level and personal preference.</p>",
         "button_text": "BOOK NOW",
@@ -336,6 +317,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "OUR {PIERCING} SERVICES ",
         "description": "<p>We offer a wide range of professional body piercing services, from classic ear lobe piercings to cartilage, nose, and body piercings. Each piercing is performed by our highly trained team using industry-leading hygiene practices and high-quality jewellery for the best results. </p>",
         "button_text": "See full range",
@@ -404,6 +386,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "{PREMIUM} JEWELLERY OPTIONS ",
         "description": "<p>Your jewellery matters. That’s why we only offer high-quality<strong> materials</strong> to ensure a safe and stylish piercing experience.</p>",
         "button_text": "",
@@ -472,6 +455,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -540,6 +524,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -610,6 +595,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "{PIERCING} SERVICES & COSTS",
         "description": "<p>Wondering how much your piercing will cost? Check out our Pricing & Services Table for as a guide to the cost of your preferred piercing.</p><p>All services include 316L Surgical Steel jewellery, but at SkinKandy, we recommend titanium for its premium quality, long-lasting durability, and suitability for sensitive skin. Want to learn more about upgrading your jewellery? Chat with our team, we’re here to help!</p>",
         "button_text": "",
@@ -681,6 +667,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -752,6 +739,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -819,6 +807,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -886,6 +875,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
         "button_text": "",
@@ -1168,6 +1158,7 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "{OUR} {JEWELLERY} {OPTIONS:} BEAUTIFUL AND SAFE ",
         "description": "<p>Not only do we stock a large range of initial piercing jewellery (including titanium and 14kt solid gold), we also have a range of high-quality studs and sleepers in all kinds of fun designs to change to when the piercings are healed.</p>",
         "button_text": "",
@@ -1240,7 +1231,6 @@
     "main",
     "hero_video_HL4PgY",
     "columns_block_kCrxJB",
-    "rich_text_U7PfAG",
     "columns_block_JfCc3d",
     "inline_buttons_KNaYM3",
     "columns_block_wrwUqK",
