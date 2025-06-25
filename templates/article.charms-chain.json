@@ -369,7 +369,7 @@
           "type": "button",
           "settings": {
             "link": "shopify://collections/charms-and-chains",
-            "link_text": "Shop Charms + Chains Now]",
+            "link_text": "Shop Charms + Chains Now",
             "css_class": ""
           }
         }
