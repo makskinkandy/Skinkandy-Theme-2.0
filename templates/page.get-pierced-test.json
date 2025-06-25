@@ -103,6 +103,31 @@
         "max_width": 1704
       }
     },
+    "rich_text_U7PfAG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LHcPFa": {
+          "type": "heading",
+          "settings": {
+            "title": "Body Piercing Services",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LHcPFa"
+      ],
+      "custom_css": [
+        "h1 {font-weight: 700;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
     "columns_block_JfCc3d": {
       "type": "columns-block",
       "blocks": {
@@ -1215,6 +1240,7 @@
     "main",
     "hero_video_HL4PgY",
     "columns_block_kCrxJB",
+    "rich_text_U7PfAG",
     "columns_block_JfCc3d",
     "inline_buttons_KNaYM3",
     "columns_block_wrwUqK",
