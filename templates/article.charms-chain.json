@@ -407,7 +407,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "title": "NOW TRENDING",
-        "featured_collection": "{{ article.metafields.custom.linked_collection.value }}",
+        "featured_collection": "charms-and-chains",
         "product_count": 4,
         "product_limit": 12,
         "heading_size": "h2",
