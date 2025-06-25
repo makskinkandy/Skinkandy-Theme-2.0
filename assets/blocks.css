@@ -1094,7 +1094,7 @@
   h3,
   .h3{
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
     @media screen and (max-width: 980px) {
       text-align: center;
     }
