@@ -23,7 +23,7 @@
         {% endfor %}
       
       <div class="section-header text-{{ section.settings.align_text }}">
-        <h2>{{ processed_words }}</h2>
+        <{{ section.settings.title_tag }}>{{ processed_words }}</{{ section.settings.title_tag }}>
         {% if section.settings.description %}
           {{ section.settings.description }}
         {% endif %}
@@ -162,6 +162,30 @@
         "type": "text",
         "id": "class",
         "label": "Optional section class"
+      },
+     {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Heading Tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        },
+        ]
       },
       {
         "type": "text",
@@ -324,7 +348,11 @@
             {
               "value": "h3",
               "label": "H3"
-            }
+            },
+            {
+              "value": "p",
+              "label": "P"
+            },
             ]
           },
           {
