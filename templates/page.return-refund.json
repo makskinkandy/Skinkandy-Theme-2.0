@@ -189,7 +189,7 @@
         "align_text": "left",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "custom_faq_7H73JQ": {
@@ -242,7 +242,7 @@
         "align_text": "left",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "custom_faq_tjiUnX": {
