@@ -291,6 +291,28 @@
         "hide_image": false,
         "max_width": 972
       }
+    },
+    "rich_text_UxmWNK": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bwpTFY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Still not sure? We are here to help you!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bwpTFY"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
@@ -302,6 +324,7 @@
     "rich_text_HxLDpQ",
     "custom_faq_7H73JQ",
     "rich_text_iCMYjY",
-    "custom_faq_tjiUnX"
+    "custom_faq_tjiUnX",
+    "rich_text_UxmWNK"
   ]
 }
