@@ -184,6 +184,9 @@
       "block_order": [
         "heading_9pkNaB"
       ],
+      "custom_css": [
+        ".reduce-spacing--true {margin-top: 50px;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "left",
@@ -236,6 +239,9 @@
       },
       "block_order": [
         "heading_3cLPLV"
+      ],
+      "custom_css": [
+        ".reduce-spacing--true {margin-top: 50px;}"
       ],
       "name": "Rich text",
       "settings": {
