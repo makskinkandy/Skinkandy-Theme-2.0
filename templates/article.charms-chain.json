@@ -58,6 +58,9 @@
     },
     "collection_showcase_egKDgR": {
       "type": "collection-showcase",
+      "custom_css": [
+        ".collection-showcase__wrapper {max-width: 1000px;}"
+      ],
       "name": "Collection Showcase Block",
       "settings": {
         "title": "Charms & Chains",
