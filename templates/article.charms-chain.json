@@ -239,6 +239,79 @@
         "reduce_spacing": true
       }
     },
+    "columns_block_L8BcVw": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_yBekhp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/DSC02716.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_XpPmaB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/SK---2-06311.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_yBekhp",
+        "text_block_XpPmaB"
+      ],
+      "custom_css": [
+        "div {text-align: left;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title": "Gold or Silver? Why Not Both? ",
+        "description": "<p>The Charms + Chains collection comes in both warm titanium 18K gold PVD and cool-toned silver finishes so no matter your metal mood, there’s a way to make it yours. </p><p>If you’re a committed gold girl, go for glow. Love a sleek, minimal look? Silver’s got your back. Or mix them both for that high-low contrast that feels super on trend. </p><p><strong>Pro tip</strong>: Chains are the perfect piece to tie mixed metals together in one cohesive stack. </p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1008
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -283,6 +356,7 @@
     "columns_block_eEWy84",
     "columns_block_if7KgT",
     "rich_text_bXKAcP",
+    "columns_block_L8BcVw",
     "rich_text_MwBgrj",
     "1662086193d23e863f"
   ]
