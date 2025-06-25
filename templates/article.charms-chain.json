@@ -48,6 +48,9 @@
         "heading_MchJCE",
         "text_tKTJm3"
       ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "left",
@@ -312,10 +315,75 @@
         "max_width": 1008
       }
     },
+    "rich_text_GNttmF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cKkjDw": {
+          "type": "heading",
+          "settings": {
+            "title": "Stack Smarter, Not Harder ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_MFG9HN": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>The beauty of these pieces is how easily they fit into your current rotation. You don’t need to overhaul your jewellery box. Just add a chain here, a charm there and suddenly you’ve got five new looks from the same pair of hoops. </p><p>They’re subtle. They’re bold. They’re whatever you want them to be. </p><p>And honestly? Once you try them you will discover a world of endless creations! </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cKkjDw",
+        "text_MFG9HN"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
-        "button_BDyXzz": {
+        "heading_i4Y6ad": {
+          "type": "heading",
+          "settings": {
+            "title": "Your Stack, Reinvented ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_eC8w8R": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Charms + Chains aren’t just jewellery. They’re tools for self-expression. For mood shifts. For a little extra drama on a Monday or effortless elegance on a night out. </p><p>So go ahead. Link it up. Layer it on. Obsess a little. </p><p>We already are. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_i4Y6ad",
+        "text_eC8w8R"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_34kpNr": {
+      "type": "rich-text",
+      "blocks": {
+        "button_wjJHGh": {
           "type": "button",
           "settings": {
             "link": "shopify://pages/professional-body-piercing-services",
@@ -325,14 +393,13 @@
         }
       },
       "block_order": [
-        "button_BDyXzz"
+        "button_wjJHGh"
       ],
-      "custom_css": [],
       "settings": {
         "align_text": "center",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "1662086193d23e863f": {
@@ -357,7 +424,9 @@
     "columns_block_if7KgT",
     "rich_text_bXKAcP",
     "columns_block_L8BcVw",
+    "rich_text_GNttmF",
     "rich_text_MwBgrj",
+    "rich_text_34kpNr",
     "1662086193d23e863f"
   ]
 }
