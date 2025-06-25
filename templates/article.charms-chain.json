@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "custom_css": [
+        "h1,h2,h3,h4 {font-family: \"Futura Medium 01\", sans-serif;}",
+        "p {line-height: 25px;}",
+        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}"
+      ],
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true,
+        "disable_padding": false
+      }
+    },
+    "rich_text_MwBgrj": {
+      "type": "rich-text",
+      "blocks": {
+        "button_BDyXzz": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "book now"
+          }
+        }
+      },
+      "block_order": [
+        "button_BDyXzz"
+      ],
+      "custom_css": [
+        ".text-center {margin-top: -75px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "1662086193d23e863f": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "NOW TRENDING",
+        "featured_collection": "{{ article.metafields.custom.linked_collection.value }}",
+        "product_count": 4,
+        "product_limit": 12,
+        "heading_size": "h2",
+        "shop_all": "",
+        "bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_MwBgrj",
+    "1662086193d23e863f"
+  ]
+}
