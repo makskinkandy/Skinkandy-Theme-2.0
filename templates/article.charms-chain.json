@@ -98,14 +98,14 @@
       "type": "collection-showcase",
       "name": "Collection Showcase Block",
       "settings": {
-        "title": "",
+        "title": "Charms & Chains",
         "mode": "light",
         "background": "#ffffff",
         "button_text": "",
         "button_url": "",
         "bottom_border": false,
         "enable_hover": false,
-        "get_product_list": false,
+        "get_product_list": true,
         "collection_link": "charms-and-chains"
       }
     }
