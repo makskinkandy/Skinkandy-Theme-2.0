@@ -203,17 +203,20 @@
         "profileId": "customer-also-bought-charms-chains"
       }
     },
+    "raw_code_9ydbkT": {
+      "type": "raw-code",
+      "custom_css": [
+        "#27456 {max-width: 1704px;}"
+      ],
+      "name": "Custom HTML Section",
+      "settings": {
+        "custom_html": "<div data-id=\"27456\" class=\"lookfy-gallery\"></div>"
+      }
+    },
     "ss-recommendations-cross-sell": {
       "type": "ss-recommendations-product",
       "settings": {
         "profileId": "cross-sell"
-      }
-    },
-    "raw_code_9ydbkT": {
-      "type": "raw-code",
-      "name": "Custom HTML Section",
-      "settings": {
-        "custom_html": "<div data-id=\"27456\" class=\"lookfy-gallery\"></div>"
       }
     }
   },
