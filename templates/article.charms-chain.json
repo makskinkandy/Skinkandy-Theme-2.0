@@ -235,6 +235,9 @@
       "block_order": [
         "text_F3QVPw"
       ],
+      "custom_css": [
+        ".rte {margin-top: -75px;}"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "left",
