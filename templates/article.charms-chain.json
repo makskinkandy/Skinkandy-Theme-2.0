@@ -14,7 +14,8 @@
       "custom_css": [
         "h1,h2,h3,h4 {font-family: \"Futura Medium 01\", sans-serif;}",
         "p {line-height: 25px;}",
-        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}"
+        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}",
+        "img {@media screen and (max-width: 767px) {max-height: 331px; }}"
       ],
       "settings": {
         "image_hero": true,
