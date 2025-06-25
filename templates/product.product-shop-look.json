@@ -206,7 +206,7 @@
     "raw_code_9ydbkT": {
       "type": "raw-code",
       "custom_css": [
-        "#27456 {max-width: 1704px;}"
+        ".lookfy-gallery{max-width: 1704px;}"
       ],
       "name": "Custom HTML Section",
       "settings": {
