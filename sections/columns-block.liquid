@@ -92,14 +92,14 @@
                             <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
                              <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
                             src="{{ img_url }}"
-                            alt="{{ block.settings.image.alt }}" loading="lazy">
+                            alt="{{ block.settings.title }}" loading="lazy">
                             </a>
                           </div>
                           <div class="flip-card-back">
                             <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
                               <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
                               src="{{ img_url_flip }}"
-                              alt="{{ block.settings.flip-image.alt }}" loading="lazy">
+                              alt="{{ block.settings.title }}" loading="lazy">
                             </a>
                           </div>
                         </div>
@@ -108,13 +108,13 @@
                       <a href="{{ block.settings.button_link }}" class="" {% if block.settings.new_tab %}target="_blank"{% endif %}>
                         <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
                             src="{{ img_url }}"
-                            alt="{{ block.settings.image.alt }}" loading="lazy">
+                            alt="{{ block.settings.title }}" loading="lazy">
                       </a>
                     {% endif %}
                   {% else %}
                     <img class="lazyload {% if block.settings.fullwidth-image %}fullwidth{% endif %} {% if block.settings.enable_round %}rounded{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.fullheight-image %}fullheight{% endif %} {% if block.settings.short-image %}short-image{% endif %}"
                         src="{{ img_url }}"
-                        alt="{{ block.settings.image.alt }}" loading="lazy">
+                        alt="{{ block.settings.title }}" loading="lazy">
                   {% endif %}
                     {% if block.settings.fullwidth-image %}
                       <div class="circle-overlay lazyload"></div>
@@ -300,7 +300,7 @@
           {
             "type": "image_picker",
             "id": "flip-image",
-            "label": "Image"
+            "label": "Flip Image"
           },
           {
             "type": "url",
