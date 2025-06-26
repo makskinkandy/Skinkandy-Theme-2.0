@@ -55,12 +55,19 @@
                 alt="Image for slider {{ forloop.index }}"
                 class="hero-image"
                 srcset="
-                  {{ block.settings.image | image_url: width: 2200 }} 1920w,
-                  {{ block.settings.image | image_url: width: 1600 }} 1600w,
-                  {{ block.settings.image | image_url: width: 1440 }} 1440w,
-                  {{ block.settings.image | image_url: width: 1200 }} 1200w,
-                  {{ block.settings.image | image_url: width: 992 }} 992w,
-                  {{ block.settings.image | image_url: width: 768 }} 768w
+                  {% if block.settings.image != blank %}
+                    {% assign widths = "2200,1600,1440,1200,992,768" | split: "," %}
+                    {% assign srcset = "" %}
+                  
+                    {% for width in widths %}
+                      {% assign image_url = block.settings.image | image_url: width: width %}
+                      {% assign srcset = srcset | append: image_url | append: " " | append: width | append: "w" %}
+                      {% unless forloop.last %}
+                        {% assign srcset = srcset | append: ", " %}
+                      {% endunless %}
+                    {% endfor %}
+                    {{ srcset }}
+                  {% endif %}
                 "
                 sizes="100vw" fetchpriority="high"
               >
