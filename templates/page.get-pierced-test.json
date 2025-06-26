@@ -675,7 +675,7 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": true,
+        "disable_grid": false,
         "two_column": false,
         "max_width": 1284
       }
@@ -747,7 +747,7 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": true,
+        "disable_grid": false,
         "two_column": false,
         "max_width": 1284
       }
@@ -766,7 +766,7 @@
             "short-image": false,
             "flip-image-enable": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "{DOWNSIZING}",
             "title_size": "large",
             "title_tag": "h2",
@@ -788,7 +788,7 @@
             "short-image": false,
             "flip-image-enable": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "",
             "title_size": "small",
             "title_tag": "h3",
@@ -815,7 +815,7 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": false,
-        "disable_grid": true,
+        "disable_grid": false,
         "two_column": false,
         "max_width": 1284
       }
@@ -834,7 +834,7 @@
             "short-image": false,
             "flip-image-enable": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "{ANATOMY} {CHECK}",
             "title_size": "large",
             "title_tag": "h2",
@@ -856,7 +856,7 @@
             "short-image": false,
             "flip-image-enable": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "",
             "title_size": "small",
             "title_tag": "h3",
@@ -883,7 +883,7 @@
         "count": 3,
         "bottom_space": false,
         "hide_line": true,
-        "disable_grid": true,
+        "disable_grid": false,
         "two_column": false,
         "max_width": 1284
       }
