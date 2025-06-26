@@ -23,20 +23,21 @@
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
            {% if block.settings.image != blank %}
-            {% assign desktop_widths = "2200,1600,1440,1200,992,768" | split: "," %}
-            {% for width in desktop_widths %}
-              {% assign preload_image = block.settings.image | image_url: width: width %}
-              <link rel="preload" fetchpriority="high" as="image" href="{{ preload_image }}" imagesrcset="{{ preload_image }} {{ width }}w">
-            {% endfor %}
-          {% endif %}
-          
-          {% if block.settings.image_mobile != blank %}
-            {% assign mobile_widths = "640,480,375" | split: "," %}
-            {% for width in mobile_widths %}
-              {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
-              <link rel="preload" fetchpriority="high" as="image" href="{{ preload_image_mobile }}" imagesrcset="{{ preload_image_mobile }} {{ width }}w">
-            {% endfor %}
-          {% endif %}
+              {% assign desktop_widths = "2200,1600,1440,1200,992,768" | split: "," %}
+              {% for width in desktop_widths %}
+                {% assign preload_image = block.settings.image | image_url: width: width %}
+                {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
+              {% endfor %}
+            {% endif %}
+            
+            {% if block.settings.image_mobile != blank %}
+              {% assign mobile_widths = "640,480,375" | split: "," %}
+              {% for width in mobile_widths %}
+                {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
+                {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
+              {% endfor %}
+            {% endif %}
+
           {% if block.settings.heading == blank %}
             <picture>
               <!-- Mobile image for ≤767px -->
