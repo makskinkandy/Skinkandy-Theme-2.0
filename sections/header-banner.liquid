@@ -26,7 +26,7 @@
               {% assign desktop_widths = "2200,1600,1440,1200,992,768" | split: "," %}
               {% for width in desktop_widths %}
                 {% assign preload_image = block.settings.image | image_url: width: width %}
-                {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
+                {{ '<link rel="preload" as="image" fetchpriority="high" href="' | append: preload_image | append: '">' }}
               {% endfor %}
             {% endif %}
             
@@ -34,7 +34,7 @@
               {% assign mobile_widths = "640,480,375" | split: "," %}
               {% for width in mobile_widths %}
                 {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
-                {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
+                {{ '<link rel="preload" as="image" fetchpriority="high" href="' | append: preload_image_mobile | append: '">' }}
               {% endfor %}
             {% endif %}
 
@@ -156,8 +156,6 @@
 </style>
 {% if section.blocks.size > 1 %}
   <script>
-
-    
     {% if section.settings.shuffle %}
       let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
     
