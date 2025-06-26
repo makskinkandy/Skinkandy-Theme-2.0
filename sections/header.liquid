@@ -31,6 +31,10 @@
           
         {% endif %}
         {% if page.metafields.custom.popup_image != blank %}
+          {% assign preload_image = page.metafields.custom.popup_image | image_url %}
+          {% assign preload_image_mobile = page.metafields.custom.popup_image_mobile | image_url %}
+          {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
+          {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
           <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
           <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
         {% else %}
@@ -44,9 +48,13 @@
           {% else %}
             {% if website_path == "en-nz" and settings.nz_popup_enable %}
               {% if settings.popup_left_image %}
-                  <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" >
-                  <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" >
-                {% else %}
+                {% assign preload_image = settings.nz_popup_left_image | image_url %}
+                {% assign preload_image_mobile = settings.nz_popup_left_image_mobile | image_url | image_url %}
+                {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
+                {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
+                <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" >
+                <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" >
+              {% else %}
                   <div class="video-container">
                     <video loop muted loop autoplay playsinline>
                       <source src="https://shopifyapi.skinkandyonline.com.au/devsite/assets/Airpod-Max-PopUp-with-BG.mp4" type="video/mp4">
@@ -56,6 +64,10 @@
                 {% endif %}
             {% else %}
                 {% if settings.popup_left_image %}
+                  {% assign preload_image = settings.popup_left_image | image_url %}
+                  {% assign preload_image_mobile = settings.popup_left_image_mobile | image_url | image_url %}
+                  {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
+                  {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
                   <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" >
                   <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" >
                 {% else %}
