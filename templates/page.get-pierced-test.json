@@ -371,7 +371,7 @@
             "title": "14K SOLID GOLD",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<ul><li>Perfect balance of luxury, strength and affordability</li><li>More resistant to scratching and dents when compared to higher karat gold</li><li>Suitable for most skin types</li><li>Water-resistant and corrosion-resistant</li></ul>",
+            "text": "<ul><li>Perfect balance of luxury, strength and affordability</li><li>More resistant to scratching and dents when compared to higher karat gold</li><li>Suitable for most skin types</li></ul>",
             "text_size": "small",
             "button_label": "shop gold",
             "button_link": "shopify://collections/14kt-gold",
@@ -417,7 +417,7 @@
             "title": "F136 IMPLANT GRADE TITANIUM",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<ul><li>Lightweight</li><li>Long wearing</li><li>Nickel free and biocompatible</li><li>Great for sensitive skin</li><li>Water-resistant and corrosion-resistant </li></ul>",
+            "text": "<ul><li>Lightweight</li><li>Long wearing</li><li>Nickel free and biocompatible</li><li>Great for sensitive skin</li><li>Corrosion resistant</li></ul>",
             "text_size": "small",
             "button_label": "shop titanium",
             "button_link": "shopify://collections/titanium",
@@ -509,7 +509,7 @@
             "title": "316L SURGICAL STEEL",
             "title_size": "small",
             "title_tag": "h3",
-            "text": "<ul><li>Strong</li><li>Affordable</li><li>Water-resistant and corrosion-resistant</li><li>Biocompatible</li><li>Suitable for most skin types</li></ul>",
+            "text": "<ul><li>Strong</li><li>Affordable</li><li>Corrosion resistant</li><li>Biocompatible</li><li>Suitable for most skin types</li></ul>",
             "text_size": "small",
             "button_label": "Shop surgical steel",
             "button_link": "shopify://collections/316l-surgical-steel-piercing-jewellery",
@@ -623,7 +623,7 @@
             "flip-image-enable": false,
             "video": "",
             "center-content": false,
-            "title": "{NEEDLE} Standard Piercings",
+            "title": "{NEEDLE} <br>Standard Piercings",
             "title_size": "large",
             "title_tag": "h2",
             "text": "",
@@ -661,7 +661,7 @@
         "text_block_ijMGHE"
       ],
       "custom_css": [
-        "a {font-weight: 400 !important; color: #000;}",
+        "a {font-weight: 400 !important;}",
         "em {font-size: 16px;}"
       ],
       "settings": {
