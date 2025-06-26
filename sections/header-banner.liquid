@@ -34,7 +34,7 @@
             {% assign mobile_widths = "640,480,375" | split: "," %}
             {% for width in mobile_widths %}
               {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
-              <link rel="preload" as="image" href="{{ preload_image_mobile }}" imagesrcset="{{ preload_image_mobile }} {{ width }}w">
+              <link rel="preload" fetchpriority="high" as="image" href="{{ preload_image_mobile }}" imagesrcset="{{ preload_image_mobile }} {{ width }}w">
             {% endfor %}
           {% endif %}
           {% if block.settings.heading == blank %}
@@ -43,9 +43,19 @@
               <source
                 media="(max-width: 767px)"
                 srcset="
-                  {{ block.settings.image_mobile | image_url: width: 640 }} 640w,
-                  {{ block.settings.image_mobile | image_url: width: 480 }} 480w,
-                  {{ block.settings.image_mobile | image_url: width: 375 }} 375w
+                  {% if block.settings.image != blank %}
+                    {% assign widths = "640,480,375" | split: "," %}
+                    {% assign srcset = "" %}
+                  
+                    {% for width in widths %}
+                      {% assign image_url = block.settings.image | image_url: width: width %}
+                      {% assign srcset = srcset | append: image_url | append: " " | append: width | append: "w" %}
+                      {% unless forloop.last %}
+                        {% assign srcset = srcset | append: ", " %}
+                      {% endunless %}
+                    {% endfor %}
+                    {{ srcset }}
+                  {% endif %}
                 "
                 sizes="100vw" fetchpriority="high"
               >
