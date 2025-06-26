@@ -26,7 +26,7 @@
             {% assign desktop_widths = "2200,1600,1440,1200,992,768" | split: "," %}
             {% for width in desktop_widths %}
               {% assign preload_image = block.settings.image | image_url: width: width %}
-              <link rel="preload" as="image" href="{{ preload_image }}" imagesrcset="{{ preload_image }} {{ width }}w">
+              <link rel="preload" fetchpriority="high" as="image" href="{{ preload_image }}" imagesrcset="{{ preload_image }} {{ width }}w">
             {% endfor %}
           {% endif %}
           
