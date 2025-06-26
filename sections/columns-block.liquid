@@ -58,7 +58,11 @@
           {% if word_1 == "{" %}
             {% if word_2 == "}" %}
               {% assign new_word = word | remove_first: "{" | remove_last: "}" %}
-              {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+              {% if block.settings.break_tag %}
+                {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span><br>' %}
+              {% else %}
+                {% assign processed_words = processed_words | append: '<span class="highlight-text">' | append: new_word | append: '</span> ' %}
+              {% endif %}
             {% else %}
               {% assign processed_words = processed_words | append: word | append: ' ' %}
             {% endif %}
@@ -330,6 +334,11 @@
                 "label": "Large"
               }
             ]
+          },
+          {
+            "type": "checkbox",
+            "id": "break_tag",
+            "label": "Add line break after pink heading"
           },
           {
           "type": "select",
