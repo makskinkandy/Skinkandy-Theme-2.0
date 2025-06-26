@@ -623,7 +623,7 @@
             "flip-image-enable": false,
             "video": "",
             "center-content": false,
-            "title": "{NEEDLE} <br>Standard Piercings",
+            "title": "{NEEDLE} Standard Piercings",
             "title_size": "large",
             "title_tag": "h2",
             "text": "",
@@ -677,7 +677,7 @@
         "hide_line": false,
         "disable_grid": true,
         "two_column": false,
-        "max_width": 1068
+        "max_width": 1200
       }
     },
     "columns_block_JMYqi9": {
