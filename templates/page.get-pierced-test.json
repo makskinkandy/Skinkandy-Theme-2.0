@@ -661,7 +661,7 @@
         "text_block_ijMGHE"
       ],
       "custom_css": [
-        "a {font-weight: 400 !important; color: #000;}",
+        "a {font-weight: 400 !important;}",
         "em {font-size: 16px;}"
       ],
       "settings": {
