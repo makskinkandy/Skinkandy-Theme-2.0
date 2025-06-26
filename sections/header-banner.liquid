@@ -22,9 +22,9 @@
         {% endfor %}
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
-          {% assign preload_image = block.settings.image | image_url  %}
+          {% assign preload_image_2200 = block.settings.image | image_url: width: 2200  %}
           {% if preload_image != blank %}
-            {{ '<link rel="preload" as="image" href="'| append: preload_image | append: '">' | strip_newlines }}
+            {{ '<link rel="preload" as="image" href="'| append: preload_image_2200 | append: '">' | strip_newlines }}
           {% endif %}
           {% if block.settings.heading == blank %}
             <picture>
