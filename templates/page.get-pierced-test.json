@@ -623,13 +623,13 @@
             "flip-image-enable": false,
             "video": "",
             "center-content": false,
-            "title": "{NEEDLE}",
+            "title": "{NEEDLE} Standard Piercings",
             "title_size": "large",
             "title_tag": "h2",
             "text": "<p><a href=\"/pages/standard-piercings\" title=\"Standard Piercings\">Standard Piercings</a></p>",
             "text_size": "large",
             "button_label": "",
-            "button_link": "",
+            "button_link": "shopify://pages/standard-piercings",
             "new_tab": false
           }
         },
