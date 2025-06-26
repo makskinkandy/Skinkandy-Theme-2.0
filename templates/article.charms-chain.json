@@ -33,7 +33,7 @@
         "heading_MchJCE": {
           "type": "heading",
           "settings": {
-            "title": "Charms: Tiny Detail, Big Impact ",
+            "title": "Why Charms Make Your Jewellery Stack Pop",
             "heading_tag": "h2"
           }
         },
@@ -96,6 +96,7 @@
             "center-content": false,
             "title": "Helix to Mid Helix",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "<p>A soft drape gives full statement energy</p>",
             "text_size": "small",
@@ -119,6 +120,7 @@
             "center-content": false,
             "title": "Hoops + chains",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "<p>Adds depth to a classic stack</p>",
             "text_size": "small",
@@ -140,7 +142,7 @@
         "dark_mode": false,
         "class": "",
         "title_tag": "h2",
-        "title": "Chains: The Game-Changer Your Stack Has Been Waiting For ",
+        "title": "Chains: Add Drama To Your Ear Stack",
         "description": "<p>If charms are the finishing touch, chains are the style statement. </p><p>Draped between piercings. Looping from hoop to stud. Hanging from a nose ring or wrapping around a conch. Chains instantly bring movement, drama, and that cool, editorial edge. </p><p>And the best part? They work with what you already wear. </p><p>Here’s how to wear them: </p>",
         "button_text": "",
         "button_url": "",
@@ -170,6 +172,7 @@
             "center-content": false,
             "title": "Studs + a fine link",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "<p>For a clean, modern twist<br/><br/></p>",
             "text_size": "small",
@@ -193,6 +196,7 @@
             "center-content": false,
             "title": "Nose piercings",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "<p>Chains highlight facial features with bold intention</p>",
             "text_size": "small",
@@ -266,6 +270,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "",
             "text_size": "small",
@@ -289,6 +294,7 @@
             "center-content": false,
             "title": "",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "",
             "text_size": "small",
@@ -310,7 +316,7 @@
         "dark_mode": false,
         "class": "",
         "title_tag": "h2",
-        "title": "Gold or Silver? Why Not Both? ",
+        "title": "Gold or SIlver Jewellery? Why Not Both? ",
         "description": "<p>The Charms + Chains collection comes in both warm titanium 18K gold PVD and cool-toned silver finishes so no matter your metal mood, there’s a way to make it yours. </p><p>If you’re a committed gold girl, go for glow. Love a sleek, minimal look? Silver’s got your back. Or mix them both for that high-low contrast that feels super on trend. </p><p><strong>Pro tip</strong>: Chains are the perfect piece to tie mixed metals together in one cohesive stack. </p>",
         "button_text": "",
         "button_url": "",
@@ -328,8 +334,8 @@
         "heading_cKkjDw": {
           "type": "heading",
           "settings": {
-            "title": "Stack Smarter, Not Harder ",
-            "heading_tag": "h2"
+            "title": "Easy Ways to Upgrade Your Jewellery Stack",
+            "heading_tag": "h3"
           }
         },
         "text_MFG9HN": {
