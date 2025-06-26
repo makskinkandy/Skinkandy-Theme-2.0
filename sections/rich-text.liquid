@@ -21,7 +21,7 @@
               {% endif %}
             {% endfor %}
           {% endcapture %}
-          <{{ block.settings.heading_tag }}>{{ processed_words | strip }}</{{ block.settings.heading_tag }}>
+          <{{ block.settings.heading_tag }} {% if block.settings.heading_tag == 'h3' %}class="h3"{% endif %}>{{ processed_words | strip }}</{{ block.settings.heading_tag }}>
         {%- when 'page' -%}
           <div class="rte">
             {%- if block.settings.page_text != blank -%}
