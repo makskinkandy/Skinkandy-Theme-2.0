@@ -49,7 +49,7 @@
             {% if website_path == "en-nz" and settings.nz_popup_enable %}
               {% if settings.popup_left_image %}
                 {% assign preload_image = settings.nz_popup_left_image | image_url %}
-                {% assign preload_image_mobile = settings.nz_popup_left_image_mobile | image_url | image_url %}
+                {% assign preload_image_mobile = settings.nz_popup_left_image_mobile | image_url %}
                 {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
                 {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
                 <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" >
@@ -65,7 +65,7 @@
             {% else %}
                 {% if settings.popup_left_image %}
                   {% assign preload_image = settings.popup_left_image | image_url %}
-                  {% assign preload_image_mobile = settings.popup_left_image_mobile | image_url | image_url %}
+                  {% assign preload_image_mobile = settings.popup_left_image_mobile | image_url %}
                   {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
                   {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
                   <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" >
