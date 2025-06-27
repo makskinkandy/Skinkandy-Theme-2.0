@@ -23,7 +23,7 @@
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
            {% if block.settings.image != blank %}
-              {% assign desktop_widths = "2200,1600,1440,1200,992,768" | split: "," %}
+              {% assign desktop_widths = "2200" | split: "," %}
               {% for width in desktop_widths %}
                 {% assign preload_image = block.settings.image | image_url: width: width %}
                 {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
@@ -31,7 +31,7 @@
             {% endif %}
             
             {% if block.settings.image_mobile != blank %}
-              {% assign mobile_widths = "640,480,375" | split: "," %}
+              {% assign mobile_widths = "640" | split: "," %}
               {% for width in mobile_widths %}
                 {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
                 {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
@@ -45,7 +45,7 @@
                 media="(max-width: 767px)"
                 srcset="
                   {% if block.settings.image != blank %}
-                    {% assign widths = "640,480,375" | split: "," %}
+                    {% assign widths = "640" | split: "," %}
                     {% assign srcset = "" %}
                   
                     {% for width in widths %}
@@ -67,7 +67,7 @@
                 class="hero-image"
                 srcset="
                   {% if block.settings.image != blank %}
-                    {% assign widths = "2200,1600,1440,1200,992,768" | split: "," %}
+                    {% assign widths = "2200" | split: "," %}
                     {% assign srcset = "" %}
                   
                     {% for width in widths %}
