@@ -823,6 +823,7 @@
       }
       h3 {
         font-size: 15px;
+        margin-bottom: 5px;
         @media screen and (max-width: 480px) {
           font-size: 7px;
         }
