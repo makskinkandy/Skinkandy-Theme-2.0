@@ -51,7 +51,8 @@
       <link href="{{ 'league-gothic.css' | asset_url }}" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" media="print" onload="this.media='all'">
+    
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
     
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
