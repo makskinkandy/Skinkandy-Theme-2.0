@@ -1,4 +1,4 @@
-<div class="section__hero-banner hero-banner hero-{{ section.id }} hero-banner-{{ section.index }}">
+d <div class="section__hero-banner hero-banner hero-{{ section.id }} hero-banner-{{ section.index }}">
   {% if section.blocks.size > 0 %}
     <div class="hero-banner__wrapper slider-wrapper">
       {% for block in section.blocks %}
@@ -30,7 +30,7 @@
               {% endfor %}
             {% endif %}
             
-            {% if block.settings.image_mobile != blank %}
+            {% if block.settings.image_mobile != blank and forloop.index == 1 %}
               {% assign mobile_widths = "640" | split: "," %}
               {% for width in mobile_widths %}
                 {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
