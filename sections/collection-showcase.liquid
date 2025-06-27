@@ -27,7 +27,10 @@
         {% for product in product_collection.products limit: 14 %}
           <div class="collection-showcase__item">
             <a href="{{ product.url }}">
-              <h3 class="collection-showcase__title">{{ product.title }}</h3>
+              <div class="collection-showcase__title">
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.price | money_without_trailing_zeros  }}</p>
+              </div>
               <div class="image-wrapper">
                 <img src="{{ product.featured_image | image_url }}" alt="Image for {{ product.title }}" class="collection-showcase__img" loading="lazy">
               </div>
