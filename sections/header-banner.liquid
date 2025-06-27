@@ -22,7 +22,7 @@
         {% endfor %}
 
         <div class="hero-banner__item {{ section.settings.banner_size }} block-{{ block.id }}">
-           {% if block.settings.image != blank and forloop.index == 1 %}
+           {% if block.settings.image != blank %}
               {% assign desktop_widths = "2200" | split: "," %}
               {% for width in desktop_widths %}
                 {% assign preload_image = block.settings.image | image_url: width: width %}
