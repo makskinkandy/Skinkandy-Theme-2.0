@@ -34,7 +34,7 @@
               {% assign mobile_widths = "640" | split: "," %}
               {% for width in mobile_widths %}
                 {% assign preload_image_mobile = block.settings.image_mobile | image_url: width: width %}
-                {{ '<link rel="preload" as="image" href="' | append: preload_image_mobile | append: '">' }}
+                {{ '<link rel="preload" as="image" media="(max-width: 767px)" href="' | append: preload_image_mobile | append: '">' }}
               {% endfor %}
             {% endif %}
 
