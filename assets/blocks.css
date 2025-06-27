@@ -821,6 +821,12 @@
       @media screen and (max-width: 480px) {
         font-size: 7px;
       }
+      h3 {
+        font-size: 15px;
+        @media screen and (max-width: 480px) {
+          font-size: 7px;
+        }
+      }
     }
     .collection-showcase__img {
       object-fit: cover;
