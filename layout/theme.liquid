@@ -50,7 +50,7 @@
     {% if settings.popup_layout == 'bfcm' %}
       <link href="{{ 'league-gothic.css' | asset_url }}" rel="stylesheet">
     {% endif %}
-    <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}" media="print" onload="this.media='all'">
     {{ 'theme.css' | asset_url | stylesheet_tag }}
     
     <script>
