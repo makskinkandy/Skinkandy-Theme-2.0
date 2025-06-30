@@ -31,8 +31,8 @@
           
         {% endif %}
         {% if page.metafields.custom.popup_image != blank %}
-          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" fetchpriority="high">
-          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" fetchpriority="high">
+          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
+          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
         {% else %}
           {% if page.metafields.custom.giveaway %}
             <div class="video-container">
@@ -44,8 +44,8 @@
           {% else %}
             {% if website_path == "en-nz" and settings.nz_popup_enable %}
               {% if settings.popup_left_image %}
-                <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" fetchpriority="high">
-                <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" fetchpriority="high">
+                <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" >
+                <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" >
               {% else %}
                   <div class="video-container">
                     <video loop muted loop autoplay playsinline>
@@ -56,8 +56,8 @@
                 {% endif %}
             {% else %}
                 {% if settings.popup_left_image %}
-                  <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" fetchpriority="high">
-                  <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" fetchpriority="high">
+                  <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
+                  <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" >
                 {% else %}
                   <div class="video-container">
                     <video loop muted loop autoplay playsinline>
