@@ -1,3 +1,6 @@
+<script>
+  console.log({{template}})
+</script>
 {% assign website_path = request.locale.root_url | remove_first: '/' %}
 {% if settings.popup_enable and page.metafields.custom.disable_popup != true %}
   {% if settings.popup_btn != blank %}
