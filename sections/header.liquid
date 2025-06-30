@@ -37,8 +37,8 @@
             {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
             {{ '<link rel="preload" as="image" media="(max-width: 767px)" href="' | append: preload_image_mobile | append: '">' }}
           {% endif %}
-          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
-          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile">
+          <img src="{{ page.metafields.custom.popup_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" {% if template != 'index' %}fetchpriority="high"{% endif %}>
+          <img src="{{ page.metafields.custom.popup_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" {% if template != 'index' %}fetchpriority="high"{% endif %}>
         {% else %}
           {% if page.metafields.custom.giveaway %}
             <div class="video-container">
@@ -56,8 +56,8 @@
                   {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
                   {{ '<link rel="preload" as="image" media="(max-width: 767px)" href="' | append: preload_image_mobile | append: '">' }}
                 {% endif %}
-                <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" >
-                <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" >
+                <img src="{{ settings.nz_popup_left_image | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image desktop" {% if template != 'index' %}fetchpriority="high"{% endif %}>
+                <img src="{{ settings.nz_popup_left_image_mobile | image_url }}" alt="{{ settings.nz_popup_title }}" class="popup-image mobile" {% if template != 'index' %}fetchpriority="high"{% endif %}>
               {% else %}
                   <div class="video-container">
                     <video loop muted loop autoplay playsinline>
@@ -74,8 +74,8 @@
                     {{ '<link rel="preload" as="image" href="' | append: preload_image | append: '">' }}
                     {{ '<link rel="preload" as="image" media="(max-width: 767px)" href="' | append: preload_image_mobile | append: '">' }}
                   {% endif %}
-                  <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop">
-                  <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" >
+                  <img src="{{ settings.popup_left_image | image_url }}" alt="{{ settings.popup_title }}" class="popup-image desktop" {% if template != 'index' %}fetchpriority="high"{% endif %}>
+                  <img src="{{ settings.popup_left_image_mobile | image_url }}" alt="{{ settings.popup_title }}" class="popup-image mobile" {% if template != 'index' %}fetchpriority="high"{% endif %}>
                 {% else %}
                   <div class="video-container">
                     <video loop muted loop autoplay playsinline>
