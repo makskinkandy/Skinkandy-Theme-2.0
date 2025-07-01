@@ -40,12 +40,6 @@
 
     {%- render 'social-meta-tags' -%}
 
-    <script>
-      document.addEventListener('DOMContentLoaded', e => {
-        console.log("template: {{ template }}")
-      });
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     {% comment %}
     {%- render 'font-face' -%}
@@ -114,6 +108,7 @@
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"
+      {% if template == "collection" %}defer{% endif %}
     ></script>
 
     {%- if shop.enabled_currencies.size > 1 -%}
@@ -147,6 +142,7 @@
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      {% if template == "collection" %}defer{% endif %}
     ></script>
 
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
