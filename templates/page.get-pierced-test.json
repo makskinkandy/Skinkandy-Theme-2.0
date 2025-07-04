@@ -163,7 +163,7 @@
       ],
       "custom_css": [
         "h1 {font-weight: 700;}",
-        ".btn {margin-top: 45px;}"
+        ".btn {margin-top: 45px; @media screen and (max-width: 767px) {margin-top: 0; }}"
       ],
       "settings": {
         "dark_mode": false,
@@ -174,7 +174,7 @@
         "button_text": "BOOK Now",
         "button_url": "https://support.skinkandy.com/s/booking-form",
         "count": 2,
-        "bottom_space": false,
+        "bottom_space": true,
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
