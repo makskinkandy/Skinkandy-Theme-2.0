@@ -183,6 +183,7 @@
     "inline_buttons_KNaYM3": {
       "type": "inline-buttons",
       "custom_css": [
+        ".bg--pink {background: #eb008c;}",
         ".inline-buttons__block {margin-top: 55px;}",
         "@media screen and (max-width: 767px) {.inline-buttons__block {margin-top: 0; }}"
       ],
@@ -383,8 +384,8 @@
             "title_tag": "h3",
             "text": "<ul><li>Perfect balance of luxury, strength and affordability</li><li>More resistant to scratching and dents when compared to higher karat gold</li><li>Suitable for most skin types</li><li>Water-resistant and corrosion-resistant</li></ul>",
             "text_size": "small",
-            "button_label": "shop gold",
-            "button_link": "shopify://collections/14kt-gold",
+            "button_label": "",
+            "button_link": "",
             "new_tab": false
           }
         }
@@ -430,8 +431,8 @@
             "title_tag": "h3",
             "text": "<ul><li>Lightweight</li><li>Long wearing</li><li>Nickel free and biocompatible</li><li>Great for sensitive skin</li><li>Water-resistant and corrosion-resistant</li></ul>",
             "text_size": "small",
-            "button_label": "shop titanium",
-            "button_link": "shopify://collections/titanium",
+            "button_label": "",
+            "button_link": "",
             "new_tab": true
           }
         },
@@ -525,8 +526,8 @@
             "title_tag": "h3",
             "text": "<ul><li>Strong</li><li>Affordable</li><li>Water-resistant and corrosion-resistant</li><li>Biocompatible</li><li>Suitable for most skin types</li></ul>",
             "text_size": "small",
-            "button_label": "Shop surgical steel",
-            "button_link": "shopify://collections/316l-surgical-steel-piercing-jewellery",
+            "button_label": "",
+            "button_link": "",
             "new_tab": false
           }
         }
