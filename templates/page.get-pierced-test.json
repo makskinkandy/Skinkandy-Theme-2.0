@@ -162,7 +162,8 @@
         "text_block_HfaRrd"
       ],
       "custom_css": [
-        "h1 {font-weight: 700;}"
+        "h1 {font-weight: 700;}",
+        ".btn {margin-top: 45px;}"
       ],
       "settings": {
         "dark_mode": false,
