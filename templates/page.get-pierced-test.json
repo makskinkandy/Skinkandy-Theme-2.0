@@ -170,8 +170,8 @@
         "title_tag": "h1",
         "title": "BODY PIERCING SERVICES",
         "description": "",
-        "button_text": "",
-        "button_url": "",
+        "button_text": "BOOK Now",
+        "button_url": "https://support.skinkandy.com/s/booking-form",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
@@ -182,6 +182,7 @@
     },
     "inline_buttons_KNaYM3": {
       "type": "inline-buttons",
+      "disabled": true,
       "custom_css": [
         ".bg--pink {background: #eb008c;}",
         ".inline-buttons__block {margin-top: 55px;}",
