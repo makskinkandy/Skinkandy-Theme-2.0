@@ -144,7 +144,7 @@
             "short-image": false,
             "flip-image-enable": false,
             "video": "",
-            "center-content": false,
+            "center-content": true,
             "title": "WHY {CHOOSE} {SKINKANDY?}",
             "title_size": "large",
             "break_tag": false,
