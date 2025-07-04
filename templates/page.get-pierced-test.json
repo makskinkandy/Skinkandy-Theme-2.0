@@ -117,7 +117,7 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
-            "short-image": false,
+            "short-image": true,
             "flip-image-enable": false,
             "image": "shopify://shop_images/skinkandy_clinic.jpg",
             "video": "",
