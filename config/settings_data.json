@@ -128,7 +128,7 @@
     "sticky_footer_banner_img_2_width": 150,
     "sticky_footer_banner_url": "shopify://collections/gift-cards",
     "sticky_footer_banner_btn_text": "Shop now",
-    "popup_enable": true,
+    "popup_enable": false,
     "popup_layout": "giveaway",
     "popup_left_image": "shopify://shop_images/May-Comp-pop-up-desktop.gif",
     "popup_left_image_mobile": "shopify://shop_images/May-Comp-pop-up-desktop.gif",
