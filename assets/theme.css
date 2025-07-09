@@ -3065,6 +3065,9 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   @media screen and (max-width: 992px) {
     transform:translateX(164%);
   }
+  @media screen and (max-width: 768px) {
+    transform:translateX(100%);
+  }
 }
 
 .drawer--bottom.drawer--is-open {
