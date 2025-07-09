@@ -3060,7 +3060,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--left.drawer--is-open{
   display:block;
-  transform:translateX(0);
+  transform:translateX(500px);
   transition-duration:0.45s;
 }
 
