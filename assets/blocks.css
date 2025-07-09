@@ -2125,7 +2125,13 @@
   }
   .slick-next:before, 
   .slick-prev:before {
-    font-size: 20px;
+    font-size: 30px;
     color: #000;
+  }
+  .slick-prev {
+    left: -35px;
+  }
+  .slick-next {
+    right: -35px;
   }
 }
