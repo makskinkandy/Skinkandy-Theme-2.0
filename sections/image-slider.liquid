@@ -10,7 +10,7 @@
 {% if section.blocks.size > 1 %}
   <script>
     {% if section.settings.shuffle %}
-      let slider{{ section.index }} = $('image-slider-{{ section.id }} .image-slider__wrapper');
+      let slider{{ section.index }} = $('.image-slider-{{ section.id }} .image-slider__wrapper');
     
       slider{{ section.index }}.slick({
         infinite: false,
@@ -32,7 +32,7 @@
         goToRandomSlide();
       }, 4000);
     {% else %}
-        let slider{{ section.index }} = $('image-slider-{{ section.id }} .image-slider__wrapper');
+        let slider{{ section.index }} = $('.image-slider-{{ section.id }} .image-slider__wrapper');
     
         slider{{ section.index }}.slick({
           infinite: false,
