@@ -3062,6 +3062,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   display:block;
   left: 0;
   transition-duration:0.45s;
+  transform:translateX(500px);
 }
 
 .drawer--bottom.drawer--is-open {
