@@ -2138,7 +2138,8 @@
   .slick-prev {
     left: -35px;
     @media screen and (max-width: 767px) {
-      left: 13px;
+      left: 3px;
+      z-index: 9;
     }
   }
   .slick-next {
