@@ -2131,12 +2131,20 @@
   .slick-prev:before {
     font-size: 30px;
     color: #000;
+    @media screen and (max-width: 767px) {
+      color: #FFF;
+    }
   }
   .slick-prev {
     left: -35px;
+    @media screen and (max-width: 767px) {
+      left: 13px;
+    }
   }
   .slick-next {
-    right: -20px;
+    @media screen and (max-width: 767px) {
+      right: 13px;
+    }
   }
   .slick-dots li button:before {
     font-size: 14px;
