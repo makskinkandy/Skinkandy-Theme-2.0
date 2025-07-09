@@ -15,7 +15,6 @@
       let slider{{ section.index }} = $('.image-slider-{{ section.id }} .image-slider__wrapper');
     
       slider{{ section.index }}.slick({
-        infinite: false,
         arrows: true,
         slidesToShow: {{ section.settings.slide_size }},
         slidesToScroll: 1,
@@ -37,7 +36,6 @@
         let slider{{ section.index }} = $('.image-slider-{{ section.id }} .image-slider__wrapper');
     
         slider{{ section.index }}.slick({
-          infinite: false,
           arrows: true,
           slidesToShow: {{ section.settings.slide_size }},
           slidesToScroll: 1,
