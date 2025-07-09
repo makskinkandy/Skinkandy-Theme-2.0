@@ -110,6 +110,66 @@
         "space_around": true,
         "bg_color": "#ffffff"
       }
+    },
+    "image_slider_3XjkD7": {
+      "type": "image-slider",
+      "blocks": {
+        "image_wqcwQi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_1_84cb1cac-16c4-4cd1-a111-791d8030ab38.jpg"
+          }
+        },
+        "image_bcrB7b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_4_e951cd88-8db2-4a68-bd26-14b4ac5c904a.jpg"
+          }
+        },
+        "image_JF9M9U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_1_84cb1cac-16c4-4cd1-a111-791d8030ab38.jpg"
+          }
+        },
+        "image_TwUCVU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_6_b5ea7531-d80c-4184-9cfe-ca5f6932c48f.jpg"
+          }
+        },
+        "image_9C4jTP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_2_52ed912f-e328-4e17-a263-2a2512fdab27.jpg"
+          }
+        },
+        "image_7zgAVX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_3_5888f6ce-6caf-4c66-ab5f-e8ec67ea0eac.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_wqcwQi",
+        "image_bcrB7b",
+        "image_JF9M9U",
+        "image_TwUCVU",
+        "image_9C4jTP",
+        "image_7zgAVX"
+      ],
+      "disabled": true,
+      "name": "Image Slider",
+      "settings": {
+        "slide_size": "3",
+        "shuffle": false
+      }
+    },
+    "google_reviews_nDyqGw": {
+      "type": "google-reviews",
+      "name": "Google Reviews",
+      "settings": {}
     }
   },
   "order": [
@@ -117,6 +177,8 @@
     "two_column_banner_jXciQX",
     "main",
     "1646101137a7a32d00",
-    "164238175037fda628"
+    "164238175037fda628",
+    "image_slider_3XjkD7",
+    "google_reviews_nDyqGw"
   ]
 }
