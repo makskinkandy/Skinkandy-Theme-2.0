@@ -3048,7 +3048,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--left{
   width: 100%;
-  left: -100%;
+  left: -500px;
   max-width: 500px;
 }
 
@@ -3060,14 +3060,8 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--left.drawer--is-open{
   display:block;
-  transform:translateX(100%);
+  left: 0;
   transition-duration:0.45s;
-  @media screen and (max-width: 992px) {
-    transform:translateX(164%);
-  }
-  @media screen and (max-width: 768px) {
-    transform:translateX(100%);
-  }
 }
 
 .drawer--bottom.drawer--is-open {
