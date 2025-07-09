@@ -2123,7 +2123,7 @@
   margin-bottom: 35px;
   margin-top: 25px;
   .slick-slide {
-    margin-right: 10px;
+    margin-left: 10px;
     @media screen and (max-width: 767px) {
       margin-right: 0;
     }
