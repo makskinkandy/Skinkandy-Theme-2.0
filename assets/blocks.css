@@ -2120,8 +2120,12 @@
 /* Image Slider */
 
 .image-slider {
+  margin-bottom: 35px;
   .slick-slide {
     margin-right: 10px;
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
   }
   .slick-next:before, 
   .slick-prev:before {
