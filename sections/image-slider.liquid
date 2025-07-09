@@ -1,7 +1,16 @@
+<div class="image-slider-{{ section.id }} image-slider">
+  <div class="image-slider__wrapper">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+          <img src="{{ block.settings.image | image_url }}" alt="Image for Slider-{{ forloop.index }}" >
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
 {% if section.blocks.size > 1 %}
   <script>
     {% if section.settings.shuffle %}
-      let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+      let slider{{ section.index }} = $('image-slider-{{ section.id }} .image-slider__wrapper');
     
       slider{{ section.index }}.slick({
         infinite: false,
@@ -23,7 +32,7 @@
         goToRandomSlide();
       }, 4000);
     {% else %}
-        let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+        let slider{{ section.index }} = $('image-slider-{{ section.id }} .image-slider__wrapper');
     
         slider{{ section.index }}.slick({
           infinite: false,
