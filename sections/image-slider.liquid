@@ -6,7 +6,7 @@
       slider{{ section.index }}.slick({
         infinite: false,
         arrows: false,
-        slidesToShow: 1,
+        slidesToShow: {{ section.settings.slide_size }},
         slidesToScroll: 1,
         dots: true,
         autoplay: false
@@ -28,7 +28,7 @@
         slider{{ section.index }}.slick({
           infinite: false,
           arrows: false,
-          slidesToShow: 1,
+          slidesToShow: {{ section.settings.slide_size }},
           slidesToScroll: 1,
           dots: true,
           autoplaySpeed: 5000,
