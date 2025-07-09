@@ -2134,4 +2134,7 @@
   .slick-next {
     right: -20px;
   }
+  .slick-dots li button:before {
+    font-size: 14px;
+  }
 }
