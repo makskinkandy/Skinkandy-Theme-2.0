@@ -332,7 +332,7 @@
         "title": "OUR {PIERCING} SERVICES ",
         "description": "<p>We offer a wide range of professional body piercing services, from classic ear lobe piercings to cartilage, nose, and body piercings. Each piercing is performed by our highly trained team using industry-leading hygiene practices and high-quality jewellery for the best results. </p>",
         "button_text": "BOOK NOW",
-        "button_url": "https://support.skinkandy.com/s/booking-form",
+        "button_url": "shopify://pages/skinkandy-piercing-menu",
         "count": 2,
         "bottom_space": false,
         "hide_line": true,
