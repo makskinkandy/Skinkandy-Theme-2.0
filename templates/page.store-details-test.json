@@ -39,7 +39,6 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": false,
@@ -110,6 +109,83 @@
         "space_around": true,
         "bg_color": "#ffffff"
       }
+    },
+    "grid_image_LLaXEg": {
+      "type": "grid-image",
+      "blocks": {
+        "image_cxbKqf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_3.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cxbKqf"
+      ],
+      "disabled": true,
+      "name": "Grid Image",
+      "settings": {
+        "bottom_margin": false,
+        "title": "",
+        "url": "",
+        "description": ""
+      }
+    },
+    "text_columns_XiBFYg": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_MczK3g": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_4.jpg",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_6UtrcP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_5.jpg",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_HFDxCC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Kawana_SkinKandy_Store_1.jpg",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MczK3g",
+        "text_block_6UtrcP",
+        "text_block_HFDxCC"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "class": "",
+        "title": "",
+        "align_text": "center",
+        "count": 3,
+        "scrollable": true
+      }
     }
   },
   "order": [
@@ -117,6 +193,8 @@
     "two_column_banner_jXciQX",
     "main",
     "1646101137a7a32d00",
-    "164238175037fda628"
+    "164238175037fda628",
+    "grid_image_LLaXEg",
+    "text_columns_XiBFYg"
   ]
 }
