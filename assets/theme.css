@@ -14775,7 +14775,7 @@ ul.header-icons > li .site-nav__link--icon svg + span {
 .js-drawer-open-nav:hover {
   color: #000;
   margin-left: 0;
-  max-width: 52px;
+  max-width: 35px;
 }
 
 #NavDrawer {
