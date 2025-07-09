@@ -2123,4 +2123,9 @@
   .slick-slide {
     margin-right: 10px;
   }
+  .slick-next:before, 
+  .slick-prev:before {
+    font-size: 20px;
+    color: #000;
+  }
 }
