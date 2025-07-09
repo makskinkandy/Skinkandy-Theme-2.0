@@ -3048,7 +3048,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--left{
   width: 100%;
-  left: -100%;
+  left: -500px;
   max-width: 500px;
 }
 
@@ -3060,7 +3060,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--left.drawer--is-open{
   display:block;
-  transform:translateX(100%);
+  transform:translateX(0);
   transition-duration:0.45s;
 }
 
