@@ -1,6 +1,93 @@
+{% if section.blocks.size > 1 %}
+  <script>
+    {% if section.settings.shuffle %}
+      let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+    
+      slider{{ section.index }}.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: false
+      });
+      // Function to move to a random slide
+      function goToRandomSlide() {
+        var totalSlides = slider.slick('getSlick').slideCount;
+        var randomSlide = Math.floor(Math.random() * totalSlides);
+        slider.slick('slickGoTo', randomSlide);
+      }
+    
+      // Set up an interval for the custom autoplay with random slide transitions
+      setInterval(function() {
+        goToRandomSlide();
+      }, 4000);
+    {% else %}
+        let slider{{ section.index }} = $('.hero-{{ section.id }} .slider-wrapper');
+    
+        slider{{ section.index }}.slick({
+          infinite: false,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          autoplaySpeed: 5000,
+          autoplay: true
+        });
+    {% endif %}
+    
+    
+  </script>
+{% endif %}
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Image Slider",
+    "settings": [
+      {
+        "type": "select",
+        "id": "slide_size",
+        "label": "Slide to show",
+        "default": "3",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "shuffle",
+        "label": "Shuffle"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Image"
+          },
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Image Slider"
+    }]
   }
 {% endschema %}
