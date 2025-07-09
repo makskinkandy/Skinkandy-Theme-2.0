@@ -2116,3 +2116,11 @@
     background: #eb008c !important;
   }
 }
+
+/* Image Slider */
+
+.image-slider {
+  .slick-slide {
+    margin-right: 10px;
+  }
+}
