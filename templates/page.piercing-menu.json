@@ -9,36 +9,6 @@
  */
 {
   "sections": {
-    "rich_text_UJXerC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_YAXyJF": {
-          "type": "heading",
-          "settings": {
-            "title": "SkinKandy {Piercing} {Menu}",
-            "heading_tag": "h1"
-          }
-        },
-        "text_cdGMLF": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>All SkinKandy piercings are performed by certified experts using medical-grade tools & implant-grade jewellery.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_YAXyJF",
-        "text_cdGMLF"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
-      }
-    },
     "columns_block_k4iATy": {
       "type": "columns-block",
       "blocks": {
@@ -153,8 +123,8 @@
       "settings": {
         "dark_mode": false,
         "class": "",
-        "title_tag": "h2",
-        "title": "",
+        "title_tag": "h1",
+        "title": "SkinKandy {Piercing} {Menu}",
         "description": "",
         "button_text": "",
         "button_url": "",
@@ -205,7 +175,6 @@
     }
   },
   "order": [
-    "rich_text_UJXerC",
     "columns_block_k4iATy",
     "pf-fbaf0375",
     "pagefly_section_R3hUQq",
