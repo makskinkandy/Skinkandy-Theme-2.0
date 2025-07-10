@@ -9,33 +9,161 @@
  */
 {
   "sections": {
-    "header_banner_C68L6F": {
-      "type": "header-banner",
+    "rich_text_UJXerC": {
+      "type": "rich-text",
       "blocks": {
-        "image_PkHNMB": {
-          "type": "image",
+        "heading_YAXyJF": {
+          "type": "heading",
           "settings": {
-            "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner.jpg",
-            "banner_url": "",
-            "heading": "",
-            "short_description": "",
-            "button_text": "",
-            "button_url": "",
-            "align_text": "center"
+            "title": "SkinKandy {Piercing} {Menu}",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cdGMLF": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>All SkinKandy piercings are performed by certified experts using medical-grade tools & implant-grade jewellery.</p>"
           }
         }
       },
       "block_order": [
-        "image_PkHNMB"
+        "heading_YAXyJF",
+        "text_cdGMLF"
       ],
-      "disabled": true,
+      "name": "Rich text",
       "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_k4iATy": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_KLpg6b": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/safety_1.png",
+            "video": "",
+            "center-content": false,
+            "title": "Global Leaders in Body Piercing",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>70+ piercings offered. 90+ stores. 2 Countries. One standard: Excellence.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_CnVyHr": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/checkmark-circle-outline_3.png",
+            "video": "",
+            "center-content": false,
+            "title": "Highly Trained Piercers",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Over 10,000 hours of piercing training last year. We don’t just pierce — we <em>perfect</em> it.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_NrfXnR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/map_18.png",
+            "video": "",
+            "center-content": false,
+            "title": "Premium Jewellery for Safer Piercings",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Your jewellery matters. That’s why we only offer high-quality materials to ensure a safe and stylish piercing experience.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_XwJArG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/diamond_1.png",
+            "video": "",
+            "center-content": false,
+            "title": "Strict Hygiene & Safety",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>100% of our piercers are certified in infection control. Safe. Sterile. Always certified. Every single time.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_KLpg6b",
+        "text_block_CnVyHr",
+        "text_block_NrfXnR",
+        "text_block_XwJArG"
+      ],
+      "custom_css": [
+        "div {text-align: center;}",
+        "img {max-width:100px;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
         "title": "",
-        "banner_size": "short-banner",
-        "small_overlay": false,
-        "shuffle": false
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 4,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "max_width": 1704
       }
     },
     "pf-fbaf0375": {
@@ -45,7 +173,7 @@
     "pagefly_section_R3hUQq": {
       "type": "pagefly-section",
       "settings": {
-        "section_id": "pf-44d23272"
+        "section_id": "pf-26a773ab"
       }
     },
     "pagefly_section_pDp6A7": {
@@ -77,7 +205,8 @@
     }
   },
   "order": [
-    "header_banner_C68L6F",
+    "rich_text_UJXerC",
+    "columns_block_k4iATy",
     "pf-fbaf0375",
     "pagefly_section_R3hUQq",
     "pagefly_section_pDp6A7",
