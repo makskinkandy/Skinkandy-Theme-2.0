@@ -126,26 +126,50 @@
         "title_tag": "h1",
         "title": "SkinKandy {Piercing} {Menu}",
         "description": "",
-        "button_text": "",
-        "button_url": "",
+        "button_text": "BOOK NOW",
+        "button_url": "https://support.skinkandy.com/s/booking-form",
         "count": 4,
         "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
-        "max_width": 996,
-        "mobile_slider": true
+        "mobile_slider": true,
+        "max_width": 996
+      }
+    },
+    "rich_text_cNGKt4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_VFYwwe": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Same day booking? <a href=\"tel:1300129991\">Call us 1300 129 991</a></p>"
+          }
+        },
+        "heading_ezGAQG": {
+          "type": "heading",
+          "settings": {
+            "title": "PIERCING {OPTIONS} AND {PRICES}",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "text_VFYwwe",
+        "heading_ezGAQG"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "pf-fbaf0375": {
       "type": "pf-fbaf0375",
       "settings": {}
-    },
-    "pagefly_section_R3hUQq": {
-      "type": "pagefly-section",
-      "settings": {
-        "section_id": "pf-26a773ab"
-      }
     },
     "pagefly_section_pDp6A7": {
       "type": "pagefly-section",
@@ -177,8 +201,8 @@
   },
   "order": [
     "columns_block_k4iATy",
+    "rich_text_cNGKt4",
     "pf-fbaf0375",
-    "pagefly_section_R3hUQq",
     "pagefly_section_pDp6A7",
     "pagefly_section_8x8DUG",
     "pagefly_section_eWgGe3",
