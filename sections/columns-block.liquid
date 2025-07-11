@@ -161,7 +161,7 @@
     function toggleSlickSlider() {
       if (window.innerWidth < breakpoint) {
         if (!slickInitialized) {
-          slider.slick({
+          slider{{ section.index }}.slick({
             dots: true,
             arrows: false,
             slidesToShow: 1,
@@ -172,7 +172,7 @@
         }
       } else {
         if (slickInitialized) {
-          slider.slick('unslick');
+          slider{{ section.index }}.slick('unslick');
           slickInitialized = false;
         }
       }
