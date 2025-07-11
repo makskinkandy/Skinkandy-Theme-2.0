@@ -1092,7 +1092,7 @@
   h3 {
     font-size: 34px;
     margin-bottom: 45px;
-    font-weight: 600;
+    font-weight: 700;
     @media screen and (max-width: 560px) {
       font-size: 20px;
     }
@@ -1107,7 +1107,7 @@
     }
     .highlight-text {
       color: var(--colorBtnPrimaryLight);
-      font-weight: 600;
+      font-weight: 700;
     }
   }
   .h3.large {
