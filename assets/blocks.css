@@ -1298,6 +1298,9 @@
           max-width: 214px;
           float: left;
         }
+        .rte-setting>p:last-child {
+            margin-bottom: 0;
+        }
       }
       .slick-dots li button:before {
           font-size: 14px;
