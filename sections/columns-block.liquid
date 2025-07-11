@@ -157,16 +157,21 @@
     let slider{{ section.index }} = $('.columns-block--{{ section.id }} .grid-scroll');
     
         slider{{ section.index }}.slick({
-          arrows: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
           dots: true,
-          autoplaySpeed: 5000,
-          autoplay: true,
-          mobileFirst: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
           responsive: [
             {
-              breakpoint: 981,
+              breakpoint: 981, 
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 9999,
               settings: "unslick"
             }
           ]
