@@ -1301,6 +1301,11 @@
       .slick-dots li button:before {
           font-size: 14px;
       }
+      .btn--last {
+        @media screen and (max-width: 980px) {
+          margin-top: 30px;
+        }
+      }
     }
   }
   .grid-scroll:has(>.center-content) {
