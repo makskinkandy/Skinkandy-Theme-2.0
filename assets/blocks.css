@@ -1289,7 +1289,9 @@
       }
     }
     &.mobile-slider--true {
-      display: block;
+      @media screen and (max-width: 980px) {
+        display: block;
+      }
     }
   }
   .grid-scroll:has(>.center-content) {
