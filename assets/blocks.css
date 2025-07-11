@@ -1288,6 +1288,9 @@
         }
       }
     }
+    &.mobile-slider--true {
+      display: block;
+    }
   }
   .grid-scroll:has(>.center-content) {
     display: flex;
