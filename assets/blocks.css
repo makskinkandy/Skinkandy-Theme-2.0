@@ -1292,7 +1292,7 @@
       @media screen and (max-width: 980px) {
         display: block;
       }
-      &.grid__item {
+      .grid__item {
         @media screen and (max-width: 980px) {
           max-width: 214px;
         }
