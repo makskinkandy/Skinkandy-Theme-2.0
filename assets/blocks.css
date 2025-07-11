@@ -1291,6 +1291,7 @@
     &.mobile-slider--true {
       @media screen and (max-width: 980px) {
         display: block;
+        margin-bottom: 65px;
       }
       .grid__item {
         @media screen and (max-width: 980px) {
@@ -1300,11 +1301,6 @@
       }
       .slick-dots li button:before {
           font-size: 14px;
-      }
-      .btn--last {
-        @media screen and (max-width: 980px) {
-          margin-top: 30px;
-        }
       }
     }
   }
