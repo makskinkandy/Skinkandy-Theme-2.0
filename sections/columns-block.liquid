@@ -1,4 +1,4 @@
-<div class="columns-block {{ section.settings.class | escape }} dark-mode--{{ section.settings.dark_mode }} bottom-space--{{ section.settings.bottom_space }} hide-border__{{ section.settings.hide_line }} disable-grid__{{ section.settings.disable_grid }}">
+<div class="columns-block columns-block--{{ section.id }} {{ section.settings.class | escape }} dark-mode--{{ section.settings.dark_mode }} bottom-space--{{ section.settings.bottom_space }} hide-border__{{ section.settings.hide_line }} disable-grid__{{ section.settings.disable_grid }}">
   <div class="page-width " style="max-width: {{ section.settings.max_width }}px">
     {%- if section.settings.title != blank -%}
 
@@ -152,7 +152,27 @@
   </div>
 
 </div>
-
+{% if section.settings.mobile_slider %}
+  <script>
+    let slider{{ section.index }} = $('.columns-block--{{ section.id }} .grid-scroll');
+    
+        slider{{ section.index }}.slick({
+          arrows: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: true,
+          autoplaySpeed: 5000,
+          autoplay: true,
+          mobileFirst: true
+          responsive: [
+            {
+              breakpoint: 981,
+              settings: "unslick"
+            }
+          ]
+        });
+  </script>
+{% endif %}
 {% schema %}
   {
     "name": "Columns Block",
