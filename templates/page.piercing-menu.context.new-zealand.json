@@ -12,5 +12,16 @@
   "context": {
     "market": "new-zealand"
   },
-  "sections": {}
+  "sections": {
+    "rich_text_cNGKt4": {
+      "settings": {},
+      "blocks": {
+        "text_VFYwwe": {
+          "settings": {
+            "text": "<p>Same day booking? <a href=\"tel:0800161005\">Call us 0800 161 005</a></p>"
+          }
+        }
+      }
+    }
+  }
 }
