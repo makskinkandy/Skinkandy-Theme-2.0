@@ -155,23 +155,35 @@
 {% if section.settings.mobile_slider %}
   <script>
     let slider{{ section.index }} = $('.columns-block--{{ section.id }} .grid-scroll');
-    
-        slider{{ section.index }}.slick({
-          arrows: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          autoplaySpeed: 5000,
-          autoplay: true,
-          mobileFirst: true,
-          responsive: [
-            {
-              breakpoint: 981,
-              settings: "unslick"
-            }
-          ]
-        });
-  </script>
+    var slickInitialized = false;
+    var breakpoint = 981;
+  
+    function toggleSlickSlider() {
+      if (window.innerWidth < breakpoint) {
+        if (!slickInitialized) {
+          slider.slick({
+            dots: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true
+          });
+          slickInitialized = true;
+        }
+      } else {
+        if (slickInitialized) {
+          slider.slick('unslick');
+          slickInitialized = false;
+        }
+      }
+    }
+  
+    // Run after DOM is loaded
+    window.addEventListener('DOMContentLoaded', function () {
+      toggleSlickSlider();
+      window.addEventListener('resize', toggleSlickSlider);
+    });
+</script>
 {% endif %}
 {% schema %}
   {
