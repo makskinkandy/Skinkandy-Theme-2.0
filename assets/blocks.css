@@ -1298,6 +1298,9 @@
           float: left;
         }
       }
+      .slick-dots li button:before {
+          font-size: 14px;
+      }
     }
   }
   .grid-scroll:has(>.center-content) {
