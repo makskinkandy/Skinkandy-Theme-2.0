@@ -1295,7 +1295,7 @@
       .grid__item {
         @media screen and (max-width: 980px) {
           max-width: 214px;
-          float: inherit;
+          float: left;
         }
       }
     }
