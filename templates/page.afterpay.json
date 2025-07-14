@@ -95,10 +95,10 @@
     }
   },
   "order": [
+    "login_redirect_A8CDFb",
     "main",
     "header_banner_M8TEqU",
     "rich_text_wjmgJB",
-    "customer_sign_up_xy4QdQ",
-    "login_redirect_A8CDFb"
+    "customer_sign_up_xy4QdQ"
   ]
 }
