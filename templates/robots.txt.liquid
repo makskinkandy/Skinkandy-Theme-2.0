@@ -6,7 +6,6 @@
   {%- endfor -%}
 
   {%- if group.user_agent.value == '*' -%}
-{{ 'Disallow: /*?q=*' }}
 {{ 'Disallow: /collections/shop?q=*' }}
 {{ 'Disallow: /pages/homepage-dev' }}
 {{ 'Disallow: /pages/faq-dev' }}
