@@ -236,7 +236,7 @@
       "name": "Login Redirect",
       "settings": {
         "type": "not-login",
-        "redirect-url": "https://skinkandy.com/pages/homepage-dev"
+        "redirect-url": "shopify://pages/homepage-dev"
       }
     }
   },
