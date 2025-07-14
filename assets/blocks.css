@@ -2184,12 +2184,6 @@
     text-align: center;
     margin-bottom: 25px;
   }
-
-  a {
-    color: #FFF;
-    text-decoration: underline;
-  }
-  
   .customer-form__wrapper {
     max-width: 600px;
     margin-inline: auto;
@@ -2199,6 +2193,10 @@
     background-size: cover;
     color: #FFF;
     margin-bottom: 40px;
+    a {
+      color: #FFF;
+      text-decoration: underline;
+    }
   }
   input,
   select {
