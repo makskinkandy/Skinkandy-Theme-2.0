@@ -1,6 +1,8 @@
 {% if customer and section.settings.type == 'login' %}
   <script>
-    window.location.href = "/account/login?return_url={{ section.settings.redirect-url | url_encode }}";
+    if (window.location.search.indexOf('preview_theme_id') === -1) {
+      window.location.href = "/account/login?return_url={{ section.settings.redirect-url | url_encode }}";
+    }
   </script>
 {% endif %}
 
