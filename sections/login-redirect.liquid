@@ -2,7 +2,7 @@
   {% if section.settings.type == 'login' %}
     <script>
       if (window.location.search.indexOf('preview_theme_id') === -1) {
-        window.location.href = "/{{ section.settings.redirect-url }}";
+        window.location.assign("/{{ section.settings.redirect-url }}");
       }
     </script>
   {% endif %}
@@ -10,7 +10,7 @@
   {% if section.settings.type == 'not-login' %}
     <script>
       if (window.location.search.indexOf('preview_theme_id') === -1) {
-        window.location.href = "/{{ section.settings.redirect-url }}";
+        window.location.assign("/{{ section.settings.redirect-url }}");
       }
     </script>
   {% endif %}
