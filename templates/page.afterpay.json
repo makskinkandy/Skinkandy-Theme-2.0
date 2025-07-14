@@ -84,12 +84,21 @@
         "title": "Join Now",
         "redirect-url": "shopify://collections/afterpay-sale"
       }
+    },
+    "login_redirect_A8CDFb": {
+      "type": "login-redirect",
+      "name": "Login Redirect",
+      "settings": {
+        "type": "login",
+        "redirect-url": "shopify://collections/afterpay-sale"
+      }
     }
   },
   "order": [
     "main",
     "header_banner_M8TEqU",
     "rich_text_wjmgJB",
-    "customer_sign_up_xy4QdQ"
+    "customer_sign_up_xy4QdQ",
+    "login_redirect_A8CDFb"
   ]
 }
