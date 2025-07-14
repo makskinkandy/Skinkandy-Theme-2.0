@@ -2184,6 +2184,13 @@
     text-align: center;
     margin-bottom: 25px;
   }
+  .customer-form__already {
+    text-align: center;
+    margin-bottom: 25px;
+    a {
+      font-weight: 700;
+    }
+  }
   .customer-form__wrapper {
     max-width: 600px;
     margin-inline: auto;
