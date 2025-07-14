@@ -230,6 +230,14 @@
     "pagefly-collection-section": {
       "type": "pagefly-collection-section",
       "settings": {}
+    },
+    "login_redirect_NpECkc": {
+      "type": "login-redirect",
+      "name": "Login Redirect",
+      "settings": {
+        "type": "not-login",
+        "redirect-url": "https://skinkandy.com/pages/homepage-dev"
+      }
     }
   },
   "order": [
@@ -239,6 +247,7 @@
     "header_banner_P494Dk",
     "main-collection",
     "ss_recommendations_bGwMqW",
-    "pagefly-collection-section"
+    "pagefly-collection-section",
+    "login_redirect_NpECkc"
   ]
 }
