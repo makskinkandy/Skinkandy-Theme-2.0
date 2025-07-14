@@ -2177,3 +2177,55 @@
     font-size: 14px;
   }
 }
+
+/* Customer Form */
+.customer-form {
+  .customer-form__wrapper {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  input {
+    width: 100%;
+    display: block;
+  }
+  .form-field {
+    margin-bottom: 15px;
+    &.half {
+      width: calc(50% - 5px);
+    }
+    &.checkbox {
+      display: flex;
+      align-items: start;
+    }
+
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 52px; /* Set the initial width */
+      height: 20px; /* Set the initial height */
+      background-color: #f0f0f0; /* Default background color */
+      border: 1px solid #ccc; /* Default border */
+      border-radius: 3px; /* Rounded corners */
+      cursor: pointer; /* Change cursor to pointer */
+      position: relative; /* Needed for pseudo-elements */
+    }
+    
+    input[type="checkbox"]:checked {
+      background-color: #4CAF50; /* Checked background color */
+      border: 1px solid #4CAF50; /* Checked border color */
+    }
+    
+    input[type="checkbox"]:checked::after {
+      content: "";
+      position: absolute;
+      left: 6px; /* Adjust position of checkmark */
+      top: 2px; /* Adjust position of checkmark */
+      width: 6px;
+      height: 12px;
+      border: solid white; /* Checkmark color */
+      border-width: 0 3px 3px 0; /* Checkmark shape */
+      transform: rotate(45deg); /* Rotate checkmark */
+    }
+  }
+}
