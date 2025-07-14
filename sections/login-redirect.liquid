@@ -6,7 +6,7 @@
 
 {% if customer == nil and section.settings.type == 'not-login' %}
   <script>
-    window.location.href = "/account/login?return_url={{ request.path | url_encode }}";
+    window.location.href = "{{ section.settings.redirect-url | url_encode }}";
   </script>
 {% endif %}
 
