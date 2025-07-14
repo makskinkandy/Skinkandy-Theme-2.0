@@ -2212,8 +2212,8 @@
     }
     
     input[type="checkbox"]:checked {
-      background-color: #4CAF50; /* Checked background color */
-      border: 1px solid #4CAF50; /* Checked border color */
+      background-color: #eb008c; /* Checked background color */
+      border: 1px solid #eb008c; /* Checked border color */
     }
     
     input[type="checkbox"]:checked::after {
