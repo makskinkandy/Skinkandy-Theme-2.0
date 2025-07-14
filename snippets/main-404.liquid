@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ '404-page.css' | asset_url }}">
+<div class="page-width page-content">
+  <div class="container">
+    <div class="page-404__wrapper grid">
+      <div class="page-404__left">
+        <h1 class="section-header__title">OOPS,<br> NOTHING HERE...</h1>
+        <div class="rte text-spacing">
+          <p class="description">Error 404 page not found. The page you we looking for is lost in space.</p>
+        </div>
+        <div class="btn__wrapper">
+          <a href="javascript:void(0)" id="backButton" class="btn btn--grey"><img src="https://cdn.shopify.com/s/files/1/0555/7508/5194/files/Left-arrow.png" alt="arrow icon"></a>
+            <a href="https://support.skinkandy.com/s/booking-form" class="btn btn--pink">Book Now</a>
+            <a href="https://skinkandy.com/pages/skinkandy-piercing-menu?_gl=1*13g5cmq*_gcl_au*MzQ0ODkyOTY1LjE3NTE4NzQwMDc." class="btn btn--black">Piercing Menu</a>
+        </div>
+      </div>
+      <div class="page-404__right">
+          <img src="//skinkandy-sandboxv2.myshopify.com/cdn/shop/files/Black_1.jpg?v=1751852370" alt="OOPS,&lt;br&gt; NOTHING HERE..." class="page-404__right-image">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('backButton').addEventListener('click', function() {
+    history.back();
+  });
+</script>
