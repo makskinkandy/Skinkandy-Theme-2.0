@@ -1,0 +1,20 @@
+<script>
+  const spammyTerms = [
+    "hack",
+    "kungx.cc",
+    "snapchat",
+    "api hack"
+  ];
+
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+
+  if (q) {
+    for (let term of spammyTerms) {
+      if (q.toLowerCase().includes(term)) {
+        window.location.href = "/404"; // or another safe page
+        break;
+      }
+    }
+  }
+</script>
