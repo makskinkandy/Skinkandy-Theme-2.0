@@ -2180,6 +2180,10 @@
 
 /* Customer Form */
 .customer-form {
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
   .customer-form__wrapper {
     max-width: 600px;
     margin-inline: auto;
