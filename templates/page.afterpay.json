@@ -82,7 +82,7 @@
       "name": "Customer Form",
       "settings": {
         "title": "Join Now",
-        "redirect-url": "/"
+        "redirect-url": "shopify://collections/afterpay-sale"
       }
     }
   },
