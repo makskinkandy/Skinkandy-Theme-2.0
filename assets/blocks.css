@@ -2187,6 +2187,7 @@
 
   a {
     color: #FFF;
+    text-decoration: underline;
   }
   
   .customer-form__wrapper {
