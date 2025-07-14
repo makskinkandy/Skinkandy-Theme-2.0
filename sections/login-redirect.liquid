@@ -1,18 +1,16 @@
 {% if customer and section.settings.type == 'login' %}
   <script>
-    if (window.location.search.indexOf('preview_theme_id') === -1) {
-      window.location.href = "/account/login?return_url={{ section.settings.redirect-url | url_encode }}";
-    }
-  </script>
-{% endif %}
-
-{% if customer == nil and section.settings.type == 'not-login' %}
-  <script>
-    <script>
       if (window.location.search.indexOf('preview_theme_id') === -1) {
         window.location.href = "{{ section.settings.redirect-url | url_encode }}";
       }
     </script>
+{% endif %}
+
+{% if customer == nil and section.settings.type == 'not-login' %}
+  <script>
+    if (window.location.search.indexOf('preview_theme_id') === -1) {
+      window.location.href = "/account/login?return_url={{ section.settings.redirect-url | url_encode }}";
+    }
   </script>
 {% endif %}
 
