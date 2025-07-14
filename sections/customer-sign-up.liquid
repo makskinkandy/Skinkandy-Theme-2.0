@@ -1,6 +1,9 @@
 {% assign website_path = request.locale.root_url | remove_first: '/' %}
 <div class="page-width customer-form">
   <h2>{{ section.settings.title }}</h2>
+  <div class="customer-form__already">
+    Already signed up? <a href="/customer_authentication/login?return_to={{ "/" | url_encode }}">Login</a> now and enjoy your KandyClub membership.
+  </div>
   <div class="customer-form__wrapper" style="background-image: url('//skinkandy.com/cdn/shop/files/Rectangle-14.jpg?v=1725233469')">
     <div class="form-column__embed section-form">
         <div class="embed-form">
