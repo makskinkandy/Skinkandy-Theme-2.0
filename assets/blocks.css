@@ -2194,7 +2194,8 @@
     color: #FFF;
     margin-bottom: 40px;
   }
-  input {
+  input,
+  select {
     width: 100%;
     display: block;
   }
