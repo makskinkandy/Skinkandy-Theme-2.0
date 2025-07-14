@@ -1,7 +1,7 @@
 {% assign website_path = request.locale.root_url | remove_first: '/' %}
 <div class="page-width customer-form">
+  <h2>{{ section.settings.title }}</h2>
   <div class="customer-form__wrapper" style="background-image: url('//skinkandy.com/cdn/shop/files/Rectangle-14.jpg?v=1725233469')">
-    <h2>{{ section.settings.title }}</h2>
     <div class="form-column__embed section-form">
         <div class="embed-form">
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D6g000005ioEV" method="POST" class="custom-form kandy-club-form">
@@ -80,7 +80,7 @@
               <p class="terms-message">By ticking "Yes", I confirm that I have read and accepted the <a href="/pages/kandy-club-loyalty-terms" target="_blank">Kandy Club Terms &amp; Conditions</a> and confirm that I agree to receive marketing communications such as promotions, offers and updates.</p>
             </div>
             <div class="form-field" style="--width: 50; display: flex">
-              <input type="submit" name="submit" class="btn btn--full btn--submit" disabled="">
+              <input type="submit" name="submit" value="Join Now" class="btn btn--full btn--submit" disabled="">
             </div>
           </form>
         </div>
