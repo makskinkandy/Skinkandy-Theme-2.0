@@ -1,6 +1,31 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Login Redirect",
+  "tag": "section",
+  "class": "login-redirect",
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Title",
+      "default": "login",
+      "options": [
+        {
+          "value": "login",
+          "label": "Login"
+        },
+        {
+          "value": "not-login",
+          "label": "Not Login"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Login Redirect",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
