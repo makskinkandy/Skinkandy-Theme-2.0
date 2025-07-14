@@ -81,7 +81,8 @@
       "type": "customer-sign-up",
       "name": "Customer Form",
       "settings": {
-        "title": "Join Now"
+        "title": "Join Now",
+        "redirect-url": "/"
       }
     }
   },
