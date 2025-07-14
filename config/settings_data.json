@@ -847,9 +847,14 @@
           "n9_embed_js": "/* JS Code */"
         }
       },
-      "5017882195547572635": {
-        "type": "shopify://apps/sc-easy-redirects/blocks/app/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+      "8159273284873997660": {
+        "type": "shopify://apps/redirect-hero/blocks/live-redirect/303f77a4-ad21-4d11-82f8-47eb94136aff",
         "disabled": false,
+        "settings": {}
+      },
+      "9624546937244602370": {
+        "type": "shopify://apps/redirect-hero/blocks/app/303f77a4-ad21-4d11-82f8-47eb94136aff",
+        "disabled": true,
         "settings": {}
       }
     }
