@@ -14,13 +14,26 @@
     | split: '&'
   %}
 
+{% assign show_fake_404 = false %}
+{% assign block_keywords = 'hack,snapchat,kungx.cc' | split: ',' %}
+
 {% for param in pageParams %}
   {% if param contains 'key=' %}
-  {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
+    {% capture pagePassword %}{{ param | split: '=' | last }}{% endcapture %}
   {% endif %}
+
+  {% for keyword in block_keywords %}
+    {% if param contains keyword %}
+      {% assign show_fake_404 = true %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 
-{% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
+{% if show_fake_404 %}
+  {% include 'main-404' %}
+  <meta name="robots" content="noindex">
+{% else %}
+  {% if collection.metafields.custom.password == empty or collection.metafields.custom.password == pagePassword %}
   <div
     id="CollectionAjaxResult"
     class="collection-content"
@@ -189,6 +202,9 @@
     }
   </style>
 {% endif %}
+{% endif %}
+
+
 
 {% schema %}
 {
