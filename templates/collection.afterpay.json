@@ -26,6 +26,7 @@
       "block_order": [
         "image_3J97NB"
       ],
+      "disabled": true,
       "name": "Ads Block",
       "settings": {
         "title": ""
@@ -103,6 +104,7 @@
         "image_6DDFGL",
         "image_f3wHn9"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-showcase {padding-top: 0; margin-bottom: 55px;}"
       ],
@@ -127,6 +129,35 @@
         "class": "",
         "bg_color": "#eec9d0",
         "height": 250
+      }
+    },
+    "header_banner_P494Dk": {
+      "type": "header-banner",
+      "blocks": {
+        "image_NUVyEX": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Afterpay_-_Mobile.jpg",
+            "image": "shopify://shop_images/Afterpay_-_Desktop.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_NUVyEX"
+      ],
+      "name": "Hero Banner Slider",
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
       }
     },
     "main-collection": {
@@ -205,6 +236,7 @@
     "ads_block_iXnWyt",
     "collection_showcase_HVDztJ",
     "collection-header",
+    "header_banner_P494Dk",
     "main-collection",
     "ss_recommendations_bGwMqW",
     "pagefly-collection-section"
