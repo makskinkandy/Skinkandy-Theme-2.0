@@ -4,6 +4,12 @@
   </script>
 {% endif %}
 
+{% if customer == nil and section.settings.type == 'not-login' %}
+  <script>
+    window.location.href = "/account/login?return_url={{ request.path | url_encode }}";
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "Login Redirect",
