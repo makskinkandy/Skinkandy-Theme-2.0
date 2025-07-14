@@ -2,7 +2,7 @@
 <div class="page-width customer-form">
   <h2>{{ section.settings.title }}</h2>
   <div class="customer-form__already">
-    Already signed up? <a href="/customer_authentication/login?return_to={{ "/" | url_encode }}">Login</a> now and enjoy your KandyClub membership.
+    Already signed up? <a href="/customer_authentication/login?return_to={{ section.settings.redirect-url | url_encode }}">Login</a> now and enjoy your KandyClub membership.
   </div>
   <div class="customer-form__wrapper" style="background-image: url('//skinkandy.com/cdn/shop/files/Rectangle-14.jpg?v=1725233469')">
     <div class="form-column__embed section-form">
@@ -100,6 +100,11 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "redirect-url",
+      "label": "Signing redirect"
     }
   ],
   "presets": [
