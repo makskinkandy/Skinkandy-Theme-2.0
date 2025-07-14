@@ -2220,6 +2220,7 @@
       border-radius: 3px; /* Rounded corners */
       cursor: pointer; /* Change cursor to pointer */
       position: relative; /* Needed for pseudo-elements */
+      zoom: 1.8;
     }
     
     input[type="checkbox"]:checked {
