@@ -2184,6 +2184,11 @@
     text-align: center;
     margin-bottom: 25px;
   }
+
+  a {
+    color: #FFF;
+  }
+  
   .customer-form__wrapper {
     max-width: 600px;
     margin-inline: auto;
