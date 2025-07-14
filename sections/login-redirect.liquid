@@ -1,3 +1,9 @@
+{% if customer and section.settings.type == 'login' %}
+  <script>
+    window.location.href = "/account/login?return_url={{ section.settings.redirect-url | url_encode }}";
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "Login Redirect",
@@ -19,6 +25,11 @@
           "label": "Not Login"
         }
       ]
+    },
+    {
+      "type": "text",
+      "id": "redirect-url",
+      "label": "Redirect URL"
     }
   ],
   "presets": [
