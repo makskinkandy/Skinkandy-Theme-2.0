@@ -92,7 +92,7 @@
     "share_twitter": false,
     "favicon": "shopify://shop_images/sk_logo_footer.png",
     "search_type": "product,article,page,collection",
-    "show_breadcrumbs": false,
+    "show_breadcrumbs": true,
     "show_breadcrumbs_collection_link": true,
     "disable_animations": true,
     "app_wk_enabled": true,
@@ -846,16 +846,6 @@
           "n9_embed_css": "/* CSS Rules */",
           "n9_embed_js": "/* JS Code */"
         }
-      },
-      "9624546937244602370": {
-        "type": "shopify://apps/redirect-hero/blocks/app/303f77a4-ad21-4d11-82f8-47eb94136aff",
-        "disabled": false,
-        "settings": {}
-      },
-      "8159273284873997660": {
-        "type": "shopify://apps/redirect-hero/blocks/live-redirect/303f77a4-ad21-4d11-82f8-47eb94136aff",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
