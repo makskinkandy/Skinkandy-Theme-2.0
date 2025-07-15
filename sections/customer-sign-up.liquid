@@ -9,7 +9,7 @@
         <div class="embed-form">
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D6g000005ioEV" method="POST" class="custom-form kandy-club-form">
             <input type="hidden" name="oid" value="00D6g000005ioEV">
-            <input type="hidden" name="retURL" value="https://skinkandy.com/pages/welcome-to-the-kandyclub-skinkandy-loyalty-program" class="success-url">
+            <input type="hidden" name="retURL" id="returnURL" value="https://skinkandy.com/pages/welcome-to-the-kandyclub-skinkandy-loyalty-program?kc=" class="success-url">
           
             <div class="form-field" style="--width: 50;">
               <label for="first_name">First Name <span class="required">*</span></label>
@@ -89,6 +89,16 @@
       </div>
   </div>
 </div>
+
+<script>
+  const inputField = document.getElementById('email');
+  const outputField = document.getElementById('returnURL');
+  const defaultValue = outputField.value;
+
+  inputField.addEventListener('input', () => {
+    outputField.value = defaultValue + inputField.value;
+  });
+</script>
 
 {% schema %}
 {
