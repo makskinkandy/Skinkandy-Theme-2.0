@@ -115,8 +115,8 @@
     "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
     "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
     "fst_message_success": "<p>Free express shipping</p>",
-    "ss_enable": true,
-    "ss_search_only": true,
+    "ss_enable": false,
+    "ss_search_only": false,
     "ss_collection_loading_text": "<p>Content loading...</p>",
     "enable_sticky_footer_banner": false,
     "sticky_footer_banner_bg_color": "#e8e8e8",
@@ -180,8 +180,6 @@
           "c0903157-a773-474f-84be-01032fac0f7c": {
             "type": "logo",
             "settings": {
-              "logo": "shopify://shop_images/sk_logo_main.png",
-              "logo_mobile": "shopify://shop_images/sk_logo_main.png",
               "desktop_logo_width": 180,
               "mobile_logo_width": 150
             }
@@ -215,8 +213,8 @@
           "e9c59e14-cd9c-485a-8447-d2a9d70140bb"
         ],
         "settings": {
-          "main_menu_link_list": "new-menu-1",
-          "mobile_menu_link_list": "new-menu-1",
+          "main_menu_link_list": "",
+          "mobile_menu_link_list": "",
           "main_menu_alignment": "left",
           "header_style": "sticky",
           "sticky_index": false,
