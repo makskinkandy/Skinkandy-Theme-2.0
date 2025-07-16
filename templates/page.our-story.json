@@ -48,11 +48,14 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": true,
+            "short-image": false,
+            "flip-image-enable": false,
             "image": "shopify://shop_images/SKFX2-0_245_1.jpg",
             "video": "",
             "center-content": true,
             "title": "",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "",
             "text_size": "small",
@@ -69,10 +72,13 @@
             "fullwidth-image": false,
             "fullheight-image": false,
             "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
             "video": "",
             "center-content": false,
             "title": "WE ARE SKINKANDY. THE EXPERTS IN PIERCING. ",
             "title_size": "large",
+            "break_tag": false,
             "title_tag": "h1",
             "text": "<p>SkinKandy is the only place for piercings only.</p><p>With expert piercers, quality jewellery, and specialty locations—we help you make your mark.</p><p>Our story starts back in 2010. Piercings were becoming more and more mainstream, but premium piercing practices were pretty much impossible to find.</p><p>We invested in:</p><ul><li>Expert piercing training</li><li>Specially designed piercing spaces</li><li>innovative, fashion-first jewellery</li></ul><p>Fast forward: we’ve got 80+ stores across Australia and New Zealand, all operated by expert piercers.</p><p>While we’re experts in piercing, our real mission is self expression. We bring beauty and craftsmanship to body art, so you can feel free to be.</p>",
             "text_size": "small",
@@ -89,12 +95,17 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
+        "button_text": "",
+        "button_url": "",
         "count": 2,
         "bottom_space": false,
         "hide_line": false,
         "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
         "max_width": 1704
       }
     },
@@ -202,11 +213,14 @@
             "fullwidth-image": false,
             "fullheight-image": true,
             "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
             "image": "shopify://shop_images/Skin-Kandy-Styled-20-Mar-2025_0004.jpg",
             "video": "",
             "center-content": false,
             "title": "",
             "title_size": "small",
+            "break_tag": false,
             "title_tag": "h3",
             "text": "",
             "text_size": "small",
@@ -223,10 +237,13 @@
             "fullwidth-image": false,
             "fullheight-image": false,
             "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
             "video": "",
             "center-content": true,
             "title": "PREMIUM QUALITY, EVERY TIME. ",
             "title_size": "large",
+            "break_tag": false,
             "title_tag": "h2",
             "text": "<h3><strong>14K Solid Gold</strong></h3><p>A luxurious, tarnish-free option perfect for sensitive skin.</p><p></p><h3><strong>ASTM F136 Implant-Grade Titanium</strong></h3><p>Lightweight, nickel-free, and promotes fast healing. </p><p></p><h3><strong>316L Surgical Steel</strong></h3><p>Strong, durable, and resistant to everyday wear.</p>",
             "text_size": "small",
@@ -243,12 +260,17 @@
       "settings": {
         "dark_mode": false,
         "class": "",
+        "title_tag": "h2",
         "title": "",
         "description": "",
+        "button_text": "",
+        "button_url": "",
         "count": 2,
         "bottom_space": true,
         "hide_line": true,
         "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
         "max_width": 1704
       }
     },
@@ -266,7 +288,7 @@
         "text_content_hBd8ww": {
           "type": "text-content",
           "settings": {
-            "content": "With stores in major shopping centres across Queensland, New South Wales, Victoria, Western Australia, and South Australia—plus expanding locations in New Zealand—SkinKandy is the go-to destination for premium piercings and jewellery. ",
+            "content": "<p>With stores in major shopping centres across Queensland, New South Wales, Victoria, Western Australia, and South Australia—plus expanding locations in New Zealand—SkinKandy is the go-to destination for premium piercings and jewellery. </p>",
             "size": "small"
           }
         },
@@ -281,7 +303,7 @@
         "text_content_7PEC7x": {
           "type": "text-content",
           "settings": {
-            "content": "Your story, your piercing, your style.\nWelcome to SkinKandy.",
+            "content": "<p>Your story, your piercing, your style.\nWelcome to SkinKandy.</p>",
             "size": "large"
           }
         },
@@ -303,7 +325,8 @@
       "settings": {
         "desktop_image": "shopify://shop_images/Model_-_Desktop.png",
         "mobile_image": "shopify://shop_images/Model_-_Mobile.png",
-        "bg_color": "#e9e5ed"
+        "bg_color": "#e9e5ed",
+        "left_image": false
       }
     }
   },
