@@ -1,4 +1,4 @@
-<div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %}">
+i<div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %}">
 
   <div class="custom-faq custom-faq--{{ section.id }}" style="max-width: {{ section.settings.max_width }}px; margin-inline: auto;">
     {% if section.settings.image != blank %}
@@ -29,7 +29,7 @@
                       "name": {{ block.settings.question | json }},
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "{{ block.settings.answer | escape }}"
+                        "text": "{{ block.settings.answer | strip_html }}"
                       }
                     }{% unless forloop.last %},{% endunless %}
                 {% endcase %}
