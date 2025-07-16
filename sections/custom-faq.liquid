@@ -29,7 +29,7 @@
                       "name": {{ block.settings.question | json }},
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": {{ block.settings.answer | json }}
+                        "text": "{{ block.settings.answer | escape }}"
                       }
                     }{% unless forloop.last %},{% endunless %}
                 {% endcase %}
