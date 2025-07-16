@@ -257,6 +257,9 @@
         "text_block_73GAnd",
         "text_block_8kACAi"
       ],
+      "custom_css": [
+        "h3 {font-size: 20px;}"
+      ],
       "settings": {
         "dark_mode": false,
         "class": "",
