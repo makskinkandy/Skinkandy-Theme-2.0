@@ -373,8 +373,8 @@
         "title": "SHOP BY PIERCING",
         "mode": "light",
         "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/shop-all",
         "bottom_border": false,
         "enable_hover": true,
         "get_product_list": false,
@@ -499,6 +499,7 @@
       "block_order": [
         "button_riBJwy"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "center",
