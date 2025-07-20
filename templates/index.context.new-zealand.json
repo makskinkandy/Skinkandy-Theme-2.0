@@ -16,17 +16,38 @@
     "header_banner_MUPtRQ": {
       "custom_css": [],
       "settings": {
-        "banner_size": "default"
+        "banner_size": "small-banner"
       },
       "blocks": {
         "image_PFE9d8": {
           "settings": {
             "image_mobile": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Mobile.jpg",
-            "image": "shopify://shop_images/3800x2560.jpg",
+            "image": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Desktop.jpg",
             "banner_url": "shopify://pages/win-rhythm-vines-festival-package"
           }
+        },
+        "image_jtXjw": {
+          "type": "image",
+          "disabled": false,
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/2_For_80_-_Mobile_Banner_Option_2.jpg",
+            "image": "shopify://shop_images/2_For_80_-_Desktop_Banner_Option_2.jpg",
+            "banner_url": "https://support.skinkandy.com/s/booking-form",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
         }
-      }
+      },
+      "block_order": [
+        "image_DREBap",
+        "image_jtXjw",
+        "image_ng66KH",
+        "image_PFE9d8"
+      ]
     }
   }
 }
