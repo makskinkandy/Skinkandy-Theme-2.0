@@ -41,6 +41,7 @@
       "blocks": {
         "image_DREBap": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Homepage-Charms-and-Chains.jpg",
@@ -53,13 +54,13 @@
             "align_text": "center"
           }
         },
-        "image_PFE9d8": {
+        "image_ng66KH": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage-2.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Homepage_-_1_c2be4149-88cd-424c-9287-d0aae35d6148.jpg",
-            "banner_url": "https://support.skinkandy.com/s/booking-form",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_Travel_Edit_-_July_2025.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_Travel_Edit_-_July_2025.jpg",
+            "banner_url": "shopify://collections/the-travel-edit",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -67,13 +68,13 @@
             "align_text": "center"
           }
         },
-        "image_ng66KH": {
+        "image_PFE9d8": {
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_-_Buy_3.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Homepage_-_Buy_3_b38fdd52-f658-400b-89db-5e606b23d44c.jpg",
-            "banner_url": "shopify://collections/buy-3-get-one-free",
+            "image_mobile": "shopify://shop_images/2_For_80_-_Mobile_Banner_Option_2.jpg",
+            "image": "shopify://shop_images/2_For_80_-_Desktop_Banner_Option_2.jpg",
+            "banner_url": "https://support.skinkandy.com/s/booking-form",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -84,12 +85,12 @@
       },
       "block_order": [
         "image_DREBap",
-        "image_PFE9d8",
-        "image_ng66KH"
+        "image_ng66KH",
+        "image_PFE9d8"
       ],
       "settings": {
         "title": "",
-        "banner_size": "default",
+        "banner_size": "small-banner",
         "small_overlay": true,
         "shuffle": false
       }
@@ -302,6 +303,7 @@
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
+        "mobile_slider": false,
         "max_width": 1704
       }
     },
@@ -476,6 +478,7 @@
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
+        "mobile_slider": false,
         "max_width": 1704
       }
     },
