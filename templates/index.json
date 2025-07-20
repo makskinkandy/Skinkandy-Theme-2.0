@@ -222,6 +222,7 @@
         "text_b6GqnX",
         "button_B6Mjmb"
       ],
+      "disabled": true,
       "custom_css": [
         "h1 {font-weight: 600;}"
       ],
@@ -464,6 +465,7 @@
         "text_block_QQbbtk",
         "text_block_qnPyxt"
       ],
+      "disabled": true,
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
@@ -507,6 +509,7 @@
     },
     "collection_showcase_RnD7cq": {
       "type": "collection-showcase",
+      "disabled": true,
       "settings": {
         "title": "BUY 3 GET THE 4TH FREE",
         "mode": "light",
