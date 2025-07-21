@@ -137,14 +137,8 @@
         padding-bottom: 20px;
       }
       @media screen and (max-width:992px) {
-        height: 645px;
+        height: 725px;
         background-position: center;
-       
-        @media screen and (max-width:992px) {
-        height: 645px;
-        background-position: center;
-        padding-bottom: 20px;
-      }padding-bottom: 20px;
       }
       @media screen and (max-width:767px) {
         height: 465px;
