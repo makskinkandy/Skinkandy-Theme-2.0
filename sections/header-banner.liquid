@@ -49,7 +49,7 @@
                     {% assign srcset = "" %}
                   
                     {% for width in widths %}
-                      {% assign image_url = block.settings.block.settings.image_mobile | image_url: width: width %}
+                      {% assign image_url = block.settings.image_mobile | image_url: width: width %}
                       {% assign srcset = srcset | append: image_url | append: " " | append: width | append: "w" %}
                       {% unless forloop.last %}
                         {% assign srcset = srcset | append: ", " %}
