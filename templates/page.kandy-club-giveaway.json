@@ -50,11 +50,11 @@
     "rich_text_xQYdin": {
       "type": "rich-text",
       "blocks": {
-        "heading_N64Xmd": {
-          "type": "heading",
+        "text_Gk6AFg": {
+          "type": "text",
           "settings": {
-            "title": "{WIN}  Airpod Max Headphones",
-            "heading_tag": "h1"
+            "enlarge_text": true,
+            "text": "<h1>WIN<br/>Airpod Max Headphones </h1>"
           }
         },
         "text_6N4V3M": {
@@ -89,7 +89,7 @@
         }
       },
       "block_order": [
-        "heading_N64Xmd",
+        "text_Gk6AFg",
         "text_6N4V3M",
         "button_TLUiEQ",
         "text_6MN8fY",
