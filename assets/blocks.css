@@ -131,6 +131,11 @@
       .hero-banner__content {
         padding-bottom: 0;
       }
+      @media screen and (max-width:992px) {
+        height: 645px;
+        background-position: center;
+        padding-bottom: 20px;
+      }
       @media screen and (max-width:767px) {
         height: 465px;
         background-position: center;
