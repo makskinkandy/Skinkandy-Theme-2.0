@@ -131,10 +131,20 @@
       .hero-banner__content {
         padding-bottom: 0;
       }
+      @media screen and (max-width:1024px) {
+        height: 925px;
+        background-position: center;
+        padding-bottom: 20px;
+      }
       @media screen and (max-width:992px) {
         height: 645px;
         background-position: center;
+       
+        @media screen and (max-width:992px) {
+        height: 645px;
+        background-position: center;
         padding-bottom: 20px;
+      }padding-bottom: 20px;
       }
       @media screen and (max-width:767px) {
         height: 465px;
