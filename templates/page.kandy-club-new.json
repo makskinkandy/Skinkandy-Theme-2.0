@@ -25,9 +25,9 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_-_Mobile.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_3_1.jpg",
-            "banner_url": "",
+            "image_mobile": "shopify://shop_images/Mobile_Landing_Page_1.2.jpg",
+            "image": "shopify://shop_images/Desktop_Landing_Page_3.jpg",
+            "banner_url": "https://4w8olt6gw2pht3k6-55575085194.shopifypreview.com/pages?preview_key=d18411169708ba1af3852c5c7f3462c9",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -39,7 +39,6 @@
       "block_order": [
         "image_UgYKwL"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "banner_size": "short-banner",
