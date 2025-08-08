@@ -16484,3 +16484,7 @@ button.action.previous.material_outlined-button {
   max-width: fit-content;
   margin-inline: auto;
 }
+
+.section-content__text.expanded span:first-child p {
+    margin-bottom: -10px !important;
+}
