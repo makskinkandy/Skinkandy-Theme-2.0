@@ -1,1 +1,880 @@
-{"current":{"color_body_bg":"#ffffff","color_body_text":"#000000","color_savings_text":"#000000","color_borders":"#cfcfcf","color_button":"#eb008c","color_sale_tag":"#eb008c","color_custom_tag":"#e870a8","color_cart_dot":"#eb008c","color_large_image_bg":"#000000","color_header":"#ffffff","color_header_text":"#000000","color_announcement":"#202020","color_footer":"#000000","color_footer_text":"#ffffff","color_drawer_background":"#ffffff","color_drawer_text":"#000000","color_drawer_border":"#7b7b7b","color_drawer_button":"#eb008c","color_image_overlay":"#e870a8","color_image_overlay_opacity":0,"color_image_overlay_text_shadow":28,"type_header_font_family":"montserrat_n4","type_header_spacing":"0","type_header_line_height":1.2,"type_header_capitalize":false,"type_headers_align_text":true,"type_base_font_family":"montserrat_n4","type_base_spacing":"0","type_base_size":16,"type_base_line_height":1.1,"type_body_align_text":false,"type_navigation_style":"body","type_navigation_size":15,"type_navigation_capitalize":true,"type_product_style":"heading","type_product_capitalize":false,"type_collection_font":"heading","type_collection_size":20,"button_style":"square","icon_weight":"5px","icon_linecaps":"round","product_save_amount":false,"product_save_type":"dollar","size_guide":"shopify:\/\/pages\/piercing-size-guide","product_grid_image_size":"square","product_grid_image_fill":true,"product_hover_image":true,"enable_swatches":true,"swatch_style":"round","enable_product_reviews":false,"enable_product_grid_quick_add":true,"sale_image_1":"shopify:\/\/shop_images\/trans-1px.png","sale_image_2":"shopify:\/\/shop_images\/BUY-3-GET-THE-4TH-FREE-PINK-AND-BLACK.png","sale_tag":"buy-3-free-4","promo_collection":"","custom_badge_img":"shopify:\/\/shop_images\/Promo_Tab.png","infinite_scrolling":false,"collection_grid_style":"overlaid","collection_grid_shape":"square","collection_grid_image":"collection","collection_grid_tint":"#B2B2B2","collection_grid_opacity":20,"collection_grid_gutter":true,"logo":"shopify:\/\/shop_images\/logo_43491a54-b4fd-4481-aeba-791e256ef031.png","cart_type":"drawer","cart_icon":"bag","cart_additional_buttons":false,"cart_terms_conditions_enable":false,"shipping_tax_enabled":false,"continue_shopping_enabled":false,"empty_cart_heading":"Your basket is currently empty","empty_cart":"","empty_cart_link":"shopify:\/\/collections\/shop-all","empty_cart_link_label":"Shop now","kc_cart_text":"Sweeten your cart - KandyClub gets you free shipping!","kc_link_text":"Join Now","kc_link":"shopify:\/\/pages\/kandy-club","social_facebook_link":"https:\/\/www.facebook.com\/skinkandy\/","social_instagram_link":"https:\/\/www.instagram.com\/skinkandy\/","social_tiktok_link":"https:\/\/www.tiktok.com\/@skinkandy","share_twitter":false,"favicon":"shopify:\/\/shop_images\/sk_logo_footer.png","search_type":"product,article,page,collection","show_breadcrumbs":true,"show_breadcrumbs_collection_link":true,"disable_animations":true,"app_wk_enabled":true,"app_wk_login_required":false,"app_wk_icon":"heart","app_wk_col_bg_shape":"circle","app_wk_share_position":"top","app_wk_products_per_row":"4","enable_quick_adds":false,"quick_add_collection":"piercing-aftercare","enable_quick_add_popup":false,"quick_add_popup_product":"piercing-aftercare-mist-spray-neilmed","quick_add_popup_product_variant":"42867622281354","quick_add_popup_bg_image":"shopify:\/\/shop_images\/Marble-background_1.png","quick_add_popup_product_image":"shopify:\/\/shop_images\/transparent-aftercare_1.png","quick_add_popup_title":"<p>Don't forget your<\/p><h2>Aftercare<\/h2>","quick_add_popup_text":"<h2>Did you know?<\/h2><p>Ongoing use of aftercare is essential in keeping your piercings happy and healthy. NeilMed is the must-have aftercare product to cleanse & care for your piercings.<\/p>","fst_step_one":"70","fst_step_one_nz":"100","fst_step_one_label":"Free Shipping","fst_target":"100","fst_target_nz":"125","fst_message_ongoing":"<p>SPEND <strong>[remaining]<\/strong>  MORE FOR FREE SHIPPING<\/p>","fst_message_ongoing_express":"<p>SPEND <strong>[remaining]<\/strong>  MORE FOR FREE EXPRESS SHIPPING<\/p>","fst_message_success":"<p>Free express shipping<\/p>","ss_enable":true,"ss_search_only":true,"ss_collection_loading_text":"<p>Content loading...<\/p>","enable_sticky_footer_banner":false,"sticky_footer_banner_bg_color":"#e8e8e8","sticky_footer_banner_text_color":"#000000","sticky_footer_banner_text":"Gift cards available now","sticky_footer_banner_img":"shopify:\/\/shop_images\/GIFT_CARD_TRANSPARENT_3_1.png","sticky_footer_banner_img_width":150,"sticky_footer_banner_img_2":"shopify:\/\/shop_images\/GIFT_CARD_TRANSPARENT_2_1.png","sticky_footer_banner_img_2_width":150,"sticky_footer_banner_url":"shopify:\/\/collections\/gift-cards","sticky_footer_banner_btn_text":"Shop now","popup_enable":true,"popup_layout":"giveaway","popup_left_image":"shopify:\/\/shop_images\/Airpod_Max_PopUp_gradient.gif","popup_left_image_mobile":"shopify:\/\/shop_images\/Airpod_Max_PopUp_gradient.gif","popup_title":"WIN Airpod Max Headphones","popup_subtitle":"<p>Join our Kandyclub for a chance to win!<br\/>To enter our giveaway, enter your details and join the KandyClub... thats it!<br\/>Once you have joined, you are automatically in the running to WIN!<br\/>Competition ends 3rd of September 2025. The lucky winner will be contacted by the 15th of September 2025.<\/p>","popup_embed_form":"https:\/\/shopifyapi.skinkandyonline.com.au\/create-discount","popup_discount_code":"WELCOMESK10","popup_form_note":"","popup_form_disclaimer":"","popup_delay":"5","popup_source":"Main Popup - KC Giveaway","popup_btn":"JOIN KANDYCLUB NOW","success_left_image":"shopify:\/\/shop_images\/ec95a75aef3047dda267cc73181b3ab8.jpg","success_popup_title":"You\\’re in—Welcome to KandyClub!","sucess_popup_subtitle":"<p>It’s valid for 24 hours, so treat yourself while it lasts. You’ll also get access to exclusive promotions, birthday & anniversary perks, and more. <br\/><br\/>Your 10% off code is:<\/p>","success_popup_button_text":"BOOK NOW","sucess_popup_button":"shopify:\/\/pages\/skinkandy-piercing-menu","sucess_popup_tc":"shopify:\/\/pages\/kc-headphone-giveaway-ts","nz_popup_layout":"bfcm","nz_popup_enable":true,"nz_popup_left_image":"shopify:\/\/shop_images\/KandyClub_-_PopUp_Image_1_6984cc07-420a-469d-89f0-6bf19b5d9f88.jpg","nz_popup_left_image_mobile":"shopify:\/\/shop_images\/KandyClub_-_PopUp_Image_1_2fc83172-182e-4353-98cd-644433e5c205.jpg","nz_popup_title":"Join KandyClub & Get 10% Off","nz_popup_subtitle":"<p>Sign up now and get 10% off your first online jewellery purchase—but don’t wait, your code is valid for 24 hours only. Plus, enjoy exclusive member perks, birthday offers, and access to promos you won’t want to miss. <\/p>","nz_popup_embed_form":"https:\/\/shopifyapi.skinkandyonline.com.au\/create-discount","nz_popup_discount_code":"WELCOMESK10","nz_popup_source":"Main Popup - NZ","nz_success_popup_title":"CONGRATS!","nz_sucess_popup_subtitle":"<h4>YOU ARE NOW IN THE DRAW<\/h4><p>We will contact the winner by phone & email.We do not contact winners via socials.<\/p><p><strong>Welcome to the KandyClub!<\/strong><\/p>","nz_success_popup_button_text":"BOOK NOW","nz_sucess_popup_button":"https:\/\/support.skinkandy.com\/s\/booking-form","nz_sucess_popup_tc":"shopify:\/\/pages\/rhythm-vines-giveaway-terms-condition","enable_top_notification":false,"top-notification-banner":"Shop Mother's Day sales up to 30% off exclusively for KandyClub members  <a href=\"\/collections\/mothers-day\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">SHOP NOW<\/a>","text_color":"#ffffff","bg_color":"#000000","shipping_au":"Free shipping over $70","shipping_nz":"Free shipping over $100","free-gift":["chain-link-ball-dangle-earrings","titanium-hollow-triangle-stud-earrings","huggie-hoop-earrings"],"variant_sku":"9355442040895,9355442040888,9355442041465,9355442041519,9355442042417,9355442042424","checkout_header_image":"shopify:\/\/shop_images\/black-bg.jpg","checkout_logo_image":"shopify:\/\/shop_images\/SK_word_black_bg_94821a0e-7aa6-4e30-a438-ed4b27fd785f.png","checkout_logo_position":"left","checkout_logo_size":"small","checkout_body_background_color":"#ffffff","checkout_sidebar_background_color":"#ffffff","checkout_accent_color":"#e870a8","checkout_button_color":"#e870a8","checkout_error_color":"#eb008c","tag_image":"shopify:\/\/shop_images\/buy2-get-1-free.png","sale_tag_image":"shopify:\/\/shop_images\/SALE.png","sections":{"header":{"type":"header","blocks":{"c0903157-a773-474f-84be-01032fac0f7c":{"type":"logo","settings":{"logo":"shopify:\/\/shop_images\/Group_22_1_1.png","logo_mobile":"shopify:\/\/shop_images\/Group_22_1_1.png","desktop_logo_width":180,"mobile_logo_width":120}},"f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15":{"type":"announcement","settings":{"link_text":"FREE SHIPPING FOR KANDYCLUB MEMBERS. NOT A MEMBER YET? JOIN NOW","link":"shopify:\/\/pages\/kandy-club"}},"31778dc5-bfaa-4e1d-9aa7-7f0971794dee":{"type":"announcement","settings":{"link_text":"FREE EXPRESS SHIPPING ON ORDERS OVER $100","link":""}},"e9c59e14-cd9c-485a-8447-d2a9d70140bb":{"type":"announcement","settings":{"link_text":"AFTERPAY AVAILABLE, BUY NOW PAY LATER","link":""}}},"block_order":["c0903157-a773-474f-84be-01032fac0f7c","f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15","31778dc5-bfaa-4e1d-9aa7-7f0971794dee","e9c59e14-cd9c-485a-8447-d2a9d70140bb"],"settings":{"main_menu_link_list":"new-menu-1","mobile_menu_link_list":"new-menu-1","nz_main_menu_link_list":"megamenu-2-1-nz","nz_mobile_menu_link_list":"megamenu-2-1-nz","main_menu_alignment":"left","header_style":"sticky","sticky_index":false,"sticky_collection":false,"kandy_klub_link":"shopify:\/\/pages\/kandy-club","store_locator":"shopify:\/\/pages\/store-locations","wishlist_link":"shopify:\/\/pages\/wishlist","announcement_compact":true,"announcement_above_header":true,"left_link":"shopify:\/\/policies\/refund-policy","left_label":"returns & refunds","call_us_link_au":"tel:1300129991","call_us_label_au":"1300 129 991","call_us_link_nz":"tel:0800161005","call_us_label_nz":"0800 161 005","about_link":"shopify:\/\/pages\/our-story","about_label":"","about_nav":"","find_link":"shopify:\/\/pages\/store-locations","find_label":"find a store","country":"country","book_now_link":"https:\/\/bookings.skinkandy.com\/","book_now_label":"Book a Piercing"}},"footer-promotions":{"type":"footer-promotions","settings":{"hide_homepage":false,"image_size":"wide"}},"footer":{"type":"footer","blocks":{"78518a5a-082a-42fc-94d3-bf3430935e5d":{"type":"logo_social","settings":{"logo":"shopify:\/\/shop_images\/Group_22_2.png"}},"893cd2b2-00f2-450e-af4a-7d15023f6fd5":{"type":"menu","settings":{"show_footer_title":false,"menu":"footer"}}},"block_order":["78518a5a-082a-42fc-94d3-bf3430935e5d","893cd2b2-00f2-450e-af4a-7d15023f6fd5"],"settings":{"show_payment_icons":false,"privacy_link":"shopify:\/\/pages\/privacy-policy"}},"newsletter-popup":{"type":"newsletter-popup","settings":{"mode":"disabled","popup_seconds":5,"popup_days":30,"popup_title":"Join Kandy Club","popup_image":"shopify:\/\/shop_images\/SkinKandy-Kandy-Club.png","popup_text":"<p><strong>Signup today and earn reward points with every purchase. <\/strong><\/p><p><strong>You can also see you balance when you sign in to your account.<\/strong><\/p>","close_text":"","enable_newsletter":false,"button_label":"SIGN ME UP BABY!","button_link":"shopify:\/\/pages\/kandy-club","enable_button":true}},"page-gallery--ears":{"type":"page-gallery--ears","blocks":{"63f4569c-bf62-4486-90ce-a00264640c7a":{"type":"ears","settings":{"image":"shopify:\/\/shop_images\/Lobes.jpg","link":"","pos_x":34,"pos_y":81}},"91040f49-29ab-46bc-b056-b103bf2fe3fe":{"type":"ears","settings":{"image":"shopify:\/\/shop_images\/Helix_0c2efe85-6b56-4008-b872-3620de1102c5.jpg","link":"","pos_x":74,"pos_y":41}},"510f6493-6a87-4302-a400-4bf1d3d7a0aa":{"type":"ears","settings":{"image":"shopify:\/\/shop_images\/RX9-Z0.jpg","link":"","pos_x":41,"pos_y":41}},"bb26c8cf-cef0-4a69-affb-018ee2b0432e":{"type":"ears","settings":{"image":"shopify:\/\/shop_images\/Industrial.jpg","link":"","pos_x":59,"pos_y":22}}},"block_order":["63f4569c-bf62-4486-90ce-a00264640c7a","91040f49-29ab-46bc-b056-b103bf2fe3fe","510f6493-6a87-4302-a400-4bf1d3d7a0aa","bb26c8cf-cef0-4a69-affb-018ee2b0432e"],"settings":{}},"page-gallery--face":{"type":"page-gallery--face","blocks":{"c10e9c33-e535-48de-980b-0f323b07c81b":{"type":"face","settings":{"image":"shopify:\/\/shop_images\/SK_nosepiercing.png","link":"","pos_x":41,"pos_y":48}}},"block_order":["c10e9c33-e535-48de-980b-0f323b07c81b"],"settings":{}},"page-gallery--mouth":{"type":"page-gallery--mouth","blocks":{"97fd78d2-4fd4-4f00-ac48-632bbab5c7e8":{"type":"mouth","settings":{"image":"shopify:\/\/shop_images\/IL06-Z0.jpg","link":"","pos_x":52,"pos_y":93}},"17d29374-890d-4773-84f0-c07bb4c636d3":{"type":"mouth","settings":{"image":"shopify:\/\/shop_images\/Tongue.png","link":"","pos_x":50,"pos_y":64}},"1320699a-a647-479f-a8c6-b4d3ef03df9b":{"type":"mouth","settings":{"image":"shopify:\/\/shop_images\/Philtrum-Piercing.png","link":"","pos_x":50,"pos_y":13}}},"block_order":["97fd78d2-4fd4-4f00-ac48-632bbab5c7e8","17d29374-890d-4773-84f0-c07bb4c636d3","1320699a-a647-479f-a8c6-b4d3ef03df9b"],"settings":{}},"page-gallery--body":{"type":"page-gallery--body","blocks":{"94fe58f4-e960-4726-ac7d-bbefcb02d26e":{"type":"body","settings":{"image":"shopify:\/\/shop_images\/Dermal.png","link":"","pos_x":37,"pos_y":25}}},"block_order":["94fe58f4-e960-4726-ac7d-bbefcb02d26e"],"settings":{}},"page-gallery--genitals":{"type":"page-gallery--genitals","blocks":{"d928ccca-1afd-4c5a-b93e-59edd4650830":{"type":"genitals","settings":{"image":"shopify:\/\/shop_images\/Tragus.jpg","link":"","pos_x":37,"pos_y":48}},"6a059f56-fb40-4681-b985-870a465cbd97":{"type":"genitals","settings":{"image":"shopify:\/\/shop_images\/Conch.jpg","link":"","pos_x":50,"pos_y":58}},"21df2445-c739-48d9-964f-a5042746d4e3":{"type":"genitals","settings":{"image":"shopify:\/\/shop_images\/Forward-Helix.png","link":"","pos_x":44,"pos_y":23}},"4d7ae92d-7249-4c62-9585-3a63bc98c174":{"type":"genitals","settings":{"image":"shopify:\/\/shop_images\/Stacked-Lobe.jpg","link":"","pos_x":34,"pos_y":80}}},"block_order":["d928ccca-1afd-4c5a-b93e-59edd4650830","6a059f56-fb40-4681-b985-870a465cbd97","21df2445-c739-48d9-964f-a5042746d4e3","4d7ae92d-7249-4c62-9585-3a63bc98c174"],"settings":{}},"page-gallery--other":{"type":"page-gallery--other","blocks":{"afd578ad-eecc-4526-a015-104e0cd52811":{"type":"other","settings":{"image":"shopify:\/\/shop_images\/Navel_8838e0b8-0248-46aa-8b85-37b4dc3b399d.jpg","link":"","pos_x":50,"pos_y":40}}},"block_order":["afd578ad-eecc-4526-a015-104e0cd52811"],"settings":{}},"banner":{"type":"banner","settings":{"class":"","bg_color":"#eec9d0","height":280,"image":"shopify:\/\/shop_images\/background.png","image_mobile":"shopify:\/\/shop_images\/mobile-banner.png","preheading":"Piercing","heading":"<p>Gallery<\/p>","text":"","link":"","linktext":"","linkclass":""}},"image-markers":{"type":"image-markers","blocks":{"ca066e20-dcf4-4863-a850-981de9550fbf":{"type":"ears","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Ear.png","label":"Ears #1"}},"d4be73c5-7b24-4456-97d0-9f75621ab7ca":{"type":"genitals","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Ear-2.png","label":"Ears #2"}},"eaee8d50-6dda-4b5a-a938-c55ae845b897":{"type":"face","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Face.png","label":""}},"6e1961d4-efb2-4e82-99d3-55cb9dd91007":{"type":"other","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Abdomen.png","label":"Navel"}},"f566ef6d-fcc4-447e-bac7-69e2f24235eb":{"type":"mouth","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Mouth-2.png","label":""}},"45ac19e4-ed18-4e8a-8ab2-dd0a82e8ffe9":{"type":"body","settings":{"image":"shopify:\/\/shop_images\/2022-Piercing-Gallery-Chest.png","label":"Other"}}},"block_order":["ca066e20-dcf4-4863-a850-981de9550fbf","d4be73c5-7b24-4456-97d0-9f75621ab7ca","eaee8d50-6dda-4b5a-a938-c55ae845b897","6e1961d4-efb2-4e82-99d3-55cb9dd91007","f566ef6d-fcc4-447e-bac7-69e2f24235eb","45ac19e4-ed18-4e8a-8ab2-dd0a82e8ffe9"],"settings":{"class":"page-content--top","bg_color":"#ffffff","heading":"Select the type of piercing","text":""}},"rich-text":{"type":"rich-text","blocks":{"f99e1e78-f074-4e8c-aad9-48d454ca18aa":{"type":"button","disabled":true,"settings":{"link":"shopify:\/\/pages\/faq-old","link_text":"Support Hub"}}},"block_order":["f99e1e78-f074-4e8c-aad9-48d454ca18aa"],"settings":{"align_text":"center","narrow_column":false,"divider":false}},"promo-grid":{"type":"promo-grid","blocks":{"18c55df7-5d94-4acf-8540-bfc6fe62f2e8":{"type":"banner","settings":{"class":"","heading":"PIERCING, IT'S WHAT WE DO","text":"<p>Australia’s largest specialist in body piercing and jewellery<\/p>","link":"https:\/\/support.skinkandy.com\/s\/booking-form","label":"Book now","link_class":"btn btn--secondary","framed":false}}},"block_order":["18c55df7-5d94-4acf-8540-bfc6fe62f2e8"],"settings":{"class":"page--flush","bg_color":"#eec9d0","full_width":true,"gutter_size":0,"space_above":false,"space_below":false}},"gallery":{"type":"gallery","blocks":{"cf631af8-f57c-4fa3-b783-6f37289479b5":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Conch-Flat-by-Renee-at-Townsville-SkinKandy.png","caption":"Conch & Flat by Renee at SK Townsville","link":""}},"ea63d46e-debb-4377-9612-26a962167275":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Ear-Flat-Premium-Opal-Top-by-Jayce-at-Northlakes-SkinKandy.png","caption":"Premium Opal Flat by Jayce at SK North Lakes","link":""}},"63b27b8e-316f-4a4f-a2bb-ca96023ebd01":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Dermal-Piercing-by-SkinKandy.png","caption":"Dermal Piercings","link":""}},"a1f99766-da18-4a4d-86c0-3eb257875885":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Flat-by-Kaylee-at-SkinKandy.png","caption":"Triple Flat Piercings by Kaylee","link":""}},"3c44a7b7-ec9b-4c96-84c1-0dfc530cdf9a":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Double-Helix-Flat-Lobes-Curated-Ear-by-SkinKandy.png","caption":"Double Helix, Flat & Lobe Piercings","link":""}},"a1884aab-47fc-41f1-bac0-b46bd476559d":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Stretched-Lobes-Curated-Ear-by-SkinKandy.png","caption":"Stretched Lobes and Surface Piercing","link":""}},"c40485f2-4ae2-420c-a8a0-15f8fff2211c":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Katie-Garden-City-Flat_-Outer-Conch-by-Katie-at-Garden-City-SkinKandy.png","caption":"Flat & Outer Conch by Katie at Garden City","link":""}}},"block_order":["cf631af8-f57c-4fa3-b783-6f37289479b5","ea63d46e-debb-4377-9612-26a962167275","63b27b8e-316f-4a4f-a2bb-ca96023ebd01","a1f99766-da18-4a4d-86c0-3eb257875885","3c44a7b7-ec9b-4c96-84c1-0dfc530cdf9a","a1884aab-47fc-41f1-bac0-b46bd476559d","c40485f2-4ae2-420c-a8a0-15f8fff2211c"],"settings":{"class":"","bg_color":"#ffffff","heading":"Check out some of our work","autoplay":true,"delay":2000}}},"content_for_index":[],"blocks":{"6279071938380501511":{"type":"shopify:\/\/apps\/form-builder-contact-form\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d","disabled":false,"settings":{}},"13655089695959051254":{"type":"shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a","disabled":false,"settings":{"version":"main"}},"4139971114690857691":{"type":"shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a","disabled":false,"settings":{"button_style":"plain_accent_2","button_placement":"top-start","button_offset_horizontal":0,"button_offset_vertical":0,"button_background_opacity":85,"button_background_size":34,"button_background_border_radius":24,"button_border_width":1,"show_shadow":false,"icon_size":18,"icon_stroke_width":1.2,"app_integration_preset":"none","product_link_selector":"a.grid-product__link[href*='\/products']","floating_reference_js":"target.closest('.grid-product__content')"}},"6680288666557934739":{"type":"shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-page\/194f5011-a43c-4b22-b12e-eaf20dc4506a","disabled":false,"settings":{"column_width":"md","wishlist_empty_link":"shopify:\/\/collections\/all","page_max_width":1800,"page_padding_top":60,"page_padding_bottom":80,"show_share_button":true,"show_buy_all_button":true,"show_clear_wishlist_button":true,"add_to_cart_remove_from_wishlist":false,"product_options":"dropdowns","cta_button":"add_to_cart","cta_button_style":"solid_accent_2","alignment":"center","image_aspect_ratio":"1\/1","image_object_fit":"cover","show_vendor":false,"show_product_title":true,"show_price":true,"show_variant_input_label":false}},"3915993389370480168":{"type":"shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-link-floating\/194f5011-a43c-4b22-b12e-eaf20dc4506a","disabled":true,"settings":{"button_style":"solid_accent_1","button_mode":"always_show","button_position":"bottom-end","button_offset_horizontal":10,"button_offset_vertical":20,"button_size":56,"button_border_width":2,"button_border_radius":40,"show_shadow":true,"icon_size":24,"icon_stroke_width":2,"counter_style":"outline_accent_1","counter_mode":"always_show","counter_position":"bottom-end","counter_offset_vertical":-5,"counter_offset_horizontal":0,"counter_size":16,"counter_border_width":1}},"14197025361042770389":{"type":"shopify:\/\/apps\/wishlist-king\/blocks\/app-settings-main\/194f5011-a43c-4b22-b12e-eaf20dc4506a","disabled":false,"settings":{"theme_preset":"dawn","color_accent_1":"#000000","color_accent_2":"#eb008c","color_solid_button_label":"#ffffff","color_outline_button_label":"#000000","color_background_1":"#ffffff","color_background_2":"#ffffff","color_text":"#000000","button_min_height":45,"button_border_width":1,"button_border_radius":25,"input_min_height":45,"input_border_width":1,"input_border_radius":0,"shadow_opacity":15,"shadow_horizontal_offset":0,"shadow_vertical_offset":2,"shadow_blur":4,"font_text_scale":100,"access_mode":"UNRESTRICTED","wishlist_mode":"PRODUCT","wishlist_path":"\/apps\/wishlist","money_show_currency_code":true}},"starapps-vsk":{"type":"shopify:\/\/apps\/swatch-king-variants-options\/blocks\/variant-swatch-king\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d","disabled":false,"settings":{"alignment":"left","swatch_location":"After price","switch_on_hover":true,"preselect_variant":false}},"7520711097648287086":{"type":"shopify:\/\/apps\/lookfy-gallery\/blocks\/app-embed\/596af5f6-9933-4730-95c2-f7d8d52a0c3e","disabled":false,"settings":{}},"5152489804016246972":{"type":"shopify:\/\/apps\/schema-app-total-schema-markup\/blocks\/schema-app\/b2d40947-8d98-42df-9c82-6203d5c4f17c","disabled":false,"settings":{}},"pagefly":{"type":"shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200","disabled":false,"settings":{}},"15154131639906026026":{"type":"shopify:\/\/apps\/tinyseo\/blocks\/broken-link-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4","disabled":false,"settings":{}},"573254258818049612":{"type":"shopify:\/\/apps\/crazy-egg\/blocks\/app-embed\/7ea73823-6ad9-4252-a63e-088397d54aed","disabled":false,"settings":{}},"10003540932433742857":{"type":"shopify:\/\/apps\/addly-bundle-upsell\/blocks\/addly-embed\/ba93f155-a558-4082-82dd-21b22b27b698","disabled":false,"settings":{"n9_embed_css":"\/* CSS Rules *\/","n9_embed_js":"\/* JS Code *\/"}}}},"platform_customizations":{"custom_css":[".content.d-none,.btn_more.d-none,.btn_less.d-none {display: none;}",".btn_more,.btn_less {background-color: unset; color: orange; text-decoration: underline; cursor: pointer;}","#__pf {overflow-x: unset !important;}","html,body {overflow-x: hidden !important;}",".form-image-section .section-form {max-width: 100%; background: transparent; box-shadow: none;}","wishlist-button-collection .wk-floating {z-index: auto;}",".grid__item[data-product-handle=\"sk-gift-card\"] .btn-quick-add,.grid__item[data-product-handle=\"sk-gift-card\"] .grid-product__price {display: none;}",".page-14kt-gold .ss__result--inline-banner {display: none;}",".site-\\\/en-nz .ss__result--inline-banner:has(> .ss__inline-banner .au-site) {display: none;}",".page-new-in .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",".u-link--pin {text-decoration: none;}","h4.hotspot-item-title {min-height: 39px;}",".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}",".ss__results__inline-banner {display: none;}",".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}",".grid-product__tag--b3f4,.grid-product__tag--black {background: #eb008c !important; font-weight: 600;}","body.en-nz .ss__result--inline-banner {display: none;}"]}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#000000",
+    "color_savings_text": "#000000",
+    "color_borders": "#cfcfcf",
+    "color_button": "#eb008c",
+    "color_sale_tag": "#eb008c",
+    "color_custom_tag": "#e870a8",
+    "color_cart_dot": "#eb008c",
+    "color_large_image_bg": "#000000",
+    "color_header": "#ffffff",
+    "color_header_text": "#000000",
+    "color_announcement": "#202020",
+    "color_footer": "#000000",
+    "color_footer_text": "#ffffff",
+    "color_drawer_background": "#ffffff",
+    "color_drawer_text": "#000000",
+    "color_drawer_border": "#7b7b7b",
+    "color_drawer_button": "#eb008c",
+    "color_image_overlay": "#e870a8",
+    "color_image_overlay_opacity": 0,
+    "color_image_overlay_text_shadow": 28,
+    "type_header_font_family": "montserrat_n4",
+    "type_header_spacing": "0",
+    "type_header_line_height": 1.2,
+    "type_header_capitalize": false,
+    "type_headers_align_text": true,
+    "type_base_font_family": "montserrat_n4",
+    "type_base_spacing": "0",
+    "type_base_size": 16,
+    "type_base_line_height": 1.1,
+    "type_body_align_text": false,
+    "type_navigation_style": "body",
+    "type_navigation_size": 15,
+    "type_navigation_capitalize": true,
+    "type_product_style": "heading",
+    "type_product_capitalize": false,
+    "type_collection_font": "heading",
+    "type_collection_size": 20,
+    "button_style": "square",
+    "icon_weight": "5px",
+    "icon_linecaps": "round",
+    "product_save_amount": false,
+    "product_save_type": "dollar",
+    "size_guide": "shopify://pages/piercing-size-guide",
+    "product_grid_image_size": "square",
+    "product_grid_image_fill": true,
+    "product_hover_image": true,
+    "enable_swatches": true,
+    "swatch_style": "round",
+    "enable_product_reviews": false,
+    "enable_product_grid_quick_add": true,
+    "sale_image_1": "shopify://shop_images/trans-1px.png",
+    "sale_image_2": "shopify://shop_images/BUY-3-GET-THE-4TH-FREE-PINK-AND-BLACK.png",
+    "sale_tag": "buy-3-free-4",
+    "promo_collection": "",
+    "custom_badge_img": "shopify://shop_images/Promo_Tab.png",
+    "infinite_scrolling": false,
+    "collection_grid_style": "overlaid",
+    "collection_grid_shape": "square",
+    "collection_grid_image": "collection",
+    "collection_grid_tint": "#B2B2B2",
+    "collection_grid_opacity": 20,
+    "collection_grid_gutter": true,
+    "logo": "shopify://shop_images/logo_43491a54-b4fd-4481-aeba-791e256ef031.png",
+    "cart_type": "drawer",
+    "cart_icon": "bag",
+    "cart_additional_buttons": false,
+    "cart_terms_conditions_enable": false,
+    "shipping_tax_enabled": false,
+    "continue_shopping_enabled": false,
+    "empty_cart_heading": "Your basket is currently empty",
+    "empty_cart": "",
+    "empty_cart_link": "shopify://collections/shop-all",
+    "empty_cart_link_label": "Shop now",
+    "kc_cart_text": "Sweeten your cart - KandyClub gets you free shipping!",
+    "kc_link_text": "Join Now",
+    "kc_link": "shopify://pages/kandy-club",
+    "social_facebook_link": "https://www.facebook.com/skinkandy/",
+    "social_instagram_link": "https://www.instagram.com/skinkandy/",
+    "social_tiktok_link": "https://www.tiktok.com/@skinkandy",
+    "share_twitter": false,
+    "favicon": "shopify://shop_images/sk_logo_footer.png",
+    "search_type": "product,article,page,collection",
+    "show_breadcrumbs": true,
+    "show_breadcrumbs_collection_link": true,
+    "disable_animations": true,
+    "app_wk_enabled": true,
+    "app_wk_login_required": false,
+    "app_wk_icon": "heart",
+    "app_wk_col_bg_shape": "circle",
+    "app_wk_share_position": "top",
+    "app_wk_products_per_row": "4",
+    "enable_quick_adds": false,
+    "quick_add_collection": "piercing-aftercare",
+    "enable_quick_add_popup": false,
+    "quick_add_popup_product": "piercing-aftercare-mist-spray-neilmed",
+    "quick_add_popup_product_variant": "42867622281354",
+    "quick_add_popup_bg_image": "shopify://shop_images/Marble-background_1.png",
+    "quick_add_popup_product_image": "shopify://shop_images/transparent-aftercare_1.png",
+    "quick_add_popup_title": "<p>Don't forget your</p><h2>Aftercare</h2>",
+    "quick_add_popup_text": "<h2>Did you know?</h2><p>Ongoing use of aftercare is essential in keeping your piercings happy and healthy. NeilMed is the must-have aftercare product to cleanse & care for your piercings.</p>",
+    "fst_step_one": "70",
+    "fst_step_one_nz": "100",
+    "fst_step_one_label": "Free Shipping",
+    "fst_target": "100",
+    "fst_target_nz": "125",
+    "fst_message_ongoing": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE SHIPPING</p>",
+    "fst_message_ongoing_express": "<p>SPEND <strong>[remaining]</strong>  MORE FOR FREE EXPRESS SHIPPING</p>",
+    "fst_message_success": "<p>Free express shipping</p>",
+    "ss_enable": true,
+    "ss_search_only": true,
+    "ss_collection_loading_text": "<p>Content loading...</p>",
+    "enable_sticky_footer_banner": false,
+    "sticky_footer_banner_bg_color": "#e8e8e8",
+    "sticky_footer_banner_text_color": "#000000",
+    "sticky_footer_banner_text": "Gift cards available now",
+    "sticky_footer_banner_img": "shopify://shop_images/GIFT_CARD_TRANSPARENT_3_1.png",
+    "sticky_footer_banner_img_width": 150,
+    "sticky_footer_banner_img_2": "shopify://shop_images/GIFT_CARD_TRANSPARENT_2_1.png",
+    "sticky_footer_banner_img_2_width": 150,
+    "sticky_footer_banner_url": "shopify://collections/gift-cards",
+    "sticky_footer_banner_btn_text": "Shop now",
+    "popup_enable": true,
+    "popup_layout": "giveaway",
+    "popup_left_image": "shopify://shop_images/Airpod_Max_PopUp_gradient.gif",
+    "popup_left_image_mobile": "shopify://shop_images/Airpod_Max_PopUp_gradient.gif",
+    "popup_title": "WIN Airpod Max Headphones",
+    "popup_subtitle": "<p>Join our Kandyclub for a chance to win!<br/>To enter our giveaway, enter your details and join the KandyClub... thats it!<br/>Once you have joined, you are automatically in the running to WIN!<br/>Competition ends 3rd of September 2025. The lucky winner will be contacted by the 15th of September 2025.</p>",
+    "popup_embed_form": "https://shopifyapi.skinkandyonline.com.au/create-discount",
+    "popup_discount_code": "WELCOMESK10",
+    "popup_form_note": "",
+    "popup_form_disclaimer": "",
+    "popup_delay": "5",
+    "popup_source": "Main Popup - KC Giveaway",
+    "popup_btn": "JOIN KANDYCLUB NOW",
+    "success_left_image": "shopify://shop_images/ec95a75aef3047dda267cc73181b3ab8.jpg",
+    "success_popup_title": "You\\’re in—Welcome to KandyClub!",
+    "sucess_popup_subtitle": "<p>It’s valid for 24 hours, so treat yourself while it lasts. You’ll also get access to exclusive promotions, birthday & anniversary perks, and more. <br/><br/>Your 10% off code is:</p>",
+    "success_popup_button_text": "BOOK NOW",
+    "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
+    "sucess_popup_tc": "shopify://pages/kc-headphone-giveaway-ts",
+    "nz_popup_layout": "bfcm",
+    "nz_popup_enable": true,
+    "nz_popup_left_image": "shopify://shop_images/KandyClub_-_PopUp_Image_1_6984cc07-420a-469d-89f0-6bf19b5d9f88.jpg",
+    "nz_popup_left_image_mobile": "shopify://shop_images/KandyClub_-_PopUp_Image_1_2fc83172-182e-4353-98cd-644433e5c205.jpg",
+    "nz_popup_title": "Join KandyClub & Get 10% Off",
+    "nz_popup_subtitle": "<p>Sign up now and get 10% off your first online jewellery purchase—but don’t wait, your code is valid for 24 hours only. Plus, enjoy exclusive member perks, birthday offers, and access to promos you won’t want to miss. </p>",
+    "nz_popup_embed_form": "https://shopifyapi.skinkandyonline.com.au/create-discount",
+    "nz_popup_discount_code": "WELCOMESK10",
+    "nz_popup_source": "Main Popup - NZ",
+    "nz_success_popup_title": "CONGRATS!",
+    "nz_sucess_popup_subtitle": "<h4>YOU ARE NOW IN THE DRAW</h4><p>We will contact the winner by phone & email.We do not contact winners via socials.</p><p><strong>Welcome to the KandyClub!</strong></p>",
+    "nz_success_popup_button_text": "BOOK NOW",
+    "nz_sucess_popup_button": "https://support.skinkandy.com/s/booking-form",
+    "nz_sucess_popup_tc": "shopify://pages/rhythm-vines-giveaway-terms-condition",
+    "enable_top_notification": false,
+    "top-notification-banner": "Shop Mother's Day sales up to 30% off exclusively for KandyClub members  <a href=\"/collections/mothers-day\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">SHOP NOW</a>",
+    "text_color": "#ffffff",
+    "bg_color": "#000000",
+    "shipping_au": "Free shipping over $70",
+    "shipping_nz": "Free shipping over $100",
+    "free-gift": [
+      "chain-link-ball-dangle-earrings",
+      "titanium-hollow-triangle-stud-earrings",
+      "huggie-hoop-earrings"
+    ],
+    "variant_sku": "9355442040895,9355442040888,9355442041465,9355442041519,9355442042417,9355442042424",
+    "checkout_header_image": "shopify://shop_images/black-bg.jpg",
+    "checkout_logo_image": "shopify://shop_images/SK_word_black_bg_94821a0e-7aa6-4e30-a438-ed4b27fd785f.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#e870a8",
+    "checkout_button_color": "#e870a8",
+    "checkout_error_color": "#eb008c",
+    "tag_image": "shopify://shop_images/buy2-get-1-free.png",
+    "sale_tag_image": "shopify://shop_images/SALE.png",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "c0903157-a773-474f-84be-01032fac0f7c": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify://shop_images/Group_22_1_1.png",
+              "logo_mobile": "shopify://shop_images/Group_22_1_1.png",
+              "desktop_logo_width": 180,
+              "mobile_logo_width": 120
+            }
+          },
+          "f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15": {
+            "type": "announcement",
+            "settings": {
+              "link_text": "FREE SHIPPING FOR KANDYCLUB MEMBERS. NOT A MEMBER YET? JOIN NOW",
+              "link": "shopify://pages/kandy-club"
+            }
+          },
+          "31778dc5-bfaa-4e1d-9aa7-7f0971794dee": {
+            "type": "announcement",
+            "settings": {
+              "link_text": "FREE EXPRESS SHIPPING ON ORDERS OVER $100",
+              "link": ""
+            }
+          },
+          "e9c59e14-cd9c-485a-8447-d2a9d70140bb": {
+            "type": "announcement",
+            "settings": {
+              "link_text": "AFTERPAY AVAILABLE, BUY NOW PAY LATER",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "c0903157-a773-474f-84be-01032fac0f7c",
+          "f41d0fd0-3b4a-4ce4-85ee-c22e9235fa15",
+          "31778dc5-bfaa-4e1d-9aa7-7f0971794dee",
+          "e9c59e14-cd9c-485a-8447-d2a9d70140bb"
+        ],
+        "settings": {
+          "main_menu_link_list": "new-menu-1",
+          "mobile_menu_link_list": "new-menu-1",
+          "nz_main_menu_link_list": "megamenu-2-1-nz",
+          "nz_mobile_menu_link_list": "megamenu-2-1-nz",
+          "main_menu_alignment": "left",
+          "header_style": "sticky",
+          "sticky_index": false,
+          "sticky_collection": false,
+          "kandy_klub_link": "shopify://pages/kandy-club",
+          "store_locator": "shopify://pages/store-locations",
+          "wishlist_link": "shopify://pages/wishlist",
+          "announcement_compact": true,
+          "announcement_above_header": true,
+          "left_link": "shopify://policies/refund-policy",
+          "left_label": "returns & refunds",
+          "call_us_link_au": "tel:1300129991",
+          "call_us_label_au": "1300 129 991",
+          "call_us_link_nz": "tel:0800161005",
+          "call_us_label_nz": "0800 161 005",
+          "about_link": "shopify://pages/our-story",
+          "about_label": "",
+          "about_nav": "",
+          "find_link": "shopify://pages/store-locations",
+          "find_label": "find a store",
+          "country": "country",
+          "book_now_link": "https://bookings.skinkandy.com/",
+          "book_now_label": "Book a Piercing"
+        }
+      },
+      "footer-promotions": {
+        "type": "footer-promotions",
+        "settings": {
+          "hide_homepage": false,
+          "image_size": "wide"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "78518a5a-082a-42fc-94d3-bf3430935e5d": {
+            "type": "logo_social",
+            "settings": {
+              "logo": "shopify://shop_images/Group_22_2.png"
+            }
+          },
+          "893cd2b2-00f2-450e-af4a-7d15023f6fd5": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": false,
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "78518a5a-082a-42fc-94d3-bf3430935e5d",
+          "893cd2b2-00f2-450e-af4a-7d15023f6fd5"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "privacy_link": "shopify://pages/privacy-policy"
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "mode": "disabled",
+          "popup_seconds": 5,
+          "popup_days": 30,
+          "popup_title": "Join Kandy Club",
+          "popup_image": "shopify://shop_images/SkinKandy-Kandy-Club.png",
+          "popup_text": "<p><strong>Signup today and earn reward points with every purchase. </strong></p><p><strong>You can also see you balance when you sign in to your account.</strong></p>",
+          "close_text": "",
+          "enable_newsletter": false,
+          "button_label": "SIGN ME UP BABY!",
+          "button_link": "shopify://pages/kandy-club",
+          "enable_button": true
+        }
+      },
+      "page-gallery--ears": {
+        "type": "page-gallery--ears",
+        "blocks": {
+          "63f4569c-bf62-4486-90ce-a00264640c7a": {
+            "type": "ears",
+            "settings": {
+              "image": "shopify://shop_images/Lobes.jpg",
+              "link": "",
+              "pos_x": 34,
+              "pos_y": 81
+            }
+          },
+          "91040f49-29ab-46bc-b056-b103bf2fe3fe": {
+            "type": "ears",
+            "settings": {
+              "image": "shopify://shop_images/Helix_0c2efe85-6b56-4008-b872-3620de1102c5.jpg",
+              "link": "",
+              "pos_x": 74,
+              "pos_y": 41
+            }
+          },
+          "510f6493-6a87-4302-a400-4bf1d3d7a0aa": {
+            "type": "ears",
+            "settings": {
+              "image": "shopify://shop_images/RX9-Z0.jpg",
+              "link": "",
+              "pos_x": 41,
+              "pos_y": 41
+            }
+          },
+          "bb26c8cf-cef0-4a69-affb-018ee2b0432e": {
+            "type": "ears",
+            "settings": {
+              "image": "shopify://shop_images/Industrial.jpg",
+              "link": "",
+              "pos_x": 59,
+              "pos_y": 22
+            }
+          }
+        },
+        "block_order": [
+          "63f4569c-bf62-4486-90ce-a00264640c7a",
+          "91040f49-29ab-46bc-b056-b103bf2fe3fe",
+          "510f6493-6a87-4302-a400-4bf1d3d7a0aa",
+          "bb26c8cf-cef0-4a69-affb-018ee2b0432e"
+        ],
+        "settings": {}
+      },
+      "page-gallery--face": {
+        "type": "page-gallery--face",
+        "blocks": {
+          "c10e9c33-e535-48de-980b-0f323b07c81b": {
+            "type": "face",
+            "settings": {
+              "image": "shopify://shop_images/SK_nosepiercing.png",
+              "link": "",
+              "pos_x": 41,
+              "pos_y": 48
+            }
+          }
+        },
+        "block_order": [
+          "c10e9c33-e535-48de-980b-0f323b07c81b"
+        ],
+        "settings": {}
+      },
+      "page-gallery--mouth": {
+        "type": "page-gallery--mouth",
+        "blocks": {
+          "97fd78d2-4fd4-4f00-ac48-632bbab5c7e8": {
+            "type": "mouth",
+            "settings": {
+              "image": "shopify://shop_images/IL06-Z0.jpg",
+              "link": "",
+              "pos_x": 52,
+              "pos_y": 93
+            }
+          },
+          "17d29374-890d-4773-84f0-c07bb4c636d3": {
+            "type": "mouth",
+            "settings": {
+              "image": "shopify://shop_images/Tongue.png",
+              "link": "",
+              "pos_x": 50,
+              "pos_y": 64
+            }
+          },
+          "1320699a-a647-479f-a8c6-b4d3ef03df9b": {
+            "type": "mouth",
+            "settings": {
+              "image": "shopify://shop_images/Philtrum-Piercing.png",
+              "link": "",
+              "pos_x": 50,
+              "pos_y": 13
+            }
+          }
+        },
+        "block_order": [
+          "97fd78d2-4fd4-4f00-ac48-632bbab5c7e8",
+          "17d29374-890d-4773-84f0-c07bb4c636d3",
+          "1320699a-a647-479f-a8c6-b4d3ef03df9b"
+        ],
+        "settings": {}
+      },
+      "page-gallery--body": {
+        "type": "page-gallery--body",
+        "blocks": {
+          "94fe58f4-e960-4726-ac7d-bbefcb02d26e": {
+            "type": "body",
+            "settings": {
+              "image": "shopify://shop_images/Dermal.png",
+              "link": "",
+              "pos_x": 37,
+              "pos_y": 25
+            }
+          }
+        },
+        "block_order": [
+          "94fe58f4-e960-4726-ac7d-bbefcb02d26e"
+        ],
+        "settings": {}
+      },
+      "page-gallery--genitals": {
+        "type": "page-gallery--genitals",
+        "blocks": {
+          "d928ccca-1afd-4c5a-b93e-59edd4650830": {
+            "type": "genitals",
+            "settings": {
+              "image": "shopify://shop_images/Tragus.jpg",
+              "link": "",
+              "pos_x": 37,
+              "pos_y": 48
+            }
+          },
+          "6a059f56-fb40-4681-b985-870a465cbd97": {
+            "type": "genitals",
+            "settings": {
+              "image": "shopify://shop_images/Conch.jpg",
+              "link": "",
+              "pos_x": 50,
+              "pos_y": 58
+            }
+          },
+          "21df2445-c739-48d9-964f-a5042746d4e3": {
+            "type": "genitals",
+            "settings": {
+              "image": "shopify://shop_images/Forward-Helix.png",
+              "link": "",
+              "pos_x": 44,
+              "pos_y": 23
+            }
+          },
+          "4d7ae92d-7249-4c62-9585-3a63bc98c174": {
+            "type": "genitals",
+            "settings": {
+              "image": "shopify://shop_images/Stacked-Lobe.jpg",
+              "link": "",
+              "pos_x": 34,
+              "pos_y": 80
+            }
+          }
+        },
+        "block_order": [
+          "d928ccca-1afd-4c5a-b93e-59edd4650830",
+          "6a059f56-fb40-4681-b985-870a465cbd97",
+          "21df2445-c739-48d9-964f-a5042746d4e3",
+          "4d7ae92d-7249-4c62-9585-3a63bc98c174"
+        ],
+        "settings": {}
+      },
+      "page-gallery--other": {
+        "type": "page-gallery--other",
+        "blocks": {
+          "afd578ad-eecc-4526-a015-104e0cd52811": {
+            "type": "other",
+            "settings": {
+              "image": "shopify://shop_images/Navel_8838e0b8-0248-46aa-8b85-37b4dc3b399d.jpg",
+              "link": "",
+              "pos_x": 50,
+              "pos_y": 40
+            }
+          }
+        },
+        "block_order": [
+          "afd578ad-eecc-4526-a015-104e0cd52811"
+        ],
+        "settings": {}
+      },
+      "banner": {
+        "type": "banner",
+        "settings": {
+          "class": "",
+          "bg_color": "#eec9d0",
+          "height": 280,
+          "image": "shopify://shop_images/background.png",
+          "image_mobile": "shopify://shop_images/mobile-banner.png",
+          "preheading": "Piercing",
+          "heading": "<p>Gallery</p>",
+          "text": "",
+          "link": "",
+          "linktext": "",
+          "linkclass": ""
+        }
+      },
+      "image-markers": {
+        "type": "image-markers",
+        "blocks": {
+          "ca066e20-dcf4-4863-a850-981de9550fbf": {
+            "type": "ears",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Ear.png",
+              "label": "Ears #1"
+            }
+          },
+          "d4be73c5-7b24-4456-97d0-9f75621ab7ca": {
+            "type": "genitals",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Ear-2.png",
+              "label": "Ears #2"
+            }
+          },
+          "eaee8d50-6dda-4b5a-a938-c55ae845b897": {
+            "type": "face",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Face.png",
+              "label": ""
+            }
+          },
+          "6e1961d4-efb2-4e82-99d3-55cb9dd91007": {
+            "type": "other",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Abdomen.png",
+              "label": "Navel"
+            }
+          },
+          "f566ef6d-fcc4-447e-bac7-69e2f24235eb": {
+            "type": "mouth",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Mouth-2.png",
+              "label": ""
+            }
+          },
+          "45ac19e4-ed18-4e8a-8ab2-dd0a82e8ffe9": {
+            "type": "body",
+            "settings": {
+              "image": "shopify://shop_images/2022-Piercing-Gallery-Chest.png",
+              "label": "Other"
+            }
+          }
+        },
+        "block_order": [
+          "ca066e20-dcf4-4863-a850-981de9550fbf",
+          "d4be73c5-7b24-4456-97d0-9f75621ab7ca",
+          "eaee8d50-6dda-4b5a-a938-c55ae845b897",
+          "6e1961d4-efb2-4e82-99d3-55cb9dd91007",
+          "f566ef6d-fcc4-447e-bac7-69e2f24235eb",
+          "45ac19e4-ed18-4e8a-8ab2-dd0a82e8ffe9"
+        ],
+        "settings": {
+          "class": "page-content--top",
+          "bg_color": "#ffffff",
+          "heading": "Select the type of piercing",
+          "text": ""
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "blocks": {
+          "f99e1e78-f074-4e8c-aad9-48d454ca18aa": {
+            "type": "button",
+            "disabled": true,
+            "settings": {
+              "link": "shopify://pages/faq-old",
+              "link_text": "Support Hub"
+            }
+          }
+        },
+        "block_order": [
+          "f99e1e78-f074-4e8c-aad9-48d454ca18aa"
+        ],
+        "settings": {
+          "align_text": "center",
+          "narrow_column": false,
+          "divider": false
+        }
+      },
+      "promo-grid": {
+        "type": "promo-grid",
+        "blocks": {
+          "18c55df7-5d94-4acf-8540-bfc6fe62f2e8": {
+            "type": "banner",
+            "settings": {
+              "class": "",
+              "heading": "PIERCING, IT'S WHAT WE DO",
+              "text": "<p>Australia’s largest specialist in body piercing and jewellery</p>",
+              "link": "https://support.skinkandy.com/s/booking-form",
+              "label": "Book now",
+              "link_class": "btn btn--secondary",
+              "framed": false
+            }
+          }
+        },
+        "block_order": [
+          "18c55df7-5d94-4acf-8540-bfc6fe62f2e8"
+        ],
+        "settings": {
+          "class": "page--flush",
+          "bg_color": "#eec9d0",
+          "full_width": true,
+          "gutter_size": 0,
+          "space_above": false,
+          "space_below": false
+        }
+      },
+      "gallery": {
+        "type": "gallery",
+        "blocks": {
+          "cf631af8-f57c-4fa3-b783-6f37289479b5": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Conch-Flat-by-Renee-at-Townsville-SkinKandy.png",
+              "caption": "Conch & Flat by Renee at SK Townsville",
+              "link": ""
+            }
+          },
+          "ea63d46e-debb-4377-9612-26a962167275": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Ear-Flat-Premium-Opal-Top-by-Jayce-at-Northlakes-SkinKandy.png",
+              "caption": "Premium Opal Flat by Jayce at SK North Lakes",
+              "link": ""
+            }
+          },
+          "63b27b8e-316f-4a4f-a2bb-ca96023ebd01": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Dermal-Piercing-by-SkinKandy.png",
+              "caption": "Dermal Piercings",
+              "link": ""
+            }
+          },
+          "a1f99766-da18-4a4d-86c0-3eb257875885": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Flat-by-Kaylee-at-SkinKandy.png",
+              "caption": "Triple Flat Piercings by Kaylee",
+              "link": ""
+            }
+          },
+          "3c44a7b7-ec9b-4c96-84c1-0dfc530cdf9a": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Double-Helix-Flat-Lobes-Curated-Ear-by-SkinKandy.png",
+              "caption": "Double Helix, Flat & Lobe Piercings",
+              "link": ""
+            }
+          },
+          "a1884aab-47fc-41f1-bac0-b46bd476559d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Stretched-Lobes-Curated-Ear-by-SkinKandy.png",
+              "caption": "Stretched Lobes and Surface Piercing",
+              "link": ""
+            }
+          },
+          "c40485f2-4ae2-420c-a8a0-15f8fff2211c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Katie-Garden-City-Flat_-Outer-Conch-by-Katie-at-Garden-City-SkinKandy.png",
+              "caption": "Flat & Outer Conch by Katie at Garden City",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "cf631af8-f57c-4fa3-b783-6f37289479b5",
+          "ea63d46e-debb-4377-9612-26a962167275",
+          "63b27b8e-316f-4a4f-a2bb-ca96023ebd01",
+          "a1f99766-da18-4a4d-86c0-3eb257875885",
+          "3c44a7b7-ec9b-4c96-84c1-0dfc530cdf9a",
+          "a1884aab-47fc-41f1-bac0-b46bd476559d",
+          "c40485f2-4ae2-420c-a8a0-15f8fff2211c"
+        ],
+        "settings": {
+          "class": "",
+          "bg_color": "#ffffff",
+          "heading": "Check out some of our work",
+          "autoplay": true,
+          "delay": 2000
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "6279071938380501511": {
+        "type": "shopify://apps/form-builder-contact-form/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
+      "13655089695959051254": {
+        "type": "shopify://apps/wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "version": "main"
+        }
+      },
+      "4139971114690857691": {
+        "type": "shopify://apps/wishlist-king/blocks/wishlist-button-collection/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "button_style": "plain_accent_2",
+          "button_placement": "top-start",
+          "button_offset_horizontal": 0,
+          "button_offset_vertical": 0,
+          "button_background_opacity": 85,
+          "button_background_size": 34,
+          "button_background_border_radius": 24,
+          "button_border_width": 1,
+          "show_shadow": false,
+          "icon_size": 18,
+          "icon_stroke_width": 1.2,
+          "app_integration_preset": "none",
+          "product_link_selector": "a.grid-product__link[href*='/products']",
+          "floating_reference_js": "target.closest('.grid-product__content')"
+        }
+      },
+      "6680288666557934739": {
+        "type": "shopify://apps/wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "column_width": "md",
+          "wishlist_empty_link": "shopify://collections/all",
+          "page_max_width": 1800,
+          "page_padding_top": 60,
+          "page_padding_bottom": 80,
+          "show_share_button": true,
+          "show_buy_all_button": true,
+          "show_clear_wishlist_button": true,
+          "add_to_cart_remove_from_wishlist": false,
+          "product_options": "dropdowns",
+          "cta_button": "add_to_cart",
+          "cta_button_style": "solid_accent_2",
+          "alignment": "center",
+          "image_aspect_ratio": "1/1",
+          "image_object_fit": "cover",
+          "show_vendor": false,
+          "show_product_title": true,
+          "show_price": true,
+          "show_variant_input_label": false
+        }
+      },
+      "3915993389370480168": {
+        "type": "shopify://apps/wishlist-king/blocks/wishlist-link-floating/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": true,
+        "settings": {
+          "button_style": "solid_accent_1",
+          "button_mode": "always_show",
+          "button_position": "bottom-end",
+          "button_offset_horizontal": 10,
+          "button_offset_vertical": 20,
+          "button_size": 56,
+          "button_border_width": 2,
+          "button_border_radius": 40,
+          "show_shadow": true,
+          "icon_size": 24,
+          "icon_stroke_width": 2,
+          "counter_style": "outline_accent_1",
+          "counter_mode": "always_show",
+          "counter_position": "bottom-end",
+          "counter_offset_vertical": -5,
+          "counter_offset_horizontal": 0,
+          "counter_size": 16,
+          "counter_border_width": 1
+        }
+      },
+      "14197025361042770389": {
+        "type": "shopify://apps/wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "theme_preset": "dawn",
+          "color_accent_1": "#000000",
+          "color_accent_2": "#eb008c",
+          "color_solid_button_label": "#ffffff",
+          "color_outline_button_label": "#000000",
+          "color_background_1": "#ffffff",
+          "color_background_2": "#ffffff",
+          "color_text": "#000000",
+          "button_min_height": 45,
+          "button_border_width": 1,
+          "button_border_radius": 25,
+          "input_min_height": 45,
+          "input_border_width": 1,
+          "input_border_radius": 0,
+          "shadow_opacity": 15,
+          "shadow_horizontal_offset": 0,
+          "shadow_vertical_offset": 2,
+          "shadow_blur": 4,
+          "font_text_scale": 100,
+          "access_mode": "UNRESTRICTED",
+          "wishlist_mode": "PRODUCT",
+          "wishlist_path": "/apps/wishlist",
+          "money_show_currency_code": true
+        }
+      },
+      "starapps-vsk": {
+        "type": "shopify://apps/swatch-king-variants-options/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+        "disabled": false,
+        "settings": {
+          "alignment": "left",
+          "swatch_location": "After price",
+          "switch_on_hover": true,
+          "preselect_variant": false
+        }
+      },
+      "7520711097648287086": {
+        "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+        "disabled": false,
+        "settings": {}
+      },
+      "5152489804016246972": {
+        "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
+        "disabled": false,
+        "settings": {}
+      },
+      "pagefly": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "15154131639906026026": {
+        "type": "shopify://apps/tinyseo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "573254258818049612": {
+        "type": "shopify://apps/crazy-egg/blocks/app-embed/7ea73823-6ad9-4252-a63e-088397d54aed",
+        "disabled": false,
+        "settings": {}
+      },
+      "10003540932433742857": {
+        "type": "shopify://apps/addly-bundle-upsell/blocks/addly-embed/ba93f155-a558-4082-82dd-21b22b27b698",
+        "disabled": false,
+        "settings": {
+          "n9_embed_css": "/* CSS Rules */",
+          "n9_embed_js": "/* JS Code */"
+        }
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".content.d-none,.btn_more.d-none,.btn_less.d-none {display: none;}",
+      ".btn_more,.btn_less {background-color: unset; color: orange; text-decoration: underline; cursor: pointer;}",
+      "#__pf {overflow-x: unset !important;}",
+      "html,body {overflow-x: hidden !important;}",
+      ".form-image-section .section-form {max-width: 100%; background: transparent; box-shadow: none;}",
+      "wishlist-button-collection .wk-floating {z-index: auto;}",
+      ".grid__item[data-product-handle=\"sk-gift-card\"] .btn-quick-add,.grid__item[data-product-handle=\"sk-gift-card\"] .grid-product__price {display: none;}",
+      ".page-14kt-gold .ss__result--inline-banner {display: none;}",
+      ".site-\\/en-nz .ss__result--inline-banner:has(> .ss__inline-banner .au-site) {display: none;}",
+      ".page-new-in .ss__result--inline-banner:has(> .ss__inline-banner .au-site-sale) {display: none;}",
+      ".u-link--pin {text-decoration: none;}",
+      "h4.hotspot-item-title {min-height: 39px;}",
+      ".Paragraph img {@media screen and (max-width: 767px) {max-height: 151px; width: auto; display: block; margin-bottom: 19px; }}",
+      ".ss__results__inline-banner {display: none;}",
+      ".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}",
+      ".grid-product__tag--b3f4,.grid-product__tag--black {background: #eb008c !important; font-weight: 600;}",
+      "body.en-nz .ss__result--inline-banner {display: none;}"
+    ]
+  }
+}

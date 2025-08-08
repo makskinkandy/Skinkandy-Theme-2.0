@@ -1,1 +1,645 @@
-{"sections":{"top_notification_banner_yteqNA":{"type":"top-notification-banner","disabled":true,"settings":{"enable":true,"notification_text":"SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"\/pages\/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info<\/a>","bg_color":"#e42228"}},"hero_video_Ar6Ham":{"type":"hero-video","disabled":true,"name":"Video hero","settings":{"title":"","title_size":80,"subheading":"","link_text":"","link":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/382051e909d54eb2aed8040728bb32d0.mp4","overlay_opacity":0,"section_height":"650px","mobile_height":"auto"}},"header_banner_MUPtRQ":{"type":"header-banner","blocks":{"image_ng66KH":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Homepage_Banner_Mobile_2.jpg","image":"shopify:\/\/shop_images\/Homepage_Banner_Desktop_1.jpg","banner_url":"shopify:\/\/collections\/new-in","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}},"image_PFE9d8":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/2_For_80_-_Rotational_Banners_V2_22_For_80_-_Mobile_Banner_Option_1.jpg","image":"shopify:\/\/shop_images\/2_For_80_-_Desktop_Banner_Option_2.jpg","banner_url":"https:\/\/bookings.skinkandy.com","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}},"image_PdCEic":{"type":"image","settings":{"disable_overlay":true,"image_mobile":"shopify:\/\/shop_images\/Mobile_Landing_Page_1.2.jpg","image":"shopify:\/\/shop_images\/Desktop_Landing_Page_3.jpg","banner_url":"shopify:\/\/pages\/kandy-club-giveaway","heading":"","short_description":"","button_text":"","button_url":"","align_text":"center"}}},"block_order":["image_ng66KH","image_PFE9d8","image_PdCEic"],"settings":{"title":"","banner_size":"small-banner","small_overlay":true,"shuffle":false}},"inline_buttons_f7DDkA":{"type":"inline-buttons","custom_css":[],"name":"Inline Buttons","settings":{"button_1_text":"SHOP NOW","button_1_url":"shopify:\/\/collections\/new-in","button_2_text":"BOOK NOW","button_2_url":"https:\/\/bookings.skinkandy.com","text_color":"#ffffff","bg_color":"#000000"}},"flipped_boxes_kG6gXk":{"type":"flipped-boxes","blocks":{"boxes_zpCPhf":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_31.jpg","Title":"LOBES","description":"<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!<\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}},"boxes_tbcpHk":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_30.jpg","Title":"HELIX","description":"<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!<\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}},"boxes_mn8wG3":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_32_1.jpg","Title":"SEPTUM","description":"<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. <\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}},"boxes_HhxQgk":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_34.jpg","Title":"NOSTRIL","description":"<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.<\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}},"boxes_8CTFjj":{"type":"boxes","settings":{"no_flip":false,"image":"shopify:\/\/shop_images\/Group_33_1.jpg","Title":"FORWARD HELIX","description":"<p>Forward Helix piercings are positioned through the front of the<strong> <\/strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.<\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}},"boxes_wVQegA":{"type":"boxes","settings":{"no_flip":true,"image":"shopify:\/\/shop_images\/Rectangle_10.jpg","Title":"SEE OUR FULL RANGE OF PIERCING SERVICES","description":"<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.<\/p>","page_url":"shopify:\/\/pages\/professional-body-piercing-services"}}},"block_order":["boxes_zpCPhf","boxes_tbcpHk","boxes_mn8wG3","boxes_HhxQgk","boxes_8CTFjj","boxes_wVQegA"],"settings":{"title":"TRENDING PIERCINGS"}},"rich_text_gwEVLb":{"type":"rich-text","blocks":{"heading_cLRihY":{"type":"heading","settings":{"title":"Your next ear stack starts here","heading_tag":"h2"}},"page_BhxMKG":{"type":"page","settings":{"page_text":"homepage-dev"}},"text_b6GqnX":{"type":"text","settings":{"enlarge_text":false,"text":"<p><a href=\"\/pages\/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\"><strong>See all body piercings included in the offer<\/strong><\/a><\/p>"}},"button_B6Mjmb":{"type":"button","settings":{"link":"https:\/\/support.skinkandy.com\/s\/booking-form","link_text":"BOOK NOW","css_class":""}}},"block_order":["heading_cLRihY","page_BhxMKG","text_b6GqnX","button_B6Mjmb"],"disabled":true,"custom_css":["h1 {font-weight: 600;}"],"name":"Rich text","settings":{"align_text":"center","narrow_column":false,"divider":false,"reduce_spacing":false}},"columns_block_HhremV":{"type":"columns-block","blocks":{"text_block_XFLcLt":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/Ear_Map_-_final-2_1.jpg","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_RadN3G":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"Your next ear stack starts here","title_size":"large","break_tag":false,"title_tag":"h2","text":"<p>We offer a wide range of <strong>professional body piercings<\/strong>, from classic <strong>ear lobe piercings<\/strong> to cartilage, nose, and body piercings. Each piercing is performed by our highly trained team using industry-leading hygiene practices and high-quality jewellery for the best results. <\/p><p><strong>Ears<\/strong> – Lobes, Stacked Lobes, Helix, Conch, Tragus, Rook, Daith, Forward Helix, Industrial, Anti-Tragus, Outter Conch, Transverse Lobe, Snug and more.<\/p><p><strong>Face<\/strong> – Nostril, Septum, Eyebrow, Lip, Bridge, Ashley, Philtrum, Labret, Jestrum, Tongue, Smiley, Vertical Labret, Tongue Webbing.<\/p><p><strong>Body<\/strong> – Navel, Floating Navel and Nipple.<\/p><p><strong>Advanced – <\/strong>Industrial, Dermal, Surface, Cheek, Dhalia & many more options.<\/p><p><strong>Children’s Piercings<\/strong> – Safe & professional lobe piercings from <strong>6 months old<\/strong><\/p>","text_size":"small","button_label":"See all piercing Included","button_link":"shopify:\/\/pages\/skinkandy-2-for-80-promotion","new_tab":false}}},"block_order":["text_block_XFLcLt","text_block_RadN3G"],"disabled":true,"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":1,"bottom_space":false,"hide_line":true,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":1704}},"collection_showcase_TiBJeR":{"type":"collection-showcase","blocks":{"image_bPqmL3":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"EAR","url":"shopify:\/\/collections\/cartilage-labret","image":"shopify:\/\/shop_images\/image_19.jpg"}},"image_3jRFGa":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NOSE","url":"shopify:\/\/collections\/nose-jewellery","image":"shopify:\/\/shop_images\/Rectangle_12_1.jpg"}},"image_b6EctF":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NAVEL","url":"shopify:\/\/collections\/belly","image":"shopify:\/\/shop_images\/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"}},"image_Nge4Bm":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"LIP","url":"shopify:\/\/collections\/lip","image":"shopify:\/\/shop_images\/image_21.jpg"}},"image_jm9bq3":{"type":"image","settings":{"disable_overlay":true,"disable_button":true,"title":"NIPPLE","url":"shopify:\/\/collections\/nipple","image":"shopify:\/\/shop_images\/image_22.jpg"}}},"block_order":["image_bPqmL3","image_3jRFGa","image_b6EctF","image_Nge4Bm","image_jm9bq3"],"settings":{"title":"SHOP BY PIERCING","mode":"light","background":"#ffffff","button_text":"Shop Now","button_url":"shopify:\/\/collections\/shop-all","bottom_border":false,"enable_hover":true,"get_product_list":false,"collection_link":""}},"columns_block_AAVbUH":{"type":"columns-block","blocks":{"text_block_JUgX3f":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":false,"short-image":true,"flip-image-enable":true,"image":"shopify:\/\/shop_images\/Code_Pink_-_Homepage_Desktop_copy_7.jpg","flip-image":"shopify:\/\/shop_images\/DSC02872.jpg","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"\/collections\/buy-3-get-one-free#\/filter:ss_placement:All$2520ear","new_tab":false}},"text_block_QQbbtk":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":false,"short-image":true,"flip-image-enable":true,"image":"shopify:\/\/shop_images\/Code_Pink_-_Homepage_Desktop_copy_6.jpg","flip-image":"shopify:\/\/shop_images\/DSC02600.jpg","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"\/collections\/buy-3-get-one-free#\/filter:ss_placement:Nose","new_tab":false}},"text_block_qnPyxt":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":true,"hide-image":false,"short-image":true,"flip-image-enable":true,"image":"shopify:\/\/shop_images\/Code_Pink_-_Homepage_Desktop_copy_8.jpg","flip-image":"shopify:\/\/shop_images\/3178.jpg","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"\/collections\/buy-3-get-one-free#\/filter:collection_name:Body$2520Jewellery","new_tab":false}}},"block_order":["text_block_JUgX3f","text_block_QQbbtk","text_block_qnPyxt"],"disabled":true,"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"CURATE YOUR LOOK","description":"<p>Buy three get your fourth FREE on all fashion jewellery<\/p>","button_text":"","button_url":"","count":3,"bottom_space":false,"hide_line":true,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":1704}},"rich_text_YyxiLB":{"type":"rich-text","blocks":{"button_riBJwy":{"type":"button","settings":{"link":"shopify:\/\/collections\/buy-3-get-one-free","link_text":"SHOP NOW","css_class":""}}},"block_order":["button_riBJwy"],"disabled":true,"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":false}},"collection_showcase_RnD7cq":{"type":"collection-showcase","settings":{"title":"JUST LANDED","mode":"light","background":"#ffffff","button_text":"Shop Now","button_url":"shopify:\/\/collections\/shop-all","bottom_border":true,"enable_hover":false,"get_product_list":true,"collection_link":"new-in"}},"two_column_icon_image_c79Kr9":{"type":"two-column-icon-image","blocks":{"title_block_XFEQTg":{"type":"title_block","settings":{"title":"THE ULTIMATE PIERCING EXPERIENCE BY OUR  {EXPERTLY} {TRAINED} {PIERCERS}","title_tag":"h1","description":"<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> <\/strong>look forward to making your piercing dreams a reality. <\/p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> <\/strong>experience.<\/p>","button_text":"Book Now","button_url":"shopify:\/\/pages\/professional-body-piercing-services","text_align":"left"}}},"block_order":["title_block_XFEQTg"],"settings":{"image":"shopify:\/\/shop_images\/image_18_1.jpg","left_align":true,"icon_column":false,"bottom_margin":true,"hide_mobile":false,"hide_description":false,"round_image":false,"circle_drops":false,"bottom_border":false,"reduced_image_size":false,"reduced_content_width":false}},"grid_image_xGVpcK":{"type":"grid-image","blocks":{"image_NVjLjR":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_1_5.jpg","url":""}},"image_V8Fx64":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg","url":""}},"image_tpipmG":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_3_6.jpg","url":""}},"image_Ah6kdW":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_4_2.jpg","url":""}},"image_yB9iCH":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_5_2.jpg","url":""}},"image_mVGzCR":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Image_2_10.jpg","url":""}}},"block_order":["image_NVjLjR","image_V8Fx64","image_tpipmG","image_Ah6kdW","image_yB9iCH","image_mVGzCR"],"settings":{"image":"shopify:\/\/shop_images\/Vector.jpg","bottom_margin":false,"title":"@SKINKANDY","url":"https:\/\/www.instagram.com\/skinkandy\/","description":""}},"pagefly-home":{"type":"pagefly-home","settings":{}}},"order":["top_notification_banner_yteqNA","hero_video_Ar6Ham","header_banner_MUPtRQ","inline_buttons_f7DDkA","flipped_boxes_kG6gXk","rich_text_gwEVLb","columns_block_HhremV","collection_showcase_TiBJeR","columns_block_AAVbUH","rich_text_YyxiLB","collection_showcase_RnD7cq","two_column_icon_image_c79Kr9","grid_image_xGVpcK","pagefly-home"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "top_notification_banner_yteqNA": {
+      "type": "top-notification-banner",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "notification_text": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
+        "bg_color": "#e42228"
+      }
+    },
+    "hero_video_Ar6Ham": {
+      "type": "hero-video",
+      "disabled": true,
+      "name": "Video hero",
+      "settings": {
+        "title": "",
+        "title_size": 80,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/382051e909d54eb2aed8040728bb32d0.mp4",
+        "overlay_opacity": 0,
+        "section_height": "650px",
+        "mobile_height": "auto"
+      }
+    },
+    "header_banner_MUPtRQ": {
+      "type": "header-banner",
+      "blocks": {
+        "image_ng66KH": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_2.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_1.jpg",
+            "banner_url": "shopify://collections/new-in",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_PFE9d8": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/2_For_80_-_Rotational_Banners_V2_22_For_80_-_Mobile_Banner_Option_1.jpg",
+            "image": "shopify://shop_images/2_For_80_-_Desktop_Banner_Option_2.jpg",
+            "banner_url": "https://bookings.skinkandy.com",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_PdCEic": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Mobile_Landing_Page_1.2.jpg",
+            "image": "shopify://shop_images/Desktop_Landing_Page_3.jpg",
+            "banner_url": "shopify://pages/kandy-club-giveaway",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_ng66KH",
+        "image_PFE9d8",
+        "image_PdCEic"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "inline_buttons_f7DDkA": {
+      "type": "inline-buttons",
+      "custom_css": [],
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "SHOP NOW",
+        "button_1_url": "shopify://collections/new-in",
+        "button_2_text": "BOOK NOW",
+        "button_2_url": "https://bookings.skinkandy.com",
+        "text_color": "#ffffff",
+        "bg_color": "#000000"
+      }
+    },
+    "flipped_boxes_kG6gXk": {
+      "type": "flipped-boxes",
+      "blocks": {
+        "boxes_zpCPhf": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_31.jpg",
+            "Title": "LOBES",
+            "description": "<p>The O.G. and our most popular piercing- the traditional lobe! Whether you're after just one lobe or two, your first, second, third or stacked lobe piercing- we got you!</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_tbcpHk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_30.jpg",
+            "Title": "HELIX",
+            "description": "<p>Helix piercings are positioned on or near the line where the curved outer cartilage rim (or Helix) meets the ear. Why not get a double or triple helix piercing!</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_mn8wG3": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_32_1.jpg",
+            "Title": "SEPTUM",
+            "description": "<p>A Septum piercing is properly placed when it passes through the small area of soft membrane between the tip of the nose and the cartilage that separates the nostrils. </p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_HhxQgk": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_34.jpg",
+            "Title": "NOSTRIL",
+            "description": "<p>Nostril piercings are our second most popular piercings. Typically placed on the side of the nose in or just below the crease where the cartilage is thinnest.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_8CTFjj": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": false,
+            "image": "shopify://shop_images/Group_33_1.jpg",
+            "Title": "FORWARD HELIX",
+            "description": "<p>Forward Helix piercings are positioned through the front of the<strong> </strong>curved cartilage rim, on the section of the Helix closer to the face. They sit opposite to a traditional Helix piercing.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        },
+        "boxes_wVQegA": {
+          "type": "boxes",
+          "settings": {
+            "no_flip": true,
+            "image": "shopify://shop_images/Rectangle_10.jpg",
+            "Title": "SEE OUR FULL RANGE OF PIERCING SERVICES",
+            "description": "<p>A Navel piercing frames the navel (or belly button), and usually passes through the upper hood of the navel. Suitability for this piercing depends on the anatomy of your navel.</p>",
+            "page_url": "shopify://pages/professional-body-piercing-services"
+          }
+        }
+      },
+      "block_order": [
+        "boxes_zpCPhf",
+        "boxes_tbcpHk",
+        "boxes_mn8wG3",
+        "boxes_HhxQgk",
+        "boxes_8CTFjj",
+        "boxes_wVQegA"
+      ],
+      "settings": {
+        "title": "TRENDING PIERCINGS"
+      }
+    },
+    "rich_text_gwEVLb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cLRihY": {
+          "type": "heading",
+          "settings": {
+            "title": "Your next ear stack starts here",
+            "heading_tag": "h2"
+          }
+        },
+        "page_BhxMKG": {
+          "type": "page",
+          "settings": {
+            "page_text": "homepage-dev"
+          }
+        },
+        "text_b6GqnX": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><a href=\"/pages/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\"><strong>See all body piercings included in the offer</strong></a></p>"
+          }
+        },
+        "button_B6Mjmb": {
+          "type": "button",
+          "settings": {
+            "link": "https://support.skinkandy.com/s/booking-form",
+            "link_text": "BOOK NOW",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_cLRihY",
+        "page_BhxMKG",
+        "text_b6GqnX",
+        "button_B6Mjmb"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_HhremV": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_XFLcLt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/Ear_Map_-_final-2_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_RadN3G": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "Your next ear stack starts here",
+            "title_size": "large",
+            "break_tag": false,
+            "title_tag": "h2",
+            "text": "<p>We offer a wide range of <strong>professional body piercings</strong>, from classic <strong>ear lobe piercings</strong> to cartilage, nose, and body piercings. Each piercing is performed by our highly trained team using industry-leading hygiene practices and high-quality jewellery for the best results. </p><p><strong>Ears</strong> – Lobes, Stacked Lobes, Helix, Conch, Tragus, Rook, Daith, Forward Helix, Industrial, Anti-Tragus, Outter Conch, Transverse Lobe, Snug and more.</p><p><strong>Face</strong> – Nostril, Septum, Eyebrow, Lip, Bridge, Ashley, Philtrum, Labret, Jestrum, Tongue, Smiley, Vertical Labret, Tongue Webbing.</p><p><strong>Body</strong> – Navel, Floating Navel and Nipple.</p><p><strong>Advanced – </strong>Industrial, Dermal, Surface, Cheek, Dhalia & many more options.</p><p><strong>Children’s Piercings</strong> – Safe & professional lobe piercings from <strong>6 months old</strong></p>",
+            "text_size": "small",
+            "button_label": "See all piercing Included",
+            "button_link": "shopify://pages/skinkandy-2-for-80-promotion",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_XFLcLt",
+        "text_block_RadN3G"
+      ],
+      "disabled": true,
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 1,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "collection_showcase_TiBJeR": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_bPqmL3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "EAR",
+            "url": "shopify://collections/cartilage-labret",
+            "image": "shopify://shop_images/image_19.jpg"
+          }
+        },
+        "image_3jRFGa": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NOSE",
+            "url": "shopify://collections/nose-jewellery",
+            "image": "shopify://shop_images/Rectangle_12_1.jpg"
+          }
+        },
+        "image_b6EctF": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NAVEL",
+            "url": "shopify://collections/belly",
+            "image": "shopify://shop_images/image-_20_aa9faa5e-4087-4d5a-995f-365a17951910.jpg"
+          }
+        },
+        "image_Nge4Bm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "LIP",
+            "url": "shopify://collections/lip",
+            "image": "shopify://shop_images/image_21.jpg"
+          }
+        },
+        "image_jm9bq3": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NIPPLE",
+            "url": "shopify://collections/nipple",
+            "image": "shopify://shop_images/image_22.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_bPqmL3",
+        "image_3jRFGa",
+        "image_b6EctF",
+        "image_Nge4Bm",
+        "image_jm9bq3"
+      ],
+      "settings": {
+        "title": "SHOP BY PIERCING",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/shop-all",
+        "bottom_border": false,
+        "enable_hover": true,
+        "get_product_list": false,
+        "collection_link": ""
+      }
+    },
+    "columns_block_AAVbUH": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_JUgX3f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_7.jpg",
+            "flip-image": "shopify://shop_images/DSC02872.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:All$2520ear",
+            "new_tab": false
+          }
+        },
+        "text_block_QQbbtk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_6.jpg",
+            "flip-image": "shopify://shop_images/DSC02600.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:Nose",
+            "new_tab": false
+          }
+        },
+        "text_block_qnPyxt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_8.jpg",
+            "flip-image": "shopify://shop_images/3178.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:collection_name:Body$2520Jewellery",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_JUgX3f",
+        "text_block_QQbbtk",
+        "text_block_qnPyxt"
+      ],
+      "disabled": true,
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "CURATE YOUR LOOK",
+        "description": "<p>Buy three get your fourth FREE on all fashion jewellery</p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_YyxiLB": {
+      "type": "rich-text",
+      "blocks": {
+        "button_riBJwy": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://collections/buy-3-get-one-free",
+            "link_text": "SHOP NOW",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_riBJwy"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "collection_showcase_RnD7cq": {
+      "type": "collection-showcase",
+      "settings": {
+        "title": "JUST LANDED",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/shop-all",
+        "bottom_border": true,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "new-in"
+      }
+    },
+    "two_column_icon_image_c79Kr9": {
+      "type": "two-column-icon-image",
+      "blocks": {
+        "title_block_XFEQTg": {
+          "type": "title_block",
+          "settings": {
+            "title": "THE ULTIMATE PIERCING EXPERIENCE BY OUR  {EXPERTLY} {TRAINED} {PIERCERS}",
+            "title_tag": "h1",
+            "description": "<p>SkinKandy are the premier destination for all piercing and piercing accessories. Our highly trained team of piercing professionals<strong> </strong>look forward to making your piercing dreams a reality. </p><p>Take the plunge and elevate your whole aesthetic with a new and fun piercing. Our exceptional standards will ensure you have the best piercing<strong> </strong>experience.</p>",
+            "button_text": "Book Now",
+            "button_url": "shopify://pages/professional-body-piercing-services",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_XFEQTg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_18_1.jpg",
+        "left_align": true,
+        "icon_column": false,
+        "bottom_margin": true,
+        "hide_mobile": false,
+        "hide_description": false,
+        "round_image": false,
+        "circle_drops": false,
+        "bottom_border": false,
+        "reduced_image_size": false,
+        "reduced_content_width": false
+      }
+    },
+    "grid_image_xGVpcK": {
+      "type": "grid-image",
+      "blocks": {
+        "image_NVjLjR": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_1_5.jpg",
+            "url": ""
+          }
+        },
+        "image_V8Fx64": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_6_2_1c319260-0854-4cbb-b776-4ebabf0ebaa2.jpg",
+            "url": ""
+          }
+        },
+        "image_tpipmG": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_3_6.jpg",
+            "url": ""
+          }
+        },
+        "image_Ah6kdW": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_4_2.jpg",
+            "url": ""
+          }
+        },
+        "image_yB9iCH": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_5_2.jpg",
+            "url": ""
+          }
+        },
+        "image_mVGzCR": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Image_2_10.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NVjLjR",
+        "image_V8Fx64",
+        "image_tpipmG",
+        "image_Ah6kdW",
+        "image_yB9iCH",
+        "image_mVGzCR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Vector.jpg",
+        "bottom_margin": false,
+        "title": "@SKINKANDY",
+        "url": "https://www.instagram.com/skinkandy/",
+        "description": ""
+      }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {}
+    }
+  },
+  "order": [
+    "top_notification_banner_yteqNA",
+    "hero_video_Ar6Ham",
+    "header_banner_MUPtRQ",
+    "inline_buttons_f7DDkA",
+    "flipped_boxes_kG6gXk",
+    "rich_text_gwEVLb",
+    "columns_block_HhremV",
+    "collection_showcase_TiBJeR",
+    "columns_block_AAVbUH",
+    "rich_text_YyxiLB",
+    "collection_showcase_RnD7cq",
+    "two_column_icon_image_c79Kr9",
+    "grid_image_xGVpcK",
+    "pagefly-home"
+  ]
+}

@@ -1,1 +1,61 @@
-{"sections":{"header_banner_48iWtV":{"type":"header-banner","blocks":{"image_dbpyFz":{"type":"image","settings":{"disable_overlay":false,"image_mobile":"{{ page.metafields.custom.header_banner_mobile.value }}","image":"{{ page.metafields.custom.header_banner.value }}","banner_url":"","heading":"{{ page.title }}","short_description":"","button_text":"","button_url":"","align_text":"left"}}},"block_order":["image_dbpyFz"],"disabled":true,"settings":{"title":"","banner_size":"small-banner","small_overlay":true,"shuffle":false}},"main":{"type":"main-page","settings":{"breadcrumbs":false,"heading":false,"content":true}},"raw_code_dnrBhw":{"type":"raw-code","settings":{"custom_html":"<style>\nol {\n    margin: 0 0 15px 15px;\n    font-weight: 700;\n    font-size: 16px;\n}\n<\/style>"}}},"order":["header_banner_48iWtV","main","raw_code_dnrBhw"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_banner_48iWtV": {
+      "type": "header-banner",
+      "blocks": {
+        "image_dbpyFz": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": false,
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "",
+            "heading": "{{ page.title }}",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_dbpyFz"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": true
+      }
+    },
+    "raw_code_dnrBhw": {
+      "type": "raw-code",
+      "settings": {
+        "custom_html": "<style>\nol {\n    margin: 0 0 15px 15px;\n    font-weight: 700;\n    font-size: 16px;\n}\n</style>"
+      }
+    }
+  },
+  "order": [
+    "header_banner_48iWtV",
+    "main",
+    "raw_code_dnrBhw"
+  ]
+}

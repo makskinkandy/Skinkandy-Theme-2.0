@@ -1,1 +1,902 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"breadcrumbs":false,"heading":false,"content":false}},"rich_text_z9P3gK":{"type":"rich-text","blocks":{"heading_LKmJ9J":{"type":"heading","settings":{"title":"PIERCING AGE, ID, AND CONSENT","heading_tag":"h1"}},"text_W8knjm":{"type":"text","settings":{"enlarge_text":false,"text":"<p>At SkinKandy we want nothing more than to help you to achieve your piercing goals. As professionals who care for your safety and wellbeing you may be asked to verify your age prior to your procedure.<br\/><br\/>Our younger clients under 16 years of age (or under 18 years in WA) will also need a parent or legal guardian to co-sign the consent form before we can proceed.<\/p>"}}},"block_order":["heading_LKmJ9J","text_W8knjm"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":false}},"custom_faq_e8RzQx":{"type":"custom-faq","blocks":{"question_rJ9YGD":{"type":"question","settings":{"question":"When do I need to show ID?","answer":"<p>At SkinKandy we take our responsibility to protect the safety of our customers seriously. We're committed to ensuring that legislated requirements regarding age and consent are upheld, meaning you may be asked to provide proof of age and\/or guardianship prior to your piercing procedure.<br\/><br\/><a href=\"https:\/\/bookings.skinkandy.com\/\" target=\"_blank\" title=\"https:\/\/bookings.skinkandy.com\/\">BOOK A PIERCING NOW<\/a><\/p>"}},"question_gK6w4p":{"type":"question","settings":{"question":"How old do I need to be?","answer":"<p>6 months - 1st Lobe Piercing with Cartridge System<br\/>5 years - 1st Lobe Piercing with Needle<br\/>10 years - 2nd Lobe Piercings (Seconds)<br\/>13 Years - Standard Needle Piercings (including 3rd Lobes or Thirds)<br\/>16 Years - Standard Piercings without Parental Consent (except in WA)<br\/>16-17 years - Advanced Piercings with Parental Consent<br\/>18 years - All Piercings including Advanced and Restricted 18+<\/p>"}},"question_Lc6eUG":{"type":"question","settings":{"question":"Lobe Piercings with Cartridge: Ages 6 months - 15 years","answer":"<p>You will need a parent or legal guardian to consent to the procedure.Your Parent or Legal Guardian must verbally verify your age and DOB, provide PHOTO ID for themselves and proof of guardianship.<\/p>"}},"question_kJWMWg":{"type":"question","settings":{"question":"Standard (needle) Piercings : Ages 5 - 15 years (5-17 years in WA)","answer":"<p>You must be able to provide ID that confirms your NAME, and DOB such as a birth certificate, formal school ID (with or without photo), Medicare App, Centrelink App, passport etc.<br\/><br\/>You will need a parent or legal guardian to consent to the procedure Your Parent or Legal Guardian must provide PHOTO ID for themselves and proof of guardianship.<\/p>"}},"question_YEEQTc":{"type":"question","settings":{"question":"All Piercings: Ages 16 years and over  (18 years AND OVER in WA)","answer":"<p>You must be 16 years and over to receive a piercing without parental consent (or 18 years in WA). If you are over 16 but look under the age of 25 you WILL be asked to provide ID that confirms your NAME, DOB and PHOTO.<br\/><br\/>This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB).<\/p>"}},"question_Dcdpmz":{"type":"question","settings":{"question":"Restricted 18+ Piercings:","answer":"<p>A single form of approved PHOTO ID must be presented for 18+ Restricted Piercings. This must be an original copy - pictures or photos of licences etc will not be accepted.<br\/><br\/>Restricted piercings, including nipple and genital piercings cannot be performed on anyone under the age of 18 years - even if you have parental or guardian consent.<\/p><p><a href=\"https:\/\/support.skinkandy.com\/s\/booking-form\" target=\"_blank\">BOOK A PIERCING NOW<\/a><\/p>"}},"question_UVAYMA":{"type":"question","settings":{"question":"How do I prove parental\/guardianship?","answer":"<p>You must be a legal guardian\/parent to consent to a piercing procedure for a child under the age of 16 (or 18 years in WA), and be willing to sign a legally binding consent form prior to the procedure. Our staff need to be reasonably satisfied that there is a genuine parental relationship between yourself and the child being pierced, and will therefore ask to see ID and a form of proof of guardianship.<br\/><br\/>The easiest way to help verify your parental relationship is to provide a Medicare Card or birth certificate with the names of both the parent\/guardian and the person being pierced on the same card (or on separate cards with the same Medicare number), or log into your Medicare, Centrelink or Mygov app showing all names linked to the same account.<br\/><br\/>If you are a legal guardian or legal carer you may be asked to show a guardianship order, Centrelink documentation or Centrelink App showing both names linked.<br\/><br\/>Written approval is required from the Department of Childrens Services for any piercing procedures to be performed on foster children.<\/p><p><a href=\"https:\/\/support.skinkandy.com\/s\/booking-form\" target=\"_blank\">BOOK A PIERCING NOW<\/a><\/p>"}}},"block_order":["question_rJ9YGD","question_gK6w4p","question_Lc6eUG","question_kJWMWg","question_YEEQTc","question_Dcdpmz","question_UVAYMA"],"name":"Custom FAQ","settings":{"title":"","narrow":false,"position":"left","hide_image":false,"max_width":996}},"columns_block_NR8nF8":{"type":"columns-block","blocks":{"text_block_NTyRmj":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/1-drivers-license_bd50e12a-1e19-472d-9bef-0bc0faf40c3a.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_X8AyT7":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"DRIVERS LICENCE, RIDERS LICENCE, & MARINE LICENCE","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Your licence must be current. Expired licences may be accepted if expired no more than 12 months ago. This includes learners and provisional licences.<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_NTyRmj","text_block_X8AyT7"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"LIST OF ACCEPTED ID'S","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":1116}},"columns_block_h8r3rA":{"type":"columns-block","blocks":{"text_block_EtdQUf":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/2-Digital-ID.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_h8NGy3":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"DIGITAL DRIVERS LICENCE, RIDERS LICENCE, LEARNERS OR PROVISIONAL LICENCE","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Allow staff to witness you logging into your SAGOV or Service NSW app to site your digital licence<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_EtdQUf","text_block_h8NGy3"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_yPeVHN":{"type":"columns-block","blocks":{"text_block_KXqdkw":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/3-Proof-of-Age-Card.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_UeFCQR":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"PROOF OF AGE OR PHOTO ID CARD","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>These state government issued photo ID cards are available from 15 years of age in QLD, 16 in NSW & WA, or 18 years in VIC, ACT or SA.<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_KXqdkw","text_block_UeFCQR"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_4N6Xjp":{"type":"columns-block","blocks":{"text_block_fJtam6":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/4-Passport.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_iFFKRm":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"PASSPORT - AUSTRALIAN OR INTERNATIONAL, VISA CARD OR IMMICARD","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>A valid Australian or International Passport, Visa Immicard (Immigration Evidence Card)<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_fJtam6","text_block_iFFKRm"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_PfjgFF":{"type":"columns-block","blocks":{"text_block_tQJRJH":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/5-Australian-Post-Keypass.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_Wf6NWa":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"AUSTRALIA POST KEYPASS & DIGITAL ID","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Keypass are issued by Australia post and are accessible to ages from 18 yearsYou can also show our staff your Digital ID log in<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_tQJRJH","text_block_Wf6NWa"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_eBL7J8":{"type":"columns-block","blocks":{"text_block_a769aF":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/6-Formal-School-ID.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_ENbG87":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"FORMAL SCHOOL ID OR SCHOOL PORTAL LOG IN","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_a769aF","text_block_ENbG87"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_emXqDz":{"type":"columns-block","blocks":{"text_block_VFKCzh":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/7-Firearms-License.png","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_HMne8V":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"FIREARMS OR SHOOTERS LICENCE","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>A current government issued firearms or shooters licence showing name, DOB and photo.<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_VFKCzh","text_block_HMne8V"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":false,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_HqfyQ8":{"type":"columns-block","blocks":{"text_block_cz7YjA":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/mix1.png","video":"","center-content":false,"title":"STUDENT ID WITH PHOTO & NAME ONLY","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Formal Card or Digital Portal log-in<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_zGATqm":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/mix1b.png","video":"","center-content":false,"title":"BIRTH CERTIFICATE WITH NAME & DOB","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Must be an Original or Certified copy<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_cz7YjA","text_block_zGATqm"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"{MIX} & MATCH","description":"<p>We understand that not everyone has access to a single form of PHOTO ID that verifies Name, DOB and your photo. We'll also accept 2 ID types that verify all 3 requirements (Name, DOB and PHOTO).<br\/><br\/><strong>Below are some examples of acceptable ID combinations:<\/strong><\/p>","button_text":"BOOK A PIERCING NOW","button_url":"https:\/\/bookings.skinkandy.com\/","count":2,"bottom_space":false,"hide_line":true,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"columns_block_cheWbF":{"type":"columns-block","blocks":{"text_block_kwDhNC":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/mix1.png","video":"","center-content":false,"title":"STUDENT ID WITH PHOTO & NAME ONLY","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Formal Card or Digital Portal log-in<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_KT3eWA":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/mix1c.png","video":"","center-content":false,"title":"MYGOV, CENTRELINK OR MEDICARE PORTAL","title_size":"small","break_tag":false,"title_tag":"h3","text":"<p>Show staff your log in and verify your Name and DOB or Log into your Service NSW or Service VIC App and show staff your profile confirming your name & DOB.<br\/><br\/><\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_kwDhNC","text_block_KT3eWA"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"<p><strong>Another example below:<\/strong><\/p>","button_text":"","button_url":"","count":2,"bottom_space":false,"hide_line":true,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":996}},"rich_text_M9Hzyx":{"type":"rich-text","blocks":{"heading_UjUQQA":{"type":"heading","settings":{"title":"Ready for a SkinKandy piercing experience?","heading_tag":"h2"}},"button_iXP3ii":{"type":"button","settings":{"link":"shopify:\/\/pages\/professional-body-piercing-services","link_text":"Piercing Menu & Prices","css_class":""}}},"block_order":["heading_UjUQQA","button_iXP3ii"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":false}},"columns_block_GkdUWL":{"type":"columns-block","blocks":{"text_block_wL6kjc":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"image":"shopify:\/\/shop_images\/7R506589.jpg","video":"","center-content":false,"title":"","title_size":"small","break_tag":false,"title_tag":"h3","text":"","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_qx7hKA":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"short-image":false,"flip-image-enable":false,"video":"","center-content":true,"title":"WANT TO KNOW MORE?","title_size":"large","break_tag":false,"title_tag":"h3","text":"<p>Want to know if you meet our piercing requirements? Call your nearest store. All piercings require a quick anatomy check. Come and see us for a free consultation!<br\/><\/p>","text_size":"small","button_label":"Find a Store","button_link":"shopify:\/\/pages\/store-locations","new_tab":false}}},"block_order":["text_block_wL6kjc","text_block_qx7hKA"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title_tag":"h2","title":"","description":"","button_text":"","button_url":"","count":2,"bottom_space":true,"hide_line":true,"disable_grid":false,"two_column":false,"mobile_slider":false,"max_width":1704}}},"order":["main","rich_text_z9P3gK","custom_faq_e8RzQx","columns_block_NR8nF8","columns_block_h8r3rA","columns_block_yPeVHN","columns_block_4N6Xjp","columns_block_PfjgFF","columns_block_eBL7J8","columns_block_emXqDz","columns_block_HqfyQ8","columns_block_cheWbF","rich_text_M9Hzyx","columns_block_GkdUWL"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": false
+      }
+    },
+    "rich_text_z9P3gK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LKmJ9J": {
+          "type": "heading",
+          "settings": {
+            "title": "PIERCING AGE, ID, AND CONSENT",
+            "heading_tag": "h1"
+          }
+        },
+        "text_W8knjm": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>At SkinKandy we want nothing more than to help you to achieve your piercing goals. As professionals who care for your safety and wellbeing you may be asked to verify your age prior to your procedure.<br/><br/>Our younger clients under 16 years of age (or under 18 years in WA) will also need a parent or legal guardian to co-sign the consent form before we can proceed.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LKmJ9J",
+        "text_W8knjm"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "custom_faq_e8RzQx": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_rJ9YGD": {
+          "type": "question",
+          "settings": {
+            "question": "When do I need to show ID?",
+            "answer": "<p>At SkinKandy we take our responsibility to protect the safety of our customers seriously. We're committed to ensuring that legislated requirements regarding age and consent are upheld, meaning you may be asked to provide proof of age and/or guardianship prior to your piercing procedure.<br/><br/><a href=\"https://bookings.skinkandy.com/\" target=\"_blank\" title=\"https://bookings.skinkandy.com/\">BOOK A PIERCING NOW</a></p>"
+          }
+        },
+        "question_gK6w4p": {
+          "type": "question",
+          "settings": {
+            "question": "How old do I need to be?",
+            "answer": "<p>6 months - 1st Lobe Piercing with Cartridge System<br/>5 years - 1st Lobe Piercing with Needle<br/>10 years - 2nd Lobe Piercings (Seconds)<br/>13 Years - Standard Needle Piercings (including 3rd Lobes or Thirds)<br/>16 Years - Standard Piercings without Parental Consent (except in WA)<br/>16-17 years - Advanced Piercings with Parental Consent<br/>18 years - All Piercings including Advanced and Restricted 18+</p>"
+          }
+        },
+        "question_Lc6eUG": {
+          "type": "question",
+          "settings": {
+            "question": "Lobe Piercings with Cartridge: Ages 6 months - 15 years",
+            "answer": "<p>You will need a parent or legal guardian to consent to the procedure.Your Parent or Legal Guardian must verbally verify your age and DOB, provide PHOTO ID for themselves and proof of guardianship.</p>"
+          }
+        },
+        "question_kJWMWg": {
+          "type": "question",
+          "settings": {
+            "question": "Standard (needle) Piercings : Ages 5 - 15 years (5-17 years in WA)",
+            "answer": "<p>You must be able to provide ID that confirms your NAME, and DOB such as a birth certificate, formal school ID (with or without photo), Medicare App, Centrelink App, passport etc.<br/><br/>You will need a parent or legal guardian to consent to the procedure Your Parent or Legal Guardian must provide PHOTO ID for themselves and proof of guardianship.</p>"
+          }
+        },
+        "question_YEEQTc": {
+          "type": "question",
+          "settings": {
+            "question": "All Piercings: Ages 16 years and over  (18 years AND OVER in WA)",
+            "answer": "<p>You must be 16 years and over to receive a piercing without parental consent (or 18 years in WA). If you are over 16 but look under the age of 25 you WILL be asked to provide ID that confirms your NAME, DOB and PHOTO.<br/><br/>This can be either be one form of ID showing your Name, DOB and Photo OR 2 forms of ID which confirm these requirements (eg: a formal school ID that shows Name and Photo AND a birth certificate that shows matching Name and DOB).</p>"
+          }
+        },
+        "question_Dcdpmz": {
+          "type": "question",
+          "settings": {
+            "question": "Restricted 18+ Piercings:",
+            "answer": "<p>A single form of approved PHOTO ID must be presented for 18+ Restricted Piercings. This must be an original copy - pictures or photos of licences etc will not be accepted.<br/><br/>Restricted piercings, including nipple and genital piercings cannot be performed on anyone under the age of 18 years - even if you have parental or guardian consent.</p><p><a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\">BOOK A PIERCING NOW</a></p>"
+          }
+        },
+        "question_UVAYMA": {
+          "type": "question",
+          "settings": {
+            "question": "How do I prove parental/guardianship?",
+            "answer": "<p>You must be a legal guardian/parent to consent to a piercing procedure for a child under the age of 16 (or 18 years in WA), and be willing to sign a legally binding consent form prior to the procedure. Our staff need to be reasonably satisfied that there is a genuine parental relationship between yourself and the child being pierced, and will therefore ask to see ID and a form of proof of guardianship.<br/><br/>The easiest way to help verify your parental relationship is to provide a Medicare Card or birth certificate with the names of both the parent/guardian and the person being pierced on the same card (or on separate cards with the same Medicare number), or log into your Medicare, Centrelink or Mygov app showing all names linked to the same account.<br/><br/>If you are a legal guardian or legal carer you may be asked to show a guardianship order, Centrelink documentation or Centrelink App showing both names linked.<br/><br/>Written approval is required from the Department of Childrens Services for any piercing procedures to be performed on foster children.</p><p><a href=\"https://support.skinkandy.com/s/booking-form\" target=\"_blank\">BOOK A PIERCING NOW</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_rJ9YGD",
+        "question_gK6w4p",
+        "question_Lc6eUG",
+        "question_kJWMWg",
+        "question_YEEQTc",
+        "question_Dcdpmz",
+        "question_UVAYMA"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_NR8nF8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_NTyRmj": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/1-drivers-license_bd50e12a-1e19-472d-9bef-0bc0faf40c3a.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_X8AyT7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "DRIVERS LICENCE, RIDERS LICENCE, & MARINE LICENCE",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Your licence must be current. Expired licences may be accepted if expired no more than 12 months ago. This includes learners and provisional licences.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_NTyRmj",
+        "text_block_X8AyT7"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "LIST OF ACCEPTED ID'S",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1116
+      }
+    },
+    "columns_block_h8r3rA": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_EtdQUf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/2-Digital-ID.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_h8NGy3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "DIGITAL DRIVERS LICENCE, RIDERS LICENCE, LEARNERS OR PROVISIONAL LICENCE",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Allow staff to witness you logging into your SAGOV or Service NSW app to site your digital licence</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_EtdQUf",
+        "text_block_h8NGy3"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_yPeVHN": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_KXqdkw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/3-Proof-of-Age-Card.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_UeFCQR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "PROOF OF AGE OR PHOTO ID CARD",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>These state government issued photo ID cards are available from 15 years of age in QLD, 16 in NSW & WA, or 18 years in VIC, ACT or SA.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_KXqdkw",
+        "text_block_UeFCQR"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_4N6Xjp": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_fJtam6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/4-Passport.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_iFFKRm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "PASSPORT - AUSTRALIAN OR INTERNATIONAL, VISA CARD OR IMMICARD",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>A valid Australian or International Passport, Visa Immicard (Immigration Evidence Card)</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fJtam6",
+        "text_block_iFFKRm"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_PfjgFF": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_tQJRJH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/5-Australian-Post-Keypass.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_Wf6NWa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "AUSTRALIA POST KEYPASS & DIGITAL ID",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Keypass are issued by Australia post and are accessible to ages from 18 yearsYou can also show our staff your Digital ID log in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_tQJRJH",
+        "text_block_Wf6NWa"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_eBL7J8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_a769aF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/6-Formal-School-ID.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_ENbG87": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "FORMAL SCHOOL ID OR SCHOOL PORTAL LOG IN",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>School or university students can use a formal school ID card showing name, photo and DOB or show our team your digital school portal profile showing Name, photo and DOB. Expiry dates (if listed) should be less than 12 months old.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_a769aF",
+        "text_block_ENbG87"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_emXqDz": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_VFKCzh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/7-Firearms-License.png",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_HMne8V": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "FIREARMS OR SHOOTERS LICENCE",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>A current government issued firearms or shooters licence showing name, DOB and photo.</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VFKCzh",
+        "text_block_HMne8V"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": false,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_HqfyQ8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_cz7YjA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/mix1.png",
+            "video": "",
+            "center-content": false,
+            "title": "STUDENT ID WITH PHOTO & NAME ONLY",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Formal Card or Digital Portal log-in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_zGATqm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/mix1b.png",
+            "video": "",
+            "center-content": false,
+            "title": "BIRTH CERTIFICATE WITH NAME & DOB",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Must be an Original or Certified copy</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_cz7YjA",
+        "text_block_zGATqm"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "{MIX} & MATCH",
+        "description": "<p>We understand that not everyone has access to a single form of PHOTO ID that verifies Name, DOB and your photo. We'll also accept 2 ID types that verify all 3 requirements (Name, DOB and PHOTO).<br/><br/><strong>Below are some examples of acceptable ID combinations:</strong></p>",
+        "button_text": "BOOK A PIERCING NOW",
+        "button_url": "https://bookings.skinkandy.com/",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "columns_block_cheWbF": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_kwDhNC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/mix1.png",
+            "video": "",
+            "center-content": false,
+            "title": "STUDENT ID WITH PHOTO & NAME ONLY",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Formal Card or Digital Portal log-in</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_KT3eWA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/mix1c.png",
+            "video": "",
+            "center-content": false,
+            "title": "MYGOV, CENTRELINK OR MEDICARE PORTAL",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Show staff your log in and verify your Name and DOB or Log into your Service NSW or Service VIC App and show staff your profile confirming your name & DOB.<br/><br/></p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kwDhNC",
+        "text_block_KT3eWA"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "<p><strong>Another example below:</strong></p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "rich_text_M9Hzyx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UjUQQA": {
+          "type": "heading",
+          "settings": {
+            "title": "Ready for a SkinKandy piercing experience?",
+            "heading_tag": "h2"
+          }
+        },
+        "button_iXP3ii": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/professional-body-piercing-services",
+            "link_text": "Piercing Menu & Prices",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UjUQQA",
+        "button_iXP3ii"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_GkdUWL": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_wL6kjc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/7R506589.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_qx7hKA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "WANT TO KNOW MORE?",
+            "title_size": "large",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Want to know if you meet our piercing requirements? Call your nearest store. All piercings require a quick anatomy check. Come and see us for a free consultation!<br/></p>",
+            "text_size": "small",
+            "button_label": "Find a Store",
+            "button_link": "shopify://pages/store-locations",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wL6kjc",
+        "text_block_qx7hKA"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": true,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_z9P3gK",
+    "custom_faq_e8RzQx",
+    "columns_block_NR8nF8",
+    "columns_block_h8r3rA",
+    "columns_block_yPeVHN",
+    "columns_block_4N6Xjp",
+    "columns_block_PfjgFF",
+    "columns_block_eBL7J8",
+    "columns_block_emXqDz",
+    "columns_block_HqfyQ8",
+    "columns_block_cheWbF",
+    "rich_text_M9Hzyx",
+    "columns_block_GkdUWL"
+  ]
+}
