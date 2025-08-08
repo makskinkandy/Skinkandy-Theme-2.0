@@ -16493,7 +16493,3 @@ button.action.previous.material_outlined-button {
 .section-content__text.expanded div {
   margin-bottom: -10px !important;
 }
-
-.section-content__text > div {
-  margin-bottom: 0;
-}
