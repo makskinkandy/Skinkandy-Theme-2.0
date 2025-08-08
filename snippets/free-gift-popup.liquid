@@ -1,0 +1,354 @@
+<!-- FREE GIFT POPUP SECTION -->
+  {% assign skus = settings.variant_sku | split: "," %}
+  <div id="free-gift-popup">
+    <div class="free-gift-popup__wrapper">
+      <h3><strong>You've unlocked a free gift!</strong></h3>
+      <p>Choose one of the gifts below:</p>
+      <div id="gift-options" class="gift-wrapper">
+        {% for product in settings.free-gift %}
+          {% assign image_url = product.featured_image | image_url: width: 400 %}
+          <div class="gift-item">
+            {% if product.variants.size > 1 %}
+                {% assign selected = false %}
+                {% for variant in product.variants %}
+                  {% assign trimmed_sku = variant.sku | strip %}
+                  {% if skus contains trimmed_sku %}
+                      <img src="{{ variant.image | image_url: width: 400 }}" alt="{{ product.title }}" class="gift-variant-image">
+                  {% endif %}
+                {% endfor %}
+            {% else %}
+              <img src="{{ image_url }}" alt="{{ product.title }}">
+            {% endif %}
+            <p>{{ product.title }}</p>
+      
+            {% if product.variants.size > 1 %}
+              <select class="gift-variant-selector">
+                {% assign selected = false %}
+
+                {% for variant in product.variants %}
+                  {% assign trimmed_sku = variant.sku | strip %}
+                  
+                  {% if skus contains trimmed_sku %}
+                    <option 
+                        data-image="{{ variant.image | image_url: width: 400  }}"
+                        value="{{ variant.id }}" 
+                        {% unless variant.available %}disabled{% endunless %}
+                        {% if variant.available and selected == false %}
+                          selected
+                          {% assign selected = true %}
+                        {% endif %}
+                      >
+                        {{ variant.title }}{% unless variant.available %} — Out of stock{% endunless %}
+                      </option>
+                  {% endif %}
+                {% endfor %}
+                
+              </select>
+            {% else %}
+              <input type="hidden" class="gift-variant-selector" value="{{ product.variants.first.id }}">
+            {% endif %}
+      
+            <button class="gift-btn btn btn--primary add-to-cart"
+              data-title="{{ product.title | escape }}"
+              data-image="{{ image_url }}">
+              Pick me
+            </button>
+          </div>
+        
+        {% endfor %}
+      </div>
+      <button id="close-popup">X</button>
+    </div>
+  </div>
+  
+  <style>
+    .gift-variant-selector option[disabled] {
+      color: #aaa;
+    }
+  </style>
+  
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function bindGiftVariantSelectors() {
+        document.querySelectorAll(".gift-variant-selector").forEach(function (selectBox) {
+          if (selectBox.dataset.bound === "true") return; // prevent double-binding
+          selectBox.dataset.bound = "true";
+
+          selectBox.addEventListener("change", function () {
+            const selectedOption = this.options[this.selectedIndex];
+            const imageUrl = selectedOption.dataset.image;
+            const wrapper = this.closest(".gift-item");
+            const imageEl = wrapper.querySelector(".gift-variant-image");
+
+            if (imageEl && imageUrl) {
+              imageEl.src = imageUrl;
+            }
+          });
+        });
+      }
+      
+      function initSlickSlider() {
+        const slider = document.querySelector('.gift-wrapper');
+        if (window.innerWidth <= 768) {
+
+          if (!slider.classList.contains('slick-initialized')) {
+            $(slider).slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 2000,
+              variableWidth: true,
+              dots: false,
+              infinite: true
+            });
+            $(slider).on('init afterChange', function () {
+              bindGiftVariantSelectors();
+            });
+          }
+        } else {
+          if (slider.classList.contains('slick-initialized')) {
+            $(slider).slick('unslick');
+          }
+        }
+      }
+  
+      initSlickSlider();
+      bindGiftVariantSelectors();
+
+      window.addEventListener('resize', function () {
+        initSlickSlider();
+      });
+    });
+  </script>
+
+  {% assign discount_code = "SKAFTERPAY25" %}
+  {% assign gift_code = "KandyClubAfterPay" %}
+
+  {% assign matched_variant_ids = "" %}
+
+  {% for product in settings.free-gift %}
+    {% for variant in product.variants %}
+      {% assign trimmed_sku = variant.sku | strip %}
+      {% if skus contains trimmed_sku %}
+        {% assign matched_variant_ids = matched_variant_ids | append: variant.id | append: "," %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign variant_id_array = matched_variant_ids | split: "," | uniq %}
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const giftVariantIds = [
+      {% for id in variant_id_array %}
+        {% unless id == "" %}{{ id }},{% endunless %}
+      {% endfor %}
+    ];
+    const popup = document.getElementById("free-gift-popup");
+  
+    console.log(giftVariantIds)
+    
+    function showPopup() {
+      popup.classList.add("show");
+    }
+  
+    function hidePopup() {
+      popup.classList.remove("show");
+    }
+  
+    function disableAllButtons(message = "Gift Added") {
+      document.querySelectorAll(".gift-btn").forEach(btn => {
+        btn.disabled = true;
+        btn.textContent = message;
+        btn.style.opacity = "0.6";
+      });
+    }
+  
+    function enableAllButtons(message = "Pick me") {
+      document.querySelectorAll(".gift-btn").forEach(btn => {
+        btn.disabled = false;
+        btn.textContent = message;
+        btn.style.opacity = "1";
+      });
+    }
+
+    function applyDiscountAndStay(code) {
+      const currentPath = window.location.pathname + window.location.search;
+      const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
+      fetch(discountUrl).catch(() => {
+        // Fail silently
+        console.log("ERROR")
+      });
+    }
+  
+    function checkCartAndPopup() {
+      fetch('/cart.js')
+        .then(res => res.json())
+        .then(cart => {
+          const subtotal = cart.total_price / 100;
+  
+          const hasSpecificDiscount = cart.discount_codes?.some(
+            d => d.code === "{{ discount_code }}"
+          ) || false;
+  
+          const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+  
+          if (giftInCart && subtotal < 100) {
+            const giftItem = cart.items.find(i => giftVariantIds.includes(i.variant_id));
+            fetch('/cart/change.js', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ id: giftItem.key, quantity: 0 })
+            }).then(() => {
+
+                setTimeout(() => {
+                  document.dispatchEvent(new CustomEvent('cart:build', { detail: { cart } }));
+                }, 500);
+                
+                return;
+
+              });
+          }
+  
+          if (giftInCart) {
+            disableAllButtons();
+          } else {
+            enableAllButtons(); // 👈 NEW LINE
+            if (subtotal >= 100 && hasSpecificDiscount) {
+              showPopup();
+            } else {
+              hidePopup();
+            }
+          }
+          
+        });
+    }
+  
+    checkCartAndPopup();
+  
+    (function () {
+      const originalFetch = window.fetch;
+      window.fetch = async function (...args) {
+        const response = await originalFetch.apply(this, args);
+        const url = args[0];
+        if (typeof url === "string" && (
+          url.includes("/cart/add.js") ||
+          url.includes("/cart/change.js") ||
+          url.includes("/cart/update.js")
+        )) {
+          response.clone().json().then(() => {
+            setTimeout(checkCartAndPopup, 500);
+          });
+        }
+        return response;
+      };
+    })();
+  
+    document.addEventListener("cart:build", checkCartAndPopup);
+  
+    document.querySelectorAll(".gift-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const giftItem = this.closest(".gift-item");
+        const select = giftItem.querySelector(".gift-variant-selector");
+        const variantId = parseInt(select.value);
+        
+        fetch('/cart.js')
+          .then(res => res.json())
+          .then(cart => {
+            const hasSpecificDiscount = cart.discount_codes?.some(
+              d => d.code === "{{ discount_code }}"
+            ) || false;
+  
+            const alreadyHasGift = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+            const subtotal = cart.total_price / 100;
+  
+            if (alreadyHasGift) {
+              alert("🚫 Only one free gift is allowed per order.");
+              disableAllButtons();
+              hidePopup();
+              return;
+            }
+  
+            if (subtotal >= 100 && hasSpecificDiscount) {
+              fetch('/cart/add.js', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  items: [{
+                    id: variantId,
+                    quantity: 1,
+                    properties: {
+                      source: "Free Gift Promo"
+                    }
+                  }]
+                })
+              }).then(() => {
+
+                applyDiscountAndStay('{{ gift_code }}');
+
+                setTimeout(() => {
+                  document.dispatchEvent(new CustomEvent('cart:build', { detail: { cart } }));
+                }, 500);
+
+                setTimeout(() => {
+                  document.querySelector(".js-drawer-open-cart").click();
+                }, 600);
+
+                setTimeout(() => {
+                  hidePopup();
+                }, 600);
+                  
+
+              });
+            } else {
+              alert("🚫 You are no longer eligible for the gift.");
+              hidePopup();
+            }
+          });
+      });
+    });
+  
+    document.getElementById("close-popup").addEventListener("click", hidePopup);
+  
+    document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
+      form.addEventListener('submit', function (e) {
+        const formData = new FormData(this);
+        const variantId = parseInt(formData.get("id"));
+  
+        if (giftVariantIds.includes(variantId)) {
+          e.preventDefault();
+          fetch('/cart.js')
+            .then(res => res.json())
+            .then(cart => {
+              const subtotal = cart.total_price / 100;
+              const hasSpecificDiscount = cart.discount_codes?.some(
+                d => d.code === "{{ discount_code }}"
+              ) || false;
+  
+              const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+  
+              if (giftInCart || !(subtotal >= 100 && hasSpecificDiscount)) {
+                return;
+              } else {
+                this.submit();
+              }
+            });
+        }
+      });
+    });
+
+    document.querySelectorAll(".gift-variant-selector").forEach(function (selectBox) {
+      selectBox.addEventListener("change", function () {
+        const selectedOption = this.options[this.selectedIndex];
+        const imageUrl = selectedOption.dataset.image;
+        const wrapper = this.closest(".gift-item");
+        const imageEl = wrapper.querySelector(".gift-variant-image");
+
+        if (imageEl && imageUrl) {
+          imageEl.src = imageUrl;
+        }
+      });
+    });
+  });
+  </script>

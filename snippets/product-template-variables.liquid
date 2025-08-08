@@ -52,7 +52,6 @@
             "offers": {
               "@type": "Offer",
               "name": "{{ product.title }} - {{ variant.title }}",
-              "price": {{ variant.price | divided_by: 100.00 | json }},
               "priceCurrency": "AUD",
               "itemCondition": "http://schema.org/NewCondition",
               "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ variant.id }}",

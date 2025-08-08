@@ -12,6 +12,37 @@
     {% include 'booster-seo' %}
     {% include 'starapps-core' %}
 
+    {% capture contentQueryString %}{{ content_for_header }}{% endcapture %}
+    {% assign pageParams = contentQueryString
+      | split: '"pageurl":"'
+      | last
+      | split: '"'
+      | first
+      | split: '.myshopify.com'
+      | last
+      | split: '?'
+      | last
+      | replace: '\/', '/'
+      | replace: '%20', ' '
+      | replace: '\u0026', '&'
+      | split: '&'
+    %}
+  
+    {% assign show_fake_404 = false %}
+    {% assign block_keywords = 'hack,snapchat,kungx.cc' | split: ',' %}
+    
+    {% for param in pageParams %}
+      {% for keyword in block_keywords %}
+        {% if param contains keyword %}
+          {% assign show_fake_404 = true %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    
+    {% if show_fake_404 %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
 
     <script>
       var bcpo_product={{ product | json }}; {% if product.metafields.bcpo.bcpo_data %}var bcpo_data={{ product.metafields.bcpo.bcpo_data }};{% endif %} {% if shop.metafields.bcpo.bcpo_settings %}var bcpo_settings={{ shop.metafields.bcpo.bcpo_settings }};{% endif %}var inventory_quantity = [];{% for v in product.variants %}inventory_quantity.push({{ v.inventory_quantity }});{% endfor %}if(bcpo_product) { for (var i = 0; i < bcpo_product.variants.length; i += 1) { bcpo_product.variants[i].inventory_quantity = inventory_quantity[i]; }}window.bcpo = window.bcpo || {}; bcpo.cart = {{ cart | json }}; bcpo.ogFormData = FormData;
@@ -53,6 +84,7 @@
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
     
     {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'free-gift.css' | asset_url | stylesheet_tag }}
     
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -448,6 +480,28 @@
           });
         </script>
       {% endif %}
-    
+
+    {% assign website_path = request.locale.root_url | remove_first: '/' %}
+      {% if website_path == "en-nz" %}
+        <script>
+          document.querySelectorAll('a[href*="https://bookings.skinkandy.com/"]').forEach(function(link) {
+            link.href = "https://bookings.skinkandy.com/?locale=en-nz";
+          });
+          document.querySelectorAll('a[href*="https://support.skinkandy.com/s/booking-form"]').forEach(function(link) {
+            link.href = "https://bookings.skinkandy.com/?locale=en-nz";
+          });
+        </script>
+      {% else %}
+        <script>
+          document.querySelectorAll('a[href*="https://bookings.skinkandy.com/"]').forEach(function(link) {
+            link.href = "https://bookings.skinkandy.com/?locale=en-au";
+          });
+          document.querySelectorAll('a[href*="https://support.skinkandy.com/s/booking-form"]').forEach(function(link) {
+            link.href = "https://bookings.skinkandy.com/?locale=en-au";
+          });
+        </script>
+      {% endif %}
+
+     {% render 'free-gift-popup' %}
   </body>
   </html>

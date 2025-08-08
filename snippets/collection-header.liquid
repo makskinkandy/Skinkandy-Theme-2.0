@@ -50,3 +50,110 @@
     {% endif %}
   </div>
 </div>
+<script>
+  (function () {
+    const maxWords = 19;
+    const blocks = document.querySelectorAll(".section-content__text");
+
+    blocks.forEach(block => {
+      const p = block.querySelector("p");
+      if (!p) return;
+
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = p.innerHTML;
+
+      const preservedNodes = [];
+
+      function collectTextNodes(node) {
+        node.childNodes.forEach(child => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            preservedNodes.push({ type: "text", content: child.textContent });
+          } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName === "A") {
+            preservedNodes.push({ type: "link", href: child.getAttribute("href"), content: child.textContent });
+          } else {
+            collectTextNodes(child); // Recurse into spans, strong, etc., but we ignore the tags
+          }
+        });
+      }
+
+      collectTextNodes(tempDiv);
+
+      let wordCount = 0;
+      let shortHTML = "";
+      let fullHTML = "";
+      let reachedLimit = false;
+
+      preservedNodes.forEach(node => {
+        const words = node.content.trim().split(/\s+/).filter(Boolean);
+        if (words.length === 0) return;
+
+        let available = maxWords - wordCount;
+
+        if (available <= 0) {
+          // Already at limit, dump everything into fullHTML
+          if (node.type === "text") {
+            fullHTML += " " + node.content.trim();
+          } else if (node.type === "link") {
+            fullHTML += ` <a href="${node.href}">${node.content.trim()}</a>`;
+          }
+          return;
+        }
+
+        const useWords = words.slice(0, available);
+        const remainWords = words.slice(available);
+
+        if (node.type === "text") {
+          shortHTML += " " + useWords.join(" ");
+          if (remainWords.length > 0) {
+            fullHTML += " " + remainWords.join(" ");
+          }
+        } else if (node.type === "link") {
+          shortHTML += ` <a href="${node.href}">${useWords.join(" ")}</a>`;
+          if (remainWords.length > 0) {
+            fullHTML += ` <a href="${node.href}">${remainWords.join(" ")}</a>`;
+          }
+        }
+
+        wordCount += useWords.length;
+      });
+
+      if (wordCount < maxWords || !fullHTML.trim()) return;
+
+      // Trim both sections
+      shortHTML = shortHTML.trim();
+      fullHTML = fullHTML.trim();
+
+      // Build final elements
+      p.innerHTML = "";
+
+      const shortSpan = document.createElement("span");
+      shortSpan.innerHTML = shortHTML;
+
+      const dotsSpan = document.createElement("span");
+      dotsSpan.textContent = "... ";
+
+      const fullSpan = document.createElement("span");
+      fullSpan.innerHTML = fullHTML;
+      fullSpan.style.display = "none";
+      fullSpan.className = "hidden-content";
+
+      const toggleLink = document.createElement("a");
+      toggleLink.href = "#";
+      toggleLink.className = "read-more-toggle";
+      toggleLink.textContent = "Read more";
+
+      toggleLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const isExpanded = fullSpan.style.display === "inline";
+        fullSpan.style.display = isExpanded ? "none" : "inline";
+        dotsSpan.style.display = isExpanded ? "inline" : "none";
+        toggleLink.textContent = isExpanded ? " Read more" : " Read less";
+      });
+
+      p.appendChild(shortSpan);
+      p.appendChild(dotsSpan);
+      p.appendChild(fullSpan);
+      p.appendChild(toggleLink);
+    });
+  })();
+</script>

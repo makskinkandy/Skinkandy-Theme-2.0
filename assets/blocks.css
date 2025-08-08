@@ -137,13 +137,16 @@
         padding-bottom: 20px;
       }
       @media screen and (max-width:992px) {
-        height: 725px;
-        background-position: center;
+        height: 81svh;
       }
       @media screen and (max-width:767px) {
+        height: 625px;
+      }
+      @media screen and (max-width:540px) {
         height: 465px;
-        background-position: center;
-        padding-bottom: 20px;
+      }
+      @media screen and (max-width:360px) {
+        height: 343px;
       }
       h1,
       h2 {

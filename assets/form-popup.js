@@ -1,3 +1,7 @@
+const btnPopup = document.getElementById('btn-popup');
+const POPUP = document.querySelector(".form-popup");
+const templateName = "No metafield value";
+
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
         "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -29,12 +33,11 @@ function setCookie(name, value, options = {}) {
 }
 
 
-  document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
     let timeDelay = 2;
-    const POPUP = document.querySelector(".form-popup");
-
-    if (2) {
-        timeDelay = 2;
+    
+    if (5) {
+        timeDelay = 5;
     }
 
     const totalDelay = timeDelay * 1000;
@@ -46,8 +49,7 @@ function setCookie(name, value, options = {}) {
         }, totalDelay);
     }
 
-    const templateName = "No metafield value";
-    console.log("Current template name: test", templateName);
+    console.log("Current template name: ", templateName);
 
     document.querySelector(".popup-close").addEventListener("click", (e) => {
         e.preventDefault();
@@ -73,13 +75,26 @@ function setCookie(name, value, options = {}) {
     var hiddenField = document.getElementById('country');
     hiddenField.value = 'United States';
   }
+
+  const popupButtons = document.querySelectorAll(".js-btn-popup");
+
+  popupButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      console.log("TEST");
+      e.preventDefault();
+      POPUP.classList.remove("hidden");
+      document.body.classList.add("no-scroll");
+    });
+  });
+
+  console.log("Form Loaded");
   
 });
 
 const dobInput = document.getElementById('dob');
-const btnPopup = document.getElementById('btn-popup');
 
-btnPopup.addEventListener("click", () => {
+btnPopup.addEventListener("click", (e) => {
+  e.preventDefault();
   POPUP.classList.remove("hidden");
   document.body.classList.add('no-scroll');
 });
@@ -123,10 +138,10 @@ function onSubmit(token) {
           embedForm.classList.add("hidden");
           responseDiv.classList.add("success");
           responseDiv.classList.add("copy-link");
-          popupTitle.textContent = "CONGRATS!";
+          popupTitle.textContent = "You\’re in—Welcome to KandyClub!";
           subTitle.textContent = "";
           subTitle.classList.add("success");
-          subTitle.innerHTML = "<h4>YOU ARE NOW A MEMBER!</h4><p><br/>Ready to book a piercing?</p>";
+          subTitle.innerHTML = "<p>It’s valid for 24 hours, so treat yourself while it lasts. You’ll also get access to exclusive promotions, birthday & anniversary perks, and more. <br/><br/>Your 10% off code is:</p>";
           setCookie('popupClosed', 'true', { 'max-age': 3600 * 24 * 30 });
           loader.classList.add("hidden");
           bottomButton.classList.remove("hidden");

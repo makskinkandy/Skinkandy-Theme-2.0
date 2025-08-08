@@ -3070,8 +3070,9 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 }
 
 .drawer--right{
-  width:350px;
-  right:-350px
+  width:100%;
+  right:-450px;
+  max-width: 450px;
 }
 
 @media only screen and (min-width:769px){
@@ -3084,7 +3085,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 
 .drawer--right.drawer--is-open{
     display:block;
-    transform:translateX(-350px);
+    transform:translateX(-450px);
     transition-duration:0.45s
   }
 
@@ -16476,4 +16477,10 @@ button.action.previous.material_outlined-button {
     max-width: 390px;
     margin-inline: auto;
   }
+}
+
+.read-more-toggle {
+  display: block !important;
+  max-width: fit-content;
+  margin-inline: auto;
 }

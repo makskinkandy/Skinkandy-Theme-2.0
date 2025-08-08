@@ -4,8 +4,8 @@
     "theme_name": "Stead Lane",
     "theme_author": "Stead Lane",
     "theme_version": "1.0",
-    "theme_documentation_url": "https:\/\/steadlane.com.au",
-    "theme_support_url": "https:\/\/steadlane.com.au"
+    "theme_documentation_url": "https://steadlane.com.au",
+    "theme_support_url": "https://steadlane.com.au"
   },
   {
     "name": "Colors",
@@ -697,7 +697,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Add reviews by enabling the setting below and installing the [Shopify Product Reviews app](https:\/\/apps.shopify.com\/product-reviews) and following our [setup guide](https:\/\/archetypethemes.co\/blogs\/support\/installing-shopifys-product-reviews-app)"
+        "content": "Add reviews by enabling the setting below and installing the [Shopify Product Reviews app](https://apps.shopify.com/product-reviews) and following our [setup guide](https://archetypethemes.co/blogs/support/installing-shopifys-product-reviews-app)"
       },
       {
         "type": "checkbox",
@@ -749,7 +749,7 @@
         "id": "custom_badge_img",
         "label": "Special Promo Image",
         "info": "Special promo iamge supersedes both"
-      },
+      }
     ]
   },
   {
@@ -990,7 +990,7 @@
         "type": "richtext",
         "id": "empty_cart",
         "label": "Text to display",
-        "default": "<p>You have an empty cart<\/p><p>Time to add some bling!<\/p>"
+        "default": "<p>You have an empty cart</p><p>Time to add some bling!</p>"
       },
       {
         "type": "url",
@@ -1031,61 +1031,61 @@
         "type": "text",
         "id": "social_facebook_link",
         "label": "Facebook",
-        "info": "https:\/\/www.facebook.com\/shopify"
+        "info": "https://www.facebook.com/shopify"
       },
       {
         "type": "text",
         "id": "social_twitter_link",
         "label": "Twitter",
-        "info": "https:\/\/twitter.com\/shopify"
+        "info": "https://twitter.com/shopify"
       },
       {
         "type": "text",
         "id": "social_pinterest_link",
         "label": "Pinterest",
-        "info": "https:\/\/www.pinterest.com\/shopify"
+        "info": "https://www.pinterest.com/shopify"
       },
       {
         "type": "text",
         "id": "social_instagram_link",
         "label": "Instagram",
-        "info": "https:\/\/instagram.com\/shopify"
+        "info": "https://instagram.com/shopify"
       },
       {
         "type": "text",
         "id": "social_snapchat_link",
         "label": "Snapchat",
-        "info": "https:\/\/www.snapchat.com\/add\/shopify"
+        "info": "https://www.snapchat.com/add/shopify"
       },
       {
         "type": "text",
         "id": "social_tiktok_link",
         "label": "TikTok",
-        "info": "https:\/\/www.tiktok.com\/@shopify"
+        "info": "https://www.tiktok.com/@shopify"
       },
       {
         "type": "text",
         "id": "social_tumblr_link",
         "label": "Tumblr",
-        "info": "http:\/\/shopify.tumblr.com"
+        "info": "http://shopify.tumblr.com"
       },
       {
         "type": "text",
         "id": "social_linkedin_link",
         "label": "LinkedIn",
-        "info": "https:\/\/www.linkedin.com\/in\/shopify"
+        "info": "https://www.linkedin.com/in/shopify"
       },
       {
         "type": "text",
         "id": "social_youtube_link",
         "label": "YouTube",
-        "info": "https:\/\/www.youtube.com\/user\/shopify"
+        "info": "https://www.youtube.com/user/shopify"
       },
       {
         "type": "text",
         "id": "social_vimeo_link",
         "label": "Vimeo",
-        "info": "https:\/\/vimeo.com\/shopify"
+        "info": "https://vimeo.com/shopify"
       },
       {
         "type": "header",
@@ -1168,7 +1168,7 @@
         "id": "predictive_search_enabled",
         "label": "Enable predictive search",
         "default": true,
-        "info": "Live search results. Not available in all languages. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/search\/predictive-search#general-requirements-and-limitations)"
+        "info": "Live search results. Not available in all languages. [Learn more](https://help.shopify.com/en/themes/development/search/predictive-search#general-requirements-and-limitations)"
       },
       {
         "type": "checkbox",
@@ -1466,28 +1466,28 @@
         "id": "fst_message_default",
         "label": "Default message",
         "info": "Message that is displayed initially before any item is added to cart. Use [target] to display target amount.",
-        "default": "<p>FREE SHIPPING (AUSTRALIA) orders over [target]<\/p>"
+        "default": "<p>FREE SHIPPING (AUSTRALIA) orders over [target]</p>"
       },
       {
         "type": "richtext",
         "id": "fst_message_ongoing",
         "label": "Ongoing message",
         "info": "Message that is displayed when an item is added to cart. Use [remaining] to display remaining amount before hitting target amount.",
-        "default": "<p>Spend [remaining] extra to get free shipping!<\/p>"
+        "default": "<p>Spend [remaining] extra to get free shipping!</p>"
       },
       {
         "type": "richtext",
         "id": "fst_message_ongoing_express",
         "label": "Express Ongoing message",
         "info": "Message that is displayed when an item is added to cart. Use [remaining] to display remaining amount before hitting target amount.",
-        "default": "<p>Spend [remaining] extra to get free express shipping!<\/p>"
+        "default": "<p>Spend [remaining] extra to get free express shipping!</p>"
       },
       {
         "type": "richtext",
         "id": "fst_message_success",
         "label": "Success message",
         "info": "Message that is displayed when a user hits the target amount.",
-        "default": "<p>Congratulations, you get FREE shipping!<\/p>"
+        "default": "<p>Congratulations, you get FREE shipping!</p>"
       }
     ]
   },
@@ -1655,7 +1655,7 @@
         "id": "popup_form_note",
         "label": "Form Note"
       },
-            {
+      {
         "type": "text",
         "id": "popup_form_disclaimer",
         "label": "Form Disclaimer"
@@ -1780,7 +1780,7 @@
         "id": "nz_popup_form_note",
         "label": "Form Note"
       },
-            {
+      {
         "type": "text",
         "id": "Nz_popup_form_disclaimer",
         "label": "Form Disclaimer"
@@ -1834,19 +1834,19 @@
       {
         "type": "textarea",
         "id": "top-notification-banner",
-        "label": "Top Notification Banner text",
+        "label": "Top Notification Banner text"
       },
       {
-          "type": "color",
-          "id": "text_color",
-          "label": "Text color",
-          "default": "#FFF"
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#FFF"
       },
       {
-          "type": "color",
-          "id": "bg_color",
-          "label": "Background color",
-          "default": "#E42228"
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#E42228"
       }
     ]
   },
@@ -1862,6 +1862,21 @@
         "type": "text",
         "id": "shipping_nz",
         "label": "Shipping Details NZ"
+      }
+    ]
+  },
+  {
+    "name": "Free Gift Details",
+    "settings": [
+      {
+        "type": "product_list",
+        "id": "free-gift",
+        "label": "Select your free gifts"
+      },
+      {
+        "type": "textarea",
+        "id": "variant_sku",
+        "label": "Variant SKU's separated by comma"
       }
     ]
   }
