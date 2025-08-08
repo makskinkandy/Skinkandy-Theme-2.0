@@ -65,6 +65,7 @@
       let reachedLimit = false;
 
       const shortContainer = document.createElement("div");
+      shortContainer.classList.add("cut-content");
       const fullContainer = document.createElement("div");
       fullContainer.style.display = "none";
       fullContainer.classList.add("hidden-content");
@@ -138,9 +139,11 @@
       // Replace original content
       block.innerHTML = "";
       block.appendChild(shortContainer);
-      block.appendChild(dots);
+      shortContainer.appendChild(dots);
       block.appendChild(fullContainer);
       block.appendChild(toggle);
     });
-  })();
+    
+  })
+  ();
 </script>
