@@ -52,86 +52,83 @@
 </div>
 <script>
   (function () {
-    const maxWords = 19;
+    const maxWords = 15;
     const blocks = document.querySelectorAll(".section-content__text");
 
     blocks.forEach(block => {
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = block.innerHTML;
-
-      const preservedNodes = [];
-
-      function collectTextNodes(node) {
-        node.childNodes.forEach(child => {
-          if (child.nodeType === Node.TEXT_NODE) {
-            preservedNodes.push({ type: "text", content: child.textContent });
-          } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName === "A") {
-            preservedNodes.push({ type: "link", href: child.getAttribute("href"), content: child.textContent });
-          } else if (child.nodeType === Node.ELEMENT_NODE) {
-            collectTextNodes(child); // Recurse into other tags (span, strong, etc.)
-          }
-        });
-      }
-
-      collectTextNodes(tempDiv);
+      const originalHTML = block.innerHTML;
+      const parser = document.createElement("div");
+      parser.innerHTML = originalHTML;
 
       let wordCount = 0;
-      let shortHTML = "";
-      let fullHTML = "";
       let reachedLimit = false;
 
-      preservedNodes.forEach(node => {
-        const words = node.content.trim().split(/\s+/).filter(Boolean);
-        if (words.length === 0) return;
+      const shortFragment = document.createDocumentFragment();
+      const remainingFragment = document.createDocumentFragment();
 
-        let available = maxWords - wordCount;
+      function processNode(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const words = node.textContent.split(/\s+/).filter(Boolean);
+          if (words.length === 0) return;
 
-        if (available <= 0) {
-          if (node.type === "text") {
-            fullHTML += " " + node.content.trim();
-          } else if (node.type === "link") {
-            fullHTML += ` <a href="${node.href}">${node.content.trim()}</a>`;
+          const remaining = maxWords - wordCount;
+
+          if (reachedLimit || remaining <= 0) {
+            remainingFragment.appendChild(document.createTextNode(node.textContent));
+            return;
+          }
+
+          if (words.length <= remaining) {
+            wordCount += words.length;
+            shortFragment.appendChild(document.createTextNode(node.textContent));
+          } else {
+            const shortText = words.slice(0, remaining).join(" ");
+            const remainingText = words.slice(remaining).join(" ");
+            shortFragment.appendChild(document.createTextNode(shortText + " "));
+            remainingFragment.appendChild(document.createTextNode(remainingText));
+            wordCount += remaining;
+            reachedLimit = true;
           }
           return;
         }
 
-        const useWords = words.slice(0, available);
-        const remainWords = words.slice(available);
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          const shortClone = node.cloneNode(false);
+          const remainingClone = node.cloneNode(false);
 
-        if (node.type === "text") {
-          shortHTML += " " + useWords.join(" ");
-          if (remainWords.length > 0) {
-            fullHTML += " " + remainWords.join(" ");
-          }
-        } else if (node.type === "link") {
-          shortHTML += ` <a href="${node.href}">${useWords.join(" ")}</a>`;
-          if (remainWords.length > 0) {
-            fullHTML += ` <a href="${node.href}">${remainWords.join(" ")}</a>`;
-          }
+          node.childNodes.forEach(child => {
+            const beforeShort = shortFragment.childNodes.length;
+            const beforeRemaining = remainingFragment.childNodes.length;
+
+            processNode(child);
+
+            const shortDiff = Array.from(shortFragment.childNodes).slice(beforeShort);
+            const remainingDiff = Array.from(remainingFragment.childNodes).slice(beforeRemaining);
+
+            shortDiff.forEach(n => shortClone.appendChild(n));
+            remainingDiff.forEach(n => remainingClone.appendChild(n));
+          });
+
+          if (shortClone.childNodes.length) shortFragment.appendChild(shortClone);
+          if (remainingClone.childNodes.length) remainingFragment.appendChild(remainingClone);
         }
+      }
 
-        wordCount += useWords.length;
-      });
+      parser.childNodes.forEach(child => processNode(child));
 
-      if (wordCount < maxWords || !fullHTML.trim()) return;
+      if (!reachedLimit) return; // Nothing to truncate
 
-      // Trim both sections
-      shortHTML = shortHTML.trim();
-      fullHTML = fullHTML.trim();
-
-      // Replace all content inside the block
       block.innerHTML = "";
 
-      const shortSpan = document.createElement("span");
-      shortSpan.innerHTML = shortHTML;
+      const shortWrapper = document.createElement("span");
+      shortWrapper.appendChild(shortFragment);
 
-      const dotsSpan = document.createElement("span");
-      dotsSpan.textContent = "... ";
+      const dots = document.createElement("span");
+      dots.textContent = "... ";
 
-      const fullSpan = document.createElement("span");
-      fullSpan.innerHTML = fullHTML;
-      fullSpan.style.display = "none";
-      fullSpan.className = "hidden-content";
+      const remainingWrapper = document.createElement("span");
+      remainingWrapper.appendChild(remainingFragment);
+      remainingWrapper.style.display = "none";
 
       const toggleLink = document.createElement("a");
       toggleLink.href = "#";
@@ -140,15 +137,16 @@
 
       toggleLink.addEventListener("click", function (e) {
         e.preventDefault();
-        const isExpanded = fullSpan.style.display === "inline";
-        fullSpan.style.display = isExpanded ? "none" : "inline";
-        dotsSpan.style.display = isExpanded ? "inline" : "none";
+        const isExpanded = remainingWrapper.style.display === "inline";
+        remainingWrapper.style.display = isExpanded ? "none" : "inline";
+        dots.style.display = isExpanded ? "inline" : "none";
         toggleLink.textContent = isExpanded ? " Read more" : " Read less";
+        block.classList.toggle("expanded", !isExpanded);
       });
 
-      block.appendChild(shortSpan);
-      block.appendChild(dotsSpan);
-      block.appendChild(fullSpan);
+      block.appendChild(shortWrapper);
+      block.appendChild(dots);
+      block.appendChild(remainingWrapper);
       block.appendChild(toggleLink);
     });
   })();
