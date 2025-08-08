@@ -52,102 +52,95 @@
 </div>
 <script>
   (function () {
-    const maxWords = 14;
-    const blocks = document.querySelectorAll(".section-content__text");
+    const maxWords = 16;
 
-    blocks.forEach(block => {
+    document.querySelectorAll(".section-content__text").forEach(block => {
       const originalHTML = block.innerHTML;
-      const parser = document.createElement("div");
-      parser.innerHTML = originalHTML;
+
+      // Create a temporary container to walk DOM
+      const container = document.createElement("div");
+      container.innerHTML = originalHTML;
 
       let wordCount = 0;
       let reachedLimit = false;
 
-      const shortFragment = document.createDocumentFragment();
-      const remainingFragment = document.createDocumentFragment();
+      const shortContainer = document.createElement("div");
+      const fullContainer = document.createElement("div");
+      fullContainer.style.display = "none";
+      fullContainer.classList.add("hidden-content");
 
-      function processNode(node) {
-        if (node.nodeType === Node.TEXT_NODE) {
-          const words = node.textContent.split(/\s+/).filter(Boolean);
-          if (words.length === 0) return;
-
-          const remaining = maxWords - wordCount;
-
-          if (reachedLimit || remaining <= 0) {
-            remainingFragment.appendChild(document.createTextNode(node.textContent));
-            return;
-          }
-
-          if (words.length <= remaining) {
-            wordCount += words.length;
-            shortFragment.appendChild(document.createTextNode(node.textContent));
-          } else {
-            const shortText = words.slice(0, remaining).join(" ");
-            const remainingText = words.slice(remaining).join(" ");
-            shortFragment.appendChild(document.createTextNode(shortText + " "));
-            remainingFragment.appendChild(document.createTextNode(remainingText));
-            wordCount += remaining;
-            reachedLimit = true;
-          }
+      function walkAndSplit(node, shortParent, fullParent) {
+        if (reachedLimit) {
+          fullParent.appendChild(node.cloneNode(true));
           return;
         }
 
-        if (node.nodeType === Node.ELEMENT_NODE) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const words = node.textContent.trim().split(/\s+/).filter(Boolean);
+
+          if (wordCount + words.length <= maxWords) {
+            wordCount += words.length;
+            shortParent.appendChild(node.cloneNode(true));
+          } else {
+            const allowedWords = maxWords - wordCount;
+            const shortText = words.slice(0, allowedWords).join(" ");
+            const remainingText = words.slice(allowedWords).join(" ");
+
+            if (shortText) {
+              shortParent.appendChild(document.createTextNode(shortText + " "));
+            }
+            if (remainingText) {
+              fullParent.appendChild(document.createTextNode(remainingText));
+            }
+
+            wordCount = maxWords;
+            reachedLimit = true;
+          }
+
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
           const shortClone = node.cloneNode(false);
-          const remainingClone = node.cloneNode(false);
+          const fullClone = node.cloneNode(false);
 
-          node.childNodes.forEach(child => {
-            const beforeShort = shortFragment.childNodes.length;
-            const beforeRemaining = remainingFragment.childNodes.length;
-
-            processNode(child);
-
-            const shortDiff = Array.from(shortFragment.childNodes).slice(beforeShort);
-            const remainingDiff = Array.from(remainingFragment.childNodes).slice(beforeRemaining);
-
-            shortDiff.forEach(n => shortClone.appendChild(n));
-            remainingDiff.forEach(n => remainingClone.appendChild(n));
+          Array.from(node.childNodes).forEach(child => {
+            walkAndSplit(child, shortClone, fullClone);
           });
 
-          if (shortClone.childNodes.length) shortFragment.appendChild(shortClone);
-          if (remainingClone.childNodes.length) remainingFragment.appendChild(remainingClone);
+          if (shortClone.childNodes.length) shortParent.appendChild(shortClone);
+          if (fullClone.childNodes.length) fullParent.appendChild(fullClone);
         }
       }
 
-      parser.childNodes.forEach(child => processNode(child));
-
-      if (!reachedLimit) return; // Nothing to truncate
-
-      block.innerHTML = "";
-
-      const shortWrapper = document.createElement("span");
-      shortWrapper.appendChild(shortFragment);
-
-      const dots = document.createElement("span");
-      dots.textContent = "... ";
-
-      const remainingWrapper = document.createElement("span");
-      remainingWrapper.appendChild(remainingFragment);
-      remainingWrapper.style.display = "none";
-
-      const toggleLink = document.createElement("a");
-      toggleLink.href = "#";
-      toggleLink.className = "read-more-toggle";
-      toggleLink.textContent = "Read more";
-
-      toggleLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const isExpanded = remainingWrapper.style.display === "inline";
-        remainingWrapper.style.display = isExpanded ? "none" : "inline";
-        dots.style.display = isExpanded ? "inline" : "none";
-        toggleLink.textContent = isExpanded ? " Read more" : " Read less";
-        remainingWrapper.classList.toggle("expanded", !isExpanded);
+      Array.from(container.childNodes).forEach(child => {
+        walkAndSplit(child, shortContainer, fullContainer);
       });
 
-      block.appendChild(shortWrapper);
+      // If no trimming is needed, skip
+      if (!reachedLimit) return;
+
+      // Create dots and toggle
+      const dots = document.createElement("span");
+      dots.textContent = "... ";
+      dots.className = "read-more-dots";
+
+      const toggle = document.createElement("a");
+      toggle.href = "#";
+      toggle.textContent = "Read more";
+      toggle.className = "read-more-toggle";
+
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        const isExpanded = block.classList.toggle("expanded");
+        fullContainer.style.display = isExpanded ? "inline" : "none";
+        dots.style.display = isExpanded ? "none" : "inline";
+        toggle.textContent = isExpanded ? "Read less" : "Read more";
+      });
+
+      // Replace original content
+      block.innerHTML = "";
+      block.appendChild(shortContainer);
       block.appendChild(dots);
-      block.appendChild(remainingWrapper);
-      block.appendChild(toggleLink);
+      block.appendChild(fullContainer);
+      block.appendChild(toggle);
     });
   })();
 </script>
