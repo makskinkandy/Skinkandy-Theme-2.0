@@ -16485,6 +16485,10 @@ button.action.previous.material_outlined-button {
   margin-inline: auto;
 }
 
-.section-content__text.expanded span:first-child p {
-    margin-bottom: -10px !important;
+.section-content__text.expanded div p,
+.section-content__text.expanded div {
+    margin-bottom: 0 !important;
+}
+.section-content__text.expanded div {
+  margin-bottom: -10px !important;
 }
