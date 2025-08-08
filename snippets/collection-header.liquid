@@ -141,7 +141,7 @@
         remainingWrapper.style.display = isExpanded ? "none" : "inline";
         dots.style.display = isExpanded ? "inline" : "none";
         toggleLink.textContent = isExpanded ? " Read more" : " Read less";
-        block.classList.toggle("expanded", !isExpanded);
+        remainingWrapper.classList.toggle("expanded", !isExpanded);
       });
 
       block.appendChild(shortWrapper);
