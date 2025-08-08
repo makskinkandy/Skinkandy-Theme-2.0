@@ -56,11 +56,8 @@
     const blocks = document.querySelectorAll(".section-content__text");
 
     blocks.forEach(block => {
-      const p = block.querySelector("p");
-      if (!p) return;
-
       const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = p.innerHTML;
+      tempDiv.innerHTML = block.innerHTML;
 
       const preservedNodes = [];
 
@@ -70,8 +67,8 @@
             preservedNodes.push({ type: "text", content: child.textContent });
           } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName === "A") {
             preservedNodes.push({ type: "link", href: child.getAttribute("href"), content: child.textContent });
-          } else {
-            collectTextNodes(child); // Recurse into spans, strong, etc., but we ignore the tags
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            collectTextNodes(child); // Recurse into other tags (span, strong, etc.)
           }
         });
       }
@@ -90,7 +87,6 @@
         let available = maxWords - wordCount;
 
         if (available <= 0) {
-          // Already at limit, dump everything into fullHTML
           if (node.type === "text") {
             fullHTML += " " + node.content.trim();
           } else if (node.type === "link") {
@@ -123,8 +119,8 @@
       shortHTML = shortHTML.trim();
       fullHTML = fullHTML.trim();
 
-      // Build final elements
-      p.innerHTML = "";
+      // Replace all content inside the block
+      block.innerHTML = "";
 
       const shortSpan = document.createElement("span");
       shortSpan.innerHTML = shortHTML;
@@ -150,10 +146,10 @@
         toggleLink.textContent = isExpanded ? " Read more" : " Read less";
       });
 
-      p.appendChild(shortSpan);
-      p.appendChild(dotsSpan);
-      p.appendChild(fullSpan);
-      p.appendChild(toggleLink);
+      block.appendChild(shortSpan);
+      block.appendChild(dotsSpan);
+      block.appendChild(fullSpan);
+      block.appendChild(toggleLink);
     });
   })();
 </script>
