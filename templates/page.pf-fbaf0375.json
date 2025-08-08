@@ -115,7 +115,10 @@
         "text_block_NrfXnR",
         "text_block_XwJArG"
       ],
-      "custom_css": ["div {text-align: center;}", "img {max-width: 60px;}"],
+      "custom_css": [
+        "div {text-align: center;}",
+        "img {max-width: 60px;}"
+      ],
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
@@ -152,7 +155,10 @@
           }
         }
       },
-      "block_order": ["text_VFYwwe", "heading_ezGAQG"],
+      "block_order": [
+        "text_VFYwwe",
+        "heading_ezGAQG"
+      ],
       "name": "Rich text",
       "settings": {
         "align_text": "center",
