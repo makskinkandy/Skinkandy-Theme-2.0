@@ -16483,6 +16483,7 @@ button.action.previous.material_outlined-button {
   display: block !important;
   max-width: fit-content;
   margin-inline: auto;
+  margin-top: 10px;
 }
 
 .section-content__text.expanded div p,
