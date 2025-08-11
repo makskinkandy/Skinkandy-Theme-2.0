@@ -211,6 +211,35 @@
       "settings": {
         "profileId": "cross-sell"
       }
+    },
+    "17549558158537f675": {
+      "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_recommendation_ssr_cQrVUL": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/recommendation-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+            "widgetId": "productpage-726500",
+            "additional_classes": "",
+            "custom_css": ""
+          }
+        },
+        "boost_ai_search_filter_recommendation_ssr_LLrrPV": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/recommendation-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+            "widgetId": "productpage-427730",
+            "additional_classes": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_recommendation_ssr_cQrVUL",
+        "boost_ai_search_filter_recommendation_ssr_LLrrPV"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -219,6 +248,7 @@
     "sub",
     "collection-return",
     "ss-recommendations-similar",
-    "ss-recommendations-cross-sell"
+    "ss-recommendations-cross-sell",
+    "17549558158537f675"
   ]
 }
