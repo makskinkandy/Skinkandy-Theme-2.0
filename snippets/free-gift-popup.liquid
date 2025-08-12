@@ -326,18 +326,24 @@
                 d => d.code === "{{ discount_code }}"
               ) || false;
   
-              const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
-  
-              if (!(subtotal >= 100 && hasSpecificDiscount)) {
+              const giftInCart = cart.items.some(item =>
+                giftVariantIds.includes(item.variant_id)
+              );
+
+              // If gift already in cart → block adding
+              if (giftInCart) {
+                alert("This gift item is already in your cart. Please complete checkout before adding it again.");
                 return;
               }
 
-              if (giftInCart) {
-                alert("There is an item in your cart marked as a gift. TPlease check out and complete the purchase before adding this item to your cart.")
+              // If requirements not met → block adding
+              if (!(subtotal >= 100 && hasSpecificDiscount)) {
+                alert("You must have at least $100 subtotal and apply the discount code to add this gift.");
                 return;
-              } else {
-                this.submit();
               }
+
+              // Otherwise → allow add to cart
+              this.submit();
             });
         }
       });
