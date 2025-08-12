@@ -336,12 +336,6 @@
                 return;
               }
 
-              // If requirements not met → block adding
-              if (!(subtotal >= 100 && hasSpecificDiscount)) {
-                alert("You must have at least $100 subtotal and apply the discount code to add this gift.");
-                return;
-              }
-
               // Otherwise → allow add to cart
               this.submit();
             });
