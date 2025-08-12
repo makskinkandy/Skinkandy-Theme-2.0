@@ -330,9 +330,11 @@
   
               if (!(subtotal >= 100 && hasSpecificDiscount)) {
                 return;
-              } else if(giftInCart) {
+              }
+
+              if (giftInCart) {
                 alert("There is an item in your cart marked as a gift. TPlease check out and complete the purchase before adding this item to your cart.")
-                return false;
+                return;
               } else {
                 this.submit();
               }
