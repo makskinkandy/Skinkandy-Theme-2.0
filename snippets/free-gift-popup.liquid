@@ -310,6 +310,49 @@
     });
   
     document.getElementById("close-popup").addEventListener("click", hidePopup);
+
+    // Create popup container once
+    const giftPopup = document.createElement('div');
+    giftPopup.id = 'gift-popup';
+    giftPopup.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      max-width: 300px;
+      background: #fff;
+      color: #333;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: inherit;
+      font-size: 14px;
+      z-index: 9999;
+      display: none;
+    `;
+    giftPopup.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span>This gift item is already in your cart. Please complete checkout before adding it again.</span>
+        <button id="gift-popup-close" style="
+          background: none;
+          border: none;
+          font-size: 16px;
+          cursor: pointer;
+          margin-left: 10px;
+        ">&times;</button>
+      </div>
+    `;
+    document.body.appendChild(giftPopup);
+
+    document.getElementById('gift-popup-close').addEventListener('click', () => {
+      giftPopup.style.display = 'none';
+    });
+
+    function showGiftPopup() {
+      giftPopup.style.display = 'block';
+      setTimeout(() => {
+        giftPopup.style.display = 'none';
+      }, 4000);
+    }
   
     document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
       form.addEventListener('submit', function (e) {
@@ -330,13 +373,11 @@
                 giftVariantIds.includes(item.variant_id)
               );
 
-              // If gift already in cart → block adding
               if (giftInCart) {
-                alert("This gift item is already in your cart. Please complete checkout before adding it again.");
+                showGiftPopup();
                 return;
               }
 
-              // Otherwise → allow add to cart
               this.submit();
             });
         }
