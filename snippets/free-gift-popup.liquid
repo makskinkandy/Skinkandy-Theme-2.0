@@ -328,7 +328,10 @@
   
               const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
   
-              if (giftInCart || !(subtotal >= 100 && hasSpecificDiscount)) {
+              if (!(subtotal >= 100 && hasSpecificDiscount)) {
+                return;
+              } else if (giftInCart) {
+                alert("You have this item in your cart as a gift. Kindly checkout first before adding this item in your cart.")
                 return;
               } else {
                 this.submit();
