@@ -28,7 +28,7 @@
                 {% for variant in product.variants %}
                   {% assign trimmed_sku = variant.sku | strip %}
                   
-                  {% if skus contains trimmed_sku %}
+                  {% if skus contains trimmed_sku and variant.available %}
                     <option 
                         data-image="{{ variant.image | image_url: width: 400  }}"
                         value="{{ variant.id }}" 
