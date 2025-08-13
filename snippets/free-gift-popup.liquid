@@ -138,24 +138,26 @@
 
   {% assign variant_id_array = matched_variant_ids | split: "," | uniq %}
   
-  <script>
+ <script>
 document.addEventListener("DOMContentLoaded", function () {
+  // ====== CONFIG / INPUTS FROM LIQUID ======
+  const MAX_FREE_GIFT_TOTAL = 1;
+  const MAX_PAID_PER_VARIANT = 2;
+
+  // Normalize variant IDs to integers
   const giftVariantIds = [
     {% for id in variant_id_array %}
       {% unless id == "" %}{{ id }},{% endunless %}
     {% endfor %}
-  ];
+  ].map(v => parseInt(v, 10)).filter(v => !Number.isNaN(v));
 
-  const giftCode = "{{ gift_code }}"; // Your gift_code from Liquid
+  const requiredDiscount = "{{ discount_code }}".toLowerCase(); // gating discount (e.g. SKAFTERPAY25)
+  const giftCode = "{{ gift_code }}"; // gift_code used for checkout redirect
   const popup = document.getElementById("free-gift-popup");
 
-  function showPopup() {
-    popup.classList.add("show");
-  }
-
-  function hidePopup() {
-    popup.classList.remove("show");
-  }
+  // ====== UI HELPERS (kept from your original) ======
+  function showPopup() { popup && popup.classList.add("show"); }
+  function hidePopup() { popup && popup.classList.remove("show"); }
 
   function disableAllButtons(message = "Gift Added") {
     document.querySelectorAll(".gift-btn").forEach(btn => {
@@ -173,48 +175,61 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Run checks only if discount code exists
-  function checkCartAndPopup() {
-    fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
-      .then(res => res.json())
-      .then(cart => {
-        const subtotal = cart.total_price / 100;
-        const hasSpecificDiscount = cart.discount_codes?.some(
-          d => d.code?.toLowerCase() === giftCode.toLowerCase()
-        ) || false;
-
-        // Exit immediately if no discount
-        if (!hasSpecificDiscount) return;
-
-        // If total < 100, remove gift automatically
-        if (subtotal < 100) {
-          removeAllGifts(cart);
-          hidePopup();
-          return;
-        }
-
-        const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
-
-        if (giftInCart) {
-          disableAllButtons();
-        } else {
-          enableAllButtons();
-          if (subtotal >= 100) {
-            showPopup();
-          } else {
-            removeAllGifts(cart);
-            hidePopup();
-          }
-        }
-      });
+  function applyDiscountAndStay(code) {
+    const currentPath = window.location.pathname + window.location.search;
+    const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
+    fetch(discountUrl).catch(() => {});
   }
 
-  function removeAllGifts(cart) {
-    const giftItems = cart.items.filter(
-      item => giftVariantIds.includes(item.variant_id)
-    );
-    if (giftItems.length > 0) {
-      Promise.all(
+  // ====== GIFT HELPERS ======
+  function isGiftVariantId(variantId) {
+    return giftVariantIds.includes(Number(variantId));
+  }
+
+  // Consider a line "free gift" if it carries the flag your add flow sets.
+  function isFreeGiftLineItem(item) {
+    const p = item && item.properties;
+    return !!(p && (p.source === "Free Gift Promo" || p["Free Gift"] === "Yes"));
+  }
+
+  function getFreeGiftTotal(cart) {
+    return cart.items.reduce((sum, i) => {
+      return sum + (isGiftVariantId(i.variant_id) && isFreeGiftLineItem(i) ? i.quantity : 0);
+    }, 0);
+  }
+
+  function getPaidQtyForVariant(cart, variantId) {
+    return cart.items.reduce((sum, i) => {
+      if (!isGiftVariantId(i.variant_id)) return sum;
+      if (i.variant_id !== Number(variantId)) return sum;
+      if (isFreeGiftLineItem(i)) return sum; // exclude free gift lines
+      return sum + i.quantity;
+    }, 0);
+  }
+
+  // Use cache-busted cart fetch to avoid stale data
+  async function fetchCart() {
+    return fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json());
+  }
+
+  // ====== REMOVAL: remove only free gift line items (uses item.key) ======
+  function removeFreeGiftsIfNeeded(cartOverride) {
+    // do not run on checkout pages
+    if (window.location.pathname.includes('/checkout')) return Promise.resolve();
+
+    const p = cartOverride ? Promise.resolve(cartOverride) : fetchCart();
+    return p.then(cart => {
+      const hasRequiredDiscount = cart.discount_codes?.some(d => d.code && d.code.toLowerCase() === requiredDiscount) || false;
+      const subtotal = cart.total_price / 100;
+
+      // If the discount *is* present and subtotal >= 100 => nothing to remove
+      if (hasRequiredDiscount && subtotal >= 100) return;
+
+      // Otherwise remove ONLY lines that were added as free gifts (properties marker)
+      const giftItems = cart.items.filter(item => isGiftVariantId(item.variant_id) && isFreeGiftLineItem(item));
+      if (!giftItems.length) return;
+
+      return Promise.all(
         giftItems.map(giftItem =>
           fetch(`/cart/change.js`, {
             method: 'POST',
@@ -223,72 +238,439 @@ document.addEventListener("DOMContentLoaded", function () {
           })
         )
       ).then(() => {
+        // Let everything re-evaluate
         document.dispatchEvent(new CustomEvent('cart:build'));
-      });
+      }).catch(()=>{ /* ignore */ });
+    }).catch(()=>{ /* ignore */ });
+  }
+
+  // ====== POPUP + BUTTON STATE (adjusted and gated by discount presence) ======
+  async function checkCartAndPopup() {
+    const cart = await fetchCart();
+    const subtotal = cart.total_price / 100;
+    const hasSpecificDiscount = cart.discount_codes?.some(d => d.code && d.code.toLowerCase() === requiredDiscount) || false;
+
+    // If discount not present → remove any free gifts, disable features and exit
+    if (!hasSpecificDiscount) {
+      await removeFreeGiftsIfNeeded(cart);
+      disableAllButtons("Not Eligible");
+      hidePopup();
+      return;
+    }
+
+    // Discount present but subtotal < 100 → remove free gifts and disable
+    if (subtotal < 100) {
+      await removeFreeGiftsIfNeeded(cart);
+      disableAllButtons("Not Eligible");
+      hidePopup();
+      return;
+    }
+
+    // Now discount present and subtotal >= 100 → continue normal behavior
+    const hasFreeGift = cart.items.some(i => isGiftVariantId(i.variant_id) && isFreeGiftLineItem(i));
+
+    if (hasFreeGift) {
+      disableAllButtons();
+    } else {
+      enableAllButtons();
+      if (subtotal >= 100 && hasSpecificDiscount) {
+        showPopup();
+      } else {
+        hidePopup();
+      }
     }
   }
 
+  // ====== BODY PARSER FOR INTERCEPTORS ======
+  function parseBodyToObject(body) {
+    if (!body) return {};
+    if (typeof body === 'string') {
+      // URL-encoded?
+      if (body.includes('=') && body.includes('&')) {
+        const params = new URLSearchParams(body);
+        return paramsToObject(params);
+      }
+      try { return JSON.parse(body); } catch { return {}; }
+    }
+    if (typeof FormData !== 'undefined' && body instanceof FormData) {
+      const obj = {};
+      body.forEach((v, k) => {
+        const m = k.match(/^updates\[(.+?)\]$/);
+        if (m) {
+          if (!obj.updates) obj.updates = {};
+          obj.updates[m[1]] = v;
+        } else {
+          obj[k] = v;
+        }
+      });
+      return obj;
+    }
+    if (typeof URLSearchParams !== 'undefined' && body instanceof URLSearchParams) {
+      return paramsToObject(body);
+    }
+    try { return typeof body === 'object' ? body : {}; } catch { return {}; }
+  }
+
+  function paramsToObject(params) {
+    const obj = {};
+    for (const [k, v] of params.entries()) {
+      const m = k.match(/^updates\[(.+?)\]$/);
+      if (m) {
+        if (!obj.updates) obj.updates = {};
+        obj.updates[m[1]] = v;
+      } else {
+        obj[k] = v;
+      }
+    }
+    return obj;
+  }
+
+  function findItemByAnyKey(cart, keyLike) {
+    // Try line item key
+    let item = cart.items.find(i => i.key === keyLike);
+    if (item) return item;
+
+    // Try numeric line (1-based) or variant id
+    const asInt = parseInt(keyLike, 10);
+    if (!Number.isNaN(asInt)) {
+      if (asInt >= 1 && asInt <= cart.items.length) return cart.items[asInt - 1];
+      const byVariant = cart.items.find(i => i.variant_id === asInt);
+      if (byVariant) return byVariant;
+    }
+    return null;
+  }
+
+  function blockAndReturnCart(cart, message) {
+    alert(message);
+    // Return a cart-looking response so themes don't error out
+    return new Response(JSON.stringify(cart), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
+  // ====== INITIAL POPUP CHECK ======
   checkCartAndPopup();
 
-  // Override fetch to watch for cart changes
+  // ====== FETCH INTERCEPTOR: Enforce Free(1 total) + Paid(2 per variant) ======
   (function () {
     const originalFetch = window.fetch;
+
     window.fetch = async function (...args) {
-      const response = await originalFetch.apply(this, args);
       const url = args[0];
-      if (typeof url === "string" && (
-        url.includes("/cart/add.js") ||
-        url.includes("/cart/change.js") ||
-        url.includes("/cart/update.js")
-      )) {
-        response.clone().json().then(() => {
+      const options = args[1] || {};
+      const isCartEndpoint = typeof url === "string" && (
+        url.includes("/cart/add.js") || url.includes("/cart/change.js") || url.includes("/cart/update.js")
+      );
+
+      if (isCartEndpoint) {
+        try {
+          const bodyObj = parseBodyToObject(options.body);
+          const cart = await fetchCart();
+
+          // --- /cart/add.js ---
+          if (url.includes("/cart/add.js")) {
+            // Accept both "items:[]" and single { id, quantity, properties }
+            let items = [];
+            if (Array.isArray(bodyObj.items)) {
+              items = bodyObj.items.map(it => ({ id: parseInt(it.id, 10), quantity: parseInt(it.quantity || 1, 10) || 1, properties: it.properties || {} }));
+            } else if (bodyObj.id) {
+              items = [{ id: parseInt(bodyObj.id, 10), quantity: parseInt(bodyObj.quantity || 1, 10) || 1, properties: bodyObj.properties || {} }];
+            }
+
+            for (const it of items) {
+              if (!isGiftVariantId(it.id)) continue;
+
+              const isFreeAdd = !!(it.properties && (it.properties.source === "Free Gift Promo" || it.properties["Free Gift"] === "Yes"));
+
+              if (isFreeAdd) {
+                const currentFreeTotal = getFreeGiftTotal(cart);
+                if (currentFreeTotal + it.quantity > MAX_FREE_GIFT_TOTAL) {
+                  return blockAndReturnCart(cart, "🚫 Only 1 free gift is allowed.");
+                }
+              } else {
+                const paidQty = getPaidQtyForVariant(cart, it.id);
+                if (paidQty + it.quantity > MAX_PAID_PER_VARIANT) {
+                  return blockAndReturnCart(cart, "🚫 You can only buy up to 2 of this item.");
+                }
+              }
+            }
+          }
+
+          // --- /cart/change.js ---
+          if (url.includes("/cart/change.js")) {
+            const { id, line, quantity } = bodyObj;
+            const newQty = parseInt(quantity, 10);
+            if (!Number.isNaN(newQty)) {
+              const target = findItemByAnyKey(cart, id !== undefined ? id : (line !== undefined ? String(line) : null));
+              if (target && isGiftVariantId(target.variant_id)) {
+                if (isFreeGiftLineItem(target)) {
+                  if (newQty > MAX_FREE_GIFT_TOTAL) {
+                    return blockAndReturnCart(cart, "🚫 Only 1 free gift is allowed.");
+                  }
+                } else {
+                  // Paid line of a gift variant — cap to 2 PER VARIANT (including other paid lines)
+                  const otherPaid = cart.items.reduce((sum, i) => {
+                    if (!isGiftVariantId(i.variant_id)) return sum;
+                    if (i.variant_id !== target.variant_id) return sum;
+                    if (isFreeGiftLineItem(i)) return sum;
+                    // exclude the target line itself
+                    if (i.key === target.key) return sum;
+                    return sum + i.quantity;
+                  }, 0);
+                  if (otherPaid + newQty > MAX_PAID_PER_VARIANT) {
+                    return blockAndReturnCart(cart, "🚫 You can only buy up to 2 of this item.");
+                  }
+                }
+              }
+            }
+          }
+
+          // --- /cart/update.js ---
+          if (url.includes("/cart/update.js") && bodyObj.updates) {
+            const updates = bodyObj.updates;
+
+            // Build simulated counts
+            // Map: variantId -> { freeQty, paidQty }
+            const counters = {};
+            function ensure(vid) { if (!counters[vid]) counters[vid] = { freeQty: 0, paidQty: 0 }; }
+
+            // Seed with current cart
+            cart.items.forEach(i => {
+              if (!isGiftVariantId(i.variant_id)) return;
+              ensure(i.variant_id);
+              if (isFreeGiftLineItem(i)) counters[i.variant_id].freeQty += i.quantity;
+              else counters[i.variant_id].paidQty += i.quantity;
+            });
+
+            // Apply updates hypothetically
+            const seenKey = new Set();
+            for (const k in updates) {
+              const desired = parseInt(updates[k], 10);
+              if (Number.isNaN(desired)) continue;
+              const item = findItemByAnyKey(cart, k);
+              if (!item || !isGiftVariantId(item.variant_id)) continue;
+              if (seenKey.has(item.key)) continue; // avoid double adjusting if multiple keys map
+              seenKey.add(item.key);
+
+              ensure(item.variant_id);
+              if (isFreeGiftLineItem(item)) {
+                counters[item.variant_id].freeQty -= item.quantity;
+                counters[item.variant_id].freeQty += desired;
+              } else {
+                counters[item.variant_id].paidQty -= item.quantity;
+                counters[item.variant_id].paidQty += desired;
+              }
+            }
+
+            // Validate totals
+            // Free gift is total across ALL gift variants
+            const totalFree = Object.values(counters).reduce((s, c) => s + c.freeQty, 0);
+            if (totalFree > MAX_FREE_GIFT_TOTAL) {
+              return blockAndReturnCart(cart, "🚫 Only 1 free gift is allowed.");
+            }
+            // Paid is per variant
+            for (const vid in counters) {
+              if (counters[vid].paidQty > MAX_PAID_PER_VARIANT) {
+                return blockAndReturnCart(cart, "🚫 You can only buy up to 2 of this item.");
+              }
+            }
+          }
+        } catch (e) {
+          console.warn("Gift rule pre-check failed (continuing):", e);
+        }
+      }
+
+      const response = await originalFetch.apply(this, args);
+
+      // Keep your existing post-update refresh
+      if (isCartEndpoint) {
+        response.clone().json().catch(() => {}).finally(() => {
+          // Re-run checks & removal after any cart change
           setTimeout(() => {
             checkCartAndPopup();
-            removeGiftsIfNoDiscount();
-          }, 500);
+            removeFreeGiftsIfNeeded();
+          }, 400);
         });
       }
+
       return response;
     };
   })();
 
+  // ====== XHR INTERCEPTOR (for themes using XMLHttpRequest) ======
+  (function () {
+    const origOpen = XMLHttpRequest.prototype.open;
+    const origSend = XMLHttpRequest.prototype.send;
+
+    XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+      this._method = method;
+      this._url = url;
+      origOpen.apply(this, arguments);
+    };
+
+    XMLHttpRequest.prototype.send = function (body) {
+      const url = this._url || "";
+      const isCartEndpoint = typeof url === "string" && (
+        url.includes("/cart/add.js") || url.includes("/cart/change.js") || url.includes("/cart/update.js")
+      );
+      if (!isCartEndpoint) return origSend.apply(this, arguments);
+
+      (async () => {
+        try {
+          const bodyObj = parseBodyToObject(body);
+          const cart = await fetchCart();
+
+          // Mirror the same validations as fetch-interceptor:
+
+          if (url.includes("/cart/add.js")) {
+            let items = [];
+            if (Array.isArray(bodyObj.items)) {
+              items = bodyObj.items.map(it => ({ id: parseInt(it.id, 10), quantity: parseInt(it.quantity || 1, 10) || 1, properties: it.properties || {} }));
+            } else if (bodyObj.id) {
+              items = [{ id: parseInt(bodyObj.id, 10), quantity: parseInt(bodyObj.quantity || 1, 10) || 1, properties: bodyObj.properties || {} }];
+            }
+            for (const it of items) {
+              if (!isGiftVariantId(it.id)) continue;
+              const isFreeAdd = !!(it.properties && (it.properties.source === "Free Gift Promo" || it.properties["Free Gift"] === "Yes"));
+              if (isFreeAdd) {
+                const currentFreeTotal = getFreeGiftTotal(cart);
+                if (currentFreeTotal + it.quantity > MAX_FREE_GIFT_TOTAL) {
+                  alert("🚫 Only 1 free gift is allowed.");
+                  setTimeout(checkCartAndPopup, 300);
+                  return;
+                }
+              } else {
+                const paidQty = getPaidQtyForVariant(cart, it.id);
+                if (paidQty + it.quantity > MAX_PAID_PER_VARIANT) {
+                  alert("🚫 You can only buy up to 2 of this item.");
+                  setTimeout(checkCartAndPopup, 300);
+                  return;
+                }
+              }
+            }
+          }
+
+          if (url.includes("/cart/change.js")) {
+            const { id, line, quantity } = bodyObj;
+            const newQty = parseInt(quantity, 10);
+            if (!Number.isNaN(newQty)) {
+              const target = findItemByAnyKey(cart, id !== undefined ? id : (line !== undefined ? String(line) : null));
+              if (target && isGiftVariantId(target.variant_id)) {
+                if (isFreeGiftLineItem(target)) {
+                  if (newQty > MAX_FREE_GIFT_TOTAL) {
+                    alert("🚫 Only 1 free gift is allowed.");
+                    setTimeout(checkCartAndPopup, 300);
+                    return;
+                  }
+                } else {
+                  const otherPaid = cart.items.reduce((sum, i) => {
+                    if (!isGiftVariantId(i.variant_id)) return sum;
+                    if (i.variant_id !== target.variant_id) return sum;
+                    if (isFreeGiftLineItem(i)) return sum;
+                    if (i.key === target.key) return sum;
+                    return sum + i.quantity;
+                  }, 0);
+                  if (otherPaid + newQty > MAX_PAID_PER_VARIANT) {
+                    alert("🚫 You can only buy up to 2 of this item.");
+                    setTimeout(checkCartAndPopup, 300);
+                    return;
+                  }
+                }
+              }
+            }
+          }
+
+          if (url.includes("/cart/update.js") && bodyObj.updates) {
+            const updates = bodyObj.updates;
+
+            const counters = {};
+            function ensure(vid) { if (!counters[vid]) counters[vid] = { freeQty: 0, paidQty: 0 }; }
+
+            cart.items.forEach(i => {
+              if (!isGiftVariantId(i.variant_id)) return;
+              ensure(i.variant_id);
+              if (isFreeGiftLineItem(i)) counters[i.variant_id].freeQty += i.quantity;
+              else counters[i.variant_id].paidQty += i.quantity;
+            });
+
+            const seenKey = new Set();
+            for (const k in updates) {
+              const desired = parseInt(updates[k], 10);
+              if (Number.isNaN(desired)) continue;
+              const item = findItemByAnyKey(cart, k);
+              if (!item || !isGiftVariantId(item.variant_id)) continue;
+              if (seenKey.has(item.key)) continue;
+              seenKey.add(item.key);
+
+              ensure(item.variant_id);
+              if (isFreeGiftLineItem(item)) {
+                counters[item.variant_id].freeQty -= item.quantity;
+                counters[item.variant_id].freeQty += desired;
+              } else {
+                counters[item.variant_id].paidQty -= item.quantity;
+                counters[item.variant_id].paidQty += desired;
+              }
+            }
+
+            const totalFree = Object.values(counters).reduce((s, c) => s + c.freeQty, 0);
+            if (totalFree > MAX_FREE_GIFT_TOTAL) {
+              alert("🚫 Only 1 free gift is allowed.");
+              setTimeout(checkCartAndPopup, 300);
+              return;
+            }
+            for (const vid in counters) {
+              if (counters[vid].paidQty > MAX_PAID_PER_VARIANT) {
+                alert("🚫 You can only buy up to 2 of this item.");
+                setTimeout(checkCartAndPopup, 300);
+                return;
+              }
+            }
+          }
+
+          // Allowed: proceed
+          origSend.apply(this, arguments);
+        } catch (e) {
+          // On parsing error, fail open rather than break cart
+          origSend.apply(this, arguments);
+        }
+      })();
+    };
+  })();
+
+  // ====== EVENT HOOK (kept)
   document.addEventListener("cart:build", () => {
     checkCartAndPopup();
-    removeGiftsIfNoDiscount();
+    removeFreeGiftsIfNeeded();
   });
 
-  // PICK ME button → Add gift + apply discount + checkout
+  // ====== GIFT PICKER BUTTON (kept, but now enforces the new rules) ======
   document.querySelectorAll(".gift-btn").forEach(button => {
     button.addEventListener("click", function () {
       const giftItem = this.closest(".gift-item");
       const select = giftItem.querySelector(".gift-variant-selector");
-      const variantId = parseInt(select.value);
+      const variantId = parseInt(select.value, 10);
 
-      fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
-        .then(res => res.json())
+      fetchCart()
         .then(cart => {
-          const hasSpecificDiscount = cart.discount_codes?.some(
-            d => d.code?.toLowerCase() === giftCode.toLowerCase()
-          );
-
-          // Stop if no discount code
-          if (!hasSpecificDiscount) {
-            alert("🚫 This promotion requires the discount code.");
-            hidePopup();
-            return;
-          }
-
-          const alreadyHasGift = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+          const hasSpecificDiscount = cart.discount_codes?.some(d => d.code && d.code.toLowerCase() === requiredDiscount) || false;
           const subtotal = cart.total_price / 100;
 
-          if (alreadyHasGift) {
-            alert("🚫 Only one free gift is allowed per order.");
-            disableAllButtons();
+          // Free gift total across ALL gift variants
+          const freeTotal = getFreeGiftTotal(cart);
+          if (freeTotal >= MAX_FREE_GIFT_TOTAL) {
+            alert("🚫 Only 1 free gift is allowed.");
             hidePopup();
             return;
           }
 
-          if (subtotal >= 100) {
+          if (!hasSpecificDiscount) {
+            alert("🚫 Discount code not applied.");
+            hidePopup();
+            return;
+          }
+
+          if (subtotal >= 100 && hasSpecificDiscount) {
             fetch('/cart/add.js', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -300,52 +682,122 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
               })
             }).then(() => {
-              // Go to checkout with discount applied
-              window.location.href = `/discount/${giftCode}?redirect=/checkout`;
+              // apply gift discount and return to current page (keeps your original flow)
+              applyDiscountAndStay(giftCode);
+
+              setTimeout(() => {
+                document.dispatchEvent(new CustomEvent('cart:build', { detail: {} }));
+              }, 400);
+
+              setTimeout(() => {
+                const openBtn = document.querySelector(".js-drawer-open-cart");
+                if (openBtn) openBtn.click();
+              }, 450);
+
+              setTimeout(() => { hidePopup(); }, 500);
             });
           } else {
             alert("🚫 You are no longer eligible for the gift.");
             hidePopup();
           }
-        });
+        }).catch(()=>{});
     });
   });
 
-  // Remove gifts if discount is missing when not on checkout
-  function removeGiftsIfNoDiscount() {
-    if (window.location.pathname.includes('/checkout')) return;
+  // ====== SMALL ORANGE POPUP (kept from your original) ======
+  const giftPopup = document.createElement('div');
+  giftPopup.id = 'gift-popup';
+  giftPopup.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    background: #ff7800;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: inherit;
+    font-size: 14px;
+    z-index: 9999;
+    display: none;
+  `;
+  giftPopup.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span>You already have your free gift in the cart.</span>
+      <button id="gift-popup-close" style="
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 15px;
+      ">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(giftPopup);
 
-    fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
-      .then(res => res.json())
-      .then(cart => {
-        const hasGiftCode = cart.discount_codes?.some(
-          d => d.code?.toLowerCase() === giftCode.toLowerCase()
-        );
+  document.getElementById('gift-popup-close')?.addEventListener('click', () => {
+    giftPopup.style.display = 'none';
+  });
 
-        if (!hasGiftCode) {
-          removeAllGifts(cart);
-        }
-      });
+  function showGiftPopup() {
+    giftPopup.style.display = 'block';
+    setTimeout(() => { giftPopup.style.display = 'none'; }, 10000);
   }
 
-  // Run removal check on page load
-  removeGiftsIfNoDiscount();
+  // ====== PDP FORM GUARD (updated to allow paid up to 2, block only free gift extras) ======
+  document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
+    form.addEventListener('submit', function (e) {
+      const formData = new FormData(this);
+      const variantId = parseInt(formData.get("id"), 10);
+      const quantity = parseInt(formData.get("quantity") || "1", 10) || 1;
 
-  document.getElementById("close-popup").addEventListener("click", hidePopup);
+      // Detect whether this PDP submit is trying to add as a FREE gift
+      const propSource = formData.get("properties[source]");
+      const propFreeGift = formData.get("properties[Free Gift]");
+      const isFreeAdd = (propSource === "Free Gift Promo") || (propFreeGift === "Yes");
 
-  // Variant selector image swap
+      if (!isGiftVariantId(variantId)) return; // not a gift variant → ignore
+
+      fetchCart()
+        .then(cart => {
+          if (isFreeAdd) {
+            const freeTotal = getFreeGiftTotal(cart);
+            if (freeTotal + quantity > MAX_FREE_GIFT_TOTAL) {
+              showGiftPopup();
+              return;
+            }
+            // Allowed, submit as normal
+            this.submit();
+          } else {
+            // Paid purchase of a gift variant → cap to 2 PER VARIANT
+            const paidQty = getPaidQtyForVariant(cart, variantId);
+            if (paidQty + quantity > MAX_PAID_PER_VARIANT) {
+              alert("🚫 You can only buy up to 2 of this item.");
+              return;
+            }
+            this.submit();
+          }
+        }).catch(()=>{ this.submit(); });
+    });
+  });
+
+  // ====== IMAGE SWAP ON VARIANT SELECT (kept) ======
   document.querySelectorAll(".gift-variant-selector").forEach(function (selectBox) {
     selectBox.addEventListener("change", function () {
       const selectedOption = this.options[this.selectedIndex];
-      const imageUrl = selectedOption.dataset.image;
+      const imageUrl = selectedOption?.dataset?.image;
       const wrapper = this.closest(".gift-item");
-      const imageEl = wrapper.querySelector(".gift-variant-image");
-
+      const imageEl = wrapper?.querySelector(".gift-variant-image");
       if (imageEl && imageUrl) {
         imageEl.src = imageUrl;
       }
     });
   });
+
+  // ====== CLOSE MAIN POPUP BUTTON (kept) ======
+  const closeBtn = document.getElementById("close-popup");
+  if (closeBtn) closeBtn.addEventListener("click", hidePopup);
 });
 </script>
 
