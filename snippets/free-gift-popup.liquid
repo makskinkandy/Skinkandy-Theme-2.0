@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (subtotal >= 100) {
             showPopup();
           } else {
+            removeAllGifts(cart);
             hidePopup();
           }
         }
