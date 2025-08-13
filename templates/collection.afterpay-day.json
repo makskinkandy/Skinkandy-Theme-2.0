@@ -18,7 +18,7 @@
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-Afterpay-Day-Sale-Aug-25.jpg",
             "image": "shopify://shop_images/Homepage-Banner-Desktop-Afterpay-Day-Sale-AUG-25.jpg",
-            "banner_url": "/discount/SKAFTERPAY25?redirect=%2Fcollections%2Fshop-all-promo-collection",
+            "banner_url": "",
             "heading": "",
             "short_description": "",
             "button_text": "",
