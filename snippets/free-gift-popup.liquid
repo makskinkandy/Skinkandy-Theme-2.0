@@ -12,7 +12,7 @@
                 {% assign selected = false %}
                 {% for variant in product.variants %}
                   {% assign trimmed_sku = variant.sku | strip %}
-                  {% if skus contains trimmed_sku %}
+                  {% if skus contains trimmed_sku and variant.available %}
                       <img src="{{ variant.image | image_url: width: 400 }}" alt="{{ product.title }}" class="gift-variant-image">
                   {% endif %}
                 {% endfor %}
