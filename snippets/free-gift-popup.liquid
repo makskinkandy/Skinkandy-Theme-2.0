@@ -175,20 +175,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-function applyDiscountAndStay(code) {
-  const currentPath = window.location.pathname + window.location.search;
-  const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
-
-  const iframe = document.createElement('iframe');
-  iframe.style.display = 'none';
-  iframe.src = discountUrl;
-  document.body.appendChild(iframe);
-
-  // Optional: clean up after load
-  iframe.onload = () => {
-    setTimeout(() => iframe.remove(), 3000);
-  };
-}
+  function applyDiscountAndStay(code) {
+    const currentPath = window.location.pathname + window.location.search;
+    const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
+    window.location.href = discountUrl; // This will apply discount & refresh
+  }
 
   // ====== GIFT HELPERS ======
   function isGiftVariantId(variantId) {
