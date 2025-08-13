@@ -139,260 +139,186 @@
   {% assign variant_id_array = matched_variant_ids | split: "," | uniq %}
   
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const giftVariantIds = [
-      {% for id in variant_id_array %}
-        {% unless id == "" %}{{ id }},{% endunless %}
-      {% endfor %}
-    ];
-    const popup = document.getElementById("free-gift-popup");
-    
-    function showPopup() {
-      popup.classList.add("show");
-    }
-  
-    function hidePopup() {
-      popup.classList.remove("show");
-    }
-  
-    function disableAllButtons(message = "Gift Added") {
-      document.querySelectorAll(".gift-btn").forEach(btn => {
-        btn.disabled = true;
-        btn.textContent = message;
-        btn.style.opacity = "0.6";
-      });
-    }
-  
-    function enableAllButtons(message = "Pick me") {
-      document.querySelectorAll(".gift-btn").forEach(btn => {
-        btn.disabled = false;
-        btn.textContent = message;
-        btn.style.opacity = "1";
-      });
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const giftVariantIds = [
+    {% for id in variant_id_array %}
+      {% unless id == "" %}{{ id }},{% endunless %}
+    {% endfor %}
+  ];
 
-    function applyDiscountAndStay(code) {
-      const currentPath = window.location.pathname + window.location.search;
-      const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
-      fetch(discountUrl).catch(() => {
-        // Fail silently
-        console.log("ERROR")
+  const giftCode = "{{ gift_code }}"; // Your gift_code from Liquid
+  const popup = document.getElementById("free-gift-popup");
+
+  function showPopup() {
+    popup.classList.add("show");
+  }
+
+  function hidePopup() {
+    popup.classList.remove("show");
+  }
+
+  function disableAllButtons(message = "Gift Added") {
+    document.querySelectorAll(".gift-btn").forEach(btn => {
+      btn.disabled = true;
+      btn.textContent = message;
+      btn.style.opacity = "0.6";
+    });
+  }
+
+  function enableAllButtons(message = "Pick me") {
+    document.querySelectorAll(".gift-btn").forEach(btn => {
+      btn.disabled = false;
+      btn.textContent = message;
+      btn.style.opacity = "1";
+    });
+  }
+
+  function checkCartAndPopup() {
+    fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
+      .then(res => res.json())
+      .then(cart => {
+        const subtotal = cart.total_price / 100;
+        const hasSpecificDiscount = cart.discount_codes?.some(
+          d => d.code?.toLowerCase() === giftCode.toLowerCase()
+        ) || false;
+
+        const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+
+        if (giftInCart) {
+          disableAllButtons();
+        } else {
+          enableAllButtons();
+          if (subtotal >= 100 && hasSpecificDiscount) {
+            showPopup();
+          } else {
+            hidePopup();
+          }
+        }
       });
-    }
-  
-    function checkCartAndPopup() {
-      fetch('/cart.js')
+  }
+
+  checkCartAndPopup();
+
+  // Override fetch to watch for cart changes
+  (function () {
+    const originalFetch = window.fetch;
+    window.fetch = async function (...args) {
+      const response = await originalFetch.apply(this, args);
+      const url = args[0];
+      if (typeof url === "string" && (
+        url.includes("/cart/add.js") ||
+        url.includes("/cart/change.js") ||
+        url.includes("/cart/update.js")
+      )) {
+        response.clone().json().then(() => {
+          setTimeout(() => {
+            checkCartAndPopup();
+            removeGiftsIfNoDiscount();
+          }, 500);
+        });
+      }
+      return response;
+    };
+  })();
+
+  document.addEventListener("cart:build", () => {
+    checkCartAndPopup();
+    removeGiftsIfNoDiscount();
+  });
+
+  // PICK ME button → Add gift + apply discount + checkout
+  document.querySelectorAll(".gift-btn").forEach(button => {
+    button.addEventListener("click", function () {
+      const giftItem = this.closest(".gift-item");
+      const select = giftItem.querySelector(".gift-variant-selector");
+      const variantId = parseInt(select.value);
+
+      fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
         .then(res => res.json())
         .then(cart => {
+          const alreadyHasGift = cart.items.some(item => giftVariantIds.includes(item.variant_id));
           const subtotal = cart.total_price / 100;
-  
-          const hasSpecificDiscount = cart.discount_codes?.some(
-            d => d.code === "{{ discount_code }}"
-          ) || false;
-  
-          const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
-  
-          if (hasSpecificDiscount && giftInCart && subtotal < 100) {
-            const giftItem = cart.items.find(i => giftVariantIds.includes(i.variant_id));
-            fetch('/cart/change.js', {
+
+          if (alreadyHasGift) {
+            alert("🚫 Only one free gift is allowed per order.");
+            disableAllButtons();
+            hidePopup();
+            return;
+          }
+
+          if (subtotal >= 100) {
+            fetch('/cart/add.js', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ id: giftItem.key, quantity: 0 })
+              body: JSON.stringify({
+                items: [{
+                  id: variantId,
+                  quantity: 1,
+                  properties: { source: "Free Gift Promo" }
+                }]
+              })
             }).then(() => {
-
-                setTimeout(() => {
-                  document.dispatchEvent(new CustomEvent('cart:build', { detail: { cart } }));
-                }, 500);
-                
-                return;
-
-              });
-          }
-  
-          if (giftInCart) {
-            disableAllButtons();
-          } else {
-            enableAllButtons(); // 👈 NEW LINE
-            if (subtotal >= 100 && hasSpecificDiscount) {
-              showPopup();
-            } else {
-              hidePopup();
-            }
-          }
-          
-        });
-    }
-  
-    checkCartAndPopup();
-  
-    (function () {
-      const originalFetch = window.fetch;
-      window.fetch = async function (...args) {
-        const response = await originalFetch.apply(this, args);
-        const url = args[0];
-        if (typeof url === "string" && (
-          url.includes("/cart/add.js") ||
-          url.includes("/cart/change.js") ||
-          url.includes("/cart/update.js")
-        )) {
-          response.clone().json().then(() => {
-            setTimeout(checkCartAndPopup, 500);
-          });
-        }
-        return response;
-      };
-    })();
-  
-    document.addEventListener("cart:build", checkCartAndPopup);
-  
-    document.querySelectorAll(".gift-btn").forEach(button => {
-      button.addEventListener("click", function () {
-        const giftItem = this.closest(".gift-item");
-        const select = giftItem.querySelector(".gift-variant-selector");
-        const variantId = parseInt(select.value);
-        
-        fetch('/cart.js')
-          .then(res => res.json())
-          .then(cart => {
-            const hasSpecificDiscount = cart.discount_codes?.some(
-              d => d.code === "{{ discount_code }}"
-            ) || false;
-  
-            const alreadyHasGift = cart.items.some(item => giftVariantIds.includes(item.variant_id));
-            const subtotal = cart.total_price / 100;
-  
-            if (alreadyHasGift) {
-              alert("🚫 Only one free gift is allowed per order.");
-              disableAllButtons();
-              hidePopup();
-              return;
-            }
-  
-            if (subtotal >= 100 && hasSpecificDiscount) {
-              fetch('/cart/add.js', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  items: [{
-                    id: variantId,
-                    quantity: 1,
-                    properties: {
-                      source: "Free Gift Promo"
-                    }
-                  }]
-                })
-              }).then(() => {
-
-                applyDiscountAndStay('{{ gift_code }}');
-
-                setTimeout(() => {
-                  document.dispatchEvent(new CustomEvent('cart:build', { detail: { cart } }));
-                }, 500);
-
-                setTimeout(() => {
-                  document.querySelector(".js-drawer-open-cart").click();
-                }, 600);
-
-                setTimeout(() => {
-                  hidePopup();
-                }, 600);
-                  
-
-              });
-            } else {
-              alert("🚫 You are no longer eligible for the gift.");
-              hidePopup();
-            }
-          });
-      });
-    });
-  
-    document.getElementById("close-popup").addEventListener("click", hidePopup);
-
-    // Create popup container once
-    const giftPopup = document.createElement('div');
-    giftPopup.id = 'gift-popup';
-    giftPopup.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      max-width: 300px;
-      background: #ff7800;
-      color: #333;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      font-family: inherit;
-      font-size: 14px;
-      z-index: 9999;
-      display: none;
-    `;
-    giftPopup.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <span>This gift item is already in your cart. Please complete checkout before adding it again.</span>
-        <button id="gift-popup-close" style="
-          background: none;
-          border: none;
-          font-size: 18px;
-          cursor: pointer;
-          margin-left: 15px;
-        ">&times;</button>
-      </div>
-    `;
-    document.body.appendChild(giftPopup);
-
-    document.getElementById('gift-popup-close').addEventListener('click', () => {
-      giftPopup.style.display = 'none';
-    });
-
-    function showGiftPopup() {
-      giftPopup.style.display = 'block';
-      setTimeout(() => {
-        giftPopup.style.display = 'none';
-      }, 10000);
-    }
-  
-    document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
-      form.addEventListener('submit', function (e) {
-        const formData = new FormData(this);
-        const variantId = parseInt(formData.get("id"));
-  
-        if (giftVariantIds.includes(variantId)) {
-          e.preventDefault();
-          fetch('/cart.js')
-            .then(res => res.json())
-            .then(cart => {
-              const subtotal = cart.total_price / 100;
-              const hasSpecificDiscount = cart.discount_codes?.some(
-                d => d.code === "{{ discount_code }}"
-              ) || false;
-  
-              const giftInCart = cart.items.some(item =>
-                giftVariantIds.includes(item.variant_id)
-              );
-
-              if (giftInCart) {
-                showGiftPopup();
-                return;
-              }
-
-              this.submit();
+              // Go to checkout with discount applied
+              window.location.href = `/discount/${giftCode}?redirect=/checkout`;
             });
-        }
-      });
-    });
-
-    document.querySelectorAll(".gift-variant-selector").forEach(function (selectBox) {
-      selectBox.addEventListener("change", function () {
-        const selectedOption = this.options[this.selectedIndex];
-        const imageUrl = selectedOption.dataset.image;
-        const wrapper = this.closest(".gift-item");
-        const imageEl = wrapper.querySelector(".gift-variant-image");
-
-        if (imageEl && imageUrl) {
-          imageEl.src = imageUrl;
-        }
-      });
+          } else {
+            alert("🚫 You are no longer eligible for the gift.");
+            hidePopup();
+          }
+        });
     });
   });
-  </script>
+
+  // Remove gifts if discount is missing when not on checkout
+  function removeGiftsIfNoDiscount() {
+    if (window.location.pathname.includes('/checkout')) return;
+
+    fetch(`/cart.js?t=${Date.now()}`, { cache: "no-store" })
+      .then(res => res.json())
+      .then(cart => {
+        const hasGiftCode = cart.discount_codes?.some(
+          d => d.code?.toLowerCase() === giftCode.toLowerCase()
+        );
+
+        if (!hasGiftCode) {
+          const giftItems = cart.items.filter(
+            item => item.properties && item.properties.source === "Free Gift Promo"
+          );
+
+          if (giftItems.length > 0) {
+            Promise.all(
+              giftItems.map(giftItem =>
+                fetch(`/cart/change.js`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ id: giftItem.key, quantity: 0 })
+                })
+              )
+            ).then(() => {
+              document.dispatchEvent(new CustomEvent('cart:build'));
+            });
+          }
+        }
+      });
+  }
+
+  // Run removal check on page load
+  removeGiftsIfNoDiscount();
+
+  document.getElementById("close-popup").addEventListener("click", hidePopup);
+
+  // Variant selector image swap
+  document.querySelectorAll(".gift-variant-selector").forEach(function (selectBox) {
+    selectBox.addEventListener("change", function () {
+      const selectedOption = this.options[this.selectedIndex];
+      const imageUrl = selectedOption.dataset.image;
+      const wrapper = this.closest(".gift-item");
+      const imageEl = wrapper.querySelector(".gift-variant-image");
+
+      if (imageEl && imageUrl) {
+        imageEl.src = imageUrl;
+      }
+    });
+  });
+});
+</script>
