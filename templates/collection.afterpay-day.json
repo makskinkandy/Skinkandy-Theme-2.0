@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Cut_Off-Homepage_Banner-Mobile.jpg",
-            "image": "shopify://shop_images/Cut_Off-Homepage_Banner-Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-Afterpay-Day-Sale-Aug-25.jpg",
+            "image": "shopify://shop_images/Homepage-Banner-Desktop-Afterpay-Day-Sale-AUG-25.jpg",
             "banner_url": "",
             "heading": "",
             "short_description": "",
@@ -30,10 +30,9 @@
       "block_order": [
         "image_PQyLp4"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
-        "banner_size": "short-banner",
+        "banner_size": "small-banner",
         "small_overlay": false,
         "shuffle": false
       }
@@ -81,7 +80,7 @@
             "custom_filter_2_text": "",
             "custom_filter_3": "",
             "custom_filter_3_text": "",
-            "filter_menu": ""
+            "filter_menu": "new-menu-4"
           }
         },
         "subcollections": {
@@ -109,6 +108,9 @@
         "subcollections",
         "product_grid",
         "a93001b2-fbf4-409c-b650-4a8c89ebe0f8"
+      ],
+      "custom_css": [
+        "h1 {display: none;}"
       ],
       "settings": {
         "bg_color": "#fafafa",

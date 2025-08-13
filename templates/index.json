@@ -39,6 +39,20 @@
     "header_banner_MUPtRQ": {
       "type": "header-banner",
       "blocks": {
+        "image_WgeizH": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Homepage-Banner-Mobile-Afterpay-Day-Sale-Aug-25.jpg",
+            "image": "shopify://shop_images/Homepage-Banner-Desktop-Afterpay-Day-Sale-AUG-25.jpg",
+            "banner_url": "shopify://collections/shop-all-promo-collection",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
         "image_ng66KH": {
           "type": "image",
           "settings": {
@@ -83,6 +97,7 @@
         }
       },
       "block_order": [
+        "image_WgeizH",
         "image_ng66KH",
         "image_PFE9d8",
         "image_PdCEic"
