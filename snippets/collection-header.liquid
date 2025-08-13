@@ -58,15 +58,15 @@
       const originalHTML = block.innerHTML;
 
       // Create a temporary container to walk DOM
-      const container = document.createElement("div");
+      const container = document.createElement("span");
       container.innerHTML = originalHTML;
 
       let wordCount = 0;
       let reachedLimit = false;
 
-      const shortContainer = document.createElement("div");
+      const shortContainer = document.createElement("span");
       shortContainer.classList.add("cut-content");
-      const fullContainer = document.createElement("div");
+      const fullContainer = document.createElement("span");
       fullContainer.style.display = "none";
       fullContainer.classList.add("hidden-content");
 
