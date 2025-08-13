@@ -173,7 +173,7 @@
 
     function applyDiscountAndStay(code) {
       const currentPath = window.location.pathname + window.location.search;
-      const discountUrl = /discount/${code}?redirect=${encodeURIComponent(currentPath)};
+      const discountUrl = `/discount/${code}?redirect=${encodeURIComponent(currentPath)}`;
       fetch(discountUrl).catch(() => {
         // Fail silently
         console.log("ERROR")
@@ -191,6 +191,23 @@
           ) || false;
   
           const giftInCart = cart.items.some(item => giftVariantIds.includes(item.variant_id));
+  
+          if (hasSpecificDiscount && giftInCart && subtotal < 100) {
+            const giftItem = cart.items.find(i => giftVariantIds.includes(i.variant_id));
+            fetch('/cart/change.js', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ id: giftItem.key, quantity: 0 })
+            }).then(() => {
+
+                setTimeout(() => {
+                  document.dispatchEvent(new CustomEvent('cart:build', { detail: { cart } }));
+                }, 500);
+                
+                return;
+
+              });
+          }
   
           if (giftInCart) {
             disableAllButtons();
@@ -295,7 +312,7 @@
     // Create popup container once
     const giftPopup = document.createElement('div');
     giftPopup.id = 'gift-popup';
-    giftPopup.style.cssText = 
+    giftPopup.style.cssText = `
       position: fixed;
       top: 20px;
       right: 20px;
@@ -309,8 +326,8 @@
       font-size: 14px;
       z-index: 9999;
       display: none;
-    ;
-    giftPopup.innerHTML = 
+    `;
+    giftPopup.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <span>This gift item is already in your cart. Please complete checkout before adding it again.</span>
         <button id="gift-popup-close" style="
@@ -321,7 +338,7 @@
           margin-left: 15px;
         ">&times;</button>
       </div>
-    ;
+    `;
     document.body.appendChild(giftPopup);
 
     document.getElementById('gift-popup-close').addEventListener('click', () => {
