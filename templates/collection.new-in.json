@@ -27,7 +27,9 @@
           }
         }
       },
-      "block_order": ["image_PQyLp4"],
+      "block_order": [
+        "image_PQyLp4"
+      ],
       "disabled": true,
       "settings": {
         "title": "",
@@ -79,7 +81,7 @@
             "custom_filter_2_text": "",
             "custom_filter_3": "",
             "custom_filter_3_text": "",
-            "filter_menu": "new-menu-9"
+            "filter_menu": ""
           }
         },
         "subcollections": {
