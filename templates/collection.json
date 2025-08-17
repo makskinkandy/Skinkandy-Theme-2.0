@@ -86,12 +86,14 @@
         },
         "subcollections": {
           "type": "subcollections",
+          "disabled": true,
           "settings": {
             "subcollections_per_row": 5
           }
         },
         "product_grid": {
           "type": "product_grid",
+          "disabled": true,
           "settings": {
             "per_row": 4,
             "rows_per_page": 8,
@@ -110,7 +112,9 @@
         "product_grid",
         "a93001b2-fbf4-409c-b650-4a8c89ebe0f8"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".collection-filter-wrapper {display: none;}"
+      ],
       "settings": {
         "bg_color": "#fafafa",
         "enable_sidebar": true,
@@ -161,7 +165,10 @@
       "block_order": [
         "32e97d92-4f9b-41ea-8d09-1ecfc65e2fa6"
       ],
-      "settings": {}
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
