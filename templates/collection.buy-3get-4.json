@@ -66,12 +66,14 @@
         },
         "subcollections": {
           "type": "subcollections",
+          "disabled": true,
           "settings": {
             "subcollections_per_row": 5
           }
         },
         "product_grid": {
           "type": "product_grid",
+          "disabled": true,
           "settings": {
             "per_row": 4,
             "rows_per_page": 8,
@@ -91,7 +93,7 @@
         "a93001b2-fbf4-409c-b650-4a8c89ebe0f8"
       ],
       "custom_css": [
-        "h1 {display: none}"
+        "h1 {display: none;}"
       ],
       "settings": {
         "bg_color": "#fafafa",
@@ -112,6 +114,22 @@
         "floating_image": "shopify://shop_images/Group_1442_1.png"
       }
     },
+    "175547449471cfd59c": {
+      "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_filter_product_list_ssr_zN9DrY": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_filter_product_list_ssr_zN9DrY"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "1642136988303d16d6": {
       "type": "locations-section",
       "disabled": true,
@@ -127,6 +145,7 @@
     },
     "ss_recommendations_bGwMqW": {
       "type": "ss-recommendations",
+      "disabled": true,
       "settings": {
         "profileId": "recently-viewed"
       }
@@ -136,6 +155,7 @@
     "header_banner_gdLhND",
     "collection-header",
     "main-collection",
+    "175547449471cfd59c",
     "1642136988303d16d6",
     "ss_recommendations_bGwMqW"
   ]
