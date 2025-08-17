@@ -853,6 +853,13 @@
           "n9_embed_css": "/* CSS Rules */",
           "n9_embed_js": "/* JS Code */"
         }
+      },
+      "2020b08d-1cf8-4a96-b2af-2185e00df426": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+          "templateId": "aSMfooOM4q"
+        }
       }
     }
   },
