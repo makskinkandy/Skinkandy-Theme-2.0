@@ -145,8 +145,12 @@ body.no-scroll {
     }
     @media screen and (max-width: 640px) {
       display: block;
-      max-height: 100%;
+      max-height: 100svh;
       margin-inline: 0.9375em;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding-bottom: 87px;
     }
     
     .popup-close {
