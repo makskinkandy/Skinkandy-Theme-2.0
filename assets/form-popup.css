@@ -138,7 +138,7 @@ body.no-scroll {
     min-height: 58.6875em;
     @media screen and (max-width: 992px) {
       width: 46.5em;
-      padding-top:7px;
+      padding-top:3px;
     }
     @media screen and (max-width: 768px) {
       width: 40.5em;
