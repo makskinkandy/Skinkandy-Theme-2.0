@@ -147,6 +147,7 @@ body.no-scroll {
       display: block;
       max-height: 100svh;
       margin-inline: 0.9375em;
+      overflow: auto;
     }
 
     @media screen and (max-width: 375px) {
