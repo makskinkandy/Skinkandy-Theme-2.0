@@ -1,1 +1,22 @@
-{"parent":"page.giveaway-page.json","context":{"market":"new-zealand"},"sections":{},"order":["header_banner_pDgLB3","main","rich_text_qq6MK6","rich_text_zywGRq","rich_text_Fw6LhT","raw_code_XHqqCQ"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.giveaway-page.json",
+  "context": {
+    "market": "new-zealand"
+  },
+  "sections": {},
+  "order": [
+    "header_banner_pDgLB3",
+    "main",
+    "rich_text_qq6MK6",
+    "rich_text_zywGRq"
+  ]
+}
