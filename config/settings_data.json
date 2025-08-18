@@ -885,7 +885,8 @@
       ".ss__results__inline-banner {display: none;}",
       ".page-mothers-day .ss__result--inline-banner:has(> .ss__inline-banner .mothers-day) {display: none;}",
       ".grid-product__tag--b3f4,.grid-product__tag--black {background: #eb008c !important; font-weight: 600;}",
-      "body.en-nz .ss__result--inline-banner {display: none;}"
+      "body.en-nz .ss__result--inline-banner {display: none;}",
+      ".page-tas-awareness-giveaway .form-popup__right #response.success {display: none;}"
     ]
   }
 }
