@@ -136,6 +136,12 @@ body.no-scroll {
     border-radius: 1.5625em;
     padding-top: 4.375em;
     min-height: 58.6875em;
+    @media screen and (max-width: 992px) {
+      width: 46.5em;
+    }
+    @media screen and (max-width: 768px) {
+      width: 40.5em;
+    }
     @media screen and (max-width: 640px) {
       display: block;
       max-height: 100%;
@@ -146,6 +152,9 @@ body.no-scroll {
     .popup-close {
       top: 0.0625em;
       right: 0.3125em;
+      @media screen and (max-width: 992px) {
+        top: 7px;
+      }
       @media screen and (max-width: 640px) {
         top: 1em;
         right: 0.0625em;
