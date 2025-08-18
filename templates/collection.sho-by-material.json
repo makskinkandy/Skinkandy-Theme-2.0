@@ -75,8 +75,11 @@
         "fe5f01e7-7d10-4ee6-ad54-a48a35eca484",
         "a93001b2-fbf4-409c-b650-4a8c89ebe0f8"
       ],
+      "custom_css": [
+        ".collection-filter-wrapper {display: none;}"
+      ],
       "settings": {
-        "bg_color": "#fafafa",
+        "bg_color": "#ffffff",
         "enable_sidebar": true,
         "collapsed": true,
         "filter_style": "sidebar",
