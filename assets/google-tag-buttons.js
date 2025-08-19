@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
   const rules = [
     {
-      selector: ".header-icons .book-now-btn",
+      selector: "#book-now-header",
       getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
     },
     {
