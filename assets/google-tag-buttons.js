@@ -8,13 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "piercing menu (footer)": "w_select_home_footer_pierce_menu",
     "book a piercing (nav)": "w_select_nav_book"
   };
-
  
   const rules = [
-    {
-      selector: "#book-now-header",
-      getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
-    },
     {
       selector: ".site-nav__dropdown-link",
       getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
@@ -34,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (text === "book a piercing") return "w_select_home_footer_book";
         if (text === "piercing menu") return "w_select_home_footer_pierce_menu";
       }
+    },
+    {
+      selector: "#book-now-header",
+      getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
     }
   ];
 
