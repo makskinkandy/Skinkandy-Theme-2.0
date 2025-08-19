@@ -5,11 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     "piercing menu": "w_select_home_pierce_menu",
     "book now": "w_select_home_banner_book",
     "book a piercing": "w_select_home_footer_book",
-    "piercing menu (footer)": "w_select_home_footer_pierce_menu"
+    "piercing menu (footer)": "w_select_home_footer_pierce_menu",
+    "book a piercing (nav)": "w_select_nav_book"
   };
 
  
   const rules = [
+    {
+      selector: ".header-icons .book-now-btn",
+      getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
+    },
     {
       selector: ".site-nav__dropdown-link",
       getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
