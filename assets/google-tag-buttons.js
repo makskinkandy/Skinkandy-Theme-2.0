@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     {
-      selector: ".header-icons .desktop-only .book-now-btn",
+      selector: ".book-now-header",
       getEvent: (el) => clickMap[el.innerText.trim().toLowerCase()]
     }
   ];

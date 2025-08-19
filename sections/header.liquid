@@ -400,7 +400,7 @@
                 {% comment %} button {% endcomment %}
                 {% if section.settings.book_now_link != blank %}
                   <li class="desktop-only">
-                    <a href="{{ section.settings.book_now_link | escape }}" class="book-now-btn btn btn--small link-icon" id="book-now-header">
+                    <a href="{{ section.settings.book_now_link | escape }}" class="book-now-btn btn btn--small link-icon book-now-header" id="book-now-header">
                       <span class="tablet-book-label">{{ section.settings.book_now_label }}</span>
                     </a>
                   </li>
