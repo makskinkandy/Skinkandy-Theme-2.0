@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button_text: btn.innerText.trim()
       });
     });
+
+    console.log(dataLayer);
   });
 
 });
