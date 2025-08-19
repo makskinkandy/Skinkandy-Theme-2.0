@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clickMap = {
     "piercing services": "w_select_home_pierce_info",
     "piercing menu": "w_select_home_pierce_menu",
+    "book now": "w_select_home_banner_book",
     "book a piercing (footer)": "w_select_home_footer_book",
     "piercing menu (footer)": "w_select_home_footer_pierce_menu",
-    "book a piercing (nav)": "w_select_nav_book"
   };
  
   const rules = [
