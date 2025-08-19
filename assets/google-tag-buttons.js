@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       selector: ".book-now-header",
-      getEvent: (el) => "w_select_home_banner_book"
+      getEvent: (el) => "w_select_nav_book"
     }
   ];
 
