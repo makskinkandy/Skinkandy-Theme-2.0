@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       getEvent: () => "w_select_home_tiles_pierce"
     },
     {
-      selector: ".footer-menu-item a",
+      selector: ".footer-submenu a",
       getEvent: (el) => {
         const text = el.innerText.trim().toLowerCase();
         if (text === "book a piercing") return "w_select_home_footer_book";
