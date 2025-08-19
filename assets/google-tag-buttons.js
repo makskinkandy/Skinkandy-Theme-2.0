@@ -32,7 +32,27 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       selector: ".book-now-header",
       getEvent: (el) => "w_select_nav_book"
-    }
+    },
+    {
+      selector: ".why-book",
+      getEvent: (el) => "w_select_pierce_info_why_book"
+    },
+    {
+      selector: ".needle-book",
+      getEvent: (el) => "w_select_pierce_info_needle_book"
+    },
+    {
+      selector: ".ear-more",
+      getEvent: (el) => "w_select_pierce_info_ear_more"
+    },
+    {
+      selector: ".price-book",
+      getEvent: (el) => "w_select_pierce_info_price_book"
+    },
+    {
+      selector: ".faq-book",
+      getEvent: (el) => "w_select_pierce_info_faq_book"
+    },
   ];
 
   rules.forEach(({ selector, getEvent }) => {
