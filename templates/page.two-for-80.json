@@ -1,1 +1,328 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"breadcrumbs":false,"heading":false,"content":false}},"rich_text_DFaziX":{"type":"rich-text","blocks":{"heading_9AAcX6":{"type":"heading","settings":{"title":"2 for $80 Piercings","heading_tag":"h1"}},"text_Q79bU8":{"type":"text","settings":{"enlarge_text":false,"text":"<p><strong>Yes, it’s real—and yes, it’s for you. <\/strong><\/p><p>Get two piercings for just <strong>$80<\/strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). <\/p>"}}},"block_order":["heading_9AAcX6","text_Q79bU8"],"custom_css":["h1 {font-weight: 600;}"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":true}},"columns_block_mhRaTq":{"type":"columns-block","blocks":{"text_block_Jx9r66":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"video":"","center-content":false,"title":"","title_size":"small","title_tag":"h2","text":"<p>Lobes<br\/>Helix<br\/>Conch<br\/>Outer Conch<br\/>Tragus<br\/>Anti-Tragus<br\/>Rook<br\/>Forward Helix<br\/>Daith<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_YJpbBN":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"video":"","center-content":false,"title":"","title_size":"small","title_tag":"h3","text":"<p>Snug<br\/>Transverse Lobe<br\/>Nostril<br\/>Septum<br\/>Eyebrow<br\/>Bridge<br\/>Lip<br\/>Labret<br\/>Tongue<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}},"text_block_wGRp8t":{"type":"text_block","settings":{"enable_image":true,"enable_round":false,"fullwidth-image":false,"fullheight-image":false,"hide-image":false,"video":"","center-content":false,"title":"","title_size":"small","title_tag":"h3","text":"<p>Smiley<br\/>Tongue Webbing<br\/>Ashley<br\/>Vertical Labret<br\/>Philtrum<br\/>Jestrum<br\/>Navel<br\/>Lower Navel<\/p>","text_size":"small","button_label":"","button_link":"","new_tab":false}}},"block_order":["text_block_Jx9r66","text_block_YJpbBN","text_block_wGRp8t"],"name":"Columns Block","settings":{"dark_mode":false,"class":"","title":"What Piercings Are Included?","description":"","button_text":"BOOK A PIERCING NOW","button_url":"shopify:\/\/pages\/professional-body-piercing-services","count":3,"bottom_space":false,"hide_line":true,"disable_grid":true,"max_width":996}},"rich_text_FLApyE":{"type":"rich-text","blocks":{"heading_Pjt7Jx":{"type":"heading","settings":{"title":"Don’t see your piercing here? ","heading_tag":"h2"}},"text_anNKf6":{"type":"text","settings":{"enlarge_text":false,"text":"<p>We’ve got <strong>great offers across all piercings<\/strong>—just chat with your nearest store and we’ll find the perfect deal for you.<\/p>"}}},"block_order":["heading_Pjt7Jx","text_anNKf6"],"custom_css":["h2 {font-weight: 600;}"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":false}},"custom_faq_arEDPk":{"type":"custom-faq","blocks":{"question_T7A8ff":{"type":"question","settings":{"question":"What’s included in the 2 for $80 deal? ","answer":"<p>All the piercings listed above are part of the offer. These are considered our <a href=\"https:\/\/skinkandy.com\/pages\/standard-piercings\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>standard piercings<\/strong><\/span><span style=\"text-decoration:underline\">.<\/span><\/a> Price includes surgical steel jewellery.<\/p>"}},"question_64Tzge":{"type":"question","settings":{"question":"What if the piercing I want isn’t included? ","answer":"<p>No problem—we still have amazing value offers across all services. Check our <a href=\"https:\/\/skinkandy.com\/pages\/professional-body-piercing-services\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>Piercing Services here<\/strong><\/span><\/a> orspeak to <a href=\"https:\/\/skinkandy.com\/pages\/store-locations\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>your local store<\/strong><\/span><span style=\"text-decoration:underline\"> <\/span><\/a>to find the best price for your piercing combo.<\/p>"}},"question_UdHEAQ":{"type":"question","settings":{"question":"What’s the usual price for a single piercing? ","answer":"<p>Our standard piercings start from <strong>$45 each with surgical steel jewellery<\/strong>—so you’re saving at least $10 with this promo.<\/p>"}},"question_U4VwGJ":{"type":"question","settings":{"question":"Can I share this offer with a friend? ","answer":"<p>This one's just for you! You can mix and match any <strong>two standard piercings<\/strong>, but both must be done on the same person, in the same appointment.<\/p>"}}},"block_order":["question_T7A8ff","question_64Tzge","question_UdHEAQ","question_U4VwGJ"],"name":"Custom FAQ","settings":{"title":"FAQs ","narrow":false,"position":"left","hide_image":false,"max_width":996}},"rich_text_6mfDNp":{"type":"rich-text","blocks":{"heading_rYkt3y":{"type":"heading","settings":{"title":"How long will the promotion run?","heading_tag":"h2"}},"text_DbTYUm":{"type":"text","settings":{"enlarge_text":false,"text":"<p>There’s no official end date—but like all good things, it won’t last forever. <strong>Book now to avoid missing out!<\/strong><\/p>"}}},"block_order":["heading_rYkt3y","text_DbTYUm"],"custom_css":["h2 {font-weight: 600;}"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":true}},"inline_buttons_tywXjb":{"type":"inline-buttons","name":"Inline Buttons","settings":{"button_1_text":"VIEW PIERCING SERVICES","button_1_url":"shopify:\/\/pages\/professional-body-piercing-services","button_2_text":"FIND A STORE","button_2_url":"shopify:\/\/pages\/store-locations","text_color":"#eb008c","bg_color":"#ffffff"}},"rich_text_tQMGGb":{"type":"rich-text","blocks":{"heading_TzzLtq":{"type":"heading","settings":{"title":"Want to know more?","heading_tag":"h2"}},"text_TQX7Qn":{"type":"text","settings":{"enlarge_text":false,"text":"<p>Wondering if you’re eligible for a piercing or need an anatomy check? Just pop into your nearest store or give us a call—<strong>consultations are always free<\/strong>.<\/p>"}},"button_Mh6RTG":{"type":"button","settings":{"link":"shopify:\/\/pages\/store-locations","link_text":"FIND A STORE"}}},"block_order":["heading_TzzLtq","text_TQX7Qn","button_Mh6RTG"],"custom_css":["h2 {font-weight: 600;}"],"name":"Rich text","settings":{"align_text":"center","narrow_column":true,"divider":false,"reduce_spacing":false}}},"order":["main","rich_text_DFaziX","columns_block_mhRaTq","rich_text_FLApyE","custom_faq_arEDPk","rich_text_6mfDNp","inline_buttons_tywXjb","rich_text_tQMGGb"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": false
+      }
+    },
+    "rich_text_DFaziX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9AAcX6": {
+          "type": "heading",
+          "settings": {
+            "title": "2 for $80 Piercings",
+            "heading_tag": "h1"
+          }
+        },
+        "text_Q79bU8": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Yes, it’s real—and yes, it’s for you. </strong></p><p>Get two piercings for just <strong>$80</strong> from our most popular range. Whether you’re levelling up your ear stack or trying something new, this offer is made to help you shine (and save). </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9AAcX6",
+        "text_Q79bU8"
+      ],
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "columns_block_mhRaTq": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_Jx9r66": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h2",
+            "text": "<p>Lobes<br/>Helix<br/>Conch<br/>Outer Conch<br/>Tragus<br/>Anti-Tragus<br/>Rook<br/>Forward Helix<br/>Daith</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_YJpbBN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Snug<br/>Transverse Lobe<br/>Nostril<br/>Septum<br/>Eyebrow<br/>Bridge<br/>Lip<br/>Labret<br/>Tongue</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_wGRp8t": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "<p>Smiley<br/>Tongue Webbing<br/>Ashley<br/>Vertical Labret<br/>Philtrum<br/>Jestrum<br/>Navel<br/>Lower Navel</p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Jx9r66",
+        "text_block_YJpbBN",
+        "text_block_wGRp8t"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "two-for-80",
+        "title_tag": "h2",
+        "title": "What Piercings Are Included?",
+        "description": "",
+        "button_text": "BOOK A PIERCING NOW",
+        "button_url": "shopify://pages/professional-body-piercing-services",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": true,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 996
+      }
+    },
+    "rich_text_FLApyE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Pjt7Jx": {
+          "type": "heading",
+          "settings": {
+            "title": "Don’t see your piercing here? ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_anNKf6": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>We’ve got <strong>great offers across all piercings</strong>—just chat with your nearest store and we’ll find the perfect deal for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pjt7Jx",
+        "text_anNKf6"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "custom_faq_arEDPk": {
+      "type": "custom-faq",
+      "blocks": {
+        "question_T7A8ff": {
+          "type": "question",
+          "settings": {
+            "question": "What’s included in the 2 for $80 deal? ",
+            "answer": "<p>All the piercings listed above are part of the offer. These are considered our <a href=\"https://skinkandy.com/pages/standard-piercings\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>standard piercings</strong></span><span style=\"text-decoration:underline\">.</span></a> Price includes surgical steel jewellery.</p>"
+          }
+        },
+        "question_64Tzge": {
+          "type": "question",
+          "settings": {
+            "question": "What if the piercing I want isn’t included? ",
+            "answer": "<p>No problem—we still have amazing value offers across all services. Check our <a href=\"https://skinkandy.com/pages/professional-body-piercing-services\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>Piercing Services here</strong></span></a> orspeak to <a href=\"https://skinkandy.com/pages/store-locations\" target=\"_blank\"><span style=\"text-decoration:underline\"><strong>your local store</strong></span><span style=\"text-decoration:underline\"> </span></a>to find the best price for your piercing combo.</p>"
+          }
+        },
+        "question_UdHEAQ": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the usual price for a single piercing? ",
+            "answer": "<p>Our standard piercings start from <strong>$45 each with surgical steel jewellery</strong>—so you’re saving at least $10 with this promo.</p>"
+          }
+        },
+        "question_U4VwGJ": {
+          "type": "question",
+          "settings": {
+            "question": "Can I share this offer with a friend? ",
+            "answer": "<p>This one's just for you! You can mix and match any <strong>two standard piercings</strong>, but both must be done on the same person, in the same appointment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_T7A8ff",
+        "question_64Tzge",
+        "question_UdHEAQ",
+        "question_U4VwGJ"
+      ],
+      "name": "Custom FAQ",
+      "settings": {
+        "title": "FAQs ",
+        "narrow": false,
+        "position": "left",
+        "hide_image": false,
+        "max_width": 996
+      }
+    },
+    "rich_text_6mfDNp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rYkt3y": {
+          "type": "heading",
+          "settings": {
+            "title": "How long will the promotion run?",
+            "heading_tag": "h2"
+          }
+        },
+        "text_DbTYUm": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>There’s no official end date—but like all good things, it won’t last forever. <strong>Book now to avoid missing out!</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rYkt3y",
+        "text_DbTYUm"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "inline_buttons_tywXjb": {
+      "type": "inline-buttons",
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "VIEW PIERCING SERVICES",
+        "button_1_url": "shopify://pages/professional-body-piercing-services",
+        "button_2_text": "FIND A STORE",
+        "button_2_url": "shopify://pages/store-locations",
+        "text_color": "#eb008c",
+        "bg_color": "#ffffff"
+      }
+    },
+    "rich_text_tQMGGb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TzzLtq": {
+          "type": "heading",
+          "settings": {
+            "title": "Want to know more?",
+            "heading_tag": "h2"
+          }
+        },
+        "text_TQX7Qn": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Wondering if you’re eligible for a piercing or need an anatomy check? Just pop into your nearest store or give us a call—<strong>consultations are always free</strong>.</p>"
+          }
+        },
+        "button_Mh6RTG": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/store-locations",
+            "link_text": "FIND A STORE",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_TzzLtq",
+        "text_TQX7Qn",
+        "button_Mh6RTG"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_DFaziX",
+    "columns_block_mhRaTq",
+    "rich_text_FLApyE",
+    "custom_faq_arEDPk",
+    "rich_text_6mfDNp",
+    "inline_buttons_tywXjb",
+    "rich_text_tQMGGb"
+  ]
+}
