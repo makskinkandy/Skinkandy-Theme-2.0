@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
       selector: ".faq-book",
       getEvent: (el) => "w_select_pierce_info_faq_book"
     },
+    {
+      selector: ".two-for-80 .btn--last",
+      getEvent: (el) => "w_select_2for80_book"
+    },
   ];
 
   rules.forEach(({ selector, getEvent }) => {
