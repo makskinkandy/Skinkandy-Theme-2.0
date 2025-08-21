@@ -190,7 +190,7 @@
         {% if page.metafields.custom.giveaway %}
           <a href="{{ page.metafields.custom.terms_and_condition_link }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
         {% else %}
-          {% if settings.giveaway %}
+          {% if settings.popup_layout == 'giveaway' %}
             {% if website_path == "en-nz" and settings.nz_popup_enable %}
               <a href="{{ settings.nz_sucess_popup_tc }}" target="_blank" class="tc_link hidden">Terms & Conditions apply.</a>
             {% else %}
