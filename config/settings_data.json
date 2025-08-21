@@ -150,7 +150,7 @@
     "sucess_popup_button": "shopify://pages/skinkandy-piercing-menu",
     "sucess_popup_tc": "shopify://pages/kc-headphone-giveaway-ts",
     "nz_popup_layout": "bfcm",
-    "nz_popup_enable": true,
+    "nz_popup_enable": false,
     "nz_popup_left_image": "shopify://shop_images/KandyClub_-_PopUp_Image_1_6984cc07-420a-469d-89f0-6bf19b5d9f88.jpg",
     "nz_popup_left_image_mobile": "shopify://shop_images/KandyClub_-_PopUp_Image_1_2fc83172-182e-4353-98cd-644433e5c205.jpg",
     "nz_popup_title": "Join KandyClub & Get 10% Off",
