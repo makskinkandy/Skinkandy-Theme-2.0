@@ -107,7 +107,8 @@ body.no-scroll {
     display: none;
   }
   .tc_link {
-    color: #FFF;
+    color: #fff;
+    text-decoration: underline;
   }
 }
 .form-popup__wrapper {
