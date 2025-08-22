@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }));
 
   
-  rules.forEach(({ selector, getEvent }) => {
+  piercingMenu.forEach(({ selector, getEvent }) => {
     document.querySelectorAll(selector).forEach((el) => {
       el.addEventListener("click", function () {
         const eventName = getEvent(el);
