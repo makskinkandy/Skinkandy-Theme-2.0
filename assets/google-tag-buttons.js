@@ -124,17 +124,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }));
 
   
-  piercingMenu.forEach(({ selector, getEvent }) => {
+  rules.forEach(({ selector, getEvent }) => {
     document.querySelectorAll(selector).forEach((el) => {
       el.addEventListener("click", function () {
         const eventName = getEvent(el);
 
-        
+        // look for the previous <h3> sibling
         let h3Text = "";
         let prev = el.previousElementSibling;
         while (prev) {
           if (prev.tagName === "H3") {
-            h3Text = prev.innerText.trim();
+            h3Text = prev.innerText.trim() + " - BOOK NOW";
             break;
           }
           prev = prev.previousElementSibling;
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: eventName,
-            link_text: h3Text || el.innerText.trim()
+            link_text: h3Text || (el.innerText.trim() + " - BOOK NOW")
           });
           console.log("Tag fired:", eventName, "| Text:", h3Text);
         }
