@@ -128,13 +128,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(selector).forEach((el) => {
       el.addEventListener("click", function () {
         const eventName = getEvent(el);
+
+        // look for the previous <h3> sibling
+        let h3Text = "";
+        let prev = el.previousElementSibling;
+        while (prev) {
+          if (prev.tagName === "H3") {
+            h3Text = prev.innerText.trim();
+            break;
+          }
+          prev = prev.previousElementSibling;
+        }
+
         if (eventName) {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: eventName,
-            link_text: el.innerText.trim()
+            link_text: h3Text || el.innerText.trim() // fallback if no h3 found
           });
-          console.log("Tag fired:", eventName, "| Text:", el.innerText.trim());
+          console.log("Tag fired:", eventName, "| Text:", h3Text);
         }
       });
     });
