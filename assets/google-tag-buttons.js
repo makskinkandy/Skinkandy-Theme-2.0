@@ -73,4 +73,29 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  
+  const piercingMenu = piercingTags.map(tag => ({
+    selector: `.${tag}`, 
+    getEvent: () => `w_select_pierce_menu__${tag}`
+  }));
+
+  
+  piercingMenu.forEach(({ selector, getEvent }) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.addEventListener("click", function () {
+        const eventName = getEvent(el);
+        if (eventName) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: eventName,
+            link_text: el.innerText.trim()
+          });
+          console.log("Tag fired:", eventName, "| Text:", el.innerText.trim());
+        }
+      });
+    });
+  });
+
+  
 });
