@@ -99,6 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
       selector: ".piercing-menu-book .btn--last",
       getEvent: (el) => "w_select_pierce_menu_book"
     },
+    {
+      selector: ".menu-two-for",
+      getEvent: (el) => "w_select_pierce_menu_2_80_info"
+    },
 
   ];
 
