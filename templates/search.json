@@ -14,22 +14,110 @@
       "disabled": true,
       "settings": {}
     },
-    "fbc18f7b-7f9c-4dbc-be99-cfeed94c23a1": {
+    "d9d8d429-0e1a-485a-abd9-5fa281109e8c": {
       "type": "apps",
       "blocks": {
-        "549aac80-7b4c-4886-b5d1-06035e58f911": {
+        "e938a62a-47c5-4120-94c4-2a8e4dc17d08": {
           "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
           "settings": {}
         }
       },
       "block_order": [
-        "549aac80-7b4c-4886-b5d1-06035e58f911"
+        "e938a62a-47c5-4120-94c4-2a8e4dc17d08"
       ],
-      "settings": {}
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "collection_showcase_eQjPjA": {
+      "type": "collection-showcase",
+      "blocks": {
+        "image_hBXamf": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "EAR",
+            "url": "shopify://collections/cartilage-labret",
+            "image": "shopify://shop_images/9355442045203.jpg"
+          }
+        },
+        "image_gbweBd": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NOSE",
+            "url": "shopify://collections/nose-jewellery",
+            "image": "shopify://shop_images/9355442045791-1.jpg"
+          }
+        },
+        "image_y6VRDn": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NAVEL",
+            "url": "shopify://collections/belly",
+            "image": "shopify://shop_images/9355442044787.jpg"
+          }
+        },
+        "image_Q7wXjm": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "LIP",
+            "url": "shopify://collections/lip",
+            "image": "shopify://shop_images/image_21.jpg"
+          }
+        },
+        "image_8BVatN": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "disable_button": true,
+            "title": "NIPPLE",
+            "url": "shopify://collections/nipple",
+            "image": "shopify://shop_images/image_22.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hBXamf",
+        "image_gbweBd",
+        "image_y6VRDn",
+        "image_Q7wXjm",
+        "image_8BVatN"
+      ],
+      "settings": {
+        "title": "SHOP BY PIERCING",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": false,
+        "collection_link": ""
+      }
+    },
+    "rich_text_69TxfJ": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
     }
   },
   "order": [
     "main",
-    "fbc18f7b-7f9c-4dbc-be99-cfeed94c23a1"
+    "d9d8d429-0e1a-485a-abd9-5fa281109e8c",
+    "collection_showcase_eQjPjA",
+    "rich_text_69TxfJ"
   ]
 }
