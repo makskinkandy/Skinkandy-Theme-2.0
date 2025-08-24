@@ -16516,3 +16516,7 @@ div#subtitle.success a {
     background: var(--colorBtnPrimary);
     border-radius: 40px;
 }
+
+div[data-product-id="8341811331210"] button {
+    display: none;
+}

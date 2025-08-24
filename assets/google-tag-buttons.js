@@ -104,6 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
       getEvent: (el) => "w_select_pierce_menu_2_80_info"
     },
     {
+      selector: ".2-for-80-promo",
+      getEvent: (el) => "w_select_pierce_menu_2_80_info"
+    },
+    {
       selector: ".menu-two-for-id",
       getEvent: (el) => "w_select_pierce_menu_id_info"
     },
