@@ -237,6 +237,12 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "inline_buttons_f7DDkA": {
+      "settings": {
+        "button_1_url": "shopify://collections/buy-3-get-one-free"
+      },
+      "blocks": {}
     }
   }
 }
