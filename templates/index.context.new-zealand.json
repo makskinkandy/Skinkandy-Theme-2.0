@@ -12,8 +12,14 @@
   "context": {
     "market": "new-zealand"
   },
-"sections": {
+  "sections": {
     "header_banner_MUPtRQ": {
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": true,
+        "shuffle": false
+      },
       "blocks": {
         "image_ng66KH": {
           "settings": {
@@ -45,15 +51,19 @@
       "block_order": [
         "image_ng66KH",
         "image_PFE9d8"
-      ],
-      "settings": {
-        "title": "",
-        "banner_size": "small-banner",
-        "small_overlay": true,
-        "shuffle": false
-      }
+      ]
     },
     "rich_text_gwEVLb": {
+      "disabled": false,
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false,
+        "reduce_spacing": false
+      },
       "blocks": {
         "heading_cLRihY": {
           "settings": {
@@ -86,18 +96,26 @@
         "text_b6GqnX",
         "button_B6Mjmb"
       ],
-      "custom_css": [
-        "h1 {font-weight: 600;}"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "divider": false,
-        "reduce_spacing": false
-      }
+      "name": "Rich text"
     },
     "columns_block_AAVbUH": {
+      "disabled": false,
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "CURATE YOUR LOOK",
+        "description": "<p>Buy three get your fourth FREE on all fashion jewellery</p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      },
       "blocks": {
         "text_block_JUgX3f": {
           "settings": {
@@ -177,25 +195,16 @@
         "text_block_QQbbtk",
         "text_block_qnPyxt"
       ],
-      "name": "Columns Block",
-      "settings": {
-        "dark_mode": false,
-        "class": "",
-        "title_tag": "h2",
-        "title": "CURATE YOUR LOOK",
-        "description": "<p>Buy three get your fourth FREE on all fashion jewellery</p>",
-        "button_text": "",
-        "button_url": "",
-        "count": 3,
-        "bottom_space": false,
-        "hide_line": true,
-        "disable_grid": false,
-        "two_column": false,
-        "mobile_slider": false,
-        "max_width": 1704
-      }
+      "name": "Columns Block"
     },
     "rich_text_YyxiLB": {
+      "disabled": false,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      },
       "blocks": {
         "button_riBJwy": {
           "settings": {
@@ -208,13 +217,7 @@
       "block_order": [
         "button_riBJwy"
       ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
-      }
+      "name": "Rich text"
     },
     "collection_showcase_RnD7cq": {
       "settings": {
@@ -227,7 +230,13 @@
         "enable_hover": false,
         "get_product_list": true,
         "collection_link": "buy-3-get-one-free"
-      }
+      },
+      "blocks": {}
+    },
+    "columns_block_HhremV": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
