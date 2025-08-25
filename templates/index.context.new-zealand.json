@@ -50,8 +50,8 @@
     },
     "inline_buttons_f7DDkA": {
       "settings": {
-        "button_2_url": "https://bookings.skinkandy.com/?locale=en-nz",
-        "button_1_url": "shopify://collections/buy-3-get-one-free"
+        "button_1_url": "shopify://collections/buy-3-get-one-free",
+        "button_2_url": "https://bookings.skinkandy.com/?locale=en-nz"
       },
       "blocks": {}
     }
