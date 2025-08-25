@@ -137,7 +137,7 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:All$2520ear",
+            "button_link": "/collections/buy-3-get-one-free?placement=all+ear",
             "new_tab": false
           }
         },
@@ -161,7 +161,7 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:Nose",
+            "button_link": "/collections/buy-3-get-one-free?placement=nose",
             "new_tab": false
           }
         },
@@ -185,7 +185,7 @@
             "text": "",
             "text_size": "small",
             "button_label": "",
-            "button_link": "/collections/buy-3-get-one-free#/filter:collection_name:Body$2520Jewellery",
+            "button_link": "/collections/body-jewellery",
             "new_tab": false
           }
         }
