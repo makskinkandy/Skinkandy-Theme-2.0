@@ -12,21 +12,15 @@
   "context": {
     "market": "new-zealand"
   },
-  "sections": {
+"sections": {
     "header_banner_MUPtRQ": {
-      "custom_css": [],
-      "settings": {
-        "banner_size": "small-banner"
-      },
       "blocks": {
-        "image_EHpyF": {
-          "type": "image",
-          "disabled": false,
+        "image_ng66KH": {
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/2_For_80_-_Mobile_Banner_Option_2.jpg",
-            "image": "shopify://shop_images/2_For_80_-_Desktop_Banner_Option_2.jpg",
-            "banner_url": "https://bookings.skinkandy.com/?locale=en-nz",
+            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "banner_url": "shopify://collections/buy-3-get-one-free",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -35,25 +29,205 @@
           }
         },
         "image_PFE9d8": {
-          "disabled": true,
           "settings": {
-            "image_mobile": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Mobile.jpg",
-            "image": "shopify://shop_images/NZ_Comp_Home_Page_Banner_Desktop.jpg",
-            "banner_url": "shopify://pages/win-rhythm-vines-festival-package"
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
+            "banner_url": "https://support.skinkandy.com/s/booking-form",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
           }
         }
       },
       "block_order": [
         "image_ng66KH",
-        "image_EHpyF",
         "image_PFE9d8"
-      ]
-    },
-    "inline_buttons_f7DDkA": {
+      ],
       "settings": {
-        "button_2_url": "https://bookings.skinkandy.com/?locale=en-nz"
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": true,
+        "shuffle": false
+      }
+    },
+    "rich_text_gwEVLb": {
+      "blocks": {
+        "heading_cLRihY": {
+          "settings": {
+            "title": "Your next ear stack starts here",
+            "heading_tag": "h2"
+          }
+        },
+        "page_BhxMKG": {
+          "settings": {
+            "page_text": "homepage-dev"
+          }
+        },
+        "text_b6GqnX": {
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><a href=\"/pages/skinkandy-2-for-80-promotion\" title=\"SkinKandy 2 for $80 promotion\"><strong>See all body piercings included in the offer</strong></a></p>"
+          }
+        },
+        "button_B6Mjmb": {
+          "settings": {
+            "link": "https://bookings.skinkandy.com/?locale=en-nz",
+            "link_text": "BOOK NOW",
+            "css_class": ""
+          }
+        }
       },
-      "blocks": {}
+      "block_order": [
+        "heading_cLRihY",
+        "page_BhxMKG",
+        "text_b6GqnX",
+        "button_B6Mjmb"
+      ],
+      "custom_css": [
+        "h1 {font-weight: 600;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "columns_block_AAVbUH": {
+      "blocks": {
+        "text_block_JUgX3f": {
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_7.jpg",
+            "flip-image": "shopify://shop_images/DSC02872.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:All$2520ear",
+            "new_tab": false
+          }
+        },
+        "text_block_QQbbtk": {
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_6.jpg",
+            "flip-image": "shopify://shop_images/DSC02600.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:ss_placement:Nose",
+            "new_tab": false
+          }
+        },
+        "text_block_qnPyxt": {
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": true,
+            "flip-image-enable": true,
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_Desktop_copy_8.jpg",
+            "flip-image": "shopify://shop_images/3178.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "/collections/buy-3-get-one-free#/filter:collection_name:Body$2520Jewellery",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_JUgX3f",
+        "text_block_QQbbtk",
+        "text_block_qnPyxt"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "CURATE YOUR LOOK",
+        "description": "<p>Buy three get your fourth FREE on all fashion jewellery</p>",
+        "button_text": "",
+        "button_url": "",
+        "count": 3,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_YyxiLB": {
+      "blocks": {
+        "button_riBJwy": {
+          "settings": {
+            "link": "shopify://collections/buy-3-get-one-free",
+            "link_text": "SHOP NOW",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_riBJwy"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "collection_showcase_RnD7cq": {
+      "settings": {
+        "title": "BUY 3 GET THE 4TH FREE",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "Shop ALL",
+        "button_url": "shopify://collections/shop-all",
+        "bottom_border": true,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "buy-3-get-one-free"
+      }
     }
   }
 }
