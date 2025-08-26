@@ -14,6 +14,9 @@
   },
   "sections": {
     "header_banner_MUPtRQ": {
+      "custom_css": [
+        "ul.slick-dots {display: none !important;}"
+      ],
       "settings": {
         "title": "",
         "banner_size": "small-banner",
@@ -21,12 +24,12 @@
         "shuffle": false
       },
       "blocks": {
-        "image_ng66KH": {
+        "image_PFE9d8": {
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
-            "banner_url": "shopify://collections/buy-3-get-one-free",
+            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
+            "banner_url": "https://support.skinkandy.com/s/booking-form",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -34,12 +37,12 @@
             "align_text": "center"
           }
         },
-        "image_PFE9d8": {
+        "image_ng66KH": {
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
-            "image": "shopify://shop_images/Code_Pink_-_Homepage_2_FOR_80.jpg",
-            "banner_url": "https://support.skinkandy.com/s/booking-form",
+            "image_mobile": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "banner_url": "shopify://collections/buy-3-get-one-free",
             "heading": "",
             "short_description": "",
             "button_text": "",
