@@ -49,9 +49,15 @@
         }
       },
       "block_order": [
-        "image_ng66KH",
-        "image_PFE9d8"
+        "image_PFE9d8",
+        "image_ng66KH"
       ]
+    },
+    "inline_buttons_f7DDkA": {
+      "settings": {
+        "button_1_url": "shopify://collections/buy-3-get-one-free"
+      },
+      "blocks": {}
     },
     "rich_text_gwEVLb": {
       "disabled": false,
@@ -97,6 +103,11 @@
         "button_B6Mjmb"
       ],
       "name": "Rich text"
+    },
+    "columns_block_HhremV": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     },
     "columns_block_AAVbUH": {
       "disabled": false,
@@ -230,17 +241,6 @@
         "enable_hover": false,
         "get_product_list": true,
         "collection_link": "buy-3-get-one-free"
-      },
-      "blocks": {}
-    },
-    "columns_block_HhremV": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "inline_buttons_f7DDkA": {
-      "settings": {
-        "button_1_url": "shopify://collections/buy-3-get-one-free"
       },
       "blocks": {}
     }
