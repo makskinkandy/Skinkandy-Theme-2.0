@@ -1,1 +1,46 @@
-{"sections":{"find_a_store_mPjg4V":{"type":"find-a-store","settings":{}},"main":{"type":"main-page","disabled":true,"settings":{"breadcrumbs":false,"heading":false,"content":true}},"locations_section_dJ4gVm":{"type":"locations-section","settings":{"class":"","bg_color":"","heading":"Stores list","menu":"locations","link":"","linktext":"","linkclass":""}}},"order":["find_a_store_mPjg4V","main","locations_section_dJ4gVm"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "find_a_store_mPjg4V": {
+      "type": "find-a-store",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": true
+      }
+    },
+    "locations_section_dJ4gVm": {
+      "type": "locations-section",
+      "custom_css": [
+        ".js-accordion {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "class": "",
+        "bg_color": "",
+        "heading": "Stores list",
+        "menu": "locations",
+        "link": "",
+        "linktext": "",
+        "linkclass": ""
+      }
+    }
+  },
+  "order": [
+    "find_a_store_mPjg4V",
+    "main",
+    "locations_section_dJ4gVm"
+  ]
+}
