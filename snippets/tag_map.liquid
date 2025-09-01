@@ -98,9 +98,8 @@
   nipple: Nipple,  
   nipple bar: Nipple,  
   nose: Nose,  
-  navel: Navel,
-  Navel: Navel,  
-  rook: Rook,
+  navel: Navel,  
+  rook: Rook,  
   septum: Septum,  
   smiley: Smiley,  
   tongue: Tongue,  
@@ -113,16 +112,19 @@
 
 {% for pair in tag_map %}
   {% assign parts = pair | split: ':' %}
-  {% assign tag = parts[0] | strip %}
+  {% assign tag = parts[0] | strip | downcase %}
   {% assign labels = parts[1] | strip | split: '|' %}
 
-  {% if product.tags contains tag %}
-    {% for label in labels %}
-      {% unless matched_items contains label %}
-        {% assign matched_items = matched_items | append: label | append: ',' %}
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
+  {% for product_tag in product.tags %}
+    {% assign product_tag_down = product_tag | downcase %}
+    {% if product_tag_down == tag %}
+      {% for label in labels %}
+        {% unless matched_items contains label %}
+          {% assign matched_items = matched_items | append: label | append: ',' %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 
 {% assign matched_items = matched_items | split: ',' %}
