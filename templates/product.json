@@ -108,7 +108,7 @@
             "title": "Specifications",
             "content": "<p>{{ product.metafields.steadlane.details | metafield_tag }}</p>",
             "page": "",
-            "is_open": false
+            "is_open": true
           }
         },
         "tab_ywXqhX": {
