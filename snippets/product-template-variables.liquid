@@ -82,7 +82,7 @@
       "@type": "Offer",
       "name": {{ product.title | json }},
       "price": {{ product.price | divided_by: 100.00 | json }},
-      "priceCurrency": {% if website_path == 'en-nz' %}NZD{% endif %},
+      "priceCurrency": {% if website_path == 'en-nz' %}NZD{%  else %}AU{% endif %},
       "itemCondition": "http://schema.org/NewCondition",
       "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ product.id }}",
       "url": "{{ shop.url }}{{ product.url }}?variant={{ product.id }}",
