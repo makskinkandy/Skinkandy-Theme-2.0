@@ -839,9 +839,9 @@
       }
     }
     .collection-showcase__img {
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
-      height: 417px;
+      height: 448px;
       width: 100%;
       @media screen and (max-width: 480px) {
         height: 600px;
