@@ -956,7 +956,7 @@
       }
       .collection-showcase__img {
         @media screen and (max-width: 480px) {
-          max-height: 180px;
+          max-height: 200px;
         }
       }
     }
