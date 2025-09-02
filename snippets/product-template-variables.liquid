@@ -55,7 +55,7 @@
               "@type": "Offer",
               "name": "{{ product.title }} - {{ variant.title }}",
               "price": {{ product.price | divided_by: 100.00 | json }},
-              "priceCurrency": "AUD",
+              "priceCurrency": {{ cart.currency.iso_code | json }},
               "itemCondition": "http://schema.org/NewCondition",
               "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ variant.id }}",
               "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"
@@ -82,7 +82,7 @@
       "@type": "Offer",
       "name": {{ product.title | json }},
       "price": {{ product.price | divided_by: 100.00 | json }},
-      "priceCurrency": {{ product.priceCurrency }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
       "itemCondition": "http://schema.org/NewCondition",
       "@id": "{{ shop.url }}{{ product.url }}#Offer_{{ product.id }}",
       "url": "{{ shop.url }}{{ product.url }}?variant={{ product.id }}",
