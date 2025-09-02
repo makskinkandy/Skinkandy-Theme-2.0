@@ -998,7 +998,7 @@
     max-width: fit-content;
     @media screen and (max-width: 640px) {
         font-size: 12px;
-        margin-top: 60px;
+        margin-top: 0;
       }
     &:hover {
       background: transparent !important;
