@@ -291,11 +291,8 @@
     font-weight: 400;
   }
   .slick-dots {
-    bottom: 40px;
+    bottom: 4px;
     z-index: 1;
-    @media screen and (max-width:1024px) {
-      display:none !important;
-    }
     li:not(.slick-active) {
       opacity: 0.5;
     }
@@ -1620,7 +1617,7 @@
     width: 527px;
     height: 597px;
     margin-right: 23px;
-    @media screen and (max-width: 1260px) {
+    @media screen and (max-width: 1366px) {
       height: 482px;
     }
     @media screen and (max-width: 992px) {
@@ -1638,7 +1635,7 @@
   .flipped-boxes__item.last-item {
     width: 338px;
     height: 597px;
-    @media screen and (max-width: 1260px) {
+    @media screen and (max-width: 1366px) {
       height: 482px;
       width: 230px;
     }
@@ -1692,7 +1689,7 @@
       @media screen and (max-width: 1426px) {
         width: 310px;
       }
-      @media screen and (max-width: 1260px) {
+      @media screen and (max-width: 1366px) {
         width: 250px;
         height: 230px;
       }
@@ -1754,7 +1751,7 @@
         width: 100%;
         height: auto;
         text-align: left;
-        @media screen and (max-width: 1260px) {
+        @media screen and (max-width: 1366px) {
           font-size: 24px;
           max-width: 80%;
         }
@@ -1786,7 +1783,7 @@
       h3 {
         font-weight: 600;
         margin-bottom: 25px;
-        @media screen and (max-width: 1260px) {
+        @media screen and (max-width: 1426px) {
           margin-bottom: 5px;
           font-size: 20px;
         }
@@ -1798,7 +1795,7 @@
         margin-bottom: 25px;
         font-size: 15px;
         max-width: 415px;
-        @media screen and (max-width: 1260px) {
+        @media screen and (max-width: 1366px) {
           font-size: 12px;
           margin-bottom: 10px;
         }
@@ -1810,7 +1807,7 @@
         font-size: 16px;
         background: #FFF;
         color: #000;
-        @media screen and (max-width: 1260px) {
+        @media screen and (max-width: 1366px) {
           font-size: 12px;
           overflow: inherit;
           padding: 6px 20px;
