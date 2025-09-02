@@ -825,11 +825,6 @@
         "disabled": false,
         "settings": {}
       },
-      "5152489804016246972": {
-        "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
-        "disabled": false,
-        "settings": {}
-      },
       "pagefly": {
         "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
@@ -863,6 +858,11 @@
       "16422382648059844097": {
         "type": "shopify://apps/boost-ai-search-filter/blocks/instant-search-app-embedded/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": false,
+        "settings": {}
+      },
+      "5152489804016246972": {
+        "type": "shopify://apps/schema-app-total-schema-markup/blocks/schema-app/b2d40947-8d98-42df-9c82-6203d5c4f17c",
+        "disabled": true,
         "settings": {}
       }
     }
