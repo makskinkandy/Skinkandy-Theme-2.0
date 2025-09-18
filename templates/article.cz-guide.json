@@ -304,7 +304,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>The cut of a stone isn’t just about appearance — it’s about personality. Here’s what each shape brings to your look.</p><p>By understanding shape, you can curate a jewellery collection that truly reflects you. </p>"
+            "text": "<p>The cut of a stone isn’t just about appearance — it’s about personality. Here’s what each shape brings to your look: </p><ul><li><strong>Round</strong> – the timeless classic, versatile for any style </li><li><strong>Marquis</strong> – elongated elegance, perfect for elongating a stack </li><li><strong>Heart</strong> – playful, romantic, and expressive </li><li><strong>Oval</strong> – soft sophistication with a refined silhouette </li><li><strong>Teardrop</strong> – graceful, fluid, and eye-catching </li><li><strong>Rectangle</strong> – modern, linear, and bold </li><li><strong>Square</strong> – balanced symmetry with clean edges </li></ul><p>By understanding shape, you can curate a jewellery collection that truly reflects you. </p>"
           }
         }
       },
@@ -317,37 +317,13 @@
         "align_text": "left",
         "narrow_column": true,
         "divider": false,
-        "reduce_spacing": false
+        "reduce_spacing": true
       }
     },
     "columns_block_cma3p8": {
       "type": "columns-block",
       "blocks": {
-        "text_block_qHfLG4": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "enable_round": false,
-            "fullwidth-image": false,
-            "fullheight-image": false,
-            "hide-image": false,
-            "short-image": false,
-            "flip-image-enable": false,
-            "image": "shopify://shop_images/CZ_Shapes_1.jpg",
-            "video": "",
-            "center-content": false,
-            "title": "",
-            "title_size": "small",
-            "break_tag": false,
-            "title_tag": "h3",
-            "text": "<p></p><p><strong>Round</strong> – the timeless classic, versatile for any style </p><p><strong>Marquis</strong> – elongated elegance, perfect for elongating a stack </p><p><strong>Heart</strong> – playful, romantic, and expressive </p>",
-            "text_size": "small",
-            "button_label": "",
-            "button_link": "",
-            "new_tab": false
-          }
-        },
-        "text_block_UpU797": {
+        "text_block_KhjdfH": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
@@ -364,16 +340,15 @@
             "title_size": "small",
             "break_tag": false,
             "title_tag": "h3",
-            "text": "<p></p><p><strong>Oval</strong> – soft sophistication with a refined silhouette </p><p><strong>Teardrop</strong> – graceful, fluid, and eye-catching </p><p><strong>Rectangle</strong> – modern, linear, and bold </p><p><strong>Square</strong> – balanced symmetry with clean edges </p>",
+            "text": "",
             "text_size": "small",
             "button_label": "",
             "button_link": "",
             "new_tab": false
           }
         },
-        "text_block_BFktEq": {
+        "text_block_qHfLG4": {
           "type": "text_block",
-          "disabled": true,
           "settings": {
             "enable_image": true,
             "enable_round": false,
@@ -382,24 +357,24 @@
             "hide-image": false,
             "short-image": false,
             "flip-image-enable": false,
+            "image": "shopify://shop_images/CZ_Shapes_1.jpg",
             "video": "",
-            "center-content": false,
-            "title": "Example title",
+            "center-content": true,
+            "title": "",
             "title_size": "small",
             "break_tag": false,
             "title_tag": "h3",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "text": "",
             "text_size": "small",
-            "button_label": "Optional button",
+            "button_label": "",
             "button_link": "",
             "new_tab": false
           }
         }
       },
       "block_order": [
-        "text_block_qHfLG4",
-        "text_block_UpU797",
-        "text_block_BFktEq"
+        "text_block_KhjdfH",
+        "text_block_qHfLG4"
       ],
       "name": "Columns Block",
       "settings": {
@@ -411,42 +386,12 @@
         "button_text": "",
         "button_url": "",
         "count": 2,
-        "bottom_space": false,
-        "hide_line": false,
+        "bottom_space": true,
+        "hide_line": true,
         "disable_grid": false,
         "two_column": false,
         "mobile_slider": false,
         "max_width": 1704
-      }
-    },
-    "rich_text_ARYDWM": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_f7crLj": {
-          "type": "heading",
-          "settings": {
-            "title": "Glam, Grounded ",
-            "heading_tag": "h2"
-          }
-        },
-        "text_GV4yCh": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<p>CZ gives you the best of both worlds: dazzling shine and everyday practicality. It’s strong enough for daily wear, versatile enough for any style, and elevated enough to carry you from low-key daytime looks to high-impact evening statements. </p><p>At SkinKandy, we’ve built our CZ collection to celebrate individuality; from subtle studs to statement-making stacks, every piece is designed to shine your way. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_f7crLj",
-        "text_GV4yCh"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "left",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": false
       }
     },
     "rich_text_EbL9HR": {
@@ -583,7 +528,6 @@
     "columns_block_4JFiwM",
     "rich_text_4V94kW",
     "columns_block_cma3p8",
-    "rich_text_ARYDWM",
     "rich_text_EbL9HR",
     "rich_text_cfjA6w",
     "collection_showcase_egKDgR",
