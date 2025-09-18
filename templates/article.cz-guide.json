@@ -30,24 +30,32 @@
     "rich_text_86xf37": {
       "type": "rich-text",
       "blocks": {
-        "heading_MchJCE": {
-          "type": "heading",
-          "settings": {
-            "title": "Why Charms Make Your Jewellery Stack Pop",
-            "heading_tag": "h2"
-          }
-        },
         "text_tKTJm3": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>It starts simple, slide a charm onto your favourite hoop or stud. Suddenly, your look goes from subtle to standout in a way that feels effortless. Whether it’s a teardrop sparkle that catches the light or a bold sword that turns heads, charms are the quickest way to change your entire look without changing your jewellery. </p><p>These aren’t just cute add-ons. They’re the “where did you get that?” pieces that make your stack feel completely custom. </p><p>Charm your way, there’s no wrong move. </p>"
+            "text": "<p>Cubic Zirconia (CZ) has earned its place as one of the most loved stones in modern jewellery design. Renowned for its clarity, sparkle, and versatility, it’s a gemstone that balances glamour with practicality. At SkinKandy, we believe jewellery should empower self-expression without compromise, and our CZ collection is designed to do exactly that.</p>"
+          }
+        },
+        "heading_MchJCE": {
+          "type": "heading",
+          "settings": {
+            "title": "What Makes Cubic Zirconia Special? ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_tLm3PM": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Unlike naturally occurring stones, CZ is lab-created, which means it can be cut with precision for maximum brilliance. Every facet is engineered to reflect light beautifully, giving you that diamond-like sparkle with consistency and clarity. </p><p>But CZ isn’t just about looks. It’s also durable and versatile, making it ideal for everyday jewellery that transitions seamlessly from casual wear to special occasions. </p>"
           }
         }
       },
       "block_order": [
+        "text_tKTJm3",
         "heading_MchJCE",
-        "text_tKTJm3"
+        "text_tLm3PM"
       ],
       "custom_css": [
         "h2 {font-weight: 700;}"
@@ -58,24 +66,6 @@
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": true
-      }
-    },
-    "collection_showcase_egKDgR": {
-      "type": "collection-showcase",
-      "custom_css": [
-        ".collection-showcase__wrapper {max-width: 1000px;}"
-      ],
-      "name": "Collection Showcase Block",
-      "settings": {
-        "title": "Charms & Chains",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
-        "bottom_border": false,
-        "enable_hover": false,
-        "get_product_list": true,
-        "collection_link": "charms-and-chains"
       }
     },
     "columns_block_eEWy84": {
@@ -94,18 +84,18 @@
             "image": "shopify://shop_images/660.jpg",
             "video": "",
             "center-content": false,
-            "title": "Helix to Mid Helix",
+            "title": "",
             "title_size": "small",
             "break_tag": false,
             "title_tag": "p",
-            "text": "<p>A soft drape gives full statement energy</p>",
+            "text": "",
             "text_size": "small",
             "button_label": "",
             "button_link": "",
             "new_tab": false
           }
         },
-        "text_block_tPNMnd": {
+        "text_block_AaCznm": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
@@ -115,14 +105,13 @@
             "hide-image": false,
             "short-image": false,
             "flip-image-enable": false,
-            "image": "shopify://shop_images/158-7R505601.jpg",
             "video": "",
             "center-content": false,
-            "title": "Hoops + chains",
+            "title": "Bezel Setting ",
             "title_size": "small",
             "break_tag": false,
-            "title_tag": "p",
-            "text": "<p>Adds depth to a classic stack</p>",
+            "title_tag": "h3",
+            "text": "<p>In a bezel setting, the stone is surrounded by a thin rim of metal that hugs its edges. This style is sleek, modern, and highly secure, making it ideal for active lifestyles or piercings that need extra protection. The metal frame creates a smooth profile that sits flush against the skin, giving a polished and contemporary look.  </p><p><strong>Best for:</strong> Everyday wear, minimalists, or anyone who loves clean lines. </p>",
             "text_size": "small",
             "button_label": "",
             "button_link": "",
@@ -132,7 +121,7 @@
       },
       "block_order": [
         "text_block_8Xi6Yb",
-        "text_block_tPNMnd"
+        "text_block_AaCznm"
       ],
       "custom_css": [
         "div {text-align: left;}"
@@ -142,8 +131,8 @@
         "dark_mode": false,
         "class": "",
         "title_tag": "h2",
-        "title": "Chains: Add Drama To Your Ear Stack",
-        "description": "<p>If charms are the finishing touch, chains are the style statement. </p><p>Draped between piercings. Looping from hoop to stud. Hanging from a nose ring or wrapping around a conch. Chains instantly bring movement, drama, and that cool, editorial edge. </p><p>And the best part? They work with what you already wear. </p><p>Here’s how to wear them: </p>",
+        "title": "The Art of the Setting ",
+        "description": "<p>A gemstone’s setting isn’tjust about keeping it secure; it defines the look, feel, and overall personality of the piece. With cubic zirconia, the right setting can transform the way light plays with the stone, the way it sits against your skin, and the style it communicates. Here’s a deeper look at the settings you’ll find in our CZ collection:</p>",
         "button_text": "",
         "button_url": "",
         "count": 2,
@@ -151,6 +140,7 @@
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
+        "mobile_slider": false,
         "max_width": 1008
       }
     },
@@ -167,14 +157,13 @@
             "hide-image": false,
             "short-image": false,
             "flip-image-enable": false,
-            "image": "shopify://shop_images/DSC02730_8bf1bff2-6af5-4414-8c6a-3a8cdfd44b56.jpg",
             "video": "",
             "center-content": false,
-            "title": "Studs + a fine link",
+            "title": "Claw (Prong) Setting ",
             "title_size": "small",
             "break_tag": false,
             "title_tag": "p",
-            "text": "<p>For a clean, modern twist<br/><br/></p>",
+            "text": "<p>The claw setting is a classic for a reason. Tiny prongs hold the CZ firmly in place while leaving the majority of the stone exposed, allowing light to enter from all angles. This results in maximum brilliance and fire; the kind of sparkle that catches attention across the room. With its timeless appeal, the claw setting brings a touch of tradition into modern piercing jewellery. </p><p><strong>Best for:</strong> Those who want their CZ to shine at its brightest, and lovers of timeless elegance. <br/><br/></p>",
             "text_size": "small",
             "button_label": "",
             "button_link": "",
@@ -194,11 +183,11 @@
             "image": "shopify://shop_images/2782.jpg",
             "video": "",
             "center-content": false,
-            "title": "Nose piercings",
+            "title": "",
             "title_size": "small",
             "break_tag": false,
             "title_tag": "p",
-            "text": "<p>Chains highlight facial features with bold intention</p>",
+            "text": "",
             "text_size": "small",
             "button_label": "",
             "button_link": "",
@@ -224,23 +213,203 @@
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
+        "mobile_slider": false,
         "max_width": 1008
       }
     },
-    "rich_text_bXKAcP": {
-      "type": "rich-text",
+    "columns_block_4JFiwM": {
+      "type": "columns-block",
       "blocks": {
-        "text_F3QVPw": {
-          "type": "text",
+        "text_block_UYkDpR": {
+          "type": "text_block",
           "settings": {
-            "enlarge_text": false,
-            "text": "<p>These pieces are designed to connect, elevate, and completely transform your piercings.</p>"
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/2782.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "p",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_QUbrRP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": false,
+            "title": "Pavé Setting ",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "p",
+            "text": "<p>French for “paved,” pavé settings use multiple small stones set closely together, often with minimal visible metal. The result is a dazzling surface that looks like it’s encrusted with continuous shimmer. Pavé-set CZ is glamorous without being overpowering, perfect for stacking or making a single piece feel like a showstopper. </p><p><strong>Best for:</strong> Statement stacks, evening looks, and anyone who believes “more sparkle is more.” </p><p><strong>Why it matters?</strong> Choosing a setting is about more than aesthetics. It’s about how your jewellery feels, how it wears over time, and the statement you want to make. Whether you gravitate toward the security of bezel, the brilliance of claw, or the glamour of pavé, each choice reflects your personal style. <br/><br/></p>",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
           }
         }
       },
       "block_order": [
-        "text_F3QVPw"
+        "text_block_UYkDpR",
+        "text_block_QUbrRP"
       ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1008
+      }
+    },
+    "rich_text_4V94kW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rJmRTh": {
+          "type": "heading",
+          "settings": {
+            "title": "Shapes That Tell a Story ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_3wMMrk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>The cut of a stone isn’t just about appearance — it’s about personality. Here’s what each shape brings to your look: </p><ul><li><strong>Round</strong> – the timeless classic, versatile for any style </li><li><strong>Marquis</strong> – elongated elegance, perfect for elongating a stack </li><li><strong>Heart</strong> – playful, romantic, and expressive </li><li><strong>Oval</strong> – soft sophistication with a refined silhouette </li><li><strong>Teardrop</strong> – graceful, fluid, and eye-catching </li><li><strong>Rectangle</strong> – modern, linear, and bold </li><li><strong>Square</strong> – balanced symmetry with clean edges </li></ul><p>By understanding shape, you can curate a jewellery collection that truly reflects you. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rJmRTh",
+        "text_3wMMrk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_ARYDWM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f7crLj": {
+          "type": "heading",
+          "settings": {
+            "title": "Glam, Grounded ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_GV4yCh": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>CZ gives you the best of both worlds: dazzling shine and everyday practicality. It’s strong enough for daily wear, versatile enough for any style, and elevated enough to carry you from low-key daytime looks to high-impact evening statements. </p><p>At SkinKandy, we’ve built our CZ collection to celebrate individuality; from subtle studs to statement-making stacks, every piece is designed to shine your way. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_f7crLj",
+        "text_GV4yCh"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_EbL9HR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VX6mzC": {
+          "type": "heading",
+          "settings": {
+            "title": "Premium Metals, Thoughtful Pairings ",
+            "heading_tag": "h2"
+          }
+        },
+        "text_F994PG": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>To ensure both beauty and safety, our CZ is always set in high-quality, body-safe materials: </p><ul><li><strong>14K Solid Gold</strong> – classic luxury, designed to last a lifetime </li><li><strong>ASTM F136 Implant-Grade Titanium</strong> – hypoallergenic, ultra-light, and trusted by professional piercers </li><li><strong>316L Surgical Steel</strong> – strong, durable, and body-safe for everyday wear </li></ul><p>Each material offers its own strengths, so whether you prefer timeless gold or lightweight titanium, your jewellery is crafted to feel as good as it looks. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VX6mzC",
+        "text_F994PG"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_cfjA6w": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "collection_showcase_egKDgR": {
+      "type": "collection-showcase",
+      "custom_css": [
+        ".collection-showcase__wrapper {max-width: 1000px;}"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "Charms & Chains",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "charms-and-chains"
+      }
+    },
+    "rich_text_bXKAcP": {
+      "type": "rich-text",
       "custom_css": [
         ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -25px; }}"
       ],
@@ -325,6 +494,7 @@
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
+        "mobile_slider": false,
         "max_width": 1008
       }
     },
@@ -419,9 +589,14 @@
   "order": [
     "main",
     "rich_text_86xf37",
-    "collection_showcase_egKDgR",
     "columns_block_eEWy84",
     "columns_block_if7KgT",
+    "columns_block_4JFiwM",
+    "rich_text_4V94kW",
+    "rich_text_ARYDWM",
+    "rich_text_EbL9HR",
+    "rich_text_cfjA6w",
+    "collection_showcase_egKDgR",
     "rich_text_bXKAcP",
     "columns_block_L8BcVw",
     "rich_text_GNttmF",
