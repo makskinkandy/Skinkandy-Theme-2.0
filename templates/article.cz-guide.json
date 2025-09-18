@@ -424,16 +424,32 @@
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
+        "heading_i4Y6ad": {
+          "type": "heading",
+          "settings": {
+            "title": "Ready to Explore the Collection? ",
+            "heading_tag": "h3"
+          }
+        },
+        "text_eC8w8R": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Your next signature piece is waiting.</p>"
+          }
+        },
         "button_RPKtwT": {
           "type": "button",
           "settings": {
             "link": "shopify://collections/charms-and-chains",
-            "link_text": "Shop Charms + Chains Now",
+            "link_text": "Shop Cubic Zirconia Jewellery",
             "css_class": ""
           }
         }
       },
       "block_order": [
+        "heading_i4Y6ad",
+        "text_eC8w8R",
         "button_RPKtwT"
       ],
       "custom_css": [
