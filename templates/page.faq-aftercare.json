@@ -111,6 +111,9 @@
         "image_XdBe8N",
         "image_rAyM3m"
       ],
+      "custom_css": [
+        ".collection-showcase__img {object-fit: cover;}"
+      ],
       "name": "Collection Showcase Block",
       "settings": {
         "title": "",
