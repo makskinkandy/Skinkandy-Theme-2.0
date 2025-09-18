@@ -304,7 +304,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>The cut of a stone isn’t just about appearance — it’s about personality. Here’s what each shape brings to your look: </p><p></p><ul><li></li></ul><p>By understanding shape, you can curate a jewellery collection that truly reflects you. </p>"
+            "text": "<p>The cut of a stone isn’t just about appearance — it’s about personality. Here’s what each shape brings to your look.</p><p>By understanding shape, you can curate a jewellery collection that truly reflects you. </p>"
           }
         }
       },
@@ -342,7 +342,7 @@
             "title_tag": "h3",
             "text": "<p></p><p><strong>Round</strong> – the timeless classic, versatile for any style </p><p><strong>Marquis</strong> – elongated elegance, perfect for elongating a stack </p><p><strong>Heart</strong> – playful, romantic, and expressive </p>",
             "text_size": "small",
-            "button_label": "Optional button",
+            "button_label": "",
             "button_link": "",
             "new_tab": false
           }
@@ -366,7 +366,7 @@
             "title_tag": "h3",
             "text": "<p></p><p><strong>Oval</strong> – soft sophistication with a refined silhouette </p><p><strong>Teardrop</strong> – graceful, fluid, and eye-catching </p><p><strong>Rectangle</strong> – modern, linear, and bold </p><p><strong>Square</strong> – balanced symmetry with clean edges </p>",
             "text_size": "small",
-            "button_label": "Optional button",
+            "button_label": "",
             "button_link": "",
             "new_tab": false
           }
