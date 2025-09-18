@@ -386,7 +386,7 @@
         "button_text": "",
         "button_url": "",
         "count": 2,
-        "bottom_space": true,
+        "bottom_space": false,
         "hide_line": true,
         "disable_grid": false,
         "two_column": false,
@@ -485,7 +485,7 @@
         "button_RPKtwT": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/charms-and-chains",
+            "link": "shopify://collections/radiant",
             "link_text": "Shop Cubic Zirconia Jewellery",
             "css_class": ""
           }
@@ -511,7 +511,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "title": "NOW TRENDING",
-        "featured_collection": "charms-and-chains",
+        "featured_collection": "radiant",
         "product_count": 4,
         "product_limit": 12,
         "heading_size": "h2",
