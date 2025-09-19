@@ -49,7 +49,7 @@
           }
         },
         "image_WgeizH": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_-_Your_Loudest_Piercing.jpg",
             "image": "shopify://shop_images/Homepage_Banner_Desktop_-_Your_Loudest_Piercing.jpg",
