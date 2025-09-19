@@ -23,6 +23,7 @@
       },
       "blocks": {
         "image_PFE9d8": {
+          "disabled": false,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-2-For-80.jpg",
