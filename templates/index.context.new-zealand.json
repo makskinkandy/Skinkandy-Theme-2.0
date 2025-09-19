@@ -36,6 +36,7 @@
           }
         },
         "image_ng66KH": {
+          "disabled": false,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-Buy3.jpg",
