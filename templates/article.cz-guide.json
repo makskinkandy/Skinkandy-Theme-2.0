@@ -434,37 +434,6 @@
         "reduce_spacing": false
       }
     },
-    "collection_showcase_egKDgR": {
-      "type": "collection-showcase",
-      "custom_css": [
-        ".collection-showcase__wrapper {max-width: 1000px;}"
-      ],
-      "name": "Collection Showcase Block",
-      "settings": {
-        "title": "Radiant Piercing Collection",
-        "mode": "light",
-        "background": "#ffffff",
-        "button_text": "",
-        "button_url": "",
-        "bottom_border": false,
-        "enable_hover": false,
-        "get_product_list": true,
-        "collection_link": "radiant"
-      }
-    },
-    "rich_text_bXKAcP": {
-      "type": "rich-text",
-      "custom_css": [
-        ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -25px; }}"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "left",
-        "narrow_column": true,
-        "divider": false,
-        "reduce_spacing": true
-      }
-    },
     "rich_text_MwBgrj": {
       "type": "rich-text",
       "blocks": {
@@ -505,6 +474,37 @@
         "divider": false,
         "reduce_spacing": false
       }
+    },
+    "collection_showcase_egKDgR": {
+      "type": "collection-showcase",
+      "custom_css": [
+        ".collection-showcase__wrapper {max-width: 1000px;}"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "Radiant Piercing Collection",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "",
+        "bottom_border": false,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "radiant"
+      }
+    },
+    "rich_text_bXKAcP": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -25px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
     }
   },
   "order": [
@@ -517,8 +517,8 @@
     "columns_block_cma3p8",
     "rich_text_EbL9HR",
     "rich_text_cfjA6w",
+    "rich_text_MwBgrj",
     "collection_showcase_egKDgR",
-    "rich_text_bXKAcP",
-    "rich_text_MwBgrj"
+    "rich_text_bXKAcP"
   ]
 }
