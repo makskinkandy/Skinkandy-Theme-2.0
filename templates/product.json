@@ -251,6 +251,22 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "175825990127ec6682": {
+      "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_predictive_bundle_MHM6gk": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/predictive-bundle/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_predictive_bundle_MHM6gk"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -260,6 +276,7 @@
     "collection-return",
     "ss-recommendations-similar",
     "ss-recommendations-cross-sell",
+    "175825990127ec6682",
     "17554789105f3a0c36",
     "apps_QPMLPR"
   ]
