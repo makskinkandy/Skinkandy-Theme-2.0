@@ -54,6 +54,34 @@
             "align_text": "center"
           }
         },
+        "image_yr7dAg": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Code-Pink-Mobile-2-For-80.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "banner_url": "https://bookings.skinkandy.com/?locale=en-au",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_J7UMHB": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Code-Pink-Mobile-Buy3.jpg",
+            "image": "shopify://shop_images/Code_Pink_-_Homepage__BUY_3.jpg",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
         "image_ng66KH": {
           "type": "image",
           "settings": {
@@ -70,6 +98,7 @@
         },
         "image_PFE9d8": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/2_For_80_-_Rotational_Banners_V2_22_For_80_-_Mobile_Banner_Option_1.jpg",
@@ -100,6 +129,8 @@
       },
       "block_order": [
         "image_WgeizH",
+        "image_yr7dAg",
+        "image_J7UMHB",
         "image_ng66KH",
         "image_PFE9d8",
         "image_PdCEic"
@@ -238,7 +269,6 @@
         "text_b6GqnX",
         "button_B6Mjmb"
       ],
-      "disabled": true,
       "custom_css": [
         "h1 {font-weight: 600;}"
       ],
@@ -481,7 +511,6 @@
         "text_block_QQbbtk",
         "text_block_qnPyxt"
       ],
-      "disabled": true,
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
@@ -527,11 +556,11 @@
     "collection_showcase_RnD7cq": {
       "type": "collection-showcase",
       "settings": {
-        "title": "JUST LANDED",
+        "title": "BUY 3 GET THE 4TH FREE",
         "mode": "light",
         "background": "#ffffff",
         "button_text": "Shop Now",
-        "button_url": "shopify://collections/shop-all",
+        "button_url": "shopify://collections/buy-3-get-one-free",
         "bottom_border": true,
         "enable_hover": false,
         "get_product_list": true,
