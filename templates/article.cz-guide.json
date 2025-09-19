@@ -376,6 +376,9 @@
         "text_block_KhjdfH",
         "text_block_qHfLG4"
       ],
+      "custom_css": [
+        ".grid-scroll.two-column__mobile--false.mobile-slider--false {justify-content: center; flex-direction: column-reverse;}"
+      ],
       "name": "Columns Block",
       "settings": {
         "dark_mode": false,
