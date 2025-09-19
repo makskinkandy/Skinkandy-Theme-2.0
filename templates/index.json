@@ -149,7 +149,7 @@
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "SHOP NOW",
-        "button_1_url": "shopify://collections/new-in",
+        "button_1_url": "shopify://collections/buy-3-get-one-free",
         "button_2_text": "BOOK NOW",
         "button_2_url": "https://bookings.skinkandy.com",
         "text_color": "#ffffff",
