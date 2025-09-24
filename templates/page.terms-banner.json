@@ -15,11 +15,11 @@
         "image_dbpyFz": {
           "type": "image",
           "settings": {
-            "disable_overlay": false,
+            "disable_overlay": true,
             "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
             "image": "{{ page.metafields.custom.header_banner.value }}",
             "banner_url": "",
-            "heading": "{{ page.title }}",
+            "heading": "",
             "short_description": "",
             "button_text": "",
             "button_url": "",
@@ -33,7 +33,7 @@
       "settings": {
         "title": "",
         "banner_size": "small-banner",
-        "small_overlay": true,
+        "small_overlay": false,
         "shuffle": false
       }
     },
