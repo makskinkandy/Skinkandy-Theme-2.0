@@ -1003,6 +1003,7 @@
       }
     &:hover {
       background: transparent !important;
+      color: #000;
     }
     &.desktop-only {
       @media screen and (max-width: 480px) {
