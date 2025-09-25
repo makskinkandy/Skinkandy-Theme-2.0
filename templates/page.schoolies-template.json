@@ -39,6 +39,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": false,
