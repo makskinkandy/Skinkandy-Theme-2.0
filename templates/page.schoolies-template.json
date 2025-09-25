@@ -79,7 +79,7 @@
           "type": "button",
           "settings": {
             "link": "",
-            "link_text": "Button",
+            "link_text": "BOOK NOW",
             "css_class": ""
           }
         },
@@ -101,7 +101,7 @@
           "type": "button",
           "settings": {
             "link": "",
-            "link_text": "Button",
+            "link_text": "BOOK NOW",
             "css_class": ""
           }
         }
