@@ -78,7 +78,7 @@
         "button_ypVk3B": {
           "type": "button",
           "settings": {
-            "link": "",
+            "link": "https://bookings.skinkandy.com/",
             "link_text": "BOOK NOW",
             "css_class": ""
           }
@@ -100,8 +100,8 @@
         "button_BEVMXD": {
           "type": "button",
           "settings": {
-            "link": "",
-            "link_text": "BOOK NOW",
+            "link": "shopify://blogs/news/piercing-prep",
+            "link_text": "LEARN MORE",
             "css_class": ""
           }
         }
