@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_banner_48iWtV": {
+      "type": "header-banner",
+      "blocks": {
+        "image_dbpyFz": {
+          "type": "image",
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
+            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "banner_url": "",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_dbpyFz"
+      ],
+      "settings": {
+        "title": "",
+        "banner_size": "small-banner",
+        "small_overlay": false,
+        "shuffle": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "breadcrumbs": false,
+        "heading": false,
+        "content": true
+      }
+    },
+    "raw_code_dnrBhw": {
+      "type": "raw-code",
+      "settings": {
+        "custom_html": "<style>\nol {\n    margin: 0 0 15px 15px;\n    font-weight: 700;\n    font-size: 16px;\n}\n</style>"
+      }
+    },
+    "rich_text_RUt7Q7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HMYKNn": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Schoolies Piercing Tips",
+            "heading_tag": "h2"
+          }
+        },
+        "text_gfdGmt": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>When coming into SK, here’s your MUST-DOs before your NEW piercing:</p><ul><li>Don’t forget your ID – you’ll need it to confirm your Schoolies lanyard matches.</li><li>Make sure you eat before your appointment</li><li>Avoid drinking alcohol up to 8 hours before – alcohol is a blood thinner and this will affect how much you bleed when getting pierced.</li><li>Stay hydrated</li><li>Don't forget your aftercare - this will ensure your NEW Schoolies piercing heals perfectly!</li><li>Take a breath & relax – our professional piercers have you covered every step of the way.</li><li>Bring your Schoolies energy – you’re here to celebrate, so let’s make it an unforgettable piercing experience!</li></ul><p>For more information, please contact our friendly customer service team <a href=\"mailto:customerservice@skinkandy.com\">customerservice@skinkandy.com</a>  </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HMYKNn",
+        "text_gfdGmt"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    }
+  },
+  "order": [
+    "header_banner_48iWtV",
+    "main",
+    "raw_code_dnrBhw",
+    "rich_text_RUt7Q7"
+  ]
+}
