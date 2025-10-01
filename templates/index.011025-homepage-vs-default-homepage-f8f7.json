@@ -70,6 +70,7 @@
         },
         "image_yr7dAg": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-2-For-80.jpg",
@@ -84,6 +85,7 @@
         },
         "image_J7UMHB": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-Buy3.jpg",
@@ -148,7 +150,7 @@
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "SHOP NOW",
-        "button_1_url": "shopify://collections/buy-3-get-one-free",
+        "button_1_url": "shopify://collections/halloween-collection",
         "button_2_text": "BOOK NOW",
         "button_2_url": "https://bookings.skinkandy.com",
         "text_color": "#ffffff",
