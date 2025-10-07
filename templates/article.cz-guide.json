@@ -522,7 +522,7 @@
         "button_RPKtwT": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/radiant",
+            "link": "shopify://collections/new-in",
             "link_text": "Shop Now",
             "css_class": ""
           }
