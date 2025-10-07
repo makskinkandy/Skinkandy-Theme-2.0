@@ -554,7 +554,7 @@
         "mode": "light",
         "background": "#ffffff",
         "button_text": "",
-        "button_url": "",
+        "button_url": "shopify://collections/new-in",
         "bottom_border": true,
         "enable_hover": false,
         "get_product_list": true,
