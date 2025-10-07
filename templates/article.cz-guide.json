@@ -90,6 +90,36 @@
         "reduce_spacing": true
       }
     },
+    "rich_text_RGCaNy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ixYLPW": {
+          "type": "heading",
+          "settings": {
+            "title": "Threadless Jewellery",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Hb43VH": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>The decorative top has a small pin that presses into a hollow post. The pin bends slightly to create tension, holding it firmly in place; no twisting required.</p><p><strong>Why it’s great:</strong></p><ul><li>   Quick and easy to change.</li><li>     Smooth and comfortable design.</li><li>   Secure enough for daily wear.</li></ul><p><strong>Best for:</strong> People who love switching up their jewellery without hassle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ixYLPW",
+        "text_Hb43VH"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
     "columns_block_cma3p8": {
       "type": "columns-block",
       "blocks": {
@@ -210,7 +240,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p><strong>How it works:</strong><br/><br/>A single piece of metal that you gently twist open sideways, insert into your piercing, then twist back to close.<br/></p><p><strong>Why it’s great:</strong></p><ul><li>Minimalist, seamless design.</li><li>Lightweight and comfortable.</li><li>Budget-friendly..</li></ul><p><strong>Things to consider: </strong></p><p>They can lose shape if over-bent and are trickier to change than hinged rings, so they’re best for healed piercings.</p><p><strong>Best for:</strong> Nostril, lobe, or helix piercings where a clean, subtle look is key.</p>"
+            "text": "<p><strong>How it works:</strong><br/><br/>A single piece of metal that you gently twist open sideways, insert into your piercing, then twist back to close.<br/></p><p><strong>Why it’s great:</strong></p><ul><li>Minimalist, seamless design.</li><li>Lightweight and comfortable.</li><li>Budget-friendly.</li></ul><p><strong>Things to consider: </strong></p><p>They can lose shape if over-bent and are trickier to change than hinged rings, so they’re best for healed piercings.</p><p><strong>Best for:</strong> Nostril, lobe, or helix piercings where a clean, subtle look is key.</p>"
           }
         }
       },
@@ -446,7 +476,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<ul><li><strong>For new piercings:</strong> Internally threaded or flatbacks are the safest and most comfortable.</li><li><strong>For easy changes:</strong> Threadless jewellery keeps things simple.</li><li><strong>For sleek rings:</strong> Hinged segment rings are durable, while bendable rings offer a<br/>budget-friendly minimalist look.</li><li><strong>For casual fashion earrings:</strong> Butterfly backs are fine, but flatbacks are<br/>far superior for long-term wear.</li></ul><p>The closure you choose has a big impact on how your jewellery feels and<br/>functions. At SkinKandy, we only stock high-quality, implant-grade materials to<br/>keep your piercings safe and stylish, no matter which closure you prefer.</p>"
+            "text": "<ul><li><strong>For new piercings:</strong> Internally threaded or flatbacks are the safest and most comfortable.</li><li><strong>For easy changes:</strong> Threadless jewellery keeps things simple.</li><li><strong>For sleek rings:</strong> Hinged segment rings are durable, while bendable rings offer a<br/>budget-friendly minimalist look.</li><li><strong>For casual fashion earrings:</strong> Butterfly backs are fine, but flatbacks are<br/>far superior for long-term wear.</li></ul><p>The closure you choose has a big impact on how your jewellery feels and functions. At SkinKandy, we only stock high-quality, implant-grade materials to keep your piercings safe and stylish, no matter which closure you prefer.</p>"
           }
         }
       },
@@ -549,6 +579,7 @@
     "main",
     "rich_text_86xf37",
     "rich_text_4V94kW",
+    "rich_text_RGCaNy",
     "columns_block_cma3p8",
     "rich_text_MwCJ9h",
     "rich_text_bLWNfw",
