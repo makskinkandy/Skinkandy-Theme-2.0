@@ -25,8 +25,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Mobile_Landing_Page_1.2.jpg",
-            "image": "shopify://shop_images/Desktop_Landing_Page_3.jpg",
+            "image_mobile": "shopify://shop_images/July_Comp_Landing_Page_Banner_Mobile.jpg",
+            "image": "shopify://shop_images/July_Comp_Landing_Page_Banner_Desktop.jpg",
             "banner_url": "",
             "heading": "",
             "short_description": "",
