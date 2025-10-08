@@ -1,0 +1,595 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "custom_css": [
+        "h1,h2,h3,h4 {font-family: \"Futura Medium 01\", sans-serif;}",
+        "p {line-height: 25px;}",
+        ".rte li {margin-bottom: 0; line-height: 25px; margin-bottom: 8px;}",
+        "img {@media screen and (max-width: 767px) {max-height: 331px; }}"
+      ],
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true,
+        "disable_padding": true
+      }
+    },
+    "rich_text_86xf37": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MchJCE": {
+          "type": "heading",
+          "settings": {
+            "title": "Internally Threaded Jewellery",
+            "heading_tag": "h2"
+          }
+        },
+        "text_tLm3PM": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>The <a href=\"https://skinkandy.com/collections/internal-thread-tops\" title=\"https://skinkandy.com/collections/internal-thread-tops\">post</a> is hollow, and the decorative <a href=\"https://skinkandy.com/collections/internal-thread-tops\" title=\"https://skinkandy.com/collections/internal-thread-tops\">top</a> screws into it. The threading is hidden inside the post, so no rough edges pass through your piercing.</p><p><strong>Why it’s great:</strong></p><ul><li>Gentle on your skin, ideal for healing.</li><li>Extremely secure fastening.</li><li>The professional standard for body jewellery.</li></ul><p><strong>Best for:</strong> New piercings and long-term wear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MchJCE",
+        "text_tLm3PM"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 700;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "rich_text_4V94kW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rJmRTh": {
+          "type": "heading",
+          "settings": {
+            "title": "Guided Internally Threaded Jewellery",
+            "heading_tag": "h2"
+          }
+        },
+        "text_3wMMrk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>Similar to internally threaded but has a <a href=\"https://skinkandy.com/collections/internally-threaded\" title=\"https://skinkandy.com/collections/internally-threaded\">longer pin</a> with threading that makes screwing the top into place easier.</p><p><strong>Why it’s great:</strong></p><ul><li>All the safety of internally threaded jewellery.</li><li>Easier to align, with less fiddling.</li></ul><p><strong>Best for:</strong> New piercings and long-term wear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rJmRTh",
+        "text_3wMMrk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "rich_text_RGCaNy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ixYLPW": {
+          "type": "heading",
+          "settings": {
+            "title": "Threadless Jewellery",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Hb43VH": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>The <a href=\"https://skinkandy.com/collections/threadless\" title=\"https://skinkandy.com/collections/threadless\">decorative top</a> has a small pin that presses into a hollow post. The pin bends slightly to create tension, holding it firmly in place; no twisting required.</p><p><strong>Why it’s great:</strong></p><ul><li>   Quick and easy to change.</li><li>   Smooth and comfortable design.</li><li>   Secure enough for daily wear.</li></ul><p><strong>Best for:</strong> People who love switching up their jewellery without hassle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ixYLPW",
+        "text_Hb43VH"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "columns_block_cma3p8": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_qHfLG4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_x4Wg3k": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/Blog_Brand_Closures_Body_Tile_1.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_qHfLG4",
+        "text_block_x4Wg3k"
+      ],
+      "custom_css": [
+        ".grid-scroll.two-column__mobile--false.mobile-slider--false {justify-content: center; flex-direction: column-reverse;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 1,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_MwCJ9h": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qNzXQC": {
+          "type": "heading",
+          "settings": {
+            "title": "Hinged Segment Rings",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Mkwa3B": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>A <a href=\"https://skinkandy.com/collections/segment-rings\" title=\"https://skinkandy.com/collections/segment-rings\">small hinge</a> allows the ring to click open and closed, with the segment snapping seamlessly back into place.<br/></p><p><strong>Why it’s great:</strong></p><ul><li>Smooth, continuous look.</li><li>Very easy to open and close.</li><li>Durable and reliable.</li></ul><p><strong>Best for:</strong> <a href=\"https://skinkandy.com/collections/cartilage-labret\" title=\"https://skinkandy.com/collections/cartilage-labret\">Cartilage</a>, <a href=\"https://skinkandy.com/collections/septum-rings\" title=\"https://skinkandy.com/collections/septum-rings\">septum</a>, and <a href=\"https://skinkandy.com/collections/daith\" title=\"https://skinkandy.com/collections/daith\">daith</a> piercings; or anyone who wants sleek,<br/>low-maintenance style.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qNzXQC",
+        "text_Mkwa3B"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "rich_text_bLWNfw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xTiWAV": {
+          "type": "heading",
+          "settings": {
+            "title": "Bendable Rings (Seamless Rings)",
+            "heading_tag": "h2"
+          }
+        },
+        "text_bD4CDe": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>A single piece of metal that you gently <a href=\"https://skinkandy.com/search?q=bendable\" title=\"https://skinkandy.com/search?q=bendable\">twist open sideways</a>, insert into your piercing, then twist back to close.<br/></p><p><strong>Why it’s great:</strong></p><ul><li>Minimalist, seamless design.</li><li>Lightweight and comfortable.</li><li>Budget-friendly.</li></ul><p><strong>Things to consider: </strong></p><p>They can lose shape if over-bent and are trickier to change than hinged rings, so they’re best for healed piercings.</p><p><strong>Best for:</strong> <a href=\"https://skinkandy.com/collections/nostril-jewellery\" title=\"https://skinkandy.com/collections/nostril-jewellery\">Nostril</a>, <a href=\"https://skinkandy.com/collections/lobes\" title=\"https://skinkandy.com/collections/lobes\">lobe</a>, or <a href=\"https://skinkandy.com/collections/helix-piercing-jewellery\" title=\"https://skinkandy.com/collections/helix-piercing-jewellery\">helix</a> piercings where a clean, subtle look is key.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xTiWAV",
+        "text_bD4CDe"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "columns_block_deK84D": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_xWFrED": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_iUrndr": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": true,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/Blog_Brand_Closures_Body_Tile_2.jpg",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_xWFrED",
+        "text_block_iUrndr"
+      ],
+      "custom_css": [
+        ".grid-scroll.two-column__mobile--false.mobile-slider--false {justify-content: center; flex-direction: column-reverse;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 1,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_XrtnWh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XmnqVm": {
+          "type": "heading",
+          "settings": {
+            "title": "Stud Closures: Butterfly Backs vs Flatbacks",
+            "heading_tag": "h2"
+          }
+        },
+        "heading_kX8Qiy": {
+          "type": "heading",
+          "settings": {
+            "title": "Butterfly Backs",
+            "heading_tag": "h3"
+          }
+        },
+        "text_c3M6jC": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>The <a href=\"https://skinkandy.com/collections/studs\" title=\"https://skinkandy.com/collections/studs\">classic earring closure</a>, a metal clutch slides onto the straight post to secure the stud.<br/><br/><strong>Pros:</strong></p><ul><li>Simple and familiar.</li><li>Quick to put on and remove.</li><li>Ideal for lightweight, fashion earrings.</li></ul><p><strong>Things to consider: </strong></p><p>They can loosen over time and aren’t as comfortable for sleeping or constant wear.</p>"
+          }
+        },
+        "heading_c9fUYy": {
+          "type": "heading",
+          "settings": {
+            "title": "Flatbacks",
+            "heading_tag": "h3"
+          }
+        },
+        "text_YYfNjb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>How it works:</strong><br/><br/>The post ends in a <a href=\"https://skinkandy.com/collections/flat-back-jewellery\" title=\"https://skinkandy.com/collections/flat-back-jewellery\">flat disc</a> that sits comfortably against the skin. The top is secured by an internally threaded or threadless mechanism.<br/><br/><strong>Pros:</strong></p><ul><li>Ultra comfortable, nothing sharp digging into your skin.</li><li>Safer and more hygienic, especially for new piercings.</li><li>Designed for long-term daily wear.</li></ul><p><strong>Things to consider: </strong></p><p>They can take a little practice to change but are the gold standard for piercings.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XmnqVm",
+        "heading_kX8Qiy",
+        "text_c3M6jC",
+        "heading_c9fUYy",
+        "text_YYfNjb"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "columns_block_e7zY4h": {
+      "type": "columns-block",
+      "blocks": {
+        "text_block_Pzprhg": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "video": "",
+            "center-content": true,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        },
+        "text_block_YHKPYx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "enable_round": false,
+            "fullwidth-image": false,
+            "fullheight-image": false,
+            "hide-image": false,
+            "short-image": false,
+            "flip-image-enable": false,
+            "image": "shopify://shop_images/Closures.gif",
+            "video": "",
+            "center-content": false,
+            "title": "",
+            "title_size": "small",
+            "break_tag": false,
+            "title_tag": "h3",
+            "text": "",
+            "text_size": "small",
+            "button_label": "",
+            "button_link": "",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Pzprhg",
+        "text_block_YHKPYx"
+      ],
+      "custom_css": [
+        ".grid-scroll.two-column__mobile--false.mobile-slider--false {justify-content: center; flex-direction: column-reverse;}"
+      ],
+      "name": "Columns Block",
+      "settings": {
+        "dark_mode": false,
+        "class": "",
+        "title_tag": "h2",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": "",
+        "count": 2,
+        "bottom_space": false,
+        "hide_line": true,
+        "disable_grid": false,
+        "two_column": false,
+        "mobile_slider": false,
+        "max_width": 1704
+      }
+    },
+    "rich_text_zN78jX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FRFnAk": {
+          "type": "heading",
+          "settings": {
+            "title": "Which Closure Should You Choose?",
+            "heading_tag": "h2"
+          }
+        },
+        "text_JQGCwT": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<ul><li><strong>For new piercings:</strong> <a href=\"https://skinkandy.com/collections/internal-thread-tops\" title=\"https://skinkandy.com/collections/internal-thread-tops\">Internally threaded</a> or <a href=\"https://skinkandy.com/collections/flat-back-jewellery\" title=\"https://skinkandy.com/collections/flat-back-jewellery\">flatbacks</a> are the safest and most comfortable.</li><li><strong>For easy changes:</strong> <a href=\"https://skinkandy.com/collections/threadless\" title=\"https://skinkandy.com/collections/threadless\">Threadless jewellery</a> keeps things simple.</li><li><strong>For sleek rings:</strong> <a href=\"https://skinkandy.com/search?q=hinged\" title=\"https://skinkandy.com/search?q=hinged\">Hinged segment rings</a> are durable, while <a href=\"https://skinkandy.com/search?q=bendable\" title=\"https://skinkandy.com/search?q=bendable\">bendable rings</a> offer a<br/>budget-friendly minimalist look.</li><li><strong>For casual fashion earrings:</strong> <a href=\"https://skinkandy.com/collections/studs\" title=\"https://skinkandy.com/collections/studs\">Butterfly backs</a> are fine, but <a href=\"https://skinkandy.com/collections/flat-back-jewellery\" title=\"https://skinkandy.com/collections/flat-back-jewellery\">flatbacks</a> are<br/>far superior for long-term wear.</li></ul><p>The closure you choose has a big impact on how your jewellery feels and functions. At SkinKandy, we only stock high-quality, <a href=\"https://skinkandy.com/pages/piercing-jewellery-materials\" title=\"https://skinkandy.com/pages/piercing-jewellery-materials\">implant-grade materials</a> to keep your piercings safe and stylish, no matter which closure you prefer.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FRFnAk",
+        "text_JQGCwT"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    },
+    "rich_text_cfjA6w": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "rich_text_MwBgrj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_i4Y6ad": {
+          "type": "heading",
+          "settings": {
+            "title": "Ready to Explore the Collection? ",
+            "heading_tag": "h3"
+          }
+        },
+        "text_eC8w8R": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Explore our full range of <strong>flatbacks, threadless, and hinged rings</strong> to find your perfect fit.</p>"
+          }
+        },
+        "button_RPKtwT": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://collections/new-in",
+            "link_text": "Shop Now",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_i4Y6ad",
+        "text_eC8w8R",
+        "button_RPKtwT"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
+      }
+    },
+    "collection_showcase_egKDgR": {
+      "type": "collection-showcase",
+      "custom_css": [
+        ".collection-showcase__wrapper {max-width: 1000px;}"
+      ],
+      "name": "Collection Showcase Block",
+      "settings": {
+        "title": "New In",
+        "mode": "light",
+        "background": "#ffffff",
+        "button_text": "",
+        "button_url": "shopify://collections/new-in",
+        "bottom_border": true,
+        "enable_hover": false,
+        "get_product_list": true,
+        "collection_link": "radiant"
+      }
+    },
+    "rich_text_bXKAcP": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rte {margin-top: -65px; @media screen and (max-width: 767px) {margin-top: -25px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_86xf37",
+    "rich_text_4V94kW",
+    "rich_text_RGCaNy",
+    "columns_block_cma3p8",
+    "rich_text_MwCJ9h",
+    "rich_text_bLWNfw",
+    "columns_block_deK84D",
+    "rich_text_XrtnWh",
+    "columns_block_e7zY4h",
+    "rich_text_zN78jX",
+    "rich_text_cfjA6w",
+    "rich_text_MwBgrj",
+    "collection_showcase_egKDgR",
+    "rich_text_bXKAcP"
+  ]
+}
