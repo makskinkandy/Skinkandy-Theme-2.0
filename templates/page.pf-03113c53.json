@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_banner_hfRqMN": {
@@ -7,8 +16,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_6_1.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_4_1.jpg",
+            "image_mobile": "shopify://shop_images/Creator_Community_Banner_Mobile.jpg",
+            "image": "shopify://shop_images/Creator_Community_Banner_Desktop.jpg",
             "banner_url": "shopify://pages/brand-ambassador-application",
             "heading": "",
             "short_description": "",
