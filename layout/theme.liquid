@@ -283,13 +283,13 @@
   <script src="{{ 'google-tag-buttons.js' | asset_url | split: '?' | first }}" defer="defer"></script>
   {% include 'pagefly-app-header' %}
 
-  {% comment %} {% if collection.handle != 'j3-products' %}
+  {% if collection.handle != 'j3-products' %}
     <script>
       window.boostSdCustomParams = {
-        h_options: 'j3'
+        h_options: 'j3-piercing'
       };
     </script>
-  {% endif %} {% endcomment %}
+  {% endif %}
 </head>
 
   <body
