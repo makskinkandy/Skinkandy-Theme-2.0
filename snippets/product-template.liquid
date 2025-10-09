@@ -380,7 +380,7 @@
                     </div>
                   {%- when 'buy_buttons' -%}
                     <div class="product-block product-block-{{ block.type }}" {{ block.shopify_attributes }}>
-                      {%- unless product.empty? -%}
+                      {%- unless product.empty? or product.tags contains 'pfs:hidden:j3-piercing' -%}
                         {%- liquid
                           assign product_handle = product.handle
                           assign in_store_gc = false
