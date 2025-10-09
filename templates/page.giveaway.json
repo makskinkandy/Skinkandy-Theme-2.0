@@ -68,7 +68,7 @@
           "type": "button",
           "settings": {
             "link": "#!",
-            "link_text": "Join the KandyClub",
+            "link_text": "Enter Now",
             "css_class": "js-btn-popup"
           }
         },
