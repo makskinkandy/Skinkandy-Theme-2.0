@@ -23,7 +23,7 @@
       },
       "blocks": {
         "image_PFE9d8": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-2-For-80.jpg",
@@ -37,7 +37,7 @@
           }
         },
         "image_ng66KH": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Code-Pink-Mobile-Buy3.jpg",
@@ -51,7 +51,7 @@
           }
         },
         "image_WgeizH": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_-_Your_Loudest_Piercing.jpg",
             "image": "shopify://shop_images/Homepage_Banner_Desktop_-_Your_Loudest_Piercing.jpg",
@@ -72,7 +72,7 @@
       "blocks": {}
     },
     "rich_text_gwEVLb": {
-      "disabled": false,
+      "disabled": true,
       "custom_css": [
         "h1 {font-weight: 600;}"
       ],
@@ -122,7 +122,7 @@
       "blocks": {}
     },
     "columns_block_AAVbUH": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "dark_mode": false,
         "class": "",
@@ -221,7 +221,7 @@
       "name": "Columns Block"
     },
     "rich_text_YyxiLB": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
