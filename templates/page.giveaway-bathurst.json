@@ -77,13 +77,22 @@
             "enlarge_text": false,
             "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>Airpod Pro 2 Headphones 2025 is exclusive to New South Wales residents only. This competition is only open to NEW KandyClub members.</strong></p><p><a href=\"/pages/bathurst-nsw-airpods-giveaway-ts\" target=\"_blank\" title=\"Bathurst NSW Airpods Giveaway T's\">Terms & Conditions</a></p>"
           }
+        },
+        "button_RCcgmV": {
+          "type": "button",
+          "settings": {
+            "link": "#globo-formbuilder-128101",
+            "link_text": "Join Now",
+            "css_class": ""
+          }
         }
       },
       "block_order": [
         "heading_HgBbid",
         "heading_7LBcV6",
         "text_iX7awe",
-        "text_aa77zK"
+        "text_aa77zK",
+        "button_RCcgmV"
       ],
       "custom_css": [
         "h1 {font-weight: 600;}"
