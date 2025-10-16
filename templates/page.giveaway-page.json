@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "{{ page.metafields.custom.header_banner_mobile.value }}",
-            "image": "{{ page.metafields.custom.header_banner.value }}",
+            "image_mobile": "shopify://shop_images/KANDYC_4.jpg",
+            "image": "shopify://shop_images/KANDYC_3.jpg",
             "banner_url": "",
             "heading": "",
             "short_description": "",
@@ -60,7 +60,7 @@
         "heading_7LBcV6": {
           "type": "heading",
           "settings": {
-            "title": "Airpod Max Headphones",
+            "title": "Airpod Pro 2 Headphones",
             "heading_tag": "h2"
           }
         },
@@ -68,7 +68,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>To celebrate SkinKandy coming to Tasmania in September, we are having a giveaway!! </p><p><strong>Join our Kandyclub</strong> for a chance to win!</p><p>Exclusive perks, special events, member-only offers and discounts.</p><p>To enter our giveaway, enter your details and join the <strong>KandyClub</strong>... thats it!</p><p>Once you have joined, you are automatically in the running to WIN!</p><p>Competition ends on <strong>1st of October 2025</strong>. The lucky winner will be contacted by the <strong>14th of October 2025.</strong></p><p><strong>GOOD LUCK</strong></p>"
+            "text": "<p>To celebrate SkinKandy coming to Bathurst in November, we are having a giveaway!!</p><p><strong>Join our Kandyclub</strong> for a chance to win! </p><p>Exclusive perks, special events, member-only offers and discounts.</p><p>To enter our giveaway, enter your details and join the <strong>KandyClub</strong>... thats it!</p><p>Once you have joined, you are automatically in the running to WIN!</p><p>Competition ends on 30th November2025. The lucky winner will be contacted by the 15th December 2025.</p><p>GOOD LUCK</p>"
           }
         },
         "button_9GJpYb": {
@@ -83,7 +83,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>Airpod Max Giveaway 2025 is exclusive to Tasmania residents only. This competition is only open to NEW KandyClub members. </strong><br/></p><p><a href=\"/pages/ta-awareness-terms-and-conditions\" target=\"_blank\" title=\"Tasmania Giveaway Terms and Conditions\">Terms & Conditions</a></p>"
+            "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>Airpod Pro 2 Headphones 2025 is exclusive to New South Wales residents only. This competition is only open to NEW KandyClub members.</strong></p><p><a href=\"/pages/bathurst-nsw-airpods-giveaway-ts\" target=\"_blank\" title=\"Bathurst NSW Airpods Giveaway T's\">Terms & Conditions</a></p>"
           }
         }
       },
