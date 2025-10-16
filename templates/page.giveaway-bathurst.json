@@ -80,6 +80,7 @@
         },
         "button_RCcgmV": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "link": "#globo-formbuilder-128101",
             "link_text": "Join Now",
@@ -152,7 +153,7 @@
     "header_banner_pDgLB3",
     "main",
     "rich_text_qq6MK6",
-    "rich_text_zywGRq",
-    "raw_code_GRhtW3"
+    "raw_code_GRhtW3",
+    "rich_text_zywGRq"
   ]
 }
