@@ -130,11 +130,12 @@
     "raw_code_GRhtW3": {
       "type": "raw-code",
       "custom_css": [
-        ".globo-form .submit {margin-top: 0;}"
+        ".globo-form .submit {margin-top: 0;}",
+        "h2 {text-align: center;}"
       ],
       "name": "Custom HTML Section",
       "settings": {
-        "custom_html": "<div class=\"globo-formbuilder\" data-id=\"MTI4MTAx\"></div>"
+        "custom_html": "<h2>Join Now!</h2>\n<div class=\"globo-formbuilder\" data-id=\"MTI4MTAx\"></div>"
       }
     }
   },
