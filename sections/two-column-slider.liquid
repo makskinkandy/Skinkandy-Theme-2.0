@@ -20,7 +20,7 @@
                                             <h2>{{ item.title }}</h2>
                                             {{ item.content }}
                                             <div class="button-wrapper">
-                                              {% if item.button_text %}
+                                              {% if item.button_text !=blank %}
                                                 <a href="{{ item.button_url }}" class="btn {{ item.button_color }}">{{ item.button_text }}</a>
                                             {% endif %}
                                             {% if item.popup_enable %}
