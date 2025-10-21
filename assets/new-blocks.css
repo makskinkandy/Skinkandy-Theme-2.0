@@ -1199,7 +1199,7 @@
     }
     .two-column-slider__item {
         display: flex;
-        background:#F1F1F1;
+        background:#F0F0F0;
         max-width: 54.6rem;
         margin-right: 1.25rem;
         cursor: pointer;
