@@ -916,9 +916,6 @@
 
 /* Two Columns */
 .two-columns {
-    .section-title {
-        text-transform: uppercase;
-    }
     .two-columns__blocks {
         display: flex;
         &.first-content--true {
