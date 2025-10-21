@@ -121,6 +121,7 @@
         "content_93C6jR",
         "image_7eJtgc"
       ],
+      "disabled": true,
       "name": "Two Columns",
       "settings": {
         "margin_disable": true,
@@ -166,6 +167,7 @@
         "image_YtNKc6",
         "image_i7drXz"
       ],
+      "disabled": true,
       "name": "Two Column with Slider",
       "settings": {
         "margin_disable": false,
