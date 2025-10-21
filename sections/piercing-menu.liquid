@@ -1,0 +1,116 @@
+<div class="piercing-menu margin-disable--{{ section.settings.margin_disable }} margin-enable--{{ section.settings.margin_enable }}">
+    <div class="piercing-menu__wrapper page-width">
+        {% if section.settings.title %}
+        <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+
+        {% if section.blocks.size > 1 %}
+          <div class="piercing-menu__nav-wrapper">
+            <div class="piercing-menu__nav">
+              {% for block in section.blocks %}
+                {% assign nav = block.settings.piercing_menu %}
+                <button class="btn piercing-menu__nav-item btn--outline content-{{ forloop.index }} {% if forloop.first %}active{% endif %}">{{ nav.title }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+              {% assign item = block.settings.piercing_menu %}
+              <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}"  data-slider data-show="3" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="2">
+                  {% for piercing in item.piercing_menu_item.value %}
+                      <div class="piercing-menu__item" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="{{ piercing.price_au }}" data-price-au="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
+                          <div class="piercing-menu__img-wrapper">
+                            <img src="{{ piercing.image | image_url }}" alt="{{ piercing.title }}">
+                            <div class="svg-wrapper">{{ 'search.svg' | inline_asset_content }}</div>
+                          </div>
+                          <h3>{{ piercing.title }}</h3>
+                          <div class="piercing-menu__content">
+                              <span>Minimum Age:</span>
+                              <span>{{ piercing.age }}</span>
+                          </div>
+                          <div class="piercing-menu__content jewellery-type">
+                              <span>Jewellery Type:</span>
+                              <span>{{ piercing.jewellery_type }}</span>
+                          </div>
+                          <div class="piercing-menu__content">
+                              <span>Downsizing:</span>
+                              <span>{{ piercing.downsizing }}</span>
+                          </div> 
+                          <div class="piercing-menu__content">
+                              <span>Fully Healed:</span>
+                              <span>{{ piercing.fully_healed }}</span>
+                          </div>
+                          <div class="piercing-menu__bottom">
+                            <a href="{{ settings.book_now_url }}" class="no-propagate btn btn--pink">Book Now</a>
+                            {% if block.settings.jewellery_url %}
+                              <a href="{{ block.settings.jewellery_url }}?placement={{ piercing.placement }}" class="no-propagate btn btn--outline">View Jewellery</a>
+                            {% endif %}
+                          </div>
+                      </div>
+                  {% endfor %}
+              </div>
+          {% endfor %}
+        {% endif %}
+    </div>
+</div>
+  
+    
+
+{% schema %}
+{
+  "name": "Piercing Menu",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "margin_disable",
+      "label": "Disable Top margins?"
+    },
+    {
+      "type": "checkbox",
+      "id": "margin_enable",
+      "label": "Enable Bottom margins?"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Piercing Menu",
+      "settings": [
+        {
+          "type": "metaobject",
+          "id": "piercing_menu",
+          "label": "Piercing Menu Item",
+          "metaobject_type": "piercing_menu_category"
+        },
+        {
+          "type": "url",
+          "id": "jewellery_url",
+          "label": "Jewellery URL"
+        },
+        {
+          "type": "text",
+          "id": "placement",
+          "label": "Placement"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Piercing Menu"
+    }
+  ]
+}
+{% endschema %}

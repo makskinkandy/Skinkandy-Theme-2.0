@@ -1,0 +1,205 @@
+<div class="two-columns page-width margin-disable--{{ section.settings.margin_disable }} margin-enable--{{ section.settings.margin_enable }}">
+  <div class="two-columns__wrapper column-layout--{{ section.settings.layout }}">
+    {% if section.settings.title %}
+      <h2 class="section-title {{ section.settings.header }}">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.description %}
+      {{ section.settings.description }}
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="two-columns__blocks first-content--{{ section.settings.first_content }}">
+        {% for block in section.blocks %}
+          {% if block.type == 'image' %}
+            <div class="two-columns__image">
+              <img src="{{  block.settings.image | image_url }}" alt="Block Image">
+            </div>
+          {% elsif block.type == 'content' %}
+            <div class="two-columns__content two-columns__item">
+              {{ block.settings.content }}
+              {% if block.settings.button_text and block.settings.button_url %}
+                <a href="{{ block.settings.button_url }}" class="btn {{ block.settings.button_color }}">{{ block.settings.button_text }}</a>
+              {% endif %}
+            </div>
+          {% elsif block.type == 'video' %}
+            <div class="two-columns__video">
+              <div class="yt-wrapper">
+                <div class="yt-frame-container">
+                  <iframe src="https://www.youtube.com/embed/{{ block.settings.video }}?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&playlist={{ block.settings.video }}&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loop></iframe>
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="two-columns__title" style="background-image: url('{{ block.settings.image | image_url }}')">
+              <h2 class="boldonse" style="color: {{ block.settings.text_color }}">{{ block.settings.large_title }}</h2>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Two Columns",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "margin_disable",
+      "label": "Disable Top margins?"
+    },
+    {
+      "type": "checkbox",
+      "id": "margin_enable",
+      "label": "Enable Bottom margins?"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "header",
+      "label": "Header",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "large",
+          "label": "Large Image"
+        },
+        {
+          "value": "fifty",
+          "label": "50/50"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "first_content",
+      "label": "Display Content First on Mobile"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Text Content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button url"
+        },
+        {
+          "type": "select",
+          "id": "button_color",
+          "label": "Button Color",
+          "default": "btn--pink",
+          "options": [
+              {
+              "value": "btn--pink",
+              "label": "Pink"
+              },
+              {
+              "value": "btn--cobalt",
+              "label": "Cobalt"
+              },
+              {
+              "value": "btn--black",
+              "label": "Black"
+              },
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "id": "video",
+          "label": "Video ID",
+          "info": "Use Youtube embed only"
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "Large Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "large_title",
+          "label": "Title" 
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Columns"
+    }
+  ]
+}
+{% endschema %}
