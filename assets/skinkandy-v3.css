@@ -122,7 +122,7 @@ p {
     text-decoration: none;
     position: relative;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1 !important;
     display: flex;
     align-items: center;
     height: 1.875rem;
