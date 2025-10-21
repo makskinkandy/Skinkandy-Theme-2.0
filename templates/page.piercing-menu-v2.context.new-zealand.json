@@ -27,6 +27,12 @@
           }
         }
       }
+    },
+    "piercing_menu_hatrCC": {
+      "settings": {
+        "margin_disable": false
+      },
+      "blocks": {}
     }
   }
 }
