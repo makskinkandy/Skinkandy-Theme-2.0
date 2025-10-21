@@ -87,7 +87,7 @@
       ],
       "name": "Two Column with Slider",
       "settings": {
-        "margin_disable": true,
+        "margin_disable": false,
         "margin_enable": false,
         "title": "Piercing methods",
         "description": "<p>Choose the piercing method that feels right for you. Always safe, sterile, and stylish.</p>"
