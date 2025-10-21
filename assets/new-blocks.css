@@ -2,6 +2,7 @@
 
 #MainContent {
     .shopify-section {
+        margin-top: 3.75rem;
         overflow: hidden;
         &:first-child {
             margin-top: 0;
