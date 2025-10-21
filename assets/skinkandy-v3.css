@@ -2216,3 +2216,7 @@ table {
     height: 100%;
     object-fit: contain;
 }
+
+.btn--jewellery {
+    display: none;
+}
