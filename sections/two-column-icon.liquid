@@ -1,0 +1,119 @@
+<div class="two-columns-icon margin-disable--{{ section.settings.margin_disable }} margin-enable--{{ section.settings.margin_enable }}">
+  <div class="two-columns-icon__wrapper page-width">
+    <div class="two-columns-icon__inner">
+      {% if section.settings.image != blank %}
+        <div class="two-columns-icon__left">
+          <img src="{{ section.settings.image | image_url }}" alt="Two Columns Image">
+        </div>
+      {% endif %}
+      <div class="two-columns-icon__right {% if section.settings.image == blank %}no-image{% endif %}" data-slider data-mobile="true" data-breakpoint="767" data-variable-width="mobile" data-dots="false">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% assign item = block.settings %}
+            <div class="two-columns-icon__item">
+              {% if item.icon != blank %}
+                <img src="{{ item.icon | image_url }}" alt="{{ item.title }} icon">
+              {% endif %}
+              {% if item.title != blank %}
+                <h4 style="color: {{ section.settings.text_color }}">{{ item.title }}</h4>
+              {% endif %}
+              <span>{{ item.content }}</span>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .two-columns-icon__inner {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }}
+  }
+
+  .two-columns-icon h4 {
+    color: {{ section.settings.text_color }}
+  }
+
+  {% if section.blocks.size == 4 %}
+    .two-columns-icon .two-columns-icon__inner .two-columns-icon__right.no-image {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  {% endif %}
+
+  @media screen  and (max-width: 990px) {
+    .two-columns-icon__inner {
+      background-color: transparent;
+    }
+    .two-columns-icon__left {
+      background-color: {{ section.settings.bg_color }};
+      color: {{ section.settings.text_color }}
+    }
+    .two-columns-icon__item {
+      background-color: {{ section.settings.bg_color }};
+    }
+  }
+</style>
+{% schema %}
+{
+    "name": "Two Columns Icon",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "margin_disable",
+            "label": "Disable Top margins?"
+        },
+        {
+            "type": "checkbox",
+            "id": "margin_enable",
+            "label": "Enable Bottom margins?"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color Text",
+          "default": "#FFFFFF"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Left Image"
+        }
+    ],
+    "blocks": [
+      {
+        "type": "content",
+        "name": "Column Icon",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Icon"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+            }
+        ]
+      },
+    ],
+    "presets": [
+      {
+        "name": "Two Columns Icon"
+      }
+    ]
+  }
+  {% endschema %}
