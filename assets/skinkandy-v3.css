@@ -39,6 +39,12 @@ body {
     }
 }
 
+.page-width {
+    @media screen and (max-width: 990px) {
+        max-width: 100%;
+    }
+}
+
 *:focus-visible {
     outline: 0;
     outline-offset: 0;
