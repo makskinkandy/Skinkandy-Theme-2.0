@@ -11,10 +11,92 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "breadcrumbs": false,
         "heading": true,
         "content": false
+      }
+    },
+    "two_column_icon_UqhWmh": {
+      "type": "two-column-icon",
+      "blocks": {
+        "content_DPYCrp": {
+          "type": "content",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_100_x_100_px.png",
+            "title": "Global Leaders in Body Piercing",
+            "content": "70+ piercings offered. 90+ stores. 2 Countries. One standard: Excellence."
+          }
+        },
+        "content_eweVYY": {
+          "type": "content",
+          "settings": {
+            "icon": "shopify://shop_images/certified.png",
+            "title": "Highly Trained Piercers",
+            "content": "Over 10,000 hours of piercing training last year. We don’t just pierce — we perfect it."
+          }
+        },
+        "content_aqrYRE": {
+          "type": "content",
+          "settings": {
+            "icon": "shopify://shop_images/jewellery.png",
+            "title": "Premium Jewellery for Safer Piercings",
+            "content": "Your jewellery matters. That’s why we only offer high-quality materials to ensure a safe and stylish piercing experience."
+          }
+        },
+        "content_QhhEjT": {
+          "type": "content",
+          "settings": {
+            "icon": "shopify://shop_images/trust.png",
+            "title": "Strict Hygiene & Safety",
+            "content": "100% of our piercers are certified in infection control. Safe. Sterile. Always certified. Every single time."
+          }
+        }
+      },
+      "block_order": [
+        "content_DPYCrp",
+        "content_eweVYY",
+        "content_aqrYRE",
+        "content_QhhEjT"
+      ],
+      "name": "Two Columns Icon",
+      "settings": {
+        "margin_disable": true,
+        "margin_enable": false,
+        "bg_color": "#f0f0f0",
+        "text_color": "#000000"
+      }
+    },
+    "rich_text_ADiqiJ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_mMCKf3": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_aRPNGx": {
+          "type": "button",
+          "settings": {
+            "link": "https://bookings.skinkandy.com",
+            "link_text": "Book Now",
+            "css_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_mMCKf3",
+        "button_aRPNGx"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": false
       }
     },
     "two_columns_wM3Qht": {
@@ -459,6 +541,8 @@
   },
   "order": [
     "main",
+    "two_column_icon_UqhWmh",
+    "rich_text_ADiqiJ",
     "two_columns_wM3Qht",
     "two_column_slider_48BWmU",
     "two_columns_4hdLU3",
