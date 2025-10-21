@@ -179,8 +179,10 @@
       {% if template == "collection" or template == "product" %}defer{% endif %}
     ></script>
 
+    {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-
+    
 
     {% include 'page-map' %}
 
