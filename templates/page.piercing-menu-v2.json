@@ -42,7 +42,7 @@
       ],
       "name": "Two Columns",
       "settings": {
-        "margin_disable": false,
+        "margin_disable": true,
         "margin_enable": true,
         "title": "",
         "header": "h2",
