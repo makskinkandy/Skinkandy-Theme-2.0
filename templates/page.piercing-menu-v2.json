@@ -70,6 +70,13 @@
     "rich_text_ADiqiJ": {
       "type": "rich-text",
       "blocks": {
+        "text_PLQjHY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Same day booking?<a href=\"tel:1300129991\">Call us 1300 129 991</a></p>"
+          }
+        },
         "button_aRPNGx": {
           "type": "button",
           "settings": {
@@ -80,6 +87,7 @@
         }
       },
       "block_order": [
+        "text_PLQjHY",
         "button_aRPNGx"
       ],
       "name": "Rich text",
