@@ -12,5 +12,21 @@
   "context": {
     "market": "new-zealand"
   },
-  "sections": {}
+  "sections": {
+    "rich_text_ADiqiJ": {
+      "settings": {},
+      "blocks": {
+        "text_PLQjHY": {
+          "settings": {
+            "text": "<p>Same day booking?<a href=\"tel:0800161005\">Call us 0800 161 005</a></p>"
+          }
+        },
+        "button_aRPNGx": {
+          "settings": {
+            "link": "https://bookings.skinkandy.com/?locale=en-nz"
+          }
+        }
+      }
+    }
+  }
 }
