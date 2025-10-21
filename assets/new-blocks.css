@@ -1387,7 +1387,7 @@
     }
     .two-columns-icon__item {
         text-align: center;
-        font-size: 0.875rem;
+        font-size: 1rem;
         align-items: center;
         flex-direction: column;
         display: flex;
