@@ -71,13 +71,6 @@
     "rich_text_ADiqiJ": {
       "type": "rich-text",
       "blocks": {
-        "text_mMCKf3": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
         "button_aRPNGx": {
           "type": "button",
           "settings": {
@@ -88,7 +81,6 @@
         }
       },
       "block_order": [
-        "text_mMCKf3",
         "button_aRPNGx"
       ],
       "name": "Rich text",
