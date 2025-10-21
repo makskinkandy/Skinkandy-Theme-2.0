@@ -934,7 +934,6 @@
             }
         }
         img {
-            max-width: 63rem;
             width: 100%;
             align-self: start;
             @media screen and (max-width: 990px) {
