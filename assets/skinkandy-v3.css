@@ -128,7 +128,6 @@ p {
     height: 1.875rem;
     max-width: fit-content;
     font-weight: 500;
-    font-family: "neulis-sans", sans-serif;
     transition: unset !important;
     position: relative;
     overflow: hidden;
