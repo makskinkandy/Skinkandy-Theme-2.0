@@ -117,7 +117,7 @@ p {
 .btn,
 .button {
     font-size: 1rem;
-    padding: .4rem 1.25rem;
+    padding: .4rem 1.25rem !important;
     border-radius: 4rem;
     text-decoration: none;
     position: relative;
