@@ -129,11 +129,11 @@ p {
     max-width: fit-content;
     font-weight: 500;
     font-family: "neulis-sans", sans-serif;
-    transition: 0.3s background ease;
+    transition: unset !important;
     position: relative;
     overflow: hidden;
     &:hover {
-        transition: 0.3s background ease;
+        transition: unset !important;
     }
     &:after {
         content:"";
