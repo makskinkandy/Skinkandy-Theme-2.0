@@ -1230,6 +1230,7 @@
         flex-direction: column;
         padding: 0.5rem;
         margin-left: 0.75rem;
+        padding-top: 1.25rem;
         @media screen and (max-width: 860px) {
             width: 100%;
             margin-left: 0;
