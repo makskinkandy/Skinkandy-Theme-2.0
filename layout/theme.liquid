@@ -179,241 +179,6 @@
       {% if template == "collection" or template == "product" %}defer{% endif %}
     ></script>
 
-    {% if template.suffix == 'piercing-menu-v2' %}
-      {{ 'skinkandy-v3.css' | asset_url | stylesheet_tag }}
-      {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
-      {{ 'new-blocks.css' | asset_url | stylesheet_tag }}
-
-      <script src="{{ 'skinkandy-v3.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
-  
-      <script>
-        (() => {
-          const ITEM_SELECTOR = '.piercing-menu__item';
-        
-          function createModal() {
-            let el = document.querySelector('#pm-modal');
-            if (el) return el;
-        
-            el = document.createElement('div');
-            el.id = 'pm-modal';
-            el.className = 'pm-modal';
-            el.innerHTML = `
-              <div class="pm-modal__overlay" data-pm-close></div>
-              <div class="pm-modal__dialog" role="dialog" aria-modal="true">
-                <button class="pm-modal__close" type="button" aria-label="Close" data-pm-close>&times;</button>
-                <div class="pm-modal__layout">
-                  <div class="pm-modal__media"><img alt="" loading="lazy" decoding="async"></div>
-                  <div class="pm-modal__content">
-                    <h2 class="pm-modal__title"></h2>
-                    <h3 class="pm-modal__price"></h3>
-                    <div class="pm-modal__body"></div>
-                    <div class="pm-modal__btn-wraper">
-                      <a href="{{ settings.book_now_url }}" class="btn btn--pink" target="_blank">Book Now</a>
-                      <a href="{{ settings.jewellery_options }}" class="btn btn--black btn--jewellery">Jewellery Options</a>
-                    </div>
-                  </div>
-                </div>
-              </div>`;
-            document.body.appendChild(el);
-        
-            // Close handlers
-            el.addEventListener('click', (e) => {
-              if (e.target.matches('[data-pm-close]')) closeModal(el);
-            });
-            document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape' && el.classList.contains('is-open')) closeModal(el);
-            });
-        
-            return el;
-          }
-        
-          function openModal(el) {
-            el.classList.add('is-open');
-            document.documentElement.classList.add('pm-lock');
-            el.querySelector('.pm-modal__close')?.focus({ preventScroll: true });
-          }
-          function closeModal(el) {
-            el.classList.remove('is-open');
-            document.documentElement.classList.remove('pm-lock');
-          }
-        
-          // Decode HTML-escaped attribute content once
-          function maybeDecodeEntities(str) {
-            if (!str) return '';
-            if (str.includes('&lt;') || str.includes('&amp;lt;')) {
-              const ta = document.createElement('textarea');
-              ta.innerHTML = str;
-              return ta.value;
-            }
-            return str;
-          }
-        
-          // Remove Shopify's metafield wrapper if present
-          function stripMetafieldWrapper(html) {
-            const tpl = document.createElement('template');
-            tpl.innerHTML = html.trim();
-            const first = tpl.content.firstElementChild;
-            if (first && first.classList.contains('metafield-rich_text_field')) {
-              return first.innerHTML;
-            }
-            return html;
-          }
-        
-          const modal   = createModal();
-          const bodyEl  = modal.querySelector('.pm-modal__body');
-          const mediaEl = modal.querySelector('.pm-modal__media');
-          const imgEl   = mediaEl.querySelector('img');
-          const titleEl = modal.querySelector('.pm-modal__title');
-          const priceEl = modal.querySelector('.pm-modal__price');
-          const jewellery = modal.querySelector('.btn--jewellery');
-        
-          document.addEventListener('click', (e) => {
-            const item = e.target.closest(ITEM_SELECTOR);
-            if (!item) return;
-        
-            // 1) Title
-            const title =
-              item.getAttribute('data-title') ||
-              item.querySelector('.piercing-menu__title')?.textContent?.trim() ||
-              '';
-            if (title) {
-              titleEl.textContent = title;
-              titleEl.style.display = '';
-            } else {
-              titleEl.textContent = '';
-              titleEl.style.display = 'none';
-            }
-        
-            // 2) Price (exact text: "From AUD $" + data-price-au)
-            const priceAu = item.getAttribute('data-price-au');
-            if (priceAu && String(priceAu).trim() !== '') {
-              priceEl.textContent = `From AUD $${priceAu}`;
-              priceEl.style.display = '';
-            } else {
-              priceEl.textContent = '';
-              priceEl.style.display = 'none';
-            }
-        
-            // 3) Body content (decoded + unwrapped)
-            const raw = item.getAttribute('data-content') || '';
-            const decoded = maybeDecodeEntities(raw);
-            const cleaned = stripMetafieldWrapper(decoded);
-            const placement = item.getAttribute('data-placement') || '';
-            const link = item.getAttribute('data-link') || '';
-            bodyEl.innerHTML = cleaned;
-        
-            // 4) Image (prefer data-image; fallback to item's <img>)
-            let src = item.getAttribute('data-image') || item.querySelector('img')?.getAttribute('src') || '';
-            let alt = item.querySelector('img')?.getAttribute('alt') || title || '';
-            if (src) {
-              imgEl.src = src;
-              imgEl.alt = alt;
-              mediaEl.style.display = '';
-            } else {
-              mediaEl.style.display = 'none';
-              imgEl.removeAttribute('src');
-              imgEl.removeAttribute('alt');
-            }
-  
-            jewellery.href = link + "?placement=" + placement;
-            
-            openModal(modal);
-          });
-        })();
-      </script>
-
-      <script>
-        (function () {
-          // Return HTML string without stripping tags.
-          // - If the attribute already has real tags ("<p>..</p>"), use as-is.
-          // - If it's entity-escaped ("&lt;p&gt;..&lt;/p&gt;"), decode once.
-          function normalizeHTML(raw) {
-            if (!raw) return '';
-            const hasEntities = /&lt;|&gt;|&amp;|&quot;|&#39;/.test(raw);
-            if (hasEntities) {
-              const d = document.createElement('div');
-              d.innerHTML = raw;               // decode entities once
-              return d.textContent || '';      // now "<p>..</p>" as plain text
-            }
-            return raw;                        // already real HTML
-          }
-        
-          function getOrCreatePopup(slider) {
-            let popup = slider.querySelector('.tc-popup');
-            if (!popup) {
-              popup = document.createElement('div');
-              popup.className = 'tc-popup';
-              popup.setAttribute('aria-hidden', 'true');
-              popup.innerHTML = [
-                '<div class="tc-popup__overlay" data-close></div>',
-                '<div class="tc-popup__dialog" role="dialog" aria-modal="true">',
-                  '<button class="tc-popup__close" type="button" data-close>&times;</button>',
-                  '<div class="tc-popup__content"></div>',
-                '</div>'
-              ].join('');
-              slider.appendChild(popup);
-            }
-            return popup;
-          }
-        
-          // OPEN (capture to beat other handlers)
-          document.addEventListener('click', function (e) {
-            const btn = e.target.closest('.open-popup');
-            if (!btn) return;
-            e.preventDefault();
-        
-            const slide  = btn.closest('.two-column-slider__item');
-            const slider = btn.closest('.two-column-slider') || (slide && slide.closest('.two-column-slider'));
-            if (!slider || !slide) return;
-        
-            // Support both attributes
-            const raw =
-              slide.getAttribute('data-popup-content') ??
-              slide.getAttribute('data-content-popup') ??
-              '';
-        
-            const html = normalizeHTML(raw);
-            const popup = getOrCreatePopup(slider);
-            const content = popup.querySelector('.tc-popup__content');
-        
-            // Insert as HTML (not text) — this preserves tags
-            content.innerHTML = html;
-        
-            popup.classList.add('is-open');
-            popup.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-          }, true);
-        
-          // CLOSE (overlay/X)
-          document.addEventListener('click', function (e) {
-            const closer = e.target.closest('[data-close]');
-            if (!closer) return;
-            const slider = closer.closest('.two-column-slider');
-            const popup  = slider && slider.querySelector('.tc-popup');
-            if (!popup) return;
-        
-            popup.classList.remove('is-open');
-            popup.setAttribute('aria-hidden', 'true');
-            popup.querySelector('.tc-popup__content').innerHTML = '';
-            document.body.style.overflow = '';
-          }, true);
-        
-          // ESC to close
-          document.addEventListener('keydown', function (e) {
-            if (e.key !== 'Escape') return;
-            document.querySelectorAll('.two-column-slider .tc-popup.is-open').forEach(popup => {
-              popup.classList.remove('is-open');
-              popup.setAttribute('aria-hidden', 'true');
-              popup.querySelector('.tc-popup__content').innerHTML = '';
-            });
-            document.body.style.overflow = '';
-          });
-        })();
-      </script>
-
-    {% endif %}
-
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
 
@@ -524,6 +289,242 @@
         h_options: 'j3-piercing'
       };
     </script>
+  {% endif %}
+
+
+  {% if template.suffix == 'piercing-menu-v2' %}
+    {{ 'skinkandy-v3.css' | asset_url | stylesheet_tag }}
+    {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
+    {{ 'new-blocks.css' | asset_url | stylesheet_tag }}
+
+    <script src="{{ 'skinkandy-v3.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
+
+    <script>
+      (() => {
+        const ITEM_SELECTOR = '.piercing-menu__item';
+      
+        function createModal() {
+          let el = document.querySelector('#pm-modal');
+          if (el) return el;
+      
+          el = document.createElement('div');
+          el.id = 'pm-modal';
+          el.className = 'pm-modal';
+          el.innerHTML = `
+            <div class="pm-modal__overlay" data-pm-close></div>
+            <div class="pm-modal__dialog" role="dialog" aria-modal="true">
+              <button class="pm-modal__close" type="button" aria-label="Close" data-pm-close>&times;</button>
+              <div class="pm-modal__layout">
+                <div class="pm-modal__media"><img alt="" loading="lazy" decoding="async"></div>
+                <div class="pm-modal__content">
+                  <h2 class="pm-modal__title"></h2>
+                  <h3 class="pm-modal__price"></h3>
+                  <div class="pm-modal__body"></div>
+                  <div class="pm-modal__btn-wraper">
+                    <a href="{{ settings.book_now_url }}" class="btn btn--pink" target="_blank">Book Now</a>
+                    <a href="{{ settings.jewellery_options }}" class="btn btn--black btn--jewellery">Jewellery Options</a>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+          document.body.appendChild(el);
+      
+          // Close handlers
+          el.addEventListener('click', (e) => {
+            if (e.target.matches('[data-pm-close]')) closeModal(el);
+          });
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && el.classList.contains('is-open')) closeModal(el);
+          });
+      
+          return el;
+        }
+      
+        function openModal(el) {
+          el.classList.add('is-open');
+          document.documentElement.classList.add('pm-lock');
+          el.querySelector('.pm-modal__close')?.focus({ preventScroll: true });
+        }
+        function closeModal(el) {
+          el.classList.remove('is-open');
+          document.documentElement.classList.remove('pm-lock');
+        }
+      
+        // Decode HTML-escaped attribute content once
+        function maybeDecodeEntities(str) {
+          if (!str) return '';
+          if (str.includes('&lt;') || str.includes('&amp;lt;')) {
+            const ta = document.createElement('textarea');
+            ta.innerHTML = str;
+            return ta.value;
+          }
+          return str;
+        }
+      
+        // Remove Shopify's metafield wrapper if present
+        function stripMetafieldWrapper(html) {
+          const tpl = document.createElement('template');
+          tpl.innerHTML = html.trim();
+          const first = tpl.content.firstElementChild;
+          if (first && first.classList.contains('metafield-rich_text_field')) {
+            return first.innerHTML;
+          }
+          return html;
+        }
+      
+        const modal   = createModal();
+        const bodyEl  = modal.querySelector('.pm-modal__body');
+        const mediaEl = modal.querySelector('.pm-modal__media');
+        const imgEl   = mediaEl.querySelector('img');
+        const titleEl = modal.querySelector('.pm-modal__title');
+        const priceEl = modal.querySelector('.pm-modal__price');
+        const jewellery = modal.querySelector('.btn--jewellery');
+      
+        document.addEventListener('click', (e) => {
+          const item = e.target.closest(ITEM_SELECTOR);
+          if (!item) return;
+      
+          // 1) Title
+          const title =
+            item.getAttribute('data-title') ||
+            item.querySelector('.piercing-menu__title')?.textContent?.trim() ||
+            '';
+          if (title) {
+            titleEl.textContent = title;
+            titleEl.style.display = '';
+          } else {
+            titleEl.textContent = '';
+            titleEl.style.display = 'none';
+          }
+      
+          // 2) Price (exact text: "From AUD $" + data-price-au)
+          const priceAu = item.getAttribute('data-price-au');
+          if (priceAu && String(priceAu).trim() !== '') {
+            priceEl.textContent = `From AUD $${priceAu}`;
+            priceEl.style.display = '';
+          } else {
+            priceEl.textContent = '';
+            priceEl.style.display = 'none';
+          }
+      
+          // 3) Body content (decoded + unwrapped)
+          const raw = item.getAttribute('data-content') || '';
+          const decoded = maybeDecodeEntities(raw);
+          const cleaned = stripMetafieldWrapper(decoded);
+          const placement = item.getAttribute('data-placement') || '';
+          const link = item.getAttribute('data-link') || '';
+          bodyEl.innerHTML = cleaned;
+      
+          // 4) Image (prefer data-image; fallback to item's <img>)
+          let src = item.getAttribute('data-image') || item.querySelector('img')?.getAttribute('src') || '';
+          let alt = item.querySelector('img')?.getAttribute('alt') || title || '';
+          if (src) {
+            imgEl.src = src;
+            imgEl.alt = alt;
+            mediaEl.style.display = '';
+          } else {
+            mediaEl.style.display = 'none';
+            imgEl.removeAttribute('src');
+            imgEl.removeAttribute('alt');
+          }
+
+          jewellery.href = link + "?placement=" + placement;
+          
+          openModal(modal);
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        // Return HTML string without stripping tags.
+        // - If the attribute already has real tags ("<p>..</p>"), use as-is.
+        // - If it's entity-escaped ("&lt;p&gt;..&lt;/p&gt;"), decode once.
+        function normalizeHTML(raw) {
+          if (!raw) return '';
+          const hasEntities = /&lt;|&gt;|&amp;|&quot;|&#39;/.test(raw);
+          if (hasEntities) {
+            const d = document.createElement('div');
+            d.innerHTML = raw;               // decode entities once
+            return d.textContent || '';      // now "<p>..</p>" as plain text
+          }
+          return raw;                        // already real HTML
+        }
+      
+        function getOrCreatePopup(slider) {
+          let popup = slider.querySelector('.tc-popup');
+          if (!popup) {
+            popup = document.createElement('div');
+            popup.className = 'tc-popup';
+            popup.setAttribute('aria-hidden', 'true');
+            popup.innerHTML = [
+              '<div class="tc-popup__overlay" data-close></div>',
+              '<div class="tc-popup__dialog" role="dialog" aria-modal="true">',
+                '<button class="tc-popup__close" type="button" data-close>&times;</button>',
+                '<div class="tc-popup__content"></div>',
+              '</div>'
+            ].join('');
+            slider.appendChild(popup);
+          }
+          return popup;
+        }
+      
+        // OPEN (capture to beat other handlers)
+        document.addEventListener('click', function (e) {
+          const btn = e.target.closest('.open-popup');
+          if (!btn) return;
+          e.preventDefault();
+      
+          const slide  = btn.closest('.two-column-slider__item');
+          const slider = btn.closest('.two-column-slider') || (slide && slide.closest('.two-column-slider'));
+          if (!slider || !slide) return;
+      
+          // Support both attributes
+          const raw =
+            slide.getAttribute('data-popup-content') ??
+            slide.getAttribute('data-content-popup') ??
+            '';
+      
+          const html = normalizeHTML(raw);
+          const popup = getOrCreatePopup(slider);
+          const content = popup.querySelector('.tc-popup__content');
+      
+          // Insert as HTML (not text) — this preserves tags
+          content.innerHTML = html;
+      
+          popup.classList.add('is-open');
+          popup.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }, true);
+      
+        // CLOSE (overlay/X)
+        document.addEventListener('click', function (e) {
+          const closer = e.target.closest('[data-close]');
+          if (!closer) return;
+          const slider = closer.closest('.two-column-slider');
+          const popup  = slider && slider.querySelector('.tc-popup');
+          if (!popup) return;
+      
+          popup.classList.remove('is-open');
+          popup.setAttribute('aria-hidden', 'true');
+          popup.querySelector('.tc-popup__content').innerHTML = '';
+          document.body.style.overflow = '';
+        }, true);
+      
+        // ESC to close
+        document.addEventListener('keydown', function (e) {
+          if (e.key !== 'Escape') return;
+          document.querySelectorAll('.two-column-slider .tc-popup.is-open').forEach(popup => {
+            popup.classList.remove('is-open');
+            popup.setAttribute('aria-hidden', 'true');
+            popup.querySelector('.tc-popup__content').innerHTML = '';
+          });
+          document.body.style.overflow = '';
+        });
+      })();
+    </script>
+
   {% endif %}
 </head>
 
