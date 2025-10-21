@@ -1236,16 +1236,6 @@
             padding: 1.25rem;
         }
     }
-    .background-override {
-        position: absolute;
-        width: 10000000%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: #f0f0f0;
-        display: block !important;
-        z-index: 1;
-    }
 
 
     .vs-dots {
