@@ -155,12 +155,12 @@ p {
 }
 
 .btn--black {
-    background: #000;
-    color: #FFF;
+    background: #000 !important;
+    color: #FFF !important;
     &:hover {
-        background: #FFF;
+        background: #FFF !important;
         color: #000 !important;
-        border: solid 1px #000;
+        border: solid 1px #000 !important;
     }
 }
 
@@ -212,8 +212,8 @@ p {
 }
 
 .btn--outline {
-    border: solid 1px #000;
-    color: #000;
+    border: solid 1px #000 !important;
+    color: #000 !important;
     background: transparent;
     .svg-wrapper {
         height: 20px;
@@ -222,16 +222,16 @@ p {
     }
     &.active,
     &:hover {
-        background: #000;
+        background: #000 !important;
         border: 0;
         color: #FFF !important;
     }
 }
 
 .btn--outline-white {
-    border: solid 1px #FFF;
-    color: #FFF;
-    background: transparent;
+    border: solid 1px #FFF !important;
+    color: #FFF !important;
+    background: transparent !important;
     .svg-wrapper {
         height: 20px;
         width: 20px;
@@ -239,7 +239,7 @@ p {
     }
     &.active,
     &:hover {
-        background: #FFF;
+        background: #FFF !important;
         color: #000 !important;
     }
 }
@@ -256,10 +256,10 @@ p {
 
 .btn--pink,
 .button--primary {
-    background: var(--pink);
-    color: #FFF;
+    background: var(--pink) !important;
+    color: #FFF !important;
     &:hover {
-        background: #000;
+        background: #000 !important;
         color: #FFF !important;
     }
 }
