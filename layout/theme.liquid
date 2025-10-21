@@ -180,10 +180,13 @@
     ></script>
 
     {% if template.suffix == 'piercing-menu-v2' %}
-      <link rel="stylesheet" href="{{ 'new-blocks.css' | asset_url }}">
+      {{ 'skinkandy-v3.css' | asset_url | stylesheet_tag }}
+
+      {{ 'new-blocks.css' | asset_url | stylesheet_tag }}
+
       {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
-
+      <script src="{{ 'skinkandy-v3.js' | asset_url }}" defer="defer"></script>
 
       <script>
         (() => {
@@ -409,7 +412,7 @@
           });
         })();
       </script>
-      
+
     {% endif %}
 
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
