@@ -1224,6 +1224,10 @@
         .btn {
             margin-bottom: 1rem;
         }
+        
+        p {
+            margin-bottom: 1.25rem;
+        }
     }
     .two-column-slider__item-content {
         display: flex;
