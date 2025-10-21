@@ -82,7 +82,7 @@
       <link href="{{ 'league-gothic.css' | asset_url }}" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ 'blocks.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'new-blocks.css' | asset_url }}">
+    
     {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'free-gift.css' | asset_url | stylesheet_tag }}
     
@@ -179,10 +179,14 @@
       {% if template == "collection" or template == "product" %}defer{% endif %}
     ></script>
 
-    {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
+    {% if template.suffix == 'piercing-menu-v2' %}
+      <link rel="stylesheet" href="{{ 'new-blocks.css' | asset_url }}">
+      {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
+    {% endif %}
+
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-    
+
 
     {% include 'page-map' %}
 
