@@ -297,6 +297,8 @@
     {{ 'vanilla-slider.css' | asset_url | stylesheet_tag }}
     {{ 'new-blocks.css' | asset_url | stylesheet_tag }}
 
+    {% assign website_path = request.locale.root_url | remove_first: '/' %}
+
     <script src="{{ 'skinkandy-v3.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'vanilla-slider.js' | asset_url }}" defer></script>
 
@@ -398,10 +400,20 @@
             titleEl.style.display = 'none';
           }
       
-          // 2) Price (exact text: "From AUD $" + data-price-au)
+          const websitePath = {{ website_path | json }};
+
+          // Existing attributes
           const priceAu = item.getAttribute('data-price-au');
-          if (priceAu && String(priceAu).trim() !== '') {
-            priceEl.textContent = `From AUD $${priceAu}`;
+          const priceNZ = item.getAttribute('data-price-nz');
+        
+          // Decide which price/currency label to use
+          const isNZ = String(websitePath).toLowerCase() === 'en-nz';
+          const chosenPrice = isNZ ? priceNZ : priceAu;
+          const label = isNZ ? 'From NZD $' : 'From AUD $'; // AU label kept exact
+        
+          // Render or hide
+          if (chosenPrice && String(chosenPrice).trim() !== '') {
+            priceEl.textContent = `${label}${chosenPrice}`;
             priceEl.style.display = '';
           } else {
             priceEl.textContent = '';
