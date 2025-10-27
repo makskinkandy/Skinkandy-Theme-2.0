@@ -88,9 +88,9 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Homepage_Banner_Desktop_Halloween_-_V2Artboard_1_copy_e5a7d9ea-dc2a-421f-af23-cb35c2f442cb.jpg",
-            "image": "shopify://shop_images/Homepage_Banner_Desktop_Halloween_-_V21_copy_2_f439b71f-085e-4610-8d5a-be874de39e40.jpg",
-            "banner_url": "shopify://collections/halloween-collection",
+            "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_-_Fashion_to_Pierce_with.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_Desktop_-_Fashion_to_Pierce_with.jpg",
+            "banner_url": "https://bookings.skinkandy.com",
             "heading": "",
             "short_description": "",
             "button_text": "",
@@ -149,8 +149,8 @@
       "custom_css": [],
       "name": "Inline Buttons",
       "settings": {
-        "button_1_text": "SHOP NOW",
-        "button_1_url": "shopify://collections/halloween-collection",
+        "button_1_text": "NEW IN",
+        "button_1_url": "shopify://collections/new-in",
         "button_2_text": "BOOK NOW",
         "button_2_url": "https://bookings.skinkandy.com",
         "text_color": "#ffffff",
