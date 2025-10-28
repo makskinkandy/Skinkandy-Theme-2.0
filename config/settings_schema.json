@@ -1879,5 +1879,20 @@
         "label": "Variant SKU's separated by comma"
       }
     ]
-  }
+  },
+  {
+    "name": "Piercing Menu Popup",
+    "settings": [
+      {
+        "type": "url",
+        "id": "book_now_url",
+        "label": "Book Now URL"
+      },
+      {
+        "type": "url",
+        "id": "jewellery_options",
+        "label": "Jewellery Options URL"
+      }
+    ]
+  },
 ]
