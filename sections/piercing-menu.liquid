@@ -20,36 +20,34 @@
               {% assign item = block.settings.piercing_menu %}
               <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}"  data-slider data-show="3" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="1">
                   {% for piercing in item.piercing_menu_item.value %}
-                      <div class="piercing-menu__item" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="{{ piercing.price_au }}" data-price-au="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
-                          <div class="piercing-menu__img-wrapper">
-                            <img src="{{ piercing.image | image_url }}" alt="{{ piercing.title }}">
-                            <div class="svg-wrapper">
-                              <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.5696 13.346L10.5883 9.3648C11.3595 8.41222 11.8238 7.2018 11.8238 5.88347C11.8238 2.82797 9.33763 0.341797 6.28213 0.341797C3.22663 0.341797 0.740479 2.82795 0.740479 5.88345C0.740479 8.93895 3.22665 11.4251 6.28216 11.4251C7.60048 11.4251 8.81091 10.9608 9.76348 10.1896L13.7447 14.1709C13.8585 14.2846 14.0078 14.3418 14.1572 14.3418C14.3065 14.3418 14.4558 14.2846 14.5696 14.1709C14.7977 13.9428 14.7977 13.5741 14.5696 13.346ZM6.28216 10.2584C3.86948 10.2584 1.90715 8.29612 1.90715 5.88345C1.90715 3.47077 3.86948 1.50845 6.28216 1.50845C8.69483 1.50845 10.6572 3.47077 10.6572 5.88345C10.6572 8.29612 8.6948 10.2584 6.28216 10.2584Z" fill="white"></path>
-                                </svg>
-                            </div>
-                          </div>
-                          <h3>{{ piercing.title }}</h3>
-                          <div class="piercing-menu__content">
-                              <span>Minimum Age:</span>
-                              <span>{{ piercing.age }}</span>
-                          </div>
-                          <div class="piercing-menu__content jewellery-type">
-                              <span>Jewellery Type:</span>
-                              <span>{{ piercing.jewellery_type }}</span>
-                          </div>
-                          <div class="piercing-menu__content">
-                              <span>Downsizing:</span>
-                              <span>{{ piercing.downsizing }}</span>
-                          </div> 
-                          <div class="piercing-menu__content">
-                              <span>Fully Healed:</span>
-                              <span>{{ piercing.fully_healed }}</span>
-                          </div>
-                          <div class="piercing-menu__bottom">
-                            <a href="{{ settings.book_now_url }}" class="no-propagate btn btn--pink {{ piercing.tag_class }}">Book Now</a>
-                          </div>
+                    <div class="piercing-menu__item">
+                      <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
+                        <div class="piercing-menu__img-wrapper">
+                          <img src="{{ piercing.image | image_url }}" alt="{{ piercing.title }}">
+                          <div class="svg-wrapper">{{ 'search.svg' | inline_asset_content }}</div>
+                        </div>
+                        <h3>{{ piercing.title }}</h3>
+                        <div class="piercing-menu__content">
+                            <span>Minimum Age:</span>
+                            <span>{{ piercing.age }}</span>
+                        </div>
+                        <div class="piercing-menu__content jewellery-type">
+                            <span>Jewellery Type:</span>
+                            <span>{{ piercing.jewellery_type }}</span>
+                        </div>
+                        <div class="piercing-menu__content">
+                            <span>Downsizing:</span>
+                            <span>{{ piercing.downsizing }}</span>
+                        </div> 
+                        <div class="piercing-menu__content">
+                            <span>Fully Healed:</span>
+                            <span>{{ piercing.fully_healed }}</span>
+                        </div>
                       </div>
+                      <div class="piercing-menu__bottom">
+                        <a href="{{ settings.book_now_url }}" class="btn btn--pink {{ piercing.tag_class }}">Book Now</a>
+                      </div>
+                  </div>
                   {% endfor %}
               </div>
           {% endfor %}
