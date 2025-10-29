@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const piercingTags = [
+    "dahlia_book",
     "nipple_book",
     "oconch_book",
     "vhelix_book",
@@ -106,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       getEvent: (el) => "w_select_2for80_book"
     },
     {
-      selector: ".piercing-menu-book .btn--last",
+      selector: ".piercing-menu-book",
       getEvent: (el) => "w_select_pierce_menu_book"
     },
     {
