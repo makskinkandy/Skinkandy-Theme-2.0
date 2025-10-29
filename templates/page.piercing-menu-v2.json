@@ -457,7 +457,7 @@
             "title": "Anatomy Check",
             "content": "<p>Every body is unique. Our free in-store anatomy check ensures your piercing placement suits your anatomy, heals well, and looks perfect for you.</p>",
             "button_text": "BOOK now",
-            "button_url": "",
+            "button_url": "https://bookings.skinkandy.com/",
             "button_color": "btn--pink",
             "popup_enable": false,
             "popup_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
@@ -470,7 +470,7 @@
             "title": "Downsizing",
             "content": "<p>A key step in healing. Once swelling has settled, we’ll replace your jewellery with a shorter, sterile piece to keep your piercing happy and healthy.</p>",
             "button_text": "BOOK NOW",
-            "button_url": "",
+            "button_url": "https://bookings.skinkandy.com/",
             "button_color": "btn--pink",
             "popup_enable": false,
             "popup_content": ""
@@ -483,7 +483,7 @@
             "title": "Double Operator",
             "content": "<p>Perfect for little ones or quick ear piercings. tTwo piercers, both lobes done at once. Fast, safe, and stress-free.</p>",
             "button_text": "BOOK NOW",
-            "button_url": "",
+            "button_url": "https://bookings.skinkandy.com/",
             "button_color": "btn--pink",
             "popup_enable": false,
             "popup_content": ""
@@ -496,7 +496,7 @@
             "title": "Advanced Piercings",
             "content": "<p>Ready to take it up a level? Our expert piercers are trained in advanced and below-the-belt piercings, always safe, sterile, and professional.</p>",
             "button_text": "BOOK NOW",
-            "button_url": "",
+            "button_url": "https://bookings.skinkandy.com/",
             "button_color": "btn--pink",
             "popup_enable": true,
             "popup_content": "<h3><strong>Advanced Piercings (18+)</strong></h3><p>Safe. Professional. Inclusive.</p><p>At SkinKandy, our advanced piercings, including below-the-belt options, are performed by specially trained experts in selected stores. We provide a respectful, judgment-free experience for all gender identities, using the highest standards of hygiene, safety, and care.</p><p>These services are available <strong>to clients aged 18+</strong> with valid photo ID.<br/><br/>Availability varies by location. Complete a <a href=\"https://bookings.skinkandy.com/\" target=\"_blank\" title=\"https://bookings.skinkandy.com/\"><strong>Booking Request Form</strong></a> and our customer support team will help confirm your options.</p>"
