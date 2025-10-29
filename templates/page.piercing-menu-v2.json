@@ -82,7 +82,7 @@
           "settings": {
             "link": "https://bookings.skinkandy.com",
             "link_text": "Book Now",
-            "css_class": ""
+            "css_class": "piercing-menu-book"
           }
         }
       },
