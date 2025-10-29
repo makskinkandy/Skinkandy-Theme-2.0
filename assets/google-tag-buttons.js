@@ -149,25 +149,24 @@ document.addEventListener("DOMContentLoaded", function () {
   
   piercingMenu.forEach(({ selector, getEvent }) => {
     document.querySelectorAll(selector).forEach((el) => {
-      el.addEventListener("click", function () {
+      el.addEventListener("click", function (e) {
         const eventName = getEvent(el);
-        console.log("TEST")
-        // look for the previous <h3> sibling
-        let h3Text = "";
-        let prev = el.previousElementSibling;
-        while (prev) {
-          if (prev.tagName === "H3") {
-            h3Text = prev.innerText.trim() + " - BOOK NOW";
-            break;
-          }
-          prev = prev.previousElementSibling;
-        }
-
+  
+        // Find the nearest piercing-menu item, then its H3 inside item-data
+        const container = el.closest(".piercing-menu__item");
+        const heading =
+          container?.querySelector(".piercing-menu__item-data h3") ||
+          container?.querySelector("h3");
+  
+        const h3Text = heading
+          ? `${heading.textContent.trim()} - BOOK NOW`
+          : `${(el.innerText || el.textContent || "").trim()} - BOOK NOW`;
+  
         if (eventName) {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: eventName,
-            link_text: h3Text || (el.innerText.trim() + " - BOOK NOW")
+            link_text: h3Text
           });
           console.log("Tag fired:", eventName, "| Text:", h3Text);
         }
