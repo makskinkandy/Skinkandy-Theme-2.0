@@ -106,10 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
       getEvent: (el) => "w_select_pierce_menu_2_80_info"
     },
     {
-      selector: ".2-for-80-promo",
-      getEvent: (el) => "w_select_pierce_menu_2_80_info"
-    },
-    {
       selector: ".menu-two-for-id",
       getEvent: (el) => "w_select_pierce_menu_id_info"
     },
@@ -142,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(selector).forEach((el) => {
       el.addEventListener("click", function () {
         const eventName = getEvent(el);
-
+        
         // look for the previous <h3> sibling
         let h3Text = "";
         let prev = el.previousElementSibling;
