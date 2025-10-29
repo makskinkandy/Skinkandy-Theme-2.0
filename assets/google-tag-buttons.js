@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(selector).forEach((el) => {
       el.addEventListener("click", function () {
         const eventName = getEvent(el);
-        
+        console.log("TEST")
         // look for the previous <h3> sibling
         let h3Text = "";
         let prev = el.previousElementSibling;
