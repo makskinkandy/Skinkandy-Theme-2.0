@@ -21,10 +21,10 @@
                                           {{ item.content }}
                                           <div class="button-wrapper">
                                             {% if item.button_text %}
-                                              <a href="{{ item.button_url }}" class="btn {{ item.button_color }}">{{ item.button_text }}</a>
+                                              <a href="{{ item.button_url }}" class="btn {{ item.button_color }} {{ block.settings.button_class }}">{{ item.button_text }}</a>
                                           {% endif %}
                                           {% if item.popup_enable %}
-                                            <a href="#" class="btn btn--black open-popup {{ block.settings.button_class }}">Learn More</a>
+                                            <a href="#" class="btn btn--black open-popup">Learn More</a>
                                         {% endif %}
                                           </div>
                                       </div>
