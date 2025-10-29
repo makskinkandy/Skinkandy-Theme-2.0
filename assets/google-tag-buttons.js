@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const piercingTags = [
+    "advance_book",
+    "doubleops_book",
+    "downsize_book",
+    "anatomy_book",
     "dahlia_book",
     "nipple_book",
     "oconch_book",
