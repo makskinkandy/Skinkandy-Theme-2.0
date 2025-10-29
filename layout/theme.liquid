@@ -409,7 +409,7 @@
           // Decide which price/currency label to use
           const isNZ = String(websitePath).toLowerCase() === 'en-nz';
           const chosenPrice = isNZ ? priceNZ : priceAu;
-          const label = isNZ ? 'From NZD $' : 'From AUD $'; // AU label kept exact
+          const label = isNZ ? 'From NZD ' : 'From AUD '; // AU label kept exact
         
           // Render or hide
           if (chosenPrice && String(chosenPrice).trim() !== '') {
