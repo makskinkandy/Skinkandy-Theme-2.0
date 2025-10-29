@@ -106,6 +106,17 @@
         "reduce_spacing": false
       }
     },
+    "raw_code_GRhtW3": {
+      "type": "raw-code",
+      "custom_css": [
+        ".globo-form .submit {margin-top: 0;}",
+        "h2 {text-align: center;}"
+      ],
+      "name": "Custom HTML Section",
+      "settings": {
+        "custom_html": "<h2>Join Now!</h2>\n<div class=\"globo-formbuilder\" data-id=\"MTI4MjU4\"></div>"
+      }
+    },
     "rich_text_zywGRq": {
       "type": "rich-text",
       "blocks": {
@@ -135,17 +146,6 @@
         "narrow_column": true,
         "divider": false,
         "reduce_spacing": false
-      }
-    },
-    "raw_code_GRhtW3": {
-      "type": "raw-code",
-      "custom_css": [
-        ".globo-form .submit {margin-top: 0;}",
-        "h2 {text-align: center;}"
-      ],
-      "name": "Custom HTML Section",
-      "settings": {
-        "custom_html": "<h2>Join Now!</h2>\n<div class=\"globo-formbuilder\" data-id=\"MTI4MTAx\"></div>"
       }
     }
   },
