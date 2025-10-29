@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const piercingTags = [
+    "nfree_lobes_book",
+    "nfree_doubleopslobe_book",
     "loben_book",
     "lobec_book",
     "helix_book",
