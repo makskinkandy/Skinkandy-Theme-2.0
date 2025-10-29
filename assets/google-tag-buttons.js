@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         // Prefer H3 inside item-data, else anywhere in the container; then fall back to H2
         const h3 = container.querySelector(".piercing-menu__item-data h3") || container.querySelector("h3");
-        const h2 = h3 ? null : (container.querySelector(".piercing-menu__item-data h2") || container.querySelector("h2"));
+        const h2 = h3 ? null : (container.querySelector(".two-column-slider__item h2") || container.querySelector("h2"));
   
         const headingEl = h3 || h2;
   
