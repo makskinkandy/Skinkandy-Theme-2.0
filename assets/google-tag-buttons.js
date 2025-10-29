@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const piercingTags = [
+    "nipple_book",
+    "oconch_book",
+    "vhelix_book",
+    "hhelix_book",
+    "slobe_book",
+    "snipple_book",
+    "sseptum_book",
+    "hnostril_book",
     "nfree_lobes_book",
     "nfree_doubleopslobe_book",
     "loben_book",
