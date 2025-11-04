@@ -60,16 +60,6 @@ button {
     cursor: pointer;
 }
 
-h1,.h1,.main-page-title {
-    font-size: 3.375rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 3.25rem; /* 96.296% */
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0;
-}
 h2, .h2 {
     font-size: 2rem;
     font-style: normal;
