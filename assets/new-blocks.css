@@ -1272,6 +1272,17 @@
     .two-column-slider__slider-wrapper {
         position: relative;
     }
+    .vs-arrow {
+        top: 30%;
+        transform: none;
+        filter: invert(1);
+        border-radius: 50%;
+        width: 2.4375rem;
+        height: 2.4375rem;
+        @media screen and (max-width: 575px) {
+            top: 34%;
+        }
+    }
     .two-column-slider__item {
         display: flex;
         background: #F0F0F0;
