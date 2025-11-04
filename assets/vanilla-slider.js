@@ -7,23 +7,26 @@
     arrows: false,
     autoplay: false,
     shuffle: false,
+    // Loop semantics: no clones; wrap between first/last pages.
     loop: false,
-    interval: 5000,
-    slidesToShow: 1,
-    slidesToShowMobile: null,
-    variableWidth: false,
-    mobile: false,
-    breakpoint: 768
+    interval: 5000,            // ms
+    slidesToShow: 1,           // base/desktop
+    slidesToShowMobile: null,  // optional mobile override
+    variableWidth: false,      // false | true | 'mobile'
+    mobile: false,             // only enable on mobile breakpoint?
+    breakpoint: 768            // width (px) threshold
   };
 
-  const ROOT_HINT = "[data-slider-root]";
+  // ====== ARROWS ANYWHERE (globals) ======
+  const ROOT_HINT = "[data-slider-root]";            // optional wrapper marker (recommended)
   const CUSTOM_PREV = "[data-slider-prev]";
   const CUSTOM_NEXT = "[data-slider-next]";
   const INTERNAL_PREV = ".vs-arrow--prev";
   const INTERNAL_NEXT = ".vs-arrow--next";
-  const TRACK_SELECTOR_CORE = ".vs-track";
-  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";
+  const TRACK_SELECTOR_CORE = ".vs-track";           // inside each slider
+  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";  // hide internal buttons when custom exist
 
+  // Ensure we have a transition for smooth movement
   (function injectStyle(){
     const id = "vs-track-style";
     if (!document.getElementById(id)) {
@@ -39,18 +42,9 @@
       s.textContent = `.${HIDE_INTERNAL_CLASS}{display:none!important}`;
       document.head.appendChild(s);
     }
-    const idHideCustom = "vs-hide-custom-arrows";
-    if (!document.getElementById(idHideCustom)) {
-      const s = document.createElement("style");
-      s.id = idHideCustom;
-      s.textContent = `
-        [data-slider-root].vs-single.vs-desktop [data-slider-prev],
-        [data-slider-root].vs-single.vs-desktop [data-slider-next]{display:none!important}
-      `;
-      document.head.appendChild(s);
-    }
   })();
 
+  // ========= Utilities =========
   function readDataOptions(node) {
     let o = {};
     ["dots","arrows","autoplay","shuffle","loop","mobile"].forEach(k => {
@@ -107,11 +101,18 @@
     return o;
   }
 
+  // Find a wrapper for a given slider element.
   function getSliderRoot(el) {
     return el.closest(ROOT_HINT) || el.parentElement || el;
   }
 
-  // Order-agnostic resolver for buttons before/after the slider
+  // Resolve which [data-slider] a custom arrow should control.
+  // Priority:
+  // 1) data-slider-target selector on the arrow
+  // 2) arrow inside [data-slider] (closest)
+  // 3) nearest slider within a [data-slider-root] wrapper
+  //    preferring the slider vertically below the arrow
+  // 4) nearest by distance on page
   function resolveSliderForArrow(arrow) {
     const targetSel = arrow.getAttribute?.("data-slider-target");
     if (targetSel) {
@@ -124,59 +125,64 @@
 
     const root = arrow.closest?.(ROOT_HINT);
     if (root) {
-      const sliders = Array.from(root.querySelectorAll("[data-slider]"))
-        .filter(s => {
-          const r = s.getBoundingClientRect();
-          return r.width > 0 && r.height > 0;
-        });
+      const sliders = Array.from(root.querySelectorAll("[data-slider]"));
       if (sliders.length === 1) return sliders[0];
       if (sliders.length > 1) {
-        const T = 8;
         const ar = arrow.getBoundingClientRect();
-        const arrowTop = ar.top, arrowBottom = ar.bottom;
-        const arrowMidX = (ar.left + ar.right) / 2;
-        const arrowMidY = (ar.top + ar.bottom) / 2;
+        const arrowBottom = ar.bottom;
+        const arrowTop = ar.top;
 
+        let best = null;
+        let bestDelta = Infinity;
+
+        // 1) Prefer the nearest slider whose top is below the arrow
         for (const s of sliders) {
           const r = s.getBoundingClientRect();
-          const verticalOverlap = !(arrowBottom < r.top - T || arrowTop > r.bottom + T);
-          if (verticalOverlap) return s;
+          const delta = r.top - arrowBottom; // >= 0 means top is below/at arrow bottom
+          if (delta >= -1 && delta < bestDelta) {
+            bestDelta = delta;
+            best = s;
+          }
         }
 
-        let best = null, bestDelta = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const delta = r.top - arrowBottom;
-          if (delta >= -T && delta < bestDelta) { bestDelta = delta; best = s; }
+        // 2) If none below, pick the closest above (smallest distance)
+        if (!best) {
+          bestDelta = Infinity;
+          for (const s of sliders) {
+            const r = s.getBoundingClientRect();
+            const delta = arrowTop - r.bottom; // >= 0 means slider is above/at arrow top
+            if (delta >= -1 && delta < bestDelta) {
+              bestDelta = delta;
+              best = s;
+            }
+          }
         }
-        if (best) return best;
 
-        best = null; bestDelta = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const delta = arrowTop - r.bottom;
-          if (delta >= -T && delta < bestDelta) { bestDelta = delta; best = s; }
+        // 3) Last resort: original center-distance heuristic
+        if (!best) {
+          const arx = (ar.left + ar.right) / 2, ary = (ar.top + ar.bottom) / 2;
+          let bestD = Infinity;
+          for (const s of sliders) {
+            const r = s.getBoundingClientRect();
+            const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2;
+            const d = (cx - arx) * (cx - arx) + (cy - ary) * (cy - ary);
+            if (d < bestD) { bestD = d; best = s; }
+          }
         }
-        if (best) return best;
 
-        best = null; let bestD = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2;
-          const dx = cx - arrowMidX, dy = cy - arrowMidY;
-          const d = dx * dx + dy * dy;
-          if (d < bestD) { bestD = d; best = s; }
-        }
         if (best) return best;
       }
     }
 
+    // Walk up to find a container that contains a slider somewhere below.
     let n = arrow.parentElement;
     while (n && n !== document.documentElement) {
       const s = n.querySelector?.("[data-slider]");
       if (s) return s;
       n = n.parentElement;
     }
+
+    // Last resort: first slider in the doc
     return document.querySelector("[data-slider]");
   }
 
@@ -219,16 +225,7 @@
     });
   }
 
-  function updateStateClasses(wrapper, options, pageableNow){
-    if (!wrapper) return;
-    wrapper.classList.toggle("vs-multi", !!pageableNow);
-    wrapper.classList.toggle("vs-single", !pageableNow);
-    const bp = Number.isFinite(options.breakpoint) ? options.breakpoint : 768;
-    const isDesktop = window.innerWidth > bp;
-    wrapper.classList.toggle("vs-desktop", isDesktop);
-    wrapper.classList.toggle("vs-mobile", !isDesktop);
-  }
-
+  // ========= Slider core =========
   function createSlider(el, opts = {}) {
     if (!el || el.__vs) return el?.__vs;
 
@@ -255,9 +252,11 @@
     originalSlides.forEach(s => track.appendChild(s));
     el.appendChild(track);
 
+    // ---- ARROWS ANYWHERE: wrapper + custom presence
     const wrapper = getSliderRoot(el);
     const hasCustomArrowsNow = !!(wrapper && wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`));
 
+    // We keep clone scaffolding (unused now)
     let headClones = [];
     let tailClones = [];
     let slides = [];
@@ -271,9 +270,10 @@
       headClones = [];
       tailClones = [];
     }
+    function rebuildClones(){ /* not used */ }
 
     const count = originalSlides.length;
-    let idx = 0;
+    let idx = 0;      // index into ORIGINAL pages
     let timer = null;
     let raf = null;
 
@@ -319,6 +319,7 @@
       }
     }
 
+    // ---- NEW lastIndex() (replaces maxIndex())
     const lastIndex = () => {
       if (count <= show) return 0;
       const rem = count % show;
@@ -330,20 +331,15 @@
       return (canLoop ? headClones.length : 0) + idxOriginal;
     }
 
-    // GPU-friendly transform
-    function setTransform(px) {
-      track.style.transform = `translate3d(${px}px,0,0)`;
-    }
-
     function render(extraPx = 0) {
       const baseTrackIdx = trackIndexFor(idx);
       if (varOn) {
         const base = -(positions[baseTrackIdx] || 0);
-        setTransform(base + extraPx);
+        track.style.transform = `translateX(${base + extraPx}px)`;
       } else {
         const slideWidthPx = el.clientWidth / show;
         const base = -baseTrackIdx * slideWidthPx;
-        setTransform(base + extraPx);
+        track.style.transform = `translateX(${base + extraPx}px)`;
       }
     }
 
@@ -400,9 +396,6 @@
         nextBtn.disabled = !showNext;
         nextBtn.setAttribute("aria-disabled", String(!showNext));
       }
-
-      const pageable = Math.ceil(count / show) > 1;
-      updateStateClasses(wrapper, options, pageable);
     }
 
     function applyTransform() {
@@ -443,12 +436,10 @@
         idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
       }
 
-      const pageable = Math.ceil(count / show) > 1;
-      updateStateClasses(wrapper, options, pageable);
-
       applyTransform();
     }
 
+    // ===== Dots (multi-set) =====
     let dotsSets = [];
     const dotsHandlers = new Map();
     let createdDotsSet = null;
@@ -525,8 +516,10 @@
     collectDotsSets();
     bindDots();
 
+    // ===== Arrows (internal) =====
     let prevBtn = null, nextBtn = null;
 
+    // Create internal arrows ONLY if requested and no custom arrows exist in wrapper now
     const shouldCreateInternalArrows = options.arrows && !hasCustomArrowsNow;
 
     if (shouldCreateInternalArrows) {
@@ -545,6 +538,7 @@
       el.appendChild(nextBtn);
     }
 
+    // Hide internal arrows if custom ones appear later in the wrapper
     let arrowsMO = null;
     (function setupInternalArrowReconciler(){
       if (!options.arrows) return;
@@ -561,6 +555,7 @@
       arrowsMO.observe(wrapper, { childList: true, subtree: true });
     })();
 
+    // ===== Autoplay / Shuffle =====
     function randomIndex() {
       const pages = Math.ceil(count / show);
       if (pages <= 1) return 0;
@@ -581,19 +576,11 @@
       if (timer) { clearInterval(timer); timer = null; }
     }
 
-    // Smooth drag state
+    // ===== Drag / Swipe =====
     let pointerDown = false;
     let dragging = false;
     let startX = 0;
-    let desiredDeltaX = 0;  // target offset while dragging
-    let smoothDeltaX = 0;   // smoothed offset rendered
-    let dragRaf = 0;
-
-    // velocity tracking
-    let lastMoveT = 0;
-    let lastMoveX = 0;
-    let velocity = 0; // px/ms averaged lightweight
-
+    let deltaX = 0;
     let draggedBeyondClick = false;
 
     const DRAG_START_PX = 6;
@@ -601,7 +588,8 @@
     function resistedDelta(dx) {
       const atFirst = idx === 0 && dx > 0;
       const atLast  = idx === lastIndex() && dx < 0;
-      return (atFirst || atLast) ? dx * 0.35 : dx;
+      if (atFirst || atLast) return dx * 0.35;
+      return dx;
     }
 
     const onClickCapture = (e) => {
@@ -620,13 +608,8 @@
       track.classList.add('is-dragging');
       track.style.userSelect = 'none';
       track.style.cursor = 'grabbing';
-      // kill CSS transition during active drag for instant response; we add smoothing via RAF
-      const prev = track.style.transition;
-      track.__prevTransition = prev;
-      track.style.transition = 'none';
       stopAutoplay();
       try { track.setPointerCapture?.(pointerId); } catch {}
-      if (!dragRaf) dragRaf = requestAnimationFrame(dragAnimate);
     }
 
     function endDrag(pointerId) {
@@ -635,24 +618,8 @@
       track.style.userSelect = '';
       track.style.cursor = '';
       try { track.releasePointerCapture?.(pointerId); } catch {}
-      // snap back to CSS transition for the settle animation
-      track.style.transition = track.__prevTransition || '';
-      track.__prevTransition = '';
-
-      cancelAnimationFrame(dragRaf);
-      dragRaf = 0;
-      desiredDeltaX = 0;
-      smoothDeltaX = 0;
       startAutoplay();
-    }
-
-    function dragAnimate(){
-      if (!dragging) { dragRaf = 0; return; }
-      // simple critically-damped-ish interpolation
-      const lerp = 0.25; // lower = smoother/softer
-      smoothDeltaX += (desiredDeltaX - smoothDeltaX) * lerp;
-      render(smoothDeltaX);
-      dragRaf = requestAnimationFrame(dragAnimate);
+      deltaX = 0;
     }
 
     const onPointerDown = (e) => {
@@ -660,12 +627,8 @@
       pointerDown = true;
       dragging = false;
       startX = e.clientX;
-      desiredDeltaX = 0;
-      smoothDeltaX = 0;
+      deltaX = 0;
       draggedBeyondClick = false;
-      lastMoveT = performance.now();
-      lastMoveX = startX;
-      velocity = 0;
     };
 
     const onPointerMove = (e) => {
@@ -673,28 +636,20 @@
       const rawDx = e.clientX - startX;
       const dx = resistedDelta(rawDx);
 
-      // velocity
-      const now = performance.now();
-      const dt = Math.max(1, now - lastMoveT);
-      const instV = (e.clientX - lastMoveX) / dt; // px/ms
-      // low-pass filter velocity
-      velocity = velocity * 0.8 + instV * 0.2;
-      lastMoveT = now;
-      lastMoveX = e.clientX;
-
       if (!dragging && Math.abs(rawDx) > DRAG_START_PX) {
         beginDrag(e.pointerId);
       }
       if (dragging) {
-        desiredDeltaX = dx;
+        deltaX = dx;
         if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
+        render(deltaX);
       }
     };
 
     function computeThresholdPx() {
-      if (varOn) return Math.max(36, el.clientWidth * 0.08);
+      if (varOn) return Math.max(40, el.clientWidth * 0.1);
       const slideWidthPx = el.clientWidth / show;
-      return Math.max(36, slideWidthPx * 0.18);
+      return Math.max(40, slideWidthPx * 0.2);
     }
 
     const onPointerUp = (e) => {
@@ -704,13 +659,8 @@
       if (!dragging) return;
 
       const threshold = computeThresholdPx();
-
-      // momentum: project a short flick forward in the drag direction
-      const momentumPx = Math.max(-180, Math.min(180, velocity * 180)); // cap
-      const projected = desiredDeltaX + momentumPx;
-
-      if (Math.abs(projected) > threshold) {
-        if (projected < 0) next(); else prev();
+      if (Math.abs(deltaX) > threshold) {
+        if (deltaX < 0) next(); else prev();
       } else {
         applyTransform();
       }
@@ -728,6 +678,7 @@
       }
     };
 
+    // Touch fallback handlers (referenced for removal in destroy)
     let onTouchStart, onTouchMove, onTouchEnd, onTouchCancel;
 
     if (hasPointer) {
@@ -744,37 +695,25 @@
         touching = true;
         touchDragging = false;
         startX = e.touches[0].clientX;
-        desiredDeltaX = 0;
-        smoothDeltaX = 0;
+        deltaX = 0;
         draggedBeyondClick = false;
-        lastMoveT = performance.now();
-        lastMoveX = startX;
-        velocity = 0;
       };
       onTouchMove = (e) => {
         if (!touching) return;
         const rawDx = e.touches[0].clientX - startX;
         const dx = resistedDelta(rawDx);
 
-        const now = performance.now();
-        const dt = Math.max(1, now - lastMoveT);
-        const instV = (e.touches[0].clientX - lastMoveX) / dt;
-        velocity = velocity * 0.8 + instV * 0.2;
-        lastMoveT = now;
-        lastMoveX = e.touches[0].clientX;
-
         if (!touchDragging && Math.abs(rawDx) > DRAG_START_PX) {
           touchDragging = true;
           track.classList.add('is-dragging');
-          const prev = track.style.transition;
-          track.__prevTransition = prev;
-          track.style.transition = 'none';
+          track.style.userSelect = 'none';
+          track.style.cursor = 'grabbing';
           stopAutoplay();
-          if (!dragRaf) dragRaf = requestAnimationFrame(dragAnimate);
         }
         if (touchDragging) {
-          desiredDeltaX = dx;
+          deltaX = dx;
           if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
+          render(dx);
         }
       };
       onTouchEnd = () => {
@@ -785,24 +724,17 @@
 
         touchDragging = false;
         track.classList.remove('is-dragging');
-        track.style.transition = track.__prevTransition || '';
-        track.__prevTransition = '';
-
-        cancelAnimationFrame(dragRaf);
-        dragRaf = 0;
+        track.style.userSelect = '';
+        track.style.cursor = '';
 
         const threshold = computeThresholdPx();
-        const momentumPx = Math.max(-180, Math.min(180, velocity * 180));
-        const projected = desiredDeltaX + momentumPx;
-
-        if (Math.abs(projected) > threshold) {
-          if (projected < 0) next(); else prev();
+        if (Math.abs(deltaX) > threshold) {
+          if (deltaX < 0) next(); else prev();
         } else {
           applyTransform();
         }
         startAutoplay();
-        desiredDeltaX = 0;
-        smoothDeltaX = 0;
+        deltaX = 0;
       };
       onTouchCancel = onTouchEnd;
 
@@ -812,12 +744,14 @@
       track.addEventListener("touchcancel", onTouchCancel, { passive: true });
     }
 
+    // ===== Custom event hook for external drivers (optional use)
     track.addEventListener("vs:step", (e) => {
       const dir = (e && e.detail && typeof e.detail.dir === "number") ? e.detail.dir : 0;
       if (dir < 0) prev(); else next();
       e.preventDefault();
     });
 
+    // ===== Wrap-aware navigation (no clones) =====
     function withoutTransition(fn){
       const prev = track.style.transition;
       track.style.transition = 'none';
@@ -849,15 +783,18 @@
     function next(){ goTo(idx + pageStep()); }
     function prev(){ goTo(idx - pageStep()); }
 
+    // Pause on hover (mouse only)
     el.addEventListener("mouseenter", stopAutoplay);
     el.addEventListener("mouseleave", startAutoplay);
 
+    // Resize (element size)
     const ro = new ResizeObserver(() => {
       if (raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(measure);
     });
     ro.observe(el);
 
+    // Init
     slides = Array.from(track.children);
     measure();
     updateDots();
@@ -909,6 +846,7 @@
     }
   }
 
+  // Auto-init / responsive enablement
   function initAll(root = document) {
     root.querySelectorAll("[data-slider]").forEach(el => ensureSlider(el));
   }
@@ -968,6 +906,7 @@
     ensure: ensureSlider
   };
 
+  // ====== ARROWS ANYWHERE: delegate custom arrow clicks globally ======
   if (!window.__vsArrowsDelegated) {
     window.__vsArrowsDelegated = true;
     document.addEventListener("click", (e) => {
@@ -979,6 +918,7 @@
       const slider = resolveSliderForArrow(arrow);
       if (!slider) return;
 
+      // Ensure slider is initialized (respect mobile/breakpoint)
       VanillaSlider.ensure(slider);
 
       const api = slider.__vs;
@@ -991,7 +931,7 @@
 
 })();
 
-/* featured-collections image height sync */
+/* featured-collections image height sync (unchanged) */
 (function () {
   "use strict";
 
