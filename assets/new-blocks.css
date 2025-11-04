@@ -1138,14 +1138,14 @@
             line-height: 1.25rem;
             @media screen and (max-width: 575px) {
                 font-size: 12px;
-                width: 60%;
+                width: 50%;
             }
         }
 
         span:first-child {
             width: 35%;
             @media screen and (max-width: 575px) {
-                width: 47%;
+                width: 50%;
             }
         }
 
