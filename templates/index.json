@@ -144,6 +144,19 @@
         "shuffle": false
       }
     },
+    "inline_buttons_f7DDkA": {
+      "type": "inline-buttons",
+      "custom_css": [],
+      "name": "Inline Buttons",
+      "settings": {
+        "button_1_text": "NEW IN",
+        "button_1_url": "shopify://collections/new-in",
+        "button_2_text": "BOOK NOW",
+        "button_2_url": "https://bookings.skinkandy.com",
+        "text_color": "#ffffff",
+        "bg_color": "#000000"
+      }
+    },
     "ads_block_8LK7th": {
       "type": "ads-block",
       "blocks": {
@@ -152,8 +165,8 @@
           "settings": {
             "title": "",
             "url": "https://bookings.skinkandy.com/",
-            "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner.jpg",
-            "image_mobile": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Mobile_Half_Banner.jpg",
+            "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner_1.jpg",
+            "image_mobile": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Mobile_Half_Banner_2.jpg",
             "bg_color": "#000000"
           }
         }
@@ -167,19 +180,6 @@
       "name": "Ads Block",
       "settings": {
         "title": ""
-      }
-    },
-    "inline_buttons_f7DDkA": {
-      "type": "inline-buttons",
-      "custom_css": [],
-      "name": "Inline Buttons",
-      "settings": {
-        "button_1_text": "NEW IN",
-        "button_1_url": "shopify://collections/new-in",
-        "button_2_text": "BOOK NOW",
-        "button_2_url": "https://bookings.skinkandy.com",
-        "text_color": "#ffffff",
-        "bg_color": "#000000"
       }
     },
     "flipped_boxes_kG6gXk": {
@@ -705,8 +705,8 @@
     "hero_video_Ar6Ham",
     "top_notification_banner_yteqNA",
     "header_banner_MUPtRQ",
-    "ads_block_8LK7th",
     "inline_buttons_f7DDkA",
+    "ads_block_8LK7th",
     "flipped_boxes_kG6gXk",
     "rich_text_gwEVLb",
     "columns_block_HhremV",
