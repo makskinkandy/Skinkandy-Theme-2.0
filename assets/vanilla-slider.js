@@ -7,49 +7,44 @@
     arrows: false,
     autoplay: false,
     shuffle: false,
+    // Loop semantics: no clones; wrap between first/last pages.
     loop: false,
-    interval: 5000,
-    slidesToShow: 1,
-    slidesToShowMobile: null,
-    variableWidth: false,
-    mobile: false,
-    breakpoint: 768
+    interval: 5000,            // ms
+    slidesToShow: 1,           // base/desktop
+    slidesToShowMobile: null,  // optional mobile override
+    variableWidth: false,      // false | true | 'mobile'
+    mobile: false,             // only enable on mobile breakpoint?
+    breakpoint: 768            // width (px) threshold
   };
 
-  const ROOT_HINT = "[data-slider-root]";
+  // ====== ARROWS ANYWHERE (globals) ======
+  const ROOT_HINT = "[data-slider-root]";            // optional wrapper marker (recommended)
   const CUSTOM_PREV = "[data-slider-prev]";
   const CUSTOM_NEXT = "[data-slider-next]";
   const INTERNAL_PREV = ".vs-arrow--prev";
   const INTERNAL_NEXT = ".vs-arrow--next";
-  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";
+  const TRACK_SELECTOR_CORE = ".vs-track";           // inside each slider
+  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";  // hide internal buttons when custom exist
 
-  // ========== Inject once ==========
+  // Ensure we have a transition for smooth movement
   (function injectStyle(){
-    const css1 = "vs-track-style";
-    if (!document.getElementById(css1)) {
+    const id = "vs-track-style";
+    if (!document.getElementById(id)) {
       const s = document.createElement("style");
-      s.id = css1;
+      s.id = id;
       s.textContent = `.vs-track{transition:transform .35s ease;will-change:transform}`;
       document.head.appendChild(s);
     }
-    const css2 = "vs-internal-hide-style";
-    if (!document.getElementById(css2)) {
+    const idHide = "vs-internal-hide-style";
+    if (!document.getElementById(idHide)) {
       const s = document.createElement("style");
-      s.id = css2;
+      s.id = idHide;
       s.textContent = `.${HIDE_INTERNAL_CLASS}{display:none!important}`;
-      document.head.appendChild(s);
-    }
-    const css3 = "vs-hide-custom-arrows-attr";
-    if (!document.getElementById(css3)) {
-      const s = document.createElement("style");
-      s.id = css3;
-      // We toggle this attribute from JS so it works regardless of DOM order
-      s.textContent = `[data-vs-hidden="true"]{display:none!important}`;
       document.head.appendChild(s);
     }
   })();
 
-  // ========== Utils ==========
+  // ========= Utilities =========
   function readDataOptions(node) {
     let o = {};
     ["dots","arrows","autoplay","shuffle","loop","mobile"].forEach(k => {
@@ -106,12 +101,18 @@
     return o;
   }
 
+  // Find a wrapper for a given slider element.
   function getSliderRoot(el) {
-    // Prefer explicit wrapper; else fall back to the slider's parent to keep arrows in the same scope
     return el.closest(ROOT_HINT) || el.parentElement || el;
   }
 
-  // Prefer slider vertically associated with the arrow (works if buttons are before/after)
+  // Resolve which [data-slider] a custom arrow should control.
+  // Priority:
+  // 1) data-slider-target selector on the arrow
+  // 2) arrow inside [data-slider] (closest)
+  // 3) nearest slider within a [data-slider-root] wrapper
+  //    preferring the slider vertically below the arrow
+  // 4) nearest by distance on page
   function resolveSliderForArrow(arrow) {
     const targetSel = arrow.getAttribute?.("data-slider-target");
     if (targetSel) {
@@ -124,60 +125,64 @@
 
     const root = arrow.closest?.(ROOT_HINT);
     if (root) {
-      const sliders = Array.from(root.querySelectorAll("[data-slider]"))
-        .filter(s => {
-          const r = s.getBoundingClientRect();
-          return r.width > 0 && r.height > 0;
-        });
-
+      const sliders = Array.from(root.querySelectorAll("[data-slider]"));
       if (sliders.length === 1) return sliders[0];
       if (sliders.length > 1) {
-        const T = 8;
         const ar = arrow.getBoundingClientRect();
-        const arrowTop = ar.top, arrowBottom = ar.bottom;
-        const arrowMidX = (ar.left + ar.right) / 2, arrowMidY = (ar.top + ar.bottom) / 2;
+        const arrowBottom = ar.bottom;
+        const arrowTop = ar.top;
 
-        // 1) Vertical overlap first
+        let best = null;
+        let bestDelta = Infinity;
+
+        // 1) Prefer the nearest slider whose top is below the arrow
         for (const s of sliders) {
           const r = s.getBoundingClientRect();
-          const overlap = !(arrowBottom < r.top - T || arrowTop > r.bottom + T);
-          if (overlap) return s;
+          const delta = r.top - arrowBottom; // >= 0 means top is below/at arrow bottom
+          if (delta >= -1 && delta < bestDelta) {
+            bestDelta = delta;
+            best = s;
+          }
         }
-        // 2) Nearest below
-        let best = null, bestDelta = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const delta = r.top - arrowBottom;
-          if (delta >= -T && delta < bestDelta) { bestDelta = delta; best = s; }
+
+        // 2) If none below, pick the closest above (smallest distance)
+        if (!best) {
+          bestDelta = Infinity;
+          for (const s of sliders) {
+            const r = s.getBoundingClientRect();
+            const delta = arrowTop - r.bottom; // >= 0 means slider is above/at arrow top
+            if (delta >= -1 && delta < bestDelta) {
+              bestDelta = delta;
+              best = s;
+            }
+          }
         }
-        if (best) return best;
-        // 3) Nearest above
-        best = null; bestDelta = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const delta = arrowTop - r.bottom;
-          if (delta >= -T && delta < bestDelta) { bestDelta = delta; best = s; }
+
+        // 3) Last resort: original center-distance heuristic
+        if (!best) {
+          const arx = (ar.left + ar.right) / 2, ary = (ar.top + ar.bottom) / 2;
+          let bestD = Infinity;
+          for (const s of sliders) {
+            const r = s.getBoundingClientRect();
+            const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2;
+            const d = (cx - arx) * (cx - arx) + (cy - ary) * (cy - ary);
+            if (d < bestD) { bestD = d; best = s; }
+          }
         }
-        if (best) return best;
-        // 4) Fallback to center distance
-        let bestD = Infinity;
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2;
-          const d = (cx - arrowMidX) ** 2 + (cy - arrowMidY) ** 2;
-          if (d < bestD) { bestD = d; best = s; }
-        }
+
         if (best) return best;
       }
     }
 
-    // walk up to any section containing a slider
+    // Walk up to find a container that contains a slider somewhere below.
     let n = arrow.parentElement;
     while (n && n !== document.documentElement) {
       const s = n.querySelector?.("[data-slider]");
       if (s) return s;
       n = n.parentElement;
     }
+
+    // Last resort: first slider in the doc
     return document.querySelector("[data-slider]");
   }
 
@@ -220,32 +225,12 @@
     });
   }
 
-  // Toggle wrapper + arrows state (also hides custom arrows via attribute)
-  function reconcileCustomArrows(wrapper, options, pageableNow){
-    if (!wrapper) return;
-    const bp = Number.isFinite(options.breakpoint) ? options.breakpoint : 768;
-    const isDesktop = window.innerWidth > bp;
-
-    // wrapper classes (handy for theming)
-    wrapper.classList.toggle("vs-multi", !!pageableNow);
-    wrapper.classList.toggle("vs-single", !pageableNow);
-    wrapper.classList.toggle("vs-desktop", isDesktop);
-    wrapper.classList.toggle("vs-mobile", !isDesktop);
-
-    // actively hide or show any custom arrows inside this wrapper
-    const shouldHide = isDesktop && !pageableNow;
-    wrapper.querySelectorAll(`${CUSTOM_PREV},${CUSTOM_NEXT}`).forEach(btn => {
-      if (shouldHide) btn.setAttribute("data-vs-hidden","true");
-      else btn.removeAttribute("data-vs-hidden");
-    });
-  }
-
-  // ========== Core ==========
+  // ========= Slider core =========
   function createSlider(el, opts = {}) {
     if (!el || el.__vs) return el?.__vs;
 
     const dataOpts = readDataOptions(el);
-    const options  = Object.assign({}, DEFAULTS, dataOpts, opts);
+    const options = Object.assign({}, DEFAULTS, dataOpts, opts);
 
     const isControl = (n) =>
       n.classList?.contains("vs-dots") ||
@@ -267,17 +252,28 @@
     originalSlides.forEach(s => track.appendChild(s));
     el.appendChild(track);
 
+    // ---- ARROWS ANYWHERE: wrapper + custom presence
     const wrapper = getSliderRoot(el);
     const hasCustomArrowsNow = !!(wrapper && wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`));
 
-    let headClones = [], tailClones = [];
+    // We keep clone scaffolding (unused now)
+    let headClones = [];
+    let tailClones = [];
     let slides = [];
     let show = 1;
     let varOn = false;
     let canLoop = false;
 
+    function removeClones(){
+      headClones.forEach(n => n.remove());
+      tailClones.forEach(n => n.remove());
+      headClones = [];
+      tailClones = [];
+    }
+    function rebuildClones(){ /* not used */ }
+
     const count = originalSlides.length;
-    let idx = 0;
+    let idx = 0;      // index into ORIGINAL pages
     let timer = null;
     let raf = null;
 
@@ -323,6 +319,7 @@
       }
     }
 
+    // ---- NEW lastIndex() (replaces maxIndex())
     const lastIndex = () => {
       if (count <= show) return 0;
       const rem = count % show;
@@ -330,32 +327,126 @@
     };
     const pageStep = () => show;
 
-    function trackIndexFor(idxOriginal){ return idxOriginal; }
-
-    // GPU-friendly transform
-    function setTransform(px) {
-      // translate3d gives smoother perf across mobile GPUs
-      track.style.transform = `translate3d(${px}px,0,0)`;
+    function trackIndexFor(idxOriginal){
+      return (canLoop ? headClones.length : 0) + idxOriginal;
     }
 
     function render(extraPx = 0) {
       const baseTrackIdx = trackIndexFor(idx);
       if (varOn) {
         const base = -(positions[baseTrackIdx] || 0);
-        setTransform(base + extraPx);
+        track.style.transform = `translateX(${base + extraPx}px)`;
       } else {
         const slideWidthPx = el.clientWidth / show;
         const base = -baseTrackIdx * slideWidthPx;
-        setTransform(base + extraPx);
+        track.style.transform = `translateX(${base + extraPx}px)`;
       }
     }
 
-    // ------- Dots -------
+    function updateDots() {
+      if (dotsSets.length === 0) return;
+      const starts = pageStarts();
+
+      dotsSets.forEach(set => {
+        const dots = getDotElements(set);
+        if (dots.length === 0) return;
+
+        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
+          buildAutoDots(set);
+        }
+
+        let active = starts.indexOf(idx);
+        if (active === -1) {
+          active = 0;
+          for (let j = 0; j < starts.length; j++) {
+            if (idx >= starts[j]) active = j; else break;
+          }
+        }
+
+        const isPageSet = (dots.length === starts.length);
+        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
+
+        dots.forEach((b, i) => {
+          if (i === activeIndex) {
+            b.setAttribute("aria-current", "true");
+            b.classList.add("is-active");
+          } else {
+            b.removeAttribute("aria-current");
+            b.classList.remove("is-active");
+          }
+        });
+      });
+    }
+
+    function updateArrows() {
+      if (!options.arrows) return;
+      const atStart = idx <= 0;
+      const atEnd = idx >= lastIndex();
+      const multi = lastIndex() > 0;
+      const showPrev = options.loop ? multi : !atStart;
+      const showNext = options.loop ? multi : !atEnd;
+
+      if (prevBtn) {
+        prevBtn.hidden = !showPrev;
+        prevBtn.disabled = !showPrev;
+        prevBtn.setAttribute("aria-disabled", String(!showPrev));
+      }
+      if (nextBtn) {
+        nextBtn.hidden = !showNext;
+        nextBtn.disabled = !showNext;
+        nextBtn.setAttribute("aria-disabled", String(!showNext));
+      }
+    }
+
+    function applyTransform() {
+      render(0);
+      updateDots();
+      updateArrows();
+    }
+
+    function measure() {
+      const oldIdx = idx;
+      const newShow = computeShow();
+      const newVar = variableActive();
+
+      canLoop = false;
+
+      if (newVar) {
+        originalSlides.forEach(s => (s.style.width = ""));
+        headClones.forEach(s => (s.style.width = ""));
+        tailClones.forEach(s => (s.style.width = ""));
+      } else {
+        const w = (100 / newShow) + "%";
+        originalSlides.forEach(s => (s.style.width = w));
+        headClones.forEach(s => (s.style.width = w));
+        tailClones.forEach(s => (s.style.width = w));
+      }
+
+      const showChanged = newShow !== show;
+      const varChanged  = newVar !== varOn;
+      show = newShow;
+      varOn = newVar;
+
+      removeClones();
+      slides = Array.from(track.children);
+
+      computeMetrics();
+
+      if (showChanged || varChanged) {
+        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
+      }
+
+      applyTransform();
+    }
+
+    // ===== Dots (multi-set) =====
     let dotsSets = [];
     const dotsHandlers = new Map();
     let createdDotsSet = null;
 
-    function collectDotsSets() { dotsSets = Array.from(el.querySelectorAll(".vs-dots")); }
+    function collectDotsSets() {
+      dotsSets = Array.from(el.querySelectorAll(".vs-dots"));
+    }
     function getDotElements(fromSet) {
       if (!fromSet) return [];
       let dots = Array.from(fromSet.querySelectorAll(".vs-dot, [data-vs-dot]"));
@@ -415,15 +506,20 @@
         if (handler) set.removeEventListener("click", handler);
       });
       dotsHandlers.clear();
-      if (createdDotsSet) { createdDotsSet.remove(); createdDotsSet = null; }
+      if (createdDotsSet) {
+        createdDotsSet.remove();
+        createdDotsSet = null;
+      }
       dotsSets = [];
     }
 
     collectDotsSets();
     bindDots();
 
-    // ------- Arrows -------
+    // ===== Arrows (internal) =====
     let prevBtn = null, nextBtn = null;
+
+    // Create internal arrows ONLY if requested and no custom arrows exist in wrapper now
     const shouldCreateInternalArrows = options.arrows && !hasCustomArrowsNow;
 
     if (shouldCreateInternalArrows) {
@@ -442,22 +538,24 @@
       el.appendChild(nextBtn);
     }
 
-    // Keep internal arrows hidden when custom appear
+    // Hide internal arrows if custom ones appear later in the wrapper
     let arrowsMO = null;
     (function setupInternalArrowReconciler(){
       if (!options.arrows) return;
       if (!wrapper) return;
+
       const check = () => {
         const hasCustom = !!wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`);
         const internals = wrapper.querySelectorAll(`${INTERNAL_PREV}, ${INTERNAL_NEXT}`);
         internals.forEach(b => b.classList.toggle(HIDE_INTERNAL_CLASS, hasCustom));
       };
       check();
+
       arrowsMO = new MutationObserver(() => check());
       arrowsMO.observe(wrapper, { childList: true, subtree: true });
     })();
 
-    // ------- Autoplay / Shuffle -------
+    // ===== Autoplay / Shuffle =====
     function randomIndex() {
       const pages = Math.ceil(count / show);
       if (pages <= 1) return 0;
@@ -474,54 +572,24 @@
         else next();
       }, Math.max(2000, options.interval));
     }
-    function stopAutoplay() { if (timer) { clearInterval(timer); timer = null; } }
+    function stopAutoplay() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
 
-    // ------- Smooth drag with spring -------
+    // ===== Drag / Swipe =====
     let pointerDown = false;
     let dragging = false;
     let startX = 0;
-
-    // spring state
-    let desiredDeltaX = 0;   // where we want to be (from finger)
-    let springX = 0;         // current rendered offset
-    let springV = 0;         // velocity (px/s)
-    let springRAF = 0;
-    let lastT = 0;           // ms
-
-    // velocity for momentum (px/ms)
-    let trackV = 0;
-    let lastMoveT = 0;
-    let lastMoveX = 0;
-
+    let deltaX = 0;
     let draggedBeyondClick = false;
 
     const DRAG_START_PX = 6;
 
-    // spring constants (critically damped-ish). Tune to taste.
-    const K = 40;   // stiffness
-    const C = 12;   // damping
-
     function resistedDelta(dx) {
       const atFirst = idx === 0 && dx > 0;
       const atLast  = idx === lastIndex() && dx < 0;
-      return (atFirst || atLast) ? dx * 0.35 : dx;
-    }
-
-    function springFrame(ts){
-      if (!dragging) { springRAF = 0; return; }
-      if (!lastT) lastT = ts;
-      let dt = (ts - lastT) / 1000; // seconds
-      if (dt > 0.05) dt = 0.05;     // clamp to avoid jumps on tab-switch
-
-      // a = k*(target - x) - c*v
-      const a = K * (desiredDeltaX - springX) - C * springV;
-      springV += a * dt;
-      springX += springV * dt;
-
-      render(springX);
-
-      lastT = ts;
-      springRAF = requestAnimationFrame(springFrame);
+      if (atFirst || atLast) return dx * 0.35;
+      return dx;
     }
 
     const onClickCapture = (e) => {
@@ -538,31 +606,20 @@
     function beginDrag(pointerId) {
       dragging = true;
       track.classList.add('is-dragging');
-      // kill CSS transition during drag
-      track.__prevTransition = track.style.transition;
-      track.style.transition = 'none';
+      track.style.userSelect = 'none';
+      track.style.cursor = 'grabbing';
       stopAutoplay();
       try { track.setPointerCapture?.(pointerId); } catch {}
-      lastT = 0; // reset spring timer
-      if (!springRAF) springRAF = requestAnimationFrame(springFrame);
     }
 
     function endDrag(pointerId) {
       dragging = false;
       track.classList.remove('is-dragging');
+      track.style.userSelect = '';
+      track.style.cursor = '';
       try { track.releasePointerCapture?.(pointerId); } catch {}
-
-      // restore CSS transition for snap / settle
-      track.style.transition = track.__prevTransition || '';
-      track.__prevTransition = '';
-
-      cancelAnimationFrame(springRAF);
-      springRAF = 0;
-
-      desiredDeltaX = 0;
-      springX = 0;
-      springV = 0;
       startAutoplay();
+      deltaX = 0;
     }
 
     const onPointerDown = (e) => {
@@ -570,15 +627,8 @@
       pointerDown = true;
       dragging = false;
       startX = e.clientX;
-
-      desiredDeltaX = 0;
-      springX = 0;
-      springV = 0;
+      deltaX = 0;
       draggedBeyondClick = false;
-
-      lastMoveT = performance.now();
-      lastMoveX = startX;
-      trackV = 0;
     };
 
     const onPointerMove = (e) => {
@@ -586,27 +636,20 @@
       const rawDx = e.clientX - startX;
       const dx = resistedDelta(rawDx);
 
-      // track velocity in px/ms (low-pass)
-      const now = performance.now();
-      const dt = Math.max(1, now - lastMoveT);
-      const instV = (e.clientX - lastMoveX) / dt;
-      trackV = trackV * 0.8 + instV * 0.2;
-      lastMoveT = now;
-      lastMoveX = e.clientX;
-
       if (!dragging && Math.abs(rawDx) > DRAG_START_PX) {
         beginDrag(e.pointerId);
       }
       if (dragging) {
-        desiredDeltaX = dx;
+        deltaX = dx;
         if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
+        render(deltaX);
       }
     };
 
     function computeThresholdPx() {
-      if (varOn) return Math.max(36, el.clientWidth * 0.08);
+      if (varOn) return Math.max(40, el.clientWidth * 0.1);
       const slideWidthPx = el.clientWidth / show;
-      return Math.max(36, slideWidthPx * 0.18);
+      return Math.max(40, slideWidthPx * 0.2);
     }
 
     const onPointerUp = (e) => {
@@ -616,14 +659,10 @@
       if (!dragging) return;
 
       const threshold = computeThresholdPx();
-      // Momentum projection: convert px/ms to px with a short horizon
-      const momentumPx = Math.max(-180, Math.min(180, trackV * 180));
-      const projected = desiredDeltaX + momentumPx;
-
-      if (Math.abs(projected) > threshold) {
-        if (projected < 0) next(); else prev();
+      if (Math.abs(deltaX) > threshold) {
+        if (deltaX < 0) next(); else prev();
       } else {
-        applyTransform(); // snap back
+        applyTransform();
       }
       endDrag(e.pointerId);
     };
@@ -639,7 +678,7 @@
       }
     };
 
-    // Touch fallback
+    // Touch fallback handlers (referenced for removal in destroy)
     let onTouchStart, onTouchMove, onTouchEnd, onTouchCancel;
 
     if (hasPointer) {
@@ -653,40 +692,28 @@
       let touchDragging = false;
 
       onTouchStart = (e) => {
-        touching = true; touchDragging = false;
+        touching = true;
+        touchDragging = false;
         startX = e.touches[0].clientX;
-
-        desiredDeltaX = 0; springX = 0; springV = 0;
+        deltaX = 0;
         draggedBeyondClick = false;
-
-        lastMoveT = performance.now();
-        lastMoveX = startX;
-        trackV = 0;
       };
       onTouchMove = (e) => {
         if (!touching) return;
         const rawDx = e.touches[0].clientX - startX;
         const dx = resistedDelta(rawDx);
 
-        const now = performance.now();
-        const dt = Math.max(1, now - lastMoveT);
-        const instV = (e.touches[0].clientX - lastMoveX) / dt;
-        trackV = trackV * 0.8 + instV * 0.2;
-        lastMoveT = now;
-        lastMoveX = e.touches[0].clientX;
-
         if (!touchDragging && Math.abs(rawDx) > DRAG_START_PX) {
           touchDragging = true;
           track.classList.add('is-dragging');
-          track.__prevTransition = track.style.transition;
-          track.style.transition = 'none';
+          track.style.userSelect = 'none';
+          track.style.cursor = 'grabbing';
           stopAutoplay();
-          lastT = 0;
-          if (!springRAF) springRAF = requestAnimationFrame(springFrame);
         }
         if (touchDragging) {
-          desiredDeltaX = dx;
+          deltaX = dx;
           if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
+          render(dx);
         }
       };
       onTouchEnd = () => {
@@ -697,23 +724,17 @@
 
         touchDragging = false;
         track.classList.remove('is-dragging');
-        track.style.transition = track.__prevTransition || '';
-        track.__prevTransition = '';
-
-        cancelAnimationFrame(springRAF);
-        springRAF = 0;
+        track.style.userSelect = '';
+        track.style.cursor = '';
 
         const threshold = computeThresholdPx();
-        const momentumPx = Math.max(-180, Math.min(180, trackV * 180));
-        const projected = desiredDeltaX + momentumPx;
-
-        if (Math.abs(projected) > threshold) {
-          if (projected < 0) next(); else prev();
+        if (Math.abs(deltaX) > threshold) {
+          if (deltaX < 0) next(); else prev();
         } else {
           applyTransform();
         }
         startAutoplay();
-        desiredDeltaX = 0; springX = 0; springV = 0;
+        deltaX = 0;
       };
       onTouchCancel = onTouchEnd;
 
@@ -723,116 +744,26 @@
       track.addEventListener("touchcancel", onTouchCancel, { passive: true });
     }
 
-    // external driver
+    // ===== Custom event hook for external drivers (optional use)
     track.addEventListener("vs:step", (e) => {
       const dir = (e && e.detail && typeof e.detail.dir === "number") ? e.detail.dir : 0;
       if (dir < 0) prev(); else next();
       e.preventDefault();
     });
 
-    function applyTransform() {
-      render(0);
-      updateDots();
-      updateArrows();
+    // ===== Wrap-aware navigation (no clones) =====
+    function withoutTransition(fn){
+      const prev = track.style.transition;
+      track.style.transition = 'none';
+      fn();
+      track.getBoundingClientRect();
+      track.style.transition = prev || '';
     }
-
-    function measure() {
-      const oldIdx = idx;
-      const newShow = computeShow();
-      const newVar  = variableActive();
-
-      canLoop = false;
-
-      if (newVar) {
-        originalSlides.forEach(s => (s.style.width = ""));
-        headClones.forEach(s => (s.style.width = ""));
-        tailClones.forEach(s => (s.style.width = ""));
-      } else {
-        const w = (100 / newShow) + "%";
-        originalSlides.forEach(s => (s.style.width = w));
-        headClones.forEach(s => (s.style.width = w));
-        tailClones.forEach(s => (s.style.width = w));
-      }
-
-      const showChanged = newShow !== show;
-      const varChanged  = newVar !== varOn;
-      show = newShow;
-      varOn = newVar;
-
-      headClones.forEach(n => n.remove());
-      tailClones.forEach(n => n.remove());
-      headClones = []; tailClones = [];
-      slides = Array.from(track.children);
-
-      computeMetrics();
-
-      if (showChanged || varChanged) {
-        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
-      }
-
-      // reconcile arrows visibility (custom + internal) against pageable state
-      const pageable = Math.ceil(count / show) > 1;
-      reconcileCustomArrows(wrapper, options, pageable);
-
-      applyTransform();
-    }
-
-    function updateDots() {
-      if (dotsSets.length === 0) return;
-      const starts = pageStarts();
-
-      dotsSets.forEach(set => {
-        const dots = getDotElements(set);
-        if (dots.length === 0) return;
-
-        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
-          buildAutoDots(set);
-        }
-
-        let active = starts.indexOf(idx);
-        if (active === -1) {
-          active = 0;
-          for (let j = 0; j < starts.length; j++) {
-            if (idx >= starts[j]) active = j; else break;
-          }
-        }
-
-        const isPageSet = (dots.length === starts.length);
-        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
-
-        dots.forEach((b, i) => {
-          if (i === activeIndex) {
-            b.setAttribute("aria-current", "true");
-            b.classList.add("is-active");
-          } else {
-            b.removeAttribute("aria-current");
-            b.classList.remove("is-active");
-          }
-        });
+    function teleport(afterSetIdx){
+      withoutTransition(() => {
+        if (typeof afterSetIdx === 'function') afterSetIdx();
+        render(0);
       });
-    }
-
-    function updateArrows() {
-      if (!options.arrows) return;
-      const atStart = idx <= 0;
-      const atEnd   = idx >= lastIndex();
-      const multi   = lastIndex() > 0;
-      const showPrev = options.loop ? multi : !atStart;
-      const showNext = options.loop ? multi : !atEnd;
-
-      if (prevBtn) {
-        prevBtn.hidden = !showPrev;
-        prevBtn.disabled = !showPrev;
-        prevBtn.setAttribute("aria-disabled", String(!showPrev));
-      }
-      if (nextBtn) {
-        nextBtn.hidden = !showNext;
-        nextBtn.disabled = !showNext;
-        nextBtn.setAttribute("aria-disabled", String(!showNext));
-      }
-
-      const pageable = Math.ceil(count / show) > 1;
-      reconcileCustomArrows(wrapper, options, pageable);
     }
 
     function goTo(targetIdx, stopAuto) {
@@ -852,18 +783,18 @@
     function next(){ goTo(idx + pageStep()); }
     function prev(){ goTo(idx - pageStep()); }
 
-    // hover pause
+    // Pause on hover (mouse only)
     el.addEventListener("mouseenter", stopAutoplay);
     el.addEventListener("mouseleave", startAutoplay);
 
-    // element resize
+    // Resize (element size)
     const ro = new ResizeObserver(() => {
       if (raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(measure);
     });
     ro.observe(el);
 
-    // init
+    // Init
     slides = Array.from(track.children);
     measure();
     updateDots();
@@ -872,6 +803,7 @@
 
     const api = { next, prev, goTo, startAutoplay, stopAutoplay, destroy, options };
     el.__vs = api;
+
     return api;
 
     function destroy() {
@@ -904,8 +836,7 @@
       if (pBtn) pBtn.remove();
       if (nBtn) nBtn.remove();
 
-      headClones.forEach(n => n.remove());
-      tailClones.forEach(n => n.remove());
+      removeClones();
       originalSlides.forEach(s => track.appendChild(s));
 
       const children = Array.from(track.children);
@@ -915,7 +846,7 @@
     }
   }
 
-  // -------- Auto-init / observers --------
+  // Auto-init / responsive enablement
   function initAll(root = document) {
     root.querySelectorAll("[data-slider]").forEach(el => ensureSlider(el));
   }
@@ -968,7 +899,6 @@
     });
   });
 
-  // Public API
   window.VanillaSlider = {
     create: createSlider,
     initAll,
@@ -976,7 +906,7 @@
     ensure: ensureSlider
   };
 
-  // Global custom arrows delegate
+  // ====== ARROWS ANYWHERE: delegate custom arrow clicks globally ======
   if (!window.__vsArrowsDelegated) {
     window.__vsArrowsDelegated = true;
     document.addEventListener("click", (e) => {
@@ -988,7 +918,9 @@
       const slider = resolveSliderForArrow(arrow);
       if (!slider) return;
 
+      // Ensure slider is initialized (respect mobile/breakpoint)
       VanillaSlider.ensure(slider);
+
       const api = slider.__vs;
       if (!api) return;
 
@@ -999,7 +931,7 @@
 
 })();
 
-/* featured-collections image height sync (unchanged except tiny tidy) */
+/* featured-collections image height sync (unchanged) */
 (function () {
   "use strict";
 
@@ -1059,7 +991,10 @@
         if (node.matches?.('[data-slider]')) bindSlider(node);
         node.querySelectorAll?.('[data-slider]').forEach(el => bindSlider(el));
       });
-      if (m.target instanceof Element && m.target.matches?.('[data-slider]')) bindSlider(m.target);
+
+      if (m.target instanceof Element && m.target.matches?.('[data-slider]')) {
+        bindSlider(m.target);
+      }
     });
   });
 
