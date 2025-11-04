@@ -144,24 +144,6 @@
         "shuffle": false
       }
     },
-    "banner_rz6gpk": {
-      "type": "banner",
-      "disabled": true,
-      "name": "Banner",
-      "settings": {
-        "class": "",
-        "bg_color": "#ffffff",
-        "height": 200,
-        "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner.jpg",
-        "preheading": "",
-        "heading": "",
-        "heading_element": "h2",
-        "text": "",
-        "link": "",
-        "linktext": "",
-        "linkclass": ""
-      }
-    },
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
       "custom_css": [],
@@ -692,13 +674,35 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
+    },
+    "ads_block_8LK7th": {
+      "type": "ads-block",
+      "blocks": {
+        "image_D8m6de": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "url": "",
+            "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner.jpg",
+            "image_mobile": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Mobile_Half_Banner.jpg",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_D8m6de"
+      ],
+      "name": "Ads Block",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "hero_video_Ar6Ham",
     "top_notification_banner_yteqNA",
     "header_banner_MUPtRQ",
-    "banner_rz6gpk",
+    "ads_block_8LK7th",
     "inline_buttons_f7DDkA",
     "flipped_boxes_kG6gXk",
     "rich_text_gwEVLb",
