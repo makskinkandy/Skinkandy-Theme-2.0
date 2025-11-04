@@ -1003,29 +1003,6 @@
     observeSliders.observe(document.documentElement, { childList: true, subtree: true });
   }
 
-    // Queue a global reconcile of custom arrow visibility (de-duped by RAF)
-    function scheduleReconcileCustomArrows() {
-      if (reconcileArrowsRaf) return;
-      reconcileArrowsRaf = requestAnimationFrame(() => {
-        reconcileArrowsRaf = 0;
-        const all = document.querySelectorAll(`${CUSTOM_PREV},${CUSTOM_NEXT}`);
-        all.forEach(btn => {
-          const slider = resolveSliderForArrow(btn);
-          const st = slider && SliderState.get(slider);
-          if (!st) {
-            btn.removeAttribute("data-vs-hidden");
-            return;
-          }
-          // Hide custom arrows whenever the slider is a single page
-          // Desktop: items < data-show
-          // Mobile:  items < data-show-mobile
-          const shouldHide = !st.pageable;
-          if (shouldHide) btn.setAttribute("data-vs-hidden","true");
-          else btn.removeAttribute("data-vs-hidden");
-        });
-      });
-    }
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initNow, { once: true });
   } else {
