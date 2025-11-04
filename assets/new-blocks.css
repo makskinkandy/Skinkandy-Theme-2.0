@@ -1404,6 +1404,8 @@
     }
 
     .vs-arrow {
+        top: 40%;
+        transform: unset;
         @media screen and (min-width: 1025px) {
             display: none;
         }
