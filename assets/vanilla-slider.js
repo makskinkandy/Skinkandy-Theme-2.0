@@ -7,7 +7,7 @@
     arrows: false,
     autoplay: false,
     shuffle: false,
-    // Loop semantics: no clones; wrap between first/last pages.
+    // Loop semantics changed: no clones; wrap between first/last pages.
     loop: false,
     interval: 5000,            // ms
     slidesToShow: 1,           // base/desktop
@@ -17,28 +17,13 @@
     breakpoint: 768            // width (px) threshold
   };
 
-  // ====== ARROWS ANYWHERE (globals) ======
-  const ROOT_HINT = "[data-slider-root]";
-  const CUSTOM_PREV = "[data-slider-prev]";
-  const CUSTOM_NEXT = "[data-slider-next]";
-  const INTERNAL_PREV = ".vs-arrow--prev";
-  const INTERNAL_NEXT = ".vs-arrow--next";
-  const TRACK_SELECTOR_CORE = ".vs-track";
-  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";
-
+  // Ensure we have a transition for smooth movement
   (function injectStyle(){
     const id = "vs-track-style";
     if (!document.getElementById(id)) {
       const s = document.createElement("style");
       s.id = id;
       s.textContent = `.vs-track{transition:transform .35s ease;will-change:transform}`;
-      document.head.appendChild(s);
-    }
-    const idHide = "vs-internal-hide-style";
-    if (!document.getElementById(idHide)) {
-      const s = document.createElement("style");
-      s.id = idHide;
-      s.textContent = `.${HIDE_INTERNAL_CLASS}{display:none!important}`;
       document.head.appendChild(s);
     }
   })();
@@ -98,78 +83,6 @@
       }
     }
     return o;
-  }
-
-  function getSliderRoot(el) {
-    return el.closest(ROOT_HINT) || el.parentElement || el;
-  }
-
-  function resolveSliderForArrow(arrow) {
-    const targetSel = arrow.getAttribute?.("data-slider-target");
-    if (targetSel) {
-      const s = document.querySelector(targetSel);
-      if (s && s.matches && s.matches("[data-slider]")) return s;
-    }
-
-    const inside = arrow.closest?.("[data-slider]");
-    if (inside) return inside;
-
-    const root = arrow.closest?.(ROOT_HINT);
-    if (root) {
-      const sliders = Array.from(root.querySelectorAll("[data-slider]"));
-      if (sliders.length === 1) return sliders[0];
-      if (sliders.length > 1) {
-        const ar = arrow.getBoundingClientRect();
-        const arrowBottom = ar.bottom;
-        const arrowTop = ar.top;
-
-        let best = null;
-        let bestDelta = Infinity;
-
-        for (const s of sliders) {
-          const r = s.getBoundingClientRect();
-          const delta = r.top - arrowBottom;
-          if (delta >= -1 && delta < bestDelta) {
-            bestDelta = delta;
-            best = s;
-          }
-        }
-
-        if (!best) {
-          bestDelta = Infinity;
-          for (const s of sliders) {
-            const r = s.getBoundingClientRect();
-            const delta = arrowTop - r.bottom;
-            if (delta >= -1 && delta < bestDelta) {
-              bestDelta = delta;
-              best = s;
-            }
-          }
-        }
-
-        if (!best) {
-          const arx = (ar.left + ar.right) / 2, ary = (ar.top + ar.bottom) / 2;
-          let bestD = Infinity;
-          for (const s of sliders) {
-            const r = s.getBoundingClientRect();
-            const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2;
-            const d = (cx - arx) * (cx - arx) + (cy - ary) * (cy - ary);
-            if (d < bestD) { bestD = d; best = s; }
-          }
-        }
-
-        if (best) return best;
-      }
-    }
-
-    let n = arrow.parentElement;
-    while (n && n !== document.documentElement) {
-      const s = n.querySelector?.("[data-slider]");
-      if (s) return s;
-      n = n.parentElement;
-    }
-
-    return document.querySelector("[data-slider]");
   }
 
   function ensureSlider(el) {
@@ -238,15 +151,13 @@
     originalSlides.forEach(s => track.appendChild(s));
     el.appendChild(track);
 
-    const wrapper = getSliderRoot(el);
-    const hasCustomArrowsNow = !!(wrapper && wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`));
-
+    // We keep clone scaffolding (unused now) for minimal diff surface
     let headClones = [];
     let tailClones = [];
     let slides = [];
     let show = 1;
     let varOn = false;
-    let canLoop = false;
+    let canLoop = false; // clone-based infinite mode (disabled in this version)
 
     function removeClones(){
       headClones.forEach(n => n.remove());
@@ -254,10 +165,10 @@
       headClones = [];
       tailClones = [];
     }
-    function rebuildClones(){}
+    function rebuildClones(){ /* not used anymore */ }
 
     const count = originalSlides.length;
-    let idx = 0;
+    let idx = 0;      // index into ORIGINAL pages (0..lastIndex())
     let timer = null;
     let raf = null;
 
@@ -303,6 +214,7 @@
       }
     }
 
+    // ---- NEW lastIndex() (replaces maxIndex()) ----
     const lastIndex = () => {
       if (count <= show) return 0;
       const rem = count % show;
@@ -324,6 +236,104 @@
         const base = -baseTrackIdx * slideWidthPx;
         track.style.transform = `translateX(${base + extraPx}px)`;
       }
+    }
+
+    function updateDots() {
+      if (dotsSets.length === 0) return;
+      const starts = pageStarts();
+
+      dotsSets.forEach(set => {
+        const dots = getDotElements(set);
+        if (dots.length === 0) return;
+
+        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
+          buildAutoDots(set);
+        }
+
+        let active = starts.indexOf(idx);
+        if (active === -1) {
+          active = 0;
+          for (let j = 0; j < starts.length; j++) {
+            if (idx >= starts[j]) active = j; else break;
+          }
+        }
+
+        const isPageSet = (dots.length === starts.length);
+        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
+
+        dots.forEach((b, i) => {
+          if (i === activeIndex) {
+            b.setAttribute("aria-current", "true");
+            b.classList.add("is-active");
+          } else {
+            b.removeAttribute("aria-current");
+            b.classList.remove("is-active");
+          }
+        });
+      });
+    }
+
+    function updateArrows() {
+      if (!options.arrows) return;
+      const atStart = idx <= 0;
+      const atEnd = idx >= lastIndex();
+      const multi = lastIndex() > 0;
+      const showPrev = options.loop ? multi : !atStart;
+      const showNext = options.loop ? multi : !atEnd;
+
+      if (prevBtn) {
+        prevBtn.hidden = !showPrev;
+        prevBtn.disabled = !showPrev;
+        prevBtn.setAttribute("aria-disabled", String(!showPrev));
+      }
+      if (nextBtn) {
+        nextBtn.hidden = !showNext;
+        nextBtn.disabled = !showNext;
+        nextBtn.setAttribute("aria-disabled", String(!showNext));
+      }
+    }
+
+    function applyTransform() {
+      render(0);
+      updateDots();
+      updateArrows();
+    }
+
+    function measure() {
+      const oldIdx = idx;
+      const newShow = computeShow();
+      const newVar = variableActive();
+
+      // Clone-based loop is disabled; we only wrap indices in goTo()
+      canLoop = false;
+
+      if (newVar) {
+        originalSlides.forEach(s => (s.style.width = ""));
+        headClones.forEach(s => (s.style.width = ""));
+        tailClones.forEach(s => (s.style.width = ""));
+      } else {
+        const w = (100 / newShow) + "%";
+        originalSlides.forEach(s => (s.style.width = w));
+        headClones.forEach(s => (s.style.width = w));
+        tailClones.forEach(s => (s.style.width = w));
+      }
+
+      const showChanged = newShow !== show;
+      const varChanged  = newVar !== varOn;
+      show = newShow;
+      varOn = newVar;
+
+      // No clone mode
+      removeClones();
+      slides = Array.from(track.children);
+
+      computeMetrics();
+
+      if (showChanged || varChanged) {
+        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
+      }
+
+      applyTransform();
     }
 
     // ===== Dots (multi-set) =====
@@ -400,54 +410,12 @@
       dotsSets = [];
     }
 
-    function updateDots() {
-      if (dotsSets.length === 0) return;
-    
-      const starts = pageStarts();
-    
-      dotsSets.forEach(set => {
-        let dots = getDotElements(set);
-        if (dots.length === 0) return;
-    
-        // If we auto-built dots, keep them in sync with page count
-        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
-          buildAutoDots(set);
-          dots = getDotElements(set);
-        }
-    
-        // Work out which dot should be active
-        let active = starts.indexOf(idx);
-        if (active === -1) {
-          active = 0;
-          for (let j = 0; j < starts.length; j++) {
-            if (idx >= starts[j]) active = j; else break;
-          }
-        }
-    
-        const isPageSet = (dots.length === starts.length);
-        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
-    
-        dots.forEach((b, i) => {
-          if (i === activeIndex) {
-            b.setAttribute("aria-current", "true");
-            b.classList.add("is-active");
-          } else {
-            b.removeAttribute("aria-current");
-            b.classList.remove("is-active");
-          }
-        });
-      });
-    }
-
     collectDotsSets();
     bindDots();
 
-    // ===== Arrows (internal) =====
+    // ===== Arrows =====
     let prevBtn = null, nextBtn = null;
-
-    const shouldCreateInternalArrows = options.arrows && !hasCustomArrowsNow;
-
-    if (shouldCreateInternalArrows) {
+    if (options.arrows) {
       prevBtn = document.createElement("button");
       nextBtn = document.createElement("button");
       prevBtn.type = "button"; nextBtn.type = "button";
@@ -462,23 +430,6 @@
       el.appendChild(prevBtn);
       el.appendChild(nextBtn);
     }
-
-    // Hide internal arrows if custom ones appear later in the wrapper
-    let arrowsMO = null;
-    (function setupInternalArrowReconciler(){
-      if (!options.arrows) return;
-      if (!wrapper) return;
-
-      const check = () => {
-        const hasCustom = !!wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`);
-        const internals = wrapper.querySelectorAll(`${INTERNAL_PREV}, ${INTERNAL_NEXT}`);
-        internals.forEach(b => b.classList.toggle(HIDE_INTERNAL_CLASS, hasCustom));
-      };
-      check();
-
-      arrowsMO = new MutationObserver(() => check());
-      arrowsMO.observe(wrapper, { childList: true, subtree: true });
-    })();
 
     // ===== Autoplay / Shuffle =====
     function randomIndex() {
@@ -511,6 +462,7 @@
     const DRAG_START_PX = 6;
 
     function resistedDelta(dx) {
+      // Resist at edges (since clones are not used)
       const atFirst = idx === 0 && dx > 0;
       const atLast  = idx === lastIndex() && dx < 0;
       if (atFirst || atLast) return dx * 0.35;
@@ -669,17 +621,12 @@
       track.addEventListener("touchcancel", onTouchCancel, { passive: true });
     }
 
-    track.addEventListener("vs:step", (e) => {
-      const dir = (e && e.detail && typeof e.detail.dir === "number") ? e.detail.dir : 0;
-      if (dir < 0) prev(); else next();
-      e.preventDefault();
-    });
-
+    // ===== Wrap-aware navigation (no clones) =====
     function withoutTransition(fn){
       const prev = track.style.transition;
       track.style.transition = 'none';
       fn();
-      track.getBoundingClientRect();
+      track.getBoundingClientRect(); // force reflow
       track.style.transition = prev || '';
     }
     function teleport(afterSetIdx){
@@ -694,8 +641,8 @@
       let newIdx = targetIdx;
 
       if (options.loop) {
-        if (targetIdx > last) newIdx = 0;
-        else if (targetIdx < 0) newIdx = last;
+        if (targetIdx > last) newIdx = 0;       // wrap forward
+        else if (targetIdx < 0) newIdx = last;  // wrap backward
       }
 
       idx = Math.max(0, Math.min(newIdx, last));
@@ -705,94 +652,6 @@
 
     function next(){ goTo(idx + pageStep()); }
     function prev(){ goTo(idx - pageStep()); }
-
-    // ===== Arrow visibility helpers (desktop hide when count ≤ desktop show) =====
-    function isDesktopView() {
-      const bp = Number.isFinite(options.breakpoint) ? options.breakpoint : DEFAULTS.breakpoint;
-      return window.innerWidth > bp;
-    }
-    function setCustomArrowsVisibility(hide) {
-      if (!wrapper) return;
-      const custom = wrapper.querySelectorAll(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`);
-      custom.forEach(btn => {
-        btn.style.display = hide ? "none" : "";
-        btn.setAttribute("aria-hidden", String(hide));
-      });
-    }
-
-    function updateArrows() {
-      if (!options.arrows) return;
-
-      const desktopShow = Number.isFinite(options.slidesToShow) && options.slidesToShow > 0
-        ? options.slidesToShow
-        : DEFAULTS.slidesToShow;
-
-      const hideAllOnDesktop = isDesktopView() && count <= desktopShow;
-
-      if (prevBtn) prevBtn.style.display = hideAllOnDesktop ? "none" : "";
-      if (nextBtn) nextBtn.style.display = hideAllOnDesktop ? "none" : "";
-      setCustomArrowsVisibility(hideAllOnDesktop);
-
-      if (hideAllOnDesktop) return;
-
-      const atStart = idx <= 0;
-      const atEnd = idx >= lastIndex();
-      const multi = lastIndex() > 0;
-      const showPrev = options.loop ? multi : !atStart;
-      const showNext = options.loop ? multi : !atEnd;
-
-      if (prevBtn) {
-        prevBtn.hidden = !showPrev;
-        prevBtn.disabled = !showPrev;
-        prevBtn.setAttribute("aria-disabled", String(!showPrev));
-      }
-      if (nextBtn) {
-        nextBtn.hidden = !showNext;
-        nextBtn.disabled = !showNext;
-        nextBtn.setAttribute("aria-disabled", String(!showNext));
-      }
-    }
-
-    function applyTransform() {
-      render(0);
-      updateDots();
-      updateArrows();
-    }
-
-    function measure() {
-      const oldIdx = idx;
-      const newShow = computeShow();
-      const newVar = variableActive();
-
-      canLoop = false;
-
-      if (newVar) {
-        originalSlides.forEach(s => (s.style.width = ""));
-        headClones.forEach(s => (s.style.width = ""));
-        tailClones.forEach(s => (s.style.width = ""));
-      } else {
-        const w = (100 / newShow) + "%";
-        originalSlides.forEach(s => (s.style.width = w));
-        headClones.forEach(s => (s.style.width = w));
-        tailClones.forEach(s => (s.style.width = w));
-      }
-
-      const showChanged = newShow !== show;
-      const varChanged  = newVar !== varOn;
-      show = newShow;
-      varOn = newVar;
-
-      removeClones();
-      slides = Array.from(track.children);
-
-      computeMetrics();
-
-      if (showChanged || varChanged) {
-        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
-      }
-
-      applyTransform();
-    }
 
     // Pause on hover (mouse only)
     el.addEventListener("mouseenter", stopAutoplay);
@@ -825,8 +684,6 @@
       el.removeEventListener("mouseleave", startAutoplay);
       el.removeEventListener("click", onClickCapture, true);
 
-      if (arrowsMO) { arrowsMO.disconnect(); arrowsMO = null; }
-
       if (hasPointer) {
         track.removeEventListener("pointerdown", onPointerDown, { passive: true });
         track.removeEventListener("pointermove", onPointerMove, { passive: true });
@@ -842,8 +699,8 @@
 
       unbindDots();
 
-      const pBtn = el.querySelector(INTERNAL_PREV);
-      const nBtn = el.querySelector(INTERNAL_NEXT);
+      const pBtn = el.querySelector(".vs-arrow--prev");
+      const nBtn = el.querySelector(".vs-arrow--next");
       if (pBtn) pBtn.remove();
       if (nBtn) nBtn.remove();
 
@@ -916,32 +773,9 @@
     ensureAll,
     ensure: ensureSlider
   };
-
-  // ====== ARROWS ANYWHERE: delegate custom arrow clicks globally ======
-  if (!window.__vsArrowsDelegated) {
-    window.__vsArrowsDelegated = true;
-    document.addEventListener("click", (e) => {
-      const prev = e.target.closest(CUSTOM_PREV);
-      const next = !prev && e.target.closest(CUSTOM_NEXT);
-      if (!prev && !next) return;
-
-      const arrow = prev || next;
-      const slider = resolveSliderForArrow(arrow);
-      if (!slider) return;
-
-      VanillaSlider.ensure(slider);
-
-      const api = slider.__vs;
-      if (!api) return;
-
-      e.preventDefault();
-      if (prev) api.prev(); else api.next();
-    }, true);
-  }
-
 })();
 
-/* featured-collections image height sync (unchanged) */
+/* featured-collections image height sync */
 (function () {
   "use strict";
 
