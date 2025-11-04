@@ -20,7 +20,7 @@
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
               {% assign item = block.settings.piercing_menu %}
-              <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}" data-slider data-arrows="true" data-show="4" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="1">
+              <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}" data-slider data-dots="false" data-arrows="true" data-show="4" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="1">
                   {% for piercing in item.piercing_menu_item.value %}
                     <div class="piercing-menu__item">
                       <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
