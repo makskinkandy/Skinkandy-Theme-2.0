@@ -4,9 +4,11 @@
         {% if section.settings.title %}
           <h2>{{ section.settings.title }}</h2>
           {% endif %}
-
+          <div class="piercing-menu__arrows">
+            <button class="prev btn--slider" data-slider-prev>{{  'Arrow-down.svg' | inline_asset_content}}</button>
+            <button class="next btn--slider" data-slider-next>{{  'Arrow-down.svg' | inline_asset_content}}</button>
+          </div>
       </div>
-
         {% if section.blocks.size > 1 %}
           <div class="piercing-menu__nav-wrapper">
             <div class="piercing-menu__nav">
