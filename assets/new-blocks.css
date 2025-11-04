@@ -1471,6 +1471,9 @@
         h4 {
             margin-top: 1.12rem;
             margin-bottom: 1.12rem;
+            @media screen and (max-width: 575px) {
+                font-size: 1rem;
+            }
         }
         span {
             line-height: 1rem;
