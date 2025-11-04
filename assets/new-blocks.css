@@ -1442,6 +1442,9 @@
                 gap: 0.62rem;
                 padding: 0;
             }
+            @media screen and (max-width:575px) {
+                gap: 1rem;
+            }
         }
         
     }
