@@ -111,6 +111,7 @@
     return el.closest(ROOT_HINT) || el.parentElement || el;
   }
 
+  // Order-agnostic resolver for buttons before/after the slider
   function resolveSliderForArrow(arrow) {
     const targetSel = arrow.getAttribute?.("data-slider-target");
     if (targetSel) {
@@ -270,7 +271,6 @@
       headClones = [];
       tailClones = [];
     }
-    function rebuildClones(){}
 
     const count = originalSlides.length;
     let idx = 0;
@@ -330,15 +330,20 @@
       return (canLoop ? headClones.length : 0) + idxOriginal;
     }
 
+    // GPU-friendly transform
+    function setTransform(px) {
+      track.style.transform = `translate3d(${px}px,0,0)`;
+    }
+
     function render(extraPx = 0) {
       const baseTrackIdx = trackIndexFor(idx);
       if (varOn) {
         const base = -(positions[baseTrackIdx] || 0);
-        track.style.transform = `translateX(${base + extraPx}px)`;
+        setTransform(base + extraPx);
       } else {
         const slideWidthPx = el.clientWidth / show;
         const base = -baseTrackIdx * slideWidthPx;
-        track.style.transform = `translateX(${base + extraPx}px)`;
+        setTransform(base + extraPx);
       }
     }
 
@@ -576,10 +581,19 @@
       if (timer) { clearInterval(timer); timer = null; }
     }
 
+    // Smooth drag state
     let pointerDown = false;
     let dragging = false;
     let startX = 0;
-    let deltaX = 0;
+    let desiredDeltaX = 0;  // target offset while dragging
+    let smoothDeltaX = 0;   // smoothed offset rendered
+    let dragRaf = 0;
+
+    // velocity tracking
+    let lastMoveT = 0;
+    let lastMoveX = 0;
+    let velocity = 0; // px/ms averaged lightweight
+
     let draggedBeyondClick = false;
 
     const DRAG_START_PX = 6;
@@ -587,8 +601,7 @@
     function resistedDelta(dx) {
       const atFirst = idx === 0 && dx > 0;
       const atLast  = idx === lastIndex() && dx < 0;
-      if (atFirst || atLast) return dx * 0.35;
-      return dx;
+      return (atFirst || atLast) ? dx * 0.35 : dx;
     }
 
     const onClickCapture = (e) => {
@@ -607,8 +620,13 @@
       track.classList.add('is-dragging');
       track.style.userSelect = 'none';
       track.style.cursor = 'grabbing';
+      // kill CSS transition during active drag for instant response; we add smoothing via RAF
+      const prev = track.style.transition;
+      track.__prevTransition = prev;
+      track.style.transition = 'none';
       stopAutoplay();
       try { track.setPointerCapture?.(pointerId); } catch {}
+      if (!dragRaf) dragRaf = requestAnimationFrame(dragAnimate);
     }
 
     function endDrag(pointerId) {
@@ -617,8 +635,24 @@
       track.style.userSelect = '';
       track.style.cursor = '';
       try { track.releasePointerCapture?.(pointerId); } catch {}
+      // snap back to CSS transition for the settle animation
+      track.style.transition = track.__prevTransition || '';
+      track.__prevTransition = '';
+
+      cancelAnimationFrame(dragRaf);
+      dragRaf = 0;
+      desiredDeltaX = 0;
+      smoothDeltaX = 0;
       startAutoplay();
-      deltaX = 0;
+    }
+
+    function dragAnimate(){
+      if (!dragging) { dragRaf = 0; return; }
+      // simple critically-damped-ish interpolation
+      const lerp = 0.25; // lower = smoother/softer
+      smoothDeltaX += (desiredDeltaX - smoothDeltaX) * lerp;
+      render(smoothDeltaX);
+      dragRaf = requestAnimationFrame(dragAnimate);
     }
 
     const onPointerDown = (e) => {
@@ -626,8 +660,12 @@
       pointerDown = true;
       dragging = false;
       startX = e.clientX;
-      deltaX = 0;
+      desiredDeltaX = 0;
+      smoothDeltaX = 0;
       draggedBeyondClick = false;
+      lastMoveT = performance.now();
+      lastMoveX = startX;
+      velocity = 0;
     };
 
     const onPointerMove = (e) => {
@@ -635,20 +673,28 @@
       const rawDx = e.clientX - startX;
       const dx = resistedDelta(rawDx);
 
+      // velocity
+      const now = performance.now();
+      const dt = Math.max(1, now - lastMoveT);
+      const instV = (e.clientX - lastMoveX) / dt; // px/ms
+      // low-pass filter velocity
+      velocity = velocity * 0.8 + instV * 0.2;
+      lastMoveT = now;
+      lastMoveX = e.clientX;
+
       if (!dragging && Math.abs(rawDx) > DRAG_START_PX) {
         beginDrag(e.pointerId);
       }
       if (dragging) {
-        deltaX = dx;
+        desiredDeltaX = dx;
         if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
-        render(deltaX);
       }
     };
 
     function computeThresholdPx() {
-      if (varOn) return Math.max(40, el.clientWidth * 0.1);
+      if (varOn) return Math.max(36, el.clientWidth * 0.08);
       const slideWidthPx = el.clientWidth / show;
-      return Math.max(40, slideWidthPx * 0.2);
+      return Math.max(36, slideWidthPx * 0.18);
     }
 
     const onPointerUp = (e) => {
@@ -658,8 +704,13 @@
       if (!dragging) return;
 
       const threshold = computeThresholdPx();
-      if (Math.abs(deltaX) > threshold) {
-        if (deltaX < 0) next(); else prev();
+
+      // momentum: project a short flick forward in the drag direction
+      const momentumPx = Math.max(-180, Math.min(180, velocity * 180)); // cap
+      const projected = desiredDeltaX + momentumPx;
+
+      if (Math.abs(projected) > threshold) {
+        if (projected < 0) next(); else prev();
       } else {
         applyTransform();
       }
@@ -693,25 +744,37 @@
         touching = true;
         touchDragging = false;
         startX = e.touches[0].clientX;
-        deltaX = 0;
+        desiredDeltaX = 0;
+        smoothDeltaX = 0;
         draggedBeyondClick = false;
+        lastMoveT = performance.now();
+        lastMoveX = startX;
+        velocity = 0;
       };
       onTouchMove = (e) => {
         if (!touching) return;
         const rawDx = e.touches[0].clientX - startX;
         const dx = resistedDelta(rawDx);
 
+        const now = performance.now();
+        const dt = Math.max(1, now - lastMoveT);
+        const instV = (e.touches[0].clientX - lastMoveX) / dt;
+        velocity = velocity * 0.8 + instV * 0.2;
+        lastMoveT = now;
+        lastMoveX = e.touches[0].clientX;
+
         if (!touchDragging && Math.abs(rawDx) > DRAG_START_PX) {
           touchDragging = true;
           track.classList.add('is-dragging');
-          track.style.userSelect = 'none';
-          track.style.cursor = 'grabbing';
+          const prev = track.style.transition;
+          track.__prevTransition = prev;
+          track.style.transition = 'none';
           stopAutoplay();
+          if (!dragRaf) dragRaf = requestAnimationFrame(dragAnimate);
         }
         if (touchDragging) {
-          deltaX = dx;
+          desiredDeltaX = dx;
           if (Math.abs(rawDx) > DRAG_START_PX) draggedBeyondClick = true;
-          render(dx);
         }
       };
       onTouchEnd = () => {
@@ -722,17 +785,24 @@
 
         touchDragging = false;
         track.classList.remove('is-dragging');
-        track.style.userSelect = '';
-        track.style.cursor = '';
+        track.style.transition = track.__prevTransition || '';
+        track.__prevTransition = '';
+
+        cancelAnimationFrame(dragRaf);
+        dragRaf = 0;
 
         const threshold = computeThresholdPx();
-        if (Math.abs(deltaX) > threshold) {
-          if (deltaX < 0) next(); else prev();
+        const momentumPx = Math.max(-180, Math.min(180, velocity * 180));
+        const projected = desiredDeltaX + momentumPx;
+
+        if (Math.abs(projected) > threshold) {
+          if (projected < 0) next(); else prev();
         } else {
           applyTransform();
         }
         startAutoplay();
-        deltaX = 0;
+        desiredDeltaX = 0;
+        smoothDeltaX = 0;
       };
       onTouchCancel = onTouchEnd;
 
