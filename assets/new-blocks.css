@@ -1090,10 +1090,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @media screen and (max-width: 575px) {
-            width: 28px;
-            height: 28px;
-        }
+        cursor: pointer;
         img {
             display: block;
             width: 100%;
@@ -1142,14 +1139,14 @@
             line-height: 1.25rem;
             @media screen and (max-width: 575px) {
                 font-size: 12px;
-                width: 50%;
+                width: 60%;
             }
         }
 
         span:first-child {
             width: 35%;
             @media screen and (max-width: 575px) {
-                width: 50%;
+                width: 47%;
             }
         }
 
@@ -1162,7 +1159,6 @@
             justify-content: space-between;
             border-bottom: solid 1px var(--light-grey);
             padding: 0.92rem 0;
-            align-items: center;
             &.jewellery-type {
                 min-height: 81.19px;
             }
@@ -1180,6 +1176,7 @@
             @media screen and (max-width: 575px) {
                 height: 260px;
                 min-height: auto;
+                width: 260px;
             }
         }
         .piercing-menu__img-wrapper {
@@ -1461,11 +1458,11 @@
             padding: 1.25rem;
         }
         @media screen and (max-width: 575px) {
-            padding: 0;
+            padding: 1rem;
         }
         img {
             align-self: start;
-            max-width: fit-content;
+            max-width: 4rem;
             margin-inline: auto;
             max-height: fit-content;
             @media screen and (max-width: 575px) {
