@@ -9,15 +9,6 @@
  */
 {
   "sections": {
-    "top_notification_banner_yteqNA": {
-      "type": "top-notification-banner",
-      "disabled": true,
-      "settings": {
-        "enable": true,
-        "notification_text": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
-        "bg_color": "#e42228"
-      }
-    },
     "hero_video_Ar6Ham": {
       "type": "hero-video",
       "disabled": true,
@@ -34,6 +25,15 @@
         "overlay_opacity": 0,
         "section_height": "650px",
         "mobile_height": "auto"
+      }
+    },
+    "top_notification_banner_yteqNA": {
+      "type": "top-notification-banner",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "notification_text": "SkinKandy stores will have reduced trading hours during Easter long weekend.  <a href=\"/pages/easter-sunday\" style=\"color:#FFF; margin-inline: 8px; text-decoration: underline\">More info</a>",
+        "bg_color": "#e42228"
       }
     },
     "header_banner_MUPtRQ": {
@@ -142,6 +142,24 @@
         "banner_size": "small-banner",
         "small_overlay": true,
         "shuffle": false
+      }
+    },
+    "banner_rz6gpk": {
+      "type": "banner",
+      "disabled": true,
+      "name": "Banner",
+      "settings": {
+        "class": "",
+        "bg_color": "#ffffff",
+        "height": 200,
+        "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner.jpg",
+        "preheading": "",
+        "heading": "",
+        "heading_element": "h2",
+        "text": "",
+        "link": "",
+        "linktext": "",
+        "linkclass": ""
       }
     },
     "inline_buttons_f7DDkA": {
@@ -677,9 +695,10 @@
     }
   },
   "order": [
-    "top_notification_banner_yteqNA",
     "hero_video_Ar6Ham",
+    "top_notification_banner_yteqNA",
     "header_banner_MUPtRQ",
+    "banner_rz6gpk",
     "inline_buttons_f7DDkA",
     "flipped_boxes_kG6gXk",
     "rich_text_gwEVLb",
