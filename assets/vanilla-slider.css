@@ -1,0 +1,83 @@
+/* Wrapper (your element with data-slider) */
+[data-slider] {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  display: none;
+  &:has(.vs-track) {
+      display: block;
+  }
+}
+
+
+.vs-track { display:flex; will-change:transform; transition:transform 300ms ease; }
+.vs-slide { 
+  flex:0 0 auto; 
+  padding-right: 1.25rem;
+  padding-left: 0.05rem;
+} 
+
+.vs-track.is-dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.vs-track .boost-sd__slide {
+  width: auto;
+}
+
+
+/* Dots */
+.vs-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+.vs-dot {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 0;
+  border-radius: 50%;
+  background: #0000004d;
+  cursor: pointer;
+  max-width: 0.875rem;
+  max-height: 0.875rem;
+  align-self: start;
+  padding-right: 0;
+}
+.vs-dot[aria-current="true"] {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Arrows (optional) */
+.vs-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0.625rem;
+  cursor: pointer;
+}
+.vs-arrow--prev {
+  left: 0.5rem;
+  img {
+    transform: rotate(180deg);
+  }
+}
+.vs-arrow--next {
+  right: 0.5rem;
+}
+
+/* Make images behave nicely by default */
+[data-slider] img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
