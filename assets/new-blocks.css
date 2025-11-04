@@ -1162,6 +1162,7 @@
             justify-content: space-between;
             border-bottom: solid 1px var(--light-grey);
             padding: 0.92rem 0;
+            align-items: center;
             &.jewellery-type {
                 min-height: 81.19px;
             }
