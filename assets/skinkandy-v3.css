@@ -38,7 +38,7 @@ body {
     }
 }
 
-hidden {
+[hidden] {
     display: none;
 }
 
