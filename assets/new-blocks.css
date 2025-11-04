@@ -1274,7 +1274,7 @@
     }
     .two-column-slider__item {
         display: flex;
-        background: #FFF;
+        background: #F0F0F0;
         max-width: 54.6rem;
         margin-right: 1.25rem;
         cursor: pointer;
@@ -1299,7 +1299,7 @@
     .two-column-slider__item-content {
         display: flex;
         flex-direction: column;
-        padding: 0.5rem;
+        padding: 1rem;
         margin-left: 0.75rem;
         @media screen and (max-width: 860px) {
             width: 100%;
