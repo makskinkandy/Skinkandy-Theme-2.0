@@ -161,6 +161,9 @@
       "block_order": [
         "image_D8m6de"
       ],
+      "custom_css": [
+        ".ads-block {border: none;}"
+      ],
       "name": "Ads Block",
       "settings": {
         "title": ""
