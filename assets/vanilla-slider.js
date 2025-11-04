@@ -107,6 +107,12 @@
   }
 
   // Resolve which [data-slider] a custom arrow should control.
+  // Priority:
+  // 1) data-slider-target selector on the arrow
+  // 2) arrow inside [data-slider] (closest)
+  // 3) nearest slider within a [data-slider-root] wrapper
+  //    preferring the slider vertically below the arrow
+  // 4) nearest by distance on page
   function resolveSliderForArrow(arrow) {
     const targetSel = arrow.getAttribute?.("data-slider-target");
     if (targetSel) {
@@ -132,19 +138,19 @@
         // 1) Prefer the nearest slider whose top is below the arrow
         for (const s of sliders) {
           const r = s.getBoundingClientRect();
-          const delta = r.top - arrowBottom;
+          const delta = r.top - arrowBottom; // >= 0 means top is below/at arrow bottom
           if (delta >= -1 && delta < bestDelta) {
             bestDelta = delta;
             best = s;
           }
         }
 
-        // 2) If none below, pick the closest above
+        // 2) If none below, pick the closest above (smallest distance)
         if (!best) {
           bestDelta = Infinity;
           for (const s of sliders) {
             const r = s.getBoundingClientRect();
-            const delta = arrowTop - r.bottom;
+            const delta = arrowTop - r.bottom; // >= 0 means slider is above/at arrow top
             if (delta >= -1 && delta < bestDelta) {
               bestDelta = delta;
               best = s;
@@ -152,7 +158,7 @@
           }
         }
 
-        // 3) Last resort: center-distance
+        // 3) Last resort: original center-distance heuristic
         if (!best) {
           const arx = (ar.left + ar.right) / 2, ary = (ar.top + ar.bottom) / 2;
           let bestD = Infinity;
@@ -168,6 +174,7 @@
       }
     }
 
+    // Walk up to find a container that contains a slider somewhere below.
     let n = arrow.parentElement;
     while (n && n !== document.documentElement) {
       const s = n.querySelector?.("[data-slider]");
@@ -175,31 +182,16 @@
       n = n.parentElement;
     }
 
+    // Last resort: first slider in the doc
     return document.querySelector("[data-slider]");
   }
 
-  // ======= UPDATED: strict gating with ≤ show =======
   function ensureSlider(el) {
     if (!(el instanceof Element)) return;
 
     const freshOpts = Object.assign({}, DEFAULTS, readDataOptions(el));
     const bp = Number.isFinite(freshOpts.breakpoint) ? freshOpts.breakpoint : DEFAULTS.breakpoint;
-
-    const isCtrl = (n) =>
-      n.classList?.contains("vs-dots") ||
-      n.classList?.contains("vs-arrow") ||
-      n.classList?.contains("vs-track");
-    const childSlides = Array.from(el.children).filter(n => !isCtrl(n)).length;
-
-    const showNow = (window.innerWidth <= bp && Number.isFinite(freshOpts.slidesToShowMobile) && freshOpts.slidesToShowMobile > 0)
-      ? freshOpts.slidesToShowMobile
-      : (Number.isFinite(freshOpts.slidesToShow) && freshOpts.slidesToShow > 0 ? freshOpts.slidesToShow : 1);
-
-    // Only enable when there are MORE slides than we show
-    const mobileAllowed = !freshOpts.mobile || window.innerWidth <= bp;
-    const enoughSlides = childSlides > showNow;
-
-    const wantEnabled = mobileAllowed && enoughSlides;
+    const wantEnabled = !freshOpts.mobile || window.innerWidth <= bp;
     const isEnabled = !!(el.__vs);
 
     if (wantEnabled && !isEnabled) {
@@ -246,14 +238,7 @@
       n.classList?.contains("vs-track");
 
     const originalSlides = Array.from(el.children).filter(n => !isControl(n));
-
-    // ======= UPDATED: do not init if slides ≤ showNow =======
-    const bp = Number.isFinite(options.breakpoint) ? options.breakpoint : DEFAULTS.breakpoint;
-    const showNow = (window.innerWidth <= bp && Number.isFinite(options.slidesToShowMobile) && options.slidesToShowMobile > 0)
-      ? options.slidesToShowMobile
-      : (Number.isFinite(options.slidesToShow) && options.slidesToShow > 0 ? options.slidesToShow : 1);
-    if (originalSlides.length <= showNow) return;
-    // ========================================================
+    if (originalSlides.length <= 1) return;
 
     originalSlides.forEach(s => s.classList.add("vs-slide"));
     originalSlides.forEach(s => s.querySelectorAll('img').forEach(img => { img.draggable = false; }));
@@ -267,9 +252,11 @@
     originalSlides.forEach(s => track.appendChild(s));
     el.appendChild(track);
 
+    // ---- ARROWS ANYWHERE: wrapper + custom presence
     const wrapper = getSliderRoot(el);
     const hasCustomArrowsNow = !!(wrapper && wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`));
 
+    // We keep clone scaffolding (unused now)
     let headClones = [];
     let tailClones = [];
     let slides = [];
@@ -286,7 +273,7 @@
     function rebuildClones(){ /* not used */ }
 
     const count = originalSlides.length;
-    let idx = 0;
+    let idx = 0;      // index into ORIGINAL pages
     let timer = null;
     let raf = null;
 
@@ -332,6 +319,7 @@
       }
     }
 
+    // ---- NEW lastIndex() (replaces maxIndex())
     const lastIndex = () => {
       if (count <= show) return 0;
       const rem = count % show;
@@ -531,6 +519,7 @@
     // ===== Arrows (internal) =====
     let prevBtn = null, nextBtn = null;
 
+    // Create internal arrows ONLY if requested and no custom arrows exist in wrapper now
     const shouldCreateInternalArrows = options.arrows && !hasCustomArrowsNow;
 
     if (shouldCreateInternalArrows) {
