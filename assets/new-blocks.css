@@ -1456,6 +1456,9 @@
         @media screen and (max-width: 990px) {
             padding: 1.25rem;
         }
+        @media screen and (max-width: 575px) {
+            padding: 0;
+        }
         img {
             align-self: start;
             max-width: fit-content;
