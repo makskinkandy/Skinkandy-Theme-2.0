@@ -53,6 +53,11 @@
     .two-columns-icon__item {
       background-color: {{ section.settings.bg_color }};
     }
+    {% if section.blocks.size == 4 %}
+      .two-columns-icon .two-columns-icon__inner .two-columns-icon__right.no-image {
+        grid-template-columns: 1fr 1fr;
+      }
+    {% endif %}
   }
 </style>
 {% schema %}
