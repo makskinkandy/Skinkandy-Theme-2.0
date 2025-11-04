@@ -10,7 +10,7 @@
           </div>
           <div class="two-column-slider__slider-wrapper">
               <div class="two-column-slider__offset">
-                  <div class="two-column-slider__slider" data-slider data-variable-width="true">
+                  <div class="two-column-slider__slider" data-slider data-variable-width="true" data-arrows="true" data-dots="false">
                       {% if section.blocks.size > 0 %}
                               {% for block in section.blocks %}
                                   {% assign item = block.settings %}
@@ -21,10 +21,10 @@
                                           {{ item.content }}
                                           <div class="button-wrapper">
                                             {% if item.button_text %}
-                                              <a href="{{ item.button_url }}" class="btn {{ item.button_color }} {{ block.settings.button_class }}">{{ item.button_text }}</a>
+                                              <a href="{{ item.button_url }}" class="btn {{ item.button_color }}">{{ item.button_text }}</a>
                                           {% endif %}
                                           {% if item.popup_enable %}
-                                            <a href="#" class="btn btn--black open-popup">Learn More</a>
+                                            <a href="#" class="btn btn--black open-popup {{ block.settings.button_class }}">Learn More</a>
                                         {% endif %}
                                           </div>
                                       </div>
