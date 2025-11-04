@@ -6,7 +6,7 @@
           <img src="{{ section.settings.image | image_url }}" alt="Two Columns Image">
         </div>
       {% endif %}
-      <div class="two-columns-icon__right {% if section.settings.image == blank %}no-image{% endif %}" data-slider data-mobile="true" data-breakpoint="767" data-variable-width="mobile" data-dots="false">
+      <div class="two-columns-icon__right {% if section.settings.image == blank %}no-image{% endif %}">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
             {% assign item = block.settings %}
