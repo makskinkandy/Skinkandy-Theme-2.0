@@ -12,7 +12,7 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".section-header {margin-bottom: 0;}"
+        ".section-header, .page-content {margin-bottom: 0;}"
       ],
       "settings": {
         "breadcrumbs": false,
