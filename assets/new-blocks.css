@@ -1236,10 +1236,10 @@
         justify-content: space-between;
     }
     .vs-arrow--prev {
-        left: 0;
+        left: 5px;
     }
     .vs-arrow--next {
-        right: 1rem;
+        right: 21px;
     }
     .vs-arrow {
         top: 30%;
