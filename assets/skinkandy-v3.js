@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menus      = [...document.querySelectorAll('.js-submenu')];
     const containers = [...document.querySelectorAll('.header_sub-menu')];
     const mains      = [...document.querySelectorAll('.header_sub-menu__main')];
-    const hamburger    = document.querySelector('.hamburger');
-    const hamburgerClose = document.querySelector('.close-sub');
 
     // NEW: child/grandchild groups
     const children      = [...document.querySelectorAll('.child[data-group]')];
@@ -110,17 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay?.addEventListener('click', () => {
         overlay.classList.remove('active');
         clearAll();
-    });
-
-    hamburger.addEventListener('click', e => {
-        document.querySelector('.header_sub-menu').classList.add('active');
-        overlay.classList.add('active');
-    });
-
-    hamburgerClose.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector('.header_sub-menu').classList.remove('active');
-        overlay.classList.remove('active');
     });
 
     // --- NEW: level-3 clickers (.grandchild_item.placement) and level-4 targets (.grandchild_child)
