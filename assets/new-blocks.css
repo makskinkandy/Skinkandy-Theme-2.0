@@ -1441,7 +1441,6 @@
             @media screen and (max-width:990px) {
                 gap: 0.62rem;
                 padding: 0;
-                margin-right: -20px;
             }
         }
         
@@ -1456,10 +1455,6 @@
         line-height: 1;
         @media screen and (max-width: 990px) {
             padding: 1.25rem;
-        }
-        @media screen and (max-width: 767px) {
-            width: 14.5rem;
-            margin-right: 0.62rem;
         }
         img {
             align-self: start;
