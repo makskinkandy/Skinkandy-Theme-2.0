@@ -1097,7 +1097,7 @@
         }
         &.prev {
             transform: rotate(90deg);
-            margin-right: 0.5rem;
+            margin-right: 5px;
         }
         &.next {
             transform: rotate(270deg);
@@ -1234,23 +1234,6 @@
         margin-top: 1.25rem;
         display: flex;
         justify-content: space-between;
-    }
-    .vs-arrow--prev {
-        left: 5px;
-    }
-    .vs-arrow--next {
-        right: 25px;
-    }
-    .vs-arrow {
-        top: 30%;
-        transform: none;
-        filter: invert(1);
-        border-radius: 50%;
-        width: 2.4375rem;
-        height: 2.4375rem;
-        @media screen and (max-width: 575px) {
-            top: 34%;
-        }
     }
 }
 
@@ -1390,12 +1373,6 @@
       .button-wrapper {
         display: flex;
         margin-top: 1.25rem;
-    }
-
-    .vs-arrow {
-        @media screen and (min-width: 1025px) {
-            display: none;
-        }
     }
 }
 
