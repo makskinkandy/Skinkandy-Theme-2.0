@@ -18,15 +18,14 @@
   };
 
   // ====== ARROWS ANYWHERE (globals) ======
-  const ROOT_HINT = "[data-slider-root]";            // optional wrapper marker (recommended)
+  const ROOT_HINT = "[data-slider-root]";
   const CUSTOM_PREV = "[data-slider-prev]";
   const CUSTOM_NEXT = "[data-slider-next]";
   const INTERNAL_PREV = ".vs-arrow--prev";
   const INTERNAL_NEXT = ".vs-arrow--next";
-  const TRACK_SELECTOR_CORE = ".vs-track";           // inside each slider
-  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";  // hide internal buttons when custom exist
+  const TRACK_SELECTOR_CORE = ".vs-track";
+  const HIDE_INTERNAL_CLASS = "vs-internal-hidden";
 
-  // Ensure we have a transition for smooth movement
   (function injectStyle(){
     const id = "vs-track-style";
     if (!document.getElementById(id)) {
@@ -101,18 +100,10 @@
     return o;
   }
 
-  // Find a wrapper for a given slider element.
   function getSliderRoot(el) {
     return el.closest(ROOT_HINT) || el.parentElement || el;
   }
 
-  // Resolve which [data-slider] a custom arrow should control.
-  // Priority:
-  // 1) data-slider-target selector on the arrow
-  // 2) arrow inside [data-slider] (closest)
-  // 3) nearest slider within a [data-slider-root] wrapper
-  //    preferring the slider vertically below the arrow
-  // 4) nearest by distance on page
   function resolveSliderForArrow(arrow) {
     const targetSel = arrow.getAttribute?.("data-slider-target");
     if (targetSel) {
@@ -135,22 +126,20 @@
         let best = null;
         let bestDelta = Infinity;
 
-        // 1) Prefer the nearest slider whose top is below the arrow
         for (const s of sliders) {
           const r = s.getBoundingClientRect();
-          const delta = r.top - arrowBottom; // >= 0 means top is below/at arrow bottom
+          const delta = r.top - arrowBottom;
           if (delta >= -1 && delta < bestDelta) {
             bestDelta = delta;
             best = s;
           }
         }
 
-        // 2) If none below, pick the closest above (smallest distance)
         if (!best) {
           bestDelta = Infinity;
           for (const s of sliders) {
             const r = s.getBoundingClientRect();
-            const delta = arrowTop - r.bottom; // >= 0 means slider is above/at arrow top
+            const delta = arrowTop - r.bottom;
             if (delta >= -1 && delta < bestDelta) {
               bestDelta = delta;
               best = s;
@@ -158,7 +147,6 @@
           }
         }
 
-        // 3) Last resort: original center-distance heuristic
         if (!best) {
           const arx = (ar.left + ar.right) / 2, ary = (ar.top + ar.bottom) / 2;
           let bestD = Infinity;
@@ -174,7 +162,6 @@
       }
     }
 
-    // Walk up to find a container that contains a slider somewhere below.
     let n = arrow.parentElement;
     while (n && n !== document.documentElement) {
       const s = n.querySelector?.("[data-slider]");
@@ -182,7 +169,6 @@
       n = n.parentElement;
     }
 
-    // Last resort: first slider in the doc
     return document.querySelector("[data-slider]");
   }
 
@@ -252,11 +238,9 @@
     originalSlides.forEach(s => track.appendChild(s));
     el.appendChild(track);
 
-    // ---- ARROWS ANYWHERE: wrapper + custom presence
     const wrapper = getSliderRoot(el);
     const hasCustomArrowsNow = !!(wrapper && wrapper.querySelector(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`));
 
-    // We keep clone scaffolding (unused now)
     let headClones = [];
     let tailClones = [];
     let slides = [];
@@ -270,10 +254,10 @@
       headClones = [];
       tailClones = [];
     }
-    function rebuildClones(){ /* not used */ }
+    function rebuildClones(){}
 
     const count = originalSlides.length;
-    let idx = 0;      // index into ORIGINAL pages
+    let idx = 0;
     let timer = null;
     let raf = null;
 
@@ -319,7 +303,6 @@
       }
     }
 
-    // ---- NEW lastIndex() (replaces maxIndex())
     const lastIndex = () => {
       if (count <= show) return 0;
       const rem = count % show;
@@ -341,102 +324,6 @@
         const base = -baseTrackIdx * slideWidthPx;
         track.style.transform = `translateX(${base + extraPx}px)`;
       }
-    }
-
-    function updateDots() {
-      if (dotsSets.length === 0) return;
-      const starts = pageStarts();
-
-      dotsSets.forEach(set => {
-        const dots = getDotElements(set);
-        if (dots.length === 0) return;
-
-        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
-          buildAutoDots(set);
-        }
-
-        let active = starts.indexOf(idx);
-        if (active === -1) {
-          active = 0;
-          for (let j = 0; j < starts.length; j++) {
-            if (idx >= starts[j]) active = j; else break;
-          }
-        }
-
-        const isPageSet = (dots.length === starts.length);
-        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
-
-        dots.forEach((b, i) => {
-          if (i === activeIndex) {
-            b.setAttribute("aria-current", "true");
-            b.classList.add("is-active");
-          } else {
-            b.removeAttribute("aria-current");
-            b.classList.remove("is-active");
-          }
-        });
-      });
-    }
-
-    function updateArrows() {
-      if (!options.arrows) return;
-      const atStart = idx <= 0;
-      const atEnd = idx >= lastIndex();
-      const multi = lastIndex() > 0;
-      const showPrev = options.loop ? multi : !atStart;
-      const showNext = options.loop ? multi : !atEnd;
-
-      if (prevBtn) {
-        prevBtn.hidden = !showPrev;
-        prevBtn.disabled = !showPrev;
-        prevBtn.setAttribute("aria-disabled", String(!showPrev));
-      }
-      if (nextBtn) {
-        nextBtn.hidden = !showNext;
-        nextBtn.disabled = !showNext;
-        nextBtn.setAttribute("aria-disabled", String(!showNext));
-      }
-    }
-
-    function applyTransform() {
-      render(0);
-      updateDots();
-      updateArrows();
-    }
-
-    function measure() {
-      const oldIdx = idx;
-      const newShow = computeShow();
-      const newVar = variableActive();
-
-      canLoop = false;
-
-      if (newVar) {
-        originalSlides.forEach(s => (s.style.width = ""));
-        headClones.forEach(s => (s.style.width = ""));
-        tailClones.forEach(s => (s.style.width = ""));
-      } else {
-        const w = (100 / newShow) + "%";
-        originalSlides.forEach(s => (s.style.width = w));
-        headClones.forEach(s => (s.style.width = w));
-        tailClones.forEach(s => (s.style.width = w));
-      }
-
-      const showChanged = newShow !== show;
-      const varChanged  = newVar !== varOn;
-      show = newShow;
-      varOn = newVar;
-
-      removeClones();
-      slides = Array.from(track.children);
-
-      computeMetrics();
-
-      if (showChanged || varChanged) {
-        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
-      }
-
-      applyTransform();
     }
 
     // ===== Dots (multi-set) =====
@@ -513,13 +400,51 @@
       dotsSets = [];
     }
 
+    function updateDots() {
+      if (dotsSets.length === 0) return;
+    
+      const starts = pageStarts();
+    
+      dotsSets.forEach(set => {
+        let dots = getDotElements(set);
+        if (dots.length === 0) return;
+    
+        // If we auto-built dots, keep them in sync with page count
+        if (createdDotsSet && set === createdDotsSet && dots.length !== starts.length) {
+          buildAutoDots(set);
+          dots = getDotElements(set);
+        }
+    
+        // Work out which dot should be active
+        let active = starts.indexOf(idx);
+        if (active === -1) {
+          active = 0;
+          for (let j = 0; j < starts.length; j++) {
+            if (idx >= starts[j]) active = j; else break;
+          }
+        }
+    
+        const isPageSet = (dots.length === starts.length);
+        const activeIndex = isPageSet ? active : Math.min(idx, dots.length - 1);
+    
+        dots.forEach((b, i) => {
+          if (i === activeIndex) {
+            b.setAttribute("aria-current", "true");
+            b.classList.add("is-active");
+          } else {
+            b.removeAttribute("aria-current");
+            b.classList.remove("is-active");
+          }
+        });
+      });
+    }
+
     collectDotsSets();
     bindDots();
 
     // ===== Arrows (internal) =====
     let prevBtn = null, nextBtn = null;
 
-    // Create internal arrows ONLY if requested and no custom arrows exist in wrapper now
     const shouldCreateInternalArrows = options.arrows && !hasCustomArrowsNow;
 
     if (shouldCreateInternalArrows) {
@@ -744,14 +669,12 @@
       track.addEventListener("touchcancel", onTouchCancel, { passive: true });
     }
 
-    // ===== Custom event hook for external drivers (optional use)
     track.addEventListener("vs:step", (e) => {
       const dir = (e && e.detail && typeof e.detail.dir === "number") ? e.detail.dir : 0;
       if (dir < 0) prev(); else next();
       e.preventDefault();
     });
 
-    // ===== Wrap-aware navigation (no clones) =====
     function withoutTransition(fn){
       const prev = track.style.transition;
       track.style.transition = 'none';
@@ -782,6 +705,94 @@
 
     function next(){ goTo(idx + pageStep()); }
     function prev(){ goTo(idx - pageStep()); }
+
+    // ===== Arrow visibility helpers (desktop hide when count ≤ desktop show) =====
+    function isDesktopView() {
+      const bp = Number.isFinite(options.breakpoint) ? options.breakpoint : DEFAULTS.breakpoint;
+      return window.innerWidth > bp;
+    }
+    function setCustomArrowsVisibility(hide) {
+      if (!wrapper) return;
+      const custom = wrapper.querySelectorAll(`${CUSTOM_PREV}, ${CUSTOM_NEXT}`);
+      custom.forEach(btn => {
+        btn.style.display = hide ? "none" : "";
+        btn.setAttribute("aria-hidden", String(hide));
+      });
+    }
+
+    function updateArrows() {
+      if (!options.arrows) return;
+
+      const desktopShow = Number.isFinite(options.slidesToShow) && options.slidesToShow > 0
+        ? options.slidesToShow
+        : DEFAULTS.slidesToShow;
+
+      const hideAllOnDesktop = isDesktopView() && count <= desktopShow;
+
+      if (prevBtn) prevBtn.style.display = hideAllOnDesktop ? "none" : "";
+      if (nextBtn) nextBtn.style.display = hideAllOnDesktop ? "none" : "";
+      setCustomArrowsVisibility(hideAllOnDesktop);
+
+      if (hideAllOnDesktop) return;
+
+      const atStart = idx <= 0;
+      const atEnd = idx >= lastIndex();
+      const multi = lastIndex() > 0;
+      const showPrev = options.loop ? multi : !atStart;
+      const showNext = options.loop ? multi : !atEnd;
+
+      if (prevBtn) {
+        prevBtn.hidden = !showPrev;
+        prevBtn.disabled = !showPrev;
+        prevBtn.setAttribute("aria-disabled", String(!showPrev));
+      }
+      if (nextBtn) {
+        nextBtn.hidden = !showNext;
+        nextBtn.disabled = !showNext;
+        nextBtn.setAttribute("aria-disabled", String(!showNext));
+      }
+    }
+
+    function applyTransform() {
+      render(0);
+      updateDots();
+      updateArrows();
+    }
+
+    function measure() {
+      const oldIdx = idx;
+      const newShow = computeShow();
+      const newVar = variableActive();
+
+      canLoop = false;
+
+      if (newVar) {
+        originalSlides.forEach(s => (s.style.width = ""));
+        headClones.forEach(s => (s.style.width = ""));
+        tailClones.forEach(s => (s.style.width = ""));
+      } else {
+        const w = (100 / newShow) + "%";
+        originalSlides.forEach(s => (s.style.width = w));
+        headClones.forEach(s => (s.style.width = w));
+        tailClones.forEach(s => (s.style.width = w));
+      }
+
+      const showChanged = newShow !== show;
+      const varChanged  = newVar !== varOn;
+      show = newShow;
+      varOn = newVar;
+
+      removeClones();
+      slides = Array.from(track.children);
+
+      computeMetrics();
+
+      if (showChanged || varChanged) {
+        idx = Math.min(Math.floor(oldIdx / show) * show, lastIndex());
+      }
+
+      applyTransform();
+    }
 
     // Pause on hover (mouse only)
     el.addEventListener("mouseenter", stopAutoplay);
@@ -918,7 +929,6 @@
       const slider = resolveSliderForArrow(arrow);
       if (!slider) return;
 
-      // Ensure slider is initialized (respect mobile/breakpoint)
       VanillaSlider.ensure(slider);
 
       const api = slider.__vs;
