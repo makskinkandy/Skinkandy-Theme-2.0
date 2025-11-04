@@ -146,7 +146,9 @@
     },
     "inline_buttons_f7DDkA": {
       "type": "inline-buttons",
-      "custom_css": [],
+      "custom_css": [
+        ".inline-buttons__block {margin-bottom: 16px;}"
+      ],
       "name": "Inline Buttons",
       "settings": {
         "button_1_text": "NEW IN",
@@ -165,8 +167,8 @@
           "settings": {
             "title": "",
             "url": "https://bookings.skinkandy.com/",
-            "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner_1.jpg",
-            "image_mobile": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Mobile_Half_Banner_2.jpg",
+            "image": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Desktop_Half_Banner.jpg",
+            "image_mobile": "shopify://shop_images/2_For_80_-_Promo_Banner_2_For_80_-_Mobile_Half_Banner.jpg",
             "bg_color": "#000000"
           }
         }
