@@ -39,6 +39,7 @@ body {
 }
 
 .page-width {
+    width: 100%;
     @media screen and (max-width: 990px) {
         max-width: 100%;
     }
