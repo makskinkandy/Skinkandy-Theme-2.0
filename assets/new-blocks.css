@@ -1168,9 +1168,9 @@
             border-bottom: 0;
         }
         img {
-            min-height: 27rem;
+            min-height: 30rem;
             object-fit: cover;
-            max-height: 27rem;
+            max-height: 30rem;
             @media screen and (max-width: 990px) {
                 height: 450px;
             }
@@ -1181,9 +1181,9 @@
             }
         }
         .piercing-menu__img-wrapper {
-            min-height: 27rem;
+            min-height: 30rem;
             position: relative;
-            max-height: 27rem;
+            max-height: 30rem;
             @media screen and (max-width: 767px) {
                 height: 330px;
                 min-height: auto;
