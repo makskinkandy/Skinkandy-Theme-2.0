@@ -60,9 +60,14 @@
   border: 0;
   background: #000;
   color: #fff;
-  padding: 0.5rem 0.625rem;
+  padding: .5rem .625rem;
   cursor: pointer;
+  filter: invert(1);
+  border-radius: 50%;
+  width: 2.4375rem;
+  height: 2.4375rem;
 }
+
 .vs-arrow--prev {
   left: 0.5rem;
   img {
