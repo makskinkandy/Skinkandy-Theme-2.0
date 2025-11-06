@@ -25,7 +25,7 @@
             <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}"  data-slider data-dots="false" data-show="4" data-arrows="true" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="1" data-loop="true">
                 {% for piercing in item.piercing_menu_item.value %}
                   {% assign content_pop = piercing.content | metafield_tag %}
-                  {% if website_path == 'en-nz'and piercing.content != blank %}
+                  {% if website_path == 'en-nz'and piercing.content_nz != blank %}
                     {% assign content_pop = piercing.content_nz | metafield_tag %}
                   {% endif %}
                     <div class="piercing-menu__item">
