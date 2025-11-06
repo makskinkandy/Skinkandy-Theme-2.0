@@ -29,7 +29,7 @@
                     {% assign content_pop = piercing.content_nz | metafield_tag %}
                   {% endif %}
                     <div class="piercing-menu__item">
-                        <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ content_pop  }}'>
+                        <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
                           <div class="piercing-menu__img-wrapper">
                             <img src="{{ piercing.image | image_url }}" alt="{{ piercing.title }}">
                             <div class="svg-wrapper">{{ 'search.svg' | inline_asset_content }}</div>
