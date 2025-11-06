@@ -1,3 +1,5 @@
+{% assign website_path = request.locale.root_url | remove_first: '/' %}
+
 <div class="piercing-menu margin-disable--{{ section.settings.margin_disable }} margin-enable--{{ section.settings.margin_enable }}" data-slider-root>
   <div class="piercing-menu__wrapper page-width">
       <div class="piercing-menu__top">
@@ -22,8 +24,12 @@
             {% assign item = block.settings.piercing_menu %}
             <div class="piercing-menu__items content-{{ forloop.index }} {% if forloop.first %}active{% endif %}"  data-slider data-dots="false" data-show="4" data-arrows="true" data-breakpoint="1216" data-variable-width="mobile" data-show-mobile="1" data-loop="true">
                 {% for piercing in item.piercing_menu_item.value %}
+                  {% assign content_pop = piercing.content | metafield_tag %}
+                  {% if website_path == 'en-nz' and piercing.content != blank %}
+                    {% assign content_pop = piercing.content_nz | metafield_tag %}
+                  {% endif %}
                     <div class="piercing-menu__item">
-                        <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ piercing.content | metafield_tag  }}'>
+                        <div class="piercing-menu__item-data" data-link="{{ block.settings.jewellery_url }}" data-placement="{{ piercing.placement }}" data-title="{{ piercing.title }}" data-price-au="${{ piercing.price_au }}" data-price-nz="{{ piercing.price_nz }}" data-image="{{ piercing.image | image_url }}" data-content='{{ content_pop  }}'>
                           <div class="piercing-menu__img-wrapper">
                             <img src="{{ piercing.image | image_url }}" alt="{{ piercing.title }}">
                             <div class="svg-wrapper">{{ 'search.svg' | inline_asset_content }}</div>
