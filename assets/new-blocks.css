@@ -1175,7 +1175,7 @@
                 height: 450px;
             }
             @media screen and (max-width: 767px) {
-                height: 330px;
+                height: 306px;
                 min-height: auto;
                 width: 260px;
             }
@@ -1185,7 +1185,7 @@
             position: relative;
             max-height: 30rem;
             @media screen and (max-width: 767px) {
-                height: 330px;
+                height: 306px;
                 min-height: auto;
             }
             .svg-wrapper {
