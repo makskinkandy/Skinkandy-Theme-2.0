@@ -1168,24 +1168,24 @@
             border-bottom: 0;
         }
         img {
-            min-height: 20rem;
+            min-height: 27rem;
             object-fit: cover;
-            max-height: 20rem;
+            max-height: 27rem;
             @media screen and (max-width: 990px) {
                 height: 450px;
             }
-            @media screen and (max-width: 575px) {
-                height: 260px;
+            @media screen and (max-width: 767px) {
+                height: 330px;
                 min-height: auto;
                 width: 260px;
             }
         }
         .piercing-menu__img-wrapper {
-            min-height: 20rem;
+            min-height: 27rem;
             position: relative;
-            max-height: 20rem;
-            @media screen and (max-width: 575px) {
-                height: 260px;
+            max-height: 27rem;
+            @media screen and (max-width: 767px) {
+                height: 330px;
                 min-height: auto;
             }
             .svg-wrapper {
@@ -1236,13 +1236,13 @@
         justify-content: space-between;
     }
     .vs-arrow--prev {
-        left: 5px;
+        left: 0;
     }
     .vs-arrow--next {
-        right: 21px;
+        right: 1rem;
     }
     .vs-arrow {
-        top: 30%;
+        top: 35%;
         transform: none;
         filter: invert(1);
         border-radius: 50%;
