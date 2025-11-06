@@ -814,7 +814,7 @@
       track.addEventListener('transitionend', runDebounced);
     }
 
-    if ('ResizeObserver' in window) {
+    if ('ResizeObserver' in window) {y
       const ro = new ResizeObserver(runDebounced);
       ro.observe(sliderEl);
       sliderEl.__fcRO = ro;
