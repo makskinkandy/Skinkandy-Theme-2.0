@@ -69,12 +69,21 @@
             "enlarge_text": false,
             "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>This giveaway is for AU and NZ residents. NEW KandyClub members will go in the running. </strong></p>"
           }
+        },
+        "button_zTYADt": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/kc-november-giveaway-ts",
+            "link_text": "Terms & Conditions",
+            "css_class": ""
+          }
         }
       },
       "block_order": [
         "text_mVXhhV",
         "text_9iAA8E",
-        "text_nH7KDJ"
+        "text_nH7KDJ",
+        "button_zTYADt"
       ],
       "settings": {
         "align_text": "center",
