@@ -86,6 +86,21 @@
         },
         "image_Enxk9W": {
           "type": "image",
+          "disabled": true,
+          "settings": {
+            "disable_overlay": true,
+            "image_mobile": "shopify://shop_images/Buy_3_Banner_-_Mobile_Banner.jpg",
+            "image": "shopify://shop_images/Buy_3_Banner_-_Desktop_Banner.jpg",
+            "banner_url": "shopify://collections/buy-3-get-one-free",
+            "heading": "",
+            "short_description": "",
+            "button_text": "",
+            "button_url": "",
+            "align_text": "center"
+          }
+        },
+        "image_CBcXtQ": {
+          "type": "image",
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Desktop_NPL11_Segment_Rings_Artboard_1.jpg",
@@ -100,6 +115,7 @@
         },
         "image_ng66KH": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/Homepage_Banner_Mobile_-_Fashion_to_Pierce_with.jpg",
@@ -148,6 +164,7 @@
         "image_yr7dAg",
         "image_J7UMHB",
         "image_Enxk9W",
+        "image_CBcXtQ",
         "image_ng66KH",
         "image_PFE9d8",
         "image_PdCEic"
