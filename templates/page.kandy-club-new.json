@@ -25,8 +25,8 @@
           "type": "image",
           "settings": {
             "disable_overlay": true,
-            "image_mobile": "shopify://shop_images/Mobile_Landing_Page_1.2.jpg",
-            "image": "shopify://shop_images/Desktop_Landing_Page_3.jpg",
+            "image_mobile": "shopify://shop_images/1125_Nov_Giveaway_Landing_Page_Banner_Mobile.jpg",
+            "image": "shopify://shop_images/1125_Nov_Giveaway_Landing_Page_Banner_DesktopOption_1.jpg",
             "banner_url": "shopify://pages/kandy-club-giveaway",
             "heading": "",
             "short_description": "",
@@ -39,12 +39,48 @@
       "block_order": [
         "image_UgYKwL"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "banner_size": "short-banner",
         "small_overlay": true,
         "shuffle": false
+      }
+    },
+    "rich_text_rKEEmc": {
+      "type": "rich-text",
+      "blocks": {
+        "text_mVXhhV": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>WIN a $500 SK Voucher</h2>"
+          }
+        },
+        "text_9iAA8E": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3>5 x $500AUD SK Voucher are up for grabs!</h3><p>Join our Kandyclub for a chance to win!</p><p>Exclusive perks, special events, member-only offers and discounts.</p><p>To enter our giveaway, enter your details and join the KandyClub... thats it!</p><p>Once you have joined, you are automatically in the running to WIN!</p><p>Competition ends on the 1st of December 2025. The five lucky winners will be contacted on this date.</p><p>GOOD LUCK</p>"
+          }
+        },
+        "text_nH7KDJ": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Disclaimer: </strong><em>The KandyClub Loyalty Program is intended for individuals who are 16 years of age or older. By signing up, you confirm that you meet this age requirement. We value the safety and privacy of all our members, and participation in the program is only permitted for those who are eligible.</em></p><p><strong>This giveaway is for AU and NZ residents. NEW KandyClub members will go in the running. </strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_mVXhhV",
+        "text_9iAA8E",
+        "text_nH7KDJ"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false,
+        "reduce_spacing": true
       }
     },
     "two_column_forms_6WifJH": {
@@ -182,6 +218,7 @@
   "order": [
     "main",
     "header_banner_hFcUAT",
+    "rich_text_rKEEmc",
     "two_column_forms_6WifJH",
     "rich_text_xbWDwG",
     "16418769900ca051a6",
