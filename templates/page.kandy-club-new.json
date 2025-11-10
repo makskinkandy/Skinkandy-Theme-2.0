@@ -27,10 +27,10 @@
             "disable_overlay": true,
             "image_mobile": "shopify://shop_images/1125_Nov_Giveaway_Landing_Page_Banner_Mobile.jpg",
             "image": "shopify://shop_images/1125_Nov_Giveaway_Landing_Page_Banner_DesktopOption_1.jpg",
-            "banner_url": "shopify://pages/kandy-club-giveaway",
+            "banner_url": "",
             "heading": "",
             "short_description": "",
-            "button_text": "Learn More",
+            "button_text": "",
             "button_url": "shopify://pages/kandy-club-giveaway",
             "align_text": "center"
           }
