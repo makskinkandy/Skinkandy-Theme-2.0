@@ -2,7 +2,7 @@
   <div class="site-nav__icons">
     {%- if settings.search_enable -%}
       <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header medium-up--hide">
-        {%- render 'icons' | icon: 'search' -%}
+        {%- render 'icons', icon: 'search' -%}
         <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
       </a>
 
@@ -26,7 +26,7 @@
 
     {%- if section.settings.wishlist_link != blank -%}
       <a href="/apps/wishlist" class="site-nav__link site-nav__link--icon small--hide">
-        {%- render 'icons' | icon: 'heart' -%}
+        {%- render 'icons', icon: 'heart' -%}
         <span class="icon__fallback-text">{{ 'layout.wishlist.label' | t }}</span>
       </a>
     {%- endif -%}
@@ -43,10 +43,26 @@
 
     <a href="{{ routes.cart_url }}" class="site-nav__link site-nav__link--icon js-drawer-open-cart" aria-controls="CartDrawer" data-icon="{{ settings.cart_icon }}">
       <span class="cart-link">
-        {%- render 'icons' | icon: 'cart' -%}
+        {%- render 'icons', icon: 'cart' -%}
         <span class="icon__text medium-down--hide">Cart</span>
         <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}"></span>
       </span>
     </a>
   </div>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'icons' | icon: 'search' -%}"
+  to: "{%- render 'icons', icon: 'search' -%}"
+  position: 219..257
+- from: "{%- render 'icons' | icon: 'heart' -%}"
+  to: "{%- render 'icons', icon: 'heart' -%}"
+  position: 1051..1088
+- from: "{%- render 'icons' | icon: 'cart' -%}"
+  to: "{%- render 'icons', icon: 'cart' -%}"
+  position: 2147..2183
+{% endcomment %}

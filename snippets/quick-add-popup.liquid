@@ -5,7 +5,7 @@
   unless quick_add_product.has_only_default_variant
     for variant in quick_add_product.variants
       if variant.id == quick_add_variant_id
-        assign quick_add_variant = variant;
+        assign quick_add_variant = variant
       endif
     endfor
   endunless
@@ -187,4 +187,13 @@
       }
     }
   {%- endstyle -%}
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "        assign quick_add_variant = variant;"
+  to: "        assign quick_add_variant = variant"
+  position: 384..426
+{%- endcomment -%}

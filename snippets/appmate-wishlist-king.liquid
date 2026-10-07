@@ -220,10 +220,10 @@
                     return !product.hidden;
                 },
                 loginRequired: {{ settings.app_wk_login_required }},
-                handle: '{{ pages["wishlist"].url }}',
+                handle: '{{ pages.wishlist.url }}',
                 proxyHandle: "/a/wk",
                 share: {
-                    handle: "{{ pages["shared-wishlist"].url }}",
+                    handle: "{{ pages.shared-wishlist.url }}",
                     title: 'My Wishlist',
                     description: 'Check out some of my favorite things @ {{ wkShopName }}.',
                     imageTitle: '{{ wkShopName }}',
@@ -943,3 +943,16 @@
         href="{{ 'appmate-wishlist-king.scss.css' | asset_url }}"
         rel="stylesheet"
 />
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{{ pages["wishlist"].url }}'
+  to: "{{ pages.wishlist.url }}"
+  position: 10414..10438
+- from: '{{ pages["shared-wishlist"].url }}'
+  to: "{{ pages.shared-wishlist.url }}"
+  position: 10533..10564
+{% endcomment %}
