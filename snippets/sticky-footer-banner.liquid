@@ -6,7 +6,7 @@
         <div class="sticky-footer-banner--contents">
             <div class="sticky-footer-banner--image sticky-footer-banner--image-left small--hide">
                 {%- if settings.sticky_footer_banner_img != blank -%}
-                    <img src="{{ settings.sticky_footer_banner_img | image_url: width: settings.sticky_footer_banner_img_width" }} alt="{{ settings.sticky_footer_banner_img.alt }}">
+                    <img src="{{ settings.sticky_footer_banner_img | image_url: width: settings.sticky_footer_banner_img_width }} alt="{{ settings.sticky_footer_banner_img.alt }}">
                 {%- endif -%}
             </div>
             <div class="sticky-footer-banner--text">
@@ -16,7 +16,7 @@
             </div>
             <div class="sticky-footer-banner--image sticky-footer-banner--image-right">
                 {%- if settings.sticky_footer_banner_img_2 != blank -%}
-                    <img src="{{ settings.sticky_footer_banner_img_2 | image_url: width: settings.sticky_footer_banner_img_2_width" }} alt="{{ settings.sticky_footer_banner_img_2.alt }}">
+                    <img src="{{ settings.sticky_footer_banner_img_2 | image_url: width: settings.sticky_footer_banner_img_2_width }} alt="{{ settings.sticky_footer_banner_img_2.alt }}">
                 {%- endif -%}
             </div>
             {%- if settings.sticky_footer_banner_btn_text != blank -%}
@@ -59,3 +59,20 @@
     }
 }
 {%- endstyle -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{{ settings.sticky_footer_banner_img | image_url: width: settings.sticky_footer_banner_img_width"
+    }}'
+  to: "{{ settings.sticky_footer_banner_img | image_url: width: settings.sticky_footer_banner_img_width
+    }}"
+  position: 447..546
+- from: '{{ settings.sticky_footer_banner_img_2 | image_url: width: settings.sticky_footer_banner_img_2_width"
+    }}'
+  to: "{{ settings.sticky_footer_banner_img_2 | image_url: width: settings.sticky_footer_banner_img_2_width
+    }}"
+  position: 1109..1212
+{% endcomment %}

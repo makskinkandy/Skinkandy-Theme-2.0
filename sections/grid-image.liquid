@@ -4,19 +4,19 @@
       <div class="grid-image__social">
         {%- if settings.social_facebook_link != blank -%}
             <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
-                {%- render 'icons' | icon: 'facebook' -%}
+                {%- render 'icons', icon: 'facebook' -%}
                 <span class="icon__fallback-text">Facebook</span>
             </a>
         {%- endif -%}
         {%- if settings.social_instagram_link != blank -%}
             <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
-                {%- render 'icons' | icon: 'instagram' -%}
+                {%- render 'icons', icon: 'instagram' -%}
                 <span class="icon__fallback-text">Instagram</span>
             </a>
         {%- endif -%}
         {%- if settings.social_tiktok_link != blank -%}
             <a target="_blank" rel="noopener" href="{{ settings.social_tiktok_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'TikTok' }}">
-                {%- render 'icons' | icon: 'tiktok' -%}
+                {%- render 'icons', icon: 'tiktok' -%}
                 <span class="icon__fallback-text">TikTok</span>
             </a>
         {%- endif -%}
@@ -91,4 +91,19 @@
     "name": "Grid Image"
   }]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'icons' | icon: 'facebook' -%}"
+  to: "{%- render 'icons', icon: 'facebook' -%}"
+  position: 382..422
+- from: "{%- render 'icons' | icon: 'instagram' -%}"
+  to: "{%- render 'icons', icon: 'instagram' -%}"
+  position: 784..825
+- from: "{%- render 'icons' | icon: 'tiktok' -%}"
+  to: "{%- render 'icons', icon: 'tiktok' -%}"
+  position: 1179..1217
+{%- endcomment -%}
